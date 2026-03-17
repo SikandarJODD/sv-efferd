@@ -83,7 +83,7 @@
 	];
 </script>
 
-<div class="relative mx-auto min-h-screen max-w-5xl border-x">
+<div class="relative mx-auto min-h-screen max-w-5xl overflow-x-clip border-x">
 	<div class="flex grow flex-col justify-center px-4 py-18 md:items-center">
 		<h1 class="text-4xl font-bold md:text-5xl">Contact Us</h1>
 		<p class="mb-5 text-base text-muted-foreground">Contact the support team at efferd.</p>
