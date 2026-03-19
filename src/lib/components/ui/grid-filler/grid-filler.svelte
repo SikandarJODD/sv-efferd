@@ -46,10 +46,8 @@
 	{@const showMd = i < neededMd ? 'md:block' : 'md:hidden'}
 	{@const showLg = i < neededLg ? 'lg:block' : 'lg:hidden'}
 
-	{#if showSm !== 'sm:hidden' && showMd !== 'md:hidden' && showLg !== 'lg:hidden'}
-		<div
-			class={cn('pointer-events-none hidden', showSm, showMd, showLg, className)}
-			{...rest}
-		></div>
-	{/if}
+	<!-- {#if showSm === 'sm:hidden' && showMd === 'md:hidden' && showLg === 'lg:hidden'}
+		<div></div>
+	{/if} -->
+	<div class={cn('pointer-events-none hidden', showSm, showMd, showLg, className)} {...rest}></div>
 {/each}

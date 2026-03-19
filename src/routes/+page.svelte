@@ -4,6 +4,7 @@
 	import HeaderFive from '$lib/components/efferd/header/header-five/header-five.svelte';
 	import HeaderFour from '$lib/components/efferd/header/header-four/header-four.svelte';
 	import HeaderTwo from '$lib/components/efferd/header/header-two/header-two.svelte';
+	import TestimonialFive from '$lib/components/efferd/testimonial/testimonial-five/testimonial-five.svelte';
 	import TestimonialFour from '$lib/components/efferd/testimonial/testimonial-four/testimonial-four.svelte';
 	import TestimonialOne from '$lib/components/efferd/testimonial/testimonial-one.svelte';
 	import TestimonialThree from '$lib/components/efferd/testimonial/testimonial-three.svelte';
@@ -18,5 +19,5 @@
 <!-- <PageLoading /> -->
 <!-- <TestimonialOne /> -->
 <div class="flex min-h-screen items-center justify-center">
-	<TestimonialFour />
+	<TestimonialFive />
 </div>
