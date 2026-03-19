@@ -3,9 +3,7 @@
 	import { Portal, PortalBackdrop } from '$lib/components/ui/portal';
 	import { cn } from '$lib/utils';
 	import { MenuIcon, XIcon } from '@lucide/svelte';
-	import { navLinks } from './nav';
-	import { fade } from 'svelte/transition';
-
+	import { navLinks } from './nav-links';
 	let open = $state(false);
 </script>
 
@@ -14,10 +12,10 @@
 		aria-controls="mobile-menu"
 		aria-expanded={open}
 		aria-label="Toggle menu"
-		class="md:hidden"
-		onclick={() => (open = !open)}
+		class="md:hidden size-8"
 		size="icon"
-		variant="outline"
+		variant="secondary"
+		onclick={() => (open = !open)}
 	>
 		{#if open}
 			<XIcon class="size-4.5" />
@@ -31,21 +29,22 @@
 			<div
 				class={cn(
 					'ease-out data-[slot=open]:animate-in data-[slot=open]:zoom-in-97',
-					'size-full p-4'
+					'size-full px-6 py-4'
 				)}
-				out:fade|global={{ duration: 150 }}
 				data-slot={open ? 'open' : 'closed'}
 			>
-				<div class="grid gap-y-2">
-					{#each navLinks as link}
-						<Button class="justify-start" variant="ghost" href={link.href}>
-							{link.label}
-						</Button>
+				<ul class="grid gap-y-4">
+					{#each navLinks as link, i}
+						<li>
+							<a href={link.href} class="text-xl font-medium">
+								{link.label}
+							</a>
+						</li>
 					{/each}
-				</div>
-				<div class="mt-12 flex flex-col gap-2">
-					<Button class="w-full" variant="outline">Sign In</Button>
-					<Button class="w-full">Get Started</Button>
+				</ul>
+				<div class="mt-4 grid grid-cols-2 gap-2">
+					<Button variant="outline">Sign In</Button>
+					<Button>Get Started</Button>
 				</div>
 			</div>
 		</Portal>

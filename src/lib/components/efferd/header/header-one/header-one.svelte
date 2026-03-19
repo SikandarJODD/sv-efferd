@@ -4,7 +4,7 @@
 	import { Logo } from '$lib/svgs';
 	import { cn } from '$lib/utils';
 	import MobileNav from './mobile-nav.svelte';
-	import { navLinks } from './nav';
+	import { navLinks } from './nav-links';
 
 	let scroll = createScroll(50);
 	// $inspect(scroll.scrolled, 'Value');
