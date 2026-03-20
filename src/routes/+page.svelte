@@ -7,6 +7,11 @@
 	import CtaOne from '$lib/components/efferd/cta/cta-one.svelte';
 	import CtaThree from '$lib/components/efferd/cta/cta-three.svelte';
 	import CtaTwo from '$lib/components/efferd/cta/cta-two.svelte';
+	import FaqFive from '$lib/components/efferd/faqs/faq-five.svelte';
+	import FaqFour from '$lib/components/efferd/faqs/faq-four.svelte';
+	import FaqOne from '$lib/components/efferd/faqs/faq-one.svelte';
+	import FaqThree from '$lib/components/efferd/faqs/faq-three.svelte';
+	import FaqTwo from '$lib/components/efferd/faqs/faq-two.svelte';
 </script>
 
 <div class="space-y-16 py-8">
@@ -21,4 +26,10 @@
 		<CtaFour />
 		<CtaFive />
 	</div>
+
+	<FaqOne />
+	<FaqTwo />
+	<FaqThree />
+	<FaqFour />
+	<FaqFive />
 </div>
