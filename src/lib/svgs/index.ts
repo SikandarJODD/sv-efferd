@@ -1,4 +1,5 @@
 import Github from './github.svelte';
+import Google from './google.svelte';
 import X from './x.svelte';
 import Logo from './logo.svelte';
 import LogoIcon from './logo-icon.svelte';
@@ -15,6 +16,7 @@ import PlayStore from './play-store.svelte';
 
 export {
 	Github,
+	Google,
 	X,
 	Logo,
 	LogoIcon,
