@@ -6,8 +6,7 @@
 	import MobileNav from './mobile-nav.svelte';
 	import { navLinks } from './nav-links';
 
-	let scroll = createScroll(50);
-	// $inspect(scroll.scrolled, 'Value');
+	let scroll = createScroll(10);
 </script>
 
 <header
@@ -18,7 +17,7 @@
 	)}
 >
 	<nav class="mx-auto flex h-14 w-full max-w-5xl items-center justify-between px-4">
-		<a class="rounded-md p-2 w-fit hover:bg-muted dark:hover:bg-muted/50" href="/">
+		<a class="w-fit rounded-md p-2 hover:bg-muted dark:hover:bg-muted/50" href="/">
 			<Logo class="h-4" />
 		</a>
 		<div class="hidden items-center gap-2 md:flex">
