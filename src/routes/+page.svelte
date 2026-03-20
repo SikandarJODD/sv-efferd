@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Preview from '$lib/components/efferd/hero/hero-one/preview.svelte';
+	import Preview from '$lib/components/efferd/hero/hero-two/preview.svelte';
 </script>
 
 <!-- <div class="space-y-10 py-10"> -->
