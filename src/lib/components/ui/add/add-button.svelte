@@ -34,7 +34,9 @@
 			)}
 		/>
 	</div>
-	<span class="hidden font-mono text-xs text-nowrap text-ellipsis select-text md:inline">
+	<span
+		class="hidden w-60 overflow-hidden font-mono text-xs text-nowrap text-ellipsis select-text md:inline"
+	>
 		{buttonState.root.addCommand}
 	</span>
 </button>

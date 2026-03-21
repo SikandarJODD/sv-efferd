@@ -2,7 +2,6 @@
 	import { page } from '$app/state';
 	import type { BlockCodeTree } from '$lib/blocks/showcase';
 	import { cn } from '$lib/utils';
-	import Maximize from '@lucide/svelte/icons/maximize';
 	import Palette from '@lucide/svelte/icons/palette';
 	import { Pane, PaneGroup, PaneResizer, type PaneAPI } from 'paneforge';
 	import { watch } from 'runed';
@@ -30,11 +29,7 @@
 		previewHref?: string;
 		previewMode?: 'inline' | 'iframe';
 		previewHeight?: number;
-		showInstall?: boolean;
-		registryItemId?: string;
-		registryPath?: string;
-		registryOptions?: readonly string[];
-		registry?: string;
+		installId?: string;
 	}
 
 	const radioItem =
@@ -55,11 +50,7 @@
 		previewHref,
 		previewMode = 'inline',
 		previewHeight,
-		showInstall = false,
-		registryItemId,
-		registryPath = 'r',
-		registryOptions = ['@sv/cnblocks'],
-		registry
+		installId
 	}: BlockPreviewProps = $props();
 
 	let width = $state(DEFAULT_SIZE);
@@ -97,7 +88,7 @@
 
 		return null;
 	});
-	let canInstall = $derived(Boolean(showInstall && registryItemId));
+	let canInstall = $derived(Boolean(installId));
 
 	function applyIframeScrollbarStyles(iframe: HTMLIFrameElement | null) {
 		const iframeDocument = iframe?.contentDocument;
@@ -142,7 +133,7 @@
 			<div class="relative border-y px-5 py-5 sm:px-6 sm:py-6 lg:px-7">
 				<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-left" />
 				<DecorIcon
-					class="size-3.5 translate-x-[calc(50%)] -translate-y-[calc(50%+0.5px)] bg-background z-999 stroke-muted-foreground/70"
+					class="z-999 size-3.5 translate-x-[calc(50%)] -translate-y-[calc(50%+0.5px)] bg-background stroke-muted-foreground/70"
 					position="top-right"
 				/>
 				<!-- <DecorIcon
@@ -248,7 +239,7 @@
 				<div class="flex flex-wrap items-center gap-2">
 					{#if shouldRenderInIframe}
 						<div transition:scale={{ start: 0.8 }} class="flex items-center gap-2">
-							<TooltipProvider delayDuration={100}>
+							<TooltipProvider>
 								<Tooltip>
 									<TooltipTrigger>
 										<Button
@@ -291,7 +282,7 @@
 								</Tooltip>
 							</TooltipProvider>
 
-							<TooltipProvider delayDuration={100}>
+							<TooltipProvider>
 								<Tooltip>
 									<TooltipTrigger>
 										<Button
@@ -331,7 +322,7 @@
 								</Tooltip>
 							</TooltipProvider>
 
-							<TooltipProvider delayDuration={100}>
+							<TooltipProvider>
 								<Tooltip>
 									<TooltipTrigger>
 										<Button
@@ -377,7 +368,7 @@
 					{/if}
 
 					{#if canOpenPreview && !forcesIframe}
-						<TooltipProvider delayDuration={120}>
+						<TooltipProvider>
 							<Tooltip>
 								<TooltipTrigger>
 									<Button
@@ -438,13 +429,30 @@
 					{/if}
 
 					{#if canOpenPreview}
-						<Button variant="ghost" class="size-8" href={previewHref} target="_blank">
-							<Maximize strokeWidth={1.6} class="size-4! sm:opacity-70" />
+						<Button variant="outline" size="icon-sm" href={previewHref} target="_blank">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								stroke-width={1.6}
+								class="size-4! sm:opacity-70"
+								fill="none"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								role="img"
+								color="currentColor"
+							>
+								<path
+									d="M3 8.5V5C3 3.89543 3.89543 3 5 3H8.5M21 8.5V5C21 3.89543 20.1046 3 19 3H15.5M15.5 21H19C20.1046 21 21 20.1046 21 19V15.5M8.5 21H5C3.89543 21 3 20.1046 3 19V15.5"
+									stroke="currentColor"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+							</svg>
 						</Button>
 					{/if}
 
 					{#if canInstall}
-						<InstallComponent itemId={registryItemId} {registryPath} {registryOptions} {registry} />
+						<InstallComponent id={installId} />
 					{/if}
 
 					{#if themeSetupHref}
@@ -539,7 +547,10 @@
 						</div>
 					</div>
 				{:else}
-					<div in:scale={{ start: 0.85 }} class="min-h-[380px] w-full overflow-hidden flex items-center justify-center">
+					<div
+						in:scale={{ start: 0.85 }}
+						class="flex min-h-[380px] w-full items-center justify-center overflow-hidden"
+					>
 						<PreviewComponent />
 					</div>
 				{/if}

@@ -45,7 +45,8 @@ class AddRootState {
 
 	addCommand: string = $derived.by(() => {
 		const command = resolveCommand(this.agent, 'execute', [
-			'jsrepo',
+			// 'jsrepo',
+			'shadcn-svelte@latest',
 			'add',
 			this.opts.withoutRegistry.current
 				? this.opts.item.current
@@ -54,15 +55,15 @@ class AddRootState {
 
 		return command
 			? `${command.command} ${command.args.join(' ')}`
-			: `npx jsrepo add ${this.opts.withoutRegistry.current ? this.opts.item.current : `${this.registry}/${this.opts.item.current}`}`;
+			: `npx shadcn-svelte@latest add ${this.opts.withoutRegistry.current ? this.opts.item.current : `${this.registry}/${this.opts.item.current}`}`;
 	});
 
 	initCommand: string = $derived.by(() => {
-		const command = resolveCommand(this.agent, 'execute', ['jsrepo', 'init', this.registry]);
+		const command = resolveCommand(this.agent, 'execute', ['init', this.registry]);
 
 		return command
 			? `${command.command} ${command.args.join(' ')}`
-			: `npx jsrepo init ${this.registry}`;
+			: `npx shadcn-svelte@latest init ${this.registry}`;
 	});
 
 	get registry() {

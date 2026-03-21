@@ -2,5 +2,159 @@
 	"$schema": "https://shadcn-svelte.com/schema/registry.json",
 	"name": "svelte-efferd",
 	"homepage": "https://sv-efferd.pages.dev",
-	"items": []
+	"items": [
+		{
+			"name": "full-width-divider",
+			"title": "Full width divider",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/full-width-divider/full-width-divider.svelte",
+					"type": "registry:component",
+					"target": "ui/full-width-divider/full-width-divider.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/full-width-divider/index.ts",
+					"type": "registry:file",
+					"target": "ui/full-width-divider/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "decor-icon",
+			"title": "Decor icon",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/decor-icon/decor-icon.svelte",
+					"type": "registry:component",
+					"target": "ui/decor-icon/decor-icon.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/decor-icon/index.ts",
+					"type": "registry:file",
+					"target": "ui/decor-icon/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "input-group",
+			"title": "Input group",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/input-group/input-group.svelte",
+					"type": "registry:component",
+					"target": "ui/input-group/input-group.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/input-group/input-group-addon.svelte",
+					"type": "registry:component",
+					"target": "ui/input-group/input-group-addon.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/input-group/input-group-button.svelte",
+					"type": "registry:component",
+					"target": "ui/input-group/input-group-button.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/input-group/input-group-input.svelte",
+					"type": "registry:component",
+					"target": "ui/input-group/input-group-input.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/input-group/input-group-text.svelte",
+					"type": "registry:component",
+					"target": "ui/input-group/input-group-text.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/input-group/input-group-textarea.svelte",
+					"type": "registry:component",
+					"target": "ui/input-group/input-group-textarea.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/input-group/index.ts",
+					"type": "registry:file",
+					"target": "ui/input-group/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "cta-one",
+			"title": "CTA One",
+			"type": "registry:block",
+			"description": "A split CTA with quiet structure, balanced actions, and full-width dividers.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/cta/cta-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/cta/cta-one.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:full-width-divider"]
+		},
+		{
+			"name": "cta-two",
+			"title": "CTA Two",
+			"type": "registry:block",
+			"description": "A centered CTA with a softer secondary band and directional primary action.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/cta/cta-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/cta/cta-two.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:full-width-divider"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "cta-three",
+			"title": "CTA Three",
+			"type": "registry:block",
+			"description": "A more decorative CTA with corner accents and a stronger editorial feel.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/cta/cta-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/cta/cta-three.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:decor-icon"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "cta-four",
+			"title": "CTA Four",
+			"type": "registry:block",
+			"description": "A compact card CTA with credit-card reassurance and elevated actions.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/cta/cta-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/cta/cta-four.svelte"
+				}
+			],
+			"registryDependencies": ["button"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "cta-five",
+			"title": "CTA Five",
+			"type": "registry:block",
+			"description": "A newsletter CTA that blends subscription form controls with social proof.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/cta/cta-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/cta/cta-five.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:full-width-divider", "local:input-group"],
+			"dependencies": ["@lucide/svelte"]
+		}
+	]
 }

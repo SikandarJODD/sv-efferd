@@ -39,7 +39,7 @@ export type BlockShowcaseItem = {
 	previewHref?: string;
 	previewMode?: 'inline' | 'iframe';
 	previewHeight?: number;
-	registryItemId?: string;
+	installId?: string;
 };
 
 type BlockCodeFileInput = Omit<BlockCodeFile, 'type' | 'name'> & {

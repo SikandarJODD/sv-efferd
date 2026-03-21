@@ -1,0 +1,18 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "cta-one",
+	"title": "CTA one",
+	"type": "registry:block",
+	"description": "A split CTA with quiet structure, balanced actions, and full-width dividers.",
+	"registryDependencies": [
+		"button",
+		"./full-width-divider.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { Button } from '$lib/components/ui/button';\n\timport { FullWidthDivider } from '$lib/components/ui/full-width-divider';\n</script>\n\n<div class=\"relative mx-auto flex w-full max-w-3xl flex-col justify-between border-x md:flex-row\">\n\t<FullWidthDivider position=\"top\" />\n\n\t<div class=\"border-b p-4 md:border-b-0\">\n\t\t<h2 class=\"text-center text-lg font-bold md:text-left md:text-2xl\">\n\t\t\tLet your plans shape the future.\n\t\t</h2>\n\t</div>\n\n\t<div class=\"flex items-center justify-center gap-2 p-4 md:border-l\">\n\t\t<Button variant=\"secondary\">Contact Sales</Button>\n\t\t<Button>Get Started</Button>\n\t</div>\n\n\t<FullWidthDivider position=\"bottom\" />\n</div>\n",
+			"type": "registry:component",
+			"target": "efferd/cta/cta-one.svelte"
+		}
+	]
+}

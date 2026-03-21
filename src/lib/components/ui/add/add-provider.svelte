@@ -1,24 +1,34 @@
-<script lang="ts" generics="RegistryOptions extends readonly string[]">
+<script lang="ts">
 	import { useAddProvider, type Agent } from './add.svelte.js';
 	import { box } from 'svelte-toolbelt';
 	import type { Snippet } from 'svelte';
 
-	type Props<RegistryOptions extends readonly string[]> = {
+	type Props = {
 		agent: Agent;
-		registryOptions: RegistryOptions;
-		registry: NoInfer<RegistryOptions[number]>;
+		registry?: string;
+		registryOptions?: readonly string[];
 		children: Snippet;
 	};
 
 	let {
 		agent = $bindable(),
-		registry = $bindable(),
+		registry = $bindable(''),
 		registryOptions,
 		children
-	}: Props<RegistryOptions> = $props();
+	}: Props = $props();
+
+	let resolvedRegistryOptions = $derived(
+		registryOptions?.length ? registryOptions : registry ? [registry] : ['shadcn-svelte']
+	);
+
+	$effect(() => {
+		if (!registry && resolvedRegistryOptions[0]) {
+			registry = resolvedRegistryOptions[0];
+		}
+	});
 
 	useAddProvider({
-		registryOptions: box.with(() => registryOptions),
+		registryOptions: box.with(() => resolvedRegistryOptions),
 		registry: box.with(
 			() => registry,
 			(v) => (registry = v)

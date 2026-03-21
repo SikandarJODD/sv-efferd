@@ -1,0 +1,34 @@
+[
+	{
+		"name": "full-width-divider",
+		"title": "Full width divider",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "full-width-divider.json"
+	},
+	{
+		"name": "cta-one",
+		"title": "CTA one",
+		"type": "registry:block",
+		"description": "A split CTA with quiet structure, balanced actions, and full-width dividers.",
+		"registryDependencies": [
+			"button",
+			"local:full-width-divider"
+		],
+		"relativeUrl": "cta-one.json"
+	},
+	{
+		"name": "cta-two",
+		"title": "CTA two",
+		"type": "registry:block",
+		"description": "A split CTA with quiet structure, balanced actions, and full-width dividers.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:full-width-divider"
+		],
+		"relativeUrl": "cta-two.json"
+	}
+]

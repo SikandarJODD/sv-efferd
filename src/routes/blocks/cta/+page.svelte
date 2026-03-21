@@ -20,6 +20,9 @@
 		description={block.description}
 		previewComponent={block.previewComponent}
 		codeTree={block.codeTree}
-		showInstall={false}
+		previewHref={block.previewHref}
+		previewMode={block.previewMode}
+		previewHeight={block.previewHeight}
+		installId={block.installId}
 	/>
 {/each}

@@ -92,6 +92,8 @@ export const ctaBlocks = [
 		title: 'CTA One',
 		description: 'A split CTA with quiet structure, balanced actions, and full-width dividers.',
 		previewComponent: CtaOne,
+		previewHref: '/preview/cta/one',
+		installId: 'cta-one',
 		codeTree: createBlockCodeTree('cta-one:component', [
 			{
 				id: 'cta-one:component',
@@ -108,6 +110,8 @@ export const ctaBlocks = [
 		title: 'CTA Two',
 		description: 'A centered CTA with a softer secondary band and directional primary action.',
 		previewComponent: CtaTwo,
+		previewHref: '/preview/cta/two',
+		installId: 'cta-two',
 		codeTree: createBlockCodeTree('cta-two:component', [
 			{
 				id: 'cta-two:component',
@@ -124,6 +128,8 @@ export const ctaBlocks = [
 		title: 'CTA Three',
 		description: 'A more decorative CTA with corner accents and a stronger editorial feel.',
 		previewComponent: CtaThree,
+		previewHref: '/preview/cta/three',
+		installId: 'cta-three',
 		codeTree: createBlockCodeTree('cta-three:component', [
 			{
 				id: 'cta-three:component',
@@ -140,6 +146,8 @@ export const ctaBlocks = [
 		title: 'CTA Four',
 		description: 'A compact card CTA with credit-card reassurance and elevated actions.',
 		previewComponent: CtaFour,
+		previewHref: '/preview/cta/four',
+		installId: 'cta-four',
 		codeTree: createBlockCodeTree('cta-four:component', [
 			{
 				id: 'cta-four:component',
@@ -155,6 +163,8 @@ export const ctaBlocks = [
 		title: 'CTA Five',
 		description: 'A newsletter CTA that blends subscription form controls with social proof.',
 		previewComponent: CtaFive,
+		previewHref: '/preview/cta/five',
+		installId: 'cta-five',
 		codeTree: createBlockCodeTree('cta-five:component', [
 			{
 				id: 'cta-five:component',
