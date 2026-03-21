@@ -36,6 +36,7 @@
 		"vite": "^7.3.1"
 	},
 	"dependencies": {
+		"@number-flow/svelte": "^0.4.0",
 		"mode-watcher": "^1.1.0",
 		"motion-sv": "^0.1.10",
 		"shadcn-svelte": "^1.1.1"

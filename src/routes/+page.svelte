@@ -1,37 +1,13 @@
 <script lang="ts">
-	import AuthFive from '$lib/components/efferd/auth/auth-five.svelte';
-	import AuthFour from '$lib/components/efferd/auth/auth-four.svelte';
-	import AuthOne from '$lib/components/efferd/auth/auth-one.svelte';
-	import AuthThree from '$lib/components/efferd/auth/auth-three.svelte';
-	import AuthTwo from '$lib/components/efferd/auth/auth-two.svelte';
-
-	const authSections = [
-		{ title: 'Auth One', component: AuthOne },
-		{ title: 'Auth Two', component: AuthTwo },
-		{ title: 'Auth Three', component: AuthThree },
-		{ title: 'Auth Four', component: AuthFour },
-		{ title: 'Auth Five', component: AuthFive }
-	];
+	import PricingOne from '$lib/components/efferd/pricing/pricing-one.svelte';
+	import PricingTwo from '$lib/components/efferd/pricing/pricing-two.svelte';
+	import PricingThree from '$lib/components/efferd/pricing/pricing-three.svelte';
+	import PricingFour from '$lib/components/efferd/pricing/pricing-four.svelte';
 </script>
 
-<svelte:head>
-	<title>Auth Blocks Preview</title>
-</svelte:head>
-
-<div class="bg-background">
-	{#each authSections as section (section.title)}
-		{@const AuthComponent = section.component}
-
-		<section class="relative border-b">
-			<div class="pointer-events-none absolute top-4 left-4 z-50">
-				<span
-					class="rounded-full border bg-background/90 px-3 py-1 text-xs font-medium backdrop-blur"
-				>
-					{section.title}
-				</span>
-			</div>
-
-			<AuthComponent />
-		</section>
-	{/each}
-</div>
+<main class="relative flex flex-col gap-24 px-4 py-10 md:py-16">
+	<PricingOne />
+	<PricingTwo />
+	<PricingThree />
+	<PricingFour />
+</main>

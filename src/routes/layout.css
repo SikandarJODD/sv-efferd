@@ -195,3 +195,10 @@
 		@apply px-4 lg:px-6;
 	}
 }
+
+number-flow-svelte::part(suffix) {
+	margin-left: 0.0625em;
+	font-weight: normal;
+	/* font-size: 0.75em; */
+	/* color: var(--muted); */
+}
