@@ -45,6 +45,7 @@
 		<a
 			class="group mx-auto flex w-fit items-center gap-3 rounded-full border bg-card py-1 pr-1 pl-3 shadow"
 			href="#link"
+			id="link"
 		>
 			<Rocket class="size-3 text-muted-foreground" />
 			<span class="font-mono text-sm">60 New Blocks</span>

@@ -1,4 +1,4 @@
-# Svelte Efferd UI
+# Svelte Efferd Blocks
 
 developement phase
 
