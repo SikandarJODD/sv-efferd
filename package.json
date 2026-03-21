@@ -37,8 +37,15 @@
 	},
 	"dependencies": {
 		"@number-flow/svelte": "^0.4.0",
+		"@shikijs/langs": "^4.0.2",
+		"@shikijs/themes": "^4.0.2",
+		"isomorphic-dompurify": "2.25.0",
 		"mode-watcher": "^1.1.0",
 		"motion-sv": "^0.1.10",
-		"shadcn-svelte": "^1.1.1"
+		"package-manager-detector": "^1.6.0",
+		"runed": "^0.37.1",
+		"shadcn-svelte": "^1.1.1",
+		"shiki": "^4.0.2",
+		"svelte-toolbelt": "^0.10.6"
 	}
 }

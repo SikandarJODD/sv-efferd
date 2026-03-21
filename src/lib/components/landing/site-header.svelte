@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { BorderSeparator } from '$lib/components/ui/border-seperator';
 	import { Button } from '$lib/components/ui/button';
-	import { DashedLines } from '$lib/components/ui/dashed-lines';
 	import { Github, Logo, X as XLogo } from '$lib/svgs';
 	import { MoonIcon, SunIcon } from '@lucide/svelte';
 	import { mode, toggleMode } from 'mode-watcher';
