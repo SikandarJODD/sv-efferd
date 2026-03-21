@@ -11,8 +11,6 @@ import ctaFourSource from '$lib/components/efferd/cta/cta-four.svelte?raw';
 import ctaOneSource from '$lib/components/efferd/cta/cta-one.svelte?raw';
 import ctaThreeSource from '$lib/components/efferd/cta/cta-three.svelte?raw';
 import ctaTwoSource from '$lib/components/efferd/cta/cta-two.svelte?raw';
-import buttonIndexSource from '$lib/components/ui/button/index.ts?raw';
-import buttonSource from '$lib/components/ui/button/button.svelte?raw';
 import decorIconIndexSource from '$lib/components/ui/decor-icon/index.ts?raw';
 import decorIconSource from '$lib/components/ui/decor-icon/decor-icon.svelte?raw';
 import dividerIndexSource from '$lib/components/ui/full-width-divider/index.ts?raw';
@@ -24,16 +22,10 @@ import inputGroupSource from '$lib/components/ui/input-group/input-group.svelte?
 
 const buttonFiles = [
 	{
-		id: 'shared:button-index',
-		path: 'components/ui/button/index.ts',
-		lang: 'typescript' as const,
-		code: buttonIndexSource
-	},
-	{
 		id: 'shared:button',
 		path: 'components/ui/button/button.svelte',
-		lang: 'svelte' as const,
-		code: buttonSource
+		externalUrl: 'https://shadcn-svelte.com/docs/components/button',
+		externalLabel: 'Shadcn Svelte Button'
 	}
 ];
 

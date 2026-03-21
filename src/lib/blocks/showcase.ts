@@ -8,9 +8,11 @@ export type BlockCodeFile = {
 	id: string;
 	name: string;
 	path: string;
-	code: string;
+	code?: string;
 	lang?: SupportedLanguage;
 	highlight?: BlockCodeHighlight;
+	externalUrl?: string;
+	externalLabel?: string;
 };
 
 export type BlockCodeFolder = {
@@ -120,7 +122,9 @@ export function createBlockCodeTree(
 			path: file.path,
 			code: file.code,
 			lang: file.lang,
-			highlight: file.highlight
+			highlight: file.highlight,
+			externalUrl: file.externalUrl,
+			externalLabel: file.externalLabel
 		});
 	}
 

@@ -25,7 +25,6 @@
 		id: string;
 		title: string;
 		description?: string;
-		badge?: string;
 		codeTree: BlockCodeTree;
 		previewComponent: Component;
 		previewHref?: string;
@@ -45,12 +44,12 @@
 	const SM_SIZE = 30;
 	const MD_SIZE = 62;
 	const LG_SIZE = 82;
+	const MIN_PREVIEW_HEIGHT = 380;
 
 	let {
 		id,
 		title,
 		description = '',
-		badge = 'Free',
 		codeTree,
 		previewComponent: PreviewComponent,
 		previewHref,
@@ -85,7 +84,7 @@
 	let forcesIframe = $derived(Boolean(previewHref) && previewMode === 'iframe');
 	let showIframeComp = $state(false);
 	let shouldRenderInIframe = $derived(Boolean(previewHref) && (forcesIframe || showIframeComp));
-	let resolvedIframeHeight = $derived(previewHeight ?? iframeHeight);
+	let resolvedIframeHeight = $derived(Math.max(previewHeight ?? iframeHeight, MIN_PREVIEW_HEIGHT));
 	let activePreviewTheme = $derived(resolveScopedTheme(page.url.pathname));
 	let themeSetupHref = $derived.by(() => {
 		if (activePreviewTheme === 'veil') {
@@ -128,50 +127,47 @@
 	);
 </script>
 
-<section
-	id={id}
-	class="group mb-16 border-b [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]"
->
-	<div class="relative border-y">
-		<div class="absolute inset-x-4 -top-14 bottom-0 mx-auto max-w-7xl lg:inset-x-0">
+<section {id} class="group">
+	<div class="relative">
+		<!-- <div class="absolute inset-x-4 -top-14 bottom-0 mx-auto max-w-7xl lg:inset-x-0">
 			<div
 				class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
 			></div>
 			<div
 				class="absolute top-0 right-0 bottom-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
 			></div>
-		</div>
+		</div> -->
 
-		<div class="relative z-10 mx-auto max-w-7xl lg:border-x">
-			<div
-				class="relative px-5 py-5 sm:px-6 sm:py-6 lg:px-7 [--color-border:var(--color-zinc-200)] dark:[--color-border:var(--color-zinc-800)]"
-			>
-				<DecorIcon class="size-3.5 stroke-muted-foreground/40" position="top-left" />
-				<DecorIcon class="size-3.5 stroke-muted-foreground/40" position="top-right" />
-				<DecorIcon class="size-3.5 stroke-muted-foreground/40" position="bottom-left" />
-				<DecorIcon class="size-3.5 stroke-muted-foreground/40" position="bottom-right" />
+		<div class="relative mx-auto max-w-7xl">
+			<div class="relative border-y px-5 py-5 sm:px-6 sm:py-6 lg:px-7">
+				<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-left" />
+				<DecorIcon
+					class="size-3.5 translate-x-[calc(50%)] -translate-y-[calc(50%+0.5px)] bg-background z-999 stroke-muted-foreground/70"
+					position="top-right"
+				/>
+				<!-- <DecorIcon
+					class="size-3.5 bg-background stroke-muted-foreground/40"
+					position="bottom-left"
+				/>
+				<DecorIcon
+					class="size-3.5 bg-background stroke-muted-foreground/40"
+					position="bottom-right"
+				/> -->
 
-				<div class="absolute inset-x-0 top-0 h-px bg-border/70"></div>
-				<div class="absolute inset-x-0 bottom-0 h-px bg-border/70"></div>
-				<div
-					class="pointer-events-none absolute inset-x-0 top-0 h-10 bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.05)_12%,transparent_24%)] opacity-25 [mask-image:linear-gradient(to_bottom,black,transparent)] dark:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.04)_12%,transparent_24%)]"
-				></div>
+				<!-- <div class="absolute inset-x-0 top-0 h-px bg-border/70"></div> -->
+				<!-- <div class="absolute inset-x-0 bottom-0 h-px bg-border/70"></div> -->
+				<!-- <div
+					class="pointer-events-none absolute inset-x-0 top-0 h-10 bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.05)_12%,transparent_24%)] [mask-image:linear-gradient(to_bottom,black,transparent)] opacity-25 dark:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.04)_12%,transparent_24%)]"
+				></div> -->
 
 				<div class="relative max-w-2xl">
 					<div class="flex flex-wrap items-end gap-x-2 gap-y-1">
-						<h2 class="text-2xl font-semibold tracking-tight text-foreground sm:text-[2rem]">
+						<h2 class="text-xl font-medium tracking-tight text-foreground sm:text-[1.4rem]">
 							{title}
 						</h2>
-						{#if badge}
-							<span
-								class="mb-0.5 inline-flex items-center border-l border-border pl-2 text-sm font-medium text-muted-foreground"
-							>
-								{badge}
-							</span>
-						{/if}
 					</div>
 					{#if description}
-						<p class="mt-2 text-sm leading-6 text-muted-foreground">
+						<p class="mt-1.5 text-[13px] leading-5 text-muted-foreground">
 							{description}
 						</p>
 					{/if}
@@ -179,8 +175,10 @@
 			</div>
 
 			<div
-				class="relative z-10 flex flex-col gap-2 border-t px-4 py-2.5 sm:px-5 lg:flex-row lg:items-center lg:justify-between lg:gap-3 lg:px-6"
+				class="relative z-40 flex flex-col gap-2 border-b px-4 py-2.5 sm:px-5 lg:flex-row lg:items-center lg:justify-between lg:gap-3 lg:px-6"
 			>
+				<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-left" />
+				<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-right" />
 				<div class="flex min-w-0 flex-wrap items-center gap-2.5">
 					<div class="-ml-3 flex w-fit items-center gap-0.5">
 						<Button
@@ -446,12 +444,7 @@
 					{/if}
 
 					{#if canInstall}
-						<InstallComponent
-							itemId={registryItemId}
-							{registryPath}
-							{registryOptions}
-							{registry}
-						/>
+						<InstallComponent itemId={registryItemId} {registryPath} {registryOptions} {registry} />
 					{/if}
 
 					{#if themeSetupHref}
@@ -471,12 +464,13 @@
 	</div>
 
 	<div class="relative">
-		<div class="absolute inset-x-4 -bottom-14 mx-auto h-14 max-w-7xl lg:inset-x-0">
+		<!-- <div class="absolute inset-x-4 -bottom-14 mx-auto h-14 max-w-7xl lg:inset-x-0">
 			<div class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-(--color-border)"></div>
 			<div class="absolute top-0 right-0 bottom-0 w-px bg-linear-to-b from-(--color-border)"></div>
-		</div>
+		</div> -->
 
-		<div class="relative z-10 mx-auto max-w-7xl px-4 lg:border-x lg:px-0">
+		<!-- lg:border-x -->
+		<div class="relative z-10 mx-auto max-w-7xl px-4 lg:px-0">
 			<div class={cn('bg-white dark:bg-transparent', mode === 'code' && 'hidden')}>
 				{#if shouldRenderInIframe && previewHref}
 					<PaneGroup direction="horizontal">
@@ -495,9 +489,9 @@
 								loading="lazy"
 								allowFullScreen
 								bind:this={iframeRef}
-								title={title}
+								{title}
 								height={resolvedIframeHeight}
-								class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) min-h-56 w-full duration-200 will-change-auto"
+								class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) min-h-[380px] w-full duration-200 will-change-auto"
 								src={previewHref}
 								id={`block-${id}`}
 								style={`--iframe-height: ${resolvedIframeHeight}px;`}
@@ -537,12 +531,15 @@
 					</PaneGroup>
 				{:else if activePreviewTheme}
 					<div data-theme={activePreviewTheme}>
-						<div in:scale={{ start: 0.85 }} class="theme-container w-full overflow-hidden">
+						<div
+							in:scale={{ start: 0.85 }}
+							class="theme-container min-h-[380px] w-full overflow-hidden"
+						>
 							<PreviewComponent />
 						</div>
 					</div>
 				{:else}
-					<div in:scale={{ start: 0.85 }} class="w-full overflow-hidden">
+					<div in:scale={{ start: 0.85 }} class="min-h-[380px] w-full overflow-hidden flex items-center justify-center">
 						<PreviewComponent />
 					</div>
 				{/if}
