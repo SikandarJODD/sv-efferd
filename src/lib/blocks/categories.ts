@@ -2,6 +2,7 @@ export type BlockCategory = {
 	slug: string;
 	label: string;
 	sourceKey?: string;
+	hasDedicatedPage?: boolean;
 };
 
 export const blockCategories = [
@@ -11,7 +12,7 @@ export const blockCategories = [
 	{ slug: 'testimonials', label: 'Testimonials', sourceKey: 'testimonial' },
 	{ slug: 'contact', label: 'Contact' },
 	{ slug: 'blog', label: 'Blog', sourceKey: 'blogs' },
-	{ slug: 'cta', label: 'CTA' },
+	{ slug: 'cta', label: 'CTA', hasDedicatedPage: true },
 	{ slug: 'faqs', label: "FAQ's" },
 	{ slug: 'features', label: 'Features' },
 	{ slug: 'footer', label: 'Footer' },
