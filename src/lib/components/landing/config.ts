@@ -1,15 +1,15 @@
 export const landingNavLinks = [
 	{
 		label: 'Blocks',
-		href: '#blocks'
+		href: '/#blocks'
 	},
 	{
 		label: 'Docs',
-		href: '#docs'
+		href: '/#docs'
 	},
 	{
 		label: 'Changelog',
-		href: '#changelog'
+		href: '/changelog'
 	}
 ] as const;
 
@@ -17,12 +17,12 @@ export const landingSocialLinks = [
 	{
 		id: 'x',
 		label: 'X',
-		href: '#x'
+		href: 'https://x.com'
 	},
 	{
 		id: 'github',
 		label: 'GitHub',
-		href: '#github'
+		href: 'https://github.com/SikandarJODD/sv-efferd'
 	}
 ] as const;
 
@@ -33,10 +33,10 @@ export const landingHero = {
 		'Save hours of design time with clean, ready-to-use shadcn blocks that just work, modern, responsive, and built for speed.',
 	primaryCta: {
 		label: 'Explore',
-		href: '#blocks'
+		href: '/#blocks'
 	},
 	secondaryCta: {
 		label: 'Star on GitHub',
-		href: '#github'
+		href: 'https://github.com/SikandarJODD/sv-efferd'
 	}
 } as const;
