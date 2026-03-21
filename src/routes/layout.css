@@ -113,6 +113,7 @@
 	/* Font */
 	--font-sans: 'Geist', sans-serif;
 	--font-mono: 'Geist Mono', monospace;
+
 	--animate-marquee: marquee var(--duration) linear infinite;
 	--animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
 	@keyframes marquee {

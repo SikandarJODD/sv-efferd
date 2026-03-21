@@ -1,10 +1,9 @@
 <script lang="ts">
-	import ImageGallery from '$lib/components/efferd/image-gallery/image-gallery.svelte';
+	import SiteHero from "$lib/components/landing/site-hero.svelte";
+
 </script>
 
-<div class="p-10">
-	<ImageGallery />
+<div class="relative flex min-h-screen flex-col">
+	<!-- <SiteHeader /> -->
+	<SiteHero />
 </div>
-
-<style>
-</style>
