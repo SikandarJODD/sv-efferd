@@ -1576,6 +1576,211 @@
 				"local:portal"
 			],
 			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "header-one",
+			"title": "Header One",
+			"type": "registry:block",
+			"description": "A clean sticky header with simple nav links and a compact mobile sheet.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/header/header-one/header-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-one/header-one.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-one/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-one/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-one/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-one/nav-links.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:file",
+					"target": "hooks/use-scroll.svelte.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:portal"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "header-two",
+			"title": "Header Two",
+			"type": "registry:block",
+			"description": "A framed sticky header with tighter proportions and a softer product shell.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/header/header-two/header-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-two/header-two.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-two/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-two/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-two/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-two/nav-links.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:file",
+					"target": "hooks/use-scroll.svelte.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:portal"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "header-three",
+			"title": "Header Three",
+			"type": "registry:block",
+			"description": "A richer sticky header with mega-menu navigation and a full mobile fallback.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/header/header-three/header-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/header-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/desktop-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/desktop-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/link-item.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/link-item.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-three/nav-links.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/types.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-three/types.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:file",
+					"target": "hooks/use-scroll.svelte.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:navigation-menu", "local:portal"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "header-four",
+			"title": "Header Four",
+			"type": "registry:block",
+			"description": "A floating rounded header with stronger auth actions and a simplified mobile drawer.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/header/header-four/header-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-four/header-four.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-four/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-four/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-four/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-four/nav-links.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:file",
+					"target": "hooks/use-scroll.svelte.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:portal"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "header-five",
+			"title": "Header Five",
+			"type": "registry:block",
+			"description": "A polished rounded header with compact mega-menu panels and stronger pill-shaped actions.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/header/header-five/header-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-five/header-five.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-five/desktop-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-five/desktop-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-five/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-five/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-five/link-item.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-five/link-item.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-five/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-five/nav-links.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-five/types.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-five/types.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:file",
+					"target": "hooks/use-scroll.svelte.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:navigation-menu", "local:portal"],
+			"dependencies": ["@lucide/svelte"]
 		}
 	]
 }

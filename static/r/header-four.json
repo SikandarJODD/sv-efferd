@@ -1,0 +1,44 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "header-four",
+	"title": "Header Four",
+	"type": "registry:block",
+	"description": "A floating rounded header with stronger auth actions and a simplified mobile drawer.",
+	"dependencies": [
+		"@lucide/svelte"
+	],
+	"devDependencies": [
+		"@lucide/svelte@^0.577.0"
+	],
+	"registryDependencies": [
+		"button",
+		"./portal.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { Button } from '$lib/components/ui/button';\n\timport { createScroll } from '$lib/hooks/use-scroll.svelte';\n\timport Logo from '$lib/svgs/logo.svelte';\n\timport { cn } from '$UTILS$';\n\timport MobileNav from './mobile-nav.svelte';\n\timport { navLinks } from './nav-links';\n\tlet scroll = createScroll(10);\n</script>\n\n<header\n\tclass={cn(\n\t\t'sticky top-2 z-50 mx-auto flex h-11 w-[92svw] max-w-4xl items-center justify-between rounded-lg border bg-background/95 px-1 shadow-sm backdrop-blur-sm transition-[max-width] duration-300 ease-out supports-backdrop-filter:bg-background/50',\n\t\tscroll.scrolled &&\n\t\t\t'border-border bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/50 md:top-2 md:max-w-3xl md:shadow'\n\t)}\n>\n\t<nav\n\t\tclass={cn(\n\t\t\t'flex h-11 w-full items-center justify-between md:h-11  md:transition-all md:ease-out'\n\t\t)}\n\t>\n\t\t<a class=\"rounded-md border border-border p-2 hover:bg-muted dark:hover:bg-muted/50\" href=\"/\">\n\t\t\t<Logo class=\"h-4\" />\n\t\t</a>\n\t\t<div class=\"hidden items-center gap-2 md:flex\">\n\t\t\t<div>\n\t\t\t\t{#each navLinks as { label, href }}\n\t\t\t\t\t<Button size=\"sm\" variant=\"ghost\" {href}>\n\t\t\t\t\t\t{label}\n\t\t\t\t\t</Button>\n\t\t\t\t{/each}\n\t\t\t</div>\n\t\t</div>\n\t\t<div>\n\t\t\t<Button size=\"sm\" variant=\"ghost\">Login</Button>\n\t\t\t<Button size=\"sm\">Sign Up</Button>\n\t\t</div>\n\t\t<MobileNav />\n\t</nav>\n</header>\n",
+			"type": "registry:component",
+			"target": "efferd/header/header-four/header-four.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { Button } from '$lib/components/ui/button';\r\n\timport { Portal, PortalBackdrop } from '$lib/components/ui/portal';\r\n\timport { cn } from '$UTILS$';\r\n\timport { MenuIcon, XIcon } from '@lucide/svelte';\r\n\timport { navLinks } from './nav-links';\r\n\tlet open = $state(false);\r\n</script>\r\n\r\n<div class=\"md:hidden\">\r\n\t<Button\r\n\t\taria-controls=\"mobile-menu\"\r\n\t\taria-expanded={open}\r\n\t\taria-label=\"Toggle menu\"\r\n\t\tclass=\"md:hidden size-8\"\r\n\t\tsize=\"icon\"\r\n\t\tvariant=\"secondary\"\r\n\t\tonclick={() => (open = !open)}\r\n\t>\r\n\t\t{#if open}\r\n\t\t\t<XIcon class=\"size-4.5\" />\r\n\t\t{:else}\r\n\t\t\t<MenuIcon class=\"size-4.5\" />\r\n\t\t{/if}\r\n\t</Button>\r\n\t{#if open}\r\n\t\t<Portal class=\"top-14\">\r\n\t\t\t<PortalBackdrop />\r\n\t\t\t<div\r\n\t\t\t\tclass={cn(\r\n\t\t\t\t\t'ease-out data-[slot=open]:animate-in data-[slot=open]:zoom-in-97',\r\n\t\t\t\t\t'size-full px-6 py-4'\r\n\t\t\t\t)}\r\n\t\t\t\tdata-slot={open ? 'open' : 'closed'}\r\n\t\t\t>\r\n\t\t\t\t<ul class=\"grid gap-y-4\">\r\n\t\t\t\t\t{#each navLinks as link, i}\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a href={link.href} class=\"text-xl font-medium\">\r\n\t\t\t\t\t\t\t\t{link.label}\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t{/each}\r\n\t\t\t\t</ul>\r\n\t\t\t\t<div class=\"mt-4 grid grid-cols-2 gap-2\">\r\n\t\t\t\t\t<Button variant=\"outline\">Sign In</Button>\r\n\t\t\t\t\t<Button>Get Started</Button>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</Portal>\r\n\t{/if}\r\n</div>\r\n",
+			"type": "registry:component",
+			"target": "efferd/header/header-four/mobile-nav.svelte"
+		},
+		{
+			"content": "let navLinks = [\r\n\t{\r\n\t\tlabel: 'Home',\r\n\t\thref: '#'\r\n\t},\r\n\t{\r\n\t\tlabel: 'Features',\r\n\t\thref: '#'\r\n\t},\r\n\t{\r\n\t\tlabel: 'Pricing',\r\n\t\thref: '#'\r\n\t},\r\n\t{\r\n\t\tlabel: 'About',\r\n\t\thref: '#'\r\n\t}\r\n];\r\n\r\nexport { navLinks };\r\n",
+			"type": "registry:file",
+			"target": "efferd/header/header-four/nav-links.ts"
+		},
+		{
+			"content": "class ScrollState {\r\n\t#scrolled = $state(false);\r\n\r\n\treadonly #downThreshold: number;\r\n\treadonly #upThreshold: number;\r\n\r\n\tconstructor(downThreshold: number, upThreshold?: number) {\r\n\t\tthis.#downThreshold = downThreshold;\r\n\t\tthis.#upThreshold = upThreshold ?? downThreshold / 2;\r\n\r\n\t\t$effect(() => {\r\n\t\t\tconst handleScroll = () => {\r\n\t\t\t\tconst y = window.scrollY;\r\n\t\t\t\t// Hysteresis Logic: Only update scrolled state when crossing thresholds in the appropriate direction\r\n\t\t\t\tthis.#scrolled = this.#scrolled\r\n\t\t\t\t\t? y > this.#upThreshold // currently scrolled → only reset below upThreshold\r\n\t\t\t\t\t: y > this.#downThreshold; // currently not scrolled → only set above downThreshold\r\n\t\t\t};\r\n\r\n\t\t\twindow.addEventListener('scroll', handleScroll, { passive: true });\r\n\t\t\thandleScroll();\r\n\r\n\t\t\treturn () => window.removeEventListener('scroll', handleScroll);\r\n\t\t});\r\n\t}\r\n\r\n\tget scrolled(): boolean {\r\n\t\treturn this.#scrolled;\r\n\t}\r\n}\r\n\r\nexport function createScroll(downThreshold: number, upThreshold?: number): ScrollState {\r\n\treturn new ScrollState(downThreshold, upThreshold);\r\n}\r\n",
+			"type": "registry:file",
+			"target": "hooks/use-scroll.svelte.ts"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\timport type { SVGAttributes } from 'svelte/elements';\r\n\r\n\tlet { ...props }: SVGAttributes<SVGSVGElement> = $props();\r\n</script>\r\n\r\n<svg\r\n\txmlns=\"http://www.w3.org/2000/svg\"\r\n\tclass=\"size-4\"\r\n\tviewBox=\"0 0 24 24\"\r\n\tfill=\"none\"\r\n\txmlns:xlink=\"http://www.w3.org/1999/xlink\"\r\n\trole=\"img\"\r\n\tcolor=\"currentColor\"\r\n\t{...props}\r\n>\r\n\t<path\r\n\t\td=\"M12 21H12H12C16.2426 21 18.364 21 19.682 19.682C21 18.364 21 16.2426 21 12V12V12C21 7.75735 21 5.63604 19.682 4.31802C18.364 3 16.2426 3 12 3C7.75736 3 5.63604 3 4.31802 4.31802C3 5.63604 3 7.75736 3 12C3 16.2426 3 18.364 4.31802 19.682C5.63604 21 7.75735 21 12 21Z\"\r\n\t\tstroke=\"currentColor\"\r\n\t\tstroke-width=\"1.5\"\r\n\t\tstroke-linecap=\"round\"\r\n\t\tstroke-linejoin=\"round\"\r\n\t></path>\r\n\t<path\r\n\t\topacity=\"0.4\"\r\n\t\td=\"M15.7275 9.36502C16 9.8998 16 10.5999 16 12C16 13.4001 16 14.1002 15.7275 14.635C15.4878 15.1054 15.1054 15.4878 14.635 15.7275C14.1002 16 13.4001 16 12 16C10.5999 16 9.8998 16 9.36502 15.7275C8.89462 15.4878 8.51217 15.1054 8.27248 14.635C8 14.1002 8 13.4001 8 12C8 10.5999 8 9.8998 8.27248 9.36502C8.51217 8.89462 8.89462 8.51217 9.36502 8.27248C9.8998 8 10.5999 8 12 8C13.4001 8 14.1002 8 14.635 8.27248C15.1054 8.51217 15.4878 8.89462 15.7275 9.36502Z\"\r\n\t\tstroke=\"currentColor\"\r\n\t\tstroke-width=\"1.5\"\r\n\t\tstroke-linecap=\"round\"\r\n\t\tstroke-linejoin=\"round\"\r\n\t></path>\r\n</svg>\r\n",
+			"type": "registry:component",
+			"target": "svgs/logo.svelte"
+		}
+	]
+}

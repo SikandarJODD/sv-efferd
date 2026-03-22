@@ -774,5 +774,77 @@
 			"local:portal"
 		],
 		"relativeUrl": "hero-three.json"
+	},
+	{
+		"name": "header-one",
+		"title": "Header One",
+		"type": "registry:block",
+		"description": "A clean sticky header with simple nav links and a compact mobile sheet.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:portal"
+		],
+		"relativeUrl": "header-one.json"
+	},
+	{
+		"name": "header-two",
+		"title": "Header Two",
+		"type": "registry:block",
+		"description": "A framed sticky header with tighter proportions and a softer product shell.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:portal"
+		],
+		"relativeUrl": "header-two.json"
+	},
+	{
+		"name": "header-three",
+		"title": "Header Three",
+		"type": "registry:block",
+		"description": "A richer sticky header with mega-menu navigation and a full mobile fallback.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:navigation-menu",
+			"local:portal"
+		],
+		"relativeUrl": "header-three.json"
+	},
+	{
+		"name": "header-four",
+		"title": "Header Four",
+		"type": "registry:block",
+		"description": "A floating rounded header with stronger auth actions and a simplified mobile drawer.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:portal"
+		],
+		"relativeUrl": "header-four.json"
+	},
+	{
+		"name": "header-five",
+		"title": "Header Five",
+		"type": "registry:block",
+		"description": "A polished rounded header with compact mega-menu panels and stronger pill-shaped actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:navigation-menu",
+			"local:portal"
+		],
+		"relativeUrl": "header-five.json"
 	}
 ]
