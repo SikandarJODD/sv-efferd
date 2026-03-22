@@ -1,0 +1,18 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "auth-divider",
+	"title": "Auth divider",
+	"type": "registry:block",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { cn, type WithElementRef } from \"$UTILS$\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLAttributes<HTMLDivElement>> = $props();\n</script>\n\n<div bind:this={ref} class={cn(\"relative flex w-full items-center\", className)} {...restProps}>\n\t<div class=\"w-full border-t\"></div>\n\t<div class=\"flex w-max justify-center px-2 text-xs text-nowrap text-muted-foreground\">\n\t\t{@render children?.()}\n\t</div>\n\t<div class=\"w-full border-t\"></div>\n</div>\n",
+			"type": "registry:component",
+			"target": "ui/auth-divider/auth-divider.svelte"
+		},
+		{
+			"content": "import Root from \"./auth-divider.svelte\";\n\nexport {\n\tRoot,\n\t//\n\tRoot as AuthDivider\n};\n",
+			"type": "registry:file",
+			"target": "ui/auth-divider/index.ts"
+		}
+	]
+}

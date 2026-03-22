@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { ArrowRight, PhoneCall } from '@lucide/svelte';
-	import { Button } from '$lib/components/ui/button';
+	import { ArrowRight, PhoneCall } from "@lucide/svelte";
+	import { Button } from "$lib/components/ui/button";
 </script>
 
 <section class="mx-auto w-full max-w-5xl overflow-hidden pt-16">
@@ -13,7 +13,7 @@
 	<div class="relative z-10 flex max-w-2xl flex-col gap-5 px-4">
 		<a
 			class="group flex w-fit animate-in items-center gap-3 rounded-sm border bg-card p-1 shadow-xs transition-all delay-500 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in"
-			href="#link"
+			href="/"
 		>
 			<div class="rounded-xs border bg-card px-1.5 py-0.5 shadow-sm">
 				<p class="font-mono text-xs">NOW</p>
@@ -46,11 +46,11 @@
 		<div
 			class="flex w-fit animate-in items-center justify-center gap-3 pt-2 delay-300 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in"
 		>
-			<Button href="#book-a-call" variant="outline">
+			<Button href="/" variant="outline">
 				<PhoneCall class="size-4" />
 				Book a Call
 			</Button>
-			<Button href="#get-started">
+			<Button href="/">
 				Get started
 				<ArrowRight class="size-4" />
 			</Button>

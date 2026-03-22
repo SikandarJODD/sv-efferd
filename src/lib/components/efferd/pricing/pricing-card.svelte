@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { CheckCircle2, type Icon as IconType } from '@lucide/svelte';
-	import { Button, type ButtonVariant } from '$lib/components/ui/button';
-	import { cn } from '$lib/utils';
-	import type { Component } from 'svelte';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { CheckCircle2, type Icon as IconType } from "@lucide/svelte";
+	import { Button, type ButtonVariant } from "$lib/components/ui/button";
+	import { cn } from "$lib/utils";
+	import type { Component } from "svelte";
+	import type { HTMLAttributes } from "svelte/elements";
 
 	type PricingCardProps = HTMLAttributes<HTMLDivElement> & {
 		icon: typeof IconType | Component;
@@ -17,7 +17,7 @@
 		href?: string;
 		featured?: boolean;
 		buttonLabel?: string;
-		buttonVariant?: Extract<ButtonVariant, 'default' | 'outline'>;
+		buttonVariant?: Extract<ButtonVariant, "default" | "outline">;
 	};
 
 	let {
@@ -29,10 +29,10 @@
 		period,
 		original,
 		badge,
-		href = '#',
+		href = "/",
 		featured = false,
-		buttonLabel = 'Get Started',
-		buttonVariant = 'outline',
+		buttonLabel = "Get Started",
+		buttonVariant = "outline",
 		class: className,
 		...restProps
 	}: PricingCardProps = $props();
@@ -40,20 +40,24 @@
 </script>
 
 <div
-	class={cn('relative w-full max-w-xs rounded-xl border bg-background p-1', className)}
+	class={cn("relative w-full max-w-xs rounded-xl border bg-background p-1", className)}
 	{...restProps}
 >
 	<!-- {@const Icon = icon} -->
 
-	<div class={cn('relative mb-4 rounded-xl border p-4', featured && 'bg-card shadow-xs')}>
+	<div class={cn("relative mb-4 rounded-xl border p-4", featured && "bg-card shadow-xs")}>
 		<div class="mb-8 flex items-center justify-between">
-			<div class="flex items-center gap-2 text-sm font-medium [&_svg:not([class*='size-'])]:size-4">
+			<div
+				class="flex items-center gap-2 text-sm font-medium [&_svg:not([class*='size-'])]:size-4"
+			>
 				<Icon />
 				<span>{name}</span>
 			</div>
 
 			{#if badge}
-				<span class="rounded-full border bg-background px-3 py-1 text-xs shadow-xs">{badge}</span>
+				<span class="rounded-full border bg-background px-3 py-1 text-xs shadow-xs"
+					>{badge}</span
+				>
 			{/if}
 		</div>
 

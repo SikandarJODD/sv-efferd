@@ -1,5 +1,5 @@
 <script>
-	import LogoCloudFour from './logo-cloud-four.svelte';
+	import LogoCloudFour from "./logo-cloud-four.svelte";
 </script>
 
 <div class="min-h-screen w-full place-content-center p-4">

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
-	import type { Snippet } from 'svelte';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { cn } from "$lib/utils";
+	import type { Snippet } from "svelte";
+	import type { HTMLAttributes } from "svelte/elements";
 
 	type Logo = {
 		src: string;
@@ -13,11 +13,11 @@
 		children?: Snippet;
 	};
 
-	let { logo, class: className = '', children, ...props }: LogoCardProps = $props();
+	let { logo, class: className = "", children, ...props }: LogoCardProps = $props();
 </script>
 
 <div
-	class={cn('flex items-center justify-center bg-background px-4 py-8 md:p-8', className)}
+	class={cn("flex items-center justify-center bg-background px-4 py-8 md:p-8", className)}
 	{...props}
 >
 	<img

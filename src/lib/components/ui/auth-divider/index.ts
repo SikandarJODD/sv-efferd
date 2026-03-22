@@ -1,4 +1,4 @@
-import Root from './auth-divider.svelte';
+import Root from "./auth-divider.svelte";
 
 export {
 	Root,

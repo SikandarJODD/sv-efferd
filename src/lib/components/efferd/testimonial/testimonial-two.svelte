@@ -1,6 +1,6 @@
 <script>
-	import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar';
-	import MaskLine from '$lib/components/ui/mask-line/mask-line.svelte';
+	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
+	import MaskLine from "$lib/components/ui/mask-line/mask-line.svelte";
 </script>
 
 <figure
@@ -23,8 +23,8 @@
 	</div>
 	<figcaption class="space-y-4 p-8 text-center md:p-6 md:text-left">
 		<blockquote class="text-lg leading-tight tracking-tight text-muted-foreground">
-			&quot;<span class="font-medium text-foreground">Svelte Efferd</span> is so polished I might just retire.
-			The ecosystem is in safe hands.&quot;
+			&quot;<span class="font-medium text-foreground">Svelte Efferd</span> is so polished I might
+			just retire. The ecosystem is in safe hands.&quot;
 		</blockquote>
 
 		<div>

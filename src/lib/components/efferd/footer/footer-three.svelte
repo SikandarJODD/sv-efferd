@@ -1,14 +1,14 @@
 <script lang="ts">
-	import AnimatedContainer from '$lib/components/efferd/footer/AnimatedContainer.svelte';
-	import { cn } from '$lib/utils';
-	import { Logo } from '$lib/svgs';
+	import AnimatedContainer from "$lib/components/efferd/footer/AnimatedContainer.svelte";
+	import { cn } from "$lib/utils";
+	import Logo from "$lib/svgs/logo.svelte";
 	import {
 		FacebookIcon,
 		InstagramIcon,
 		LinkedinIcon,
 		YoutubeIcon,
 		type Icon
-	} from '@lucide/svelte';
+	} from "@lucide/svelte";
 
 	type FooterLink = {
 		title: string;
@@ -23,53 +23,53 @@
 
 	const footerLinks: FooterSection[] = [
 		{
-			label: 'Product',
+			label: "Product",
 			links: [
-				{ title: 'Features', href: '/features' },
-				{ title: 'Pricing', href: '/pricing' },
-				{ title: 'Testimonials', href: '/testimonials' },
-				{ title: 'Integration', href: '/integrations' }
+				{ title: "Features", href: "/" },
+				{ title: "Pricing", href: "/" },
+				{ title: "Testimonials", href: "/" },
+				{ title: "Integration", href: "/" }
 			]
 		},
 		{
-			label: 'Company',
+			label: "Company",
 			links: [
-				{ title: 'FAQs', href: '/faqs' },
-				{ title: 'About Us', href: '/about' },
-				{ title: 'Privacy Policy', href: '/privacy' },
-				{ title: 'T&S', href: '/terms' }
+				{ title: "FAQs", href: "/" },
+				{ title: "About Us", href: "/" },
+				{ title: "Privacy Policy", href: "/" },
+				{ title: "T&S", href: "/" }
 			]
 		},
 		{
-			label: 'Resources',
+			label: "Resources",
 			links: [
-				{ title: 'Blog', href: '/blog' },
-				{ title: 'Changelog', href: '/changelog' },
-				{ title: 'Brand', href: '/brand' },
-				{ title: 'Help', href: '/help' }
+				{ title: "Blog", href: "/" },
+				{ title: "Changelog", href: "/" },
+				{ title: "Brand", href: "/" },
+				{ title: "Help", href: "/" }
 			]
 		},
 		{
-			label: 'Social Links',
+			label: "Social Links",
 			links: [
 				{
-					title: 'Facebook',
-					href: 'https://facebook.com',
+					title: "Facebook",
+					href: "https://facebook.com",
 					icon: FacebookIcon
 				},
 				{
-					title: 'Instagram',
-					href: 'https://instagram.com',
+					title: "Instagram",
+					href: "https://instagram.com",
 					icon: InstagramIcon
 				},
 				{
-					title: 'Youtube',
-					href: 'https://youtube.com',
+					title: "Youtube",
+					href: "https://youtube.com",
 					icon: YoutubeIcon
 				},
 				{
-					title: 'LinkedIn',
-					href: 'https://linkedin.com',
+					title: "LinkedIn",
+					href: "https://linkedin.com",
 					icon: LinkedinIcon
 				}
 			]
@@ -81,8 +81,8 @@
 
 <footer
 	class={cn(
-		'relative mx-auto flex w-full max-w-5xl flex-col items-center justify-center rounded-t-4xl border-t px-6 md:rounded-t-6xl md:px-8',
-		'dark:bg-[radial-gradient(35%_128px_at_50%_0%,--theme(--color-foreground/.1),transparent)]'
+		"md:rounded-t-6xl relative mx-auto flex w-full max-w-5xl flex-col items-center justify-center rounded-t-4xl border-t px-6 md:px-8",
+		"dark:bg-[radial-gradient(35%_128px_at_50%_0%,--theme(--color-foreground/.1),transparent)]"
 	)}
 >
 	<div
@@ -92,9 +92,7 @@
 	<div class="grid w-full gap-8 py-6 md:py-8 lg:grid-cols-3 lg:gap-8">
 		<AnimatedContainer class="space-y-4">
 			<Logo class="h-4 w-auto" />
-			<p class="mt-8 text-sm text-muted-foreground md:mt-0">
-				Beautify your app with efferd.
-			</p>
+			<p class="mt-8 text-sm text-muted-foreground md:mt-0">Beautify your app with efferd.</p>
 		</AnimatedContainer>
 
 		<div class="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4 lg:col-span-2 lg:mt-0">
@@ -108,8 +106,8 @@
 									<a
 										class="inline-flex items-center duration-250 hover:text-foreground [&_svg]:me-1 [&_svg]:size-4"
 										href={link.href}
-										rel={link.icon ? 'noreferrer' : undefined}
-										target={link.icon ? '_blank' : undefined}
+										rel={link.icon ? "noreferrer" : undefined}
+										target={link.icon ? "_blank" : undefined}
 									>
 										{#if link.icon}
 											{@const LinkIcon = link.icon}

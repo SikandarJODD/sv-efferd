@@ -1,24 +1,24 @@
 <script lang="ts">
-	import { page } from '$app/state';
-	import type { BlockCodeTree } from '$lib/blocks/showcase';
-	import { cn } from '$lib/utils';
-	import Palette from '@lucide/svelte/icons/palette';
-	import { Pane, PaneGroup, PaneResizer, type PaneAPI } from 'paneforge';
-	import { watch } from 'runed';
-	import type { Component } from 'svelte';
-	import { MediaQuery } from 'svelte/reactivity';
-	import { scale } from 'svelte/transition';
-	import Button from '../ui/button/button.svelte';
-	import { DecorIcon } from '../ui/decor-icon';
-	import Separator from '../ui/separator/separator.svelte';
+	import { page } from "$app/state";
+	import type { BlockCodeTree } from "$lib/blocks/showcase";
+	import { cn } from "$lib/utils";
+	import Palette from "@lucide/svelte/icons/palette";
+	import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
+	import { watch } from "runed";
+	import type { Component } from "svelte";
+	import { MediaQuery } from "svelte/reactivity";
+	import { scale } from "svelte/transition";
+	import Button from "../ui/button/button.svelte";
+	import { DecorIcon } from "../ui/decor-icon";
+	import Separator from "../ui/separator/separator.svelte";
 	import {
 		Tooltip,
 		TooltipContent,
 		TooltipProvider,
 		TooltipTrigger
-	} from '$lib/components/ui/tooltip';
-	import CodeEditor from './CodeEditor.svelte';
-	import InstallComponent from './InstallComponent.svelte';
+	} from "$lib/components/ui/tooltip";
+	import CodeEditor from "./CodeEditor.svelte";
+	import InstallComponent from "./InstallComponent.svelte";
 
 	interface BlockPreviewProps {
 		id: string;
@@ -27,81 +27,89 @@
 		codeTree: BlockCodeTree;
 		previewComponent: Component;
 		previewHref?: string;
-		previewMode?: 'inline' | 'iframe';
+		previewMode: "inline" | "iframe";
 		previewHeight?: number;
 		installId?: string;
 	}
 
 	const radioItem =
-		'rounded-(--radius) duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted';
+		"rounded-(--radius) duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
 
 	const DEFAULT_SIZE = 100;
 	const SM_SIZE = 30;
 	const MD_SIZE = 62;
 	const LG_SIZE = 82;
-	const MIN_PREVIEW_HEIGHT = 380;
+	const MIN_PREVIEW_HEIGHT = 520;
 
 	let {
 		id,
 		title,
-		description = '',
+		description = "",
 		codeTree,
 		previewComponent: PreviewComponent,
 		previewHref,
-		previewMode = 'inline',
+		previewMode,
 		previewHeight,
 		installId
 	}: BlockPreviewProps = $props();
 
 	let width = $state(DEFAULT_SIZE);
-	let mode = $state<'preview' | 'code'>('preview');
+	let mode = $state<"preview" | "code">("preview");
 	let iframeHeight = $state(0);
 	let isLoading = $state(true);
 
 	let ref: PaneAPI | undefined = $state(undefined);
-	let large = new MediaQuery('min-width: 1024px');
+	let large = new MediaQuery("min-width: 1024px");
 	let iframeRef = $state<HTMLIFrameElement | null>(null);
 
-	type ScopedTheme = 'veil' | 'mist';
+	type ScopedTheme = "veil" | "mist";
 
 	function resolveScopedTheme(pathname: string): ScopedTheme | null {
-		const segments = pathname.split('/').filter(Boolean);
-		const themeSegment = segments[0] === 'preview' ? segments[1] : segments[0];
+		const segments = pathname.split("/").filter(Boolean);
+		const themeSegment = segments[0] === "preview" ? segments[1] : segments[0];
 
-		return themeSegment === 'veil' || themeSegment === 'mist' ? themeSegment : null;
+		return themeSegment === "veil" || themeSegment === "mist" ? themeSegment : null;
 	}
 
 	let canOpenPreview = $derived(Boolean(previewHref));
-	let forcesIframe = $derived(Boolean(previewHref) && previewMode === 'iframe');
+	let isHeroPreview = $derived(previewHref?.startsWith("/preview/hero/") ?? false);
+	let startsInIframe = $derived(Boolean(previewHref) && previewMode === "iframe");
+	let canToggleResponsivePreview = $derived(Boolean(previewHref) && previewMode === "inline");
 	let showIframeComp = $state(false);
-	let shouldRenderInIframe = $derived(Boolean(previewHref) && (forcesIframe || showIframeComp));
-	let resolvedIframeHeight = $derived(Math.max(previewHeight ?? iframeHeight, MIN_PREVIEW_HEIGHT));
+	let shouldRenderInIframe = $derived(Boolean(previewHref) && (startsInIframe || showIframeComp));
+	let shouldShowIframeScrollHint = $derived(shouldRenderInIframe && isHeroPreview);
+	let resolvedIframeHeight = $derived(
+		Math.max(previewHeight ?? iframeHeight, MIN_PREVIEW_HEIGHT)
+	);
 	let activePreviewTheme = $derived(resolveScopedTheme(page.url.pathname));
 	let themeSetupHref = $derived.by(() => {
-		if (activePreviewTheme === 'veil') {
-			return '/v2-docs/veil-theme';
+		if (activePreviewTheme === "veil") {
+			return "/v2-docs/veil-theme";
 		}
 
-		if (activePreviewTheme === 'mist') {
-			return '/v2-docs/mist-theme';
+		if (activePreviewTheme === "mist") {
+			return "/v2-docs/mist-theme";
 		}
 
 		return null;
 	});
 	let canInstall = $derived(Boolean(installId));
 
-	function applyIframeScrollbarStyles(iframe: HTMLIFrameElement | null) {
+	function applyIframeScrollbarStyles(
+		iframe: HTMLIFrameElement | null,
+		{ hideScrollbar = true }: { hideScrollbar?: boolean } = {}
+	) {
 		const iframeDocument = iframe?.contentDocument;
 		if (!iframeDocument) return;
 
-		iframeDocument.documentElement.classList.add('no-scrollbar');
-		iframeDocument.body.classList.add('no-scrollbar');
+		iframeDocument.documentElement.classList.toggle("no-scrollbar", hideScrollbar);
+		iframeDocument.body.classList.toggle("no-scrollbar", hideScrollbar);
 	}
 
 	watch(
-		() => forcesIframe,
-		(isForced) => {
-			if (isForced && !showIframeComp) {
+		() => startsInIframe,
+		(shouldStartInIframe) => {
+			if (shouldStartInIframe && !showIframeComp) {
 				showIframeComp = true;
 			}
 		}
@@ -131,7 +139,10 @@
 
 		<div class="relative mx-auto max-w-7xl">
 			<div class="relative border-y px-5 py-5 sm:px-6 sm:py-6 lg:px-7">
-				<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-left" />
+				<DecorIcon
+					class="size-3.5 bg-background stroke-muted-foreground/70"
+					position="top-left"
+				/>
 				<DecorIcon
 					class="z-999 size-3.5 translate-x-[calc(50%)] -translate-y-[calc(50%+0.5px)] bg-background stroke-muted-foreground/70"
 					position="top-right"
@@ -153,7 +164,9 @@
 
 				<div class="relative max-w-2xl">
 					<div class="flex flex-wrap items-end gap-x-2 gap-y-1">
-						<h2 class="text-xl font-medium tracking-tight text-foreground sm:text-[1.4rem]">
+						<h2
+							class="text-xl font-medium tracking-tight text-foreground sm:text-[1.4rem]"
+						>
 							{title}
 						</h2>
 					</div>
@@ -168,13 +181,19 @@
 			<div
 				class="relative z-40 flex flex-col gap-2 border-b px-4 py-2.5 sm:px-5 lg:flex-row lg:items-center lg:justify-between lg:gap-3 lg:px-6"
 			>
-				<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-left" />
-				<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-right" />
+				<DecorIcon
+					class="size-3.5 bg-background stroke-muted-foreground/70"
+					position="top-left"
+				/>
+				<DecorIcon
+					class="size-3.5 bg-background stroke-muted-foreground/70"
+					position="top-right"
+				/>
 				<div class="flex min-w-0 flex-wrap items-center gap-2.5">
 					<div class="-ml-3 flex w-fit items-center gap-0.5">
 						<Button
-							variant={mode === 'preview' ? 'secondary' : 'ghost'}
-							onclick={() => (mode = 'preview')}
+							variant={mode === "preview" ? "secondary" : "ghost"}
+							onclick={() => (mode = "preview")}
 							class={radioItem}
 							size="sm"
 						>
@@ -203,8 +222,8 @@
 						</Button>
 
 						<Button
-							variant={mode === 'code' ? 'secondary' : 'ghost'}
-							onclick={() => (mode = 'code')}
+							variant={mode === "code" ? "secondary" : "ghost"}
+							onclick={() => (mode = "code")}
 							size="sm"
 							class={radioItem}
 						>
@@ -231,8 +250,14 @@
 					{#if shouldRenderInIframe}
 						<Separator orientation="vertical" class="hidden h-4! lg:block" />
 						<span class="hidden text-sm text-muted-foreground lg:block">
-							{width < MD_SIZE ? 'Mobile' : width < LG_SIZE ? 'Tablet' : 'Desktop'}
+							{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}
 						</span>
+
+						{#if shouldShowIframeScrollHint}
+							<span class="hidden text-sm text-muted-foreground lg:block">
+								Scroll inside preview
+							</span>
+						{/if}
 					{/if}
 				</div>
 
@@ -367,7 +392,7 @@
 						</div>
 					{/if}
 
-					{#if canOpenPreview && !forcesIframe}
+					{#if canToggleResponsivePreview}
 						<TooltipProvider>
 							<Tooltip>
 								<TooltipTrigger>
@@ -391,29 +416,35 @@
 											<path
 												d="M2 6V18C2 19.6569 3.34315 21 5 21L19 21C20.6569 21 22 19.6569 22 18V6C22 4.34315 20.6569 3 19 3H5C3.34315 3 2 4.34315 2 6Z"
 												class={showIframeComp
-													? 'fill-green-500/10 stroke-green-500'
-													: 'stroke-primary'}
+													? "fill-green-500/10 stroke-green-500"
+													: "stroke-primary"}
 												stroke-width="1.5"
 												stroke-linecap="round"
 												stroke-linejoin="round"
 											></path>
 											<path
 												d="M10 3L10 21"
-												class={showIframeComp ? 'stroke-green-500' : 'stroke-primary'}
+												class={showIframeComp
+													? "stroke-green-500"
+													: "stroke-primary"}
 												stroke-width="1.5"
 												stroke-linecap="round"
 												stroke-linejoin="round"
 											></path>
 											<path
 												d="M5.5 7H6.5M5.5 10H6.5"
-												class={showIframeComp ? 'stroke-green-500' : 'stroke-primary'}
+												class={showIframeComp
+													? "stroke-green-500"
+													: "stroke-primary"}
 												stroke-width="1.5"
 												stroke-linecap="round"
 												stroke-linejoin="round"
 											></path>
 											<path
 												d="M17 10L15 12L17 14"
-												class={showIframeComp ? 'stroke-green-500' : 'stroke-primary'}
+												class={showIframeComp
+													? "stroke-green-500"
+													: "stroke-primary"}
 												stroke-width="1.5"
 												stroke-linecap="round"
 												stroke-linejoin="round"
@@ -478,8 +509,11 @@
 		</div> -->
 
 		<!-- lg:border-x -->
-		<div class="relative z-10 mx-auto max-w-7xl px-4 lg:px-0">
-			<div class={cn('bg-white dark:bg-transparent', mode === 'code' && 'hidden')}>
+		<div
+			class="relative z-10 mx-auto max-w-7xl px-4 lg:px-0"
+			style={`--preview-min-height: ${MIN_PREVIEW_HEIGHT}px;`}
+		>
+			<div class={cn("bg-white dark:bg-transparent", mode === "code" && "hidden")}>
 				{#if shouldRenderInIframe && previewHref}
 					<PaneGroup direction="horizontal">
 						<Pane
@@ -499,16 +533,19 @@
 								bind:this={iframeRef}
 								{title}
 								height={resolvedIframeHeight}
-								class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) min-h-[380px] w-full duration-200 will-change-auto"
+								class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) min-h-(--preview-min-height) w-full duration-200 will-change-auto"
 								src={previewHref}
 								id={`block-${id}`}
 								style={`--iframe-height: ${resolvedIframeHeight}px;`}
 								onload={() => {
 									isLoading = false;
-									applyIframeScrollbarStyles(iframeRef);
+									applyIframeScrollbarStyles(iframeRef, {
+										hideScrollbar: !isHeroPreview
+									});
 
 									if (!previewHeight) {
-										const contentHeight = iframeRef?.contentWindow?.document.body.scrollHeight;
+										const contentHeight =
+											iframeRef?.contentWindow?.document.body.scrollHeight;
 
 										if (contentHeight) {
 											iframeHeight = contentHeight + 20;
@@ -534,14 +571,18 @@
 							<PaneResizer
 								class="relative w-2 before:absolute before:inset-0 before:m-auto before:h-12 before:w-1 before:rounded-full before:bg-zinc-300 before:transition-[height,background] hover:before:h-16 hover:before:bg-zinc-400 focus:before:bg-zinc-400 dark:before:bg-zinc-600 dark:hover:before:bg-zinc-500 dark:focus:before:bg-zinc-400"
 							/>
-							<Pane id={`preview-resizer-${id}`} order={2} defaultSize={100 - DEFAULT_SIZE} />
+							<Pane
+								id={`preview-resizer-${id}`}
+								order={2}
+								defaultSize={100 - DEFAULT_SIZE}
+							/>
 						{/if}
 					</PaneGroup>
 				{:else if activePreviewTheme}
 					<div data-theme={activePreviewTheme}>
 						<div
 							in:scale={{ start: 0.85 }}
-							class="theme-container min-h-[380px] w-full overflow-hidden"
+							class="theme-container min-h-(--preview-min-height) w-full overflow-hidden"
 						>
 							<PreviewComponent />
 						</div>
@@ -549,7 +590,7 @@
 				{:else}
 					<div
 						in:scale={{ start: 0.85 }}
-						class="flex min-h-[380px] w-full items-center justify-center overflow-hidden"
+						class="flex min-h-(--preview-min-height) w-full items-center justify-center overflow-hidden"
 					>
 						<PreviewComponent />
 					</div>
@@ -557,7 +598,7 @@
 			</div>
 
 			<div class="bg-white dark:bg-transparent">
-				{#if mode === 'code'}
+				{#if mode === "code"}
 					<CodeEditor {codeTree} />
 				{/if}
 			</div>

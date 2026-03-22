@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { cn } from '$lib/utils';
-	import { ArrowUpRightIcon } from '@lucide/svelte';
+	import { Button } from "$lib/components/ui/button";
+	import { cn } from "$lib/utils";
+	import { ArrowUpRightIcon } from "@lucide/svelte";
 
 	type Integration = {
 		src?: string;
@@ -11,45 +11,45 @@
 
 	const data: Integration[] = [
 		{
-			name: 'Empty 1'
+			name: "Empty 1"
 		},
 		{
-			name: 'Vercel',
-			src: 'https://storage.efferd.com/logo/vercel.svg',
+			name: "Vercel",
+			src: "https://storage.efferd.com/logo/vercel.svg",
 			isInvertable: true
 		},
 		{
-			name: 'OpenAI',
-			src: 'https://storage.efferd.com/logo/openai.svg',
+			name: "OpenAI",
+			src: "https://storage.efferd.com/logo/openai.svg",
 			isInvertable: true
 		},
 		{
-			src: 'https://storage.efferd.com/logo/supabase.svg',
-			name: 'Supabase'
+			src: "https://storage.efferd.com/logo/supabase.svg",
+			name: "Supabase"
 		},
 		{
-			name: 'GitHub',
-			src: 'https://storage.efferd.com/logo/github.svg',
+			name: "GitHub",
+			src: "https://storage.efferd.com/logo/github.svg",
 			isInvertable: true
 		},
 		{
-			name: 'Notion',
-			src: 'https://storage.efferd.com/logo/notion.svg'
+			name: "Notion",
+			src: "https://storage.efferd.com/logo/notion.svg"
 		},
 		{
-			name: 'Gmail',
-			src: 'https://storage.efferd.com/logo/gmail.svg'
+			name: "Gmail",
+			src: "https://storage.efferd.com/logo/gmail.svg"
 		},
 		{
-			name: 'Google Maps',
-			src: 'https://storage.efferd.com/logo/google-maps.svg'
+			name: "Google Maps",
+			src: "https://storage.efferd.com/logo/google-maps.svg"
 		},
 		{
-			name: 'Neon',
-			src: 'https://storage.efferd.com/logo/neon.svg'
+			name: "Neon",
+			src: "https://storage.efferd.com/logo/neon.svg"
 		},
 		{
-			name: 'Empty 2'
+			name: "Empty 2"
 		}
 	];
 </script>
@@ -63,21 +63,23 @@
 	</div>
 
 	<div class="flex flex-col justify-center rounded-full border bg-secondary dark:bg-secondary/10">
-		<div class="mask-l-from-90 mask-r-from-90 flex items-center justify-center -space-x-4 p-1">
+		<div class="flex items-center justify-center -space-x-4 mask-r-from-90 mask-l-from-90 p-1">
 			{#each data as item (item.name)}
 				<div
 					class={cn(
-						'relative z-0 transition-transform',
-						item.src && 'hover:z-10 hover:scale-110'
+						"relative z-0 transition-transform",
+						item.src && "hover:z-10 hover:scale-110"
 					)}
 				>
-					<div class="flex size-12 items-center justify-center overflow-hidden rounded-full border bg-card shadow-sm md:size-16">
+					<div
+						class="flex size-12 items-center justify-center overflow-hidden rounded-full border bg-card shadow-sm md:size-16"
+					>
 						{#if item.src}
 							<img
 								alt={item.name}
 								class={cn(
-									'pointer-events-auto size-5 select-none object-contain md:size-6',
-									item.isInvertable && 'dark:invert'
+									"pointer-events-auto size-5 object-contain select-none md:size-6",
+									item.isInvertable && "dark:invert"
 								)}
 								height="24"
 								src={item.src}
@@ -90,7 +92,7 @@
 		</div>
 	</div>
 
-	<Button href="/integrations" class="rounded-full px-5">
+	<Button href="/" class="rounded-full px-5">
 		See all integrations
 		<ArrowUpRightIcon data-icon="inline-end" />
 	</Button>

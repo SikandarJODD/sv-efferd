@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { ArrowRightIcon, CreditCardIcon } from '@lucide/svelte';
-	import { Button } from '$lib/components/ui/button';
+	import { ArrowRightIcon, CreditCardIcon } from "@lucide/svelte";
+	import { Button } from "$lib/components/ui/button";
 </script>
 
 <div
@@ -10,7 +10,7 @@
 		<h2 class="text-center text-lg font-semibold tracking-tight md:text-2xl">
 			Let your plans shape the future.
 		</h2>
-		<p class="text-balance text-center text-sm text-muted-foreground md:text-base">
+		<p class="text-center text-sm text-balance text-muted-foreground md:text-base">
 			Start your free trial today. No credit card
 			<CreditCardIcon class="inline-block size-4" />
 			required.

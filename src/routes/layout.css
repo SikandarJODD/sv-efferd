@@ -1,6 +1,6 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-@import 'tw-animate-css';
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -111,8 +111,8 @@
 	--color-sidebar-ring: var(--sidebar-ring);
 
 	/* Font */
-	--font-sans: 'Geist', sans-serif;
-	--font-mono: 'Geist Mono', monospace;
+	--font-sans: "Geist", sans-serif;
+	--font-mono: "Geist Mono", monospace;
 
 	--animate-marquee: marquee var(--duration) linear infinite;
 	--animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
@@ -232,25 +232,25 @@ number-flow-svelte::part(suffix) {
 }
 
 @property --top-mask-height {
-	syntax: '<length>';
+	syntax: "<length>";
 	inherits: true;
 	initial-value: 0px;
 }
 
 @property --bottom-mask-height {
-	syntax: '<length>';
+	syntax: "<length>";
 	inherits: true;
 	initial-value: 64px;
 }
 
 @property --left-mask-width {
-	syntax: '<length>';
+	syntax: "<length>";
 	inherits: true;
 	initial-value: 0px;
 }
 
 @property --right-mask-width {
-	syntax: '<length>';
+	syntax: "<length>";
 	inherits: true;
 	initial-value: 64px;
 }

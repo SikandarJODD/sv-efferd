@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { Portal, PortalBackdrop } from '$lib/components/ui/portal';
-	import { cn } from '$lib/utils';
-	import { MenuIcon, XIcon } from '@lucide/svelte';
-	import { navLinks } from './nav-links';
+	import { Button } from "$lib/components/ui/button";
+	import { Portal, PortalBackdrop } from "$lib/components/ui/portal";
+	import { cn } from "$lib/utils";
+	import { MenuIcon, XIcon } from "@lucide/svelte";
+	import { navLinks } from "./nav-links";
 	let open = $state(false);
 </script>
 
@@ -12,7 +12,7 @@
 		aria-controls="mobile-menu"
 		aria-expanded={open}
 		aria-label="Toggle menu"
-		class="md:hidden size-8"
+		class="size-8 md:hidden"
 		size="icon"
 		variant="secondary"
 		onclick={() => (open = !open)}
@@ -28,10 +28,10 @@
 			<PortalBackdrop />
 			<div
 				class={cn(
-					'ease-out data-[slot=open]:animate-in data-[slot=open]:zoom-in-97',
-					'size-full px-6 py-4'
+					"ease-out data-[slot=open]:animate-in data-[slot=open]:zoom-in-97",
+					"size-full px-6 py-4"
 				)}
-				data-slot={open ? 'open' : 'closed'}
+				data-slot={open ? "open" : "closed"}
 			>
 				<ul class="grid gap-y-4">
 					{#each navLinks as link, i}

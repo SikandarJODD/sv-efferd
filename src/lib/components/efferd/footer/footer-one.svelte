@@ -1,7 +1,9 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { Github, Logo, X } from '$lib/svgs';
-	import type { Component } from 'svelte';
+	import { Button } from "$lib/components/ui/button";
+	import GithubLogo from "$lib/svgs/github.svelte";
+	import Logo from "$lib/svgs/logo.svelte";
+	import XLogo from "$lib/svgs/x.svelte";
+	import type { Component } from "svelte";
 
 	type NavLink = {
 		href: string;
@@ -15,24 +17,24 @@
 	};
 
 	const navLinks: NavLink[] = [
-		{ href: '/#features', label: 'Features' },
-		{ href: '/#blog', label: 'Blog' },
-		{ href: '/#about', label: 'About' },
-		{ href: '/#contact', label: 'Contact' },
-		{ href: '/licence', label: 'Licence' },
-		{ href: '/privacy', label: 'Privacy' }
+		{ href: "/", label: "Features" },
+		{ href: "/", label: "Blog" },
+		{ href: "/", label: "About" },
+		{ href: "/", label: "Contact" },
+		{ href: "/", label: "Licence" },
+		{ href: "/", label: "Privacy" }
 	];
 
 	const socialLinks: SocialLink[] = [
 		{
-			href: 'https://x.com/shabanhr',
-			label: 'X',
-			icon: X
+			href: "https://x.com/",
+			label: "X",
+			icon: XLogo
 		},
 		{
-			href: 'https://github.com/shabanhr',
-			label: 'Github',
-			icon: Github
+			href: "https://github.com/",
+			label: "Github",
+			icon: GithubLogo
 		}
 	];
 
@@ -76,7 +78,9 @@
 		</nav>
 	</div>
 
-	<div class="flex items-center justify-between gap-4 border-t py-4 text-sm text-muted-foreground">
+	<div
+		class="flex items-center justify-between gap-4 border-t py-4 text-sm text-muted-foreground"
+	>
 		<p>&copy; {currentYear} efferd</p>
 
 		<p class="inline-flex items-center gap-1">
@@ -84,7 +88,7 @@
 			<a
 				aria-label="x/twitter"
 				class="inline-flex items-center gap-1 text-foreground/80 hover:text-foreground hover:underline"
-				href="https://x.com/shabanhr"
+				href="https://x.com/"
 				rel="noreferrer"
 				target="_blank"
 			>
@@ -92,7 +96,7 @@
 					alt="shaban"
 					class="size-4 rounded-full"
 					height="16"
-					src="https://github.com/shabanhr.png"
+					src="https://github.com/.png"
 					width="16"
 				/>
 				Shaban

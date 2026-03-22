@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LazyImage from './lazy-image.svelte';
+	import LazyImage from "./lazy-image.svelte";
 
 	type GalleryImage = {
 		id: string;

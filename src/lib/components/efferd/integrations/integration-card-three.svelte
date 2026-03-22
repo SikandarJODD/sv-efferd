@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from "$lib/utils";
 
 	type Logo = {
 		src: string;
@@ -16,14 +16,14 @@
 </script>
 
 <div
-	class={cn('absolute flex size-16 items-center justify-center', logo && 'bg-secondary/40')}
+	class={cn("absolute flex size-16 items-center justify-center", logo && "bg-secondary/40")}
 	style:left={`${col * 64}px`}
 	style:top={`${row * 64}px`}
 >
 	{#if logo}
 		<img
 			alt={logo.alt}
-			class="pointer-events-none size-8 select-none object-contain p-1 dark:invert"
+			class="pointer-events-none size-8 object-contain p-1 select-none dark:invert"
 			height="40"
 			src={logo.src}
 			width="40"

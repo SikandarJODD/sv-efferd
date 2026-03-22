@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "blog-one",
+	"title": "Blog One",
+	"type": "registry:block",
+	"description": "A vertical editorial list with full-width dividers and compact summaries.",
+	"registryDependencies": [
+		"./full-width-divider.json"
+	],
+	"files": [
+		{
+			"content": "<script>\n\timport { FullWidthDivider } from \"$lib/components/ui/full-width-divider\";\n\timport BlogCard from \"./blog-card.svelte\";\n\tconst blogs = [\n\t\t{\n\t\t\ttitle: \"The New Design\",\n\t\t\tdate: \"May 20 2025\",\n\t\t\tdescription: \"What everyone new to the field should know, and how we can help.\",\n\t\t\thref: \"/\"\n\t\t},\n\t\t{\n\t\t\ttitle: \"Letter Club\",\n\t\t\tdate: \"Aug 14 2025\",\n\t\t\tdescription: \"An ode to the slow web.\",\n\t\t\thref: \"/\"\n\t\t},\n\t\t{\n\t\t\ttitle: \"Have the Coffee\",\n\t\t\tdate: \"Sep 19 2025\",\n\t\t\tdescription: \"Carve space out for oppurtunity.\",\n\t\t\thref: \"/\"\n\t\t},\n\t\t{\n\t\t\ttitle: \"Shadcn UI\",\n\t\t\tdate: \"Oct 12 2025\",\n\t\t\tdescription: \"Building modern applications with reusable components.\",\n\t\t\thref: \"/\"\n\t\t},\n\t\t{\n\t\t\ttitle: \"Fesgin\",\n\t\t\tdate: \"Nov 23 2025\",\n\t\t\tdescription: \"Exploring the intersection of design and development.\",\n\t\t\thref: \"/\"\n\t\t}\n\t];\n</script>\n\n<div class=\"mx-auto flex min-h-screen w-full max-w-3xl flex-col justify-start md:border-x\">\n\t<div class=\"space-y-2 px-4 py-8 md:py-12\">\n\t\t<h1 class=\"text-2xl font-semibold tracking-wide md:text-4xl\">Latest Blogs</h1>\n\t\t<p class=\"text-sm text-muted-foreground\">\n\t\t\tDiscover the latest trends and insights in the world of design and technology.\n\t\t</p>\n\t</div>\n\n\t<div class=\"relative\">\n\t\t<FullWidthDivider />\n\t\t<div class=\"divide-y\">\n\t\t\t{#each blogs as blog}\n\t\t\t\t<BlogCard {...blog} />\n\t\t\t{/each}\n\t\t</div>\n\t\t<FullWidthDivider />\n\t</div>\n</div>\n",
+			"type": "registry:component",
+			"target": "efferd/blogs/blog-one/blog-one.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport { cn } from \"$UTILS$\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\ttype BlogCard = {\n\t\ttitle: string;\n\t\tdate: string;\n\t\tdescription: string;\n\t};\n\n\ttype Props = BlogCard & HTMLAttributes<HTMLAnchorElement>;\n\n\tlet { title, date, description, ...props }: Props = $props();\n</script>\n\n<a\n\tclass={cn(\n\t\t\"group flex h-24 w-full flex-col justify-center gap-y-1 p-4 hover:cursor-pointer hover:bg-accent/30 active:bg-accent dark:active:bg-accent/50\"\n\t)}\n\t{...props}\n>\n\t<div class=\"relative flex items-end justify-center gap-2\">\n\t\t<h3 class=\"text-lg font-medium whitespace-nowrap text-foreground md:text-xl\">\n\t\t\t{title}\n\t\t</h3>\n\t\t<span class=\"mb-1.5 w-full border-b-2 border-dashed\"></span>\n\t\t<span\n\t\t\tclass=\"font-mono text-xs whitespace-nowrap text-muted-foreground uppercase group-hover:text-foreground md:text-sm\"\n\t\t>\n\t\t\t{date}\n\t\t</span>\n\t</div>\n\t<div\n\t\tclass=\"max-w-sm text-sm text-muted-foreground group-hover:text-foreground md:max-w-full md:text-base\"\n\t>\n\t\t{description}\n\t</div>\n</a>\n",
+			"type": "registry:component",
+			"target": "efferd/blogs/blog-one/blog-card.svelte"
+		}
+	]
+}

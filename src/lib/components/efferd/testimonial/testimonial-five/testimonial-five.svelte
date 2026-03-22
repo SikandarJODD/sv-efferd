@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { FullWidthDivider } from '$lib/components/ui/full-width-divider';
-	import { GridFiller } from '$lib/components/ui/grid-filler';
-	import TestimonialCard from './testimonial-card.svelte';
+	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
+	import { GridFiller } from "$lib/components/ui/grid-filler";
+	import TestimonialCard from "./testimonial-card.svelte";
 
 	type Testimonial = {
 		name: string;
@@ -13,91 +13,80 @@
 
 	const testimonials: Testimonial[] = [
 		{
-			quote:
-				'Efferd is so polished I might just retire and become a full-time potato farmer. The ecosystem is in safe hands.',
-			image: 'https://github.com/shadcn.png',
-			name: 'Shadcn',
-			role: 'Founder',
-			company: 'Shadcn UI'
+			quote: "Efferd is so polished I might just retire and become a full-time potato farmer. The ecosystem is in safe hands.",
+			image: "https://github.com/shadcn.png",
+			name: "Shadcn",
+			role: "Founder",
+			company: "Shadcn UI"
 		},
 		{
-			quote:
-				'Efferd is why I still have hair. No more pulling it out over centering divs or fighting with CSS grid.',
-			image: 'https://github.com/rauchg.png',
-			name: 'Guillermo Rauch',
-			role: 'CEO',
-			company: 'Vercel'
+			quote: "Efferd is why I still have hair. No more pulling it out over centering divs or fighting with CSS grid.",
+			image: "https://github.com/rauchg.png",
+			name: "Guillermo Rauch",
+			role: "CEO",
+			company: "Vercel"
 		},
 		{
-			quote:
-				"I tried to buy Efferd but they wouldn't sell. So I just bought Twitter instead to complain about it.",
-			image: 'https://unavatar.io/x/elonmusk',
-			name: 'Elon Musk',
-			role: 'CEO',
-			company: 'X.com'
+			quote: "I tried to buy Efferd but they wouldn't sell. So I just bought Twitter instead to complain about it.",
+			image: "https://unavatar.io/x/elonmusk",
+			name: "Elon Musk",
+			role: "CEO",
+			company: "X.com"
 		},
 		{
-			quote:
-				"We just acquired Efferd for 3 gazillion dollars. We're calling it iEfferd. It's our best product yet.",
-			image: 'https://unavatar.io/x/tim_cook',
-			name: 'Tim Cook',
-			role: 'CEO',
-			company: 'Apple'
+			quote: "We just acquired Efferd for 3 gazillion dollars. We're calling it iEfferd. It's our best product yet.",
+			image: "https://unavatar.io/x/tim_cook",
+			name: "Tim Cook",
+			role: "CEO",
+			company: "Apple"
 		},
 		{
-			quote:
-				"I'm considering shipping Efferd components with Prime delivery. 2-day shipping on beautiful UIs? Done.",
-			image: 'https://unavatar.io/x/JeffBezos',
-			name: 'Jeff Bezos',
-			role: 'Founder',
-			company: 'Amazon'
+			quote: "I'm considering shipping Efferd components with Prime delivery. 2-day shipping on beautiful UIs? Done.",
+			image: "https://unavatar.io/x/JeffBezos",
+			name: "Jeff Bezos",
+			role: "Founder",
+			company: "Amazon"
 		},
 		{
-			quote:
-				"We're rewriting OpenAI's entire frontend in Efferd. The AGI told us it's the only logical choice.",
-			image: 'https://unavatar.io/x/sama',
-			name: 'Sam Altman',
-			role: 'CEO',
-			company: 'OpenAI'
+			quote: "We're rewriting OpenAI's entire frontend in Efferd. The AGI told us it's the only logical choice.",
+			image: "https://unavatar.io/x/sama",
+			name: "Sam Altman",
+			role: "CEO",
+			company: "OpenAI"
 		},
 		{
-			quote:
-				"We processed 100 petabytes of data to find the perfect UI library. The algorithm returned 'Efferd' with 99.9% confidence.",
-			image: 'https://unavatar.io/x/sundarpichai',
-			name: 'Sundar Pichai',
-			role: 'CEO',
-			company: 'Google'
+			quote: "We processed 100 petabytes of data to find the perfect UI library. The algorithm returned 'Efferd' with 99.9% confidence.",
+			image: "https://unavatar.io/x/sundarpichai",
+			name: "Sundar Pichai",
+			role: "CEO",
+			company: "Google"
 		},
 		{
-			quote:
-				'Our links might 404 sometimes, but thanks to Efferd, at least the 404 page looks absolutely stunning.',
-			image: 'https://github.com/steven-tey.png',
-			name: 'Steven Tey',
-			role: 'Founder',
-			company: 'Dub.co'
+			quote: "Our links might 404 sometimes, but thanks to Efferd, at least the 404 page looks absolutely stunning.",
+			image: "https://github.com/steven-tey.png",
+			name: "Steven Tey",
+			role: "Founder",
+			company: "Dub.co"
 		},
 		{
-			quote:
-				"It's so fast, I finished my UI sprint before my next meeting even started. Open source for the win.",
-			image: 'https://unavatar.io/x/peer_rich',
-			name: 'Peer Richelsen',
-			role: 'Co-Founder',
-			company: 'Cal.com'
+			quote: "It's so fast, I finished my UI sprint before my next meeting even started. Open source for the win.",
+			image: "https://unavatar.io/x/peer_rich",
+			name: "Peer Richelsen",
+			role: "Co-Founder",
+			company: "Cal.com"
 		},
 		{
-			quote:
-				"21st.dev brings in 100k users daily just to see Efferd. We got into YC solely because of this UI library. And yes, we're rich now.",
-			image: 'https://github.com/serafimcloud.png',
-			name: 'Serafim',
-			role: 'Founder',
-			company: '21st Labs.'
+			quote: "21st.dev brings in 100k users daily just to see Efferd. We got into YC solely because of this UI library. And yes, we're rich now.",
+			image: "https://github.com/serafimcloud.png",
+			name: "Serafim",
+			role: "Founder",
+			company: "21st Labs."
 		},
 		{
-			quote:
-				"I posted a video on Efferd components and it got more views than my cat video. That's statistically impossible.",
-			image: 'https://github.com/TheOrcDev.png',
-			name: 'OrcDev',
-			role: 'Youtuber'
+			quote: "I posted a video on Efferd components and it got more views than my cat video. That's statistically impossible.",
+			image: "https://github.com/TheOrcDev.png",
+			name: "OrcDev",
+			role: "Youtuber"
 		}
 	];
 </script>

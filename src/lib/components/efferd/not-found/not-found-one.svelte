@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { FullWidthDivider } from '$lib/components/ui/full-width-divider';
-	import * as Empty from '$lib/components/ui/empty/index';
-	import { Button } from '$lib/components/ui/button';
-	import { CompassIcon, HomeIcon } from '@lucide/svelte';
+	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
+	import * as Empty from "$lib/components/ui/empty/index";
+	import { Button } from "$lib/components/ui/button";
+	import { CompassIcon, HomeIcon } from "@lucide/svelte";
 </script>
 
 <div class="flex w-full items-center justify-center overflow-hidden">
@@ -24,7 +24,7 @@
 							Go Home
 						</Button>
 
-						<Button href="/explore" variant="outline">
+						<Button href="/" variant="outline">
 							<CompassIcon data-icon="inline-start" />
 							Explore
 						</Button>

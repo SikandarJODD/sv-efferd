@@ -1,0 +1,24 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "pricing-two",
+	"title": "Pricing Two",
+	"type": "registry:block",
+	"description": "A bordered editorial pricing grid with divider rails, concise plan summaries, and feature checklists.",
+	"dependencies": [
+		"@lucide/svelte"
+	],
+	"devDependencies": [
+		"@lucide/svelte@^0.577.0"
+	],
+	"registryDependencies": [
+		"button",
+		"./full-width-divider.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { Check } from \"@lucide/svelte\";\n\timport { Button } from \"$lib/components/ui/button\";\n\timport { FullWidthDivider } from \"$lib/components/ui/full-width-divider\";\n\n\ttype PricingPlan = {\n\t\tname: string;\n\t\tprice: string;\n\t\tperiod?: string;\n\t\tdescription: string;\n\t\thref?: string;\n\t\tfeaturesTitle: string;\n\t\tfeatures: string[];\n\t\tisPopular?: boolean;\n\t};\n\n\tconst pricingPlans: PricingPlan[] = [\n\t\t{\n\t\t\tname: \"STARTER\",\n\t\t\tprice: \"Free\",\n\t\t\tdescription: \"For early-stage startups\",\n\t\t\tfeaturesTitle: \"FREE, FOREVER:\",\n\t\t\tfeatures: [\"10 customers\", \"10 documents\", \"10 invoices\", \"Auto-updated taxes\"],\n\t\t\thref: \"/\"\n\t\t},\n\t\t{\n\t\t\tname: \"SCALE\",\n\t\t\tisPopular: true,\n\t\t\thref: \"/\",\n\t\t\tprice: \"$8\",\n\t\t\tperiod: \"month\",\n\t\t\tdescription: \"For fast-growing teams\",\n\t\t\tfeaturesTitle: \"EVERYTHING IN STARTER, PLUS:\",\n\t\t\tfeatures: [\n\t\t\t\t\"20 customers\",\n\t\t\t\t\"25 documents\",\n\t\t\t\t\"30 invoices\",\n\t\t\t\t\"Auto-updated taxes\",\n\t\t\t\t\"Cloud Sync\"\n\t\t\t]\n\t\t}\n\t];\n</script>\n\n<section class=\"mx-auto min-h-screen max-w-5xl place-content-center border-x py-4\">\n\t<div class=\"relative\">\n\t\t<FullWidthDivider position=\"top\" />\n\t\t<FullWidthDivider position=\"bottom\" />\n\n\t\t<div class=\"grid grid-cols-1 gap-px bg-border md:grid-cols-2 lg:grid-cols-4\">\n\t\t\t<div class=\"flex flex-col bg-background p-8 md:col-span-2\">\n\t\t\t\t<p class=\"mb-6 text-sm tracking-wider text-muted-foreground uppercase\">PRICING</p>\n\t\t\t\t<h1 class=\"text-3xl leading-tight font-bold md:text-5xl\">\n\t\t\t\t\tPricing that doesn&apos;t suck\n\t\t\t\t</h1>\n\t\t\t</div>\n\n\t\t\t{#each pricingPlans as plan}\n\t\t\t\t<div class=\"flex flex-col bg-background *:px-4 *:py-6\">\n\t\t\t\t\t<div class=\"border-b\">\n\t\t\t\t\t\t<p class=\"mb-6 text-sm tracking-wider text-muted-foreground uppercase\">\n\t\t\t\t\t\t\t{plan.name}\n\t\t\t\t\t\t</p>\n\n\t\t\t\t\t\t<div class=\"mb-2 flex items-baseline gap-2\">\n\t\t\t\t\t\t\t<h2 class=\"text-4xl font-bold\">{plan.price}</h2>\n\t\t\t\t\t\t\t{#if plan.period}\n\t\t\t\t\t\t\t\t<span class=\"text-xs text-muted-foreground\">/ {plan.period}</span>\n\t\t\t\t\t\t\t{/if}\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<p class=\"mb-8 line-clamp-1 text-muted-foreground\">{plan.description}</p>\n\n\t\t\t\t\t\t<Button\n\t\t\t\t\t\t\tclass=\"w-full\"\n\t\t\t\t\t\t\thref={plan.href}\n\t\t\t\t\t\t\tvariant={plan.isPopular ? \"default\" : \"outline\"}\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\tGet started\n\t\t\t\t\t\t</Button>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"space-y-3 text-sm text-muted-foreground\">\n\t\t\t\t\t\t<p class=\"mb-6 text-xs uppercase\">{plan.featuresTitle}</p>\n\n\t\t\t\t\t\t{#each plan.features as feature}\n\t\t\t\t\t\t\t<p class=\"flex items-center gap-2 text-foreground/80\">\n\t\t\t\t\t\t\t\t<Check class=\"size-4\" />\n\t\t\t\t\t\t\t\t{feature}\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t{/each}\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t{/each}\n\t\t</div>\n\t</div>\n</section>\n",
+			"type": "registry:component",
+			"target": "efferd/pricing/pricing-two.svelte"
+		}
+	]
+}

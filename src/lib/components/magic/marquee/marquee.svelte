@@ -29,7 +29,7 @@
 		"group flex gap-(--gap) overflow-hidden p-2 [--duration:40s] [--gap:1rem]",
 		{
 			"flex-row": !vertical,
-			"flex-col": vertical,
+			"flex-col": vertical
 		},
 		className
 	)}
@@ -40,7 +40,7 @@
 				"animate-marquee flex-row": !vertical,
 				"animate-marquee-vertical flex-col": vertical,
 				"group-hover:paused": pauseOnHover,
-				"direction-[reverse]": reverse,
+				"direction-[reverse]": reverse
 			})}
 		>
 			{@render children?.()}

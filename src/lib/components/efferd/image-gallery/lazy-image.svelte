@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { AspectRatio } from '$lib/components/ui/aspect-ratio';
-	import { cn } from '$lib/utils';
-	import { useInView } from 'motion-sv';
+	import { AspectRatio } from "$lib/components/ui/aspect-ratio";
+	import { cn } from "$lib/utils";
+	import { useInView } from "motion-sv";
 
 	type LazyImageProps = {
 		alt: string;
@@ -36,7 +36,9 @@
 		() => ({ once: true }) as any
 	);
 
-	let imageSource = $derived(fallbackSource ?? (inView ? (view.isInView ? src : undefined) : src));
+	let imageSource = $derived(
+		fallbackSource ?? (inView ? (view.isInView ? src : undefined) : src)
+	);
 
 	function handleError() {
 		if (fallback && imageSource !== fallback) {
@@ -108,7 +110,7 @@
 
 <AspectRatio
 	bind:ref={containerRef}
-	class={cn('relative size-full overflow-hidden border bg-accent/30', containerClassName)}
+	class={cn("relative size-full overflow-hidden border bg-accent/30", containerClassName)}
 	{ratio}
 >
 	{#if imageSource}
@@ -116,12 +118,12 @@
 			bind:this={imageRef}
 			{alt}
 			class={cn(
-				'size-full object-cover transition-opacity duration-500',
-				isLoading ? 'opacity-0' : 'opacity-100',
+				"size-full object-cover transition-opacity duration-500",
+				isLoading ? "opacity-0" : "opacity-100",
 				className
 			)}
 			decoding="async"
-			fetchpriority={inView ? 'high' : 'low'}
+			fetchpriority={inView ? "high" : "low"}
 			loading="lazy"
 			onerror={handleError}
 			onload={handleLoad}

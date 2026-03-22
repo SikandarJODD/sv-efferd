@@ -4,8 +4,8 @@
 		AccordionContent,
 		AccordionItem,
 		AccordionTrigger
-	} from '$lib/components/ui/accordion';
-	import { DecorIcon } from '$lib/components/ui/decor-icon';
+	} from "$lib/components/ui/accordion";
+	import { DecorIcon } from "$lib/components/ui/decor-icon";
 
 	type FaqItem = {
 		id: string;
@@ -15,46 +15,46 @@
 
 	const faqs: FaqItem[] = [
 		{
-			id: 'item-1',
-			title: 'What is Efferd?',
+			id: "item-1",
+			title: "What is Efferd?",
 			content:
-				'Efferd is a collection of beautifully crafted Shadcn UI blocks and components, designed to help developers build modern websites with ease.'
+				"Efferd is a collection of beautifully crafted Shadcn UI blocks and components, designed to help developers build modern websites with ease."
 		},
 		{
-			id: 'item-2',
-			title: 'Who can benefit from Efferd?',
+			id: "item-2",
+			title: "Who can benefit from Efferd?",
 			content:
-				'Efferd is built for founders, product teams, and agencies that want to accelerate idea validation and delivery.'
+				"Efferd is built for founders, product teams, and agencies that want to accelerate idea validation and delivery."
 		},
 		{
-			id: 'item-3',
-			title: 'What features does Efferd include?',
+			id: "item-3",
+			title: "What features does Efferd include?",
 			content:
-				'Efferd offers a collaborative workspace where you can design and build beautiful web applications, with reusable UI blocks, deployment automation, and comprehensive analytics all in one place. With Efferd, you can streamline your team\'s workflow and deliver high-quality websites quickly and efficiently.'
+				"Efferd offers a collaborative workspace where you can design and build beautiful web applications, with reusable UI blocks, deployment automation, and comprehensive analytics all in one place. With Efferd, you can streamline your team's workflow and deliver high-quality websites quickly and efficiently."
 		},
 		{
-			id: 'item-4',
-			title: 'Can I customize components in Efferd?',
+			id: "item-4",
+			title: "Can I customize components in Efferd?",
 			content:
-				'Yes. Efferd offers editable design systems and code scaffolding so you can tailor blocks to your brand and workflow.'
+				"Yes. Efferd offers editable design systems and code scaffolding so you can tailor blocks to your brand and workflow."
 		},
 		{
-			id: 'item-5',
-			title: 'Does Efferd integrate with my existing tools?',
+			id: "item-5",
+			title: "Does Efferd integrate with my existing tools?",
 			content:
-				'Efferd connects with popular source control, design tools, and cloud providers to fit into your current stack.'
+				"Efferd connects with popular source control, design tools, and cloud providers to fit into your current stack."
 		},
 		{
-			id: 'item-6',
-			title: 'How do I get support while using Efferd?',
+			id: "item-6",
+			title: "How do I get support while using Efferd?",
 			content:
-				'You can access detailed docs, community forums, and dedicated customer success channels for help at any time.'
+				"You can access detailed docs, community forums, and dedicated customer success channels for help at any time."
 		},
 		{
-			id: 'item-7',
-			title: 'How do I get started with Efferd?',
+			id: "item-7",
+			title: "How do I get started with Efferd?",
 			content:
-				'You can access detailed docs, community forums, and dedicated customer success channels for help at any time.'
+				"You can access detailed docs, community forums, and dedicated customer success channels for help at any time."
 		}
 	];
 </script>
@@ -62,7 +62,7 @@
 <section class="mx-auto grid min-h-screen w-full max-w-5xl grid-cols-1 md:grid-cols-2 lg:border-x">
 	<div class="px-4 pt-12 pb-6">
 		<div class="space-y-5">
-			<h2 class="text-balance text-4xl font-bold md:text-6xl lg:font-black">
+			<h2 class="text-4xl font-bold text-balance md:text-6xl lg:font-black">
 				Frequently Asked Questions
 			</h2>
 			<p class="text-muted-foreground">
@@ -83,7 +83,7 @@
 			class="pointer-events-none absolute inset-y-0 left-3 h-full w-px bg-border"
 		></div>
 
-		<Accordion type="single" class="rounded-none border-y border-x-0">
+		<Accordion type="single" class="rounded-none border-x-0 border-y">
 			{#each faqs as item (item.id)}
 				<AccordionItem value={item.id} class="group relative pl-5">
 					<DecorIcon

@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { DecorIcon } from '$lib/components/ui/decor-icon';
-	import { cn } from '$lib/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { DecorIcon } from "$lib/components/ui/decor-icon";
+	import { cn } from "$lib/utils";
+	import type { HTMLAttributes } from "svelte/elements";
 
-	type DecorPosition = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+	type DecorPosition = "top-left" | "top-right" | "bottom-left" | "bottom-right";
 
 	type Integration = {
 		src: string;
@@ -22,7 +22,7 @@
 
 <div
 	class={cn(
-		'relative flex flex-col items-start gap-4 bg-background p-4 text-start md:p-6 md:even:bg-background/75',
+		"relative flex flex-col items-start gap-4 bg-background p-4 text-start md:p-6 md:even:bg-background/75",
 		className
 	)}
 	{...props}
@@ -30,8 +30,8 @@
 	<img
 		alt={integration.name}
 		class={cn(
-			'pointer-events-none size-8 shrink-0 select-none object-contain',
-			integration.isInvertable && 'dark:invert'
+			"pointer-events-none size-8 shrink-0 object-contain select-none",
+			integration.isInvertable && "dark:invert"
 		)}
 		height="32"
 		src={integration.src}

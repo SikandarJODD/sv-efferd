@@ -1,0 +1,24 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "feature-two",
+	"title": "Feature Two",
+	"type": "registry:block",
+	"description": "An editorial feature frame with dashed rails, corner accents, and three focused highlights.",
+	"dependencies": [
+		"@lucide/svelte"
+	],
+	"devDependencies": [
+		"@lucide/svelte@^0.577.0"
+	],
+	"registryDependencies": [
+		"./dashed-line.json",
+		"./decor-icon.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { DecorIcon } from \"$lib/components/ui/decor-icon\";\n\timport { DashedLine } from \"$lib/components/ui/dashed-line\";\n\timport { CommandIcon, HistoryIcon, SquareDashedIcon, type Icon } from \"@lucide/svelte\";\n\n\ttype Feature = {\n\t\ttitle: string;\n\t\ticon: typeof Icon;\n\t\tdescription: string;\n\t};\n\n\tconst features: Feature[] = [\n\t\t{\n\t\t\ttitle: \"Auto-Save Everything\",\n\t\t\ticon: HistoryIcon,\n\t\t\tdescription: \"Write without worry, every time.\"\n\t\t},\n\t\t{\n\t\t\ttitle: \"Drag-and-Drop Blocks\",\n\t\t\ticon: SquareDashedIcon,\n\t\t\tdescription: \"Rearrange sections with the block editor.\"\n\t\t},\n\t\t{\n\t\t\ttitle: \"Keyboard Shortcuts\",\n\t\t\ticon: CommandIcon,\n\t\t\tdescription: \"Speed up your workflow with quick keys.\"\n\t\t}\n\t];\n\n\tconst frameLines = [\n\t\t\"-top-[1.5px] right-3 left-3\",\n\t\t\"top-3 -right-[1.5px] bottom-3\",\n\t\t\"top-3 bottom-3 -left-[1.5px]\",\n\t\t\"right-3 -bottom-[1.5px] left-3\"\n\t] as const;\n</script>\n\n<div class=\"mx-auto max-w-5xl\">\n\t<h2 class=\"mb-5 text-center text-2xl font-medium md:text-3xl\">Ensuring your speedy workflow</h2>\n\n\t<div class=\"relative\">\n\t\t<DecorIcon class=\"size-6 stroke-border stroke-2\" position=\"top-left\" />\n\t\t<DecorIcon class=\"size-6 stroke-border stroke-2\" position=\"top-right\" />\n\t\t<DecorIcon class=\"size-6 stroke-border stroke-2\" position=\"bottom-left\" />\n\t\t<DecorIcon class=\"size-6 stroke-border stroke-2\" position=\"bottom-right\" />\n\n\t\t{#each frameLines as lineClass}\n\t\t\t<DashedLine class={lineClass} />\n\t\t{/each}\n\n\t\t<div class=\"grid grid-cols-1 md:grid-cols-3\">\n\t\t\t{#each features as feature (feature.title)}\n\t\t\t\t{@const FeatureIcon = feature.icon}\n\t\t\t\t<div\n\t\t\t\t\tclass=\"group relative p-8 [&_svg]:size-7 [&_svg]:mask-b-from-0% [&_svg]:text-muted-foreground\"\n\t\t\t\t>\n\t\t\t\t\t<FeatureIcon />\n\t\t\t\t\t<h3 class=\"mt-4 text-lg font-medium\">{feature.title}</h3>\n\t\t\t\t\t<p class=\"text-sm leading-relaxed text-muted-foreground\">\n\t\t\t\t\t\t{feature.description}\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<DashedLine\n\t\t\t\t\t\tclass=\"right-5 bottom-0 left-5 group-last:hidden md:top-5 md:right-0 md:bottom-5 md:left-full\"\n\t\t\t\t\t/>\n\t\t\t\t</div>\n\t\t\t{/each}\n\t\t</div>\n\t</div>\n</div>\n",
+			"type": "registry:component",
+			"target": "efferd/features/feature-two.svelte"
+		}
+	]
+}

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LogoCloudOne from '$lib/components/efferd/logo-cloud/logo-cloud-one.svelte';
+	import LogoCloudOne from "$lib/components/efferd/logo-cloud/logo-cloud-one.svelte";
 </script>
 
 <svelte:head>

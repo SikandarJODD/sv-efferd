@@ -1,0 +1,29 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "testimonial-three",
+	"title": "Testimonial Three",
+	"type": "registry:block",
+	"description": "A three-card testimonial grid with decorative corners, lifted middle emphasis, and richer profile metadata.",
+	"dependencies": [
+		"@lucide/svelte"
+	],
+	"devDependencies": [
+		"@lucide/svelte@^0.577.0"
+	],
+	"registryDependencies": [
+		"avatar",
+		"./decor-icon.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport TestimonialCard from \"./testimonial-card.svelte\";\n\n\ttype Testimonial = {\n\t\tquote: string;\n\t\tname: string;\n\t\trole: string;\n\t\tcompany: string;\n\t\timage: string;\n\t};\n\tlet testimonials: Testimonial[] = [\n\t\t{\n\t\t\tquote: \"We just acquired Efferd for 3 gazillion dollars. We're calling it iEfferd. It's our best product yet.\",\n\t\t\timage: \"https://unavatar.io/x/tim_cook\",\n\t\t\tname: \"Tim Cook\",\n\t\t\trole: \"CEO\",\n\t\t\tcompany: \"Apple\"\n\t\t},\n\t\t{\n\t\t\tquote: \"I'm considering shipping Efferd components with Prime delivery. 2-day shipping on beautiful UIs? Done.\",\n\t\t\timage: \"https://unavatar.io/x/JeffBezos\",\n\t\t\tname: \"Jeff Bezos\",\n\t\t\trole: \"Founder\",\n\t\t\tcompany: \"Amazon\"\n\t\t},\n\t\t{\n\t\t\tquote: \"We're rewriting OpenAI's entire frontend in Efferd. The AGI told us it's the only logical choice.\",\n\t\t\timage: \"https://unavatar.io/x/sama\",\n\t\t\tname: \"Sam Altman\",\n\t\t\trole: \"CEO\",\n\t\t\tcompany: \"OpenAI\"\n\t\t}\n\t];\n</script>\n\n<div class=\"mx-auto -mt-10 grid w-full max-w-5xl gap-8 md:grid-cols-3 md:gap-6\">\n\t{#each testimonials as testimonial, index}\n\t\t<TestimonialCard {index} {testimonial} />\n\t{/each}\n</div>\n",
+			"type": "registry:component",
+			"target": "efferd/testimonial/testimonial-three.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport { Avatar, AvatarFallback, AvatarImage } from \"$lib/components/ui/avatar\";\n\timport { DecorIcon } from \"$lib/components/ui/decor-icon\";\n\timport { cn } from \"$UTILS$\";\n\timport { QuoteIcon } from \"@lucide/svelte\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\n\ttype Testimonial = {\n\t\tquote: string;\n\t\tname: string;\n\t\trole: string;\n\t\tcompany: string;\n\t\timage: string;\n\t};\n\n\ttype Props = HTMLAttributes<HTMLElement> & {\n\t\ttestimonial: Testimonial;\n\t\tclass?: string;\n\t\tindex?: number;\n\t};\n\n\tlet { testimonial, class: className = \"\", index = 0, ...props }: Props = $props();\n</script>\n\n<figure\n\tclass={cn(\n\t\t\"relative flex flex-col justify-between gap-6 px-8 pt-8 pb-6 shadow-xs md:translate-y-[calc(3rem*var(--t-card-index))]\",\n\t\t\"dark:bg-[radial-gradient(50%_80%_at_25%_0%,--theme(--color-foreground/.1),transparent)]\",\n\t\tclassName\n\t)}\n\tstyle={`--t-card-index: ${index}`}\n\t{...props}\n>\n\t<div class=\"absolute -inset-y-4 -left-px w-px bg-border\"></div>\n\t<div class=\"absolute -inset-y-4 -right-px w-px bg-border\"></div>\n\t<div class=\"absolute -inset-x-4 -top-px h-px bg-border\"></div>\n\t<div class=\"absolute -right-4 -bottom-px -left-4 h-px bg-border\"></div>\n\t<DecorIcon class=\"size-3.5\" position=\"top-left\" />\n\n\t<blockquote class=\"flex gap-4\">\n\t\t<QuoteIcon aria-hidden=\"true\" class=\"size-6 shrink-0 stroke-1\" />\n\n\t\t<p class=\"flex-1 text-base leading-relaxed font-normal text-muted-foreground\">\n\t\t\t{testimonial.quote}\n\t\t</p>\n\t</blockquote>\n\n\t<figcaption class=\"flex items-center gap-3\">\n\t\t<Avatar\n\t\t\tclass=\"size-10 rounded-full ring-2 ring-border ring-offset-2 ring-offset-background transition-shadow group-hover:ring-foreground/20\"\n\t\t>\n\t\t\t<AvatarImage alt={`${testimonial.name}'s profile picture`} src={testimonial.image} />\n\t\t\t<AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>\n\t\t</Avatar>\n\t\t<div class=\"flex flex-col\">\n\t\t\t<cite class=\"text-sm font-medium text-foreground not-italic\">\n\t\t\t\t{testimonial.name}\n\t\t\t</cite>\n\t\t\t<p class=\"text-xs text-muted-foreground\">\n\t\t\t\t{testimonial.role}, <span class=\"text-foreground/80\">{testimonial.company}</span>\n\t\t\t</p>\n\t\t</div>\n\t</figcaption>\n</figure>\n",
+			"type": "registry:component",
+			"target": "efferd/testimonial/testimonial-card.svelte"
+		}
+	]
+}

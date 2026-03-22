@@ -1,22 +1,25 @@
 <script lang="ts">
-	import { scrollY } from 'svelte/reactivity/window';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import type { Snippet } from 'svelte';
-	import { fly } from 'svelte/transition';
-	import CategoryNavigation from '$lib/components/layout/CategoryNavigation.svelte';
+	import { page } from "$app/state";
+	import { scrollY } from "svelte/reactivity/window";
+	import Button from "$lib/components/ui/button/button.svelte";
+	import type { Snippet } from "svelte";
+	import { fly } from "svelte/transition";
+	import CategoryNavigation from "$lib/components/layout/CategoryNavigation.svelte";
 
 	let { children }: { children: Snippet } = $props();
-	let visible = $derived(typeof scrollY.current === 'undefined' ? 600 : scrollY.current > 1200);
+	let visible = $derived(typeof scrollY.current === "undefined" ? 600 : scrollY.current > 1200);
+	let isBlocksRoot = $derived(page.url.pathname === "/blocks");
 </script>
 
 <div>
-	<CategoryNavigation
-	 />
-	<section>
-		<div
-			class="h-6 w-full bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] opacity-35"
-		></div>
-	</section>
+	{#if !isBlocksRoot}
+		<CategoryNavigation />
+		<section>
+			<div
+				class="h-6 w-full bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] opacity-35"
+			></div>
+		</section>
+	{/if}
 	{@render children()}
 	{#if visible}
 		{@render scrollToTop()}
@@ -29,7 +32,7 @@
 			size="icon"
 			variant="secondary"
 			class="rounded-full"
-			onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+			onclick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"

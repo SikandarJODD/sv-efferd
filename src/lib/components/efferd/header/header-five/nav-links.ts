@@ -13,90 +13,90 @@ import {
 	LeafIcon,
 	HandHelpingIcon,
 	ChartArea
-} from '@lucide/svelte';
+} from "@lucide/svelte";
 
-import type { LinkItemType } from './types';
+import type { LinkItemType } from "./types";
 
 let productLinks: LinkItemType[] = [
 	{
-		label: 'Website Builder',
-		href: '#',
-		description: 'Create responsive websites with ease',
+		label: "Website Builder",
+		href: "/",
+		description: "Create responsive websites with ease",
 		icon: GlobeIcon
 	},
 	{
-		label: 'Cloud Platform',
-		href: '#',
-		description: 'Deploy and scale apps in the cloud',
+		label: "Cloud Platform",
+		href: "/",
+		description: "Deploy and scale apps in the cloud",
 		icon: LayersIcon
 	},
 	{
-		label: 'Team Collaboration',
-		href: '#',
-		description: 'Tools to help your teams work better together',
+		label: "Team Collaboration",
+		href: "/",
+		description: "Tools to help your teams work better together",
 		icon: UserPlusIcon
 	},
 	{
-		label: 'Analytics',
-		href: '#',
-		description: 'Track and analyze your website traffic',
+		label: "Analytics",
+		href: "/",
+		description: "Track and analyze your website traffic",
 		icon: ChartArea
 	}
 ];
 
 let companyLinks: LinkItemType[] = [
 	{
-		label: 'About Us',
-		href: '#',
-		description: 'Learn more about our story and team',
+		label: "About Us",
+		href: "/",
+		description: "Learn more about our story and team",
 		icon: UsersIcon
 	},
 	{
-		label: 'Customer Stories',
-		href: '#',
+		label: "Customer Stories",
+		href: "/",
 		description: "See how we've helped our clients succeed",
 		icon: StarIcon
 	},
 	{
-		label: 'Partnerships',
-		href: '#',
+		label: "Partnerships",
+		href: "/",
 		icon: HandshakeIcon,
-		description: 'Collaborate with us for mutual growth'
+		description: "Collaborate with us for mutual growth"
 	}
 ];
 
 let companyLinks2: LinkItemType[] = [
 	{
-		label: 'Terms of Service',
-		href: '#',
+		label: "Terms of Service",
+		href: "/",
 		icon: FileTextIcon
 	},
 	{
-		label: 'Privacy Policy',
-		href: '#',
+		label: "Privacy Policy",
+		href: "/",
 		icon: ShieldIcon
 	},
 	{
-		label: 'Refund Policy',
-		href: '#',
+		label: "Refund Policy",
+		href: "/",
 		icon: RotateCcwIcon
-	},
+	}
 ];
 
 export { productLinks, companyLinks, companyLinks2 };
 
 let navLinks = [
 	{
-		label: 'Features',
-		href: '#'
+		label: "Features",
+		href: "/"
 	},
 	{
-		label: 'Pricing',
-		href: '#'
+		label: "Pricing",
+		href: "/"
 	},
 	{
-		label: 'About',
-		href: '#'
+		label: "About",
+		href: "/"
 	}
 ];
 

@@ -9,13 +9,13 @@
 				items: [
 					{
 						title: "Installation",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Project Structure",
-						url: "/sidebar-01",
-					},
-				],
+						url: "/sidebar-01"
+					}
+				]
 			},
 			{
 				title: "Build Your Application",
@@ -23,54 +23,54 @@
 				items: [
 					{
 						title: "Routing",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Data Fetching",
 						url: "/sidebar-01",
-						isActive: true,
+						isActive: true
 					},
 					{
 						title: "Rendering",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Caching",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Styling",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Optimizing",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Configuring",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Testing",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Authentication",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Deploying",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Upgrading",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Examples",
-						url: "/sidebar-01",
-					},
-				],
+						url: "/sidebar-01"
+					}
+				]
 			},
 			{
 				title: "API Reference",
@@ -78,29 +78,29 @@
 				items: [
 					{
 						title: "Components",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "File Conventions",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Functions",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "next.config.js Options",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "CLI",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Edge Runtime",
-						url: "/sidebar-01",
-					},
-				],
+						url: "/sidebar-01"
+					}
+				]
 			},
 			{
 				title: "Architecture",
@@ -108,27 +108,27 @@
 				items: [
 					{
 						title: "Accessibility",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Fast Refresh",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Svelte Compiler",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Supported Browsers",
-						url: "/sidebar-01",
+						url: "/sidebar-01"
 					},
 					{
 						title: "Rollup",
-						url: "/sidebar-01",
-					},
-				],
-			},
-		],
+						url: "/sidebar-01"
+					}
+				]
+			}
+		]
 	};
 </script>
 

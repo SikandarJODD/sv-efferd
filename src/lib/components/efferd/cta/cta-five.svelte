@@ -1,25 +1,25 @@
 <script lang="ts">
-	import { ArrowRightIcon, AtSignIcon } from '@lucide/svelte';
-	import { Button } from '$lib/components/ui/button';
-	import { FullWidthDivider } from '$lib/components/ui/full-width-divider';
-	import { InputGroup, InputGroupAddon, InputGroupInput } from '$lib/components/ui/input-group';
+	import { ArrowRightIcon, AtSignIcon } from "@lucide/svelte";
+	import { Button } from "$lib/components/ui/button";
+	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
+	import { InputGroup, InputGroupAddon, InputGroupInput } from "$lib/components/ui/input-group";
 
 	const avatars = [
 		{
-			alt: 'Avatar 01',
-			src: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=72'
+			alt: "Avatar 01",
+			src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=72"
 		},
 		{
-			alt: 'Avatar 02',
-			src: 'https://images.unsplash.com/photo-1485206412256-701ccc5b93ca?q=80&w=72'
+			alt: "Avatar 02",
+			src: "https://images.unsplash.com/photo-1485206412256-701ccc5b93ca?q=80&w=72"
 		},
 		{
-			alt: 'Avatar 03',
-			src: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=72'
+			alt: "Avatar 03",
+			src: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=72"
 		},
 		{
-			alt: 'Avatar 04',
-			src: 'https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?q=80&w=72'
+			alt: "Avatar 04",
+			src: "https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?q=80&w=72"
 		}
 	];
 </script>
@@ -33,7 +33,7 @@
 		<h2 class="text-center text-2xl font-semibold tracking-tight md:text-4xl">
 			Subscripe to our newsletter
 		</h2>
-		<p class="text-balance text-center text-sm text-muted-foreground md:text-base">
+		<p class="text-center text-sm text-balance text-muted-foreground md:text-base">
 			Get the latest updates and insights delivered right to your inbox.
 		</p>
 	</div>

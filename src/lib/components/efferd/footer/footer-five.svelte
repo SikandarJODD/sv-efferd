@@ -1,8 +1,10 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { Apple, PlayStore, X } from '$lib/svgs';
-	import { FacebookIcon, InstagramIcon, LinkedinIcon } from '@lucide/svelte';
-	import type { Component } from 'svelte';
+	import { Button } from "$lib/components/ui/button";
+	import AppleLogo from "$lib/svgs/apple.svelte";
+	import PlayStoreLogo from "$lib/svgs/play-store.svelte";
+	import XLogo from "$lib/svgs/x.svelte";
+	import { FacebookIcon, InstagramIcon, LinkedinIcon } from "@lucide/svelte";
+	import type { Component } from "svelte";
 
 	type FooterLink = {
 		href: string;
@@ -22,50 +24,50 @@
 
 	const footerLinks: FooterSection[] = [
 		{
-			title: 'Company',
+			title: "Company",
 			links: [
-				{ href: '/engineering-blog', label: 'Engineering Blog' },
-				{ href: '/marketplace', label: 'Marketplace' },
-				{ href: '/whats-new', label: "What's New" },
-				{ href: '/about', label: 'About' },
-				{ href: '/press', label: 'Press' },
-				{ href: '/careers', label: 'Careers' },
-				{ href: '/social-good', label: 'Social Good' }
+				{ href: "/", label: "Engineering Blog" },
+				{ href: "/", label: "Marketplace" },
+				{ href: "/", label: "What's New" },
+				{ href: "/", label: "About" },
+				{ href: "/", label: "Press" },
+				{ href: "/", label: "Careers" },
+				{ href: "/", label: "Social Good" }
 			]
 		},
 		{
-			title: 'Community',
+			title: "Community",
 			links: [
-				{ href: '/enterprise', label: 'Linktree for Enterprise' },
-				{ href: '/reports/2023', label: '2023 Creator Report' },
-				{ href: '/reports/2022', label: '2022 Creator Report' },
-				{ href: '/charities', label: 'Charities' },
-				{ href: '/trending', label: "What's Trending" },
-				{ href: '/creator-directory', label: 'Creator Profile Directory' },
-				{ href: '/templates', label: 'Explore Templates' }
+				{ href: "/", label: "Linktree for Enterprise" },
+				{ href: "/", label: "2023 Creator Report" },
+				{ href: "/", label: "2022 Creator Report" },
+				{ href: "/", label: "Charities" },
+				{ href: "/", label: "What's Trending" },
+				{ href: "/", label: "Creator Profile Directory" },
+				{ href: "/", label: "Explore Templates" }
 			]
 		},
 		{
-			title: 'Support',
+			title: "Support",
 			links: [
-				{ href: '/help-topics', label: 'Help Topics' },
-				{ href: '/getting-started', label: 'Getting Started' },
-				{ href: '/linoree-pro', label: 'Linoree Pro' },
-				{ href: '/features-guides', label: 'Features & How-tos' },
-				{ href: '/faqs', label: 'FAQs' },
-				{ href: '/report', label: 'Report a Violation' }
+				{ href: "/", label: "Help Topics" },
+				{ href: "/", label: "Getting Started" },
+				{ href: "/", label: "Linoree Pro" },
+				{ href: "/", label: "Features & How-tos" },
+				{ href: "/", label: "FAQs" },
+				{ href: "/", label: "Report a Violation" }
 			]
 		},
 		{
-			title: 'Legal',
+			title: "Legal",
 			links: [
-				{ href: '/terms', label: 'Terms & Conditions' },
-				{ href: '/privacy', label: 'Privacy Notice' },
-				{ href: '/cookies', label: 'Cookie Notice' },
-				{ href: '/trust-center', label: 'Trust Center' },
-				{ href: '/cookie-preferences', label: 'Cookie Preferences' },
-				{ href: '/transparency-report', label: 'Transparency Report' },
-				{ href: '/law-enforcement-access', label: 'Law Enforcement Access Policy' }
+				{ href: "/", label: "Terms & Conditions" },
+				{ href: "/", label: "Privacy Notice" },
+				{ href: "/", label: "Cookie Notice" },
+				{ href: "/", label: "Trust Center" },
+				{ href: "/", label: "Cookie Preferences" },
+				{ href: "/", label: "Transparency Report" },
+				{ href: "/", label: "Law Enforcement Access Policy" }
 			]
 		}
 	];
@@ -73,23 +75,23 @@
 	const socialLinks: SocialLink[] = [
 		{
 			icon: FacebookIcon,
-			href: 'https://facebook.com',
-			label: 'Facebook'
+			href: "https://facebook.com",
+			label: "Facebook"
 		},
 		{
 			icon: InstagramIcon,
-			href: 'https://instagram.com',
-			label: 'Instagram'
+			href: "https://instagram.com",
+			label: "Instagram"
 		},
 		{
 			icon: LinkedinIcon,
-			href: 'https://linkedin.com',
-			label: 'LinkedIn'
+			href: "https://linkedin.com",
+			label: "LinkedIn"
 		},
 		{
-			icon: X,
-			href: 'https://x.com',
-			label: 'X'
+			icon: XLogo,
+			href: "https://x.com",
+			label: "X"
 		}
 	];
 
@@ -121,15 +123,25 @@
 			<div class="flex items-center gap-2">
 				{#each socialLinks as item, index (`social-${item.href}-${index}`)}
 					{@const SocialIcon = item.icon}
-					<Button href={item.href} aria-label={item.label} size="icon-sm" variant="outline">
+					<Button
+						href={item.href}
+						aria-label={item.label}
+						size="icon-sm"
+						variant="outline"
+					>
 						<SocialIcon class="size-4" />
 					</Button>
 				{/each}
 			</div>
 
 			<div class="flex gap-4">
-				<Button href="https://play.google.com/store" class="h-11" target="_blank" rel="noreferrer">
-					<PlayStore class="size-5" />
+				<Button
+					href="https://play.google.com/store"
+					class="h-11"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<PlayStoreLogo class="size-5" />
 					<div class="flex flex-col items-start justify-center pr-2 text-left">
 						<span class="text-[10px] leading-none font-light tracking-tighter">
 							GET IT ON
@@ -138,10 +150,17 @@
 					</div>
 				</Button>
 
-				<Button href="https://www.apple.com/app-store/" class="h-11" target="_blank" rel="noreferrer">
-					<Apple class="size-5" />
+				<Button
+					href="https://www.apple.com/app-store/"
+					class="h-11"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<AppleLogo class="size-5" />
 					<div class="flex flex-col items-start justify-center pr-2 text-left">
-						<span class="text-[10px] leading-none tracking-tighter">Download on the</span>
+						<span class="text-[10px] leading-none tracking-tighter"
+							>Download on the</span
+						>
 						<p class="text-base leading-none font-bold">App Store</p>
 					</div>
 				</Button>

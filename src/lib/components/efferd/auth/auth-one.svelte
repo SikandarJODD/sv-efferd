@@ -1,10 +1,12 @@
 <script lang="ts">
-	import { ChevronLeftIcon } from '@lucide/svelte';
-	import { Particles } from '$lib/components/magic/particles';
-	import { Button } from '$lib/components/ui/button';
-	import { Github, Google, Logo } from '$lib/svgs';
-	import { cn } from '$lib/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { ChevronLeftIcon } from "@lucide/svelte";
+	import { Particles } from "$lib/components/magic/particles";
+	import { Button } from "$lib/components/ui/button";
+	import GithubLogo from "$lib/svgs/github.svelte";
+	import GoogleLogo from "$lib/svgs/google.svelte";
+	import Logo from "$lib/svgs/logo.svelte";
+	import { cn } from "$lib/utils";
+	import type { HTMLAttributes } from "svelte/elements";
 
 	type AuthOneProps = HTMLAttributes<HTMLDivElement> & {
 		class?: string;
@@ -14,15 +16,15 @@
 	};
 
 	let {
-		class: className = '',
-		homeHref = '#',
-		termsHref = '#',
-		privacyHref = '#',
+		class: className = "",
+		homeHref = "/",
+		termsHref = "/",
+		privacyHref = "/",
 		...restProps
 	}: AuthOneProps = $props();
 </script>
 
-<div class={cn('relative w-full md:h-screen md:overflow-hidden', className)} {...restProps}>
+<div class={cn("relative w-full md:h-screen md:overflow-hidden", className)} {...restProps}>
 	<Particles class="absolute inset-0" color="#666666" ease={20} quantity={120} />
 
 	<div class="relative mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-8">
@@ -41,12 +43,12 @@
 
 			<div class="space-y-2">
 				<Button class="w-full" type="button">
-					<Google data-icon="inline-start" />
+					<GoogleLogo data-icon="inline-start" />
 					Continue with Google
 				</Button>
 
 				<Button class="w-full" type="button">
-					<Github data-icon="inline-start" />
+					<GithubLogo data-icon="inline-start" />
 					Continue with GitHub
 				</Button>
 			</div>

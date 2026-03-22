@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { Field, FieldGroup, FieldLabel } from '$lib/components/ui/field';
-	import { Input } from '$lib/components/ui/input';
-	import { Textarea } from '$lib/components/ui/textarea';
-	import { cn } from '$lib/utils';
-	import { Icon as LucideIcon, MailIcon, PhoneIcon } from '@lucide/svelte';
+	import { Button } from "$lib/components/ui/button";
+	import { Field, FieldGroup, FieldLabel } from "$lib/components/ui/field";
+	import { Input } from "$lib/components/ui/input";
+	import { Textarea } from "$lib/components/ui/textarea";
+	import { cn } from "$lib/utils";
+	import { Icon as LucideIcon, MailIcon, PhoneIcon } from "@lucide/svelte";
 
 	type ContactInfoItem = {
 		icon: typeof LucideIcon;
@@ -16,22 +16,22 @@
 	const contactInfo: ContactInfoItem[] = [
 		{
 			icon: MailIcon,
-			label: 'Email',
-			value: 'mail@example.com',
-			href: 'mailto:mail@example.com'
+			label: "Email",
+			value: "mail@example.com",
+			href: "mailto:mail@example.com"
 		},
 		{
 			icon: PhoneIcon,
-			label: 'Phone',
-			value: '+92 312 1234567',
-			href: 'tel:+923121234567'
+			label: "Phone",
+			value: "+92 312 1234567",
+			href: "tel:+923121234567"
 		}
 	];
 
-	let fullName = $state('');
-	let email = $state('');
-	let phone = $state('');
-	let message = $state('');
+	let fullName = $state("");
+	let email = $state("");
+	let phone = $state("");
+	let message = $state("");
 </script>
 
 <div
@@ -40,7 +40,8 @@
 	<div class="col-span-1 flex flex-col space-y-4 p-8 lg:p-10">
 		<h1 class="text-2xl font-medium tracking-wide md:text-3xl">Contact With Us</h1>
 		<p class="max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
-			If you have any questions regarding our Services or need help, please fill out the form here.
+			If you have any questions regarding our Services or need help, please fill out the form
+			here.
 		</p>
 		<p class="max-w-md text-xs leading-relaxed text-muted-foreground md:text-sm">
 			We do our best to respond within 1 business day.
@@ -48,7 +49,7 @@
 		<div class="grid gap-4">
 			{#each contactInfo as info}
 				{@const Icon = info.icon}
-				<div class={cn('flex items-center gap-3 py-3')}>
+				<div class={cn("flex items-center gap-3 py-3")}>
 					<div class="rounded-lg border bg-card p-3 shadow-xs [&_svg]:size-5">
 						<Icon />
 					</div>

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { cn } from "$lib/utils";
+	import type { HTMLAttributes } from "svelte/elements";
 
 	type GridFillerProps = HTMLAttributes<HTMLDivElement> & {
 		/**
@@ -26,7 +26,7 @@
 		smColumns = 2,
 		mdColumns = 0,
 		lgColumns = 0,
-		class: className = '',
+		class: className = "",
 		...rest
 	}: GridFillerProps = $props();
 
@@ -42,12 +42,15 @@
 	{@const neededSm = (smColumns - (totalItems % smColumns)) % smColumns}
 	{@const neededMd = (actualMdColumns - (totalItems % actualMdColumns)) % actualMdColumns}
 	{@const neededLg = (actualLgColumns - (totalItems % actualLgColumns)) % actualLgColumns}
-	{@const showSm = i < neededSm ? 'sm:block' : 'sm:hidden'}
-	{@const showMd = i < neededMd ? 'md:block' : 'md:hidden'}
-	{@const showLg = i < neededLg ? 'lg:block' : 'lg:hidden'}
+	{@const showSm = i < neededSm ? "sm:block" : "sm:hidden"}
+	{@const showMd = i < neededMd ? "md:block" : "md:hidden"}
+	{@const showLg = i < neededLg ? "lg:block" : "lg:hidden"}
 
 	<!-- {#if showSm === 'sm:hidden' && showMd === 'md:hidden' && showLg === 'lg:hidden'}
 		<div></div>
 	{/if} -->
-	<div class={cn('pointer-events-none hidden', showSm, showMd, showLg, className)} {...rest}></div>
+	<div
+		class={cn("pointer-events-none hidden", showSm, showMd, showLg, className)}
+		{...rest}
+	></div>
 {/each}

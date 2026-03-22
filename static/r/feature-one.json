@@ -1,0 +1,20 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "feature-one",
+	"title": "Feature One",
+	"type": "registry:block",
+	"description": "A compact four-column feature strip with lightweight icon-led messaging.",
+	"dependencies": [
+		"@lucide/svelte"
+	],
+	"devDependencies": [
+		"@lucide/svelte@^0.577.0"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { cn } from \"$UTILS$\";\n\timport { ActivityIcon, GlobeIcon, ShieldCheckIcon, ZapIcon, type Icon } from \"@lucide/svelte\";\n\n\ttype Feature = {\n\t\ttitle: string;\n\t\ticon: typeof Icon;\n\t\tdescription: string;\n\t};\n\n\tconst features: Feature[] = [\n\t\t{\n\t\t\ttitle: \"Lightning Fast\",\n\t\t\ticon: ZapIcon,\n\t\t\tdescription: \"Blazing fast edge performance.\"\n\t\t},\n\t\t{\n\t\t\ttitle: \"Secure by Design\",\n\t\t\ticon: ShieldCheckIcon,\n\t\t\tdescription: \"Security by design, zero config.\"\n\t\t},\n\t\t{\n\t\t\ttitle: \"Real-time Sync\",\n\t\t\ticon: ActivityIcon,\n\t\t\tdescription: \"Real-time sync across devices.\"\n\t\t},\n\t\t{\n\t\t\ttitle: \"Global Scale\",\n\t\t\ticon: GlobeIcon,\n\t\t\tdescription: \"Instant global deployment.\"\n\t\t}\n\t];\n</script>\n\n<div class=\"mx-auto grid max-w-5xl grid-cols-2 gap-4 py-4 md:grid-cols-4\">\n\t{#each features as feature, index (feature.title)}\n\t\t{@const FeatureIcon = feature.icon}\n\t\t<div\n\t\t\tclass={cn(\n\t\t\t\t\"relative flex flex-col items-center justify-center p-2\",\n\t\t\t\t\"after:absolute after:inset-y-0 after:right-0 after:h-full after:w-px after:bg-linear-to-b after:from-foreground/6 after:via-foreground/25 after:to-foreground/6\",\n\t\t\t\t\"[&_svg]:size-6 [&_svg]:text-muted-foreground\",\n\t\t\t\t{\n\t\t\t\t\t\"after:hidden\": index === features.length - 1,\n\t\t\t\t\t\"after:hidden after:md:block\": index === 1\n\t\t\t\t}\n\t\t\t)}\n\t\t>\n\t\t\t<FeatureIcon />\n\t\t\t<h3 class=\"mt-4 text-center text-xs font-medium md:text-sm lg:text-base\">\n\t\t\t\t{feature.title}\n\t\t\t</h3>\n\t\t\t<p class=\"mt-1 text-center text-[10px] text-muted-foreground md:text-xs\">\n\t\t\t\t{feature.description}\n\t\t\t</p>\n\t\t</div>\n\t{/each}\n</div>\n",
+			"type": "registry:component",
+			"target": "efferd/features/feature-one.svelte"
+		}
+	]
+}

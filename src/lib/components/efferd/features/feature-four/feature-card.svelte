@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { DecorIcon } from '$lib/components/ui/decor-icon';
-	import { cn } from '$lib/utils';
-	import type { Icon } from '@lucide/svelte';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { DecorIcon } from "$lib/components/ui/decor-icon";
+	import { cn } from "$lib/utils";
+	import type { Icon } from "@lucide/svelte";
+	import type { HTMLAttributes } from "svelte/elements";
 
 	type Feature = {
 		title: string;
@@ -20,8 +20,8 @@
 
 <div
 	class={cn(
-		'relative flex flex-col justify-between gap-6 bg-background px-6 pt-8 pb-6 shadow-xs',
-		'dark:bg-[radial-gradient(50%_80%_at_25%_0%,--theme(--color-foreground/.1),transparent)]',
+		"relative flex flex-col justify-between gap-6 bg-background px-6 pt-8 pb-6 shadow-xs",
+		"dark:bg-[radial-gradient(50%_80%_at_25%_0%,--theme(--color-foreground/.1),transparent)]",
 		className
 	)}
 	{...props}
@@ -35,8 +35,8 @@
 
 	<div
 		class={cn(
-			'relative z-10 flex w-fit items-center justify-center rounded-lg border bg-muted/20 p-3',
-			'[&_svg]:size-5 [&_svg]:stroke-[1.5] [&_svg]:text-foreground'
+			"relative z-10 flex w-fit items-center justify-center rounded-lg border bg-muted/20 p-3",
+			"[&_svg]:size-5 [&_svg]:stroke-[1.5] [&_svg]:text-foreground"
 		)}
 	>
 		<FeatureIcon />

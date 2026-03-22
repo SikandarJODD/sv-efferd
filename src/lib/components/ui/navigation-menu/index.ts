@@ -24,5 +24,5 @@ export {
 	Link as NavigationMenuLink,
 	List as NavigationMenuList,
 	Trigger as NavigationMenuTrigger,
-	Viewport as NavigationMenuViewport,
+	Viewport as NavigationMenuViewport
 };

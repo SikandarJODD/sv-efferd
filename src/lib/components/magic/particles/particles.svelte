@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { cn } from '$lib/utils.js';
-	import { untrack } from 'svelte';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { cn } from "$lib/utils.js";
+	import { untrack } from "svelte";
+	import type { HTMLAttributes } from "svelte/elements";
 
 	type RgbColor = [red: number, green: number, blue: number];
 
@@ -42,13 +42,13 @@
 
 	let {
 		class: classProp,
-		class: className = '',
+		class: className = "",
 		quantity = 100,
 		staticity = 50,
 		ease = 50,
 		size = 0.4,
 		refresh = true,
-		color = '#ffffff',
+		color = "#ffffff",
 		vx = 0,
 		vy = 0,
 		...restProps
@@ -70,13 +70,13 @@
 	const normalizedSize = $derived(Math.max(size, 0));
 
 	function hexToRgb(hex: string): RgbColor {
-		const normalizedHex = hex.trim().replace(/^#/, '');
+		const normalizedHex = hex.trim().replace(/^#/, "");
 		const expandedHex =
 			normalizedHex.length === 3
 				? normalizedHex
-						.split('')
+						.split("")
 						.map((char) => `${char}${char}`)
-						.join('')
+						.join("")
 				: normalizedHex;
 
 		if (!/^[0-9a-fA-F]{6}$/.test(expandedHex)) {
@@ -222,9 +222,11 @@
 			circle.x += circle.dx + vx;
 			circle.y += circle.dy + vy;
 			circle.translateX +=
-				(mouse.x / (normalizedStaticity / circle.magnetism) - circle.translateX) / normalizedEase;
+				(mouse.x / (normalizedStaticity / circle.magnetism) - circle.translateX) /
+				normalizedEase;
 			circle.translateY +=
-				(mouse.y / (normalizedStaticity / circle.magnetism) - circle.translateY) / normalizedEase;
+				(mouse.y / (normalizedStaticity / circle.magnetism) - circle.translateY) /
+				normalizedEase;
 
 			if (
 				circle.x < -circle.size ||
@@ -246,7 +248,7 @@
 			return;
 		}
 
-		const nextContext = canvasRef.getContext('2d');
+		const nextContext = canvasRef.getContext("2d");
 
 		if (!nextContext) {
 			return;
@@ -261,8 +263,8 @@
 		});
 
 		resizeObserver.observe(canvasContainerRef);
-		window.addEventListener('mousemove', updateMousePosition);
-		window.addEventListener('blur', resetMousePosition);
+		window.addEventListener("mousemove", updateMousePosition);
+		window.addEventListener("blur", resetMousePosition);
 
 		untrack(() => {
 			resizeCanvas();
@@ -271,8 +273,8 @@
 
 		return () => {
 			resizeObserver.disconnect();
-			window.removeEventListener('mousemove', updateMousePosition);
-			window.removeEventListener('blur', resetMousePosition);
+			window.removeEventListener("mousemove", updateMousePosition);
+			window.removeEventListener("blur", resetMousePosition);
 
 			if (frameId !== null) {
 				window.cancelAnimationFrame(frameId);

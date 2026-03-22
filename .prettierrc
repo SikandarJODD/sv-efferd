@@ -1,12 +1,10 @@
 {
 	"useTabs": true,
-	"singleQuote": true,
+	"singleQuote": false,
+	"tabWidth": 4,
 	"trailingComma": "none",
 	"printWidth": 100,
-	"plugins": [
-		"prettier-plugin-svelte",
-		"prettier-plugin-tailwindcss"
-	],
+	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
 	"tailwindStylesheet": "./src/routes/layout.css",
 	"overrides": [
 		{
@@ -14,6 +12,22 @@
 			"options": {
 				"parser": "svelte"
 			}
+		},
+		{
+			"files": "*.md",
+			"options": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"printWidth": 79
+			}
+		},
+		{
+			"files": ".github/**/*",
+			"options": {
+				"tabWidth": 2,
+				"useTabs": false
+			}
 		}
-	]
+	],
+	"tailwindFunctions": ["clsx", "cn", "tv"]
 }

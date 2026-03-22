@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { ArrowRightIcon } from '@lucide/svelte';
-	import { Button } from '$lib/components/ui/button';
-	import { FullWidthDivider } from '$lib/components/ui/full-width-divider';
+	import { ArrowRightIcon } from "@lucide/svelte";
+	import { Button } from "$lib/components/ui/button";
+	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
 </script>
 
 <div class="relative mx-auto flex w-full max-w-3xl flex-col justify-between border-x">
@@ -11,7 +11,7 @@
 		<h2 class="text-center text-lg font-semibold md:text-2xl">
 			Plan the present. Build the future.
 		</h2>
-		<p class="text-balance text-center text-sm text-muted-foreground md:text-base">
+		<p class="text-center text-sm text-balance text-muted-foreground md:text-base">
 			Start your journey today by clicking the button below.
 		</p>
 	</div>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LogoCloudThree from '$lib/components/efferd/logo-cloud/three/logo-cloud-three.svelte';
+	import LogoCloudThree from "$lib/components/efferd/logo-cloud/three/logo-cloud-three.svelte";
 </script>
 
 <section class="relative space-y-4 border-t pt-6 pb-10">

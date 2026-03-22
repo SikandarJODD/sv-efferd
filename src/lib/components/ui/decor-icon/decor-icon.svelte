@@ -1,22 +1,24 @@
 <script lang="ts" module>
-	import { cn } from '$lib/utils';
-	import type { SVGAttributes } from 'svelte/elements';
-	import { type VariantProps, tv } from 'tailwind-variants';
+	import { cn } from "$lib/utils";
+	import type { SVGAttributes } from "svelte/elements";
+	import { type VariantProps, tv } from "tailwind-variants";
 
 	export const decorIconVariants = tv({
-		base: 'pointer-events-none absolute z-1 size-5 shrink-0 stroke-1 stroke-muted-foreground',
+		base: "pointer-events-none absolute z-1 size-5 shrink-0 stroke-muted-foreground stroke-1",
 		variants: {
 			position: {
-				'top-left': 'top-0 left-0 -translate-x-[calc(50%+0.5px)] -translate-y-[calc(50%+0.5px)]',
-				'top-right': 'top-0 right-0 translate-x-[calc(50%+0.5px)] -translate-y-[calc(50%+0.5px)]',
-				'bottom-right':
-					'right-0 bottom-0 translate-x-[calc(50%+0.5px)] translate-y-[calc(50%+0.5px)]',
-				'bottom-left':
-					'bottom-0 left-0 -translate-x-[calc(50%+0.5px)] translate-y-[calc(50%+0.5px)]'
+				"top-left":
+					"top-0 left-0 -translate-x-[calc(50%+0.5px)] -translate-y-[calc(50%+0.5px)]",
+				"top-right":
+					"top-0 right-0 translate-x-[calc(50%+0.5px)] -translate-y-[calc(50%+0.5px)]",
+				"bottom-right":
+					"right-0 bottom-0 translate-x-[calc(50%+0.5px)] translate-y-[calc(50%+0.5px)]",
+				"bottom-left":
+					"bottom-0 left-0 -translate-x-[calc(50%+0.5px)] translate-y-[calc(50%+0.5px)]"
 			}
 		},
 		defaultVariants: {
-			position: 'top-left'
+			position: "top-left"
 		}
 	});
 
@@ -24,7 +26,7 @@
 </script>
 
 <script lang="ts">
-	let { position = 'top-left', class: className, ...props }: DecorIconVariant = $props();
+	let { position = "top-left", class: className, ...props }: DecorIconVariant = $props();
 </script>
 
 <svg

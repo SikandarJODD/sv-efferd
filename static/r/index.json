@@ -14,20 +14,6 @@
 		"relativeUrl": "decor-icon.json"
 	},
 	{
-		"name": "input-group",
-		"title": "Input group",
-		"type": "registry:block",
-		"registryDependencies": [],
-		"relativeUrl": "input-group.json"
-	},
-	{
-		"name": "empty",
-		"title": "Empty",
-		"type": "registry:block",
-		"registryDependencies": [],
-		"relativeUrl": "empty.json"
-	},
-	{
 		"name": "marquee",
 		"title": "Marquee",
 		"type": "registry:block",
@@ -42,25 +28,66 @@
 		"relativeUrl": "progressive-blur.json"
 	},
 	{
-		"name": "field",
-		"title": "Field",
+		"name": "grid-filler",
+		"title": "Grid filler",
 		"type": "registry:block",
 		"registryDependencies": [],
-		"relativeUrl": "field.json"
+		"relativeUrl": "grid-filler.json"
 	},
 	{
-		"name": "input",
-		"title": "Input",
+		"name": "dashed-line",
+		"title": "Dashed line",
 		"type": "registry:block",
 		"registryDependencies": [],
-		"relativeUrl": "input.json"
+		"relativeUrl": "dashed-line.json"
 	},
 	{
-		"name": "textarea",
-		"title": "Textarea",
+		"name": "grid-pattern",
+		"title": "Grid pattern",
 		"type": "registry:block",
 		"registryDependencies": [],
-		"relativeUrl": "textarea.json"
+		"relativeUrl": "grid-pattern.json"
+	},
+	{
+		"name": "mask-line",
+		"title": "Mask line",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "mask-line.json"
+	},
+	{
+		"name": "portal",
+		"title": "Portal",
+		"type": "registry:block",
+		"dependencies": [
+			"bits-ui"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "portal.json"
+	},
+	{
+		"name": "auth-divider",
+		"title": "Auth divider",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "auth-divider.json"
+	},
+	{
+		"name": "particles",
+		"title": "Particles",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "particles.json"
+	},
+	{
+		"name": "floating-paths",
+		"title": "Floating paths",
+		"type": "registry:block",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "floating-paths.json"
 	},
 	{
 		"name": "cta-one",
@@ -125,7 +152,7 @@
 		"registryDependencies": [
 			"button",
 			"local:full-width-divider",
-			"local:input-group"
+			"input-group"
 		],
 		"relativeUrl": "cta-five.json"
 	},
@@ -140,7 +167,7 @@
 		"registryDependencies": [
 			"button",
 			"local:full-width-divider",
-			"local:empty"
+			"empty"
 		],
 		"relativeUrl": "not-found-one.json"
 	},
@@ -154,7 +181,7 @@
 		],
 		"registryDependencies": [
 			"button",
-			"local:empty"
+			"empty"
 		],
 		"relativeUrl": "not-found-two.json"
 	},
@@ -254,9 +281,9 @@
 		],
 		"registryDependencies": [
 			"button",
-			"local:field",
-			"local:input",
-			"local:textarea"
+			"field",
+			"input",
+			"textarea"
 		],
 		"relativeUrl": "contact-four.json"
 	},
@@ -271,10 +298,623 @@
 		"registryDependencies": [
 			"button",
 			"local:decor-icon",
-			"local:field",
-			"local:input",
-			"local:textarea"
+			"field",
+			"input",
+			"textarea"
 		],
 		"relativeUrl": "contact-five.json"
+	},
+	{
+		"name": "blog-one",
+		"title": "Blog One",
+		"type": "registry:block",
+		"description": "A vertical editorial list with full-width dividers and compact summaries.",
+		"registryDependencies": [
+			"local:full-width-divider"
+		],
+		"relativeUrl": "blog-one.json"
+	},
+	{
+		"name": "blog-two",
+		"title": "Blog Two",
+		"type": "registry:block",
+		"description": "A structured blog grid with metadata rows and filler cells for balance.",
+		"registryDependencies": [
+			"local:full-width-divider",
+			"local:grid-filler"
+		],
+		"relativeUrl": "blog-two.json"
+	},
+	{
+		"name": "blog-three",
+		"title": "Blog Three",
+		"type": "registry:block",
+		"description": "A card-based blog grid with media thumbnails and richer reading metadata.",
+		"registryDependencies": [
+			"local:full-width-divider",
+			"aspect-ratio"
+		],
+		"relativeUrl": "blog-three.json"
+	},
+	{
+		"name": "auth-one",
+		"title": "Auth One",
+		"type": "registry:block",
+		"description": "A centered auth entry screen with ambient particles and social sign-in actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:particles"
+		],
+		"relativeUrl": "auth-one.json"
+	},
+	{
+		"name": "auth-two",
+		"title": "Auth Two",
+		"type": "registry:block",
+		"description": "A framed auth panel that combines email capture with side-by-side social login.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:auth-divider",
+			"local:decor-icon",
+			"input-group"
+		],
+		"relativeUrl": "auth-two.json"
+	},
+	{
+		"name": "auth-three",
+		"title": "Auth Three",
+		"type": "registry:block",
+		"description": "A minimal single-column auth flow with brand header and stacked sign-in options.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:auth-divider",
+			"input-group"
+		],
+		"relativeUrl": "auth-three.json"
+	},
+	{
+		"name": "auth-four",
+		"title": "Auth Four",
+		"type": "registry:block",
+		"description": "A bordered auth layout with divider rails and a gentle email-first continuation flow.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:auth-divider",
+			"local:full-width-divider",
+			"input-group"
+		],
+		"relativeUrl": "auth-four.json"
+	},
+	{
+		"name": "auth-five",
+		"title": "Auth Five",
+		"type": "registry:block",
+		"description": "A split-screen auth experience with animated background paths and broader provider options.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:auth-divider",
+			"local:floating-paths",
+			"input-group"
+		],
+		"relativeUrl": "auth-five.json"
+	},
+	{
+		"name": "faq-one",
+		"title": "FAQ One",
+		"type": "registry:block",
+		"description": "A compact FAQ stack with a centered heading and a classic single-column accordion.",
+		"registryDependencies": [
+			"accordion"
+		],
+		"relativeUrl": "faq-one.json"
+	},
+	{
+		"name": "faq-two",
+		"title": "FAQ Two",
+		"type": "registry:block",
+		"description": "A split FAQ layout with a fixed intro column and full-height answer rail.",
+		"registryDependencies": [
+			"accordion"
+		],
+		"relativeUrl": "faq-two.json"
+	},
+	{
+		"name": "faq-three",
+		"title": "FAQ Three",
+		"type": "registry:block",
+		"description": "A guided editorial FAQ with divider rails and decorative timeline markers.",
+		"registryDependencies": [
+			"accordion",
+			"local:decor-icon"
+		],
+		"relativeUrl": "faq-three.json"
+	},
+	{
+		"name": "faq-four",
+		"title": "FAQ Four",
+		"type": "registry:block",
+		"description": "A categorized FAQ explorer with topic switching and softly framed accordion rows.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"accordion"
+		],
+		"relativeUrl": "faq-four.json"
+	},
+	{
+		"name": "faq-five",
+		"title": "FAQ Five",
+		"type": "registry:block",
+		"description": "A searchable FAQ page with category filters, empty state handling, and structured dividers.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"accordion",
+			"local:full-width-divider",
+			"input-group",
+			"empty"
+		],
+		"relativeUrl": "faq-five.json"
+	},
+	{
+		"name": "feature-one",
+		"title": "Feature One",
+		"type": "registry:block",
+		"description": "A compact four-column feature strip with lightweight icon-led messaging.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "feature-one.json"
+	},
+	{
+		"name": "feature-two",
+		"title": "Feature Two",
+		"type": "registry:block",
+		"description": "An editorial feature frame with dashed rails, corner accents, and three focused highlights.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:dashed-line",
+			"local:decor-icon"
+		],
+		"relativeUrl": "feature-two.json"
+	},
+	{
+		"name": "feature-three",
+		"title": "Feature Three",
+		"type": "registry:block",
+		"description": "A bordered feature grid with full-width divider rails and stronger product framing.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:full-width-divider"
+		],
+		"relativeUrl": "feature-three.json"
+	},
+	{
+		"name": "feature-four",
+		"title": "Feature Four",
+		"type": "registry:block",
+		"description": "A product-feature showcase with structured cards and subtle editorial chrome.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:decor-icon"
+		],
+		"relativeUrl": "feature-four.json"
+	},
+	{
+		"name": "feature-five",
+		"title": "Feature Five",
+		"type": "registry:block",
+		"description": "A dense capability grid with patterned card backgrounds and a stronger product voice.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:grid-pattern"
+		],
+		"relativeUrl": "feature-five.json"
+	},
+	{
+		"name": "footer-one",
+		"title": "Footer One",
+		"type": "registry:block",
+		"description": "A compact product footer with inline social links and a simple closing bar.",
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "footer-one.json"
+	},
+	{
+		"name": "footer-two",
+		"title": "Footer Two",
+		"type": "registry:block",
+		"description": "A structured multi-column footer with brand intro and outlined social actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "footer-two.json"
+	},
+	{
+		"name": "footer-three",
+		"title": "Footer Three",
+		"type": "registry:block",
+		"description": "An animated rounded footer with grouped link columns and softer visual depth.",
+		"dependencies": [
+			"@lucide/svelte",
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "footer-three.json"
+	},
+	{
+		"name": "footer-four",
+		"title": "Footer Four",
+		"type": "registry:block",
+		"description": "A directory-style footer with stacked social headers and nested link groups.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "footer-four.json"
+	},
+	{
+		"name": "footer-five",
+		"title": "Footer Five",
+		"type": "registry:block",
+		"description": "A marketplace-style footer with store badges, social actions, and dense support links.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "footer-five.json"
+	},
+	{
+		"name": "footer-six",
+		"title": "Footer Six",
+		"type": "registry:block",
+		"description": "A cinematic sticky footer with animated columns and a long-form enterprise sitemap.",
+		"dependencies": [
+			"@lucide/svelte",
+			"motion-sv"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "footer-six.json"
+	},
+	{
+		"name": "integration-one",
+		"title": "Integration One",
+		"type": "registry:block",
+		"description": "A compact integration strip with lightweight cards and a simple link-out action.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "integration-one.json"
+	},
+	{
+		"name": "integration-two",
+		"title": "Integration Two",
+		"type": "registry:block",
+		"description": "A structured integration grid with framed cards and decorative corner accents.",
+		"registryDependencies": [
+			"local:decor-icon"
+		],
+		"relativeUrl": "integration-two.json"
+	},
+	{
+		"name": "integration-three",
+		"title": "Integration Three",
+		"type": "registry:block",
+		"description": "A split integration hero with grid-positioned logos and divider rails.",
+		"registryDependencies": [
+			"button",
+			"local:full-width-divider"
+		],
+		"relativeUrl": "integration-three.json"
+	},
+	{
+		"name": "integration-four",
+		"title": "Integration Four",
+		"type": "registry:block",
+		"description": "A bolder integration grid pairing a large product statement with floating logo tiles.",
+		"registryDependencies": [],
+		"relativeUrl": "integration-four.json"
+	},
+	{
+		"name": "integration-five",
+		"title": "Integration Five",
+		"type": "registry:block",
+		"description": "A centered integration cluster with overlapping logo pills and a stronger primary CTA.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "integration-five.json"
+	},
+	{
+		"name": "hero-one",
+		"title": "Hero One",
+		"type": "registry:block",
+		"description": "A full hero composition with sticky header, editorial spotlight, and a marquee trust band.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:logo-cloud-three",
+			"local:portal"
+		],
+		"relativeUrl": "hero-one.json"
+	},
+	{
+		"name": "hero-two",
+		"title": "Hero Two",
+		"type": "registry:block",
+		"description": "A framed product hero with a floating screen, structured header, and bordered logo section.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:decor-icon",
+			"local:full-width-divider",
+			"local:logo-cloud-two",
+			"local:portal"
+		],
+		"relativeUrl": "hero-two.json"
+	},
+	{
+		"name": "hero-three",
+		"title": "Hero Three",
+		"type": "registry:block",
+		"description": "A modern hero layout with mega-nav header, device mockup spotlight, and compact logo grid.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:logo-cloud-five",
+			"navigation-menu",
+			"local:portal"
+		],
+		"relativeUrl": "hero-three.json"
+	},
+	{
+		"name": "header-one",
+		"title": "Header One",
+		"type": "registry:block",
+		"description": "A clean sticky header with simple nav links and a compact mobile sheet.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:portal"
+		],
+		"relativeUrl": "header-one.json"
+	},
+	{
+		"name": "header-two",
+		"title": "Header Two",
+		"type": "registry:block",
+		"description": "A framed sticky header with tighter proportions and a softer product shell.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:portal"
+		],
+		"relativeUrl": "header-two.json"
+	},
+	{
+		"name": "header-three",
+		"title": "Header Three",
+		"type": "registry:block",
+		"description": "A richer sticky header with mega-menu navigation and a full mobile fallback.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"navigation-menu",
+			"local:portal"
+		],
+		"relativeUrl": "header-three.json"
+	},
+	{
+		"name": "header-four",
+		"title": "Header Four",
+		"type": "registry:block",
+		"description": "A floating rounded header with stronger auth actions and a simplified mobile drawer.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:portal"
+		],
+		"relativeUrl": "header-four.json"
+	},
+	{
+		"name": "header-five",
+		"title": "Header Five",
+		"type": "registry:block",
+		"description": "A polished rounded header with compact mega-menu panels and stronger pill-shaped actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"navigation-menu",
+			"local:portal"
+		],
+		"relativeUrl": "header-five.json"
+	},
+	{
+		"name": "pricing-one",
+		"title": "Pricing One",
+		"type": "registry:block",
+		"description": "A two-plan comparison with corner accents, compact savings callouts, and a stronger featured tier.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:decor-icon"
+		],
+		"relativeUrl": "pricing-one.json"
+	},
+	{
+		"name": "pricing-two",
+		"title": "Pricing Two",
+		"type": "registry:block",
+		"description": "A bordered editorial pricing grid with divider rails, concise plan summaries, and feature checklists.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:full-width-divider"
+		],
+		"relativeUrl": "pricing-two.json"
+	},
+	{
+		"name": "pricing-three",
+		"title": "Pricing Three",
+		"type": "registry:block",
+		"description": "A reusable three-tier pricing layout with icon-led cards and a highlighted middle plan.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "pricing-three.json"
+	},
+	{
+		"name": "pricing-four",
+		"title": "Pricing Four",
+		"type": "registry:block",
+		"description": "An animated pricing table with monthly-yearly toggles, live number transitions, and motion badges.",
+		"dependencies": [
+			"@lucide/svelte",
+			"@number-flow/svelte",
+			"motion-sv"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "pricing-four.json"
+	},
+	{
+		"name": "testimonial-one",
+		"title": "Testimonial One",
+		"type": "registry:block",
+		"description": "A centered single testimonial with brand mark, compact author block, and soft editorial framing.",
+		"registryDependencies": [
+			"avatar"
+		],
+		"relativeUrl": "testimonial-one.json"
+	},
+	{
+		"name": "testimonial-two",
+		"title": "Testimonial Two",
+		"type": "registry:block",
+		"description": "A framed testimonial layout with masked divider rails, asymmetrical composition, and avatar-led emphasis.",
+		"registryDependencies": [
+			"avatar",
+			"local:mask-line"
+		],
+		"relativeUrl": "testimonial-two.json"
+	},
+	{
+		"name": "testimonial-three",
+		"title": "Testimonial Three",
+		"type": "registry:block",
+		"description": "A three-card testimonial grid with decorative corners, lifted middle emphasis, and richer profile metadata.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar",
+			"local:decor-icon"
+		],
+		"relativeUrl": "testimonial-three.json"
+	},
+	{
+		"name": "testimonial-four",
+		"title": "Testimonial Four",
+		"type": "registry:block",
+		"description": "A split testimonial layout with divider rails, dense quote cards, and a stronger editorial grid.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:full-width-divider"
+		],
+		"relativeUrl": "testimonial-four.json"
+	},
+	{
+		"name": "testimonial-five",
+		"title": "Testimonial Five",
+		"type": "registry:block",
+		"description": "A dense social-proof wall with grid fillers, patterned cards, and a long-form testimonial mosaic.",
+		"registryDependencies": [
+			"avatar",
+			"local:full-width-divider",
+			"local:grid-filler",
+			"local:grid-pattern"
+		],
+		"relativeUrl": "testimonial-five.json"
+	},
+	{
+		"name": "image-gallery-one",
+		"title": "Image Gallery One",
+		"type": "registry:block",
+		"description": "A responsive editorial gallery with staggered aspect ratios, lazy-loaded media, and a clean masonry-style rhythm.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [
+			"aspect-ratio"
+		],
+		"relativeUrl": "image-gallery-one.json"
 	}
 ]

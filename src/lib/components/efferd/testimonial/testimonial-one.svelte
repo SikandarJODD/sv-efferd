@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar';
+	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
 </script>
 
 <figure class="mx-auto flex w-full max-w-lg flex-col items-center justify-center">
@@ -26,7 +26,10 @@
 		</div>
 
 		<Avatar class="size-12 rounded-full border object-cover">
-			<AvatarImage alt="Guillermo Rauch's profile picture" src="https://github.com/rauchg.png" />
+			<AvatarImage
+				alt="Guillermo Rauch's profile picture"
+				src="https://github.com/rauchg.png"
+			/>
 			<AvatarFallback>GR</AvatarFallback>
 		</Avatar>
 	</figcaption>

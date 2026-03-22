@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { Portal, PortalBackdrop } from '$lib/components/ui/portal';
-	import { Github, X as XLogo } from '$lib/svgs';
-	import { cn } from '$lib/utils';
-	import { MenuIcon, XIcon } from '@lucide/svelte';
-	import { landingNavLinks, landingSocialLinks } from './config';
+	import { Button } from "$lib/components/ui/button";
+	import { Portal, PortalBackdrop } from "$lib/components/ui/portal";
+	import { Github, X as XLogo } from "$lib/svgs";
+	import { cn } from "$lib/utils";
+	import { MenuIcon, XIcon } from "@lucide/svelte";
+	import { landingNavLinks, landingSocialLinks } from "./config";
 
 	let open = $state(false);
 
@@ -17,7 +17,7 @@
 	<Button
 		aria-controls="site-mobile-menu"
 		aria-expanded={open}
-		aria-label={open ? 'Close menu' : 'Open menu'}
+		aria-label={open ? "Close menu" : "Open menu"}
 		class="border-border/80 bg-background/70 backdrop-blur-sm"
 		size="icon-sm"
 		variant="outline"
@@ -36,14 +36,16 @@
 
 			<div
 				class={cn(
-					'data-[slot=open]:animate-in data-[slot=open]:fade-in-0 data-[slot=open]:slide-in-from-top-2',
-					'p-4 duration-300 ease-out'
+					"data-[slot=open]:animate-in data-[slot=open]:fade-in-0 data-[slot=open]:slide-in-from-top-2",
+					"p-4 duration-300 ease-out"
 				)}
 				data-slot="open"
 				id="site-mobile-menu"
 			>
 				<div class="mx-auto w-full max-w-7xl">
-					<div class="rounded-2xl border border-border/80 bg-background/95 p-4 shadow-lg backdrop-blur-xl">
+					<div
+						class="rounded-2xl border border-border/80 bg-background/95 p-4 shadow-lg backdrop-blur-xl"
+					>
 						<div class="grid gap-1">
 							{#each landingNavLinks as link}
 								<Button
@@ -68,7 +70,7 @@
 										variant="outline"
 										onclick={closeMenu}
 									>
-										{#if link.id === 'x'}
+										{#if link.id === "x"}
 											<XLogo class="size-4" />
 										{:else}
 											<Github class="size-4" />

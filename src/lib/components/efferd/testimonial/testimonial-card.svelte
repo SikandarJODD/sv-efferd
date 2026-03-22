@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar';
-	import { DecorIcon } from '$lib/components/ui/decor-icon';
-	import { cn } from '$lib/utils';
-	import { QuoteIcon } from '@lucide/svelte';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
+	import { DecorIcon } from "$lib/components/ui/decor-icon";
+	import { cn } from "$lib/utils";
+	import { QuoteIcon } from "@lucide/svelte";
+	import type { HTMLAttributes } from "svelte/elements";
 
 	type Testimonial = {
 		quote: string;
@@ -19,13 +19,13 @@
 		index?: number;
 	};
 
-	let { testimonial, class: className = '', index = 0, ...props }: Props = $props();
+	let { testimonial, class: className = "", index = 0, ...props }: Props = $props();
 </script>
 
 <figure
 	class={cn(
-		'relative flex flex-col justify-between gap-6 px-8 pt-8 pb-6 shadow-xs md:translate-y-[calc(3rem*var(--t-card-index))]',
-		'dark:bg-[radial-gradient(50%_80%_at_25%_0%,--theme(--color-foreground/.1),transparent)]',
+		"relative flex flex-col justify-between gap-6 px-8 pt-8 pb-6 shadow-xs md:translate-y-[calc(3rem*var(--t-card-index))]",
+		"dark:bg-[radial-gradient(50%_80%_at_25%_0%,--theme(--color-foreground/.1),transparent)]",
 		className
 	)}
 	style={`--t-card-index: ${index}`}

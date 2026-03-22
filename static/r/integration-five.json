@@ -1,0 +1,23 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "integration-five",
+	"title": "Integration Five",
+	"type": "registry:block",
+	"description": "A centered integration cluster with overlapping logo pills and a stronger primary CTA.",
+	"dependencies": [
+		"@lucide/svelte"
+	],
+	"devDependencies": [
+		"@lucide/svelte@^0.577.0"
+	],
+	"registryDependencies": [
+		"button"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { Button } from \"$lib/components/ui/button\";\n\timport { cn } from \"$UTILS$\";\n\timport { ArrowUpRightIcon } from \"@lucide/svelte\";\n\n\ttype Integration = {\n\t\tsrc?: string;\n\t\tname: string;\n\t\tisInvertable?: boolean;\n\t};\n\n\tconst data: Integration[] = [\n\t\t{\n\t\t\tname: \"Empty 1\"\n\t\t},\n\t\t{\n\t\t\tname: \"Vercel\",\n\t\t\tsrc: \"https://storage.efferd.com/logo/vercel.svg\",\n\t\t\tisInvertable: true\n\t\t},\n\t\t{\n\t\t\tname: \"OpenAI\",\n\t\t\tsrc: \"https://storage.efferd.com/logo/openai.svg\",\n\t\t\tisInvertable: true\n\t\t},\n\t\t{\n\t\t\tsrc: \"https://storage.efferd.com/logo/supabase.svg\",\n\t\t\tname: \"Supabase\"\n\t\t},\n\t\t{\n\t\t\tname: \"GitHub\",\n\t\t\tsrc: \"https://storage.efferd.com/logo/github.svg\",\n\t\t\tisInvertable: true\n\t\t},\n\t\t{\n\t\t\tname: \"Notion\",\n\t\t\tsrc: \"https://storage.efferd.com/logo/notion.svg\"\n\t\t},\n\t\t{\n\t\t\tname: \"Gmail\",\n\t\t\tsrc: \"https://storage.efferd.com/logo/gmail.svg\"\n\t\t},\n\t\t{\n\t\t\tname: \"Google Maps\",\n\t\t\tsrc: \"https://storage.efferd.com/logo/google-maps.svg\"\n\t\t},\n\t\t{\n\t\t\tname: \"Neon\",\n\t\t\tsrc: \"https://storage.efferd.com/logo/neon.svg\"\n\t\t},\n\t\t{\n\t\t\tname: \"Empty 2\"\n\t\t}\n\t];\n</script>\n\n<div class=\"flex flex-col items-center justify-center gap-6 py-24\">\n\t<div class=\"max-w-xl space-y-2 px-4 text-center\">\n\t\t<h2 class=\"text-4xl font-semibold tracking-tight\">All types of integration</h2>\n\t\t<p class=\"text-base text-muted-foreground md:text-lg\">\n\t\t\tConnect your favourite apps and services easily\n\t\t</p>\n\t</div>\n\n\t<div class=\"flex flex-col justify-center rounded-full border bg-secondary dark:bg-secondary/10\">\n\t\t<div class=\"flex items-center justify-center -space-x-4 mask-r-from-90 mask-l-from-90 p-1\">\n\t\t\t{#each data as item (item.name)}\n\t\t\t\t<div\n\t\t\t\t\tclass={cn(\n\t\t\t\t\t\t\"relative z-0 transition-transform\",\n\t\t\t\t\t\titem.src && \"hover:z-10 hover:scale-110\"\n\t\t\t\t\t)}\n\t\t\t\t>\n\t\t\t\t\t<div\n\t\t\t\t\t\tclass=\"flex size-12 items-center justify-center overflow-hidden rounded-full border bg-card shadow-sm md:size-16\"\n\t\t\t\t\t>\n\t\t\t\t\t\t{#if item.src}\n\t\t\t\t\t\t\t<img\n\t\t\t\t\t\t\t\talt={item.name}\n\t\t\t\t\t\t\t\tclass={cn(\n\t\t\t\t\t\t\t\t\t\"pointer-events-auto size-5 object-contain select-none md:size-6\",\n\t\t\t\t\t\t\t\t\titem.isInvertable && \"dark:invert\"\n\t\t\t\t\t\t\t\t)}\n\t\t\t\t\t\t\t\theight=\"24\"\n\t\t\t\t\t\t\t\tsrc={item.src}\n\t\t\t\t\t\t\t\twidth=\"24\"\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t{/if}\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t{/each}\n\t\t</div>\n\t</div>\n\n\t<Button href=\"/\" class=\"rounded-full px-5\">\n\t\tSee all integrations\n\t\t<ArrowUpRightIcon data-icon=\"inline-end\" />\n\t</Button>\n</div>\n",
+			"type": "registry:component",
+			"target": "efferd/integrations/integration-five.svelte"
+		}
+	]
+}

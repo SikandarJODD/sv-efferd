@@ -1,0 +1,28 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "testimonial-four",
+	"title": "Testimonial Four",
+	"type": "registry:block",
+	"description": "A split testimonial layout with divider rails, dense quote cards, and a stronger editorial grid.",
+	"dependencies": [
+		"@lucide/svelte"
+	],
+	"devDependencies": [
+		"@lucide/svelte@^0.577.0"
+	],
+	"registryDependencies": [
+		"./full-width-divider.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { FullWidthDivider } from \"$lib/components/ui/full-width-divider\";\n\timport TestimonialCard from \"./testimonial-card.svelte\";\n\n\ttype Testimonial = {\n\t\tquote: string;\n\t\tname: string;\n\t\trole: string;\n\t\tcompany?: string;\n\t};\n\n\tconst testimonials: Testimonial[] = [\n\t\t{\n\t\t\tquote: \"Efferd is so polished I might just retire and become a full-time potato farmer. The ecosystem is in safe hands.\",\n\t\t\tname: \"Shadcn\",\n\t\t\trole: \"Founder\",\n\t\t\tcompany: \"Shadcn UI\"\n\t\t},\n\t\t{\n\t\t\tquote: \"Efferd is why I still have hair. No more pulling it out over centering divs or fighting with CSS grid.\",\n\t\t\tname: \"Guillermo Rauch\",\n\t\t\trole: \"CEO\",\n\t\t\tcompany: \"Vercel\"\n\t\t},\n\n\t\t{\n\t\t\tquote: \"I tried to buy Efferd but they wouldn't sell. So I just bought Twitter instead to complain about it.\",\n\t\t\tname: \"Elon Musk\",\n\t\t\trole: \"CEO\",\n\t\t\tcompany: \"X.com\"\n\t\t}\n\t];\n</script>\n\n<section class=\"relative mx-auto min-h-screen w-full max-w-4xl place-content-center border-x\">\n\t<FullWidthDivider />\n\t<div class=\"grid md:grid-cols-[2fr_1px_1fr]\">\n\t\t<div class=\"divide-y\">\n\t\t\t{#each testimonials.slice(0, 2) as testimonial}\n\t\t\t\t<TestimonialCard {testimonial} />\n\t\t\t{/each}\n\t\t</div>\n\t\t<div class=\"h-px bg-border md:h-auto\"></div>\n\t\t<div class=\"flex items-center\">\n\t\t\t<TestimonialCard testimonial={testimonials[2] as Testimonial} />\n\t\t</div>\n\t</div>\n\t<FullWidthDivider />\n</section>\n",
+			"type": "registry:component",
+			"target": "efferd/testimonial/testimonial-four/testimonial-four.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport { QuoteIcon } from \"@lucide/svelte\";\n\n\ttype Testimonial = {\n\t\tquote: string;\n\t\tname: string;\n\t\trole: string;\n\t\tcompany?: string;\n\t};\n\tlet {\n\t\ttestimonial\n\t}: {\n\t\ttestimonial: Testimonial;\n\t} = $props();\n</script>\n\n<figure class=\"p-6 md:p-8\">\n\t<QuoteIcon aria-hidden=\"true\" class=\"mb-4 size-12 stroke-1 text-muted-foreground\" />\n\n\t<blockquote class=\"mb-6 text-base font-normal text-foreground md:text-lg\">\n\t\t&quot;{testimonial.quote}&quot;\n\t</blockquote>\n\n\t<figcaption class=\"flex flex-col gap-0.5\">\n\t\t<cite class=\"text-lg font-medium text-foreground not-italic\">\n\t\t\t{testimonial.name}\n\t\t</cite>\n\t\t<p class=\"text-sm text-muted-foreground\">\n\t\t\t{testimonial.role}\n\t\t\t{testimonial.company && `, ${testimonial.company}`}\n\t\t</p>\n\t</figcaption>\n</figure>\n",
+			"type": "registry:component",
+			"target": "efferd/testimonial/testimonial-four/testimonial-card.svelte"
+		}
+	]
+}

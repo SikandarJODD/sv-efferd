@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Skeleton } from '../ui/skeleton';
+	import { Skeleton } from "../ui/skeleton";
 </script>
 
 <div class="mx-auto w-full max-w-5xl p-4">

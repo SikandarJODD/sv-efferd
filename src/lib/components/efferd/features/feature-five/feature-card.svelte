@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { GridPattern } from '$lib/components/ui/grid-pattern';
-	import { cn } from '$lib/utils';
-	import type { Icon } from '@lucide/svelte';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { GridPattern } from "$lib/components/ui/grid-pattern";
+	import { cn } from "$lib/utils";
+	import type { Icon } from "@lucide/svelte";
+	import type { HTMLAttributes } from "svelte/elements";
 
 	type Feature = {
 		title: string;
@@ -18,7 +18,7 @@
 	let FeatureIcon: typeof Icon = $derived(feature.icon);
 </script>
 
-<div class={cn('relative overflow-hidden bg-background p-6', className)} {...props}>
+<div class={cn("relative overflow-hidden bg-background p-6", className)} {...props}>
 	<div
 		class="pointer-events-none absolute top-0 left-1/2 -mt-2 -ml-20 size-full mask-[radial-gradient(farthest-side_at_top,white,transparent)]"
 	>

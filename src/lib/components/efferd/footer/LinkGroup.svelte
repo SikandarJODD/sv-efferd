@@ -13,7 +13,7 @@
 </script>
 
 <div class="p-2">
-	<h3 class="mt-2 mb-4 text-xs font-medium uppercase tracking-wider text-foreground/75">
+	<h3 class="mt-2 mb-4 text-xs font-medium tracking-wider text-foreground/75 uppercase">
 		{title}
 	</h3>
 	<ul class="space-y-1.5">

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { ArrowRight, PhoneCall, Rocket } from '@lucide/svelte';
-	import { Button } from '$lib/components/ui/button';
+	import { ArrowRight, PhoneCall, Rocket } from "@lucide/svelte";
+	import { Button } from "$lib/components/ui/button";
 </script>
 
 <section class="relative -top-14 mx-auto w-full max-w-5xl px-4">
@@ -26,7 +26,7 @@
 	</div>
 
 	<div class="relative flex flex-col items-center justify-center gap-5 pt-46 pb-10">
-		<div aria-hidden="true" class="absolute top-14 inset-0 -z-10 size-full overflow-hidden">
+		<div aria-hidden="true" class="absolute inset-0 top-14 -z-10 size-full overflow-hidden">
 			<div
 				class="absolute inset-y-0 left-4 w-px bg-linear-to-b from-transparent via-border to-border md:left-4"
 			></div>
@@ -43,7 +43,7 @@
 
 		<a
 			class="group mx-auto flex w-fit animate-in items-center gap-3 rounded-full border bg-card px-3 py-1 shadow transition-all delay-500 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in"
-			href="#link"
+			href="/"
 		>
 			<Rocket class="size-3 text-muted-foreground" />
 			<span class="text-xs">shipped new features!</span>
@@ -70,11 +70,11 @@
 		<div
 			class="flex animate-in flex-row flex-wrap items-center justify-center gap-3 pt-2 delay-300 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in"
 		>
-			<Button class="rounded-full" href="#book-a-call" size="lg" variant="secondary">
+			<Button class="rounded-full" href="/" size="lg" variant="secondary">
 				<PhoneCall class="size-4" />
 				Book a Call
 			</Button>
-			<Button class="rounded-full" href="#get-started" size="lg">
+			<Button class="rounded-full" href="/" size="lg">
 				Get started
 				<ArrowRight class="size-4" />
 			</Button>

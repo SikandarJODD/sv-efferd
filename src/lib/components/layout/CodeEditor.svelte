@@ -4,24 +4,24 @@
 		findBlockCodeFile,
 		flattenBlockCodeFiles,
 		type BlockCodeTree
-	} from '$lib/blocks/showcase';
-	import Check from '@lucide/svelte/icons/check';
-	import Copy from '@lucide/svelte/icons/copy';
-	import ExternalLink from '@lucide/svelte/icons/external-link';
-	import { UseClipboard } from '$lib/hooks/use-clipboard.svelte';
-	import { scale } from 'svelte/transition';
-	import Button from '../ui/button/button.svelte';
-	import Code from './code/code.svelte';
-	import CodeTreeNode from './CodeTreeNode.svelte';
+	} from "$lib/blocks/showcase";
+	import Check from "@lucide/svelte/icons/check";
+	import Copy from "@lucide/svelte/icons/copy";
+	import ExternalLink from "@lucide/svelte/icons/external-link";
+	import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
+	import { scale } from "svelte/transition";
+	import Button from "../ui/button/button.svelte";
+	import Code from "./code/code.svelte";
+	import CodeTreeNode from "./CodeTreeNode.svelte";
 
 	let { codeTree }: { codeTree: BlockCodeTree } = $props();
 
 	let clipboard = new UseClipboard({ delay: 1500 });
 	let openFolderIds = $state(new Set<string>());
-	let activeFileId = $state('');
+	let activeFileId = $state("");
 
 	let files = $derived(flattenBlockCodeFiles(codeTree.nodes));
-	let fallbackFileId = $derived(codeTree.defaultFileId || files[0]?.id || '');
+	let fallbackFileId = $derived(codeTree.defaultFileId || files[0]?.id || "");
 	let activeFile = $derived(findBlockCodeFile(codeTree, activeFileId) ?? files[0]);
 
 	$effect(() => {
@@ -57,7 +57,7 @@
 	<div
 		class="w-full border-b bg-neutral-50 text-black [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:w-72 sm:border-r sm:border-b-0 dark:bg-zinc-900/25 dark:text-white"
 	>
-		<div class="border-b px-4 py-3 text-sm font-mono tracking-wider text-muted-foreground">
+		<div class="border-b px-4 py-3 font-mono text-sm tracking-wider text-muted-foreground">
 			Files
 		</div>
 		<div class="max-h-[18rem] overflow-auto px-2 py-3 sm:max-h-[36rem]">
@@ -74,9 +74,9 @@
 	</div>
 
 	<div class="relative min-h-[32rem] min-w-0 flex-1">
-		<div class="flex items-center justify-between gap-3 border-b pl-4 pr-2 py-1.5">
-			<p class="min-w-0 truncate font-mono text-sm text-muted-foreground tracking-wider">
-				{activeFile?.name ?? 'No file selected'}
+		<div class="flex items-center justify-between gap-3 border-b py-1.5 pr-2 pl-4">
+			<p class="min-w-0 truncate font-mono text-sm tracking-wider text-muted-foreground">
+				{activeFile?.name ?? "No file selected"}
 			</p>
 
 			<div class="flex items-center gap-1">
@@ -89,7 +89,7 @@
 						target="_blank"
 					>
 						<ExternalLink class="size-3.5" />
-						<span>{activeFile.externalLabel ?? 'Open docs'}</span>
+						<span>{activeFile.externalLabel ?? "Open docs"}</span>
 					</Button>
 				{/if}
 
@@ -101,7 +101,7 @@
 						type="button"
 						onclick={copyCode}
 					>
-						{#if clipboard.status === 'success'}
+						{#if clipboard.status === "success"}
 							<span in:scale>
 								<Check class="!size-3.5 text-[#10B981]" />
 							</span>
@@ -124,11 +124,16 @@
 						{activeFile.externalLabel ?? activeFile.name}
 					</p>
 					<p class="mt-2 text-sm leading-6 text-muted-foreground">
-						This base UI component is referenced from its original source instead of being
-						duplicated here.
+						This base UI component is referenced from its original source instead of
+						being duplicated here.
 					</p>
 					<div class="mt-4 flex justify-center">
-						<Button href={activeFile.externalUrl} target="_blank" variant="outline" size="sm">
+						<Button
+							href={activeFile.externalUrl}
+							target="_blank"
+							variant="outline"
+							size="sm"
+						>
 							<ExternalLink class="size-3.5" />
 							<span>Open component docs</span>
 						</Button>

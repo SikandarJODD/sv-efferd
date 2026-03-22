@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { DecorIcon } from '$lib/components/ui/decor-icon';
-	import { Github } from '$lib/svgs';
-	import { ArrowRight, Rocket } from '@lucide/svelte';
-	import { landingHero } from './config';
-	import { DashedLine } from '../ui/dashed-line';
-	import { BorderSeparator } from '../ui/border-seperator';
-	import { DashedLines } from '../ui/dashed-lines';
+	import { Button } from "$lib/components/ui/button";
+	import { DecorIcon } from "$lib/components/ui/decor-icon";
+	import { Github } from "$lib/svgs";
+	import { ArrowRight, Rocket } from "@lucide/svelte";
+	import { landingHero } from "./config";
+	import { DashedLine } from "../ui/dashed-line";
+	import { BorderSeparator } from "../ui/border-seperator";
+	import { DashedLines } from "../ui/dashed-lines";
 </script>
 
 <section
@@ -36,15 +36,15 @@
 		></div>
 	</div>
 
-	<DecorIcon class="size-4 stroke-muted-foreground/80" position="top-left" />
-	<DecorIcon class="size-4 stroke-muted-foreground/80" position="top-right" />
-	<DecorIcon class="size-4 stroke-muted-foreground/80" position="bottom-left" />
-	<DecorIcon class="size-4 stroke-muted-foreground/80" position="bottom-right" />
+	<DecorIcon class="size-4 stroke-muted-foreground/80 bg-background z-40" position="top-left" />
+	<DecorIcon class="size-4 stroke-muted-foreground/80 bg-background z-40" position="top-right" />
+	<DecorIcon class="size-4 stroke-muted-foreground/80 bg-background z-40" position="bottom-left" />
+	<DecorIcon class="size-4 stroke-muted-foreground/80 bg-background z-40" position="bottom-right" />
 
 	<div class=" relative z-10 mx-auto flex flex-col items-center text-center">
 		<a
 			class="group mx-auto flex w-fit items-center gap-3 rounded-full border bg-card py-1 pr-1 pl-3 shadow"
-			href="#link"
+			href="/"
 			id="link"
 		>
 			<Rocket class="size-3 text-muted-foreground" />
@@ -74,7 +74,12 @@
 				<span>{landingHero.primaryCta.label}</span>
 			</Button>
 
-			<Button class="rounded-none" variant="outline" href={landingHero.secondaryCta.href} size="lg">
+			<Button
+				class="rounded-none"
+				variant="outline"
+				href={landingHero.secondaryCta.href}
+				size="lg"
+			>
 				<Github class="size-4" />
 				<span>{landingHero.secondaryCta.label}</span>
 			</Button>

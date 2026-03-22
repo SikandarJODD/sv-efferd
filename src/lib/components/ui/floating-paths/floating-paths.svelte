@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
-	import { motion } from 'motion-sv';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { cn } from "$lib/utils";
+	import { motion } from "motion-sv";
+	import type { HTMLAttributes } from "svelte/elements";
 
 	type FloatingPath = {
 		id: number;
@@ -16,7 +16,7 @@
 		position: number;
 	};
 
-	let { class: className = '', position, ...restProps }: FloatingPathsProps = $props();
+	let { class: className = "", position, ...restProps }: FloatingPathsProps = $props();
 
 	const paths = $derived.by<FloatingPath[]>(() =>
 		Array.from({ length: 36 }, (_, index) => ({
@@ -31,7 +31,7 @@
 
 <div
 	aria-hidden="true"
-	class={cn('pointer-events-none absolute inset-0', className)}
+	class={cn("pointer-events-none absolute inset-0", className)}
 	{...restProps}
 >
 	<svg class="h-full w-full text-primary" fill="none" viewBox="0 0 696 316">
@@ -48,7 +48,7 @@
 				transition={{
 					duration: path.duration,
 					repeat: Number.POSITIVE_INFINITY,
-					ease: 'linear'
+					ease: "linear"
 				}}
 			/>
 		{/each}

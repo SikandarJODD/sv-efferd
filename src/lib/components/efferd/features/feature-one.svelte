@@ -1,12 +1,6 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
-	import {
-		ActivityIcon,
-		GlobeIcon,
-		ShieldCheckIcon,
-		ZapIcon,
-		type Icon
-	} from '@lucide/svelte';
+	import { cn } from "$lib/utils";
+	import { ActivityIcon, GlobeIcon, ShieldCheckIcon, ZapIcon, type Icon } from "@lucide/svelte";
 
 	type Feature = {
 		title: string;
@@ -16,24 +10,24 @@
 
 	const features: Feature[] = [
 		{
-			title: 'Lightning Fast',
+			title: "Lightning Fast",
 			icon: ZapIcon,
-			description: 'Blazing fast edge performance.'
+			description: "Blazing fast edge performance."
 		},
 		{
-			title: 'Secure by Design',
+			title: "Secure by Design",
 			icon: ShieldCheckIcon,
-			description: 'Security by design, zero config.'
+			description: "Security by design, zero config."
 		},
 		{
-			title: 'Real-time Sync',
+			title: "Real-time Sync",
 			icon: ActivityIcon,
-			description: 'Real-time sync across devices.'
+			description: "Real-time sync across devices."
 		},
 		{
-			title: 'Global Scale',
+			title: "Global Scale",
 			icon: GlobeIcon,
-			description: 'Instant global deployment.'
+			description: "Instant global deployment."
 		}
 	];
 </script>
@@ -43,12 +37,12 @@
 		{@const FeatureIcon = feature.icon}
 		<div
 			class={cn(
-				'relative flex flex-col items-center justify-center p-2',
-				'after:absolute after:inset-y-0 after:right-0 after:h-full after:w-px after:bg-linear-to-b after:from-foreground/6 after:via-foreground/25 after:to-foreground/6',
-				'[&_svg]:size-6 [&_svg]:text-muted-foreground',
+				"relative flex flex-col items-center justify-center p-2",
+				"after:absolute after:inset-y-0 after:right-0 after:h-full after:w-px after:bg-linear-to-b after:from-foreground/6 after:via-foreground/25 after:to-foreground/6",
+				"[&_svg]:size-6 [&_svg]:text-muted-foreground",
 				{
-					'after:hidden': index === features.length - 1,
-					'after:hidden after:md:block': index === 1
+					"after:hidden": index === features.length - 1,
+					"after:hidden after:md:block": index === 1
 				}
 			)}
 		>

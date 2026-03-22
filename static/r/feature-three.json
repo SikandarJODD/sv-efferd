@@ -1,0 +1,23 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "feature-three",
+	"title": "Feature Three",
+	"type": "registry:block",
+	"description": "A bordered feature grid with full-width divider rails and stronger product framing.",
+	"dependencies": [
+		"@lucide/svelte"
+	],
+	"devDependencies": [
+		"@lucide/svelte@^0.577.0"
+	],
+	"registryDependencies": [
+		"./full-width-divider.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { FullWidthDivider } from \"$lib/components/ui/full-width-divider\";\n\timport { cn } from \"$UTILS$\";\n\timport { ActivityIcon, GlobeIcon, ShieldCheckIcon, ZapIcon, type Icon } from \"@lucide/svelte\";\n\n\ttype Feature = {\n\t\ttitle: string;\n\t\ticon: typeof Icon;\n\t\tdescription: string;\n\t};\n\n\tconst features: Feature[] = [\n\t\t{\n\t\t\ttitle: \"Lightning Fast\",\n\t\t\ticon: ZapIcon,\n\t\t\tdescription: \"Blazing fast performance with edge network optimizations.\"\n\t\t},\n\t\t{\n\t\t\ttitle: \"Secure by Design\",\n\t\t\ticon: ShieldCheckIcon,\n\t\t\tdescription: \"Enterprise-grade security, zero configuration required.\"\n\t\t},\n\t\t{\n\t\t\ttitle: \"Real-time Sync\",\n\t\t\ticon: ActivityIcon,\n\t\t\tdescription: \"Real-time data sync across all devices efficiently.\"\n\t\t},\n\t\t{\n\t\t\ttitle: \"Global Scale\",\n\t\t\ticon: GlobeIcon,\n\t\t\tdescription: \"Instant global deployment to 35+ regions worldwide.\"\n\t\t}\n\t];\n</script>\n\n<div class=\"mx-auto min-h-screen w-full max-w-5xl place-content-center space-y-12 border-x py-4\">\n\t<div class=\"relative grid grid-cols-1 gap-px bg-border md:grid-cols-2 lg:grid-cols-4\">\n\t\t<FullWidthDivider position=\"top\" />\n\n\t\t{#each features as feature (feature.title)}\n\t\t\t{@const FeatureIcon = feature.icon}\n\t\t\t<div\n\t\t\t\tclass={cn(\n\t\t\t\t\t\"relative flex flex-col justify-between overflow-hidden bg-background p-4 md:p-6\"\n\t\t\t\t)}\n\t\t\t>\n\t\t\t\t<div\n\t\t\t\t\tclass=\"relative z-10 flex items-center pt-4 pb-6 [&_svg]:size-5 [&_svg]:text-primary\"\n\t\t\t\t>\n\t\t\t\t\t<FeatureIcon />\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"relative z-10 space-y-2\">\n\t\t\t\t\t<h3 class=\"text-lg font-medium text-foreground\">{feature.title}</h3>\n\t\t\t\t\t<p class=\"text-xs leading-relaxed text-muted-foreground\">\n\t\t\t\t\t\t{feature.description}\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t{/each}\n\n\t\t<FullWidthDivider position=\"bottom\" />\n\t</div>\n</div>\n",
+			"type": "registry:component",
+			"target": "efferd/features/feature-three.svelte"
+		}
+	]
+}
