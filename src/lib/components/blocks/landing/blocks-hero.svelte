@@ -15,10 +15,19 @@
 		></div>
 	</div>
 
-	<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/80 z-40" position="top-left" />
-	<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/80 z-40" position="top-right" />
-	<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/80 z-40" position="bottom-left" />
-	<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/80 z-40" position="bottom-right" />
+	<DecorIcon class="z-40 size-3.5 bg-background stroke-muted-foreground/80" position="top-left" />
+	<DecorIcon
+		class="z-40 size-3.5 bg-background stroke-muted-foreground/80"
+		position="top-right"
+	/>
+	<DecorIcon
+		class="z-40 size-3.5 bg-background stroke-muted-foreground/80"
+		position="bottom-left"
+	/>
+	<DecorIcon
+		class="z-40 size-3.5 bg-background stroke-muted-foreground/80"
+		position="bottom-right"
+	/>
 
 	<div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="max-w-2xl text-left lg:max-w-3xl">

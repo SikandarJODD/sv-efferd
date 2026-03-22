@@ -47,7 +47,7 @@
 			content: [
 				{
 					type: "text",
-					label: "Office # 100, 101 Second Floor Kohinoor 1, Faisalabad, Pakistan"
+					label: "Office # 123, Main Street, Texas, USA"
 				}
 			]
 		},

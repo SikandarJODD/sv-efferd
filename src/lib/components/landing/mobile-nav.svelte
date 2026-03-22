@@ -60,13 +60,12 @@
 						</div>
 
 						<div class="mt-4 border-t border-border/80 pt-4">
-							<div class="flex gap-2">
+							<div class="flex justify-end gap-2">
 								{#each landingSocialLinks as link}
 									<Button
 										aria-label={link.label}
-										class="flex-1 justify-center rounded-xl border-border/80 bg-background/80"
 										href={link.href}
-										size="sm"
+										size="icon-sm"
 										variant="outline"
 										onclick={closeMenu}
 									>
@@ -75,7 +74,7 @@
 										{:else}
 											<Github class="size-4" />
 										{/if}
-										<span>{link.label}</span>
+										<!-- <span>{link.label}</span> -->
 									</Button>
 								{/each}
 							</div>

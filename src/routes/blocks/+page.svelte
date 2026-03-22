@@ -6,9 +6,9 @@
 </script>
 
 <svelte:head>
-	<title>Blocks | Svelte Efferd</title>
+	<title>Blocks | Svelte Efferd Blocks</title>
 	<meta name="description" content={description} />
-	<meta property="og:title" content="Blocks | Svelte Efferd" />
+	<meta property="og:title" content="Blocks | Svelte Efferd Blocks" />
 	<meta property="og:description" content={description} />
 </svelte:head>
 

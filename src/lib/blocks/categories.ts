@@ -4,21 +4,21 @@ export type BlockCategory = {
 };
 
 export const blockCategories = [
-	{ slug: "logo-cloud", label: "Logo Cloud" },
-	{ slug: "header", label: "Header" },
-	{ slug: "not-found", label: "Not Found" },
-	{ slug: "testimonials", label: "Testimonials" },
-	{ slug: "contact", label: "Contact" },
-	{ slug: "blog", label: "Blog" },
-	{ slug: "cta", label: "CTA" },
-	{ slug: "faqs", label: "FAQ's" },
-	{ slug: "features", label: "Features" },
-	{ slug: "footer", label: "Footer" },
-	{ slug: "integrations", label: "Integrations" },
 	{ slug: "hero", label: "Hero" },
-	{ slug: "auth", label: "Auth" },
+	{ slug: "header", label: "Header" },
+	{ slug: "logo-cloud", label: "Logo Cloud" },
+	{ slug: "features", label: "Features" },
+	{ slug: "integrations", label: "Integrations" },
+	{ slug: "testimonials", label: "Testimonials" },
+	{ slug: "cta", label: "CTA" },
 	{ slug: "pricing", label: "Pricing" },
-	{ slug: "image-gallery", label: "Image Gallery" }
+	{ slug: "blog", label: "Blog" },
+	{ slug: "auth", label: "Auth" },
+	{ slug: "faqs", label: "FAQ's" },
+	{ slug: "contact", label: "Contact" },
+	{ slug: "footer", label: "Footer" },
+	{ slug: "image-gallery", label: "Image Gallery" },
+	{ slug: "not-found", label: "Not Found" }
 ] as const satisfies readonly BlockCategory[];
 
 export type BlockCategorySlug = (typeof blockCategories)[number]["slug"];

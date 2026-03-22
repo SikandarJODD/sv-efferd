@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import type { BlockCodeTree } from "$lib/blocks/showcase";
+	import { IsMobile } from "$lib/hooks/is-mobile.svelte.js";
 	import { cn } from "$lib/utils";
 	import Palette from "@lucide/svelte/icons/palette";
 	import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
@@ -59,6 +60,7 @@
 	let isLoading = $state(true);
 
 	let ref: PaneAPI | undefined = $state(undefined);
+	let isMobile = new IsMobile();
 	let large = new MediaQuery("min-width: 1024px");
 	let iframeRef = $state<HTMLIFrameElement | null>(null);
 
@@ -78,6 +80,8 @@
 	let showIframeComp = $state(false);
 	let shouldRenderInIframe = $derived(Boolean(previewHref) && (startsInIframe || showIframeComp));
 	let shouldShowIframeScrollHint = $derived(shouldRenderInIframe && isHeroPreview);
+	let isLargeViewport = $derived(large.current);
+	let showViewportControls = $derived(shouldRenderInIframe && !isMobile.current);
 	let resolvedIframeHeight = $derived(
 		Math.max(previewHeight ?? iframeHeight, MIN_PREVIEW_HEIGHT)
 	);
@@ -140,11 +144,11 @@
 		<div class="relative mx-auto max-w-7xl">
 			<div class="relative border-y px-5 py-5 sm:px-6 sm:py-6 lg:px-7">
 				<DecorIcon
-					class="size-3.5 bg-background stroke-muted-foreground/70"
+					class="hidden size-3.5 bg-background stroke-muted-foreground/70 md:block"
 					position="top-left"
 				/>
 				<DecorIcon
-					class="z-999 size-3.5 translate-x-[calc(50%)] -translate-y-[calc(50%+0.5px)] bg-background stroke-muted-foreground/70"
+					class="z-999 hidden size-3.5 translate-x-[calc(50%)] -translate-y-[calc(50%+0.5px)] bg-background stroke-muted-foreground/70 md:block"
 					position="top-right"
 				/>
 				<!-- <DecorIcon
@@ -179,18 +183,26 @@
 			</div>
 
 			<div
-				class="relative z-40 flex flex-col gap-2 border-b px-4 py-2.5 sm:px-5 lg:flex-row lg:items-center lg:justify-between lg:gap-3 lg:px-6"
+				class={cn(
+					"relative z-40 flex flex-col gap-2 border-b px-4 py-2.5 sm:px-5 lg:flex-row lg:items-center lg:justify-between lg:gap-3 lg:px-6",
+					isMobile.current && "gap-3 py-3"
+				)}
 			>
 				<DecorIcon
-					class="size-3.5 bg-background stroke-muted-foreground/70"
+					class="hidden size-3.5 bg-background stroke-muted-foreground/70 md:block"
 					position="top-left"
 				/>
 				<DecorIcon
-					class="size-3.5 bg-background stroke-muted-foreground/70"
+					class="hidden size-3.5 bg-background stroke-muted-foreground/70 md:block"
 					position="top-right"
 				/>
-				<div class="flex min-w-0 flex-wrap items-center gap-2.5">
-					<div class="-ml-3 flex w-fit items-center gap-0.5">
+				<div
+					class={cn(
+						"flex min-w-0 flex-wrap items-center gap-2.5",
+						isMobile.current && "gap-2"
+					)}
+				>
+					<div class="flex w-fit items-center gap-0.5 md:-ml-3">
 						<Button
 							variant={mode === "preview" ? "secondary" : "ghost"}
 							onclick={() => (mode = "preview")}
@@ -218,7 +230,7 @@
 									stroke-width="1.5"
 								></path>
 							</svg>
-							<span class="hidden text-[13px] sm:block">Preview</span>
+							<span class="text-[13px]">Preview</span>
 						</Button>
 
 						<Button
@@ -243,26 +255,31 @@
 								<path class="sm:opacity-50" d="M17 8l4 4l-4 4" />
 								<path d="M14 4l-4 16" />
 							</svg>
-							<span class="hidden text-[13px] sm:block">Code</span>
+							<span class="text-[13px]">Code</span>
 						</Button>
 					</div>
 
-					{#if shouldRenderInIframe}
+					{#if showViewportControls}
 						<Separator orientation="vertical" class="hidden h-4! lg:block" />
 						<span class="hidden text-sm text-muted-foreground lg:block">
 							{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}
 						</span>
 
-						{#if shouldShowIframeScrollHint}
+						<!-- {#if shouldShowIframeScrollHint}
 							<span class="hidden text-sm text-muted-foreground lg:block">
 								Scroll inside preview
 							</span>
-						{/if}
+						{/if} -->
 					{/if}
 				</div>
 
-				<div class="flex flex-wrap items-center gap-2">
-					{#if shouldRenderInIframe}
+				<div
+					class={cn(
+						"flex flex-wrap items-center gap-2",
+						isMobile.current && "w-full gap-1.5"
+					)}
+				>
+					{#if showViewportControls}
 						<div transition:scale={{ start: 0.8 }} class="flex items-center gap-2">
 							<TooltipProvider>
 								<Tooltip>
@@ -483,7 +500,7 @@
 					{/if}
 
 					{#if canInstall}
-						<InstallComponent id={installId} />
+						<InstallComponent id={installId} class={cn(isMobile.current && "flex-1")} />
 					{/if}
 
 					{#if themeSetupHref}
@@ -525,7 +542,7 @@
 							}}
 							defaultSize={DEFAULT_SIZE}
 							minSize={SM_SIZE}
-							class="h-fit border-r"
+							class={cn("h-fit", isLargeViewport && "border-r")}
 						>
 							<iframe
 								loading="lazy"
@@ -567,7 +584,7 @@
 							{/if}
 						</Pane>
 
-						{#if large}
+						{#if isLargeViewport}
 							<PaneResizer
 								class="relative w-2 before:absolute before:inset-0 before:m-auto before:h-12 before:w-1 before:rounded-full before:bg-zinc-300 before:transition-[height,background] hover:before:h-16 hover:before:bg-zinc-400 focus:before:bg-zinc-400 dark:before:bg-zinc-600 dark:hover:before:bg-zinc-500 dark:focus:before:bg-zinc-400"
 							/>
