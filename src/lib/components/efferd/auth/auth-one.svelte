@@ -2,7 +2,9 @@
 	import { ChevronLeftIcon } from '@lucide/svelte';
 	import { Particles } from '$lib/components/magic/particles';
 	import { Button } from '$lib/components/ui/button';
-	import { Github, Google, Logo } from '$lib/svgs';
+	import GithubLogo from '$lib/svgs/github.svelte';
+	import GoogleLogo from '$lib/svgs/google.svelte';
+	import Logo from '$lib/svgs/logo.svelte';
 	import { cn } from '$lib/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
 
@@ -41,12 +43,12 @@
 
 			<div class="space-y-2">
 				<Button class="w-full" type="button">
-					<Google data-icon="inline-start" />
+					<GoogleLogo data-icon="inline-start" />
 					Continue with Google
 				</Button>
 
 				<Button class="w-full" type="button">
-					<Github data-icon="inline-start" />
+					<GithubLogo data-icon="inline-start" />
 					Continue with GitHub
 				</Button>
 			</div>

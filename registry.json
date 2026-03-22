@@ -298,6 +298,61 @@
 			"dependencies": ["bits-ui"]
 		},
 		{
+			"name": "auth-divider",
+			"title": "Auth divider",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/auth-divider/auth-divider.svelte",
+					"type": "registry:component",
+					"target": "ui/auth-divider/auth-divider.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/auth-divider/index.ts",
+					"type": "registry:file",
+					"target": "ui/auth-divider/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "particles",
+			"title": "Particles",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/magic/particles/particles.svelte",
+					"type": "registry:component",
+					"target": "magic/particles/particles.svelte"
+				},
+				{
+					"path": "src/lib/components/magic/particles/index.ts",
+					"type": "registry:file",
+					"target": "magic/particles/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "floating-paths",
+			"title": "Floating paths",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/floating-paths/floating-paths.svelte",
+					"type": "registry:component",
+					"target": "ui/floating-paths/floating-paths.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/floating-paths/index.ts",
+					"type": "registry:file",
+					"target": "ui/floating-paths/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["motion-sv"]
+		},
+		{
 			"name": "cta-one",
 			"title": "CTA One",
 			"type": "registry:block",
@@ -633,6 +688,166 @@
 				}
 			],
 			"registryDependencies": ["local:full-width-divider", "local:aspect-ratio"]
+		},
+		{
+			"name": "auth-one",
+			"title": "Auth One",
+			"type": "registry:block",
+			"description": "A centered auth entry screen with ambient particles and social sign-in actions.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/auth/auth-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/auth/auth-one.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:component",
+					"target": "svgs/google.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:component",
+					"target": "svgs/github.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:particles"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "auth-two",
+			"title": "Auth Two",
+			"type": "registry:block",
+			"description": "A framed auth panel that combines email capture with side-by-side social login.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/auth/auth-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/auth/auth-two.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:component",
+					"target": "svgs/google.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:component",
+					"target": "svgs/github.svelte"
+				}
+			],
+			"registryDependencies": [
+				"button",
+				"local:auth-divider",
+				"local:decor-icon",
+				"local:input-group"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "auth-three",
+			"title": "Auth Three",
+			"type": "registry:block",
+			"description": "A minimal single-column auth flow with brand header and stacked sign-in options.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/auth/auth-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/auth/auth-three.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:component",
+					"target": "svgs/google.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:component",
+					"target": "svgs/github.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:auth-divider", "local:input-group"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "auth-four",
+			"title": "Auth Four",
+			"type": "registry:block",
+			"description": "A bordered auth layout with divider rails and a gentle email-first continuation flow.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/auth/auth-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/auth/auth-four.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:component",
+					"target": "svgs/google.svelte"
+				}
+			],
+			"registryDependencies": [
+				"button",
+				"local:auth-divider",
+				"local:full-width-divider",
+				"local:input-group"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "auth-five",
+			"title": "Auth Five",
+			"type": "registry:block",
+			"description": "A split-screen auth experience with animated background paths and broader provider options.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/auth/auth-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/auth/auth-five.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:component",
+					"target": "svgs/google.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:component",
+					"target": "svgs/github.svelte"
+				},
+				{
+					"path": "src/lib/svgs/apple.svelte",
+					"type": "registry:component",
+					"target": "svgs/apple.svelte"
+				}
+			],
+			"registryDependencies": [
+				"button",
+				"local:auth-divider",
+				"local:floating-paths",
+				"local:input-group"
+			],
+			"dependencies": ["@lucide/svelte"]
 		}
 	]
 }

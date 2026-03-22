@@ -18,7 +18,7 @@ export const blockCategories = [
 	{ slug: 'footer', label: 'Footer' },
 	{ slug: 'integrations', label: 'Integrations' },
 	{ slug: 'hero', label: 'Hero' },
-	{ slug: 'auth', label: 'Auth' },
+	{ slug: 'auth', label: 'Auth', hasDedicatedPage: true },
 	{ slug: 'pricing', label: 'Pricing' },
 	{ slug: 'image-gallery', label: 'Image Gallery' }
 ] as const satisfies readonly BlockCategory[];

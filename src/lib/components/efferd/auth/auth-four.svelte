@@ -4,7 +4,8 @@
 	import { AuthDivider } from '$lib/components/ui/auth-divider';
 	import { FullWidthDivider } from '$lib/components/ui/full-width-divider';
 	import { InputGroup, InputGroupAddon, InputGroupInput } from '$lib/components/ui/input-group';
-	import { Google, Logo } from '$lib/svgs';
+	import GoogleLogo from '$lib/svgs/google.svelte';
+	import Logo from '$lib/svgs/logo.svelte';
 	import { cn } from '$lib/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
 
@@ -47,7 +48,7 @@
 			<FullWidthDivider position="top" />
 
 			<Button class="w-full" type="button" variant="outline">
-				<Google aria-hidden="true" data-icon="inline-start" />
+				<GoogleLogo aria-hidden="true" data-icon="inline-start" />
 				Continue with Google
 			</Button>
 

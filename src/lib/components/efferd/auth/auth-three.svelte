@@ -3,7 +3,9 @@
 	import { Button } from '$lib/components/ui/button';
 	import { AuthDivider } from '$lib/components/ui/auth-divider';
 	import { InputGroup, InputGroupAddon, InputGroupInput } from '$lib/components/ui/input-group';
-	import { Github, Google, Logo } from '$lib/svgs';
+	import GithubLogo from '$lib/svgs/github.svelte';
+	import GoogleLogo from '$lib/svgs/google.svelte';
+	import Logo from '$lib/svgs/logo.svelte';
 	import { cn } from '$lib/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
 
@@ -56,12 +58,12 @@
 
 			<div class="space-y-2">
 				<Button class="w-full" type="button" variant="outline">
-					<Google data-icon="inline-start" />
+					<GoogleLogo data-icon="inline-start" />
 					Google
 				</Button>
 
 				<Button class="w-full" type="button" variant="outline">
-					<Github data-icon="inline-start" />
+					<GithubLogo data-icon="inline-start" />
 					GitHub
 				</Button>
 			</div>

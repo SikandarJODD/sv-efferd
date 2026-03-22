@@ -80,6 +80,30 @@
 		"relativeUrl": "aspect-ratio.json"
 	},
 	{
+		"name": "auth-divider",
+		"title": "Auth divider",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "auth-divider.json"
+	},
+	{
+		"name": "particles",
+		"title": "Particles",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "particles.json"
+	},
+	{
+		"name": "floating-paths",
+		"title": "Floating paths",
+		"type": "registry:block",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "floating-paths.json"
+	},
+	{
 		"name": "cta-one",
 		"title": "CTA One",
 		"type": "registry:block",
@@ -325,5 +349,82 @@
 			"local:aspect-ratio"
 		],
 		"relativeUrl": "blog-three.json"
+	},
+	{
+		"name": "auth-one",
+		"title": "Auth One",
+		"type": "registry:block",
+		"description": "A centered auth entry screen with ambient particles and social sign-in actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:particles"
+		],
+		"relativeUrl": "auth-one.json"
+	},
+	{
+		"name": "auth-two",
+		"title": "Auth Two",
+		"type": "registry:block",
+		"description": "A framed auth panel that combines email capture with side-by-side social login.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:auth-divider",
+			"local:decor-icon",
+			"local:input-group"
+		],
+		"relativeUrl": "auth-two.json"
+	},
+	{
+		"name": "auth-three",
+		"title": "Auth Three",
+		"type": "registry:block",
+		"description": "A minimal single-column auth flow with brand header and stacked sign-in options.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:auth-divider",
+			"local:input-group"
+		],
+		"relativeUrl": "auth-three.json"
+	},
+	{
+		"name": "auth-four",
+		"title": "Auth Four",
+		"type": "registry:block",
+		"description": "A bordered auth layout with divider rails and a gentle email-first continuation flow.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:auth-divider",
+			"local:full-width-divider",
+			"local:input-group"
+		],
+		"relativeUrl": "auth-four.json"
+	},
+	{
+		"name": "auth-five",
+		"title": "Auth Five",
+		"type": "registry:block",
+		"description": "A split-screen auth experience with animated background paths and broader provider options.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:auth-divider",
+			"local:floating-paths",
+			"local:input-group"
+		],
+		"relativeUrl": "auth-five.json"
 	}
 ]
