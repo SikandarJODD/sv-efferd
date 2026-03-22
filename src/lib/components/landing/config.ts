@@ -3,10 +3,10 @@ export const landingNavLinks = [
 		label: "Blocks",
 		href: "/blocks"
 	},
-	{
-		label: "Docs",
-		href: "/"
-	},
+	// {
+	// 	label: "Docs",
+	// 	href: "/docs"
+	// },
 	{
 		label: "Changelog",
 		href: "/changelog"

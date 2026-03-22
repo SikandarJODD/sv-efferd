@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button/index.js";
+	import { Button, type ButtonElementProps } from "$lib/components/ui/button";
 	import PanelLeftIcon from "@lucide/svelte/icons/panel-left";
 	import { cn } from "$lib/utils.js";
-	import type { ComponentProps } from "svelte";
 	import { useSidebar } from "./context.svelte.js";
 
 	let {
@@ -10,7 +9,7 @@
 		class: className,
 		onclick,
 		...restProps
-	}: ComponentProps<typeof Button> & {
+	}: ButtonElementProps & {
 		onclick?: (e: MouseEvent) => void;
 	} = $props();
 

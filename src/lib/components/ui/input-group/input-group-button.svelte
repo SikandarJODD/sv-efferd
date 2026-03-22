@@ -21,8 +21,7 @@
 
 <script lang="ts">
 	import { cn } from "$lib/utils.js";
-	import type { ComponentProps } from "svelte";
-	import { Button } from "$lib/components/ui/button/index.js";
+	import { Button, type ButtonElementProps } from "$lib/components/ui/button";
 
 	let {
 		ref = $bindable(null),
@@ -32,7 +31,7 @@
 		variant = "ghost",
 		size = "xs",
 		...restProps
-	}: Omit<ComponentProps<typeof Button>, "href" | "size"> & {
+	}: Omit<ButtonElementProps, "size"> & {
 		size?: InputGroupButtonSize;
 	} = $props();
 </script>
