@@ -40,7 +40,7 @@
 	const currentYear = new Date().getFullYear();
 </script>
 
-<footer class="relative mt-20">
+<footer class="relative mt-18">
 	<FullWidthDivider position="top" class="bg-border/80" />
 	<div class="container">
 		<div class="relative border-x border-border/80">

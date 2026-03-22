@@ -27,7 +27,7 @@ export const changelogPageData: ChangelogPageData = {
 			id: "2026-03-22",
 			date: "22 March 2026",
 			sortDate: "2026-03-22",
-			title: "50+ New Blocks",
+			title: "54+ New Blocks",
 			description: "Released a large batch of new blocks across all categories.",
 			chips: [
 				{ label: "hero", href: "/blocks/hero" },

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
+	import favicon from "$lib/assets/favicon.svg";
 	import "./layout.css";
 	import SiteFooter from "$lib/components/landing/site-footer.svelte";
 	import { ModeWatcher } from "mode-watcher";
@@ -8,10 +9,15 @@
 
 	let { children } = $props();
 	let isPreviewRoute = $derived(page.url.pathname.startsWith("/preview/"));
-
 </script>
 
-<ModeWatcher defaultMode="dark" disableTransitions={false} />
+<svelte:head>
+	<link rel="icon" href={favicon} />
+	<title>Svelte Efferd Blocks</title>
+</svelte:head>
+
+
+<ModeWatcher defaultMode="dark" />
 
 {#if isPreviewRoute}
 	<div class="min-h-screen bg-background">
@@ -19,7 +25,7 @@
 	</div>
 {:else}
 	<div
-		class="relative flex min-h-screen flex-col overflow-hidden bg-secondary/40 supports-[overflow:clip]:overflow-clip dark:bg-background"
+		class="relative supports-[overflow:clip]:overflow-clip dark:bg-background"
 	>
 		<div>
 			<SiteHeader />

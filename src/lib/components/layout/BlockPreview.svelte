@@ -527,15 +527,12 @@
 
 		<!-- lg:border-x -->
 		<div
-			class="relative z-10 mx-auto max-w-7xl px-4 lg:px-0"
+			class="relative mx-auto max-w-7xl px-4 lg:px-0"
 			style={`--preview-min-height: ${MIN_PREVIEW_HEIGHT}px;`}
 		>
 			<div
-				class={cn("relative z-40 bg-white dark:bg-background", mode === "code" && "hidden")}
+				class={cn("z-40 bg-white dark:bg-background", mode === "code" && "hidden")}
 			>
-				<div
-					class="absolute top-0 left-0 -z-10 size-full border-none bg-background [--pattern-fg:oklch(0_0_0/0.05)] before:pointer-events-none before:absolute before:inset-px before:rounded-[calc(0.625rem-1px)] before:bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] before:bg-size-[10px_10px] dark:bg-background dark:[--pattern-fg:oklch(1_0_0/0.05)]"
-				></div>
 				{#if shouldRenderInIframe && previewHref}
 					<PaneGroup direction="horizontal">
 						<Pane

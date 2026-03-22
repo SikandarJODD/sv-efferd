@@ -28,7 +28,7 @@
 </script>
 
 <section
-	class="relative border-t border-dashed border-muted-foreground/40 px-4 pt-8 sm:px-6 sm:pt-16 lg:px-8"
+	class="relative border-t border-dashed border-muted-foreground/40 px-4 py-8 sm:px-6 sm:py-16 lg:px-8"
 	aria-labelledby="credits-title"
 >
 	<!-- <DecorIcon position="top-left" class='size-3.5 stroke-muted-foreground/40 bg-background'></DecorIcon> -->
