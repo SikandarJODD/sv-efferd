@@ -91,6 +91,20 @@
 		"relativeUrl": "accordion.json"
 	},
 	{
+		"name": "dashed-line",
+		"title": "Dashed line",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "dashed-line.json"
+	},
+	{
+		"name": "grid-pattern",
+		"title": "Grid pattern",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "grid-pattern.json"
+	},
+	{
 		"name": "auth-divider",
 		"title": "Auth divider",
 		"type": "registry:block",
@@ -499,5 +513,69 @@
 			"local:empty"
 		],
 		"relativeUrl": "faq-five.json"
+	},
+	{
+		"name": "feature-one",
+		"title": "Feature One",
+		"type": "registry:block",
+		"description": "A compact four-column feature strip with lightweight icon-led messaging.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "feature-one.json"
+	},
+	{
+		"name": "feature-two",
+		"title": "Feature Two",
+		"type": "registry:block",
+		"description": "An editorial feature frame with dashed rails, corner accents, and three focused highlights.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:dashed-line",
+			"local:decor-icon"
+		],
+		"relativeUrl": "feature-two.json"
+	},
+	{
+		"name": "feature-three",
+		"title": "Feature Three",
+		"type": "registry:block",
+		"description": "A bordered feature grid with full-width divider rails and stronger product framing.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:full-width-divider"
+		],
+		"relativeUrl": "feature-three.json"
+	},
+	{
+		"name": "feature-four",
+		"title": "Feature Four",
+		"type": "registry:block",
+		"description": "A product-feature showcase with structured cards and subtle editorial chrome.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:decor-icon"
+		],
+		"relativeUrl": "feature-four.json"
+	},
+	{
+		"name": "feature-five",
+		"title": "Feature Five",
+		"type": "registry:block",
+		"description": "A dense capability grid with patterned card backgrounds and a stronger product voice.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:grid-pattern"
+		],
+		"relativeUrl": "feature-five.json"
 	}
 ]

@@ -332,6 +332,42 @@
 			"dependencies": ["bits-ui", "@lucide/svelte"]
 		},
 		{
+			"name": "dashed-line",
+			"title": "Dashed line",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/dashed-line/dashed-line.svelte",
+					"type": "registry:component",
+					"target": "ui/dashed-line/dashed-line.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/dashed-line/index.ts",
+					"type": "registry:file",
+					"target": "ui/dashed-line/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "grid-pattern",
+			"title": "Grid pattern",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/grid-pattern/grid-pattern.svelte",
+					"type": "registry:component",
+					"target": "ui/grid-pattern/grid-pattern.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/grid-pattern/index.ts",
+					"type": "registry:file",
+					"target": "ui/grid-pattern/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
 			"name": "auth-divider",
 			"title": "Auth divider",
 			"type": "registry:block",
@@ -959,6 +995,91 @@
 				"local:input-group",
 				"local:empty"
 			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "feature-one",
+			"title": "Feature One",
+			"type": "registry:block",
+			"description": "A compact four-column feature strip with lightweight icon-led messaging.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/features/feature-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/features/feature-one.svelte"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "feature-two",
+			"title": "Feature Two",
+			"type": "registry:block",
+			"description": "An editorial feature frame with dashed rails, corner accents, and three focused highlights.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/features/feature-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/features/feature-two.svelte"
+				}
+			],
+			"registryDependencies": ["local:dashed-line", "local:decor-icon"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "feature-three",
+			"title": "Feature Three",
+			"type": "registry:block",
+			"description": "A bordered feature grid with full-width divider rails and stronger product framing.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/features/feature-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/features/feature-three.svelte"
+				}
+			],
+			"registryDependencies": ["local:full-width-divider"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "feature-four",
+			"title": "Feature Four",
+			"type": "registry:block",
+			"description": "A product-feature showcase with structured cards and subtle editorial chrome.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/features/feature-four/feature-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/features/feature-four/feature-four.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/features/feature-four/feature-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/features/feature-four/feature-card.svelte"
+				}
+			],
+			"registryDependencies": ["local:decor-icon"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "feature-five",
+			"title": "Feature Five",
+			"type": "registry:block",
+			"description": "A dense capability grid with patterned card backgrounds and a stronger product voice.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/features/feature-five/feature-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/features/feature-five/feature-five.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/features/feature-five/feature-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/features/feature-five/feature-card.svelte"
+				}
+			],
+			"registryDependencies": ["local:grid-pattern"],
 			"dependencies": ["@lucide/svelte"]
 		}
 	]

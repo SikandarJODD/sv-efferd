@@ -14,7 +14,7 @@ export const blockCategories = [
 	{ slug: 'blog', label: 'Blog', sourceKey: 'blogs', hasDedicatedPage: true },
 	{ slug: 'cta', label: 'CTA', hasDedicatedPage: true },
 	{ slug: 'faqs', label: "FAQ's", hasDedicatedPage: true },
-	{ slug: 'features', label: 'Features' },
+	{ slug: 'features', label: 'Features', hasDedicatedPage: true },
 	{ slug: 'footer', label: 'Footer' },
 	{ slug: 'integrations', label: 'Integrations' },
 	{ slug: 'hero', label: 'Hero' },

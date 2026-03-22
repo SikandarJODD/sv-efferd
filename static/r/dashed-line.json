@@ -1,0 +1,18 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "dashed-line",
+	"title": "Dashed line",
+	"type": "registry:block",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { cn, type WithElementRef } from '$UTILS$';\n\timport type { HTMLAttributes } from 'svelte/elements';\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\t'aria-hidden': ariaHidden = 'true',\n\t\t...restProps\n\t}: WithElementRef<HTMLAttributes<HTMLDivElement>> = $props();\n</script>\n\n<div\n\tbind:this={ref}\n\taria-hidden={ariaHidden}\n\tdata-slot=\"dashed-line\"\n\tclass={cn('absolute border-collapse border border-dashed', className)}\n\t{...restProps}\n></div>\n",
+			"type": "registry:component",
+			"target": "ui/dashed-line/dashed-line.svelte"
+		},
+		{
+			"content": "import DashedLine from './dashed-line.svelte';\n\nexport { DashedLine };\n",
+			"type": "registry:file",
+			"target": "ui/dashed-line/index.ts"
+		}
+	]
+}
