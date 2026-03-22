@@ -5,8 +5,6 @@ Save hours of design time with clean, ready-to-use `shadcn-svelte` blocks that j
 - Website: [sv-efferd.pages.dev](https://sv-efferd.pages.dev)
 - GitHub: [SikandarJODD/sv-efferd](https://github.com/SikandarJODD/sv-efferd)
 - Blocks: `64`
-- Total registry items: `76`
-- Categories: `15`
 
 ## Credits
 
@@ -30,11 +28,6 @@ Save hours of design time with clean, ready-to-use `shadcn-svelte` blocks that j
 - [Auth](https://sv-efferd.pages.dev/blocks/auth)
 - [Pricing](https://sv-efferd.pages.dev/blocks/pricing)
 - [Image Gallery](https://sv-efferd.pages.dev/blocks/image-gallery)
-
-## Docs
-
-- Docs: [sv-efferd.pages.dev/#docs](https://sv-efferd.pages.dev/#docs)
-- Explore blocks: [sv-efferd.pages.dev/blocks](https://sv-efferd.pages.dev/blocks)
 
 ## Install
 
