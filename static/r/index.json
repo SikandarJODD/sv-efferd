@@ -846,5 +846,61 @@
 			"local:portal"
 		],
 		"relativeUrl": "header-five.json"
+	},
+	{
+		"name": "pricing-one",
+		"title": "Pricing One",
+		"type": "registry:block",
+		"description": "A two-plan comparison with corner accents, compact savings callouts, and a stronger featured tier.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:decor-icon"
+		],
+		"relativeUrl": "pricing-one.json"
+	},
+	{
+		"name": "pricing-two",
+		"title": "Pricing Two",
+		"type": "registry:block",
+		"description": "A bordered editorial pricing grid with divider rails, concise plan summaries, and feature checklists.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:full-width-divider"
+		],
+		"relativeUrl": "pricing-two.json"
+	},
+	{
+		"name": "pricing-three",
+		"title": "Pricing Three",
+		"type": "registry:block",
+		"description": "A reusable three-tier pricing layout with icon-led cards and a highlighted middle plan.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "pricing-three.json"
+	},
+	{
+		"name": "pricing-four",
+		"title": "Pricing Four",
+		"type": "registry:block",
+		"description": "An animated pricing table with monthly-yearly toggles, live number transitions, and motion badges.",
+		"dependencies": [
+			"@lucide/svelte",
+			"@number-flow/svelte",
+			"motion-sv"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "pricing-four.json"
 	}
 ]

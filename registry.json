@@ -1781,6 +1781,76 @@
 			],
 			"registryDependencies": ["button", "local:navigation-menu", "local:portal"],
 			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "pricing-one",
+			"title": "Pricing One",
+			"type": "registry:block",
+			"description": "A two-plan comparison with corner accents, compact savings callouts, and a stronger featured tier.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/pricing/pricing-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/pricing/pricing-one.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:decor-icon"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "pricing-two",
+			"title": "Pricing Two",
+			"type": "registry:block",
+			"description": "A bordered editorial pricing grid with divider rails, concise plan summaries, and feature checklists.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/pricing/pricing-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/pricing/pricing-two.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:full-width-divider"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "pricing-three",
+			"title": "Pricing Three",
+			"type": "registry:block",
+			"description": "A reusable three-tier pricing layout with icon-led cards and a highlighted middle plan.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/pricing/pricing-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/pricing/pricing-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/pricing/pricing-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/pricing/pricing-card.svelte"
+				}
+			],
+			"registryDependencies": ["button"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "pricing-four",
+			"title": "Pricing Four",
+			"type": "registry:block",
+			"description": "An animated pricing table with monthly-yearly toggles, live number transitions, and motion badges.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/pricing/pricing-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/pricing/pricing-four.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/pricing/frequency-toggle.svelte",
+					"type": "registry:component",
+					"target": "efferd/pricing/frequency-toggle.svelte"
+				}
+			],
+			"registryDependencies": ["button"],
+			"dependencies": ["@lucide/svelte", "@number-flow/svelte", "motion-sv"]
 		}
 	]
 }
