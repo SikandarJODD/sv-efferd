@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 	import { createScroll } from '$lib/hooks/use-scroll.svelte';
-	import { Logo } from '$lib/svgs';
+	import Logo from '$lib/svgs/logo.svelte';
 	import { cn } from '$lib/utils';
 	import DesktopNav from './desktop-nav.svelte';
 	import MobileNav from './mobile-nav.svelte';

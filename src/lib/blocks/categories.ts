@@ -17,7 +17,7 @@ export const blockCategories = [
 	{ slug: 'features', label: 'Features', hasDedicatedPage: true },
 	{ slug: 'footer', label: 'Footer', hasDedicatedPage: true },
 	{ slug: 'integrations', label: 'Integrations', hasDedicatedPage: true },
-	{ slug: 'hero', label: 'Hero' },
+	{ slug: 'hero', label: 'Hero', hasDedicatedPage: true },
 	{ slug: 'auth', label: 'Auth', hasDedicatedPage: true },
 	{ slug: 'pricing', label: 'Pricing' },
 	{ slug: 'image-gallery', label: 'Image Gallery' }

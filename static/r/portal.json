@@ -1,0 +1,30 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "portal",
+	"title": "Portal",
+	"type": "registry:block",
+	"dependencies": [
+		"bits-ui"
+	],
+	"devDependencies": [
+		"bits-ui@^2.16.3",
+		"@internationalized/date@^3.12.0"
+	],
+	"files": [
+		{
+			"content": "<!-- Portal.svelte -->\r\n<script lang=\"ts\">\r\n\timport { Portal } from 'bits-ui';\r\n\timport { cn } from '$UTILS$';\r\n\timport { onMount } from 'svelte';\r\n\timport type { Snippet } from 'svelte';\r\n\r\n\ttype Props = {\r\n\t\tclass?: string;\r\n\t\tchildren?: Snippet;\r\n\t};\r\n\r\n\tlet { class: className, children }: Props = $props();\r\n\r\n\tlet mounted = $state(false);\r\n\r\n\tonMount(() => {\r\n\t\tmounted = true;\r\n\r\n\t\tconst originalOverflow = window.getComputedStyle(document.body).overflow;\r\n\t\tconst scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;\r\n\t\tconst originalPaddingRight = document.body.style.paddingRight;\r\n\r\n\t\tdocument.body.style.overflow = 'hidden';\r\n\t\tif (scrollbarWidth > 0) {\r\n\t\t\tdocument.body.style.paddingRight = `${scrollbarWidth}px`;\r\n\t\t}\r\n\r\n\t\treturn () => {\r\n\t\t\tdocument.body.style.overflow = originalOverflow;\r\n\t\t\tdocument.body.style.paddingRight = originalPaddingRight;\r\n\t\t};\r\n\t});\r\n</script>\r\n\r\n{#if mounted}\r\n\t<Portal to=\"body\">\r\n\t\t<div class={cn('fixed inset-0 isolate z-40 flex flex-col', className)}>\r\n\t\t\t{@render children?.()}\r\n\t\t</div>\r\n\t</Portal>\r\n{/if}\r\n",
+			"type": "registry:component",
+			"target": "ui/portal/portal.svelte"
+		},
+		{
+			"content": "<!-- PortalBackdrop.svelte -->\r\n<script lang=\"ts\">\r\n  import { cn } from \"$UTILS$\";\r\n  import type { Snippet } from \"svelte\";\r\n\r\n  type Props = {\r\n    class?: string;\r\n    state?: \"open\" | \"closed\";\r\n    children?: Snippet;\r\n  };\r\n\r\n  let { class: className, state = \"open\", children }: Props = $props();\r\n</script>\r\n\r\n<div\r\n  data-state={state}\r\n  class={cn(\r\n    \"data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 -z-1 bg-background/95 backdrop-blur-sm duration-500 data-[state=closed]:animate-out data-[state=open]:animate-in supports-backdrop-filter:bg-background/60\",\r\n    className\r\n  )}\r\n>\r\n  {@render children?.()}\r\n</div>",
+			"type": "registry:component",
+			"target": "ui/portal/portal-backdrop.svelte"
+		},
+		{
+			"content": "import Portal from './portal.svelte';\r\nimport PortalBackdrop from './portal-backdrop.svelte';\r\n\r\nexport { Portal, PortalBackdrop };\r\n",
+			"type": "registry:file",
+			"target": "ui/portal/index.ts"
+		}
+	]
+}

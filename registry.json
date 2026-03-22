@@ -368,6 +368,84 @@
 			"registryDependencies": []
 		},
 		{
+			"name": "portal",
+			"title": "Portal",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/portal/portal.svelte",
+					"type": "registry:component",
+					"target": "ui/portal/portal.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/portal/portal-backdrop.svelte",
+					"type": "registry:component",
+					"target": "ui/portal/portal-backdrop.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/portal/index.ts",
+					"type": "registry:file",
+					"target": "ui/portal/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["bits-ui"]
+		},
+		{
+			"name": "navigation-menu",
+			"title": "Navigation menu",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/navigation-menu/navigation-menu.svelte",
+					"type": "registry:component",
+					"target": "ui/navigation-menu/navigation-menu.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/navigation-menu/navigation-menu-content.svelte",
+					"type": "registry:component",
+					"target": "ui/navigation-menu/navigation-menu-content.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/navigation-menu/navigation-menu-indicator.svelte",
+					"type": "registry:component",
+					"target": "ui/navigation-menu/navigation-menu-indicator.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/navigation-menu/navigation-menu-item.svelte",
+					"type": "registry:component",
+					"target": "ui/navigation-menu/navigation-menu-item.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/navigation-menu/navigation-menu-link.svelte",
+					"type": "registry:component",
+					"target": "ui/navigation-menu/navigation-menu-link.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/navigation-menu/navigation-menu-list.svelte",
+					"type": "registry:component",
+					"target": "ui/navigation-menu/navigation-menu-list.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/navigation-menu/navigation-menu-trigger.svelte",
+					"type": "registry:component",
+					"target": "ui/navigation-menu/navigation-menu-trigger.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/navigation-menu/navigation-menu-viewport.svelte",
+					"type": "registry:component",
+					"target": "ui/navigation-menu/navigation-menu-viewport.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/navigation-menu/index.ts",
+					"type": "registry:file",
+					"target": "ui/navigation-menu/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["bits-ui", "@lucide/svelte"]
+		},
+		{
 			"name": "auth-divider",
 			"title": "Auth divider",
 			"type": "registry:block",
@@ -1321,6 +1399,182 @@
 				}
 			],
 			"registryDependencies": ["button"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "hero-one",
+			"title": "Hero One",
+			"type": "registry:block",
+			"description": "A full hero composition with sticky header, editorial spotlight, and a marquee trust band.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/hero/hero-one/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-one/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/hero/hero-one/hero.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-one/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/hero/hero-one/logo-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-one/logo-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-one/header-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-one/header-one.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-one/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-one/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-one/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-one/nav-links.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:file",
+					"target": "hooks/use-scroll.svelte.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:logo-cloud-three", "local:portal"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "hero-two",
+			"title": "Hero Two",
+			"type": "registry:block",
+			"description": "A framed product hero with a floating screen, structured header, and bordered logo section.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/hero/hero-two/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-two/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/hero/hero-two/hero.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-two/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/hero/hero-two/logo-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-two/logo-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-two/header-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-two/header-two.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-two/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-two/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-two/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-two/nav-links.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:file",
+					"target": "hooks/use-scroll.svelte.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": [
+				"button",
+				"local:decor-icon",
+				"local:full-width-divider",
+				"local:logo-cloud-two",
+				"local:portal"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "hero-three",
+			"title": "Hero Three",
+			"type": "registry:block",
+			"description": "A modern hero layout with mega-nav header, device mockup spotlight, and compact logo grid.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/hero/hero-three/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-three/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/hero/hero-three/hero.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-three/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/hero/hero-three/logo-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-three/logo-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/header-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/header-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/desktop-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/desktop-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/link-item.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/link-item.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-three/nav-links.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/types.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-three/types.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:file",
+					"target": "hooks/use-scroll.svelte.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": [
+				"button",
+				"local:logo-cloud-five",
+				"local:navigation-menu",
+				"local:portal"
+			],
 			"dependencies": ["@lucide/svelte"]
 		}
 	]

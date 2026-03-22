@@ -105,6 +105,27 @@
 		"relativeUrl": "grid-pattern.json"
 	},
 	{
+		"name": "portal",
+		"title": "Portal",
+		"type": "registry:block",
+		"dependencies": [
+			"bits-ui"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "portal.json"
+	},
+	{
+		"name": "navigation-menu",
+		"title": "Navigation menu",
+		"type": "registry:block",
+		"dependencies": [
+			"bits-ui",
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "navigation-menu.json"
+	},
+	{
 		"name": "auth-divider",
 		"title": "Auth divider",
 		"type": "registry:block",
@@ -705,5 +726,53 @@
 			"button"
 		],
 		"relativeUrl": "integration-five.json"
+	},
+	{
+		"name": "hero-one",
+		"title": "Hero One",
+		"type": "registry:block",
+		"description": "A full hero composition with sticky header, editorial spotlight, and a marquee trust band.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:logo-cloud-three",
+			"local:portal"
+		],
+		"relativeUrl": "hero-one.json"
+	},
+	{
+		"name": "hero-two",
+		"title": "Hero Two",
+		"type": "registry:block",
+		"description": "A framed product hero with a floating screen, structured header, and bordered logo section.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:decor-icon",
+			"local:full-width-divider",
+			"local:logo-cloud-two",
+			"local:portal"
+		],
+		"relativeUrl": "hero-two.json"
+	},
+	{
+		"name": "hero-three",
+		"title": "Hero Three",
+		"type": "registry:block",
+		"description": "A modern hero layout with mega-nav header, device mockup spotlight, and compact logo grid.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:logo-cloud-five",
+			"local:navigation-menu",
+			"local:portal"
+		],
+		"relativeUrl": "hero-three.json"
 	}
 ]

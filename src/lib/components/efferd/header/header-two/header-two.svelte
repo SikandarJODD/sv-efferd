@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 	import { createScroll } from '$lib/hooks/use-scroll.svelte';
-	import { Logo } from '$lib/svgs';
+	import Logo from '$lib/svgs/logo.svelte';
 	import { cn } from '$lib/utils';
 	import MobileNav from './mobile-nav.svelte';
 	import { navLinks } from './nav-links';
@@ -26,10 +26,10 @@
 		</a>
 		<div class="hidden items-center gap-2 md:flex">
 			<div>
-				{#each navLinks as {label, href}}
-					<Button size="sm" variant="ghost" href={href}>
-                        {label}
-                    </Button>
+				{#each navLinks as { label, href }}
+					<Button size="sm" variant="ghost" {href}>
+						{label}
+					</Button>
 				{/each}
 			</div>
 			<Button size="sm" variant="outline">Sign In</Button>
