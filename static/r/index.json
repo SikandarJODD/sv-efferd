@@ -181,6 +181,7 @@
 		],
 		"registryDependencies": [
 			"button",
+			"local:full-width-divider",
 			"empty"
 		],
 		"relativeUrl": "not-found-two.json"

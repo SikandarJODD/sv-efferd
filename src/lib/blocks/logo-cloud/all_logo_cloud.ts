@@ -71,7 +71,7 @@ export const logoCloudBlocks: BlockShowcaseItem[] = [
 		description: "A clean partner grid with a framed card surface and balanced spacing.",
 		previewComponent: LogoCloudOne,
 		previewHref: "/preview/logo-cloud/one",
-		previewMode: "inline",
+		previewMode: "iframe",
 		previewHeight: 720,
 		installId: "logo-cloud-one",
 		codeTree: createBlockCodeTree("logo-cloud-one:component", [
@@ -89,7 +89,7 @@ export const logoCloudBlocks: BlockShowcaseItem[] = [
 		description: "A bordered logo grid with alternating panels and decorative corner accents.",
 		previewComponent: LogoCloudTwo,
 		previewHref: "/preview/logo-cloud/two",
-		previewMode: "inline",
+		previewMode: "iframe",
 		previewHeight: 720,
 		installId: "logo-cloud-two",
 		codeTree: createBlockCodeTree("logo-cloud-two:component", [
@@ -114,7 +114,7 @@ export const logoCloudBlocks: BlockShowcaseItem[] = [
 		description: "A scrolling logo marquee with a soft edge mask and editorial rhythm.",
 		previewComponent: LogoCloudThree,
 		previewHref: "/preview/logo-cloud/three",
-		previewMode: "inline",
+		previewMode: "iframe",
 		previewHeight: 720,
 		installId: "logo-cloud-three",
 		codeTree: createBlockCodeTree("logo-cloud-three:component", [
