@@ -1,0 +1,18 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "full-width-divider",
+	"title": "Full width divider",
+	"type": "registry:block",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { cn } from '$UTILS$.js';\n\timport type { HTMLAttributes } from 'svelte/elements';\n\n\ttype FullWidthDividerProps = HTMLAttributes<HTMLDivElement> & {\n\t\tcontained?: boolean;\n\t\tposition?: 'top' | 'bottom';\n\t};\n\n\tlet {\n\t\tclass: className,\n\t\tcontained = false,\n\t\tposition,\n\t\t'aria-hidden': ariaHidden = 'true',\n\t\t...rest\n\t}: FullWidthDividerProps = $props();\n</script>\n\n<div\n\taria-hidden={ariaHidden}\n\tdata-contained={contained}\n\tdata-position={position}\n\tclass={cn(\n\t\t'pointer-events-none absolute h-px bg-border',\n\t\t// full-bleed (default)\n\t\t'data-[contained=false]:left-1/2 data-[contained=false]:w-screen data-[contained=false]:-translate-x-1/2',\n\t\t// contained\n\t\t'data-[contained=true]:inset-x-0 data-[contained=true]:w-full',\n\t\t// position\n\t\tposition && 'data-[position=bottom]:-bottom-px data-[position=top]:-top-px',\n\t\tclassName\n\t)}\n\t{...rest}\n></div>\n",
+			"type": "registry:component",
+			"target": "ui/full-width-divider/full-width-divider.svelte"
+		},
+		{
+			"content": "import FullWidthDivider from './full-width-divider.svelte';\r\nexport { FullWidthDivider };\r\n",
+			"type": "registry:file",
+			"target": "ui/full-width-divider/index.ts"
+		}
+	]
+}

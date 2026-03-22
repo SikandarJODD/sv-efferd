@@ -1,0 +1,21 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "decor-icon",
+	"title": "Decor icon",
+	"type": "registry:block",
+	"devDependencies": [
+		"tailwind-variants@^3.2.2"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\" module>\n\timport { cn } from '$UTILS$';\n\timport type { SVGAttributes } from 'svelte/elements';\n\timport { type VariantProps, tv } from 'tailwind-variants';\n\n\texport const decorIconVariants = tv({\n\t\tbase: 'pointer-events-none absolute z-1 size-5 shrink-0 stroke-1 stroke-muted-foreground',\n\t\tvariants: {\n\t\t\tposition: {\n\t\t\t\t'top-left': 'top-0 left-0 -translate-x-[calc(50%+0.5px)] -translate-y-[calc(50%+0.5px)]',\n\t\t\t\t'top-right': 'top-0 right-0 translate-x-[calc(50%+0.5px)] -translate-y-[calc(50%+0.5px)]',\n\t\t\t\t'bottom-right':\n\t\t\t\t\t'right-0 bottom-0 translate-x-[calc(50%+0.5px)] translate-y-[calc(50%+0.5px)]',\n\t\t\t\t'bottom-left':\n\t\t\t\t\t'bottom-0 left-0 -translate-x-[calc(50%+0.5px)] translate-y-[calc(50%+0.5px)]'\n\t\t\t}\n\t\t},\n\t\tdefaultVariants: {\n\t\t\tposition: 'top-left'\n\t\t}\n\t});\n\n\ttype DecorIconVariant = SVGAttributes<SVGAElement> & VariantProps<typeof decorIconVariants>;\n</script>\n\n<script lang=\"ts\">\n\tlet { position = 'top-left', class: className, ...props }: DecorIconVariant = $props();\n</script>\n\n<svg\n\taria-hidden=\"true\"\n\tclass={cn(decorIconVariants({ position }), className)}\n\tfill=\"none\"\n\tstroke=\"currentColor\"\n\tstroke-linecap=\"round\"\n\tstroke-linejoin=\"round\"\n\tviewBox=\"0 0 24 24\"\n\txmlns=\"http://www.w3.org/2000/svg\"\n>\n\t<path d=\"M5 12h14\" />\n\t<path d=\"M12 5v14\" />\n</svg>\n",
+			"type": "registry:component",
+			"target": "ui/decor-icon/decor-icon.svelte"
+		},
+		{
+			"content": "import DecorIcon from \"./decor-icon.svelte\";\n\nexport { DecorIcon };",
+			"type": "registry:file",
+			"target": "ui/decor-icon/index.ts"
+		}
+	]
+}

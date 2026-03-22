@@ -1,25 +1,24 @@
 <script lang="ts">
-	import PageLoading from '$lib/components/base/PageLoading.svelte';
-	import PageSkeletons from '$lib/components/base/PageSkeletons.svelte';
-	import HeaderFive from '$lib/components/efferd/header/header-five/header-five.svelte';
-	import HeaderFour from '$lib/components/efferd/header/header-four/header-four.svelte';
-	import HeaderTwo from '$lib/components/efferd/header/header-two/header-two.svelte';
-	import LogoCloudOne from '$lib/components/efferd/logo-cloud/logo-cloud-one.svelte';
-	import TestimonialFive from '$lib/components/efferd/testimonial/testimonial-five/testimonial-five.svelte';
-	import TestimonialFour from '$lib/components/efferd/testimonial/testimonial-four/testimonial-four.svelte';
-	import TestimonialOne from '$lib/components/efferd/testimonial/testimonial-one.svelte';
-	import TestimonialThree from '$lib/components/efferd/testimonial/testimonial-three.svelte';
-	import TestimonialTwo from '$lib/components/efferd/testimonial/testimonial-two.svelte';
-	// import HeaderOne from '$lib/components/efferd/header/header/header-one.svelte';
+	import SiteHero from "$lib/components/landing/site-hero.svelte";
+
 </script>
 
-<!-- <HeaderFive /> -->
-<!-- <div class="min-h-[300vh]">
-	<PageSkeletons />
-</div> -->
-<!-- <PageLoading /> -->
-<!-- <TestimonialOne /> -->
-<div class="flex min-h-screen items-center justify-center">
-	<!-- <TestimonialFive /> -->
-	<LogoCloudOne />
+<div class="relative flex min-h-screen flex-col">
+	<!-- <SiteHeader /> -->
+	<SiteHero />
+	<section
+		class="border-b border-border/80 px-4 py-20 text-center sm:px-6 lg:px-8"
+		id="docs"
+	>
+		<div class="mx-auto max-w-3xl">
+			<p class="text-sm font-medium uppercase tracking-[0.24em] text-muted-foreground">Docs</p>
+			<h2 class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+				Documentation is coming soon
+			</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground sm:text-lg">
+				This placeholder section keeps the existing navigation target valid while the docs area
+				is still being built.
+			</p>
+		</div>
+	</section>
 </div>

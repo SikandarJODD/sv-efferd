@@ -1,0 +1,18 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "textarea",
+	"title": "Textarea",
+	"type": "registry:block",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { cn, type WithElementRef } from '$UTILS$.js';\n\timport type { HTMLTextareaAttributes } from 'svelte/elements';\n\n\ttype Props = WithElementRef<HTMLTextareaAttributes>;\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tvalue = $bindable(),\n\t\tclass: className,\n\t\t'data-slot': dataSlot = 'textarea',\n\t\t...restProps\n\t}: Props = $props();\n</script>\n\n<textarea\n\tbind:this={ref}\n\tdata-slot={dataSlot}\n\tclass={cn(\n\t\t'flex min-h-24 w-full min-w-0 rounded-md border border-input bg-background px-3 py-2 text-base shadow-xs ring-offset-background transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 md:text-sm dark:bg-input/30',\n\t\t'focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50',\n\t\t'aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40',\n\t\tclassName\n\t)}\n\tbind:value\n\t{...restProps}\n></textarea>\n",
+			"type": "registry:component",
+			"target": "ui/textarea/textarea.svelte"
+		},
+		{
+			"content": "import Root from './textarea.svelte';\n\nexport {\n\tRoot,\n\t//\n\tRoot as Textarea\n};\n",
+			"type": "registry:file",
+			"target": "ui/textarea/index.ts"
+		}
+	]
+}

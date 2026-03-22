@@ -1,0 +1,280 @@
+[
+	{
+		"name": "full-width-divider",
+		"title": "Full width divider",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "full-width-divider.json"
+	},
+	{
+		"name": "decor-icon",
+		"title": "Decor icon",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "decor-icon.json"
+	},
+	{
+		"name": "input-group",
+		"title": "Input group",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "input-group.json"
+	},
+	{
+		"name": "empty",
+		"title": "Empty",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "empty.json"
+	},
+	{
+		"name": "marquee",
+		"title": "Marquee",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "marquee.json"
+	},
+	{
+		"name": "progressive-blur",
+		"title": "Progressive blur",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "progressive-blur.json"
+	},
+	{
+		"name": "field",
+		"title": "Field",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "field.json"
+	},
+	{
+		"name": "input",
+		"title": "Input",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "input.json"
+	},
+	{
+		"name": "textarea",
+		"title": "Textarea",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "textarea.json"
+	},
+	{
+		"name": "cta-one",
+		"title": "CTA One",
+		"type": "registry:block",
+		"description": "A split CTA with quiet structure, balanced actions, and full-width dividers.",
+		"registryDependencies": [
+			"button",
+			"local:full-width-divider"
+		],
+		"relativeUrl": "cta-one.json"
+	},
+	{
+		"name": "cta-two",
+		"title": "CTA Two",
+		"type": "registry:block",
+		"description": "A centered CTA with a softer secondary band and directional primary action.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:full-width-divider"
+		],
+		"relativeUrl": "cta-two.json"
+	},
+	{
+		"name": "cta-three",
+		"title": "CTA Three",
+		"type": "registry:block",
+		"description": "A more decorative CTA with corner accents and a stronger editorial feel.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:decor-icon"
+		],
+		"relativeUrl": "cta-three.json"
+	},
+	{
+		"name": "cta-four",
+		"title": "CTA Four",
+		"type": "registry:block",
+		"description": "A compact card CTA with credit-card reassurance and elevated actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "cta-four.json"
+	},
+	{
+		"name": "cta-five",
+		"title": "CTA Five",
+		"type": "registry:block",
+		"description": "A newsletter CTA that blends subscription form controls with social proof.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:full-width-divider",
+			"local:input-group"
+		],
+		"relativeUrl": "cta-five.json"
+	},
+	{
+		"name": "not-found-one",
+		"title": "Not Found One",
+		"type": "registry:block",
+		"description": "A framed 404 layout with full-width dividers and balanced recovery actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:full-width-divider",
+			"local:empty"
+		],
+		"relativeUrl": "not-found-one.json"
+	},
+	{
+		"name": "not-found-two",
+		"title": "Not Found Two",
+		"type": "registry:block",
+		"description": "A minimal full-screen 404 with oversized typography and direct recovery actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:empty"
+		],
+		"relativeUrl": "not-found-two.json"
+	},
+	{
+		"name": "logo-cloud-one",
+		"title": "Logo Cloud One",
+		"type": "registry:block",
+		"description": "A clean partner grid with a framed card surface and balanced spacing.",
+		"registryDependencies": [],
+		"relativeUrl": "logo-cloud-one.json"
+	},
+	{
+		"name": "logo-cloud-two",
+		"title": "Logo Cloud Two",
+		"type": "registry:block",
+		"description": "A bordered logo grid with alternating panels and decorative corner accents.",
+		"registryDependencies": [
+			"local:decor-icon"
+		],
+		"relativeUrl": "logo-cloud-two.json"
+	},
+	{
+		"name": "logo-cloud-three",
+		"title": "Logo Cloud Three",
+		"type": "registry:block",
+		"description": "A scrolling logo marquee with a soft edge mask and editorial rhythm.",
+		"registryDependencies": [
+			"local:marquee"
+		],
+		"relativeUrl": "logo-cloud-three.json"
+	},
+	{
+		"name": "logo-cloud-four",
+		"title": "Logo Cloud Four",
+		"type": "registry:block",
+		"description": "A marquee logo band with progressive edge blur and a layered track surface.",
+		"registryDependencies": [
+			"local:marquee",
+			"local:progressive-blur"
+		],
+		"relativeUrl": "logo-cloud-four.json"
+	},
+	{
+		"name": "logo-cloud-five",
+		"title": "Logo Cloud Five",
+		"type": "registry:block",
+		"description": "A flexible wrapped logo cloud designed for broader brand collections.",
+		"registryDependencies": [],
+		"relativeUrl": "logo-cloud-five.json"
+	},
+	{
+		"name": "contact-one",
+		"title": "Contact One",
+		"type": "registry:block",
+		"description": "A compact contact strip with quick details framed by full-width dividers.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:full-width-divider"
+		],
+		"relativeUrl": "contact-one.json"
+	},
+	{
+		"name": "contact-two",
+		"title": "Contact Two",
+		"type": "registry:block",
+		"description": "A three-column contact hub for email, social DMs, and community support.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "contact-two.json"
+	},
+	{
+		"name": "contact-three",
+		"title": "Contact Three",
+		"type": "registry:block",
+		"description": "A full-page contact layout with detailed channels, office info, and social links.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:full-width-divider"
+		],
+		"relativeUrl": "contact-three.json"
+	},
+	{
+		"name": "contact-four",
+		"title": "Contact Four",
+		"type": "registry:block",
+		"description": "A split contact form with direct support details and a structured inquiry panel.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:field",
+			"local:input",
+			"local:textarea"
+		],
+		"relativeUrl": "contact-four.json"
+	},
+	{
+		"name": "contact-five",
+		"title": "Contact Five",
+		"type": "registry:block",
+		"description": "A bordered contact card pairing essential details with a reusable message form.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:decor-icon",
+			"local:field",
+			"local:input",
+			"local:textarea"
+		],
+		"relativeUrl": "contact-five.json"
+	}
+]

@@ -1,0 +1,25 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "not-found-one",
+	"title": "Not Found One",
+	"type": "registry:block",
+	"description": "A framed 404 layout with full-width dividers and balanced recovery actions.",
+	"dependencies": [
+		"@lucide/svelte"
+	],
+	"devDependencies": [
+		"@lucide/svelte@^0.577.0"
+	],
+	"registryDependencies": [
+		"button",
+		"./full-width-divider.json",
+		"./empty.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { FullWidthDivider } from '$lib/components/ui/full-width-divider';\r\n\timport * as Empty from '$lib/components/ui/empty/index';\r\n\timport { Button } from '$lib/components/ui/button';\r\n\timport { CompassIcon, HomeIcon } from '@lucide/svelte';\r\n</script>\r\n\r\n<div class=\"flex w-full items-center justify-center overflow-hidden\">\r\n\t<div class=\"flex h-screen items-center border-x\">\r\n\t\t<div>\r\n\t\t\t<FullWidthDivider />\r\n\t\t\t<Empty.Root>\r\n\t\t\t\t<Empty.Header>\r\n\t\t\t\t\t<Empty.Title class=\"font-mono text-8xl font-black\">404</Empty.Title>\r\n\t\t\t\t\t<Empty.Description class=\"text-nowrap\">\r\n\t\t\t\t\t\tThe page you're looking for might have been <br />\r\n\t\t\t\t\t\tmoved or doesn't exist.\r\n\t\t\t\t\t</Empty.Description>\r\n\t\t\t\t</Empty.Header>\r\n\t\t\t\t<Empty.Content>\r\n\t\t\t\t\t<div class=\"flex gap-2\">\r\n\t\t\t\t\t\t<Button href=\"/\">\r\n\t\t\t\t\t\t\t<HomeIcon data-icon=\"inline-start\" />\r\n\t\t\t\t\t\t\tGo Home\r\n\t\t\t\t\t\t</Button>\r\n\r\n\t\t\t\t\t\t<Button href=\"/explore\" variant=\"outline\">\r\n\t\t\t\t\t\t\t<CompassIcon data-icon=\"inline-start\" />\r\n\t\t\t\t\t\t\tExplore\r\n\t\t\t\t\t\t</Button>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</Empty.Content>\r\n\t\t\t</Empty.Root>\r\n\t\t\t<FullWidthDivider />\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n",
+			"type": "registry:component",
+			"target": "efferd/not-found/not-found-one.svelte"
+		}
+	]
+}

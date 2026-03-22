@@ -1,0 +1,23 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "contact-one",
+	"title": "Contact One",
+	"type": "registry:block",
+	"description": "A compact contact strip with quick details framed by full-width dividers.",
+	"dependencies": [
+		"@lucide/svelte"
+	],
+	"devDependencies": [
+		"@lucide/svelte@^0.577.0"
+	],
+	"registryDependencies": [
+		"./full-width-divider.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { FullWidthDivider } from '$lib/components/ui/full-width-divider';\r\n\timport { cn } from '$UTILS$';\r\n\timport { Mail, MapPin, Phone } from '@lucide/svelte';\r\n\r\n\tconst data = [\r\n\t\t{\r\n\t\t\ttitle: 'Call Us Today!',\r\n\t\t\tvalue: '+1 (555) 123-4567',\r\n\t\t\ticon: Phone\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: 'Send an Email',\r\n\t\t\tvalue: 'mail@example.com',\r\n\t\t\ticon: Mail\r\n\t\t},\r\n\t\t{\r\n\t\t\ttitle: 'Visit Our Office',\r\n\t\t\tvalue: '100 Smith Street, VIC',\r\n\t\t\ticon: MapPin\r\n\t\t}\r\n\t];\r\n</script>\r\n\r\n<div class=\"mx-auto max-w-4xl\">\r\n\t<h2 class=\"mb-6 text-lg font-medium md:text-2xl\">Have Questions? Get in Touch!</h2>\r\n\t<div class=\"relative\">\r\n\t\t<FullWidthDivider position=\"top\"></FullWidthDivider>\r\n\t\t<div class=\"grid gap-px overflow-hidden bg-border px-px md:grid-cols-3\">\r\n\t\t\t{#each data as item}\r\n\t\t\t\t{@const Icon = item.icon}\r\n\t\t\t\t<div class=\"flex items-center gap-3 bg-background p-2 shadow-xs\">\r\n\t\t\t\t\t<div\r\n\t\t\t\t\t\tclass={cn(\r\n\t\t\t\t\t\t\t'flex size-12 shrink-0 items-center justify-center rounded-lg bg-muted/50',\r\n\t\t\t\t\t\t\t'[&_svg]:size-4 [&_svg]:text-muted-foreground'\r\n\t\t\t\t\t\t)}\r\n\t\t\t\t\t>\r\n\t\t\t\t\t\t<Icon />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class={cn('flex flex-col gap-y-0.5')}>\r\n\t\t\t\t\t\t<h2 class=\"text-sm\">{item.title}</h2>\r\n\t\t\t\t\t\t<p class=\"text-xs text-muted-foreground\">{item.value}</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t{/each}\r\n\t\t</div>\r\n\t\t<FullWidthDivider position=\"bottom\"></FullWidthDivider>\r\n\t</div>\r\n</div>\r\n",
+			"type": "registry:component",
+			"target": "efferd/contact/contact-one.svelte"
+		}
+	]
+}

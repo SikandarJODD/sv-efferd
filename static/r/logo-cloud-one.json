@@ -1,0 +1,14 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "logo-cloud-one",
+	"title": "Logo Cloud One",
+	"type": "registry:block",
+	"description": "A clean partner grid with a framed card surface and balanced spacing.",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\tconst logos = [\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/nvidia-wordmark.svg',\r\n\t\t\talt: 'Nvidia Logo'\r\n\t\t},\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/supabase-wordmark.svg',\r\n\t\t\talt: 'Supabase Logo'\r\n\t\t},\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/openai-wordmark.svg',\r\n\t\t\talt: 'OpenAI Logo'\r\n\t\t},\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/turso-wordmark.svg',\r\n\t\t\talt: 'Turso Logo'\r\n\t\t},\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/vercel-wordmark.svg',\r\n\t\t\talt: 'Vercel Logo'\r\n\t\t},\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/github-wordmark.svg',\r\n\t\t\talt: 'GitHub Logo'\r\n\t\t},\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/claude-wordmark.svg',\r\n\t\t\talt: 'Claude AI Logo'\r\n\t\t},\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/clerk-wordmark.svg',\r\n\t\t\talt: 'Clerk Logo'\r\n\t\t}\r\n\t];\r\n</script>\r\n\r\n<div class=\"grid grid-cols-2 rounded-lg bg-border shadow md:grid-cols-4\">\r\n\t{#each logos as logo, i}\r\n\t\t<div class=\"flex items-center justify-center rounded-lg border bg-background p-8\">\r\n\t\t\t<img\r\n\t\t\t\talt={logo.alt}\r\n\t\t\t\tclass=\"pointer-events-none block h-4 select-none md:h-5 dark:brightness-0 dark:invert\"\r\n\t\t\t\theight=\"auto\"\r\n\t\t\t\tloading=\"lazy\"\r\n\t\t\t\tsrc={logo.src}\r\n\t\t\t\twidth=\"auto\"\r\n\t\t\t/>\r\n\t\t</div>\r\n\t{/each}\r\n</div>\r\n",
+			"type": "registry:component",
+			"target": "efferd/logo-cloud/logo-cloud-one.svelte"
+		}
+	]
+}
