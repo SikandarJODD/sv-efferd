@@ -9,7 +9,7 @@ export const blockCategories = [
 	{ slug: 'logo-cloud', label: 'Logo Cloud', hasDedicatedPage: true },
 	{ slug: 'header', label: 'Header', hasDedicatedPage: true },
 	{ slug: 'not-found', label: 'Not Found', hasDedicatedPage: true },
-	{ slug: 'testimonials', label: 'Testimonials', sourceKey: 'testimonial' },
+	{ slug: 'testimonials', label: 'Testimonials', sourceKey: 'testimonial', hasDedicatedPage: true },
 	{ slug: 'contact', label: 'Contact', hasDedicatedPage: true },
 	{ slug: 'blog', label: 'Blog', sourceKey: 'blogs', hasDedicatedPage: true },
 	{ slug: 'cta', label: 'CTA', hasDedicatedPage: true },

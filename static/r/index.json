@@ -105,6 +105,23 @@
 		"relativeUrl": "grid-pattern.json"
 	},
 	{
+		"name": "avatar",
+		"title": "Avatar",
+		"type": "registry:block",
+		"dependencies": [
+			"bits-ui"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "avatar.json"
+	},
+	{
+		"name": "mask-line",
+		"title": "Mask line",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "mask-line.json"
+	},
+	{
 		"name": "portal",
 		"title": "Portal",
 		"type": "registry:block",
@@ -902,5 +919,66 @@
 			"button"
 		],
 		"relativeUrl": "pricing-four.json"
+	},
+	{
+		"name": "testimonial-one",
+		"title": "Testimonial One",
+		"type": "registry:block",
+		"description": "A centered single testimonial with brand mark, compact author block, and soft editorial framing.",
+		"registryDependencies": [
+			"local:avatar"
+		],
+		"relativeUrl": "testimonial-one.json"
+	},
+	{
+		"name": "testimonial-two",
+		"title": "Testimonial Two",
+		"type": "registry:block",
+		"description": "A framed testimonial layout with masked divider rails, asymmetrical composition, and avatar-led emphasis.",
+		"registryDependencies": [
+			"local:avatar",
+			"local:mask-line"
+		],
+		"relativeUrl": "testimonial-two.json"
+	},
+	{
+		"name": "testimonial-three",
+		"title": "Testimonial Three",
+		"type": "registry:block",
+		"description": "A three-card testimonial grid with decorative corners, lifted middle emphasis, and richer profile metadata.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:avatar",
+			"local:decor-icon"
+		],
+		"relativeUrl": "testimonial-three.json"
+	},
+	{
+		"name": "testimonial-four",
+		"title": "Testimonial Four",
+		"type": "registry:block",
+		"description": "A split testimonial layout with divider rails, dense quote cards, and a stronger editorial grid.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:full-width-divider"
+		],
+		"relativeUrl": "testimonial-four.json"
+	},
+	{
+		"name": "testimonial-five",
+		"title": "Testimonial Five",
+		"type": "registry:block",
+		"description": "A dense social-proof wall with grid fillers, patterned cards, and a long-form testimonial mosaic.",
+		"registryDependencies": [
+			"local:avatar",
+			"local:full-width-divider",
+			"local:grid-filler",
+			"local:grid-pattern"
+		],
+		"relativeUrl": "testimonial-five.json"
 	}
 ]

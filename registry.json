@@ -368,6 +368,53 @@
 			"registryDependencies": []
 		},
 		{
+			"name": "avatar",
+			"title": "Avatar",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/avatar/avatar.svelte",
+					"type": "registry:component",
+					"target": "ui/avatar/avatar.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/avatar/avatar-image.svelte",
+					"type": "registry:component",
+					"target": "ui/avatar/avatar-image.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/avatar/avatar-fallback.svelte",
+					"type": "registry:component",
+					"target": "ui/avatar/avatar-fallback.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/avatar/index.ts",
+					"type": "registry:file",
+					"target": "ui/avatar/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["bits-ui"]
+		},
+		{
+			"name": "mask-line",
+			"title": "Mask line",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/mask-line/mask-line.svelte",
+					"type": "registry:component",
+					"target": "ui/mask-line/mask-line.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/mask-line/index.ts",
+					"type": "registry:file",
+					"target": "ui/mask-line/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
 			"name": "portal",
 			"title": "Portal",
 			"type": "registry:block",
@@ -1851,6 +1898,98 @@
 			],
 			"registryDependencies": ["button"],
 			"dependencies": ["@lucide/svelte", "@number-flow/svelte", "motion-sv"]
+		},
+		{
+			"name": "testimonial-one",
+			"title": "Testimonial One",
+			"type": "registry:block",
+			"description": "A centered single testimonial with brand mark, compact author block, and soft editorial framing.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-one.svelte"
+				}
+			],
+			"registryDependencies": ["local:avatar"]
+		},
+		{
+			"name": "testimonial-two",
+			"title": "Testimonial Two",
+			"type": "registry:block",
+			"description": "A framed testimonial layout with masked divider rails, asymmetrical composition, and avatar-led emphasis.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-two.svelte"
+				}
+			],
+			"registryDependencies": ["local:avatar", "local:mask-line"]
+		},
+		{
+			"name": "testimonial-three",
+			"title": "Testimonial Three",
+			"type": "registry:block",
+			"description": "A three-card testimonial grid with decorative corners, lifted middle emphasis, and richer profile metadata.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-card.svelte"
+				}
+			],
+			"registryDependencies": ["local:avatar", "local:decor-icon"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "testimonial-four",
+			"title": "Testimonial Four",
+			"type": "registry:block",
+			"description": "A split testimonial layout with divider rails, dense quote cards, and a stronger editorial grid.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-four/testimonial-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-four/testimonial-four.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-four/testimonial-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-four/testimonial-card.svelte"
+				}
+			],
+			"registryDependencies": ["local:full-width-divider"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "testimonial-five",
+			"title": "Testimonial Five",
+			"type": "registry:block",
+			"description": "A dense social-proof wall with grid fillers, patterned cards, and a long-form testimonial mosaic.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-five/testimonial-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-five/testimonial-five.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-five/testimonial-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-five/testimonial-card.svelte"
+				}
+			],
+			"registryDependencies": [
+				"local:avatar",
+				"local:full-width-divider",
+				"local:grid-filler",
+				"local:grid-pattern"
+			]
 		}
 	]
 }
