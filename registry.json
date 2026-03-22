@@ -1990,6 +1990,26 @@
 				"local:grid-filler",
 				"local:grid-pattern"
 			]
+		},
+		{
+			"name": "image-gallery-one",
+			"title": "Image Gallery One",
+			"type": "registry:block",
+			"description": "A responsive editorial gallery with staggered aspect ratios, lazy-loaded media, and a clean masonry-style rhythm.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/image-gallery/image-gallery.svelte",
+					"type": "registry:component",
+					"target": "efferd/image-gallery/image-gallery.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/image-gallery/lazy-image.svelte",
+					"type": "registry:component",
+					"target": "efferd/image-gallery/lazy-image.svelte"
+				}
+			],
+			"registryDependencies": ["local:aspect-ratio"],
+			"dependencies": ["motion-sv"]
 		}
 	]
 }

@@ -980,5 +980,18 @@
 			"local:grid-pattern"
 		],
 		"relativeUrl": "testimonial-five.json"
+	},
+	{
+		"name": "image-gallery-one",
+		"title": "Image Gallery One",
+		"type": "registry:block",
+		"description": "A responsive editorial gallery with staggered aspect ratios, lazy-loaded media, and a clean masonry-style rhythm.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [
+			"local:aspect-ratio"
+		],
+		"relativeUrl": "image-gallery-one.json"
 	}
 ]
