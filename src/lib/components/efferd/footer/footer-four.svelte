@@ -25,11 +25,11 @@
 			group: {
 				title: "About Us",
 				links: [
-					{ title: "Pricing", href: "/pricing" },
-					{ title: "Testimonials", href: "/testimonials" },
-					{ title: "FAQs", href: "/faqs" },
-					{ title: "Contact Us", href: "/contact" },
-					{ title: "Blog", href: "/blog" }
+					{ title: "Pricing", href: "/" },
+					{ title: "Testimonials", href: "/" },
+					{ title: "FAQs", href: "/" },
+					{ title: "Contact Us", href: "/" },
+					{ title: "Blog", href: "/" }
 				]
 			}
 		},
@@ -38,11 +38,11 @@
 			group: {
 				title: "Support",
 				links: [
-					{ title: "Help Center", href: "/help" },
-					{ title: "Terms", href: "/terms" },
-					{ title: "Privacy", href: "/privacy" },
-					{ title: "Security", href: "/security" },
-					{ title: "Cookie Policy", href: "/cookies" }
+					{ title: "Help Center", href: "/" },
+					{ title: "Terms", href: "/" },
+					{ title: "Privacy", href: "/" },
+					{ title: "Security", href: "/" },
+					{ title: "Cookie Policy", href: "/" }
 				]
 			}
 		},
@@ -51,11 +51,11 @@
 			group: {
 				title: "Community",
 				links: [
-					{ title: "Forum", href: "/forum" },
-					{ title: "Events", href: "/events" },
-					{ title: "Partners", href: "/partners" },
-					{ title: "Affiliates", href: "/affiliates" },
-					{ title: "Career", href: "/careers" }
+					{ title: "Forum", href: "/" },
+					{ title: "Events", href: "/" },
+					{ title: "Partners", href: "/" },
+					{ title: "Affiliates", href: "/" },
+					{ title: "Career", href: "/" }
 				]
 			}
 		},
@@ -64,11 +64,11 @@
 			group: {
 				title: "Press",
 				links: [
-					{ title: "Investors", href: "/investors" },
-					{ title: "Terms of Use", href: "/terms" },
-					{ title: "Privacy Policy", href: "/privacy" },
-					{ title: "Cookie Policy", href: "/cookies" },
-					{ title: "Legal", href: "/legal" }
+					{ title: "Investors", href: "/" },
+					{ title: "Terms of Use", href: "/" },
+					{ title: "Privacy Policy", href: "/" },
+					{ title: "Cookie Policy", href: "/" },
+					{ title: "Legal", href: "/" }
 				]
 			}
 		}

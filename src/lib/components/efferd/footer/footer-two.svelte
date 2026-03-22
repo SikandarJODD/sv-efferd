@@ -26,46 +26,46 @@
 	const company: FooterLink[] = [
 		{
 			title: "About Us",
-			href: "/about"
+			href: "/"
 		},
 		{
 			title: "Careers",
-			href: "/careers"
+			href: "/"
 		},
 		{
 			title: "Brand assets",
-			href: "/brand"
+			href: "/"
 		},
 		{
 			title: "Privacy Policy",
-			href: "/privacy"
+			href: "/"
 		},
 		{
 			title: "Terms of Service",
-			href: "/terms"
+			href: "/"
 		}
 	];
 
 	const resources: FooterLink[] = [
 		{
 			title: "Blog",
-			href: "/blog"
+			href: "/"
 		},
 		{
 			title: "Help Center",
-			href: "/help"
+			href: "/"
 		},
 		{
 			title: "Contact Support",
-			href: "/support"
+			href: "/"
 		},
 		{
 			title: "Community",
-			href: "/community"
+			href: "/"
 		},
 		{
 			title: "Security",
-			href: "/security"
+			href: "/"
 		}
 	];
 

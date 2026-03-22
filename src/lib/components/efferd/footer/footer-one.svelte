@@ -17,12 +17,12 @@
 	};
 
 	const navLinks: NavLink[] = [
-		{ href: "/#features", label: "Features" },
-		{ href: "/#blog", label: "Blog" },
-		{ href: "/#about", label: "About" },
-		{ href: "/#contact", label: "Contact" },
-		{ href: "/licence", label: "Licence" },
-		{ href: "/privacy", label: "Privacy" }
+		{ href: "/", label: "Features" },
+		{ href: "/", label: "Blog" },
+		{ href: "/", label: "About" },
+		{ href: "/", label: "Contact" },
+		{ href: "/", label: "Licence" },
+		{ href: "/", label: "Privacy" }
 	];
 
 	const socialLinks: SocialLink[] = [

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from "$app/state";
 	import { scrollY } from "svelte/reactivity/window";
 	import Button from "$lib/components/ui/button/button.svelte";
 	import type { Snippet } from "svelte";
@@ -7,15 +8,18 @@
 
 	let { children }: { children: Snippet } = $props();
 	let visible = $derived(typeof scrollY.current === "undefined" ? 600 : scrollY.current > 1200);
+	let isBlocksRoot = $derived(page.url.pathname === "/blocks");
 </script>
 
 <div>
-	<CategoryNavigation />
-	<section>
-		<div
-			class="h-6 w-full bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] opacity-35"
-		></div>
-	</section>
+	{#if !isBlocksRoot}
+		<CategoryNavigation />
+		<section>
+			<div
+				class="h-6 w-full bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] opacity-35"
+			></div>
+		</section>
+	{/if}
 	{@render children()}
 	{#if visible}
 		{@render scrollToTop()}

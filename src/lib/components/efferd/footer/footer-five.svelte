@@ -26,48 +26,48 @@
 		{
 			title: "Company",
 			links: [
-				{ href: "/engineering-blog", label: "Engineering Blog" },
-				{ href: "/marketplace", label: "Marketplace" },
-				{ href: "/whats-new", label: "What's New" },
-				{ href: "/about", label: "About" },
-				{ href: "/press", label: "Press" },
-				{ href: "/careers", label: "Careers" },
-				{ href: "/social-good", label: "Social Good" }
+				{ href: "/", label: "Engineering Blog" },
+				{ href: "/", label: "Marketplace" },
+				{ href: "/", label: "What's New" },
+				{ href: "/", label: "About" },
+				{ href: "/", label: "Press" },
+				{ href: "/", label: "Careers" },
+				{ href: "/", label: "Social Good" }
 			]
 		},
 		{
 			title: "Community",
 			links: [
-				{ href: "/enterprise", label: "Linktree for Enterprise" },
-				{ href: "/reports/2023", label: "2023 Creator Report" },
-				{ href: "/reports/2022", label: "2022 Creator Report" },
-				{ href: "/charities", label: "Charities" },
-				{ href: "/trending", label: "What's Trending" },
-				{ href: "/creator-directory", label: "Creator Profile Directory" },
-				{ href: "/templates", label: "Explore Templates" }
+				{ href: "/", label: "Linktree for Enterprise" },
+				{ href: "/", label: "2023 Creator Report" },
+				{ href: "/", label: "2022 Creator Report" },
+				{ href: "/", label: "Charities" },
+				{ href: "/", label: "What's Trending" },
+				{ href: "/", label: "Creator Profile Directory" },
+				{ href: "/", label: "Explore Templates" }
 			]
 		},
 		{
 			title: "Support",
 			links: [
-				{ href: "/help-topics", label: "Help Topics" },
-				{ href: "/getting-started", label: "Getting Started" },
-				{ href: "/linoree-pro", label: "Linoree Pro" },
-				{ href: "/features-guides", label: "Features & How-tos" },
-				{ href: "/faqs", label: "FAQs" },
-				{ href: "/report", label: "Report a Violation" }
+				{ href: "/", label: "Help Topics" },
+				{ href: "/", label: "Getting Started" },
+				{ href: "/", label: "Linoree Pro" },
+				{ href: "/", label: "Features & How-tos" },
+				{ href: "/", label: "FAQs" },
+				{ href: "/", label: "Report a Violation" }
 			]
 		},
 		{
 			title: "Legal",
 			links: [
-				{ href: "/terms", label: "Terms & Conditions" },
-				{ href: "/privacy", label: "Privacy Notice" },
-				{ href: "/cookies", label: "Cookie Notice" },
-				{ href: "/trust-center", label: "Trust Center" },
-				{ href: "/cookie-preferences", label: "Cookie Preferences" },
-				{ href: "/transparency-report", label: "Transparency Report" },
-				{ href: "/law-enforcement-access", label: "Law Enforcement Access Policy" }
+				{ href: "/", label: "Terms & Conditions" },
+				{ href: "/", label: "Privacy Notice" },
+				{ href: "/", label: "Cookie Notice" },
+				{ href: "/", label: "Trust Center" },
+				{ href: "/", label: "Cookie Preferences" },
+				{ href: "/", label: "Transparency Report" },
+				{ href: "/", label: "Law Enforcement Access Policy" }
 			]
 		}
 	];
