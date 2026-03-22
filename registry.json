@@ -327,7 +327,7 @@
 					"target": "efferd/not-found/not-found-two.svelte"
 				}
 			],
-			"registryDependencies": ["button", "empty"],
+			"registryDependencies": ["button", "local:full-width-divider", "empty"],
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
@@ -433,7 +433,7 @@
 				},
 				{
 					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/x.svelte"
 				}
 			],
@@ -453,12 +453,12 @@
 				},
 				{
 					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/github.svelte"
 				},
 				{
 					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/x.svelte"
 				}
 			],
@@ -570,17 +570,17 @@
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				},
 				{
 					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/google.svelte"
 				},
 				{
 					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/github.svelte"
 				}
 			],
@@ -600,12 +600,12 @@
 				},
 				{
 					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/google.svelte"
 				},
 				{
 					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/github.svelte"
 				}
 			],
@@ -630,17 +630,17 @@
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				},
 				{
 					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/google.svelte"
 				},
 				{
 					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/github.svelte"
 				}
 			],
@@ -660,12 +660,12 @@
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				},
 				{
 					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/google.svelte"
 				}
 			],
@@ -690,22 +690,22 @@
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				},
 				{
 					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/google.svelte"
 				},
 				{
 					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/github.svelte"
 				},
 				{
 					"path": "src/lib/svgs/apple.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/apple.svelte"
 				}
 			],
@@ -893,17 +893,17 @@
 				},
 				{
 					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/github.svelte"
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				},
 				{
 					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/x.svelte"
 				}
 			],
@@ -922,12 +922,12 @@
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				},
 				{
 					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/x.svelte"
 				}
 			],
@@ -952,7 +952,7 @@
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -992,17 +992,17 @@
 				},
 				{
 					"path": "src/lib/svgs/apple.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/apple.svelte"
 				},
 				{
 					"path": "src/lib/svgs/play-store.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/play-store.svelte"
 				},
 				{
 					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/x.svelte"
 				}
 			],
@@ -1027,7 +1027,7 @@
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1159,12 +1159,11 @@
 				},
 				{
 					"path": "src/lib/hooks/use-scroll.svelte.ts",
-					"type": "registry:file",
-					"target": "hooks/use-scroll.svelte.ts"
+					"type": "registry:hook"
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1209,12 +1208,11 @@
 				},
 				{
 					"path": "src/lib/hooks/use-scroll.svelte.ts",
-					"type": "registry:file",
-					"target": "hooks/use-scroll.svelte.ts"
+					"type": "registry:hook"
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1280,12 +1278,11 @@
 				},
 				{
 					"path": "src/lib/hooks/use-scroll.svelte.ts",
-					"type": "registry:file",
-					"target": "hooks/use-scroll.svelte.ts"
+					"type": "registry:hook"
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1320,12 +1317,11 @@
 				},
 				{
 					"path": "src/lib/hooks/use-scroll.svelte.ts",
-					"type": "registry:file",
-					"target": "hooks/use-scroll.svelte.ts"
+					"type": "registry:hook"
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1355,12 +1351,11 @@
 				},
 				{
 					"path": "src/lib/hooks/use-scroll.svelte.ts",
-					"type": "registry:file",
-					"target": "hooks/use-scroll.svelte.ts"
+					"type": "registry:hook"
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1405,12 +1400,11 @@
 				},
 				{
 					"path": "src/lib/hooks/use-scroll.svelte.ts",
-					"type": "registry:file",
-					"target": "hooks/use-scroll.svelte.ts"
+					"type": "registry:hook"
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1440,12 +1434,11 @@
 				},
 				{
 					"path": "src/lib/hooks/use-scroll.svelte.ts",
-					"type": "registry:file",
-					"target": "hooks/use-scroll.svelte.ts"
+					"type": "registry:hook"
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1490,12 +1483,11 @@
 				},
 				{
 					"path": "src/lib/hooks/use-scroll.svelte.ts",
-					"type": "registry:file",
-					"target": "hooks/use-scroll.svelte.ts"
+					"type": "registry:hook"
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:component",
+					"type": "registry:lib",
 					"target": "svgs/logo.svelte"
 				}
 			],

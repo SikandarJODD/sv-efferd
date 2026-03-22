@@ -12,6 +12,7 @@
 	],
 	"registryDependencies": [
 		"button",
+		"./full-width-divider.json",
 		"empty"
 	],
 	"files": [
