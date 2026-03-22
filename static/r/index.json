@@ -63,6 +63,23 @@
 		"relativeUrl": "textarea.json"
 	},
 	{
+		"name": "grid-filler",
+		"title": "Grid filler",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "grid-filler.json"
+	},
+	{
+		"name": "aspect-ratio",
+		"title": "Aspect ratio",
+		"type": "registry:block",
+		"dependencies": [
+			"bits-ui"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "aspect-ratio.json"
+	},
+	{
 		"name": "cta-one",
 		"title": "CTA One",
 		"type": "registry:block",
@@ -276,5 +293,37 @@
 			"local:textarea"
 		],
 		"relativeUrl": "contact-five.json"
+	},
+	{
+		"name": "blog-one",
+		"title": "Blog One",
+		"type": "registry:block",
+		"description": "A vertical editorial list with full-width dividers and compact summaries.",
+		"registryDependencies": [
+			"local:full-width-divider"
+		],
+		"relativeUrl": "blog-one.json"
+	},
+	{
+		"name": "blog-two",
+		"title": "Blog Two",
+		"type": "registry:block",
+		"description": "A structured blog grid with metadata rows and filler cells for balance.",
+		"registryDependencies": [
+			"local:full-width-divider",
+			"local:grid-filler"
+		],
+		"relativeUrl": "blog-two.json"
+	},
+	{
+		"name": "blog-three",
+		"title": "Blog Three",
+		"type": "registry:block",
+		"description": "A card-based blog grid with media thumbnails and richer reading metadata.",
+		"registryDependencies": [
+			"local:full-width-divider",
+			"local:aspect-ratio"
+		],
+		"relativeUrl": "blog-three.json"
 	}
 ]

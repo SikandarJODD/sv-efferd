@@ -1,0 +1,18 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "grid-filler",
+	"title": "Grid filler",
+	"type": "registry:block",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { cn } from '$UTILS$';\r\n\timport type { HTMLAttributes } from 'svelte/elements';\r\n\r\n\ttype GridFillerProps = HTMLAttributes<HTMLDivElement> & {\r\n\t\t/**\r\n\t\t * The number of items in the grid.\r\n\t\t */\r\n\t\ttotalItems: number;\r\n\t\t/**\r\n\t\t * Number of columns for small screens.\r\n\t\t */\r\n\t\tsmColumns?: number;\r\n\t\t/**\r\n\t\t * Number of columns for medium screens.\r\n\t\t */\r\n\t\tmdColumns?: number;\r\n\t\t/**\r\n\t\t * Number of columns for large screens.\r\n\t\t */\r\n\t\tlgColumns?: number;\r\n\t};\r\n\r\n\tlet {\r\n\t\ttotalItems,\r\n\t\tsmColumns = 2,\r\n\t\tmdColumns = 0,\r\n\t\tlgColumns = 0,\r\n\t\tclass: className = '',\r\n\t\t...rest\r\n\t}: GridFillerProps = $props();\r\n\r\n\tlet actualMdColumns = $derived(mdColumns ?? smColumns);\r\n\tlet actualLgColumns = $derived(lgColumns ?? actualMdColumns);\r\n\r\n\t// We need enough iterations to cover the maximum possible remainder.\r\n\t// For N columns, the remainder can be at most N-1.\r\n\tlet maxFillers = $derived(Math.max(smColumns, actualMdColumns, actualLgColumns) - 1);\r\n</script>\r\n\r\n{#each { length: maxFillers } as _, i}\r\n\t{@const neededSm = (smColumns - (totalItems % smColumns)) % smColumns}\r\n\t{@const neededMd = (actualMdColumns - (totalItems % actualMdColumns)) % actualMdColumns}\r\n\t{@const neededLg = (actualLgColumns - (totalItems % actualLgColumns)) % actualLgColumns}\r\n\t{@const showSm = i < neededSm ? 'sm:block' : 'sm:hidden'}\r\n\t{@const showMd = i < neededMd ? 'md:block' : 'md:hidden'}\r\n\t{@const showLg = i < neededLg ? 'lg:block' : 'lg:hidden'}\r\n\r\n\t<!-- {#if showSm === 'sm:hidden' && showMd === 'md:hidden' && showLg === 'lg:hidden'}\r\n\t\t<div></div>\r\n\t{/if} -->\r\n\t<div class={cn('pointer-events-none hidden', showSm, showMd, showLg, className)} {...rest}></div>\r\n{/each}\r\n",
+			"type": "registry:component",
+			"target": "ui/grid-filler/grid-filler.svelte"
+		},
+		{
+			"content": "import GridFiller from \"./grid-filler.svelte\";\r\nexport { GridFiller };",
+			"type": "registry:file",
+			"target": "ui/grid-filler/index.ts"
+		}
+	]
+}

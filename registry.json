@@ -261,6 +261,43 @@
 			"registryDependencies": []
 		},
 		{
+			"name": "grid-filler",
+			"title": "Grid filler",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/grid-filler/grid-filler.svelte",
+					"type": "registry:component",
+					"target": "ui/grid-filler/grid-filler.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/grid-filler/index.ts",
+					"type": "registry:file",
+					"target": "ui/grid-filler/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "aspect-ratio",
+			"title": "Aspect ratio",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/aspect-ratio/aspect-ratio.svelte",
+					"type": "registry:component",
+					"target": "ui/aspect-ratio/aspect-ratio.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/aspect-ratio/index.ts",
+					"type": "registry:file",
+					"target": "ui/aspect-ratio/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["bits-ui"]
+		},
+		{
 			"name": "cta-one",
 			"title": "CTA One",
 			"type": "registry:block",
@@ -539,6 +576,63 @@
 				"local:textarea"
 			],
 			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "blog-one",
+			"title": "Blog One",
+			"type": "registry:block",
+			"description": "A vertical editorial list with full-width dividers and compact summaries.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/blogs/blog-one/blog-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/blogs/blog-one/blog-one.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/blogs/blog-one/blog-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/blogs/blog-one/blog-card.svelte"
+				}
+			],
+			"registryDependencies": ["local:full-width-divider"]
+		},
+		{
+			"name": "blog-two",
+			"title": "Blog Two",
+			"type": "registry:block",
+			"description": "A structured blog grid with metadata rows and filler cells for balance.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/blogs/blog-two/blog-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/blogs/blog-two/blog-two.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/blogs/blog-two/blog-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/blogs/blog-two/blog-card.svelte"
+				}
+			],
+			"registryDependencies": ["local:full-width-divider", "local:grid-filler"]
+		},
+		{
+			"name": "blog-three",
+			"title": "Blog Three",
+			"type": "registry:block",
+			"description": "A card-based blog grid with media thumbnails and richer reading metadata.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/blogs/blog-three/blog-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/blogs/blog-three/blog-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/blogs/blog-three/blog-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/blogs/blog-three/blog-card.svelte"
+				}
+			],
+			"registryDependencies": ["local:full-width-divider", "local:aspect-ratio"]
 		}
 	]
 }
