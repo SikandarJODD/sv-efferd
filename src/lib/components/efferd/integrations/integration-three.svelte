@@ -107,7 +107,7 @@
 			<p class="text-sm text-muted-foreground md:text-base">
 				Connect your favorite tools with our growing library of integrations.
 			</p>
-			<Button size="sm" href="/integrations">Explore integrations</Button>
+			<Button size="sm" href="/">Explore integrations</Button>
 		</div>
 	</div>
 

@@ -73,12 +73,12 @@
 	const socialLinks: SocialLink[] = [
 		{
 			icon: GithubLogo,
-			href: "#",
+			href: "/",
 			label: "GitHub"
 		},
 		{
 			icon: XLogo,
-			href: "#",
+			href: "/",
 			label: "Twitter"
 		}
 	];

@@ -20,37 +20,37 @@ import type { LinkItemType } from "./types";
 let productLinks: LinkItemType[] = [
 	{
 		label: "Website Builder",
-		href: "#",
+		href: "/",
 		description: "Create responsive websites with ease",
 		icon: GlobeIcon
 	},
 	{
 		label: "Cloud Platform",
-		href: "#",
+		href: "/",
 		description: "Deploy and scale apps in the cloud",
 		icon: LayersIcon
 	},
 	{
 		label: "Team Collaboration",
-		href: "#",
+		href: "/",
 		description: "Tools to help your teams work better together",
 		icon: UserPlusIcon
 	},
 	{
 		label: "Analytics",
-		href: "#",
+		href: "/",
 		description: "Track and analyze your website traffic",
 		icon: ChartArea
 	},
 	{
 		label: "Integrations",
-		href: "#",
+		href: "/",
 		description: "Connect your apps and services",
 		icon: PlugIcon
 	},
 	{
 		label: "API",
-		href: "#",
+		href: "/",
 		description: "Build custom integrations with our API",
 		icon: CodeIcon
 	}
@@ -59,19 +59,19 @@ let productLinks: LinkItemType[] = [
 let companyLinks: LinkItemType[] = [
 	{
 		label: "About Us",
-		href: "#",
+		href: "/",
 		description: "Learn more about our story and team",
 		icon: UsersIcon
 	},
 	{
 		label: "Customer Stories",
-		href: "#",
+		href: "/",
 		description: "See how we've helped our clients succeed",
 		icon: StarIcon
 	},
 	{
 		label: "Partnerships",
-		href: "#",
+		href: "/",
 		icon: HandshakeIcon,
 		description: "Collaborate with us for mutual growth"
 	}
@@ -80,27 +80,27 @@ let companyLinks: LinkItemType[] = [
 let companyLinks2: LinkItemType[] = [
 	{
 		label: "Terms of Service",
-		href: "#",
+		href: "/",
 		icon: FileTextIcon
 	},
 	{
 		label: "Privacy Policy",
-		href: "#",
+		href: "/",
 		icon: ShieldIcon
 	},
 	{
 		label: "Refund Policy",
-		href: "#",
+		href: "/",
 		icon: RotateCcwIcon
 	},
 	{
 		label: "Blog",
-		href: "#",
+		href: "/",
 		icon: LeafIcon
 	},
 	{
 		label: "Help Center",
-		href: "#",
+		href: "/",
 		icon: HandHelpingIcon
 	}
 ];

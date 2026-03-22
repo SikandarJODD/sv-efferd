@@ -17,9 +17,9 @@
 
 	let {
 		class: className = "",
-		homeHref = "#",
-		termsHref = "#",
-		privacyHref = "#",
+		homeHref = "/",
+		termsHref = "/",
+		privacyHref = "/",
 		...restProps
 	}: AuthOneProps = $props();
 </script>

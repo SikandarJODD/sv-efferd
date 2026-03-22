@@ -5,12 +5,12 @@
 	"type": "registry:block",
 	"files": [
 		{
-			"content": "<script lang=\"ts\">\r\n\timport { cn } from '$UTILS$';\r\n\timport type { HTMLAttributes } from 'svelte/elements';\r\n\r\n\ttype MaskLineProps = HTMLAttributes<HTMLDivElement> & {\r\n\t\torientation?: 'vertical' | 'horizontal';\r\n\t\tclass?: string;\r\n\t};\r\n\tlet { orientation = 'vertical', class: className = '', ...props }: MaskLineProps = $props();\r\n</script>\r\n\r\n<div\r\n\taria-hidden=\"true\"\r\n\tclass={cn(\r\n\t\t'absolute bg-foreground/20',\r\n\t\torientation === 'vertical' && '-inset-y-1/2 w-px mask-t-from-80% mask-b-from-80%',\r\n\t\torientation === 'horizontal' && '-inset-x-1/2 h-px mask-r-from-80% mask-l-from-80%',\r\n\t\tclassName\r\n\t)}\r\n\t{...props}\r\n></div>\r\n",
+			"content": "<script lang=\"ts\">\n\timport { cn } from \"$UTILS$\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\n\ttype MaskLineProps = HTMLAttributes<HTMLDivElement> & {\n\t\torientation?: \"vertical\" | \"horizontal\";\n\t\tclass?: string;\n\t};\n\tlet { orientation = \"vertical\", class: className = \"\", ...props }: MaskLineProps = $props();\n</script>\n\n<div\n\taria-hidden=\"true\"\n\tclass={cn(\n\t\t\"absolute bg-foreground/20\",\n\t\torientation === \"vertical\" && \"-inset-y-1/2 w-px mask-t-from-80% mask-b-from-80%\",\n\t\torientation === \"horizontal\" && \"-inset-x-1/2 h-px mask-r-from-80% mask-l-from-80%\",\n\t\tclassName\n\t)}\n\t{...props}\n></div>\n",
 			"type": "registry:component",
 			"target": "ui/mask-line/mask-line.svelte"
 		},
 		{
-			"content": "import MaskLine from './mask-line.svelte';\r\n\r\nexport { MaskLine };\r\n",
+			"content": "import MaskLine from \"./mask-line.svelte\";\n\nexport { MaskLine };\n",
 			"type": "registry:file",
 			"target": "ui/mask-line/index.ts"
 		}

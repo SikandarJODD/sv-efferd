@@ -92,7 +92,7 @@
 		</div>
 	</div>
 
-	<Button href="/integrations" class="rounded-full px-5">
+	<Button href="/" class="rounded-full px-5">
 		See all integrations
 		<ArrowUpRightIcon data-icon="inline-end" />
 	</Button>

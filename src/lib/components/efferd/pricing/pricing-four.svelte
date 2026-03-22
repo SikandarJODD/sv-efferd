@@ -52,7 +52,7 @@
 			],
 			btn: {
 				text: "Start Your Free Trial",
-				href: "#"
+				href: "/"
 			}
 		},
 		{
@@ -74,7 +74,7 @@
 			],
 			btn: {
 				text: "Get started",
-				href: "#"
+				href: "/"
 			}
 		},
 		{
@@ -95,7 +95,7 @@
 			],
 			btn: {
 				text: "Contact team",
-				href: "#"
+				href: "/"
 			}
 		}
 	];

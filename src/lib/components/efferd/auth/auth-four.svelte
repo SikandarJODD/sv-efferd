@@ -20,9 +20,9 @@
 
 	let {
 		class: className = "",
-		logoHref = "#",
-		privacyHref = "#",
-		termsHref = "#",
+		logoHref = "/",
+		privacyHref = "/",
+		termsHref = "/",
 		emailPlaceholder = "your.email@example.com",
 		emailAriaLabel = "Email address",
 		...restProps

@@ -18,8 +18,8 @@
 
 	let {
 		class: className = "",
-		termsHref = "#",
-		privacyHref = "#",
+		termsHref = "/",
+		privacyHref = "/",
 		emailPlaceholder = "your.email@example.com",
 		...restProps
 	}: AuthTwoProps = $props();

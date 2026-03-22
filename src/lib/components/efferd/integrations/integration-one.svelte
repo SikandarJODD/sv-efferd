@@ -68,7 +68,7 @@
 	{/each}
 
 	<div class="relative flex items-center justify-center p-1 sm:col-span-2 lg:col-span-4">
-		<Button href="/integrations" class="group text-xs" size="sm" variant="link">
+		<Button href="/" class="group text-xs" size="sm" variant="link">
 			View all integrations
 			<ArrowUpRightIcon data-icon="inline-end" />
 		</Button>

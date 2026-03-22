@@ -21,12 +21,12 @@
 			description: "For early-stage startups",
 			featuresTitle: "FREE, FOREVER:",
 			features: ["10 customers", "10 documents", "10 invoices", "Auto-updated taxes"],
-			href: "#"
+			href: "/"
 		},
 		{
 			name: "SCALE",
 			isPopular: true,
-			href: "#",
+			href: "/",
 			price: "$8",
 			period: "month",
 			description: "For fast-growing teams",

@@ -104,7 +104,7 @@
 
 						<Button
 							class="w-full"
-							href="#"
+							href="/"
 							variant={plan.featured ? "default" : "outline"}
 						>
 							{plan.cta}

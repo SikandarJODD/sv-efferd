@@ -23,7 +23,7 @@
 					Go Home
 				</Button>
 
-				<Button href="/explore" variant="outline">
+				<Button href="/" variant="outline">
 					<CompassIcon data-icon="inline-start" />{" "}
 					Explore
 				</Button>

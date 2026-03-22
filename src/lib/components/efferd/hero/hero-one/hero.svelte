@@ -43,7 +43,7 @@
 
 		<a
 			class="group mx-auto flex w-fit animate-in items-center gap-3 rounded-full border bg-card px-3 py-1 shadow transition-all delay-500 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in"
-			href="#link"
+			href="/"
 		>
 			<Rocket class="size-3 text-muted-foreground" />
 			<span class="text-xs">shipped new features!</span>
@@ -70,11 +70,11 @@
 		<div
 			class="flex animate-in flex-row flex-wrap items-center justify-center gap-3 pt-2 delay-300 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in"
 		>
-			<Button class="rounded-full" href="#book-a-call" size="lg" variant="secondary">
+			<Button class="rounded-full" href="/" size="lg" variant="secondary">
 				<PhoneCall class="size-4" />
 				Book a Call
 			</Button>
-			<Button class="rounded-full" href="#get-started" size="lg">
+			<Button class="rounded-full" href="/" size="lg">
 				Get started
 				<ArrowRight class="size-4" />
 			</Button>

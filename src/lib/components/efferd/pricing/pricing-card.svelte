@@ -29,7 +29,7 @@
 		period,
 		original,
 		badge,
-		href = "#",
+		href = "/",
 		featured = false,
 		buttonLabel = "Get Started",
 		buttonVariant = "outline",

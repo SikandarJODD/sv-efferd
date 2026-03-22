@@ -26,14 +26,14 @@
 			title: "Send us DM",
 			description: "Send us a direct message on X for quick answers.",
 			icon: XLogo,
-			href: "#",
+			href: "/",
 			label: "@efferdui"
 		},
 		{
 			title: "Join the community",
 			description: "Join our community to connect with other users.",
 			icon: Users,
-			href: "#",
+			href: "/",
 			label: "Join Discord"
 		}
 	];

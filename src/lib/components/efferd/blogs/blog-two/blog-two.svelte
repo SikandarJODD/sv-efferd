@@ -20,7 +20,7 @@
 			author: "Sarah Chen",
 			description:
 				"We dive deep into modern UI/UX fundamentals and explore how small changes can make a massive impact on user retention.",
-			href: "#"
+			href: "/"
 		},
 		{
 			title: "Letter Club: An Ode to the Slow Web",
@@ -29,7 +29,7 @@
 			author: "Mike Allyn",
 			description:
 				"In a world of instant gratification, we explore the beauty of thoughtful, long-form content and meaningful connections over time.",
-			href: "#"
+			href: "/"
 		},
 		{
 			title: "Carve Out Space for Opportunity and Coffee",
@@ -38,7 +38,7 @@
 			author: "Jessica Doi",
 			description:
 				"Taking a break is work. Learn how simple rituals like a morning coffee can boost your creativity and productivity.",
-			href: "#"
+			href: "/"
 		},
 		{
 			title: "Building Modern Applications with Shadcn UI Components",
@@ -47,7 +47,7 @@
 			author: "Tom Cook",
 			description:
 				"A comprehensive guide to leveraging Shadcn UI to build accessible, customizable, and beautiful user interfaces with incredible speed.",
-			href: "#"
+			href: "/"
 		},
 		{
 			title: "Fesgin: Bridging The Gap Between Design and Code",
@@ -56,7 +56,7 @@
 			author: "David Park",
 			description:
 				"How designers and developers can collaborate more effectively to bridge the gap between creative vision and technical implementation.",
-			href: "#"
+			href: "/"
 		},
 		{
 			title: "The Art of Simplicity in User Interface Design",
@@ -65,7 +65,7 @@
 			author: "Emma Wilson",
 			description:
 				"Discover how minimalism in design leads to clearer communication and a more intuitive user experience, focusing on what matters.",
-			href: "#"
+			href: "/"
 		},
 		{
 			title: "Why Web Performance Matters For Your Business Growth",
@@ -74,7 +74,7 @@
 			author: "Chris Martin",
 			description:
 				"We discuss techniques for improving web performance, from lazy loading to code splitting, ensuring your application runs smoothly.",
-			href: "#"
+			href: "/"
 		},
 		{
 			title: "Practicing Digital Well-being in an Always-On World",
@@ -83,7 +83,7 @@
 			author: "Olivia Kim",
 			description:
 				"Strategies for maintaining a healthy relationship with digital tools, setting boundaries, and ensuring technology serves us rather than consumes us.",
-			href: "#"
+			href: "/"
 		}
 	];
 </script>

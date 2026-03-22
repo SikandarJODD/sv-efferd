@@ -1,15 +1,15 @@
 let navLinks = [
 	{
 		label: "Features",
-		href: "#"
+		href: "/"
 	},
 	{
 		label: "Pricing",
-		href: "#"
+		href: "/"
 	},
 	{
 		label: "About",
-		href: "#"
+		href: "/"
 	}
 ];
 

@@ -24,10 +24,10 @@
 
 	let {
 		class: className = "",
-		homeHref = "#",
-		logoHref = "#",
-		termsHref = "#",
-		privacyHref = "#",
+		homeHref = "/",
+		logoHref = "/",
+		termsHref = "/",
+		privacyHref = "/",
 		emailPlaceholder = "your.email@example.com",
 		quoteText = '"This Platform has helped me to save time and serve my clients faster than ever before."',
 		quoteAuthor = "~ Ali Hassan",
