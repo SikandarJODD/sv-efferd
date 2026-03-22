@@ -324,7 +324,7 @@ export const heroBlocks: BlockShowcaseItem[] = [
 		previewComponent: HeroOnePreview,
 		previewHref: "/preview/hero/one",
 		previewMode: "iframe",
-		previewHeight: 1180,
+		previewHeight: 820,
 		installId: "hero-one",
 		codeTree: createBlockCodeTree("hero-one:preview", [
 			{
@@ -361,7 +361,7 @@ export const heroBlocks: BlockShowcaseItem[] = [
 		previewComponent: HeroTwoPreview,
 		previewHref: "/preview/hero/two",
 		previewMode: "iframe",
-		previewHeight: 1280,
+		previewHeight: 860,
 		installId: "hero-two",
 		codeTree: createBlockCodeTree("hero-two:preview", [
 			{
@@ -400,7 +400,7 @@ export const heroBlocks: BlockShowcaseItem[] = [
 		previewComponent: HeroThreePreview,
 		previewHref: "/preview/hero/three",
 		previewMode: "iframe",
-		previewHeight: 1220,
+		previewHeight: 840,
 		installId: "hero-three",
 		codeTree: createBlockCodeTree("hero-three:preview", [
 			{

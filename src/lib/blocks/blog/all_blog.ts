@@ -94,7 +94,7 @@ export const blogBlocks: BlockShowcaseItem[] = [
 		description: "A structured blog grid with metadata rows and filler cells for balance.",
 		previewComponent: BlogTwo,
 		previewHref: "/preview/blog/two",
-		previewMode: "iframe",
+		previewMode: "inline",
 		installId: "blog-two",
 		codeTree: createBlockCodeTree("blog-two:component", [
 			{
@@ -119,7 +119,7 @@ export const blogBlocks: BlockShowcaseItem[] = [
 		description: "A card-based blog grid with media thumbnails and richer reading metadata.",
 		previewComponent: BlogThree,
 		previewHref: "/preview/blog/three",
-		previewMode: "iframe",
+		previewMode: "inline",
 		installId: "blog-three",
 		codeTree: createBlockCodeTree("blog-three:component", [
 			{

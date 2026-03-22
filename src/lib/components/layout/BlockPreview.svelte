@@ -27,7 +27,7 @@
 		codeTree: BlockCodeTree;
 		previewComponent: Component;
 		previewHref?: string;
-		previewMode?: "inline" | "iframe";
+		previewMode: "inline" | "iframe";
 		previewHeight?: number;
 		installId?: string;
 	}
@@ -39,7 +39,7 @@
 	const SM_SIZE = 30;
 	const MD_SIZE = 62;
 	const LG_SIZE = 82;
-	const MIN_PREVIEW_HEIGHT = 380;
+	const MIN_PREVIEW_HEIGHT = 520;
 
 	let {
 		id,
@@ -48,7 +48,7 @@
 		codeTree,
 		previewComponent: PreviewComponent,
 		previewHref,
-		previewMode = "inline",
+		previewMode,
 		previewHeight,
 		installId
 	}: BlockPreviewProps = $props();
@@ -72,9 +72,12 @@
 	}
 
 	let canOpenPreview = $derived(Boolean(previewHref));
-	let forcesIframe = $derived(Boolean(previewHref) && previewMode === "iframe");
+	let isHeroPreview = $derived(previewHref?.startsWith("/preview/hero/") ?? false);
+	let startsInIframe = $derived(Boolean(previewHref) && previewMode === "iframe");
+	let canToggleResponsivePreview = $derived(Boolean(previewHref) && previewMode === "inline");
 	let showIframeComp = $state(false);
-	let shouldRenderInIframe = $derived(Boolean(previewHref) && (forcesIframe || showIframeComp));
+	let shouldRenderInIframe = $derived(Boolean(previewHref) && (startsInIframe || showIframeComp));
+	let shouldShowIframeScrollHint = $derived(shouldRenderInIframe && isHeroPreview);
 	let resolvedIframeHeight = $derived(
 		Math.max(previewHeight ?? iframeHeight, MIN_PREVIEW_HEIGHT)
 	);
@@ -92,18 +95,21 @@
 	});
 	let canInstall = $derived(Boolean(installId));
 
-	function applyIframeScrollbarStyles(iframe: HTMLIFrameElement | null) {
+	function applyIframeScrollbarStyles(
+		iframe: HTMLIFrameElement | null,
+		{ hideScrollbar = true }: { hideScrollbar?: boolean } = {}
+	) {
 		const iframeDocument = iframe?.contentDocument;
 		if (!iframeDocument) return;
 
-		iframeDocument.documentElement.classList.add("no-scrollbar");
-		iframeDocument.body.classList.add("no-scrollbar");
+		iframeDocument.documentElement.classList.toggle("no-scrollbar", hideScrollbar);
+		iframeDocument.body.classList.toggle("no-scrollbar", hideScrollbar);
 	}
 
 	watch(
-		() => forcesIframe,
-		(isForced) => {
-			if (isForced && !showIframeComp) {
+		() => startsInIframe,
+		(shouldStartInIframe) => {
+			if (shouldStartInIframe && !showIframeComp) {
 				showIframeComp = true;
 			}
 		}
@@ -246,6 +252,12 @@
 						<span class="hidden text-sm text-muted-foreground lg:block">
 							{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}
 						</span>
+
+						{#if shouldShowIframeScrollHint}
+							<span class="hidden text-sm text-muted-foreground lg:block">
+								Scroll inside preview
+							</span>
+						{/if}
 					{/if}
 				</div>
 
@@ -380,7 +392,7 @@
 						</div>
 					{/if}
 
-					{#if canOpenPreview && !forcesIframe}
+					{#if canToggleResponsivePreview}
 						<TooltipProvider>
 							<Tooltip>
 								<TooltipTrigger>
@@ -497,7 +509,10 @@
 		</div> -->
 
 		<!-- lg:border-x -->
-		<div class="relative z-10 mx-auto max-w-7xl px-4 lg:px-0">
+		<div
+			class="relative z-10 mx-auto max-w-7xl px-4 lg:px-0"
+			style={`--preview-min-height: ${MIN_PREVIEW_HEIGHT}px;`}
+		>
 			<div class={cn("bg-white dark:bg-transparent", mode === "code" && "hidden")}>
 				{#if shouldRenderInIframe && previewHref}
 					<PaneGroup direction="horizontal">
@@ -518,13 +533,15 @@
 								bind:this={iframeRef}
 								{title}
 								height={resolvedIframeHeight}
-								class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) min-h-[380px] w-full duration-200 will-change-auto"
+								class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) min-h-(--preview-min-height) w-full duration-200 will-change-auto"
 								src={previewHref}
 								id={`block-${id}`}
 								style={`--iframe-height: ${resolvedIframeHeight}px;`}
 								onload={() => {
 									isLoading = false;
-									applyIframeScrollbarStyles(iframeRef);
+									applyIframeScrollbarStyles(iframeRef, {
+										hideScrollbar: !isHeroPreview
+									});
 
 									if (!previewHeight) {
 										const contentHeight =
@@ -565,7 +582,7 @@
 					<div data-theme={activePreviewTheme}>
 						<div
 							in:scale={{ start: 0.85 }}
-							class="theme-container min-h-[380px] w-full overflow-hidden"
+							class="theme-container min-h-(--preview-min-height) w-full overflow-hidden"
 						>
 							<PreviewComponent />
 						</div>
@@ -573,7 +590,7 @@
 				{:else}
 					<div
 						in:scale={{ start: 0.85 }}
-						class="flex min-h-[380px] w-full items-center justify-center overflow-hidden"
+						class="flex min-h-(--preview-min-height) w-full items-center justify-center overflow-hidden"
 					>
 						<PreviewComponent />
 					</div>

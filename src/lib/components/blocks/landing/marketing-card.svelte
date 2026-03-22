@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { MagicCard } from "$lib/components/magic/magic-card";
 	import type { Component } from "svelte";
 
 	interface Props {
@@ -13,15 +14,18 @@
 
 <a
 	{href}
-	class="group relative block aspect-video overflow-hidden rounded-md border border-border/80 bg-background/90 transition-[transform,background-color,border-color] duration-200 hover:-translate-y-0.5 hover:bg-card focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
-	data-sveltekit-preload-data="hover"
+	class="group relative block aspect-video rounded-xl border transition-all duration-200 hover:border-muted-foreground/40"
 	aria-label={`${title} - ${countLabel}`}
 >
-	<div
-		aria-hidden="true"
-		class="pointer-events-none absolute inset-x-0 top-0 h-20 bg-[radial-gradient(circle_at_top,color-mix(in_oklab,var(--foreground)_7%,transparent)_0%,transparent_75%)] opacity-0 transition-opacity duration-200 group-hover:opacity-100"
-	></div>
+	<!-- <MagicCard
+		class="h-full overflow-hidden rounded-xl bg-background/90"
+		gradientSize={120}
+		gradientColor="#171717"
+		gradientFrom="#525252"
+		gradientTo="#262626"
+	> -->
 	<div class="relative h-full">
 		<PreviewComponent {title} {countLabel} />
 	</div>
+	<!-- </MagicCard> -->
 </a>

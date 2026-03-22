@@ -63,7 +63,7 @@ export const pricingBlocks: BlockShowcaseItem[] = [
 			"A two-plan comparison with corner accents, compact savings callouts, and a stronger featured tier.",
 		previewComponent: PricingOne,
 		previewHref: "/preview/pricing/one",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 700,
 		installId: "pricing-one",
 		codeTree: createBlockCodeTree("pricing-one:component", [
@@ -105,7 +105,7 @@ export const pricingBlocks: BlockShowcaseItem[] = [
 			"A reusable three-tier pricing layout with icon-led cards and a highlighted middle plan.",
 		previewComponent: PricingThree,
 		previewHref: "/preview/pricing/three",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 900,
 		installId: "pricing-three",
 		codeTree: createBlockCodeTree("pricing-three:component", [
@@ -131,7 +131,7 @@ export const pricingBlocks: BlockShowcaseItem[] = [
 			"An animated pricing table with monthly-yearly toggles, live number transitions, and motion badges.",
 		previewComponent: PricingFour,
 		previewHref: "/preview/pricing/four",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 980,
 		installId: "pricing-four",
 		codeTree: createBlockCodeTree("pricing-four:component", [

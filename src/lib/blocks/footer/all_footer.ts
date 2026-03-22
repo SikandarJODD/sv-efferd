@@ -100,7 +100,7 @@ export const footerBlocks: BlockShowcaseItem[] = [
 		description: "A compact product footer with inline social links and a simple closing bar.",
 		previewComponent: FooterOne,
 		previewHref: "/preview/footer/one",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 280,
 		installId: "footer-one",
 		codeTree: createBlockCodeTree("footer-one:component", [
@@ -123,7 +123,7 @@ export const footerBlocks: BlockShowcaseItem[] = [
 			"A structured multi-column footer with brand intro and outlined social actions.",
 		previewComponent: FooterTwo,
 		previewHref: "/preview/footer/two",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 360,
 		installId: "footer-two",
 		codeTree: createBlockCodeTree("footer-two:component", [
@@ -145,7 +145,7 @@ export const footerBlocks: BlockShowcaseItem[] = [
 			"An animated rounded footer with grouped link columns and softer visual depth.",
 		previewComponent: FooterThree,
 		previewHref: "/preview/footer/three",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 420,
 		installId: "footer-three",
 		codeTree: createBlockCodeTree("footer-three:component", [
@@ -165,7 +165,7 @@ export const footerBlocks: BlockShowcaseItem[] = [
 		description: "A directory-style footer with stacked social headers and nested link groups.",
 		previewComponent: FooterFour,
 		previewHref: "/preview/footer/four",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 620,
 		installId: "footer-four",
 		codeTree: createBlockCodeTree("footer-four:component", [
@@ -185,7 +185,7 @@ export const footerBlocks: BlockShowcaseItem[] = [
 			"A marketplace-style footer with store badges, social actions, and dense support links.",
 		previewComponent: FooterFive,
 		previewHref: "/preview/footer/five",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 560,
 		installId: "footer-five",
 		codeTree: createBlockCodeTree("footer-five:component", [

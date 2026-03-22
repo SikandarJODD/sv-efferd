@@ -177,7 +177,7 @@ export const faqBlocks: BlockShowcaseItem[] = [
 			"A compact FAQ stack with a centered heading and a classic single-column accordion.",
 		previewComponent: FaqOne,
 		previewHref: "/preview/faqs/one",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 520,
 		installId: "faq-one",
 		codeTree: createBlockCodeTree("faq-one:component", [

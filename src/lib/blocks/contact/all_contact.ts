@@ -197,7 +197,7 @@ export const contactBlocks: BlockShowcaseItem[] = [
 		description: "A compact contact strip with quick details framed by full-width dividers.",
 		previewComponent: ContactOne,
 		previewHref: "/preview/contact/one",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 420,
 		installId: "contact-one",
 		codeTree: createBlockCodeTree("contact-one:component", [
@@ -216,7 +216,7 @@ export const contactBlocks: BlockShowcaseItem[] = [
 		description: "A three-column contact hub for email, social DMs, and community support.",
 		previewComponent: ContactTwo,
 		previewHref: "/preview/contact/two",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 520,
 		installId: "contact-two",
 		codeTree: createBlockCodeTree("contact-two:component", [
@@ -259,7 +259,7 @@ export const contactBlocks: BlockShowcaseItem[] = [
 			"A split contact form with direct support details and a structured inquiry panel.",
 		previewComponent: ContactFour,
 		previewHref: "/preview/contact/four",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 820,
 		installId: "contact-four",
 		codeTree: createBlockCodeTree("contact-four:component", [
@@ -282,7 +282,7 @@ export const contactBlocks: BlockShowcaseItem[] = [
 			"A bordered contact card pairing essential details with a reusable message form.",
 		previewComponent: ContactFive,
 		previewHref: "/preview/contact/five",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 860,
 		installId: "contact-five",
 		codeTree: createBlockCodeTree("contact-five:component", [

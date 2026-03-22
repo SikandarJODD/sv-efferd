@@ -66,7 +66,7 @@ export const integrationBlocks: BlockShowcaseItem[] = [
 			"A compact integration strip with lightweight cards and a simple link-out action.",
 		previewComponent: IntegrationOne,
 		previewHref: "/preview/integrations/one",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 360,
 		installId: "integration-one",
 		codeTree: createBlockCodeTree("integration-one:component", [
@@ -86,7 +86,7 @@ export const integrationBlocks: BlockShowcaseItem[] = [
 			"A structured integration grid with framed cards and decorative corner accents.",
 		previewComponent: IntegrationTwo,
 		previewHref: "/preview/integrations/two",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 520,
 		installId: "integration-two",
 		codeTree: createBlockCodeTree("integration-two:component", [
@@ -111,7 +111,7 @@ export const integrationBlocks: BlockShowcaseItem[] = [
 		description: "A split integration hero with grid-positioned logos and divider rails.",
 		previewComponent: IntegrationThree,
 		previewHref: "/preview/integrations/three",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 560,
 		installId: "integration-three",
 		codeTree: createBlockCodeTree("integration-three:component", [
@@ -138,7 +138,7 @@ export const integrationBlocks: BlockShowcaseItem[] = [
 			"A bolder integration grid pairing a large product statement with floating logo tiles.",
 		previewComponent: IntegrationFour,
 		previewHref: "/preview/integrations/four",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 560,
 		installId: "integration-four",
 		codeTree: createBlockCodeTree("integration-four:component", [
@@ -163,7 +163,7 @@ export const integrationBlocks: BlockShowcaseItem[] = [
 			"A centered integration cluster with overlapping logo pills and a stronger primary CTA.",
 		previewComponent: IntegrationFive,
 		previewHref: "/preview/integrations/five",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 520,
 		installId: "integration-five",
 		codeTree: createBlockCodeTree("integration-five:component", [

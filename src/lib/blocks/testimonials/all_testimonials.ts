@@ -139,7 +139,7 @@ export const testimonialBlocks: BlockShowcaseItem[] = [
 			"A centered single testimonial with brand mark, compact author block, and soft editorial framing.",
 		previewComponent: TestimonialOne,
 		previewHref: "/preview/testimonials/one",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 500,
 		installId: "testimonial-one",
 		codeTree: createBlockCodeTree("testimonial-one:component", [
@@ -159,7 +159,7 @@ export const testimonialBlocks: BlockShowcaseItem[] = [
 			"A framed testimonial layout with masked divider rails, asymmetrical composition, and avatar-led emphasis.",
 		previewComponent: TestimonialTwo,
 		previewHref: "/preview/testimonials/two",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 520,
 		installId: "testimonial-two",
 		codeTree: createBlockCodeTree("testimonial-two:component", [
@@ -180,7 +180,7 @@ export const testimonialBlocks: BlockShowcaseItem[] = [
 			"A three-card testimonial grid with decorative corners, lifted middle emphasis, and richer profile metadata.",
 		previewComponent: TestimonialThree,
 		previewHref: "/preview/testimonials/three",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 700,
 		installId: "testimonial-three",
 		codeTree: createBlockCodeTree("testimonial-three:component", [

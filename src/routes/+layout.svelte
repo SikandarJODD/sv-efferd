@@ -28,8 +28,8 @@
 		<main
 			class={cn(
 				"relative container grow",
-				"before:absolute before:-inset-y-20 before:-left-px before:z-1 before:border-dashed before:border-border xl:before:border-l",
-				"after:absolute after:-inset-y-20 after:-right-px after:z-1 after:border-dashed after:border-border xl:after:border-r"
+				"before:absolute before:-inset-y-20 before:-left-px before:z-1 before:border-dashed before:border-primary/20 xl:before:border-l",
+				"after:absolute after:-inset-y-20 after:-right-px after:z-1 after:border-dashed after:border-primary/20 xl:after:border-r"
 			)}
 		>
 			{@render children()}

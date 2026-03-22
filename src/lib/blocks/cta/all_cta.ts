@@ -93,6 +93,7 @@ export const ctaBlocks: BlockShowcaseItem[] = [
 		description: "A split CTA with quiet structure, balanced actions, and full-width dividers.",
 		previewComponent: CtaOne,
 		previewHref: "/preview/cta/one",
+		previewMode: "inline",
 		installId: "cta-one",
 		codeTree: createBlockCodeTree("cta-one:component", [
 			{
@@ -111,6 +112,7 @@ export const ctaBlocks: BlockShowcaseItem[] = [
 		description: "A centered CTA with a softer secondary band and directional primary action.",
 		previewComponent: CtaTwo,
 		previewHref: "/preview/cta/two",
+		previewMode: "inline",
 		installId: "cta-two",
 		codeTree: createBlockCodeTree("cta-two:component", [
 			{
@@ -129,6 +131,7 @@ export const ctaBlocks: BlockShowcaseItem[] = [
 		description: "A more decorative CTA with corner accents and a stronger editorial feel.",
 		previewComponent: CtaThree,
 		previewHref: "/preview/cta/three",
+		previewMode: "inline",
 		installId: "cta-three",
 		codeTree: createBlockCodeTree("cta-three:component", [
 			{
@@ -147,6 +150,7 @@ export const ctaBlocks: BlockShowcaseItem[] = [
 		description: "A compact card CTA with credit-card reassurance and elevated actions.",
 		previewComponent: CtaFour,
 		previewHref: "/preview/cta/four",
+		previewMode: "inline",
 		installId: "cta-four",
 		codeTree: createBlockCodeTree("cta-four:component", [
 			{
@@ -164,6 +168,7 @@ export const ctaBlocks: BlockShowcaseItem[] = [
 		description: "A newsletter CTA that blends subscription form controls with social proof.",
 		previewComponent: CtaFive,
 		previewHref: "/preview/cta/five",
+		previewMode: "inline",
 		installId: "cta-five",
 		codeTree: createBlockCodeTree("cta-five:component", [
 			{

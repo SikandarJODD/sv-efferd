@@ -37,7 +37,7 @@ export type BlockShowcaseItem = {
 	previewComponent: Component;
 	codeTree: BlockCodeTree;
 	previewHref?: string;
-	previewMode?: "inline" | "iframe";
+	previewMode: "inline" | "iframe";
 	previewHeight?: number;
 	installId?: string;
 };

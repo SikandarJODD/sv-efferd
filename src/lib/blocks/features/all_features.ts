@@ -89,7 +89,7 @@ export const featureBlocks: BlockShowcaseItem[] = [
 		description: "A compact four-column feature strip with lightweight icon-led messaging.",
 		previewComponent: FeatureOne,
 		previewHref: "/preview/features/one",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 260,
 		installId: "feature-one",
 		codeTree: createBlockCodeTree("feature-one:component", [
@@ -108,7 +108,7 @@ export const featureBlocks: BlockShowcaseItem[] = [
 			"An editorial feature frame with dashed rails, corner accents, and three focused highlights.",
 		previewComponent: FeatureTwo,
 		previewHref: "/preview/features/two",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 420,
 		installId: "feature-two",
 		codeTree: createBlockCodeTree("feature-two:component", [
@@ -175,7 +175,7 @@ export const featureBlocks: BlockShowcaseItem[] = [
 			"A dense capability grid with patterned card backgrounds and a stronger product voice.",
 		previewComponent: FeatureFive,
 		previewHref: "/preview/features/five",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 520,
 		installId: "feature-five",
 		codeTree: createBlockCodeTree("feature-five:component", [

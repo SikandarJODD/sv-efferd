@@ -36,10 +36,10 @@
 		></div>
 	</div>
 
-	<DecorIcon class="size-4 stroke-muted-foreground/80" position="top-left" />
-	<DecorIcon class="size-4 stroke-muted-foreground/80" position="top-right" />
-	<DecorIcon class="size-4 stroke-muted-foreground/80" position="bottom-left" />
-	<DecorIcon class="size-4 stroke-muted-foreground/80" position="bottom-right" />
+	<DecorIcon class="size-4 stroke-muted-foreground/80 bg-background z-40" position="top-left" />
+	<DecorIcon class="size-4 stroke-muted-foreground/80 bg-background z-40" position="top-right" />
+	<DecorIcon class="size-4 stroke-muted-foreground/80 bg-background z-40" position="bottom-left" />
+	<DecorIcon class="size-4 stroke-muted-foreground/80 bg-background z-40" position="bottom-right" />
 
 	<div class=" relative z-10 mx-auto flex flex-col items-center text-center">
 		<a
