@@ -80,6 +80,17 @@
 		"relativeUrl": "aspect-ratio.json"
 	},
 	{
+		"name": "accordion",
+		"title": "Accordion",
+		"type": "registry:block",
+		"dependencies": [
+			"bits-ui",
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "accordion.json"
+	},
+	{
 		"name": "auth-divider",
 		"title": "Auth divider",
 		"type": "registry:block",
@@ -426,5 +437,67 @@
 			"local:input-group"
 		],
 		"relativeUrl": "auth-five.json"
+	},
+	{
+		"name": "faq-one",
+		"title": "FAQ One",
+		"type": "registry:block",
+		"description": "A compact FAQ stack with a centered heading and a classic single-column accordion.",
+		"registryDependencies": [
+			"local:accordion"
+		],
+		"relativeUrl": "faq-one.json"
+	},
+	{
+		"name": "faq-two",
+		"title": "FAQ Two",
+		"type": "registry:block",
+		"description": "A split FAQ layout with a fixed intro column and full-height answer rail.",
+		"registryDependencies": [
+			"local:accordion"
+		],
+		"relativeUrl": "faq-two.json"
+	},
+	{
+		"name": "faq-three",
+		"title": "FAQ Three",
+		"type": "registry:block",
+		"description": "A guided editorial FAQ with divider rails and decorative timeline markers.",
+		"registryDependencies": [
+			"local:accordion",
+			"local:decor-icon"
+		],
+		"relativeUrl": "faq-three.json"
+	},
+	{
+		"name": "faq-four",
+		"title": "FAQ Four",
+		"type": "registry:block",
+		"description": "A categorized FAQ explorer with topic switching and softly framed accordion rows.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:accordion"
+		],
+		"relativeUrl": "faq-four.json"
+	},
+	{
+		"name": "faq-five",
+		"title": "FAQ Five",
+		"type": "registry:block",
+		"description": "A searchable FAQ page with category filters, empty state handling, and structured dividers.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:accordion",
+			"local:full-width-divider",
+			"local:input-group",
+			"local:empty"
+		],
+		"relativeUrl": "faq-five.json"
 	}
 ]

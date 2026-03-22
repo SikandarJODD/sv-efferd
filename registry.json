@@ -298,6 +298,40 @@
 			"dependencies": ["bits-ui"]
 		},
 		{
+			"name": "accordion",
+			"title": "Accordion",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/accordion/accordion.svelte",
+					"type": "registry:component",
+					"target": "ui/accordion/accordion.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/accordion/accordion-item.svelte",
+					"type": "registry:component",
+					"target": "ui/accordion/accordion-item.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/accordion/accordion-trigger.svelte",
+					"type": "registry:component",
+					"target": "ui/accordion/accordion-trigger.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/accordion/accordion-content.svelte",
+					"type": "registry:component",
+					"target": "ui/accordion/accordion-content.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/accordion/index.ts",
+					"type": "registry:file",
+					"target": "ui/accordion/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["bits-ui", "@lucide/svelte"]
+		},
+		{
 			"name": "auth-divider",
 			"title": "Auth divider",
 			"type": "registry:block",
@@ -846,6 +880,84 @@
 				"local:auth-divider",
 				"local:floating-paths",
 				"local:input-group"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "faq-one",
+			"title": "FAQ One",
+			"type": "registry:block",
+			"description": "A compact FAQ stack with a centered heading and a classic single-column accordion.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/faqs/faq-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/faqs/faq-one.svelte"
+				}
+			],
+			"registryDependencies": ["local:accordion"]
+		},
+		{
+			"name": "faq-two",
+			"title": "FAQ Two",
+			"type": "registry:block",
+			"description": "A split FAQ layout with a fixed intro column and full-height answer rail.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/faqs/faq-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/faqs/faq-two.svelte"
+				}
+			],
+			"registryDependencies": ["local:accordion"]
+		},
+		{
+			"name": "faq-three",
+			"title": "FAQ Three",
+			"type": "registry:block",
+			"description": "A guided editorial FAQ with divider rails and decorative timeline markers.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/faqs/faq-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/faqs/faq-three.svelte"
+				}
+			],
+			"registryDependencies": ["local:accordion", "local:decor-icon"]
+		},
+		{
+			"name": "faq-four",
+			"title": "FAQ Four",
+			"type": "registry:block",
+			"description": "A categorized FAQ explorer with topic switching and softly framed accordion rows.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/faqs/faq-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/faqs/faq-four.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:accordion"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "faq-five",
+			"title": "FAQ Five",
+			"type": "registry:block",
+			"description": "A searchable FAQ page with category filters, empty state handling, and structured dividers.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/faqs/faq-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/faqs/faq-five.svelte"
+				}
+			],
+			"registryDependencies": [
+				"button",
+				"local:accordion",
+				"local:full-width-divider",
+				"local:input-group",
+				"local:empty"
 			],
 			"dependencies": ["@lucide/svelte"]
 		}

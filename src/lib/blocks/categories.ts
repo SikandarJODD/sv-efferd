@@ -13,7 +13,7 @@ export const blockCategories = [
 	{ slug: 'contact', label: 'Contact', hasDedicatedPage: true },
 	{ slug: 'blog', label: 'Blog', sourceKey: 'blogs', hasDedicatedPage: true },
 	{ slug: 'cta', label: 'CTA', hasDedicatedPage: true },
-	{ slug: 'faqs', label: "FAQ's" },
+	{ slug: 'faqs', label: "FAQ's", hasDedicatedPage: true },
 	{ slug: 'features', label: 'Features' },
 	{ slug: 'footer', label: 'Footer' },
 	{ slug: 'integrations', label: 'Integrations' },
