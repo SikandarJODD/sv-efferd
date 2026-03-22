@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { StripedPattern } from "$lib/components/magic/striped-pattern";
+	import { Button } from "$lib/components/ui/button";
 	import { DashedLines } from "$lib/components/ui/dashed-lines";
 	import { DecorIcon } from "$lib/components/ui/decor-icon";
+	import { Github } from "$lib/svgs";
 </script>
 
 <section class="relative py-10 sm:py-12 lg:py-12">
@@ -41,6 +43,20 @@
 				Discover beautifully crafted shadcn blocks, ready to copy, customize, and drop into
 				your next project.
 			</p>
+
+			<div class="mt-5 flex flex-wrap items-center gap-2">
+				<Button class="rounded-none" href="/blocks/hero" size="sm">Explore</Button>
+				<Button
+					class="rounded-none"
+					href="https://github.com/SikandarJODD/sv-efferd"
+					size="sm"
+					target="_blank"
+					variant="outline"
+				>
+					<Github class="size-3.5" />
+					Star on GitHub
+				</Button>
+			</div>
 		</div>
 	</div>
 </section>

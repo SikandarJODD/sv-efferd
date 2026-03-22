@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { BorderSeparator } from "$lib/components/ui/border-seperator";
 	import { Button } from "$lib/components/ui/button";
 	import { Github, Logo, X as XLogo } from "$lib/svgs";
 	import { MoonIcon, SunIcon } from "@lucide/svelte";
@@ -14,12 +13,9 @@
 
 <header class="relative z-20 mx-auto max-w-7xl border-b border-border/80">
 	<nav class="cpx flex h-14 items-center justify-between gap-3">
-		<a
-			aria-label="Efferd home"
-			class="flex shrink-0 items-center rounded-md p-2 transition-colors hover:bg-muted/60"
-			href="/"
-		>
-			<Logo class="h-5 w-auto" />
+		<a aria-label="Efferd home" class="flex shrink-0 px-1" href="/">
+			<!-- <Logo class="h-5 w-auto" /> -->
+			<span class="font-mono font-medium tracking-tight">Svelte Efferd</span>
 		</a>
 
 		<div class="hidden flex-1 items-center justify-center md:flex">
@@ -39,7 +35,13 @@
 
 		<div class="hidden items-center gap-2 md:flex">
 			{#each landingSocialLinks as link}
-				<Button aria-label={link.label} href={link.href} size="icon-sm" variant="ghost">
+				<Button
+					target="_blank"
+					aria-label={link.label}
+					href={link.href}
+					size="icon-sm"
+					variant="ghost"
+				>
 					{#if link.id === "x"}
 						<XLogo class="size-4" />
 					{:else}

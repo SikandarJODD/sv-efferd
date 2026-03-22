@@ -30,7 +30,7 @@
 
 		{#if entry.description}
 			<p
-				class="mt-4 max-w-2xl text-base leading-7 text-muted-foreground sm:text-base sm:leading-8"
+				class="mt-1 max-w-2xl text-base leading-7 text-muted-foreground sm:text-base sm:leading-8"
 			>
 				{entry.description}
 			</p>

@@ -527,10 +527,12 @@
 
 		<!-- lg:border-x -->
 		<div
-			class="relative z-10 mx-auto max-w-7xl px-4 lg:px-0"
+			class="relative mx-auto max-w-7xl px-4 lg:px-0"
 			style={`--preview-min-height: ${MIN_PREVIEW_HEIGHT}px;`}
 		>
-			<div class={cn("bg-white dark:bg-transparent", mode === "code" && "hidden")}>
+			<div
+				class={cn("z-40 bg-white dark:bg-background", mode === "code" && "hidden")}
+			>
 				{#if shouldRenderInIframe && previewHref}
 					<PaneGroup direction="horizontal">
 						<Pane
