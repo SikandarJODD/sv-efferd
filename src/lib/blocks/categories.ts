@@ -8,7 +8,7 @@ export type BlockCategory = {
 export const blockCategories = [
 	{ slug: 'logo-cloud', label: 'Logo Cloud' },
 	{ slug: 'header', label: 'Header' },
-	{ slug: 'not-found', label: 'Not Found' },
+	{ slug: 'not-found', label: 'Not Found', hasDedicatedPage: true },
 	{ slug: 'testimonials', label: 'Testimonials', sourceKey: 'testimonial' },
 	{ slug: 'contact', label: 'Contact' },
 	{ slug: 'blog', label: 'Blog', sourceKey: 'blogs' },

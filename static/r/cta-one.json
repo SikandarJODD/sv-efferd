@@ -1,7 +1,7 @@
 {
 	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
 	"name": "cta-one",
-	"title": "CTA one",
+	"title": "CTA One",
 	"type": "registry:block",
 	"description": "A split CTA with quiet structure, balanced actions, and full-width dividers.",
 	"registryDependencies": [

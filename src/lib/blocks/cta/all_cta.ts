@@ -86,7 +86,7 @@ const inputGroupFiles = [
 	}
 ];
 
-export const ctaBlocks = [
+export const ctaBlocks: BlockShowcaseItem[] = [
 	{
 		id: 'cta-one',
 		title: 'CTA One',
@@ -177,7 +177,7 @@ export const ctaBlocks = [
 			...inputGroupFiles
 		])
 	}
-] satisfies BlockShowcaseItem[];
+];
 
 export function getCtaBlock(id: string) {
 	return ctaBlocks.find((block) => block.id === id);

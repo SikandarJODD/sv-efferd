@@ -1,0 +1,24 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "cta-three",
+	"title": "CTA Three",
+	"type": "registry:block",
+	"description": "A more decorative CTA with corner accents and a stronger editorial feel.",
+	"dependencies": [
+		"@lucide/svelte"
+	],
+	"devDependencies": [
+		"@lucide/svelte@^0.577.0"
+	],
+	"registryDependencies": [
+		"button",
+		"./decor-icon.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { ArrowRightIcon } from '@lucide/svelte';\n\timport { Button } from '$lib/components/ui/button';\n\timport { DecorIcon } from '$lib/components/ui/decor-icon';\n</script>\n\n<div\n\tclass=\"relative mx-auto flex w-full max-w-3xl flex-col justify-between gap-y-4 border-y px-4 py-8 dark:bg-[radial-gradient(35%_80%_at_25%_0%,--theme(--color-foreground/.08),transparent)]\"\n>\n\t<DecorIcon class=\"size-4\" position=\"top-left\" />\n\t<DecorIcon class=\"size-4\" position=\"top-right\" />\n\t<DecorIcon class=\"size-4\" position=\"bottom-left\" />\n\t<DecorIcon class=\"size-4\" position=\"bottom-right\" />\n\n\t<div class=\"pointer-events-none absolute -inset-y-6 -left-px w-px border-l\"></div>\n\t<div class=\"pointer-events-none absolute -inset-y-6 -right-px w-px border-r\"></div>\n\n\t<div class=\"absolute top-0 left-1/2 -z-10 h-full border-l border-dashed\"></div>\n\n\t<h2 class=\"text-center text-xl font-semibold md:text-3xl\">Start for Free Today!</h2>\n\t<p class=\"text-balance text-center text-sm font-medium text-muted-foreground md:text-base\">\n\t\tBegin your 6-day free trial today to fully explore and experience all the features and\n\t\tbenefits we offer.\n\t</p>\n\n\t<div class=\"flex items-center justify-center gap-2\">\n\t\t<Button variant=\"outline\">Contact Sales</Button>\n\t\t<Button>\n\t\t\tGet Started\n\t\t\t<ArrowRightIcon data-icon=\"inline-end\" />\n\t\t</Button>\n\t</div>\n</div>\n",
+			"type": "registry:component",
+			"target": "efferd/cta/cta-three.svelte"
+		}
+	]
+}

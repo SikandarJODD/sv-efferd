@@ -83,6 +83,49 @@
 			"registryDependencies": []
 		},
 		{
+			"name": "empty",
+			"title": "Empty",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/empty/empty.svelte",
+					"type": "registry:component",
+					"target": "ui/empty/empty.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/empty/empty-header.svelte",
+					"type": "registry:component",
+					"target": "ui/empty/empty-header.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/empty/empty-media.svelte",
+					"type": "registry:component",
+					"target": "ui/empty/empty-media.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/empty/empty-title.svelte",
+					"type": "registry:component",
+					"target": "ui/empty/empty-title.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/empty/empty-description.svelte",
+					"type": "registry:component",
+					"target": "ui/empty/empty-description.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/empty/empty-content.svelte",
+					"type": "registry:component",
+					"target": "ui/empty/empty-content.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/empty/index.ts",
+					"type": "registry:file",
+					"target": "ui/empty/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
 			"name": "cta-one",
 			"title": "CTA One",
 			"type": "registry:block",
@@ -154,6 +197,36 @@
 				}
 			],
 			"registryDependencies": ["button", "local:full-width-divider", "local:input-group"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "not-found-one",
+			"title": "Not Found One",
+			"type": "registry:block",
+			"description": "A framed 404 layout with full-width dividers and balanced recovery actions.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/not-found/not-found-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/not-found/not-found-one.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:full-width-divider", "local:empty"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "not-found-two",
+			"title": "Not Found Two",
+			"type": "registry:block",
+			"description": "A minimal full-screen 404 with oversized typography and direct recovery actions.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/not-found/not-found-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/not-found/not-found-two.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:empty"],
 			"dependencies": ["@lucide/svelte"]
 		}
 	]

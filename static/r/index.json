@@ -7,8 +7,29 @@
 		"relativeUrl": "full-width-divider.json"
 	},
 	{
+		"name": "decor-icon",
+		"title": "Decor icon",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "decor-icon.json"
+	},
+	{
+		"name": "input-group",
+		"title": "Input group",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "input-group.json"
+	},
+	{
+		"name": "empty",
+		"title": "Empty",
+		"type": "registry:block",
+		"registryDependencies": [],
+		"relativeUrl": "empty.json"
+	},
+	{
 		"name": "cta-one",
-		"title": "CTA one",
+		"title": "CTA One",
 		"type": "registry:block",
 		"description": "A split CTA with quiet structure, balanced actions, and full-width dividers.",
 		"registryDependencies": [
@@ -19,9 +40,9 @@
 	},
 	{
 		"name": "cta-two",
-		"title": "CTA two",
+		"title": "CTA Two",
 		"type": "registry:block",
-		"description": "A split CTA with quiet structure, balanced actions, and full-width dividers.",
+		"description": "A centered CTA with a softer secondary band and directional primary action.",
 		"dependencies": [
 			"@lucide/svelte"
 		],
@@ -30,5 +51,76 @@
 			"local:full-width-divider"
 		],
 		"relativeUrl": "cta-two.json"
+	},
+	{
+		"name": "cta-three",
+		"title": "CTA Three",
+		"type": "registry:block",
+		"description": "A more decorative CTA with corner accents and a stronger editorial feel.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:decor-icon"
+		],
+		"relativeUrl": "cta-three.json"
+	},
+	{
+		"name": "cta-four",
+		"title": "CTA Four",
+		"type": "registry:block",
+		"description": "A compact card CTA with credit-card reassurance and elevated actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "cta-four.json"
+	},
+	{
+		"name": "cta-five",
+		"title": "CTA Five",
+		"type": "registry:block",
+		"description": "A newsletter CTA that blends subscription form controls with social proof.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:full-width-divider",
+			"local:input-group"
+		],
+		"relativeUrl": "cta-five.json"
+	},
+	{
+		"name": "not-found-one",
+		"title": "Not Found One",
+		"type": "registry:block",
+		"description": "A framed 404 layout with full-width dividers and balanced recovery actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:full-width-divider",
+			"local:empty"
+		],
+		"relativeUrl": "not-found-one.json"
+	},
+	{
+		"name": "not-found-two",
+		"title": "Not Found Two",
+		"type": "registry:block",
+		"description": "A minimal full-screen 404 with oversized typography and direct recovery actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button",
+			"local:empty"
+		],
+		"relativeUrl": "not-found-two.json"
 	}
 ]

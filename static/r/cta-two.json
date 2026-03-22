@@ -1,9 +1,9 @@
 {
 	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
 	"name": "cta-two",
-	"title": "CTA two",
+	"title": "CTA Two",
 	"type": "registry:block",
-	"description": "A split CTA with quiet structure, balanced actions, and full-width dividers.",
+	"description": "A centered CTA with a softer secondary band and directional primary action.",
 	"dependencies": [
 		"@lucide/svelte"
 	],
