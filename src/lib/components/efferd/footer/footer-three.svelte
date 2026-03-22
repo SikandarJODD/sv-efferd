@@ -1,7 +1,7 @@
 <script lang="ts">
 	import AnimatedContainer from '$lib/components/efferd/footer/AnimatedContainer.svelte';
 	import { cn } from '$lib/utils';
-	import { Logo } from '$lib/svgs';
+	import Logo from '$lib/svgs/logo.svelte';
 	import {
 		FacebookIcon,
 		InstagramIcon,
@@ -81,7 +81,7 @@
 
 <footer
 	class={cn(
-		'relative mx-auto flex w-full max-w-5xl flex-col items-center justify-center rounded-t-4xl border-t px-6 md:rounded-t-6xl md:px-8',
+		'md:rounded-t-6xl relative mx-auto flex w-full max-w-5xl flex-col items-center justify-center rounded-t-4xl border-t px-6 md:px-8',
 		'dark:bg-[radial-gradient(35%_128px_at_50%_0%,--theme(--color-foreground/.1),transparent)]'
 	)}
 >
@@ -92,9 +92,7 @@
 	<div class="grid w-full gap-8 py-6 md:py-8 lg:grid-cols-3 lg:gap-8">
 		<AnimatedContainer class="space-y-4">
 			<Logo class="h-4 w-auto" />
-			<p class="mt-8 text-sm text-muted-foreground md:mt-0">
-				Beautify your app with efferd.
-			</p>
+			<p class="mt-8 text-sm text-muted-foreground md:mt-0">Beautify your app with efferd.</p>
 		</AnimatedContainer>
 
 		<div class="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4 lg:col-span-2 lg:mt-0">

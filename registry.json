@@ -1081,6 +1081,160 @@
 			],
 			"registryDependencies": ["local:grid-pattern"],
 			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "footer-one",
+			"title": "Footer One",
+			"type": "registry:block",
+			"description": "A compact product footer with inline social links and a simple closing bar.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/footer/footer-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/footer-one.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:component",
+					"target": "svgs/github.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/svgs/x.svelte",
+					"type": "registry:component",
+					"target": "svgs/x.svelte"
+				}
+			],
+			"registryDependencies": ["button"]
+		},
+		{
+			"name": "footer-two",
+			"title": "Footer Two",
+			"type": "registry:block",
+			"description": "A structured multi-column footer with brand intro and outlined social actions.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/footer/footer-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/footer-two.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/svgs/x.svelte",
+					"type": "registry:component",
+					"target": "svgs/x.svelte"
+				}
+			],
+			"registryDependencies": ["button"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "footer-three",
+			"title": "Footer Three",
+			"type": "registry:block",
+			"description": "An animated rounded footer with grouped link columns and softer visual depth.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/footer/footer-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/footer-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/footer/AnimatedContainer.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/AnimatedContainer.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["@lucide/svelte", "motion-sv"]
+		},
+		{
+			"name": "footer-four",
+			"title": "Footer Four",
+			"type": "registry:block",
+			"description": "A directory-style footer with stacked social headers and nested link groups.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/footer/footer-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/footer-four.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/footer/LinkGroup.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/LinkGroup.svelte"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "footer-five",
+			"title": "Footer Five",
+			"type": "registry:block",
+			"description": "A marketplace-style footer with store badges, social actions, and dense support links.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/footer/footer-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/footer-five.svelte"
+				},
+				{
+					"path": "src/lib/svgs/apple.svelte",
+					"type": "registry:component",
+					"target": "svgs/apple.svelte"
+				},
+				{
+					"path": "src/lib/svgs/play-store.svelte",
+					"type": "registry:component",
+					"target": "svgs/play-store.svelte"
+				},
+				{
+					"path": "src/lib/svgs/x.svelte",
+					"type": "registry:component",
+					"target": "svgs/x.svelte"
+				}
+			],
+			"registryDependencies": ["button"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "footer-six",
+			"title": "Footer Six",
+			"type": "registry:block",
+			"description": "A cinematic sticky footer with animated columns and a long-form enterprise sitemap.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/footer/footer-six.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/footer-six.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/footer/AnimatedContainer.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/AnimatedContainer.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": ["button"],
+			"dependencies": ["@lucide/svelte", "motion-sv"]
 		}
 	]
 }

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
-	import { Github, Logo, X } from '$lib/svgs';
+	import GithubLogo from '$lib/svgs/github.svelte';
+	import Logo from '$lib/svgs/logo.svelte';
+	import XLogo from '$lib/svgs/x.svelte';
 	import type { Component } from 'svelte';
 
 	type NavLink = {
@@ -27,12 +29,12 @@
 		{
 			href: 'https://x.com/shabanhr',
 			label: 'X',
-			icon: X
+			icon: XLogo
 		},
 		{
 			href: 'https://github.com/shabanhr',
 			label: 'Github',
-			icon: Github
+			icon: GithubLogo
 		}
 	];
 

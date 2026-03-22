@@ -577,5 +577,78 @@
 			"local:grid-pattern"
 		],
 		"relativeUrl": "feature-five.json"
+	},
+	{
+		"name": "footer-one",
+		"title": "Footer One",
+		"type": "registry:block",
+		"description": "A compact product footer with inline social links and a simple closing bar.",
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "footer-one.json"
+	},
+	{
+		"name": "footer-two",
+		"title": "Footer Two",
+		"type": "registry:block",
+		"description": "A structured multi-column footer with brand intro and outlined social actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "footer-two.json"
+	},
+	{
+		"name": "footer-three",
+		"title": "Footer Three",
+		"type": "registry:block",
+		"description": "An animated rounded footer with grouped link columns and softer visual depth.",
+		"dependencies": [
+			"@lucide/svelte",
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "footer-three.json"
+	},
+	{
+		"name": "footer-four",
+		"title": "Footer Four",
+		"type": "registry:block",
+		"description": "A directory-style footer with stacked social headers and nested link groups.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "footer-four.json"
+	},
+	{
+		"name": "footer-five",
+		"title": "Footer Five",
+		"type": "registry:block",
+		"description": "A marketplace-style footer with store badges, social actions, and dense support links.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "footer-five.json"
+	},
+	{
+		"name": "footer-six",
+		"title": "Footer Six",
+		"type": "registry:block",
+		"description": "A cinematic sticky footer with animated columns and a long-form enterprise sitemap.",
+		"dependencies": [
+			"@lucide/svelte",
+			"motion-sv"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "footer-six.json"
 	}
 ]

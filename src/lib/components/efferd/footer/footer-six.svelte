@@ -1,7 +1,7 @@
 <script lang="ts">
 	import AnimatedContainer from '$lib/components/efferd/footer/AnimatedContainer.svelte';
 	import { Button } from '$lib/components/ui/button';
-	import { Logo } from '$lib/svgs';
+	import Logo from '$lib/svgs/logo.svelte';
 	import {
 		FacebookIcon,
 		InstagramIcon,
@@ -119,9 +119,15 @@
 				aria-hidden="true"
 				class="absolute inset-0 isolate z-0 opacity-50 contain-strict dark:opacity-60"
 			>
-				<div class="absolute top-0 left-0 h-320 w-140 -translate-y-87.5 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,--theme(--color-foreground/.06)_0,hsla(0,0%,55%,.02)_50%,--theme(--color-foreground/.01)_80%)]"></div>
-				<div class="absolute top-0 left-0 h-320 w-60 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,--theme(--color-foreground/.04)_0,--theme(--color-foreground/.01)_80%,transparent_100%)] [translate:5%_-50%]"></div>
-				<div class="absolute top-0 left-0 h-320 w-60 -translate-y-87.5 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,--theme(--color-foreground/.04)_0,--theme(--color-foreground/.01)_80%,transparent_100%)]"></div>
+				<div
+					class="absolute top-0 left-0 h-320 w-140 -translate-y-87.5 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,--theme(--color-foreground/.06)_0,hsla(0,0%,55%,.02)_50%,--theme(--color-foreground/.01)_80%)]"
+				></div>
+				<div
+					class="absolute top-0 left-0 h-320 w-60 [translate:5%_-50%] -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,--theme(--color-foreground/.04)_0,--theme(--color-foreground/.01)_80%,transparent_100%)]"
+				></div>
+				<div
+					class="absolute top-0 left-0 h-320 w-60 -translate-y-87.5 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,--theme(--color-foreground/.04)_0,--theme(--color-foreground/.01)_80%,transparent_100%)]"
+				></div>
 			</div>
 
 			<div class="relative mx-auto flex size-full max-w-6xl flex-col justify-between gap-5">
@@ -166,7 +172,9 @@
 					{/each}
 				</div>
 
-				<div class="flex flex-col items-center justify-between gap-2 border-t p-4 text-sm text-muted-foreground md:flex-row">
+				<div
+					class="flex flex-col items-center justify-between gap-2 border-t p-4 text-sm text-muted-foreground md:flex-row"
+				>
 					<p>&copy; {currentYear} efferd, All rights reserved.</p>
 					<a class="hover:text-foreground" href="/license">License</a>
 				</div>

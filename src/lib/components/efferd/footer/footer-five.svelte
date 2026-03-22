@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
-	import { Apple, PlayStore, X } from '$lib/svgs';
+	import AppleLogo from '$lib/svgs/apple.svelte';
+	import PlayStoreLogo from '$lib/svgs/play-store.svelte';
+	import XLogo from '$lib/svgs/x.svelte';
 	import { FacebookIcon, InstagramIcon, LinkedinIcon } from '@lucide/svelte';
 	import type { Component } from 'svelte';
 
@@ -87,7 +89,7 @@
 			label: 'LinkedIn'
 		},
 		{
-			icon: X,
+			icon: XLogo,
 			href: 'https://x.com',
 			label: 'X'
 		}
@@ -129,17 +131,20 @@
 
 			<div class="flex gap-4">
 				<Button href="https://play.google.com/store" class="h-11" target="_blank" rel="noreferrer">
-					<PlayStore class="size-5" />
+					<PlayStoreLogo class="size-5" />
 					<div class="flex flex-col items-start justify-center pr-2 text-left">
-						<span class="text-[10px] leading-none font-light tracking-tighter">
-							GET IT ON
-						</span>
+						<span class="text-[10px] leading-none font-light tracking-tighter"> GET IT ON </span>
 						<p class="text-base leading-none font-bold">Google Play</p>
 					</div>
 				</Button>
 
-				<Button href="https://www.apple.com/app-store/" class="h-11" target="_blank" rel="noreferrer">
-					<Apple class="size-5" />
+				<Button
+					href="https://www.apple.com/app-store/"
+					class="h-11"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<AppleLogo class="size-5" />
 					<div class="flex flex-col items-start justify-center pr-2 text-left">
 						<span class="text-[10px] leading-none tracking-tighter">Download on the</span>
 						<p class="text-base leading-none font-bold">App Store</p>
