@@ -650,5 +650,60 @@
 			"button"
 		],
 		"relativeUrl": "footer-six.json"
+	},
+	{
+		"name": "integration-one",
+		"title": "Integration One",
+		"type": "registry:block",
+		"description": "A compact integration strip with lightweight cards and a simple link-out action.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "integration-one.json"
+	},
+	{
+		"name": "integration-two",
+		"title": "Integration Two",
+		"type": "registry:block",
+		"description": "A structured integration grid with framed cards and decorative corner accents.",
+		"registryDependencies": [
+			"local:decor-icon"
+		],
+		"relativeUrl": "integration-two.json"
+	},
+	{
+		"name": "integration-three",
+		"title": "Integration Three",
+		"type": "registry:block",
+		"description": "A split integration hero with grid-positioned logos and divider rails.",
+		"registryDependencies": [
+			"button",
+			"local:full-width-divider"
+		],
+		"relativeUrl": "integration-three.json"
+	},
+	{
+		"name": "integration-four",
+		"title": "Integration Four",
+		"type": "registry:block",
+		"description": "A bolder integration grid pairing a large product statement with floating logo tiles.",
+		"registryDependencies": [],
+		"relativeUrl": "integration-four.json"
+	},
+	{
+		"name": "integration-five",
+		"title": "Integration Five",
+		"type": "registry:block",
+		"description": "A centered integration cluster with overlapping logo pills and a stronger primary CTA.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"relativeUrl": "integration-five.json"
 	}
 ]

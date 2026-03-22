@@ -1235,6 +1235,93 @@
 			],
 			"registryDependencies": ["button"],
 			"dependencies": ["@lucide/svelte", "motion-sv"]
+		},
+		{
+			"name": "integration-one",
+			"title": "Integration One",
+			"type": "registry:block",
+			"description": "A compact integration strip with lightweight cards and a simple link-out action.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/integrations/integration-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-one.svelte"
+				}
+			],
+			"registryDependencies": ["button"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "integration-two",
+			"title": "Integration Two",
+			"type": "registry:block",
+			"description": "A structured integration grid with framed cards and decorative corner accents.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/integrations/integration-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-two.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/integrations/integration-card-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-card-two.svelte"
+				}
+			],
+			"registryDependencies": ["local:decor-icon"]
+		},
+		{
+			"name": "integration-three",
+			"title": "Integration Three",
+			"type": "registry:block",
+			"description": "A split integration hero with grid-positioned logos and divider rails.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/integrations/integration-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/integrations/integration-card-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-card-three.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:full-width-divider"]
+		},
+		{
+			"name": "integration-four",
+			"title": "Integration Four",
+			"type": "registry:block",
+			"description": "A bolder integration grid pairing a large product statement with floating logo tiles.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/integrations/integration-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-four.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/integrations/integration-card-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-card-four.svelte"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "integration-five",
+			"title": "Integration Five",
+			"type": "registry:block",
+			"description": "A centered integration cluster with overlapping logo pills and a stronger primary CTA.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/integrations/integration-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-five.svelte"
+				}
+			],
+			"registryDependencies": ["button"],
+			"dependencies": ["@lucide/svelte"]
 		}
 	]
 }

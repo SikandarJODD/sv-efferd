@@ -16,7 +16,7 @@ export const blockCategories = [
 	{ slug: 'faqs', label: "FAQ's", hasDedicatedPage: true },
 	{ slug: 'features', label: 'Features', hasDedicatedPage: true },
 	{ slug: 'footer', label: 'Footer', hasDedicatedPage: true },
-	{ slug: 'integrations', label: 'Integrations' },
+	{ slug: 'integrations', label: 'Integrations', hasDedicatedPage: true },
 	{ slug: 'hero', label: 'Hero' },
 	{ slug: 'auth', label: 'Auth', hasDedicatedPage: true },
 	{ slug: 'pricing', label: 'Pricing' },
