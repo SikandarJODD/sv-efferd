@@ -1,5 +1,5 @@
-import { pricingBlocks } from '$lib/blocks/pricing/all_pricing';
-import type { PageLoad } from './$types';
+import { pricingBlocks } from "$lib/blocks/pricing/all_pricing";
+import type { PageLoad } from "./$types";
 
 export const prerender = true;
 

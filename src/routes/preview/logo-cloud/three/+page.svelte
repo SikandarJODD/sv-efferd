@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Showcase from '$lib/components/efferd/logo-cloud/three/showcase.svelte';
+	import Showcase from "$lib/components/efferd/logo-cloud/three/showcase.svelte";
 </script>
 
 <svelte:head>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import TestimonialFour from '$lib/components/efferd/testimonial/testimonial-four/testimonial-four.svelte';
+	import TestimonialFour from "$lib/components/efferd/testimonial/testimonial-four/testimonial-four.svelte";
 </script>
 
 <svelte:head>

@@ -7,8 +7,8 @@
 		SparklesIcon,
 		ZapIcon,
 		type Icon
-	} from '@lucide/svelte';
-	import FeatureCard from './feature-card.svelte';
+	} from "@lucide/svelte";
+	import FeatureCard from "./feature-card.svelte";
 
 	type Feature = {
 		title: string;
@@ -18,34 +18,34 @@
 
 	const features: Feature[] = [
 		{
-			title: 'Faaast',
+			title: "Faaast",
 			icon: ZapIcon,
-			description: 'It supports an entire helping developers and innovate.'
+			description: "It supports an entire helping developers and innovate."
 		},
 		{
-			title: 'Powerful',
+			title: "Powerful",
 			icon: CpuIcon,
-			description: 'It supports an entire helping developers and businesses.'
+			description: "It supports an entire helping developers and businesses."
 		},
 		{
-			title: 'Security',
+			title: "Security",
 			icon: FingerprintIcon,
-			description: 'It supports an helping developers businesses.'
+			description: "It supports an helping developers businesses."
 		},
 		{
-			title: 'Customization',
+			title: "Customization",
 			icon: PencilIcon,
-			description: 'It supports helping developers and businesses innovate.'
+			description: "It supports helping developers and businesses innovate."
 		},
 		{
-			title: 'Control',
+			title: "Control",
 			icon: Settings2Icon,
-			description: 'It supports helping developers and businesses innovate.'
+			description: "It supports helping developers and businesses innovate."
 		},
 		{
-			title: 'Built for AI',
+			title: "Built for AI",
 			icon: SparklesIcon,
-			description: 'It supports helping developers and businesses innovate.'
+			description: "It supports helping developers and businesses innovate."
 		}
 	];
 </script>

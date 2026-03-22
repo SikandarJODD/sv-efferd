@@ -5,7 +5,7 @@
 	"type": "registry:block",
 	"description": "A compact FAQ stack with a centered heading and a classic single-column accordion.",
 	"registryDependencies": [
-		"./accordion.json"
+		"accordion"
 	],
 	"files": [
 		{

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AuthFour from '$lib/components/efferd/auth/auth-four.svelte';
+	import AuthFour from "$lib/components/efferd/auth/auth-four.svelte";
 </script>
 
 <svelte:head>

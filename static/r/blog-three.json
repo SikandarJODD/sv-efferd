@@ -6,7 +6,7 @@
 	"description": "A card-based blog grid with media thumbnails and richer reading metadata.",
 	"registryDependencies": [
 		"./full-width-divider.json",
-		"./aspect-ratio.json"
+		"aspect-ratio"
 	],
 	"files": [
 		{

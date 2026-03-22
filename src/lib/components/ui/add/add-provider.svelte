@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { useAddProvider, type Agent } from './add.svelte.js';
-	import { box } from 'svelte-toolbelt';
-	import type { Snippet } from 'svelte';
+	import { useAddProvider, type Agent } from "./add.svelte.js";
+	import { box } from "svelte-toolbelt";
+	import type { Snippet } from "svelte";
 
 	type Props = {
 		agent: Agent;
@@ -12,13 +12,13 @@
 
 	let {
 		agent = $bindable(),
-		registry = $bindable(''),
+		registry = $bindable(""),
 		registryOptions,
 		children
 	}: Props = $props();
 
 	let resolvedRegistryOptions = $derived(
-		registryOptions?.length ? registryOptions : registry ? [registry] : ['shadcn-svelte']
+		registryOptions?.length ? registryOptions : registry ? [registry] : ["shadcn-svelte"]
 	);
 
 	$effect(() => {

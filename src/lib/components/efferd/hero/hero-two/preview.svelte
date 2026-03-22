@@ -1,7 +1,7 @@
 <script lang="ts">
-	import HeaderTwo from '$lib/components/efferd/header/header-two/header-two.svelte';
-	import Hero from './hero.svelte';
-	import LogoSection from './logo-section.svelte';
+	import HeaderTwo from "$lib/components/efferd/header/header-two/header-two.svelte";
+	import Hero from "./hero.svelte";
+	import LogoSection from "./logo-section.svelte";
 </script>
 
 <div

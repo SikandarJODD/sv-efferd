@@ -1,13 +1,7 @@
 <script lang="ts">
-	import { FullWidthDivider } from '$lib/components/ui/full-width-divider';
-	import { cn } from '$lib/utils';
-	import {
-		ActivityIcon,
-		GlobeIcon,
-		ShieldCheckIcon,
-		ZapIcon,
-		type Icon
-	} from '@lucide/svelte';
+	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
+	import { cn } from "$lib/utils";
+	import { ActivityIcon, GlobeIcon, ShieldCheckIcon, ZapIcon, type Icon } from "@lucide/svelte";
 
 	type Feature = {
 		title: string;
@@ -17,24 +11,24 @@
 
 	const features: Feature[] = [
 		{
-			title: 'Lightning Fast',
+			title: "Lightning Fast",
 			icon: ZapIcon,
-			description: 'Blazing fast performance with edge network optimizations.'
+			description: "Blazing fast performance with edge network optimizations."
 		},
 		{
-			title: 'Secure by Design',
+			title: "Secure by Design",
 			icon: ShieldCheckIcon,
-			description: 'Enterprise-grade security, zero configuration required.'
+			description: "Enterprise-grade security, zero configuration required."
 		},
 		{
-			title: 'Real-time Sync',
+			title: "Real-time Sync",
 			icon: ActivityIcon,
-			description: 'Real-time data sync across all devices efficiently.'
+			description: "Real-time data sync across all devices efficiently."
 		},
 		{
-			title: 'Global Scale',
+			title: "Global Scale",
 			icon: GlobeIcon,
-			description: 'Instant global deployment to 35+ regions worldwide.'
+			description: "Instant global deployment to 35+ regions worldwide."
 		}
 	];
 </script>
@@ -47,10 +41,12 @@
 			{@const FeatureIcon = feature.icon}
 			<div
 				class={cn(
-					'relative flex flex-col justify-between overflow-hidden bg-background p-4 md:p-6'
+					"relative flex flex-col justify-between overflow-hidden bg-background p-4 md:p-6"
 				)}
 			>
-				<div class="relative z-10 flex items-center pt-4 pb-6 [&_svg]:size-5 [&_svg]:text-primary">
+				<div
+					class="relative z-10 flex items-center pt-4 pb-6 [&_svg]:size-5 [&_svg]:text-primary"
+				>
 					<FeatureIcon />
 				</div>
 

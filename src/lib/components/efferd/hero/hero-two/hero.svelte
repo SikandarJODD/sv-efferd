@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { ArrowRight, PhoneCall } from '@lucide/svelte';
-	import { Button } from '$lib/components/ui/button';
-	import { DecorIcon } from '$lib/components/ui/decor-icon';
-	import { FullWidthDivider } from '$lib/components/ui/full-width-divider';
+	import { ArrowRight, PhoneCall } from "@lucide/svelte";
+	import { Button } from "$lib/components/ui/button";
+	import { DecorIcon } from "$lib/components/ui/decor-icon";
+	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
 </script>
 
 <section>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import HeroThreePreview from '$lib/components/efferd/hero/hero-three/preview.svelte';
+	import HeroThreePreview from "$lib/components/efferd/hero/hero-three/preview.svelte";
 </script>
 
 <svelte:head>

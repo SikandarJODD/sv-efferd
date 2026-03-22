@@ -1,21 +1,21 @@
 <script lang="ts">
-	import { FullWidthDivider } from '$lib/components/ui/full-width-divider';
-	import GithubLogo from '$lib/svgs/github.svelte';
-	import XLogo from '$lib/svgs/x.svelte';
-	import { cn } from '$lib/utils';
-	import { Mail, MapPin, Phone, type Icon as IconType } from '@lucide/svelte';
-	import type { Component } from 'svelte';
+	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
+	import GithubLogo from "$lib/svgs/github.svelte";
+	import XLogo from "$lib/svgs/x.svelte";
+	import { cn } from "$lib/utils";
+	import { Mail, MapPin, Phone, type Icon as IconType } from "@lucide/svelte";
+	import type { Component } from "svelte";
 
-	const APP_EMAIL = 'mail@example.com';
-	const APP_PHONE = '+92 300 1234567';
-	const APP_PHONE_2 = '+92 321 9876543';
+	const APP_EMAIL = "mail@example.com";
+	const APP_PHONE = "+92 300 1234567";
+	const APP_PHONE_2 = "+92 321 9876543";
 
 	type ContactItem = {
 		title: string;
 		description: string;
 		icon: typeof IconType;
 		content: {
-			type: 'link' | 'text';
+			type: "link" | "text";
 			label: string;
 			href?: string;
 		}[];
@@ -29,40 +29,40 @@
 
 	const contactItems: ContactItem[] = [
 		{
-			title: 'Email',
-			description: 'We respond to all emails within 24 hours.',
+			title: "Email",
+			description: "We respond to all emails within 24 hours.",
 			icon: Mail,
 			content: [
 				{
-					type: 'link',
+					type: "link",
 					label: APP_EMAIL,
 					href: `mailto:${APP_EMAIL}`
 				}
 			]
 		},
 		{
-			title: 'Office',
-			description: 'Drop by our office for a chat.',
+			title: "Office",
+			description: "Drop by our office for a chat.",
 			icon: MapPin,
 			content: [
 				{
-					type: 'text',
-					label: 'Office # 100, 101 Second Floor Kohinoor 1, Faisalabad, Pakistan'
+					type: "text",
+					label: "Office # 100, 101 Second Floor Kohinoor 1, Faisalabad, Pakistan"
 				}
 			]
 		},
 		{
-			title: 'Phone',
+			title: "Phone",
 			description: "We're available Mon-Fri, 9am-5pm.",
 			icon: Phone,
 			content: [
 				{
-					type: 'link',
+					type: "link",
 					label: APP_PHONE,
 					href: `tel:${APP_PHONE}`
 				},
 				{
-					type: 'link',
+					type: "link",
 					label: APP_PHONE_2,
 					href: `tel:${APP_PHONE_2}`
 				}
@@ -73,13 +73,13 @@
 	const socialLinks: SocialLink[] = [
 		{
 			icon: GithubLogo,
-			href: '#',
-			label: 'GitHub'
+			href: "#",
+			label: "GitHub"
 		},
 		{
 			icon: XLogo,
-			href: '#',
-			label: 'Twitter'
+			href: "#",
+			label: "Twitter"
 		}
 	];
 </script>
@@ -97,14 +97,14 @@
 			{@const Icon = item.icon}
 			<div
 				class={cn(
-					'flex flex-col justify-between border-b md:border-r md:border-b-0',
-					index === contactItems.length - 1 && 'border-b-0 md:border-r-0'
+					"flex flex-col justify-between border-b md:border-r md:border-b-0",
+					index === contactItems.length - 1 && "border-b-0 md:border-r-0"
 				)}
 			>
 				<div
 					class={cn(
-						'flex items-center gap-x-3 border-b bg-secondary/50 p-4 dark:bg-secondary/20',
-						'[&_svg]:size-5 [&_svg]:stroke-[1.5] [&_svg]:text-muted-foreground'
+						"flex items-center gap-x-3 border-b bg-secondary/50 p-4 dark:bg-secondary/20",
+						"[&_svg]:size-5 [&_svg]:stroke-[1.5] [&_svg]:text-muted-foreground"
 					)}
 				>
 					<Icon />
@@ -114,7 +114,7 @@
 				<div class="flex items-center gap-x-2 p-4 py-12">
 					<div>
 						{#each item.content as entry}
-							{#if entry.type === 'link'}
+							{#if entry.type === "link"}
 								<a
 									class="block font-mono text-sm font-medium tracking-wide hover:underline"
 									href={entry.href}
@@ -140,7 +140,9 @@
 	<FullWidthDivider />
 
 	<div class="z-1 flex h-full flex-col items-center justify-center gap-4 py-24">
-		<h2 class="text-center text-2xl font-medium tracking-tight text-muted-foreground md:text-3xl">
+		<h2
+			class="text-center text-2xl font-medium tracking-tight text-muted-foreground md:text-3xl"
+		>
 			Find us <span class="text-foreground">online</span>
 		</h2>
 		<div class="flex flex-wrap items-center gap-2">

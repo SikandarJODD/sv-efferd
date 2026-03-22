@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FaqFour from '$lib/components/efferd/faqs/faq-four.svelte';
+	import FaqFour from "$lib/components/efferd/faqs/faq-four.svelte";
 </script>
 
 <svelte:head>

@@ -13,7 +13,7 @@
 	"registryDependencies": [
 		"button",
 		"./auth-divider.json",
-		"./input-group.json"
+		"input-group"
 	],
 	"files": [
 		{

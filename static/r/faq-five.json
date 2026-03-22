@@ -12,10 +12,10 @@
 	],
 	"registryDependencies": [
 		"button",
-		"./accordion.json",
+		"accordion",
 		"./full-width-divider.json",
-		"./input-group.json",
-		"./empty.json"
+		"input-group",
+		"empty"
 	],
 	"files": [
 		{

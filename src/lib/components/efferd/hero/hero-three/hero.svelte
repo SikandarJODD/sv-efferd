@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { ArrowRight, PhoneCall } from '@lucide/svelte';
-	import { Button } from '$lib/components/ui/button';
+	import { ArrowRight, PhoneCall } from "@lucide/svelte";
+	import { Button } from "$lib/components/ui/button";
 </script>
 
 <section class="mx-auto w-full max-w-5xl overflow-hidden pt-16">

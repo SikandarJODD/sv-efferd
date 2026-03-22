@@ -1,5 +1,5 @@
 <script lang="ts">
-	import PricingTwo from '$lib/components/efferd/pricing/pricing-two.svelte';
+	import PricingTwo from "$lib/components/efferd/pricing/pricing-two.svelte";
 </script>
 
 <svelte:head>

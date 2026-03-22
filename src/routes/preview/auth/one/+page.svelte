@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AuthOne from '$lib/components/efferd/auth/auth-one.svelte';
+	import AuthOne from "$lib/components/efferd/auth/auth-one.svelte";
 </script>
 
 <svelte:head>

@@ -1,36 +1,36 @@
 <script>
-	import { FullWidthDivider } from '$lib/components/ui/full-width-divider';
-	import BlogCard from './blog-card.svelte';
+	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
+	import BlogCard from "./blog-card.svelte";
 	const blogs = [
 		{
-			title: 'The New Design',
-			date: 'May 20 2025',
-			description: 'What everyone new to the field should know, and how we can help.',
-			href: '#'
+			title: "The New Design",
+			date: "May 20 2025",
+			description: "What everyone new to the field should know, and how we can help.",
+			href: "#"
 		},
 		{
-			title: 'Letter Club',
-			date: 'Aug 14 2025',
-			description: 'An ode to the slow web.',
-			href: '#'
+			title: "Letter Club",
+			date: "Aug 14 2025",
+			description: "An ode to the slow web.",
+			href: "#"
 		},
 		{
-			title: 'Have the Coffee',
-			date: 'Sep 19 2025',
-			description: 'Carve space out for oppurtunity.',
-			href: '#'
+			title: "Have the Coffee",
+			date: "Sep 19 2025",
+			description: "Carve space out for oppurtunity.",
+			href: "#"
 		},
 		{
-			title: 'Shadcn UI',
-			date: 'Oct 12 2025',
-			description: 'Building modern applications with reusable components.',
-			href: '#'
+			title: "Shadcn UI",
+			date: "Oct 12 2025",
+			description: "Building modern applications with reusable components.",
+			href: "#"
 		},
 		{
-			title: 'Fesgin',
-			date: 'Nov 23 2025',
-			description: 'Exploring the intersection of design and development.',
-			href: '#'
+			title: "Fesgin",
+			date: "Nov 23 2025",
+			description: "Exploring the intersection of design and development.",
+			href: "#"
 		}
 	];
 </script>

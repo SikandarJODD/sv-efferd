@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FooterThree from '$lib/components/efferd/footer/footer-three.svelte';
+	import FooterThree from "$lib/components/efferd/footer/footer-three.svelte";
 </script>
 
 <svelte:head>

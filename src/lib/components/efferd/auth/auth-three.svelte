@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { AtSignIcon } from '@lucide/svelte';
-	import { Button } from '$lib/components/ui/button';
-	import { AuthDivider } from '$lib/components/ui/auth-divider';
-	import { InputGroup, InputGroupAddon, InputGroupInput } from '$lib/components/ui/input-group';
-	import GithubLogo from '$lib/svgs/github.svelte';
-	import GoogleLogo from '$lib/svgs/google.svelte';
-	import Logo from '$lib/svgs/logo.svelte';
-	import { cn } from '$lib/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { AtSignIcon } from "@lucide/svelte";
+	import { Button } from "$lib/components/ui/button";
+	import { AuthDivider } from "$lib/components/ui/auth-divider";
+	import { InputGroup, InputGroupAddon, InputGroupInput } from "$lib/components/ui/input-group";
+	import GithubLogo from "$lib/svgs/github.svelte";
+	import GoogleLogo from "$lib/svgs/google.svelte";
+	import Logo from "$lib/svgs/logo.svelte";
+	import { cn } from "$lib/utils";
+	import type { HTMLAttributes } from "svelte/elements";
 
 	type AuthThreeProps = HTMLAttributes<HTMLDivElement> & {
 		class?: string;
@@ -18,16 +18,16 @@
 	};
 
 	let {
-		class: className = '',
-		logoHref = '#',
-		privacyHref = '#',
-		termsHref = '#',
-		emailPlaceholder = 'your.email@example.com',
+		class: className = "",
+		logoHref = "#",
+		privacyHref = "#",
+		termsHref = "#",
+		emailPlaceholder = "your.email@example.com",
 		...restProps
 	}: AuthThreeProps = $props();
 </script>
 
-<div class={cn('relative w-full overflow-hidden md:h-screen', className)} {...restProps}>
+<div class={cn("relative w-full overflow-hidden md:h-screen", className)} {...restProps}>
 	<div
 		class="relative mx-auto flex min-h-screen w-full max-w-sm flex-col justify-between p-6 md:p-8"
 	>

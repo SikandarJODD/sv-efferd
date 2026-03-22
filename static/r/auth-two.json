@@ -14,7 +14,7 @@
 		"button",
 		"./auth-divider.json",
 		"./decor-icon.json",
-		"./input-group.json"
+		"input-group"
 	],
 	"files": [
 		{

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
-	import type { SVGAttributes } from 'svelte/elements';
+	import { cn } from "$lib/utils";
+	import type { SVGAttributes } from "svelte/elements";
 
 	interface DashedLinesProps extends SVGAttributes<SVGSVGElement> {
 		width?: number;
@@ -22,7 +22,7 @@
 
 <svg
 	aria-hidden="true"
-	class={cn('pointer-events-none size-full stroke-border', className)}
+	class={cn("pointer-events-none size-full stroke-border", className)}
 	{...props}
 >
 	<defs>

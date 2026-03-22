@@ -5,7 +5,7 @@
 	"type": "registry:block",
 	"description": "A centered single testimonial with brand mark, compact author block, and soft editorial framing.",
 	"registryDependencies": [
-		"./avatar.json"
+		"avatar"
 	],
 	"files": [
 		{

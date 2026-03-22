@@ -5,7 +5,7 @@
 	"type": "registry:block",
 	"description": "A split FAQ layout with a fixed intro column and full-height answer rail.",
 	"registryDependencies": [
-		"./accordion.json"
+		"accordion"
 	],
 	"files": [
 		{

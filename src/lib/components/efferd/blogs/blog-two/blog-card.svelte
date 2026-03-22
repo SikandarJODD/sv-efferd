@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { cn } from "$lib/utils";
+	import type { HTMLAttributes } from "svelte/elements";
 
 	type BlogCard = {
 		title: string;
@@ -19,14 +19,14 @@
 		description,
 		category,
 		author,
-		class: className = '',
+		class: className = "",
 		...props
 	}: Props = $props();
 </script>
 
 <a
 	class={cn(
-		'group w-full bg-background px-6 py-12 text-muted-foreground hover:cursor-pointer hover:text-foreground active:bg-accent md:px-8 active:dark:bg-accent/50',
+		"group w-full bg-background px-6 py-12 text-muted-foreground hover:cursor-pointer hover:text-foreground active:bg-accent md:px-8 active:dark:bg-accent/50",
 		className
 	)}
 	{...props}

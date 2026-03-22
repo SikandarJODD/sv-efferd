@@ -1,19 +1,19 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { createScroll } from '$lib/hooks/use-scroll.svelte';
-	import Logo from '$lib/svgs/logo.svelte';
-	import { cn } from '$lib/utils';
-	import DesktopNav from './desktop-nav.svelte';
-	import MobileNav from './mobile-nav.svelte';
+	import { Button } from "$lib/components/ui/button";
+	import { createScroll } from "$lib/hooks/use-scroll.svelte";
+	import Logo from "$lib/svgs/logo.svelte";
+	import { cn } from "$lib/utils";
+	import DesktopNav from "./desktop-nav.svelte";
+	import MobileNav from "./mobile-nav.svelte";
 
 	let scroll = createScroll(50);
 </script>
 
 <header
 	class={cn(
-		'sticky top-0 z-50 w-full border-b border-transparent',
+		"sticky top-0 z-50 w-full border-b border-transparent",
 		scroll.scrolled &&
-			'border-border bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/50'
+			"border-border bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/50"
 	)}
 >
 	<nav class="mx-auto flex h-14 w-full max-w-5xl items-center justify-between px-4">

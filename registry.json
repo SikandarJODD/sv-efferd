@@ -40,92 +40,6 @@
 			"registryDependencies": []
 		},
 		{
-			"name": "input-group",
-			"title": "Input group",
-			"type": "registry:block",
-			"files": [
-				{
-					"path": "src/lib/components/ui/input-group/input-group.svelte",
-					"type": "registry:component",
-					"target": "ui/input-group/input-group.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/input-group/input-group-addon.svelte",
-					"type": "registry:component",
-					"target": "ui/input-group/input-group-addon.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/input-group/input-group-button.svelte",
-					"type": "registry:component",
-					"target": "ui/input-group/input-group-button.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/input-group/input-group-input.svelte",
-					"type": "registry:component",
-					"target": "ui/input-group/input-group-input.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/input-group/input-group-text.svelte",
-					"type": "registry:component",
-					"target": "ui/input-group/input-group-text.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/input-group/input-group-textarea.svelte",
-					"type": "registry:component",
-					"target": "ui/input-group/input-group-textarea.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/input-group/index.ts",
-					"type": "registry:file",
-					"target": "ui/input-group/index.ts"
-				}
-			],
-			"registryDependencies": []
-		},
-		{
-			"name": "empty",
-			"title": "Empty",
-			"type": "registry:block",
-			"files": [
-				{
-					"path": "src/lib/components/ui/empty/empty.svelte",
-					"type": "registry:component",
-					"target": "ui/empty/empty.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/empty/empty-header.svelte",
-					"type": "registry:component",
-					"target": "ui/empty/empty-header.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/empty/empty-media.svelte",
-					"type": "registry:component",
-					"target": "ui/empty/empty-media.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/empty/empty-title.svelte",
-					"type": "registry:component",
-					"target": "ui/empty/empty-title.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/empty/empty-description.svelte",
-					"type": "registry:component",
-					"target": "ui/empty/empty-description.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/empty/empty-content.svelte",
-					"type": "registry:component",
-					"target": "ui/empty/empty-content.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/empty/index.ts",
-					"type": "registry:file",
-					"target": "ui/empty/index.ts"
-				}
-			],
-			"registryDependencies": []
-		},
-		{
 			"name": "marquee",
 			"title": "Marquee",
 			"type": "registry:block",
@@ -162,105 +76,6 @@
 			"registryDependencies": []
 		},
 		{
-			"name": "field",
-			"title": "Field",
-			"type": "registry:block",
-			"files": [
-				{
-					"path": "src/lib/components/ui/field/field.svelte",
-					"type": "registry:component",
-					"target": "ui/field/field.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/field/field-set.svelte",
-					"type": "registry:component",
-					"target": "ui/field/field-set.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/field/field-legend.svelte",
-					"type": "registry:component",
-					"target": "ui/field/field-legend.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/field/field-group.svelte",
-					"type": "registry:component",
-					"target": "ui/field/field-group.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/field/field-content.svelte",
-					"type": "registry:component",
-					"target": "ui/field/field-content.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/field/field-label.svelte",
-					"type": "registry:component",
-					"target": "ui/field/field-label.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/field/field-title.svelte",
-					"type": "registry:component",
-					"target": "ui/field/field-title.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/field/field-description.svelte",
-					"type": "registry:component",
-					"target": "ui/field/field-description.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/field/field-separator.svelte",
-					"type": "registry:component",
-					"target": "ui/field/field-separator.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/field/field-error.svelte",
-					"type": "registry:component",
-					"target": "ui/field/field-error.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/field/index.ts",
-					"type": "registry:file",
-					"target": "ui/field/index.ts"
-				}
-			],
-			"registryDependencies": []
-		},
-		{
-			"name": "input",
-			"title": "Input",
-			"type": "registry:block",
-			"files": [
-				{
-					"path": "src/lib/components/ui/input/input.svelte",
-					"type": "registry:component",
-					"target": "ui/input/input.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/input/index.ts",
-					"type": "registry:file",
-					"target": "ui/input/index.ts"
-				}
-			],
-			"registryDependencies": []
-		},
-		{
-			"name": "textarea",
-			"title": "Textarea",
-			"type": "registry:block",
-			"files": [
-				{
-					"path": "src/lib/components/ui/textarea/textarea.svelte",
-					"type": "registry:component",
-					"target": "ui/textarea/textarea.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/textarea/index.ts",
-					"type": "registry:file",
-					"target": "ui/textarea/index.ts"
-				}
-			],
-			"registryDependencies": []
-		},
-		{
 			"name": "grid-filler",
 			"title": "Grid filler",
 			"type": "registry:block",
@@ -277,59 +92,6 @@
 				}
 			],
 			"registryDependencies": []
-		},
-		{
-			"name": "aspect-ratio",
-			"title": "Aspect ratio",
-			"type": "registry:block",
-			"files": [
-				{
-					"path": "src/lib/components/ui/aspect-ratio/aspect-ratio.svelte",
-					"type": "registry:component",
-					"target": "ui/aspect-ratio/aspect-ratio.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/aspect-ratio/index.ts",
-					"type": "registry:file",
-					"target": "ui/aspect-ratio/index.ts"
-				}
-			],
-			"registryDependencies": [],
-			"dependencies": ["bits-ui"]
-		},
-		{
-			"name": "accordion",
-			"title": "Accordion",
-			"type": "registry:block",
-			"files": [
-				{
-					"path": "src/lib/components/ui/accordion/accordion.svelte",
-					"type": "registry:component",
-					"target": "ui/accordion/accordion.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/accordion/accordion-item.svelte",
-					"type": "registry:component",
-					"target": "ui/accordion/accordion-item.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/accordion/accordion-trigger.svelte",
-					"type": "registry:component",
-					"target": "ui/accordion/accordion-trigger.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/accordion/accordion-content.svelte",
-					"type": "registry:component",
-					"target": "ui/accordion/accordion-content.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/accordion/index.ts",
-					"type": "registry:file",
-					"target": "ui/accordion/index.ts"
-				}
-			],
-			"registryDependencies": [],
-			"dependencies": ["bits-ui", "@lucide/svelte"]
 		},
 		{
 			"name": "dashed-line",
@@ -366,35 +128,6 @@
 				}
 			],
 			"registryDependencies": []
-		},
-		{
-			"name": "avatar",
-			"title": "Avatar",
-			"type": "registry:block",
-			"files": [
-				{
-					"path": "src/lib/components/ui/avatar/avatar.svelte",
-					"type": "registry:component",
-					"target": "ui/avatar/avatar.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/avatar/avatar-image.svelte",
-					"type": "registry:component",
-					"target": "ui/avatar/avatar-image.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/avatar/avatar-fallback.svelte",
-					"type": "registry:component",
-					"target": "ui/avatar/avatar-fallback.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/avatar/index.ts",
-					"type": "registry:file",
-					"target": "ui/avatar/index.ts"
-				}
-			],
-			"registryDependencies": [],
-			"dependencies": ["bits-ui"]
 		},
 		{
 			"name": "mask-line",
@@ -437,60 +170,6 @@
 			],
 			"registryDependencies": [],
 			"dependencies": ["bits-ui"]
-		},
-		{
-			"name": "navigation-menu",
-			"title": "Navigation menu",
-			"type": "registry:block",
-			"files": [
-				{
-					"path": "src/lib/components/ui/navigation-menu/navigation-menu.svelte",
-					"type": "registry:component",
-					"target": "ui/navigation-menu/navigation-menu.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/navigation-menu/navigation-menu-content.svelte",
-					"type": "registry:component",
-					"target": "ui/navigation-menu/navigation-menu-content.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/navigation-menu/navigation-menu-indicator.svelte",
-					"type": "registry:component",
-					"target": "ui/navigation-menu/navigation-menu-indicator.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/navigation-menu/navigation-menu-item.svelte",
-					"type": "registry:component",
-					"target": "ui/navigation-menu/navigation-menu-item.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/navigation-menu/navigation-menu-link.svelte",
-					"type": "registry:component",
-					"target": "ui/navigation-menu/navigation-menu-link.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/navigation-menu/navigation-menu-list.svelte",
-					"type": "registry:component",
-					"target": "ui/navigation-menu/navigation-menu-list.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/navigation-menu/navigation-menu-trigger.svelte",
-					"type": "registry:component",
-					"target": "ui/navigation-menu/navigation-menu-trigger.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/navigation-menu/navigation-menu-viewport.svelte",
-					"type": "registry:component",
-					"target": "ui/navigation-menu/navigation-menu-viewport.svelte"
-				},
-				{
-					"path": "src/lib/components/ui/navigation-menu/index.ts",
-					"type": "registry:file",
-					"target": "ui/navigation-menu/index.ts"
-				}
-			],
-			"registryDependencies": [],
-			"dependencies": ["bits-ui", "@lucide/svelte"]
 		},
 		{
 			"name": "auth-divider",
@@ -618,7 +297,7 @@
 					"target": "efferd/cta/cta-five.svelte"
 				}
 			],
-			"registryDependencies": ["button", "local:full-width-divider", "local:input-group"],
+			"registryDependencies": ["button", "local:full-width-divider", "input-group"],
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
@@ -633,7 +312,7 @@
 					"target": "efferd/not-found/not-found-one.svelte"
 				}
 			],
-			"registryDependencies": ["button", "local:full-width-divider", "local:empty"],
+			"registryDependencies": ["button", "local:full-width-divider", "empty"],
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
@@ -648,7 +327,7 @@
 					"target": "efferd/not-found/not-found-two.svelte"
 				}
 			],
-			"registryDependencies": ["button", "local:empty"],
+			"registryDependencies": ["button", "empty"],
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
@@ -798,7 +477,7 @@
 					"target": "efferd/contact/contact-four.svelte"
 				}
 			],
-			"registryDependencies": ["button", "local:field", "local:input", "local:textarea"],
+			"registryDependencies": ["button", "field", "input", "textarea"],
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
@@ -818,13 +497,7 @@
 					"target": "efferd/contact/contact-form.svelte"
 				}
 			],
-			"registryDependencies": [
-				"button",
-				"local:decor-icon",
-				"local:field",
-				"local:input",
-				"local:textarea"
-			],
+			"registryDependencies": ["button", "local:decor-icon", "field", "input", "textarea"],
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
@@ -882,7 +555,7 @@
 					"target": "efferd/blogs/blog-three/blog-card.svelte"
 				}
 			],
-			"registryDependencies": ["local:full-width-divider", "local:aspect-ratio"]
+			"registryDependencies": ["local:full-width-divider", "aspect-ratio"]
 		},
 		{
 			"name": "auth-one",
@@ -940,7 +613,7 @@
 				"button",
 				"local:auth-divider",
 				"local:decor-icon",
-				"local:input-group"
+				"input-group"
 			],
 			"dependencies": ["@lucide/svelte"]
 		},
@@ -971,7 +644,7 @@
 					"target": "svgs/github.svelte"
 				}
 			],
-			"registryDependencies": ["button", "local:auth-divider", "local:input-group"],
+			"registryDependencies": ["button", "local:auth-divider", "input-group"],
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
@@ -1000,7 +673,7 @@
 				"button",
 				"local:auth-divider",
 				"local:full-width-divider",
-				"local:input-group"
+				"input-group"
 			],
 			"dependencies": ["@lucide/svelte"]
 		},
@@ -1040,7 +713,7 @@
 				"button",
 				"local:auth-divider",
 				"local:floating-paths",
-				"local:input-group"
+				"input-group"
 			],
 			"dependencies": ["@lucide/svelte"]
 		},
@@ -1056,7 +729,7 @@
 					"target": "efferd/faqs/faq-one.svelte"
 				}
 			],
-			"registryDependencies": ["local:accordion"]
+			"registryDependencies": ["accordion"]
 		},
 		{
 			"name": "faq-two",
@@ -1070,7 +743,7 @@
 					"target": "efferd/faqs/faq-two.svelte"
 				}
 			],
-			"registryDependencies": ["local:accordion"]
+			"registryDependencies": ["accordion"]
 		},
 		{
 			"name": "faq-three",
@@ -1084,7 +757,7 @@
 					"target": "efferd/faqs/faq-three.svelte"
 				}
 			],
-			"registryDependencies": ["local:accordion", "local:decor-icon"]
+			"registryDependencies": ["accordion", "local:decor-icon"]
 		},
 		{
 			"name": "faq-four",
@@ -1098,7 +771,7 @@
 					"target": "efferd/faqs/faq-four.svelte"
 				}
 			],
-			"registryDependencies": ["button", "local:accordion"],
+			"registryDependencies": ["button", "accordion"],
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
@@ -1115,10 +788,10 @@
 			],
 			"registryDependencies": [
 				"button",
-				"local:accordion",
+				"accordion",
 				"local:full-width-divider",
-				"local:input-group",
-				"local:empty"
+				"input-group",
+				"empty"
 			],
 			"dependencies": ["@lucide/svelte"]
 		},
@@ -1619,7 +1292,7 @@
 			"registryDependencies": [
 				"button",
 				"local:logo-cloud-five",
-				"local:navigation-menu",
+				"navigation-menu",
 				"local:portal"
 			],
 			"dependencies": ["@lucide/svelte"]
@@ -1741,7 +1414,7 @@
 					"target": "svgs/logo.svelte"
 				}
 			],
-			"registryDependencies": ["button", "local:navigation-menu", "local:portal"],
+			"registryDependencies": ["button", "navigation-menu", "local:portal"],
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
@@ -1826,7 +1499,7 @@
 					"target": "svgs/logo.svelte"
 				}
 			],
-			"registryDependencies": ["button", "local:navigation-menu", "local:portal"],
+			"registryDependencies": ["button", "navigation-menu", "local:portal"],
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
@@ -1911,7 +1584,7 @@
 					"target": "efferd/testimonial/testimonial-one.svelte"
 				}
 			],
-			"registryDependencies": ["local:avatar"]
+			"registryDependencies": ["avatar"]
 		},
 		{
 			"name": "testimonial-two",
@@ -1925,7 +1598,7 @@
 					"target": "efferd/testimonial/testimonial-two.svelte"
 				}
 			],
-			"registryDependencies": ["local:avatar", "local:mask-line"]
+			"registryDependencies": ["avatar", "local:mask-line"]
 		},
 		{
 			"name": "testimonial-three",
@@ -1944,7 +1617,7 @@
 					"target": "efferd/testimonial/testimonial-card.svelte"
 				}
 			],
-			"registryDependencies": ["local:avatar", "local:decor-icon"],
+			"registryDependencies": ["avatar", "local:decor-icon"],
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
@@ -1985,7 +1658,7 @@
 				}
 			],
 			"registryDependencies": [
-				"local:avatar",
+				"avatar",
 				"local:full-width-divider",
 				"local:grid-filler",
 				"local:grid-pattern"
@@ -2008,7 +1681,7 @@
 					"target": "efferd/image-gallery/lazy-image.svelte"
 				}
 			],
-			"registryDependencies": ["local:aspect-ratio"],
+			"registryDependencies": ["aspect-ratio"],
 			"dependencies": ["motion-sv"]
 		}
 	]

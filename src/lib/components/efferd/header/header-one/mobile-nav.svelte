@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { Portal, PortalBackdrop } from '$lib/components/ui/portal';
-	import { cn } from '$lib/utils';
-	import { MenuIcon, XIcon } from '@lucide/svelte';
-	import { navLinks } from './nav-links';
-	import { fade } from 'svelte/transition';
+	import { Button } from "$lib/components/ui/button";
+	import { Portal, PortalBackdrop } from "$lib/components/ui/portal";
+	import { cn } from "$lib/utils";
+	import { MenuIcon, XIcon } from "@lucide/svelte";
+	import { navLinks } from "./nav-links";
+	import { fade } from "svelte/transition";
 
 	let open = $state(false);
 </script>
@@ -30,11 +30,11 @@
 			<PortalBackdrop />
 			<div
 				class={cn(
-					'ease-out data-[slot=open]:animate-in data-[slot=open]:zoom-in-97',
-					'size-full p-4'
+					"ease-out data-[slot=open]:animate-in data-[slot=open]:zoom-in-97",
+					"size-full p-4"
 				)}
 				out:fade|global={{ duration: 150 }}
-				data-slot={open ? 'open' : 'closed'}
+				data-slot={open ? "open" : "closed"}
 			>
 				<div class="grid gap-y-2">
 					{#each navLinks as link}

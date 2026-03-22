@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Preview from '$lib/components/efferd/logo-cloud/four/preview.svelte';
+	import Preview from "$lib/components/efferd/logo-cloud/four/preview.svelte";
 </script>
 
 <svelte:head>

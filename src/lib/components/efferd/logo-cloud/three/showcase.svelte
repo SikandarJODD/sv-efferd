@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LogoCloudThree from './logo-cloud-three.svelte';
+	import LogoCloudThree from "./logo-cloud-three.svelte";
 </script>
 
 <div class="min-h-screen w-full place-content-center">

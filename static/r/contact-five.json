@@ -13,9 +13,9 @@
 	"registryDependencies": [
 		"button",
 		"./decor-icon.json",
-		"./field.json",
-		"./input.json",
-		"./textarea.json"
+		"field",
+		"input",
+		"textarea"
 	],
 	"files": [
 		{

@@ -1,9 +1,9 @@
-import { UseClipboard } from '$lib/hooks/use-clipboard.svelte';
-import { resolveCommand } from 'package-manager-detector/commands';
-import { Context } from 'runed';
-import type { ReadableBoxedValues, WritableBoxedValues } from 'svelte-toolbelt';
+import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
+import { resolveCommand } from "package-manager-detector/commands";
+import { Context } from "runed";
+import type { ReadableBoxedValues, WritableBoxedValues } from "svelte-toolbelt";
 
-export const AGENTS = ['pnpm', 'npm', 'yarn', 'bun'] as const;
+export const AGENTS = ["pnpm", "npm", "yarn", "bun"] as const;
 export type Agent = (typeof AGENTS)[number];
 
 export type ProviderProps<RegistryOptions extends readonly string[]> = WritableBoxedValues<{
@@ -18,7 +18,7 @@ class AddProviderState<RegistryOptions extends readonly string[]> {
 	constructor(readonly opts: ProviderProps<RegistryOptions>) {}
 }
 
-const ProviderCtx = new Context<AddProviderState<readonly string[]>>('add-provider-ctx');
+const ProviderCtx = new Context<AddProviderState<readonly string[]>>("add-provider-ctx");
 
 export function useAddProvider<RegistryOptions extends readonly string[]>(
 	opts: ProviderProps<RegistryOptions>
@@ -44,25 +44,25 @@ class AddRootState {
 	}
 
 	addCommand: string = $derived.by(() => {
-		const command = resolveCommand(this.agent, 'execute', [
+		const command = resolveCommand(this.agent, "execute", [
 			// 'jsrepo',
-			'shadcn-svelte@latest',
-			'add',
+			"shadcn-svelte@latest",
+			"add",
 			this.opts.withoutRegistry.current
 				? this.opts.item.current
 				: `${this.registry}/${this.opts.item.current}`
 		]);
 
 		return command
-			? `${command.command} ${command.args.join(' ')}`
+			? `${command.command} ${command.args.join(" ")}`
 			: `npx shadcn-svelte@latest add ${this.opts.withoutRegistry.current ? this.opts.item.current : `${this.registry}/${this.opts.item.current}`}`;
 	});
 
 	initCommand: string = $derived.by(() => {
-		const command = resolveCommand(this.agent, 'execute', ['init', this.registry]);
+		const command = resolveCommand(this.agent, "execute", ["init", this.registry]);
 
 		return command
-			? `${command.command} ${command.args.join(' ')}`
+			? `${command.command} ${command.args.join(" ")}`
 			: `npx shadcn-svelte@latest init ${this.registry}`;
 	});
 
@@ -83,7 +83,7 @@ class AddRootState {
 	}
 }
 
-const AddCtx = new Context<AddRootState>('add-ctx');
+const AddCtx = new Context<AddRootState>("add-ctx");
 
 class AddButtonState {
 	constructor(readonly root: AddRootState) {}

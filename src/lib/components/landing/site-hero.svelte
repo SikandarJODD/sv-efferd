@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { DecorIcon } from '$lib/components/ui/decor-icon';
-	import { Github } from '$lib/svgs';
-	import { ArrowRight, Rocket } from '@lucide/svelte';
-	import { landingHero } from './config';
-	import { DashedLine } from '../ui/dashed-line';
-	import { BorderSeparator } from '../ui/border-seperator';
-	import { DashedLines } from '../ui/dashed-lines';
+	import { Button } from "$lib/components/ui/button";
+	import { DecorIcon } from "$lib/components/ui/decor-icon";
+	import { Github } from "$lib/svgs";
+	import { ArrowRight, Rocket } from "@lucide/svelte";
+	import { landingHero } from "./config";
+	import { DashedLine } from "../ui/dashed-line";
+	import { BorderSeparator } from "../ui/border-seperator";
+	import { DashedLines } from "../ui/dashed-lines";
 </script>
 
 <section
@@ -74,7 +74,12 @@
 				<span>{landingHero.primaryCta.label}</span>
 			</Button>
 
-			<Button class="rounded-none" variant="outline" href={landingHero.secondaryCta.href} size="lg">
+			<Button
+				class="rounded-none"
+				variant="outline"
+				href={landingHero.secondaryCta.href}
+				size="lg"
+			>
 				<Github class="size-4" />
 				<span>{landingHero.secondaryCta.label}</span>
 			</Button>

@@ -8,7 +8,7 @@
 		"motion-sv"
 	],
 	"registryDependencies": [
-		"./aspect-ratio.json"
+		"aspect-ratio"
 	],
 	"files": [
 		{

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import NotFoundOne from '$lib/components/efferd/not-found/not-found-one.svelte';
+	import NotFoundOne from "$lib/components/efferd/not-found/not-found-one.svelte";
 </script>
 
 <svelte:head>

@@ -1,5 +1,5 @@
-import type { Icon } from '@lucide/svelte';
-import type { Component } from 'svelte';
+import type { Icon } from "@lucide/svelte";
+import type { Component } from "svelte";
 
 export type LinkItemType = {
 	label: string;

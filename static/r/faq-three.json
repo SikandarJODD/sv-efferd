@@ -5,7 +5,7 @@
 	"type": "registry:block",
 	"description": "A guided editorial FAQ with divider rails and decorative timeline markers.",
 	"registryDependencies": [
-		"./accordion.json",
+		"accordion",
 		"./decor-icon.json"
 	],
 	"files": [

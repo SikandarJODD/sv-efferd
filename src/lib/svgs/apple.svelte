@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { SVGAttributes } from 'svelte/elements';
+	import type { SVGAttributes } from "svelte/elements";
 
-	let { fill = 'currentColor', ...props }: SVGAttributes<SVGSVGElement> & { fill?: string } =
+	let { fill = "currentColor", ...props }: SVGAttributes<SVGSVGElement> & { fill?: string } =
 		$props();
 </script>
 
-<svg fill={fill} viewBox="0 0 24 24" {...props}>
+<svg {fill} viewBox="0 0 24 24" {...props}>
 	<g id="_Group_2">
 		<g id="_Group_3">
 			<path

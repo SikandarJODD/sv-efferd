@@ -14,9 +14,9 @@
 		variants: {
 			variant: {
 				default: "border-border bg-secondary/10",
-				secondary: "border-transparent bg-secondary/50",
-			},
-		},
+				secondary: "border-transparent bg-secondary/50"
+			}
+		}
 	});
 
 	type Variant = VariantProps<typeof style>["variant"];
@@ -71,7 +71,7 @@
 		class: className = undefined,
 		hideLines = false,
 		hideCopy = true,
-		highlight = [],
+		highlight = []
 	}: Props = $props();
 
 	let hl = $state<HighlighterCore>();
@@ -86,7 +86,7 @@
 			lang: lang,
 			themes: {
 				dark: "vesper",
-				light: "github-light",
+				light: "github-light"
 			},
 			transformers: [
 				{
@@ -105,9 +105,9 @@
 						}
 
 						return node;
-					},
-				},
-			],
+					}
+				}
+			]
 		});
 
 		// Only sanitize in browser - DOMPurify requires DOM APIs

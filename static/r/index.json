@@ -14,20 +14,6 @@
 		"relativeUrl": "decor-icon.json"
 	},
 	{
-		"name": "input-group",
-		"title": "Input group",
-		"type": "registry:block",
-		"registryDependencies": [],
-		"relativeUrl": "input-group.json"
-	},
-	{
-		"name": "empty",
-		"title": "Empty",
-		"type": "registry:block",
-		"registryDependencies": [],
-		"relativeUrl": "empty.json"
-	},
-	{
 		"name": "marquee",
 		"title": "Marquee",
 		"type": "registry:block",
@@ -42,53 +28,11 @@
 		"relativeUrl": "progressive-blur.json"
 	},
 	{
-		"name": "field",
-		"title": "Field",
-		"type": "registry:block",
-		"registryDependencies": [],
-		"relativeUrl": "field.json"
-	},
-	{
-		"name": "input",
-		"title": "Input",
-		"type": "registry:block",
-		"registryDependencies": [],
-		"relativeUrl": "input.json"
-	},
-	{
-		"name": "textarea",
-		"title": "Textarea",
-		"type": "registry:block",
-		"registryDependencies": [],
-		"relativeUrl": "textarea.json"
-	},
-	{
 		"name": "grid-filler",
 		"title": "Grid filler",
 		"type": "registry:block",
 		"registryDependencies": [],
 		"relativeUrl": "grid-filler.json"
-	},
-	{
-		"name": "aspect-ratio",
-		"title": "Aspect ratio",
-		"type": "registry:block",
-		"dependencies": [
-			"bits-ui"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "aspect-ratio.json"
-	},
-	{
-		"name": "accordion",
-		"title": "Accordion",
-		"type": "registry:block",
-		"dependencies": [
-			"bits-ui",
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "accordion.json"
 	},
 	{
 		"name": "dashed-line",
@@ -103,16 +47,6 @@
 		"type": "registry:block",
 		"registryDependencies": [],
 		"relativeUrl": "grid-pattern.json"
-	},
-	{
-		"name": "avatar",
-		"title": "Avatar",
-		"type": "registry:block",
-		"dependencies": [
-			"bits-ui"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "avatar.json"
 	},
 	{
 		"name": "mask-line",
@@ -130,17 +64,6 @@
 		],
 		"registryDependencies": [],
 		"relativeUrl": "portal.json"
-	},
-	{
-		"name": "navigation-menu",
-		"title": "Navigation menu",
-		"type": "registry:block",
-		"dependencies": [
-			"bits-ui",
-			"@lucide/svelte"
-		],
-		"registryDependencies": [],
-		"relativeUrl": "navigation-menu.json"
 	},
 	{
 		"name": "auth-divider",
@@ -229,7 +152,7 @@
 		"registryDependencies": [
 			"button",
 			"local:full-width-divider",
-			"local:input-group"
+			"input-group"
 		],
 		"relativeUrl": "cta-five.json"
 	},
@@ -244,7 +167,7 @@
 		"registryDependencies": [
 			"button",
 			"local:full-width-divider",
-			"local:empty"
+			"empty"
 		],
 		"relativeUrl": "not-found-one.json"
 	},
@@ -258,7 +181,7 @@
 		],
 		"registryDependencies": [
 			"button",
-			"local:empty"
+			"empty"
 		],
 		"relativeUrl": "not-found-two.json"
 	},
@@ -358,9 +281,9 @@
 		],
 		"registryDependencies": [
 			"button",
-			"local:field",
-			"local:input",
-			"local:textarea"
+			"field",
+			"input",
+			"textarea"
 		],
 		"relativeUrl": "contact-four.json"
 	},
@@ -375,9 +298,9 @@
 		"registryDependencies": [
 			"button",
 			"local:decor-icon",
-			"local:field",
-			"local:input",
-			"local:textarea"
+			"field",
+			"input",
+			"textarea"
 		],
 		"relativeUrl": "contact-five.json"
 	},
@@ -409,7 +332,7 @@
 		"description": "A card-based blog grid with media thumbnails and richer reading metadata.",
 		"registryDependencies": [
 			"local:full-width-divider",
-			"local:aspect-ratio"
+			"aspect-ratio"
 		],
 		"relativeUrl": "blog-three.json"
 	},
@@ -439,7 +362,7 @@
 			"button",
 			"local:auth-divider",
 			"local:decor-icon",
-			"local:input-group"
+			"input-group"
 		],
 		"relativeUrl": "auth-two.json"
 	},
@@ -454,7 +377,7 @@
 		"registryDependencies": [
 			"button",
 			"local:auth-divider",
-			"local:input-group"
+			"input-group"
 		],
 		"relativeUrl": "auth-three.json"
 	},
@@ -470,7 +393,7 @@
 			"button",
 			"local:auth-divider",
 			"local:full-width-divider",
-			"local:input-group"
+			"input-group"
 		],
 		"relativeUrl": "auth-four.json"
 	},
@@ -486,7 +409,7 @@
 			"button",
 			"local:auth-divider",
 			"local:floating-paths",
-			"local:input-group"
+			"input-group"
 		],
 		"relativeUrl": "auth-five.json"
 	},
@@ -496,7 +419,7 @@
 		"type": "registry:block",
 		"description": "A compact FAQ stack with a centered heading and a classic single-column accordion.",
 		"registryDependencies": [
-			"local:accordion"
+			"accordion"
 		],
 		"relativeUrl": "faq-one.json"
 	},
@@ -506,7 +429,7 @@
 		"type": "registry:block",
 		"description": "A split FAQ layout with a fixed intro column and full-height answer rail.",
 		"registryDependencies": [
-			"local:accordion"
+			"accordion"
 		],
 		"relativeUrl": "faq-two.json"
 	},
@@ -516,7 +439,7 @@
 		"type": "registry:block",
 		"description": "A guided editorial FAQ with divider rails and decorative timeline markers.",
 		"registryDependencies": [
-			"local:accordion",
+			"accordion",
 			"local:decor-icon"
 		],
 		"relativeUrl": "faq-three.json"
@@ -531,7 +454,7 @@
 		],
 		"registryDependencies": [
 			"button",
-			"local:accordion"
+			"accordion"
 		],
 		"relativeUrl": "faq-four.json"
 	},
@@ -545,10 +468,10 @@
 		],
 		"registryDependencies": [
 			"button",
-			"local:accordion",
+			"accordion",
 			"local:full-width-divider",
-			"local:input-group",
-			"local:empty"
+			"input-group",
+			"empty"
 		],
 		"relativeUrl": "faq-five.json"
 	},
@@ -787,7 +710,7 @@
 		"registryDependencies": [
 			"button",
 			"local:logo-cloud-five",
-			"local:navigation-menu",
+			"navigation-menu",
 			"local:portal"
 		],
 		"relativeUrl": "hero-three.json"
@@ -830,7 +753,7 @@
 		],
 		"registryDependencies": [
 			"button",
-			"local:navigation-menu",
+			"navigation-menu",
 			"local:portal"
 		],
 		"relativeUrl": "header-three.json"
@@ -859,7 +782,7 @@
 		],
 		"registryDependencies": [
 			"button",
-			"local:navigation-menu",
+			"navigation-menu",
 			"local:portal"
 		],
 		"relativeUrl": "header-five.json"
@@ -926,7 +849,7 @@
 		"type": "registry:block",
 		"description": "A centered single testimonial with brand mark, compact author block, and soft editorial framing.",
 		"registryDependencies": [
-			"local:avatar"
+			"avatar"
 		],
 		"relativeUrl": "testimonial-one.json"
 	},
@@ -936,7 +859,7 @@
 		"type": "registry:block",
 		"description": "A framed testimonial layout with masked divider rails, asymmetrical composition, and avatar-led emphasis.",
 		"registryDependencies": [
-			"local:avatar",
+			"avatar",
 			"local:mask-line"
 		],
 		"relativeUrl": "testimonial-two.json"
@@ -950,7 +873,7 @@
 			"@lucide/svelte"
 		],
 		"registryDependencies": [
-			"local:avatar",
+			"avatar",
 			"local:decor-icon"
 		],
 		"relativeUrl": "testimonial-three.json"
@@ -974,7 +897,7 @@
 		"type": "registry:block",
 		"description": "A dense social-proof wall with grid fillers, patterned cards, and a long-form testimonial mosaic.",
 		"registryDependencies": [
-			"local:avatar",
+			"avatar",
 			"local:full-width-divider",
 			"local:grid-filler",
 			"local:grid-pattern"
@@ -990,7 +913,7 @@
 			"motion-sv"
 		],
 		"registryDependencies": [
-			"local:aspect-ratio"
+			"aspect-ratio"
 		],
 		"relativeUrl": "image-gallery-one.json"
 	}

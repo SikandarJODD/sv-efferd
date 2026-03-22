@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { cn } from '$lib/utils.js';
-	import { codeVariants } from '.';
-	import type { CodeRootProps } from './types';
-	import { useCode } from './code.svelte.js';
-	import { box } from 'svelte-toolbelt';
+	import { cn } from "$lib/utils.js";
+	import { codeVariants } from ".";
+	import type { CodeRootProps } from "./types";
+	import { useCode } from "./code.svelte.js";
+	import { box } from "svelte-toolbelt";
 	// import '../../../../routes/layout.css'
 
 	let {
 		ref = $bindable(null),
-		variant = 'default',
-		lang = 'typescript',
+		variant = "default",
+		lang = "typescript",
 		code,
 		class: className,
 		hideLines = false,

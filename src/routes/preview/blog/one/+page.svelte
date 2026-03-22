@@ -1,5 +1,5 @@
 <script lang="ts">
-	import BlogOne from '$lib/components/efferd/blogs/blog-one/blog-one.svelte';
+	import BlogOne from "$lib/components/efferd/blogs/blog-one/blog-one.svelte";
 </script>
 
 <svelte:head>

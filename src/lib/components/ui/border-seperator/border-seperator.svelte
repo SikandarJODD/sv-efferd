@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { cn, type WithElementRef } from '$lib/utils';
-	import type { Snippet } from 'svelte';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { cn, type WithElementRef } from "$lib/utils";
+	import type { Snippet } from "svelte";
+	import type { HTMLAttributes } from "svelte/elements";
 
 	type BorderSeparatorProps = WithElementRef<HTMLAttributes<HTMLDivElement>> & {
 		children?: Snippet;
@@ -11,7 +11,7 @@
 		ref = $bindable(null),
 		class: className,
 		children,
-		'aria-hidden': ariaHidden = 'true',
+		"aria-hidden": ariaHidden = "true",
 		...props
 	}: BorderSeparatorProps = $props();
 </script>
@@ -21,7 +21,7 @@
 	aria-hidden={ariaHidden}
 	data-slot="border-separator"
 	class={cn(
-		'-translate-x-1/2 pointer-events-none absolute left-1/2 w-screen border-t border-dashed',
+		"pointer-events-none absolute left-1/2 w-screen -translate-x-1/2 border-t border-dashed",
 		className
 	)}
 	{...props}

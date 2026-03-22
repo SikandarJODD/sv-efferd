@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { page } from '$app/state';
-	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
-	import { ModeWatcher } from 'mode-watcher';
-	import { cn } from '$lib/utils';
-	import SiteHeader from '$lib/components/landing/site-header.svelte';
+	import { page } from "$app/state";
+	import "./layout.css";
+	import favicon from "$lib/assets/favicon.svg";
+	import { ModeWatcher } from "mode-watcher";
+	import { cn } from "$lib/utils";
+	import SiteHeader from "$lib/components/landing/site-header.svelte";
 
 	let { children } = $props();
-	let isPreviewRoute = $derived(page.url.pathname.startsWith('/preview/'));
+	let isPreviewRoute = $derived(page.url.pathname.startsWith("/preview/"));
 </script>
 
 <ModeWatcher defaultMode="dark" />
@@ -27,9 +27,9 @@
 		</div>
 		<main
 			class={cn(
-				'relative container grow',
-				'before:absolute before:-inset-y-20 before:-left-px before:z-1 before:border-dashed before:border-border xl:before:border-l',
-				'after:absolute after:-inset-y-20 after:-right-px after:z-1 after:border-dashed after:border-border xl:after:border-r'
+				"relative container grow",
+				"before:absolute before:-inset-y-20 before:-left-px before:z-1 before:border-dashed before:border-border xl:before:border-l",
+				"after:absolute after:-inset-y-20 after:-right-px after:z-1 after:border-dashed after:border-border xl:after:border-r"
 			)}
 		>
 			{@render children()}

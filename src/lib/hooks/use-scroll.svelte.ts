@@ -17,10 +17,10 @@ class ScrollState {
 					: y > this.#downThreshold; // currently not scrolled → only set above downThreshold
 			};
 
-			window.addEventListener('scroll', handleScroll, { passive: true });
+			window.addEventListener("scroll", handleScroll, { passive: true });
 			handleScroll();
 
-			return () => window.removeEventListener('scroll', handleScroll);
+			return () => window.removeEventListener("scroll", handleScroll);
 		});
 	}
 

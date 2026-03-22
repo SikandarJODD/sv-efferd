@@ -1,14 +1,14 @@
 <script lang="ts">
-	import type { BlockCodeNode } from '$lib/blocks/showcase';
-	import { cn } from '$lib/utils';
-	import ChevronDown from '@lucide/svelte/icons/chevron-down';
-	import ChevronRight from '@lucide/svelte/icons/chevron-right';
-	import ExternalLink from '@lucide/svelte/icons/external-link';
-	import FileCode2 from '@lucide/svelte/icons/file-code-2';
-	import Folder from '@lucide/svelte/icons/folder';
-	import FolderOpen from '@lucide/svelte/icons/folder-open';
-	import CodeTreeNode from './CodeTreeNode.svelte';
-	import { slide } from 'svelte/transition';
+	import type { BlockCodeNode } from "$lib/blocks/showcase";
+	import { cn } from "$lib/utils";
+	import ChevronDown from "@lucide/svelte/icons/chevron-down";
+	import ChevronRight from "@lucide/svelte/icons/chevron-right";
+	import ExternalLink from "@lucide/svelte/icons/external-link";
+	import FileCode2 from "@lucide/svelte/icons/file-code-2";
+	import Folder from "@lucide/svelte/icons/folder";
+	import FolderOpen from "@lucide/svelte/icons/folder-open";
+	import CodeTreeNode from "./CodeTreeNode.svelte";
+	import { slide } from "svelte/transition";
 
 	interface CodeTreeNodeProps {
 		node: BlockCodeNode;
@@ -21,13 +21,13 @@
 	let { node, activeFileId, openFolderIds, onSelectFile, onToggleFolder }: CodeTreeNodeProps =
 		$props();
 
-	let isOpen = $derived(node.type === 'folder' ? openFolderIds.has(node.id) : false);
+	let isOpen = $derived(node.type === "folder" ? openFolderIds.has(node.id) : false);
 	let isExternalOnlyFile = $derived(
-		node.type === 'file' && Boolean(node.externalUrl) && !node.code
+		node.type === "file" && Boolean(node.externalUrl) && !node.code
 	);
 </script>
 
-{#if node.type === 'folder'}
+{#if node.type === "folder"}
 	<div>
 		<button
 			type="button"
@@ -41,7 +41,10 @@
 					<ChevronRight class="size-3.5" />
 					{/if} -->
 				<ChevronRight
-					class={['size-3.5 transition duration-150 ease-out', isOpen ? 'rotate-90 text-foreground/80' : 'text-foreground/60']}
+					class={[
+						"size-3.5 transition duration-150 ease-out",
+						isOpen ? "rotate-90 text-foreground/80" : "text-foreground/60"
+					]}
 				/>
 			</span>
 			{#if isOpen}
@@ -84,10 +87,10 @@
 {:else}
 	<div
 		class={cn(
-			'flex items-center gap-1 rounded-md text-xs transition-colors',
+			"flex items-center gap-1 rounded-md text-xs transition-colors",
 			activeFileId === node.id
-				? 'bg-accent text-foreground shadow-sm'
-				: 'text-muted-foreground hover:bg-muted/60 hover:text-foreground'
+				? "bg-accent text-foreground shadow-sm"
+				: "text-muted-foreground hover:bg-muted/60 hover:text-foreground"
 		)}
 	>
 		<button

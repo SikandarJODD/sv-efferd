@@ -20,40 +20,37 @@ export type ChangelogPageData = {
 };
 
 export const changelogPageData: ChangelogPageData = {
-	title: 'Changelog',
-	description: 'Latest product updates and new blocks.',
+	title: "Changelog",
+	description: "Latest product updates and new blocks.",
 	entries: [
 		{
-			id: '2026-03-21',
-			date: '21 March 2026',
-			sortDate: '2026-03-21',
-			title: '50+ New Blocks',
-			description: 'Shipped a major block batch across the core library.',
+			id: "2026-03-21",
+			date: "21 March 2026",
+			sortDate: "2026-03-21",
+			title: "50+ New Blocks",
+			description: "Shipped a major block batch across the core library.",
 			chips: [
-				{ label: 'hero', href: '#' },
-				{ label: 'contact', href: '#' },
-				{ label: 'faqs', href: '#' },
-				{ label: 'footer', href: '#' },
-				{ label: 'pricing', href: '#' },
-				{ label: 'auth', href: '#' }
+				{ label: "hero", href: "#" },
+				{ label: "contact", href: "#" },
+				{ label: "faqs", href: "#" },
+				{ label: "footer", href: "#" },
+				{ label: "pricing", href: "#" },
+				{ label: "auth", href: "#" }
 			]
 		},
 		{
-			id: '2026-03-20',
-			date: '20 March 2026',
-			sortDate: '2026-03-20',
-			title: 'Landing Page Update',
-			description: 'Built the first product-facing landing experience.',
-			bullets: [
-				'New site header and hero',
-				'Improved mobile navigation and framing'
-			],
+			id: "2026-03-20",
+			date: "20 March 2026",
+			sortDate: "2026-03-20",
+			title: "Landing Page Update",
+			description: "Built the first product-facing landing experience.",
+			bullets: ["New site header and hero", "Improved mobile navigation and framing"],
 			chips: [
-				{ label: 'site-header', href: '#' },
-				{ label: 'site-hero', href: '#' },
-				{ label: 'dashed-lines', href: '#' }
+				{ label: "site-header", href: "#" },
+				{ label: "site-hero", href: "#" },
+				{ label: "dashed-lines", href: "#" }
 			]
-		},
+		}
 		// {
 		// 	id: '2026-03-19',
 		// 	date: '19 March 2026',

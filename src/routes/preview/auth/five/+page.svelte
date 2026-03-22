@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AuthFive from '$lib/components/efferd/auth/auth-five.svelte';
+	import AuthFive from "$lib/components/efferd/auth/auth-five.svelte";
 </script>
 
 <svelte:head>

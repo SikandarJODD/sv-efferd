@@ -1,6 +1,6 @@
 <script lang="ts">
-	import BlockPreview from '$lib/components/layout/BlockPreview.svelte';
-	import type { PageProps } from './$types';
+	import BlockPreview from "$lib/components/layout/BlockPreview.svelte";
+	import type { PageProps } from "./$types";
 
 	let { data }: PageProps = $props();
 </script>

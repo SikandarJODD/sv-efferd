@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { AtSignIcon } from '@lucide/svelte';
-	import { Button } from '$lib/components/ui/button';
-	import { AuthDivider } from '$lib/components/ui/auth-divider';
-	import { FullWidthDivider } from '$lib/components/ui/full-width-divider';
-	import { InputGroup, InputGroupAddon, InputGroupInput } from '$lib/components/ui/input-group';
-	import GoogleLogo from '$lib/svgs/google.svelte';
-	import Logo from '$lib/svgs/logo.svelte';
-	import { cn } from '$lib/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { AtSignIcon } from "@lucide/svelte";
+	import { Button } from "$lib/components/ui/button";
+	import { AuthDivider } from "$lib/components/ui/auth-divider";
+	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
+	import { InputGroup, InputGroupAddon, InputGroupInput } from "$lib/components/ui/input-group";
+	import GoogleLogo from "$lib/svgs/google.svelte";
+	import Logo from "$lib/svgs/logo.svelte";
+	import { cn } from "$lib/utils";
+	import type { HTMLAttributes } from "svelte/elements";
 
 	type AuthFourProps = HTMLAttributes<HTMLDivElement> & {
 		class?: string;
@@ -19,17 +19,17 @@
 	};
 
 	let {
-		class: className = '',
-		logoHref = '#',
-		privacyHref = '#',
-		termsHref = '#',
-		emailPlaceholder = 'your.email@example.com',
-		emailAriaLabel = 'Email address',
+		class: className = "",
+		logoHref = "#",
+		privacyHref = "#",
+		termsHref = "#",
+		emailPlaceholder = "your.email@example.com",
+		emailAriaLabel = "Email address",
 		...restProps
 	}: AuthFourProps = $props();
 </script>
 
-<div class={cn('relative w-full overflow-hidden px-4 md:h-screen', className)} {...restProps}>
+<div class={cn("relative w-full overflow-hidden px-4 md:h-screen", className)} {...restProps}>
 	<div
 		class="relative mx-auto flex min-h-screen w-full max-w-sm flex-col justify-center border-x *:px-6"
 	>
@@ -40,7 +40,9 @@
 
 			<div class="space-y-1">
 				<h1 class="text-xl font-semibold tracking-wide">Hey, welcome!</h1>
-				<p class="text-base text-muted-foreground">Log in or sign up. It only takes a moment.</p>
+				<p class="text-base text-muted-foreground">
+					Log in or sign up. It only takes a moment.
+				</p>
 			</div>
 		</div>
 

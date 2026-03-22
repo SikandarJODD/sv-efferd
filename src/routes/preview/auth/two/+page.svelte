@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AuthTwo from '$lib/components/efferd/auth/auth-two.svelte';
+	import AuthTwo from "$lib/components/efferd/auth/auth-two.svelte";
 </script>
 
 <svelte:head>

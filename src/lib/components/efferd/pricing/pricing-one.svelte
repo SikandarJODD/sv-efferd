@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { ShieldCheck } from '@lucide/svelte';
-	import { Button } from '$lib/components/ui/button';
-	import { DecorIcon } from '$lib/components/ui/decor-icon';
-	import { cn } from '$lib/utils';
+	import { ShieldCheck } from "@lucide/svelte";
+	import { Button } from "$lib/components/ui/button";
+	import { DecorIcon } from "$lib/components/ui/decor-icon";
+	import { cn } from "$lib/utils";
 
 	type Plan = {
 		name: string;
@@ -16,20 +16,20 @@
 
 	const plans: Plan[] = [
 		{
-			name: 'Monthly',
-			description: 'Best value for growing businesses!',
-			originalPrice: '$8.99',
-			discount: '11% off',
-			price: '7.99',
-			cta: 'Start Your Journey'
+			name: "Monthly",
+			description: "Best value for growing businesses!",
+			originalPrice: "$8.99",
+			discount: "11% off",
+			price: "7.99",
+			cta: "Start Your Journey"
 		},
 		{
-			name: 'Yearly',
-			description: 'Unlock savings with an annual commitment!',
-			originalPrice: '$8.99',
-			discount: '22% off',
-			price: '6.99',
-			cta: 'Get Started Now',
+			name: "Yearly",
+			description: "Unlock savings with an annual commitment!",
+			originalPrice: "$8.99",
+			discount: "22% off",
+			price: "6.99",
+			cta: "Get Started Now",
 			featured: true
 		}
 	];
@@ -61,15 +61,15 @@
 			{#each plans as plan}
 				<div
 					class={cn(
-						'w-full',
+						"w-full",
 						plan.featured
-							? 'relative rounded-md border bg-card p-4 shadow dark:bg-card/80'
-							: 'px-4 pt-5 pb-4'
+							? "relative rounded-md border bg-card p-4 shadow dark:bg-card/80"
+							: "px-4 pt-5 pb-4"
 					)}
 				>
 					<div class="space-y-1">
 						<div class="flex items-center justify-between gap-3">
-							<h3 class="font-semibold leading-none">{plan.name}</h3>
+							<h3 class="leading-none font-semibold">{plan.name}</h3>
 
 							<div class="flex items-center gap-x-1">
 								<span class="text-sm text-muted-foreground line-through">
@@ -77,10 +77,10 @@
 								</span>
 								<span
 									class={cn(
-										'inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-medium',
+										"inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-medium",
 										plan.featured
-											? 'bg-primary text-primary-foreground shadow-xs'
-											: 'bg-secondary text-secondary-foreground'
+											? "bg-primary text-primary-foreground shadow-xs"
+											: "bg-secondary text-secondary-foreground"
 									)}
 								>
 									{plan.discount}
@@ -94,13 +94,19 @@
 					<div class="mt-10 space-y-4">
 						<div class="flex items-end gap-0.5 text-xl text-muted-foreground">
 							<span>$</span>
-							<span class="-mb-0.5 text-4xl font-extrabold tracking-tighter text-foreground">
+							<span
+								class="-mb-0.5 text-4xl font-extrabold tracking-tighter text-foreground"
+							>
 								{plan.price}
 							</span>
 							<span>/month</span>
 						</div>
 
-						<Button class="w-full" href="#" variant={plan.featured ? 'default' : 'outline'}>
+						<Button
+							class="w-full"
+							href="#"
+							variant={plan.featured ? "default" : "outline"}
+						>
 							{plan.cta}
 						</Button>
 					</div>

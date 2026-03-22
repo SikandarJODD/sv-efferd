@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { Portal, PortalBackdrop } from '$lib/components/ui/portal';
-	import { cn } from '$lib/utils';
-	import { MenuIcon, XIcon } from '@lucide/svelte';
-	import LinkItem from './link-item.svelte';
-	import { productLinks, companyLinks, companyLinks2 } from './nav-links';
+	import { Button } from "$lib/components/ui/button";
+	import { Portal, PortalBackdrop } from "$lib/components/ui/portal";
+	import { cn } from "$lib/utils";
+	import { MenuIcon, XIcon } from "@lucide/svelte";
+	import LinkItem from "./link-item.svelte";
+	import { productLinks, companyLinks, companyLinks2 } from "./nav-links";
 
 	let open = $state(false);
 </script>
@@ -19,11 +19,14 @@
 		size="icon"
 		variant="outline"
 	>
-		<div class={cn('transition-all', open ? 'scale-100 opacity-100' : 'scale-0 opacity-0')}>
+		<div class={cn("transition-all", open ? "scale-100 opacity-100" : "scale-0 opacity-0")}>
 			<XIcon />
 		</div>
 		<div
-			class={cn('absolute transition-all', open ? 'scale-0 opacity-0' : 'scale-100 opacity-100')}
+			class={cn(
+				"absolute transition-all",
+				open ? "scale-0 opacity-0" : "scale-100 opacity-100"
+			)}
 		>
 			<MenuIcon />
 		</div>
@@ -33,22 +36,31 @@
 			<PortalBackdrop />
 			<div
 				class={cn(
-					'size-full overflow-y-auto p-4',
-					'ease-out data-[slot=open]:animate-in data-[slot=open]:zoom-in-97'
+					"size-full overflow-y-auto p-4",
+					"ease-out data-[slot=open]:animate-in data-[slot=open]:zoom-in-97"
 				)}
-				data-slot={open ? 'open' : 'closed'}
+				data-slot={open ? "open" : "closed"}
 			>
 				<div class="flex w-full flex-col gap-y-2">
 					<span class="text-sm">Product</span>
 					{#each productLinks as link}
-						<LinkItem class="rounded-lg p-2 active:bg-muted dark:active:bg-muted/50" {...link} />
+						<LinkItem
+							class="rounded-lg p-2 active:bg-muted dark:active:bg-muted/50"
+							{...link}
+						/>
 					{/each}
 					<span class="text-sm">Company</span>
 					{#each companyLinks as link}
-						<LinkItem class="rounded-lg p-2 active:bg-muted dark:active:bg-muted/50" {...link} />
+						<LinkItem
+							class="rounded-lg p-2 active:bg-muted dark:active:bg-muted/50"
+							{...link}
+						/>
 					{/each}
 					{#each companyLinks2 as link}
-						<LinkItem class="rounded-lg p-2 active:bg-muted dark:active:bg-muted/50" {...link} />
+						<LinkItem
+							class="rounded-lg p-2 active:bg-muted dark:active:bg-muted/50"
+							{...link}
+						/>
 					{/each}
 				</div>
 				<div class="mt-5 flex flex-col gap-2">

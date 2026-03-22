@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ImageGallery from '$lib/components/efferd/image-gallery/image-gallery.svelte';
+	import ImageGallery from "$lib/components/efferd/image-gallery/image-gallery.svelte";
 </script>
 
 <svelte:head>

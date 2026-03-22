@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { cn } from '$lib/utils';
-	import Logo from '$lib/svgs/logo.svelte';
-	import XLogo from '$lib/svgs/x.svelte';
+	import { Button } from "$lib/components/ui/button";
+	import { cn } from "$lib/utils";
+	import Logo from "$lib/svgs/logo.svelte";
+	import XLogo from "$lib/svgs/x.svelte";
 	import {
 		FacebookIcon,
 		GithubIcon,
 		InstagramIcon,
 		LinkedinIcon,
 		YoutubeIcon
-	} from '@lucide/svelte';
-	import type { Component } from 'svelte';
+	} from "@lucide/svelte";
+	import type { Component } from "svelte";
 
 	type FooterLink = {
 		title: string;
@@ -25,80 +25,80 @@
 
 	const company: FooterLink[] = [
 		{
-			title: 'About Us',
-			href: '/about'
+			title: "About Us",
+			href: "/about"
 		},
 		{
-			title: 'Careers',
-			href: '/careers'
+			title: "Careers",
+			href: "/careers"
 		},
 		{
-			title: 'Brand assets',
-			href: '/brand'
+			title: "Brand assets",
+			href: "/brand"
 		},
 		{
-			title: 'Privacy Policy',
-			href: '/privacy'
+			title: "Privacy Policy",
+			href: "/privacy"
 		},
 		{
-			title: 'Terms of Service',
-			href: '/terms'
+			title: "Terms of Service",
+			href: "/terms"
 		}
 	];
 
 	const resources: FooterLink[] = [
 		{
-			title: 'Blog',
-			href: '/blog'
+			title: "Blog",
+			href: "/blog"
 		},
 		{
-			title: 'Help Center',
-			href: '/help'
+			title: "Help Center",
+			href: "/help"
 		},
 		{
-			title: 'Contact Support',
-			href: '/support'
+			title: "Contact Support",
+			href: "/support"
 		},
 		{
-			title: 'Community',
-			href: '/community'
+			title: "Community",
+			href: "/community"
 		},
 		{
-			title: 'Security',
-			href: '/security'
+			title: "Security",
+			href: "/security"
 		}
 	];
 
 	const socialLinks: SocialLink[] = [
 		{
 			icon: FacebookIcon,
-			link: 'https://facebook.com',
-			label: 'Facebook'
+			link: "https://facebook.com",
+			label: "Facebook"
 		},
 		{
 			icon: GithubIcon,
-			link: 'https://github.com',
-			label: 'Github'
+			link: "https://github.com",
+			label: "Github"
 		},
 		{
 			icon: InstagramIcon,
-			link: 'https://instagram.com',
-			label: 'Instagram'
+			link: "https://instagram.com",
+			label: "Instagram"
 		},
 		{
 			icon: LinkedinIcon,
-			link: 'https://linkedin.com',
-			label: 'LinkedIn'
+			link: "https://linkedin.com",
+			label: "LinkedIn"
 		},
 		{
 			icon: XLogo,
-			link: 'https://x.com',
-			label: 'X'
+			link: "https://x.com",
+			label: "X"
 		},
 		{
 			icon: YoutubeIcon,
-			link: 'https://youtube.com',
-			label: 'YouTube'
+			link: "https://youtube.com",
+			label: "YouTube"
 		}
 	];
 
@@ -108,8 +108,8 @@
 <footer class="relative">
 	<div
 		class={cn(
-			'mx-auto max-w-5xl lg:border-x',
-			'dark:bg-[radial-gradient(35%_80%_at_15%_0%,--theme(--color-foreground/.1),transparent)]'
+			"mx-auto max-w-5xl lg:border-x",
+			"dark:bg-[radial-gradient(35%_80%_at_15%_0%,--theme(--color-foreground/.1),transparent)]"
 		)}
 	>
 		<div class="absolute inset-x-0 h-px w-full bg-border"></div>

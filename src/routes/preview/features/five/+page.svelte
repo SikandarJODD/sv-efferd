@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FeatureFive from '$lib/components/efferd/features/feature-five/feature-five.svelte';
+	import FeatureFive from "$lib/components/efferd/features/feature-five/feature-five.svelte";
 </script>
 
 <svelte:head>

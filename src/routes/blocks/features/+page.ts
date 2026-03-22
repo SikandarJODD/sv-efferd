@@ -1,5 +1,5 @@
-import { featureBlocks } from '$lib/blocks/features/all_features';
-import type { PageLoad } from './$types';
+import { featureBlocks } from "$lib/blocks/features/all_features";
+import type { PageLoad } from "./$types";
 
 export const prerender = true;
 

@@ -1,4 +1,4 @@
-import Root from './floating-paths.svelte';
+import Root from "./floating-paths.svelte";
 
 export {
 	Root,

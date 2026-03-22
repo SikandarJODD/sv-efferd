@@ -5,7 +5,7 @@
 	"type": "registry:block",
 	"description": "A framed testimonial layout with masked divider rails, asymmetrical composition, and avatar-led emphasis.",
 	"registryDependencies": [
-		"./avatar.json",
+		"avatar",
 		"./mask-line.json"
 	],
 	"files": [

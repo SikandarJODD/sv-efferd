@@ -1,3 +1,3 @@
-import DashedLine from './dashed-line.svelte';
+import DashedLine from "./dashed-line.svelte";
 
 export { DashedLine };

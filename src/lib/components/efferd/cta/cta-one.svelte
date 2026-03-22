@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { FullWidthDivider } from '$lib/components/ui/full-width-divider';
+	import { Button } from "$lib/components/ui/button";
+	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
 </script>
 
 <div class="relative mx-auto flex w-full max-w-3xl flex-col justify-between border-x md:flex-row">

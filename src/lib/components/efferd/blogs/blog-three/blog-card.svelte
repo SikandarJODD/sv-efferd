@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { AspectRatio } from '$lib/components/ui/aspect-ratio';
-	import { cn } from '$lib/utils';
-	import type { HTMLAnchorAttributes } from 'svelte/elements';
+	import { AspectRatio } from "$lib/components/ui/aspect-ratio";
+	import { cn } from "$lib/utils";
+	import type { HTMLAnchorAttributes } from "svelte/elements";
 
 	type BlogCard = {
 		title: string;
@@ -15,7 +15,7 @@
 
 	type Props = BlogCard & HTMLAnchorAttributes;
 
-	const fallbackImage = 'https://placehold.co/640x360?text=fallback-image';
+	const fallbackImage = "https://placehold.co/640x360?text=fallback-image";
 
 	let {
 		title,
@@ -25,11 +25,11 @@
 		createdAt,
 		readTime,
 		image,
-		class: className = '',
+		class: className = "",
 		...props
 	}: Props = $props();
 
-	let imageSrc = $state('');
+	let imageSrc = $state("");
 
 	$effect(() => {
 		imageSrc = image;
@@ -45,7 +45,7 @@
 <a
 	{href}
 	class={cn(
-		'group flex flex-col gap-2 rounded-xl p-3 transition-colors hover:bg-muted/50 active:bg-muted',
+		"group flex flex-col gap-2 rounded-xl p-3 transition-colors hover:bg-muted/50 active:bg-muted",
 		className
 	)}
 	{...props}

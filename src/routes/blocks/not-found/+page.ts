@@ -1,5 +1,5 @@
-import { notFoundBlocks } from '$lib/blocks/not-found/all_not_found';
-import type { PageLoad } from './$types';
+import { notFoundBlocks } from "$lib/blocks/not-found/all_not_found";
+import type { PageLoad } from "./$types";
 
 export const prerender = true;
 

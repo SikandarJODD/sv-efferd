@@ -1,10 +1,10 @@
-import type { SupportedLanguage } from '$lib/components/layout/code/shiki';
-import type { Component } from 'svelte';
+import type { SupportedLanguage } from "$lib/components/layout/code/shiki";
+import type { Component } from "svelte";
 
 export type BlockCodeHighlight = (number | [number, number])[];
 
 export type BlockCodeFile = {
-	type: 'file';
+	type: "file";
 	id: string;
 	name: string;
 	path: string;
@@ -16,7 +16,7 @@ export type BlockCodeFile = {
 };
 
 export type BlockCodeFolder = {
-	type: 'folder';
+	type: "folder";
 	id: string;
 	name: string;
 	defaultOpen?: boolean;
@@ -37,21 +37,21 @@ export type BlockShowcaseItem = {
 	previewComponent: Component;
 	codeTree: BlockCodeTree;
 	previewHref?: string;
-	previewMode?: 'inline' | 'iframe';
+	previewMode?: "inline" | "iframe";
 	previewHeight?: number;
 	installId?: string;
 };
 
-type BlockCodeFileInput = Omit<BlockCodeFile, 'type' | 'name'> & {
+type BlockCodeFileInput = Omit<BlockCodeFile, "type" | "name"> & {
 	name?: string;
 };
 
 export function isBlockCodeFile(node: BlockCodeNode): node is BlockCodeFile {
-	return node.type === 'file';
+	return node.type === "file";
 }
 
 export function isBlockCodeFolder(node: BlockCodeNode): node is BlockCodeFolder {
-	return node.type === 'folder';
+	return node.type === "folder";
 }
 
 export function flattenBlockCodeFiles(nodes: BlockCodeNode[]): BlockCodeFile[] {
@@ -86,12 +86,12 @@ export function createBlockCodeTree(
 	const nodes: BlockCodeNode[] = [];
 
 	for (const file of files) {
-		const segments = file.path.split('/').filter(Boolean);
+		const segments = file.path.split("/").filter(Boolean);
 		const fileName = file.name ?? segments.at(-1) ?? file.id;
 		const folderSegments = segments.slice(0, -1);
 
 		let currentNodes = nodes;
-		let currentPath = '';
+		let currentPath = "";
 
 		for (const folderName of folderSegments) {
 			currentPath = currentPath ? `${currentPath}/${folderName}` : folderName;
@@ -102,7 +102,7 @@ export function createBlockCodeTree(
 
 			if (!folder) {
 				folder = {
-					type: 'folder',
+					type: "folder",
 					id: `folder:${currentPath}`,
 					name: folderName,
 					defaultOpen: true,
@@ -116,7 +116,7 @@ export function createBlockCodeTree(
 		}
 
 		currentNodes.push({
-			type: 'file',
+			type: "file",
 			id: file.id,
 			name: fileName,
 			path: file.path,

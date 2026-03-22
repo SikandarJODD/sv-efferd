@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar';
-	import { GridPattern } from '$lib/components/ui/grid-pattern';
-	import { cn } from '$lib/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
+	import { GridPattern } from "$lib/components/ui/grid-pattern";
+	import { cn } from "$lib/utils";
+	import type { HTMLAttributes } from "svelte/elements";
 	type Testimonial = {
 		name: string;
 		role: string;
@@ -15,12 +15,12 @@
 		testimonial: Testimonial;
 		class?: string;
 	};
-	let { testimonial, class: className = '', ...props }: Props = $props();
+	let { testimonial, class: className = "", ...props }: Props = $props();
 </script>
 
 <div
 	class={cn(
-		'relative grid grid-cols-[auto_1fr] gap-x-3 overflow-hidden bg-background p-4',
+		"relative grid grid-cols-[auto_1fr] gap-x-3 overflow-hidden bg-background p-4",
 		className
 	)}
 	{...props}

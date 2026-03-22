@@ -12,9 +12,9 @@
 	],
 	"registryDependencies": [
 		"button",
-		"./field.json",
-		"./input.json",
-		"./textarea.json"
+		"field",
+		"input",
+		"textarea"
 	],
 	"files": [
 		{

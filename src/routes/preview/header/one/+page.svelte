@@ -1,5 +1,5 @@
 <script lang="ts">
-	import HeaderOne from '$lib/components/efferd/header/header-one/header-one.svelte';
+	import HeaderOne from "$lib/components/efferd/header/header-one/header-one.svelte";
 </script>
 
 <svelte:head>
@@ -13,7 +13,8 @@
 		<div class="space-y-6">
 			<h1 class="text-4xl font-semibold tracking-tight">Header One Preview</h1>
 			<p class="max-w-2xl text-muted-foreground">
-				Scroll this page to preview the sticky header state and the mobile navigation behavior.
+				Scroll this page to preview the sticky header state and the mobile navigation
+				behavior.
 			</p>
 		</div>
 	</main>

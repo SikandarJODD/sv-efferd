@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { ArrowRightIcon } from '@lucide/svelte';
-	import { Button } from '$lib/components/ui/button';
-	import { DecorIcon } from '$lib/components/ui/decor-icon';
+	import { ArrowRightIcon } from "@lucide/svelte";
+	import { Button } from "$lib/components/ui/button";
+	import { DecorIcon } from "$lib/components/ui/decor-icon";
 </script>
 
 <div
@@ -18,7 +18,7 @@
 	<div class="absolute top-0 left-1/2 -z-10 h-full border-l border-dashed"></div>
 
 	<h2 class="text-center text-xl font-semibold md:text-3xl">Start for Free Today!</h2>
-	<p class="text-balance text-center text-sm font-medium text-muted-foreground md:text-base">
+	<p class="text-center text-sm font-medium text-balance text-muted-foreground md:text-base">
 		Begin your 6-day free trial today to fully explore and experience all the features and
 		benefits we offer.
 	</p>

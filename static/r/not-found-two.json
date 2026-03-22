@@ -12,7 +12,7 @@
 	],
 	"registryDependencies": [
 		"button",
-		"./empty.json"
+		"empty"
 	],
 	"files": [
 		{

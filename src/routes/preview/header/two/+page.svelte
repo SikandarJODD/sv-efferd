@@ -1,5 +1,5 @@
 <script lang="ts">
-	import HeaderTwo from '$lib/components/efferd/header/header-two/header-two.svelte';
+	import HeaderTwo from "$lib/components/efferd/header/header-two/header-two.svelte";
 </script>
 
 <svelte:head>

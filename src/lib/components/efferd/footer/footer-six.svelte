@@ -1,14 +1,14 @@
 <script lang="ts">
-	import AnimatedContainer from '$lib/components/efferd/footer/AnimatedContainer.svelte';
-	import { Button } from '$lib/components/ui/button';
-	import Logo from '$lib/svgs/logo.svelte';
+	import AnimatedContainer from "$lib/components/efferd/footer/AnimatedContainer.svelte";
+	import { Button } from "$lib/components/ui/button";
+	import Logo from "$lib/svgs/logo.svelte";
 	import {
 		FacebookIcon,
 		InstagramIcon,
 		LinkedinIcon,
 		YoutubeIcon,
 		type Icon
-	} from '@lucide/svelte';
+	} from "@lucide/svelte";
 
 	type FooterLink = {
 		title: string;
@@ -29,79 +29,79 @@
 
 	const socialLinks: SocialLink[] = [
 		{
-			title: 'Facebook',
-			href: 'https://facebook.com',
+			title: "Facebook",
+			href: "https://facebook.com",
 			icon: FacebookIcon
 		},
 		{
-			title: 'Instagram',
-			href: 'https://instagram.com',
+			title: "Instagram",
+			href: "https://instagram.com",
 			icon: InstagramIcon
 		},
 		{
-			title: 'Youtube',
-			href: 'https://youtube.com',
+			title: "Youtube",
+			href: "https://youtube.com",
 			icon: YoutubeIcon
 		},
 		{
-			title: 'LinkedIn',
-			href: 'https://linkedin.com',
+			title: "LinkedIn",
+			href: "https://linkedin.com",
 			icon: LinkedinIcon
 		}
 	];
 
 	const footerLinkGroups: FooterLinkGroup[] = [
 		{
-			label: 'Product',
+			label: "Product",
 			links: [
-				{ title: 'Payments', href: '/payments' },
-				{ title: 'Cards & Issuing', href: '/cards' },
-				{ title: 'Lending & Credit', href: '/lending' },
-				{ title: 'Wealth Management', href: '/wealth' },
-				{ title: 'Insurance', href: '/insurance' },
-				{ title: 'Crypto Wallets', href: '/crypto-wallets' },
-				{ title: 'Treasury Management', href: '/treasury' },
-				{ title: 'Merchant Services', href: '/merchant-services' },
-				{ title: 'Point of Sale', href: '/point-of-sale' },
-				{ title: 'Embedded Finance', href: '/embedded-finance' },
-				{ title: 'Open Banking API', href: '/open-banking-api' },
-				{ title: 'SDKs & Integrations', href: '/integrations' },
-				{ title: 'Pricing', href: '/pricing' }
+				{ title: "Payments", href: "/payments" },
+				{ title: "Cards & Issuing", href: "/cards" },
+				{ title: "Lending & Credit", href: "/lending" },
+				{ title: "Wealth Management", href: "/wealth" },
+				{ title: "Insurance", href: "/insurance" },
+				{ title: "Crypto Wallets", href: "/crypto-wallets" },
+				{ title: "Treasury Management", href: "/treasury" },
+				{ title: "Merchant Services", href: "/merchant-services" },
+				{ title: "Point of Sale", href: "/point-of-sale" },
+				{ title: "Embedded Finance", href: "/embedded-finance" },
+				{ title: "Open Banking API", href: "/open-banking-api" },
+				{ title: "SDKs & Integrations", href: "/integrations" },
+				{ title: "Pricing", href: "/pricing" }
 			]
 		},
 		{
-			label: 'Resources',
+			label: "Resources",
 			links: [
-				{ title: 'Blog', href: '/blog' },
-				{ title: 'Case Studies', href: '/case-studies' },
-				{ title: 'Documentation', href: '/docs' },
-				{ title: 'API Reference', href: '/api-reference' },
-				{ title: 'Developer Tools', href: '/developer-tools' },
-				{ title: 'Whitepapers', href: '/whitepapers' },
-				{ title: 'Reports & Research', href: '/reports' },
-				{ title: 'Events & Webinars', href: '/events' },
-				{ title: 'E-books', href: '/ebooks' },
-				{ title: 'Community Forum', href: '/forum' },
-				{ title: 'Release Notes', href: '/releases' },
-				{ title: 'System Status', href: '/status' }
+				{ title: "Blog", href: "/blog" },
+				{ title: "Case Studies", href: "/case-studies" },
+				{ title: "Documentation", href: "/docs" },
+				{ title: "API Reference", href: "/api-reference" },
+				{ title: "Developer Tools", href: "/developer-tools" },
+				{ title: "Whitepapers", href: "/whitepapers" },
+				{ title: "Reports & Research", href: "/reports" },
+				{ title: "Events & Webinars", href: "/events" },
+				{ title: "E-books", href: "/ebooks" },
+				{ title: "Community Forum", href: "/forum" },
+				{ title: "Release Notes", href: "/releases" },
+				{ title: "System Status", href: "/status" }
 			]
 		},
 		{
-			label: 'Company',
+			label: "Company",
 			links: [
-				{ title: 'About Us', href: '/about' },
-				{ title: 'Leadership', href: '/leadership' },
-				{ title: 'Careers', href: '/careers' },
-				{ title: 'Press', href: '/press' },
-				{ title: 'Sustainability', href: '/sustainability' },
-				{ title: 'Diversity & Inclusion', href: '/diversity' },
-				{ title: 'Investor Relations', href: '/investors' },
-				{ title: 'Partners', href: '/partners' },
-				{ title: 'Legal & Compliance', href: '/legal' },
-				{ title: 'Privacy Policy', href: '/privacy' },
-				{ title: 'Cookie Policy', href: '/cookies' },
-				{ title: 'Terms of Service', href: '/terms' },
-				{ title: 'AML & KYC Policy', href: '/compliance' }
+				{ title: "About Us", href: "/about" },
+				{ title: "Leadership", href: "/leadership" },
+				{ title: "Careers", href: "/careers" },
+				{ title: "Press", href: "/press" },
+				{ title: "Sustainability", href: "/sustainability" },
+				{ title: "Diversity & Inclusion", href: "/diversity" },
+				{ title: "Investor Relations", href: "/investors" },
+				{ title: "Partners", href: "/partners" },
+				{ title: "Legal & Compliance", href: "/legal" },
+				{ title: "Privacy Policy", href: "/privacy" },
+				{ title: "Cookie Policy", href: "/cookies" },
+				{ title: "Terms of Service", href: "/terms" },
+				{ title: "AML & KYC Policy", href: "/compliance" }
 			]
 		}
 	];
@@ -140,7 +140,12 @@
 						<div class="flex gap-2">
 							{#each socialLinks as link, index (`social-${link.href}-${index}`)}
 								{@const SocialIcon = link.icon}
-								<Button href={link.href} aria-label={link.title} size="icon-sm" variant="outline">
+								<Button
+									href={link.href}
+									aria-label={link.title}
+									size="icon-sm"
+									variant="outline"
+								>
 									<SocialIcon class="size-4" />
 								</Button>
 							{/each}
@@ -151,7 +156,9 @@
 						<AnimatedContainer class="w-full" delay={0.1 + index * 0.1}>
 							<div class="mb-10 md:mb-0">
 								<h3 class="text-sm uppercase">{group.label}</h3>
-								<ul class="mt-4 space-y-2 text-sm text-muted-foreground md:text-xs lg:text-sm">
+								<ul
+									class="mt-4 space-y-2 text-sm text-muted-foreground md:text-xs lg:text-sm"
+								>
 									{#each group.links as link (link.title)}
 										<li>
 											<a

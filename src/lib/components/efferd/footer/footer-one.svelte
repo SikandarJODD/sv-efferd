@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import GithubLogo from '$lib/svgs/github.svelte';
-	import Logo from '$lib/svgs/logo.svelte';
-	import XLogo from '$lib/svgs/x.svelte';
-	import type { Component } from 'svelte';
+	import { Button } from "$lib/components/ui/button";
+	import GithubLogo from "$lib/svgs/github.svelte";
+	import Logo from "$lib/svgs/logo.svelte";
+	import XLogo from "$lib/svgs/x.svelte";
+	import type { Component } from "svelte";
 
 	type NavLink = {
 		href: string;
@@ -17,23 +17,23 @@
 	};
 
 	const navLinks: NavLink[] = [
-		{ href: '/#features', label: 'Features' },
-		{ href: '/#blog', label: 'Blog' },
-		{ href: '/#about', label: 'About' },
-		{ href: '/#contact', label: 'Contact' },
-		{ href: '/licence', label: 'Licence' },
-		{ href: '/privacy', label: 'Privacy' }
+		{ href: "/#features", label: "Features" },
+		{ href: "/#blog", label: "Blog" },
+		{ href: "/#about", label: "About" },
+		{ href: "/#contact", label: "Contact" },
+		{ href: "/licence", label: "Licence" },
+		{ href: "/privacy", label: "Privacy" }
 	];
 
 	const socialLinks: SocialLink[] = [
 		{
-			href: 'https://x.com/shabanhr',
-			label: 'X',
+			href: "https://x.com/shabanhr",
+			label: "X",
 			icon: XLogo
 		},
 		{
-			href: 'https://github.com/shabanhr',
-			label: 'Github',
+			href: "https://github.com/shabanhr",
+			label: "Github",
 			icon: GithubLogo
 		}
 	];
@@ -78,7 +78,9 @@
 		</nav>
 	</div>
 
-	<div class="flex items-center justify-between gap-4 border-t py-4 text-sm text-muted-foreground">
+	<div
+		class="flex items-center justify-between gap-4 border-t py-4 text-sm text-muted-foreground"
+	>
 		<p>&copy; {currentYear} efferd</p>
 
 		<p class="inline-flex items-center gap-1">

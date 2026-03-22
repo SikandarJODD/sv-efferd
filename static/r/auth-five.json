@@ -14,7 +14,7 @@
 		"button",
 		"./auth-divider.json",
 		"./floating-paths.json",
-		"./input-group.json"
+		"input-group"
 	],
 	"files": [
 		{

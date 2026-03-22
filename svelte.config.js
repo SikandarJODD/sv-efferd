@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from "@sveltejs/adapter-static";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -7,12 +7,12 @@ const config = {
 	},
 	vitePlugin: {
 		dynamicCompileOptions: ({ filename }) =>
-			filename.includes('node_modules') ? undefined : { runes: true },
+			filename.includes("node_modules") ? undefined : { runes: true },
 		inspector: {
-			toggleKeyCombo: 'ctrl-shift',
+			toggleKeyCombo: "ctrl-shift",
 			holdMode: true,
-			showToggleButton: 'always',
-			toggleButtonPos: 'bottom-right'
+			showToggleButton: "always",
+			toggleButtonPos: "bottom-right"
 		}
 	}
 };

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from "$lib/utils";
 
 	const GRADIENT_ANGLES = {
 		top: 0,
@@ -15,9 +15,9 @@
 	};
 
 	let {
-		direction = 'bottom',
+		direction = "bottom",
 		blurLayers = 8,
-		class: className = '',
+		class: className = "",
 		blurIntensity = 0.25
 	}: ProgressiveBlurProps = $props();
 
@@ -25,7 +25,7 @@
 	let segmentSize = $derived(1 / (blurLayers + 1));
 </script>
 
-<div class={cn('relative', className)}>
+<div class={cn("relative", className)}>
 	{#each { length: layers } as _, index}
 		{@const angle = GRADIENT_ANGLES[direction]}
 		{@const gradientStops = [
@@ -37,7 +37,7 @@
 			(pos, posIndex) =>
 				`rgba(255, 255, 255, ${posIndex === 1 || posIndex === 2 ? 1 : 0}) ${pos * 100}%`
 		)}
-		{@const gradient = `linear-gradient(${angle}deg, ${gradientStops.join(', ')})`}
+		{@const gradient = `linear-gradient(${angle}deg, ${gradientStops.join(", ")})`}
 		<div
 			class="pointer-events-none absolute inset-0 rounded-[inherit]"
 			style="mask-image: {gradient};

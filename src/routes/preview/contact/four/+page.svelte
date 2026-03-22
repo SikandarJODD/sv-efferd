@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ContactFour from '$lib/components/efferd/contact/contact-four.svelte';
+	import ContactFour from "$lib/components/efferd/contact/contact-four.svelte";
 </script>
 
 <svelte:head>

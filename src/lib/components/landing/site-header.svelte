@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { BorderSeparator } from '$lib/components/ui/border-seperator';
-	import { Button } from '$lib/components/ui/button';
-	import { Github, Logo, X as XLogo } from '$lib/svgs';
-	import { MoonIcon, SunIcon } from '@lucide/svelte';
-	import { mode, toggleMode } from 'mode-watcher';
-	import { landingNavLinks, landingSocialLinks } from './config';
-	import MobileNav from './mobile-nav.svelte';
+	import { BorderSeparator } from "$lib/components/ui/border-seperator";
+	import { Button } from "$lib/components/ui/button";
+	import { Github, Logo, X as XLogo } from "$lib/svgs";
+	import { MoonIcon, SunIcon } from "@lucide/svelte";
+	import { mode, toggleMode } from "mode-watcher";
+	import { landingNavLinks, landingSocialLinks } from "./config";
+	import MobileNav from "./mobile-nav.svelte";
 
 	function themeLabel() {
-		return mode.current === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+		return mode.current === "dark" ? "Switch to light mode" : "Switch to dark mode";
 	}
 </script>
 
@@ -40,7 +40,7 @@
 		<div class="hidden items-center gap-2 md:flex">
 			{#each landingSocialLinks as link}
 				<Button aria-label={link.label} href={link.href} size="icon-sm" variant="ghost">
-					{#if link.id === 'x'}
+					{#if link.id === "x"}
 						<XLogo class="size-4" />
 					{:else}
 						<Github class="size-4" />
@@ -55,7 +55,7 @@
 				variant="secondary"
 				onclick={toggleMode}
 			>
-				{#if mode.current === 'dark'}
+				{#if mode.current === "dark"}
 					<SunIcon class="size-4" />
 				{:else}
 					<MoonIcon class="size-4" />
@@ -71,7 +71,7 @@
 				variant="secondary"
 				onclick={toggleMode}
 			>
-				{#if mode.current === 'dark'}
+				{#if mode.current === "dark"}
 					<SunIcon class="size-4" />
 				{:else}
 					<MoonIcon class="size-4" />

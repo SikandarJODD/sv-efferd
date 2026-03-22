@@ -1,5 +1,5 @@
 <script lang="ts">
-	import IntegrationTwo from '$lib/components/efferd/integrations/integration-two.svelte';
+	import IntegrationTwo from "$lib/components/efferd/integrations/integration-two.svelte";
 </script>
 
 <svelte:head>

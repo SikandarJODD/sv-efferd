@@ -5,7 +5,7 @@
 	"type": "registry:block",
 	"description": "A dense social-proof wall with grid fillers, patterned cards, and a long-form testimonial mosaic.",
 	"registryDependencies": [
-		"./avatar.json",
+		"avatar",
 		"./full-width-divider.json",
 		"./grid-filler.json",
 		"./grid-pattern.json"
