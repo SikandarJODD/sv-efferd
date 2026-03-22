@@ -1,7 +1,11 @@
 export const landingNavLinks = [
 	{
+		label: "Home",
+		href: "/"
+	},
+	{
 		label: "Blocks",
-		href: "/blocks"
+		href: "/blocks/hero"
 	},
 	// {
 	// 	label: "Docs",
