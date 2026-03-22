@@ -22,7 +22,7 @@
 	</div>
 
 	<div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-7 lg:px-8">
-		<div class="grid grid-cols-2 gap-3.5 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
+		<div class="grid grid-cols-1 gap-3.5 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
 			{#each marketingCards as card (card.slug)}
 				<MarketingCard
 					title={card.title}

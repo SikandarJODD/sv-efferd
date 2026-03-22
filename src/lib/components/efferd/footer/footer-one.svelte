@@ -27,12 +27,12 @@
 
 	const socialLinks: SocialLink[] = [
 		{
-			href: "https://x.com/",
+			href: "https://x.com",
 			label: "X",
 			icon: XLogo
 		},
 		{
-			href: "https://github.com/",
+			href: "https://github.com",
 			label: "Github",
 			icon: GithubLogo
 		}
@@ -88,18 +88,18 @@
 			<a
 				aria-label="x/twitter"
 				class="inline-flex items-center gap-1 text-foreground/80 hover:text-foreground hover:underline"
-				href="https://x.com/"
+				href="https://x.com/Sikandar_Bhide"
 				rel="noreferrer"
 				target="_blank"
 			>
 				<img
-					alt="shaban"
+					alt="bhide svelte"
 					class="size-4 rounded-full"
 					height="16"
-					src="https://github.com/.png"
+					src="https://avatars.githubusercontent.com/u/93428946?v=4"
 					width="16"
 				/>
-				Shaban
+				Bhide Svelte
 			</a>
 		</p>
 	</div>

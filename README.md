@@ -1,17 +1,19 @@
-# Svelte Efferd Blocks
+![Image](/static/og.png)
+
+## Svelte Efferd Blocks
 
 Save hours of design time with clean, ready-to-use `shadcn-svelte` blocks that just work, modern, responsive, and built for speed.
 
-- Website: [sv-efferd.pages.dev](https://sv-efferd.pages.dev)
-- GitHub: [SikandarJODD/sv-efferd](https://github.com/SikandarJODD/sv-efferd)
-- Blocks: `64`
+Total Blocks: 64
+
+Live: [sv-efferd.pages.dev](https://sv-efferd.pages.dev)
 
 ## Credits
 
 - Original created by [Shaban](https://x.com/shabanhr)
 - Ported to Svelte by [Bhide Svelte](https://x.com/Sikandar_Bhide)
 
-## Categories
+## Categories :
 
 - [Logo Cloud](https://sv-efferd.pages.dev/blocks/logo-cloud)
 - [Header](https://sv-efferd.pages.dev/blocks/header)
@@ -31,7 +33,7 @@ Save hours of design time with clean, ready-to-use `shadcn-svelte` blocks that j
 
 ## Install
 
-Install any block with `shadcn-svelte`:
+Install any block using `shadcn-svelte` CLI:
 
 ```bash
 pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/<component-name>.json
@@ -40,31 +42,25 @@ pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/<component-name>
 Example:
 
 ```bash
-pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/integration-four.json
+pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/hero-one.json
 ```
 
 ## Usage
 
 ```svelte
 <script lang="ts">
-	import IntegrationFour from "$lib/components/efferd/integrations/integration-four.svelte";
+  import HeroOne from "$lib/components/efferd/hero/hero-one.svelte";
 </script>
 
-<IntegrationFour />
+<HeroOne />
 ```
 
 ## Support
 
 If you find Svelte Efferd Blocks useful:
 
-- Star the repo: [github.com/SikandarJODD/sv-efferd](https://github.com/SikandarJODD/sv-efferd)
-- Sponsor the project: [github.com/sponsors/SikandarJODD](https://github.com/sponsors/SikandarJODD)
+- Star the repo
 - Share your work on social media and tag [@Sikandar_Bhide](https://x.com/Sikandar_Bhide)
-
-## Registry Build
-
-```bash
-pnpm run build:blocks
-```
+- Sponsor the project: [github.com/sponsors/SikandarJODD](https://github.com/sponsors/SikandarJODD)
 
 Made with love for the Svelte community by [Bhide Svelte](https://x.com/Sikandar_Bhide).

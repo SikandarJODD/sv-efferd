@@ -24,11 +24,11 @@ export const changelogPageData: ChangelogPageData = {
 	description: "Latest product updates and new blocks.",
 	entries: [
 		{
-			id: "2026-03-21",
-			date: "21 March 2026",
-			sortDate: "2026-03-21",
+			id: "2026-03-22",
+			date: "22 March 2026",
+			sortDate: "2026-03-22",
 			title: "50+ New Blocks",
-			description: "Shipped a major block batch across the core library.",
+			description: "Released a large batch of new blocks across all categories.",
 			chips: [
 				{ label: "hero", href: "/blocks/hero" },
 				{ label: "contact", href: "/blocks/contact" },
@@ -37,7 +37,7 @@ export const changelogPageData: ChangelogPageData = {
 				{ label: "pricing", href: "/blocks/pricing" },
 				{ label: "auth", href: "/blocks/auth" }
 			]
-		},
+		}
 		// {
 		// 	id: '2026-03-19',
 		// 	date: '19 March 2026',

@@ -18,8 +18,10 @@
 {#if installUrl}
 	<Add.Provider bind:agent={currentAgent}>
 		<Add.Root item={installUrl} withoutRegistry>
-			<Add.Group class={cn("h-8 w-80 max-w-full", className)}>
-				<Add.Button class="h-8 min-w-0 md:pr-2 md:pl-1 [&>div]:size-8" />
+			<Add.Group class={cn("min-h-8 w-full max-w-full sm:h-8 sm:w-80", className)}>
+				<Add.Button
+					class="min-h-8 min-w-0 py-1 pr-1 md:h-8 md:py-0 md:pr-2 md:pl-1 [&>div]:size-8"
+				/>
 				<Add.GroupSeparator class="h-4" />
 				<Add.Dropdown class="size-8">
 					<Add.DropdownContent>

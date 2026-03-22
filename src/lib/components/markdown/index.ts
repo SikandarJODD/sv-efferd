@@ -37,5 +37,5 @@ export {
 	Td,
 	Th,
 	Thead,
-	Tr,
+	Tr
 };

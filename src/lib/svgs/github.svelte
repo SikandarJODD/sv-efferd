@@ -13,4 +13,3 @@
 		transform="scale(64)"
 	/>
 </svg>
-

@@ -12,7 +12,7 @@
 </script>
 
 <div
-	class="border-border bg-card relative mt-4 mb-10 w-full overflow-x-auto rounded-xl border shadow-sm"
+	class="relative mt-4 mb-10 w-full overflow-x-auto rounded-xl border border-border bg-card shadow-sm"
 >
 	<table {...restProps} class={cn("w-full text-base [&_code]:text-sm", className)}>
 		{@render children?.()}

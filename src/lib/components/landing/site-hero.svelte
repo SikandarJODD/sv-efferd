@@ -13,38 +13,33 @@
 	class="relative flex min-h-[calc(100vh-4rem)] items-center justify-center border-b border-border/80 px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-32"
 	id="blocks"
 >
-	<!-- <BorderSeparator
-		class="top-0 h-14 border-border/60 [mask-image:linear-gradient(to_bottom,black,transparent)] opacity-80 [-webkit-mask-image:linear-gradient(to_bottom,black,transparent)]"
-	> -->
-	<!-- <DashedLines class="opacity-60" height={56} width={24} x={12} /> -->
-	<!-- <DashedLines
-		class="absolute top-0 h-12 mask-[linear-gradient(to_top,transparent,var(--background),var(--background),transparent)] opacity-80 [-webkit-mask-image:linear-gradient(to_top,transparent,var(--background),var(--background),transparent)]"
-	/> -->
-	<!-- <DashedLines
-		class="absolute top-0 h-12 mask-[linear-gradient(to_top,transparent,var(--background),var(--background),transparent)]"
-	/> -->
+	<div aria-hidden="true" class="pointer-events-none absolute inset-0">
+		<div
+			class="absolute top-1/2 left-1/2 size-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,color-mix(in_oklab,var(--foreground)_12%,transparent)_0%,transparent_70%)] blur-3xl"
+		></div>
+		<div
+			class="absolute inset-x-[0%] inset-y-[0%] bg-[radial-gradient(circle_at_center,color-mix(in_oklab,var(--foreground)_6%,transparent)_0%,transparent_75%)] opacity-70"
+		></div>
+	</div>
 	<DashedLines
 		class="absolute bottom-0 h-12 mask-[linear-gradient(to_bottom,transparent,var(--muted-foreground),var(--muted-foreground))] stroke-muted-foreground/50 dark:stroke-muted-foreground/30"
 	/>
-	<!-- </BorderSeparator> -->
-	<div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
-		<div
-			class="absolute top-1/2 left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,color-mix(in_oklab,var(--foreground)_12%,transparent)_0%,transparent_70%)] blur-3xl"
-		></div>
-		<div
-			class="absolute inset-x-[18%] inset-y-[12%] rounded-[999px] border border-border/30 bg-[radial-gradient(circle_at_center,color-mix(in_oklab,var(--foreground)_6%,transparent)_0%,transparent_75%)] opacity-70"
-		></div>
-	</div>
 
-	<DecorIcon class="size-4 stroke-muted-foreground/80 bg-background z-40" position="top-left" />
-	<DecorIcon class="size-4 stroke-muted-foreground/80 bg-background z-40" position="top-right" />
-	<DecorIcon class="size-4 stroke-muted-foreground/80 bg-background z-40" position="bottom-left" />
-	<DecorIcon class="size-4 stroke-muted-foreground/80 bg-background z-40" position="bottom-right" />
+	<DecorIcon class="z-40 size-4 bg-background stroke-muted-foreground/80" position="top-left" />
+	<DecorIcon class="z-40 size-4 bg-background stroke-muted-foreground/80" position="top-right" />
+	<DecorIcon
+		class="z-40 size-4 bg-background stroke-muted-foreground/80"
+		position="bottom-left"
+	/>
+	<DecorIcon
+		class="z-40 size-4 bg-background stroke-muted-foreground/80"
+		position="bottom-right"
+	/>
 
 	<div class=" relative z-10 mx-auto flex flex-col items-center text-center">
 		<a
-			class="group mx-auto flex w-fit items-center gap-3 rounded-full border bg-card py-1 pr-1 pl-3 shadow"
-			href="/"
+			class="group mx-auto flex w-fit items-center gap-3 rounded-full border bg-transparent py-1 pr-1 pl-3 shadow-lg backdrop-blur-lg"
+			href="/blocks"
 			id="link"
 		>
 			<Rocket class="size-3 text-muted-foreground" />
