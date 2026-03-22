@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { FullWidthDivider } from '$lib/components/ui/full-width-divider';
-	import { Github, X } from '$lib/svgs';
+	import GithubLogo from '$lib/svgs/github.svelte';
+	import XLogo from '$lib/svgs/x.svelte';
 	import { cn } from '$lib/utils';
 	import { Mail, MapPin, Phone, type Icon as IconType } from '@lucide/svelte';
 	import type { Component } from 'svelte';
@@ -71,12 +72,12 @@
 
 	const socialLinks: SocialLink[] = [
 		{
-			icon: Github,
+			icon: GithubLogo,
 			href: '#',
 			label: 'GitHub'
 		},
 		{
-			icon: X,
+			icon: XLogo,
 			href: '#',
 			label: 'Twitter'
 		}

@@ -126,6 +126,141 @@
 			"registryDependencies": []
 		},
 		{
+			"name": "marquee",
+			"title": "Marquee",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/magic/marquee/marquee.svelte",
+					"type": "registry:component",
+					"target": "magic/marquee/marquee.svelte"
+				},
+				{
+					"path": "src/lib/components/magic/marquee/index.ts",
+					"type": "registry:file",
+					"target": "magic/marquee/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "progressive-blur",
+			"title": "Progressive blur",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/progressive-blur/progressive-blur.svelte",
+					"type": "registry:component",
+					"target": "ui/progressive-blur/progressive-blur.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/progressive-blur/index.ts",
+					"type": "registry:file",
+					"target": "ui/progressive-blur/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "field",
+			"title": "Field",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/field/field.svelte",
+					"type": "registry:component",
+					"target": "ui/field/field.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/field/field-set.svelte",
+					"type": "registry:component",
+					"target": "ui/field/field-set.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/field/field-legend.svelte",
+					"type": "registry:component",
+					"target": "ui/field/field-legend.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/field/field-group.svelte",
+					"type": "registry:component",
+					"target": "ui/field/field-group.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/field/field-content.svelte",
+					"type": "registry:component",
+					"target": "ui/field/field-content.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/field/field-label.svelte",
+					"type": "registry:component",
+					"target": "ui/field/field-label.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/field/field-title.svelte",
+					"type": "registry:component",
+					"target": "ui/field/field-title.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/field/field-description.svelte",
+					"type": "registry:component",
+					"target": "ui/field/field-description.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/field/field-separator.svelte",
+					"type": "registry:component",
+					"target": "ui/field/field-separator.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/field/field-error.svelte",
+					"type": "registry:component",
+					"target": "ui/field/field-error.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/field/index.ts",
+					"type": "registry:file",
+					"target": "ui/field/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "input",
+			"title": "Input",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/input/input.svelte",
+					"type": "registry:component",
+					"target": "ui/input/input.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/input/index.ts",
+					"type": "registry:file",
+					"target": "ui/input/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "textarea",
+			"title": "Textarea",
+			"type": "registry:block",
+			"files": [
+				{
+					"path": "src/lib/components/ui/textarea/textarea.svelte",
+					"type": "registry:component",
+					"target": "ui/textarea/textarea.svelte"
+				},
+				{
+					"path": "src/lib/components/ui/textarea/index.ts",
+					"type": "registry:file",
+					"target": "ui/textarea/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
 			"name": "cta-one",
 			"title": "CTA One",
 			"type": "registry:block",
@@ -227,6 +362,182 @@
 				}
 			],
 			"registryDependencies": ["button", "local:empty"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "logo-cloud-one",
+			"title": "Logo Cloud One",
+			"type": "registry:block",
+			"description": "A clean partner grid with a framed card surface and balanced spacing.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/logo-cloud/logo-cloud-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/logo-cloud/logo-cloud-one.svelte"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "logo-cloud-two",
+			"title": "Logo Cloud Two",
+			"type": "registry:block",
+			"description": "A bordered logo grid with alternating panels and decorative corner accents.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/logo-cloud/two/logo-cloud-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/logo-cloud/two/logo-cloud-two.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/logo-cloud/two/logo-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/logo-cloud/two/logo-card.svelte"
+				}
+			],
+			"registryDependencies": ["local:decor-icon"]
+		},
+		{
+			"name": "logo-cloud-three",
+			"title": "Logo Cloud Three",
+			"type": "registry:block",
+			"description": "A scrolling logo marquee with a soft edge mask and editorial rhythm.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/logo-cloud/three/logo-cloud-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/logo-cloud/three/logo-cloud-three.svelte"
+				}
+			],
+			"registryDependencies": ["local:marquee"]
+		},
+		{
+			"name": "logo-cloud-four",
+			"title": "Logo Cloud Four",
+			"type": "registry:block",
+			"description": "A marquee logo band with progressive edge blur and a layered track surface.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/logo-cloud/four/logo-cloud-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/logo-cloud/four/logo-cloud-four.svelte"
+				}
+			],
+			"registryDependencies": ["local:marquee", "local:progressive-blur"]
+		},
+		{
+			"name": "logo-cloud-five",
+			"title": "Logo Cloud Five",
+			"type": "registry:block",
+			"description": "A flexible wrapped logo cloud designed for broader brand collections.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/logo-cloud/five/logo-cloud-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/logo-cloud/five/logo-cloud-five.svelte"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "contact-one",
+			"title": "Contact One",
+			"type": "registry:block",
+			"description": "A compact contact strip with quick details framed by full-width dividers.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/contact/contact-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/contact/contact-one.svelte"
+				}
+			],
+			"registryDependencies": ["local:full-width-divider"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "contact-two",
+			"title": "Contact Two",
+			"type": "registry:block",
+			"description": "A three-column contact hub for email, social DMs, and community support.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/contact/contact-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/contact/contact-two.svelte"
+				},
+				{
+					"path": "src/lib/svgs/x.svelte",
+					"type": "registry:component",
+					"target": "svgs/x.svelte"
+				}
+			],
+			"registryDependencies": ["button"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "contact-three",
+			"title": "Contact Three",
+			"type": "registry:block",
+			"description": "A full-page contact layout with detailed channels, office info, and social links.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/contact/contact-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/contact/contact-three.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:component",
+					"target": "svgs/github.svelte"
+				},
+				{
+					"path": "src/lib/svgs/x.svelte",
+					"type": "registry:component",
+					"target": "svgs/x.svelte"
+				}
+			],
+			"registryDependencies": ["local:full-width-divider"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "contact-four",
+			"title": "Contact Four",
+			"type": "registry:block",
+			"description": "A split contact form with direct support details and a structured inquiry panel.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/contact/contact-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/contact/contact-four.svelte"
+				}
+			],
+			"registryDependencies": ["button", "local:field", "local:input", "local:textarea"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "contact-five",
+			"title": "Contact Five",
+			"type": "registry:block",
+			"description": "A bordered contact card pairing essential details with a reusable message form.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/contact/contact-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/contact/contact-five.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/contact/contact-form.svelte",
+					"type": "registry:component",
+					"target": "efferd/contact/contact-form.svelte"
+				}
+			],
+			"registryDependencies": [
+				"button",
+				"local:decor-icon",
+				"local:field",
+				"local:input",
+				"local:textarea"
+			],
 			"dependencies": ["@lucide/svelte"]
 		}
 	]

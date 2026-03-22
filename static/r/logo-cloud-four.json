@@ -1,0 +1,18 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "logo-cloud-four",
+	"title": "Logo Cloud Four",
+	"type": "registry:block",
+	"description": "A marquee logo band with progressive edge blur and a layered track surface.",
+	"registryDependencies": [
+		"./marquee.json",
+		"./progressive-blur.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { Marquee } from '$lib/components/magic/marquee';\r\n\timport { ProgressiveBlur } from '$lib/components/ui/progressive-blur';\r\n\r\n\tconst logos = [\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/nvidia-wordmark.svg',\r\n\t\t\talt: 'Nvidia Logo'\r\n\t\t},\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/supabase-wordmark.svg',\r\n\t\t\talt: 'Supabase Logo'\r\n\t\t},\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/openai-wordmark.svg',\r\n\t\t\talt: 'OpenAI Logo'\r\n\t\t},\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/turso-wordmark.svg',\r\n\t\t\talt: 'Turso Logo'\r\n\t\t},\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/vercel-wordmark.svg',\r\n\t\t\talt: 'Vercel Logo'\r\n\t\t},\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/github-wordmark.svg',\r\n\t\t\talt: 'GitHub Logo'\r\n\t\t},\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/claude-wordmark.svg',\r\n\t\t\talt: 'Claude AI Logo'\r\n\t\t},\r\n\t\t{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/clerk-wordmark.svg',\r\n\t\t\talt: 'Clerk Logo'\r\n\t\t}\r\n\t];\r\n</script>\r\n\r\n<div\r\n\tclass=\"relative border-x border-y bg-linear-to-r from-secondary/50 via-transparent to-secondary/50 py-6\"\r\n>\r\n\t<Marquee class=\"flex items-center gap-20\"\r\n    style=\"--duration: 30s; --gap: 2rem;\">\r\n\t\t{#each logos as logo}\r\n\t\t\t<img\r\n\t\t\t\talt={logo.alt}\r\n\t\t\t\tclass=\"pointer-events-none h-4 select-none md:h-5 dark:brightness-0 dark:invert\"\r\n\t\t\t\theight=\"auto\"\r\n\t\t\t\tloading=\"lazy\"\r\n\t\t\t\tsrc={logo.src}\r\n\t\t\t\twidth=\"auto\"\r\n\t\t\t/>\r\n\t\t{/each}\r\n\t</Marquee>\r\n\r\n\t<ProgressiveBlur\r\n\t\tblurIntensity={1}\r\n\t\tclass=\"pointer-events-none absolute top-0 left-0 h-full w-[100px] md:w-[160px]\"\r\n\t\tdirection=\"left\"\r\n\t/>\r\n\t<ProgressiveBlur\r\n\t\tblurIntensity={1}\r\n\t\tclass=\"pointer-events-none absolute top-0 right-0 h-full w-[100px] md:w-[160px]\"\r\n\t\tdirection=\"right\"\r\n\t/>\r\n</div>\r\n",
+			"type": "registry:component",
+			"target": "efferd/logo-cloud/four/logo-cloud-four.svelte"
+		}
+	]
+}

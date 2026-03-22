@@ -1,0 +1,28 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "contact-two",
+	"title": "Contact Two",
+	"type": "registry:block",
+	"description": "A three-column contact hub for email, social DMs, and community support.",
+	"dependencies": [
+		"@lucide/svelte"
+	],
+	"devDependencies": [
+		"@lucide/svelte@^0.577.0"
+	],
+	"registryDependencies": [
+		"button"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { cn } from '$UTILS$';\n\timport { Button } from '$lib/components/ui/button';\n\timport XLogo from '$lib/svgs/x.svelte';\n\timport { Mail, Users, type Icon as IconType } from '@lucide/svelte';\n\timport type { Component } from 'svelte';\n\n\tconst APP_EMAIL = 'mail@example.com';\n\n\ttype Data = {\n\t\ttitle: string;\n\t\tdescription: string;\n\t\ticon: typeof IconType | Component;\n\t\thref: string;\n\t\tlabel: string;\n\t};\n\tlet data: Data[] = [\n\t\t{\n\t\t\ttitle: 'Email Us',\n\t\t\tdescription: 'We respond to all emails within 24 hours.',\n\t\t\ticon: Mail,\n\t\t\thref: `mailto:${APP_EMAIL}`,\n\t\t\tlabel: APP_EMAIL\n\t\t},\n\t\t{\n\t\t\ttitle: 'Send us DM',\n\t\t\tdescription: 'Send us a direct message on X for quick answers.',\n\t\t\ticon: XLogo,\n\t\t\thref: '#',\n\t\t\tlabel: '@efferdui'\n\t\t},\n\t\t{\n\t\t\ttitle: 'Join the community',\n\t\t\tdescription: 'Join our community to connect with other users.',\n\t\t\ticon: Users,\n\t\t\thref: '#',\n\t\t\tlabel: 'Join Discord'\n\t\t}\n\t];\n</script>\n\n<div class=\"mx-auto max-w-4xl\">\n\t<div class=\"mb-12 flex max-w-md flex-col justify-center gap-2\">\n\t\t<h1 class=\"text-2xl font-bold md:text-3xl\">Contact Us</h1>\n\t\t<p class=\"text-base text-muted-foreground\">\n\t\t\tWe&apos;re here to help and answer any question you might have, We look forward to hearing\n\t\t\tfrom you.\n\t\t</p>\n\t</div>\n\t<div\n\t\tclass=\"grid gap-0.5 overflow-hidden rounded-lg bg-muted p-0.5 md:grid-cols-3 dark:bg-muted/50\"\n\t>\n\t\t{#each data as item}\n\t\t\t{@const Icon = item.icon}\n\t\t\t<div class=\"flex flex-col gap-3 rounded-lg bg-background px-6 py-6 shadow-xs\">\n\t\t\t\t<div\n\t\t\t\t\tclass={cn('flex items-center gap-x-2', '[&_svg]:size-4 [&_svg]:text-muted-foreground')}\n\t\t\t\t>\n\t\t\t\t\t<Icon />\n\t\t\t\t\t<h2 class=\"text-sm\">{item.title}</h2>\n\t\t\t\t</div>\n\t\t\t\t<p class=\"text-sm text-muted-foreground\">{item.description}</p>\n\t\t\t\t<div class=\"mt-1 flex items-center gap-x-2\">\n\t\t\t\t\t<Button variant=\"link\" href={item.href}>\n\t\t\t\t\t\t{item.label}\n\t\t\t\t\t</Button>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t{/each}\n\t</div>\n</div>\n",
+			"type": "registry:component",
+			"target": "efferd/contact/contact-two.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\timport type { SVGAttributes } from 'svelte/elements';\r\n\r\n\tlet { ...props }: SVGAttributes<SVGSVGElement> = $props();\r\n</script>\r\n\r\n<svg fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" {...props}>\r\n\t<path\r\n\t\td=\"m18.9,1.153h3.682l-8.042,9.189,9.46,12.506h-7.405l-5.804-7.583-6.634,7.583H.469l8.6-9.831L0,1.153h7.593l5.241,6.931,6.065-6.931Zm-1.293,19.494h2.039L6.482,3.239h-2.19l13.314,17.408Z\"\r\n\t/>\r\n</svg>\r\n",
+			"type": "registry:component",
+			"target": "svgs/x.svelte"
+		}
+	]
+}

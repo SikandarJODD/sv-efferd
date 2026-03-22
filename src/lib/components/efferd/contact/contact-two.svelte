@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { cn } from '$lib/utils';
 	import { Button } from '$lib/components/ui/button';
-	import { X } from '$lib/svgs';
+	import XLogo from '$lib/svgs/x.svelte';
 	import { Mail, Users, type Icon as IconType } from '@lucide/svelte';
 	import type { Component } from 'svelte';
 
@@ -25,7 +25,7 @@
 		{
 			title: 'Send us DM',
 			description: 'Send us a direct message on X for quick answers.',
-			icon: X,
+			icon: XLogo,
 			href: '#',
 			label: '@efferdui'
 		},

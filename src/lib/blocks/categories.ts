@@ -6,11 +6,11 @@ export type BlockCategory = {
 };
 
 export const blockCategories = [
-	{ slug: 'logo-cloud', label: 'Logo Cloud' },
+	{ slug: 'logo-cloud', label: 'Logo Cloud', hasDedicatedPage: true },
 	{ slug: 'header', label: 'Header' },
 	{ slug: 'not-found', label: 'Not Found', hasDedicatedPage: true },
 	{ slug: 'testimonials', label: 'Testimonials', sourceKey: 'testimonial' },
-	{ slug: 'contact', label: 'Contact' },
+	{ slug: 'contact', label: 'Contact', hasDedicatedPage: true },
 	{ slug: 'blog', label: 'Blog', sourceKey: 'blogs' },
 	{ slug: 'cta', label: 'CTA', hasDedicatedPage: true },
 	{ slug: 'faqs', label: "FAQ's" },

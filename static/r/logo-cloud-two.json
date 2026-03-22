@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "logo-cloud-two",
+	"title": "Logo Cloud Two",
+	"type": "registry:block",
+	"description": "A bordered logo grid with alternating panels and decorative corner accents.",
+	"registryDependencies": [
+		"./decor-icon.json"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { DecorIcon } from '$lib/components/ui/decor-icon';\r\n\timport LogoCard from './logo-card.svelte';\r\n</script>\r\n\r\n<div class=\"grid grid-cols-2 border md:grid-cols-4\">\r\n\t<LogoCard\r\n\t\tclass=\"relative border-r border-b bg-secondary dark:bg-secondary/30\"\r\n\t\tlogo={{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/nvidia-wordmark.svg',\r\n\t\t\talt: 'Nvidia Logo'\r\n\t\t}}\r\n\t>\r\n\t\t<DecorIcon class=\"z-10\" position=\"bottom-right\" />\r\n\t</LogoCard>\r\n\r\n\t<LogoCard\r\n\t\tclass=\"border-b md:border-r\"\r\n\t\tlogo={{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/supabase-wordmark.svg',\r\n\t\t\talt: 'Supabase Logo'\r\n\t\t}}\r\n\t/>\r\n\r\n\t<LogoCard\r\n\t\tclass=\"relative border-r border-b md:bg-secondary dark:md:bg-secondary/30\"\r\n\t\tlogo={{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/github-wordmark.svg',\r\n\t\t\talt: 'GitHub Logo'\r\n\t\t}}\r\n\t>\r\n\t\t<DecorIcon class=\"z-10\" position=\"bottom-right\" />\r\n\t\t<DecorIcon class=\"z-10 hidden md:block\" position=\"bottom-left\" />\r\n\t</LogoCard>\r\n\r\n\t<LogoCard\r\n\t\tclass=\"relative border-b bg-secondary md:bg-background dark:bg-secondary/30 md:dark:bg-background\"\r\n\t\tlogo={{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/openai-wordmark.svg',\r\n\t\t\talt: 'OpenAI Logo'\r\n\t\t}}\r\n\t/>\r\n\r\n\t<LogoCard\r\n\t\tclass=\"relative border-r border-b bg-secondary md:border-b-0 md:bg-background dark:bg-secondary/30 md:dark:bg-background\"\r\n\t\tlogo={{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/turso-wordmark.svg',\r\n\t\t\talt: 'Turso Logo'\r\n\t\t}}\r\n\t>\r\n\t\t<DecorIcon class=\"z-10 md:hidden\" position=\"bottom-right\" />\r\n\t</LogoCard>\r\n\r\n\t<LogoCard\r\n\t\tclass=\"border-b bg-background md:border-r md:border-b-0 md:bg-secondary dark:md:bg-secondary/30\"\r\n\t\tlogo={{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/clerk-wordmark.svg',\r\n\t\t\talt: 'Clerk Logo'\r\n\t\t}}\r\n\t/>\r\n\r\n\t<LogoCard\r\n\t\tclass=\"border-r\"\r\n\t\tlogo={{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/claude-wordmark.svg',\r\n\t\t\talt: 'Claude AI Logo'\r\n\t\t}}\r\n\t/>\r\n\r\n\t<LogoCard\r\n\t\tclass=\"bg-secondary dark:bg-secondary/30\"\r\n\t\tlogo={{\r\n\t\t\tsrc: 'https://storage.efferd.com/logo/vercel-wordmark.svg',\r\n\t\t\talt: 'Vercel Logo'\r\n\t\t}}\r\n\t/>\r\n</div>\r\n",
+			"type": "registry:component",
+			"target": "efferd/logo-cloud/two/logo-cloud-two.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { cn } from '$UTILS$';\r\n\timport type { Snippet } from 'svelte';\r\n\timport type { HTMLAttributes } from 'svelte/elements';\r\n\r\n\ttype Logo = {\r\n\t\tsrc: string;\r\n\t\talt: string;\r\n\t};\r\n\ttype LogoCardProps = HTMLAttributes<HTMLDivElement> & {\r\n\t\tlogo: Logo;\r\n\t\tclass?: string;\r\n\t\tchildren?: Snippet;\r\n\t};\r\n\r\n\tlet { logo, class: className = '', children, ...props }: LogoCardProps = $props();\r\n</script>\r\n\r\n<div\r\n\tclass={cn('flex items-center justify-center bg-background px-4 py-8 md:p-8', className)}\r\n\t{...props}\r\n>\r\n\t<img\r\n\t\talt={logo.alt}\r\n\t\tclass=\"pointer-events-none h-4 select-none md:h-5 dark:brightness-0 dark:invert\"\r\n\t\theight=\"auto\"\r\n\t\tsrc={logo.src}\r\n\t\twidth=\"auto\"\r\n\t/>\r\n\t{@render children?.()}\r\n</div>\r\n",
+			"type": "registry:component",
+			"target": "efferd/logo-cloud/two/logo-card.svelte"
+		}
+	]
+}
