@@ -15,7 +15,7 @@
 	let { title, description, class: className = "", actions, children }: DocsPageProps = $props();
 </script>
 
-<section class={cn("mx-auto w-full max-w-4xl pb-16 sm:pb-20", className)}>
+<section class={cn("mx-auto w-full max-w-4xl pb-16 sm:pb-0", className)}>
 	<div class="overflow-hidden border-x border-border/80">
 		<div class="border-b border-border/80 px-5 py-10 sm:px-8 sm:py-12 md:px-12">
 			<div class="mx-auto max-w-3xl">
@@ -32,7 +32,7 @@
 			</div>
 		</div>
 
-		<div class="px-5 py-8 sm:px-8 sm:py-10 md:px-12">
+		<div class="px-5 py-8 sm:px-8 sm:pt-10 md:px-12">
 			<div class="mx-auto max-w-3xl">
 				{@render children?.()}
 			</div>

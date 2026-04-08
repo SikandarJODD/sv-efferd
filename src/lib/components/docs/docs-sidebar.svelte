@@ -1,93 +1,51 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import { Button } from "$lib/components/ui/button";
-	import * as Sidebar from "$lib/components/ui/sidebar";
+	import { StripedPattern } from "$lib/components/magic/striped-pattern";
+	import { DecorIcon } from "$lib/components/ui/decor-icon";
 	import { cn } from "$lib/utils";
-	import { docsNavGroups, docsSupportLinks, normalizeDocsPath } from "./config";
+	import { docsPrimaryPages, docsSecondaryPages, normalizeDocsPath } from "./config";
 
 	let currentPath = $derived(normalizeDocsPath(page.url.pathname));
+
+	function navItemClass(isActive: boolean, tone: "primary" | "secondary") {
+		return cn(
+			"flex items-center rounded-md  px-2.5 py-2 text-sm leading-none transition-colors",
+			isActive
+				? "border-border/80 bg-foreground/[0.04] font-medium text-primary/80!"
+				: "border-transparent hover:bg-foreground/[0.03] hover:text-foreground",
+			tone === "secondary" ? "text-muted-foreground/80" : "text-muted-foreground"
+		);
+	}
 </script>
 
-<Sidebar.Root collapsible="offcanvas">
-	<Sidebar.Header class="border-b border-sidebar-border/80 p-0">
-		<div class="px-4 py-4">
-			<a
-				href="/docs"
-				class="block rounded-md text-sm font-semibold tracking-tight text-sidebar-foreground transition-colors hover:text-sidebar-foreground/80"
-			>
-				Efferd Docs
-			</a>
-			<p class="mt-1 text-xs leading-5 text-sidebar-foreground/70">
-				Minimal guides for browsing, installing, and supporting the project.
-			</p>
-		</div>
-	</Sidebar.Header>
+<aside class="sticky top-20 hidden self-start md:block">
+	<nav aria-label="Docs">
+		<ul class="space-y-1">
+			{#each docsPrimaryPages as item (item.href)}
+				<li>
+					<a
+						aria-current={currentPath === item.href ? "page" : undefined}
+						class={navItemClass(currentPath === item.href, "primary")}
+						href={item.href}
+					>
+						{item.title}
+					</a>
+				</li>
+			{/each}
+		</ul>
+	</nav>
 
-	<Sidebar.Content>
-		{#each docsNavGroups as group (group.title)}
-			<Sidebar.Group>
-				<Sidebar.GroupLabel>{group.title}</Sidebar.GroupLabel>
-				<Sidebar.GroupContent>
-					<Sidebar.Menu>
-						{#each group.items as item (item.href)}
-							<Sidebar.MenuItem>
-								<Sidebar.MenuButton
-									isActive={currentPath === item.href}
-									tooltipContent={item.title}
-								>
-									{#snippet child({ props })}
-										{@const buttonClass =
-											typeof props.class === "string"
-												? props.class
-												: undefined}
-										<a
-											href={item.href}
-											{...props}
-											class={cn(
-												buttonClass,
-												currentPath === item.href && "font-medium"
-											)}
-										>
-											{item.title}
-										</a>
-									{/snippet}
-								</Sidebar.MenuButton>
-							</Sidebar.MenuItem>
-						{/each}
-					</Sidebar.Menu>
-				</Sidebar.GroupContent>
-			</Sidebar.Group>
+	<ul>
+		{#each docsSecondaryPages as item (item.href)}
+			<li>
+				<a
+					aria-current={currentPath === item.href ? "page" : undefined}
+					class={navItemClass(currentPath === item.href, "primary")}
+					href={item.href}
+				>
+					{item.title}
+				</a>
+			</li>
 		{/each}
-	</Sidebar.Content>
-
-	<Sidebar.Footer class="border-t border-sidebar-border/80">
-		<div class="rounded-lg border border-sidebar-border/80 bg-sidebar-accent/30 p-3">
-			<p class="text-sm font-medium text-sidebar-foreground">Support Efferd</p>
-			<p class="mt-1 text-xs leading-5 text-sidebar-foreground/70">
-				Star the repo or say hi on X if the blocks are useful.
-			</p>
-			<div class="mt-3 flex flex-wrap gap-2">
-				<Button
-					href={docsSupportLinks.githubRepo}
-					target="_blank"
-					rel="noreferrer"
-					size="sm"
-					variant="secondary"
-				>
-					GitHub
-				</Button>
-				<Button
-					href={docsSupportLinks.xProfile}
-					target="_blank"
-					rel="noreferrer"
-					size="sm"
-					variant="ghost"
-				>
-					X
-				</Button>
-			</div>
-		</div>
-	</Sidebar.Footer>
-
-	<Sidebar.Rail />
-</Sidebar.Root>
+	</ul>
+</aside>

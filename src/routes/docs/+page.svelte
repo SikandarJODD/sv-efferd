@@ -14,39 +14,12 @@
 
 <DocsPage
 	title="Introduction"
-	description="Efferd is a growing collection of production-ready Svelte blocks designed to save build time without making the site feel generic."
+	description="Svelte Efferd is a growing collection of production-ready Svelte blocks designed to save build time without making the site feel generic."
 >
 	{#snippet actions()}
 		<Button href="/blocks" size="sm">Browse Blocks</Button>
 		<Button href="/changelog" size="sm" variant="outline">View Changelog</Button>
 	{/snippet}
-
-	<H2>What you get</H2>
-	<Paragraph>
-		Efferd focuses on ready-to-explore UI blocks with live previews, copyable code, and a clear
-		path to bringing them into your own project. The docs stay intentionally small so it is easy
-		to understand the product before the template system lands.
-	</Paragraph>
-
-	<Blockquote>
-		<Strong>Minimal by design.</Strong> The goal of this first docs pass is clarity: what the project
-		is, how to install blocks, and where to follow progress.
-	</Blockquote>
-
-	<H2>Available block categories</H2>
-	<Paragraph>
-		The current library spans the following block families. These are sourced directly from the
-		same category registry used on the blocks pages.
-	</Paragraph>
-
-	<div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-		{#each blockCategories as category (category.slug)}
-			<div class="rounded-xl border border-border bg-card px-4 py-3 shadow-xs">
-				<p class="text-sm font-medium text-foreground">{category.label}</p>
-				<p class="mt-1 text-xs text-muted-foreground">`/blocks/{category.slug}`</p>
-			</div>
-		{/each}
-	</div>
 
 	<H2>Inspirations & credits</H2>
 	<Paragraph>
