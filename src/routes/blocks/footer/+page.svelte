@@ -1,17 +1,16 @@
 <script lang="ts">
+	import Seo from "$lib/components/base/Seo.svelte";
 	import BlockPreview from "$lib/components/layout/BlockPreview.svelte";
 	import type { PageProps } from "./$types";
 
 	let { data }: PageProps = $props();
 </script>
 
-<svelte:head>
-	<title>Footer Blocks | Svelte Efferd Blocks</title>
-	<meta
-		name="description"
-		content="Preview curated footer block variants with a tree-style source explorer in Svelte Efferd Blocks."
-	/>
-</svelte:head>
+<Seo
+	title="Footer Blocks"
+	desc="Preview curated footer block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	link="/blocks/footer"
+/>
 
 {#each data.blocks as block (block.id)}
 	<BlockPreview
