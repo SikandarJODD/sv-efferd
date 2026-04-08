@@ -2,16 +2,12 @@
 
 ## Svelte Efferd Blocks
 
-Save hours of design time with clean, ready-to-use `shadcn-svelte` blocks that just work, modern, responsive, and built for speed.
+Browse beautiful shadcn-svelte marketing blocks for landing pages, hero sections, CTAs, pricing, testimonials, FAQs, headers, footers, and more.
 
 Total Blocks: 64
 
-Live: [sv-efferd.pages.dev](https://sv-efferd.pages.dev)
+Live Preview: [sv-efferd.pages.dev](https://sv-efferd.pages.dev)
 
-## Credits
-
-- Original created by [Shaban](https://x.com/shabanhr)
-- Ported to Svelte by [Bhide Svelte](https://x.com/Sikandar_Bhide)
 
 ## Categories :
 
@@ -55,12 +51,20 @@ pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/hero-one.json
 <HeroOne />
 ```
 
+
+## Credits
+
+- Original created by [Shaban](https://x.com/shabanhr)
+- Ported to Svelte by [Bhide Svelte](https://x.com/Sikandar_Bhide)
+
 ## Support
 
 If you find Svelte Efferd Blocks useful:
 
 - Star the repo
 - Share your work on social media and tag [@Sikandar_Bhide](https://x.com/Sikandar_Bhide)
-- Sponsor the project: [github.com/sponsors/SikandarJODD](https://github.com/sponsors/SikandarJODD)
+- Sponsor the project usng GitHub Sponsors
+
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Support-pink?logo=githubsponsors)](https://github.com/sponsors/SikandarJODD)
 
 Made with love for the Svelte community by [Bhide Svelte](https://x.com/Sikandar_Bhide).
