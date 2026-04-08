@@ -1,15 +1,11 @@
 <script lang="ts">
 	import BlocksLandingPage from "$lib/components/blocks/landing/blocks-landing-page.svelte";
+	import Seo from "$lib/components/base/Seo.svelte";
 
 	const description =
 		"Browse compact, production-ready Svelte Efferd marketing blocks for auth, headers, footers, CTAs, galleries, integrations, and more.";
 </script>
 
-<svelte:head>
-	<title>Blocks | Svelte Efferd Blocks</title>
-	<meta name="description" content={description} />
-	<meta property="og:title" content="Blocks | Svelte Efferd Blocks" />
-	<meta property="og:description" content={description} />
-</svelte:head>
+<Seo title="Blocks" desc={description} link="/blocks" />
 
 <BlocksLandingPage />

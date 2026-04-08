@@ -2,11 +2,9 @@
 	import DocsPage from "$lib/components/docs/docs-page.svelte";
 	import H2 from "$lib/components/markdown/H2.svelte";
 	import Link from "$lib/components/markdown/Link.svelte";
-	import ListItem from "$lib/components/markdown/ListItem.svelte";
 	import Paragraph from "$lib/components/markdown/Paragraph.svelte";
 	import Step from "$lib/components/markdown/Step.svelte";
 	import Steps from "$lib/components/markdown/Steps.svelte";
-	import UnorderedList from "$lib/components/markdown/UnorderedList.svelte";
 	import { Button } from "$lib/components/ui/button";
 	import * as Code from "$lib/components/ui/code";
 
@@ -49,34 +47,19 @@
 		</Step>
 
 		<Step>
-			<H2 class="mt-0 text-xl">Choose a block</H2>
+			<H2 class="mt-0 text-xl">Add from a block page</H2>
 			<Paragraph>
-				Browse <Link href="/blocks">the blocks directory</Link>, open the block preview you
-				want, and use the install action from that page.
+				Once the registry is ready, browse <Link href="/blocks">the blocks directory</Link>,
+				open the block you want, and use the install action from that page.
 			</Paragraph>
 			<Code.Root class="mt-4" code={addCommand} lang="bash" variant="secondary" />
 		</Step>
-
-		<Step>
-			<H2 class="mt-0 text-xl">Adjust after add</H2>
-			<Paragraph>
-				Treat the generated code as a strong starting point. Review styles, replace sample
-				content, and tailor the block to match your product.
-			</Paragraph>
-		</Step>
 	</Steps>
 
-	<H2>Usage notes</H2>
-	<UnorderedList>
-		<ListItem>Use the block pages to compare variants before installing one.</ListItem>
-		<ListItem>
-			The install control on each block is more accurate than a generic docs button because it
-			carries the correct block-specific registry URL.
-		</ListItem>
-		<ListItem>
-			If you prefer to read product updates first, the <Link href="/changelog">changelog</Link
-			>
-			shows what has landed recently.
-		</ListItem>
-	</UnorderedList>
+	<H2>After setup</H2>
+	<Paragraph>
+		After the registry is initialized, the main workflow moves to the block pages: compare
+		variants, use the exact install control for the block you want, and customize the generated
+		code locally. The <Link href="/docs/usage">Usage</Link> page covers that flow in more detail.
+	</Paragraph>
 </DocsPage>

@@ -39,12 +39,36 @@ function formatBlockLabel(count: number) {
 
 export const marketingCards: MarketingCardConfig[] = [
 	{
+		slug: "header",
+		title: "Header",
+		href: "/blocks/header",
+		count: headerBlocks.length,
+		countLabel: formatBlockLabel(headerBlocks.length),
+		previewComponent: HeaderPreview
+	},
+	{
+		slug: "hero",
+		title: "Hero Sections",
+		href: "/blocks/hero",
+		count: heroBlocks.length,
+		countLabel: formatBlockLabel(heroBlocks.length),
+		previewComponent: HeroPreview
+	},
+	{
 		slug: "auth",
 		title: "Auth",
 		href: "/blocks/auth",
 		count: authBlocks.length,
 		countLabel: formatBlockLabel(authBlocks.length),
 		previewComponent: AuthPreview
+	},
+	{
+		slug: "features",
+		title: "Features",
+		href: "/blocks/features",
+		count: featureBlocks.length,
+		countLabel: formatBlockLabel(featureBlocks.length),
+		previewComponent: FeaturesPreview
 	},
 	{
 		slug: "blog",
@@ -79,12 +103,12 @@ export const marketingCards: MarketingCardConfig[] = [
 		previewComponent: FaqsPreview
 	},
 	{
-		slug: "features",
-		title: "Features",
-		href: "/blocks/features",
-		count: featureBlocks.length,
-		countLabel: formatBlockLabel(featureBlocks.length),
-		previewComponent: FeaturesPreview
+		slug: "logo-cloud",
+		title: "Logo Cloud",
+		href: "/blocks/logo-cloud",
+		count: logoCloudBlocks.length,
+		countLabel: formatBlockLabel(logoCloudBlocks.length),
+		previewComponent: LogoCloudPreview
 	},
 	{
 		slug: "footer",
@@ -93,22 +117,6 @@ export const marketingCards: MarketingCardConfig[] = [
 		count: footerBlocks.length,
 		countLabel: formatBlockLabel(footerBlocks.length),
 		previewComponent: FooterPreview
-	},
-	{
-		slug: "header",
-		title: "Header",
-		href: "/blocks/header",
-		count: headerBlocks.length,
-		countLabel: formatBlockLabel(headerBlocks.length),
-		previewComponent: HeaderPreview
-	},
-	{
-		slug: "hero",
-		title: "Hero Sections",
-		href: "/blocks/hero",
-		count: heroBlocks.length,
-		countLabel: formatBlockLabel(heroBlocks.length),
-		previewComponent: HeroPreview
 	},
 	{
 		slug: "image-gallery",
@@ -126,12 +134,4 @@ export const marketingCards: MarketingCardConfig[] = [
 		countLabel: formatBlockLabel(integrationBlocks.length),
 		previewComponent: IntegrationsPreview
 	},
-	{
-		slug: "logo-cloud",
-		title: "Logo Cloud",
-		href: "/blocks/logo-cloud",
-		count: logoCloudBlocks.length,
-		countLabel: formatBlockLabel(logoCloudBlocks.length),
-		previewComponent: LogoCloudPreview
-	}
 ];

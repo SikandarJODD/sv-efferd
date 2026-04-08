@@ -2,7 +2,7 @@ export type DocsPage = {
 	title: string;
 	description: string;
 	href: string;
-	group: "Getting Started" | "Resources";
+	section: "primary" | "secondary";
 };
 
 const docsPages = [
@@ -10,49 +10,43 @@ const docsPages = [
 		title: "Introduction",
 		description: "What Efferd is, what is included, and where to start exploring.",
 		href: "/docs",
-		group: "Getting Started"
+		section: "primary"
 	},
 	{
 		title: "Installation",
 		description: "Set up the registry flow and start adding blocks to your project.",
 		href: "/docs/installation",
-		group: "Getting Started"
+		section: "primary"
+	},
+	{
+		title: "Usage",
+		description: "Browse blocks, choose a variant, install it, and customize it locally.",
+		href: "/docs/usage",
+		section: "primary"
 	},
 	{
 		title: "Templates",
 		description: "A placeholder for the template system that is planned next.",
 		href: "/docs/templates",
-		group: "Resources"
+		section: "secondary"
 	},
 	{
 		title: "Sponsors & Support",
 		description: "Support the project, share it, or reach out to the owner.",
 		href: "/docs/sponsors-support",
-		group: "Resources"
+		section: "secondary"
 	},
 	{
 		title: "Roadmap & Feedback",
 		description: "See what is planned next and where to send feedback.",
 		href: "/docs/roadmap-feedback",
-		group: "Resources"
+		section: "secondary"
 	}
 ] as const satisfies readonly DocsPage[];
 
-export type DocsNavGroup = {
-	title: DocsPage["group"];
-	items: readonly DocsPage[];
-};
+export const docsPrimaryPages = docsPages.filter((page) => page.section === "primary");
 
-export const docsNavGroups: readonly DocsNavGroup[] = [
-	{
-		title: "Getting Started",
-		items: docsPages.filter((page) => page.group === "Getting Started")
-	},
-	{
-		title: "Resources",
-		items: docsPages.filter((page) => page.group === "Resources")
-	}
-] as const;
+export const docsSecondaryPages = docsPages.filter((page) => page.section === "secondary");
 
 export const docsPagesByHref = new Map<string, DocsPage>(
 	docsPages.map((page) => [page.href, page] satisfies [string, DocsPage])

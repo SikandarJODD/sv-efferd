@@ -3,19 +3,25 @@
 	import favicon from "$lib/assets/favicon.svg";
 	import "./layout.css";
 	import SiteFooter from "$lib/components/landing/site-footer.svelte";
-	import { ModeWatcher } from "mode-watcher";
+	import { ModeWatcher, toggleMode } from "mode-watcher";
 	import { cn } from "$lib/utils";
 	import SiteHeader from "$lib/components/landing/site-header.svelte";
+	import { PressedKeys } from "runed";
 
 	let { children } = $props();
 	let isPreviewRoute = $derived(page.url.pathname.startsWith("/preview/"));
+
+	const keys = new PressedKeys();
+	keys.onKeys(["d"], () => {
+		console.log("open command palette");
+		toggleMode()
+	});
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
 	<title>Svelte Efferd Blocks</title>
 </svelte:head>
-
 
 <ModeWatcher defaultMode="dark" />
 
@@ -24,9 +30,7 @@
 		{@render children()}
 	</div>
 {:else}
-	<div
-		class="relative supports-[overflow:clip]:overflow-clip dark:bg-background"
-	>
+	<div class="relative supports-[overflow:clip]:overflow-clip dark:bg-background">
 		<div>
 			<SiteHeader />
 		</div>

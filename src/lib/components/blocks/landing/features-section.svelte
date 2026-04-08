@@ -66,7 +66,7 @@
 </script>
 
 <section
-	class="relative border-t border-dashed border-muted-foreground/40 px-4 pt-10 sm:px-6 sm:pt-16 pb-0! lg:px-8"
+	class="relative border-t border-dashed border-muted-foreground/40 px-4 pt-10 sm:px-6 sm:pt-16 lg:px-8"
 	aria-labelledby="features-title"
 >
 	<DecorIcon class="z-40 size-3.5 bg-background stroke-muted-foreground/80" position="top-left" />
