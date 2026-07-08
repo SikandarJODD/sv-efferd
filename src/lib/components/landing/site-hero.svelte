@@ -4,8 +4,6 @@
 	import { Github } from "$lib/svgs";
 	import { ArrowRight, Rocket } from "@lucide/svelte";
 	import { landingHero } from "./config";
-	import { DashedLine } from "../ui/dashed-line";
-	import { BorderSeparator } from "../ui/border-seperator";
 	import { DashedLines } from "../ui/dashed-lines";
 </script>
 
