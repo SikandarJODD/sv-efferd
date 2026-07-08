@@ -2,7 +2,7 @@
 	import { asset } from "$app/paths";
 	import { MetaTags, JsonLd } from "svelte-meta-tags";
 	import BlocksLandingPage from "$lib/components/blocks/landing/blocks-landing-page.svelte";
-	import favicon from "$lib/assets/favicon.svg";
+	import logo from "$lib/assets/logo.svg";
 
 	const siteName = "Svelte Efferd Blocks";
 	const siteUrl = "https://sv-efferd.pages.dev";
@@ -39,7 +39,7 @@
 		"Feature sections"
 	] as const;
 	const ogImageUrl = new URL(asset("/og.png"), siteUrl).toString();
-	const logoUrl = new URL(favicon, siteUrl).toString();
+	const logoUrl = new URL(logo, siteUrl).toString();
 	const jsonLdSchema = {
 		"@graph": [
 			{
@@ -113,7 +113,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href={logo} />
 </svelte:head>
 
 <MetaTags

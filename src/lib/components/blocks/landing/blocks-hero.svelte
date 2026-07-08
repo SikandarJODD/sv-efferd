@@ -34,9 +34,9 @@
 	<div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="max-w-2xl text-left lg:max-w-3xl">
 			<h1
-				class="max-w-2xl text-xl font-semibold tracking-tight text-foreground sm:text-[2.55rem] sm:leading-[1.08] lg:text-3xl lg:leading-[1.04]"
+				class="max-w-2xl text-xl font-semibold tracking-tight text-foreground sm:text-3xl sm:leading-[1.08] lg:text-4xl lg:leading-[1.04]"
 			>
-				Explore beautiful shadcn blocks
+				Explore beautiful Shadcn Svelte Blocks
 			</h1>
 
 			<p class="mt-3 max-w-xl text-sm leading-6 text-muted-foreground sm:text-base">
@@ -45,11 +45,10 @@
 			</p>
 
 			<div class="mt-5 flex flex-wrap items-center gap-2">
-				<Button class="rounded-none" href="/blocks/hero" size="sm">Explore</Button>
+				<Button class="rounded-none" href="/blocks/hero">Explore</Button>
 				<Button
 					class="rounded-none"
 					href="https://github.com/SikandarJODD/sv-efferd"
-					size="sm"
 					target="_blank"
 					variant="outline"
 				>
