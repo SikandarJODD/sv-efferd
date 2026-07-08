@@ -5,7 +5,6 @@
 	import { Github, X as XLogo } from "$lib/svgs";
 	import { MoonIcon, SunIcon } from "@lucide/svelte";
 	import { mode, toggleMode } from "mode-watcher";
-	import { StripedPattern } from "../magic/striped-pattern";
 
 	type FooterLink = {
 		label: string;
@@ -17,12 +16,6 @@
 		{ label: "Home", href: "/" },
 		{ label: "Blocks", href: "/blocks" },
 		{ label: "Changelog", href: "/changelog" }
-	];
-
-	const resourceLinks: FooterLink[] = [
-		{ label: "Docs", href: "/docs" },
-		{ label: "GitHub", href: "https://github.com/SikandarJODD/sv-efferd", external: true },
-		{ label: "X / Twitter", href: "https://x.com/Sikandar_Bhide", external: true }
 	];
 
 	const socialLinks = [
@@ -42,12 +35,6 @@
 </script>
 
 <div class="pt-18">
-	<!-- <div class="relative h-18 bg-neutral-50">
-		<StripedPattern
-			class="mask-[radial-gradient(circle_at_center,black,transparent_55%)] max-w-7xl mx-auto text-muted-foreground/30"
-			direction="right"
-		/>
-	</div> -->
 	<footer class="relative">
 		<FullWidthDivider position="top" class="bg-border/80" />
 		<div class="container">
@@ -108,9 +95,9 @@
 
 					<div class="space-y-4">
 						<h2
-							class="text-[11px] font-semibold tracking-[0.18em] text-muted-foreground uppercase"
+							class="text-xs font-semibold text-muted-foreground uppercase"
 						>
-							Product
+							Project
 						</h2>
 
 						<nav class="flex flex-col gap-3">
@@ -124,42 +111,19 @@
 							{/each}
 						</nav>
 					</div>
-
-					<!-- <div class="space-y-4">
-					<h2
-					class="text-[11px] font-semibold tracking-[0.18em] text-muted-foreground uppercase"
-					>
-					Resources
-					</h2>
-
-					<nav class="flex flex-col gap-3">
-						{#each resourceLinks as link (link.label)}
-						<a
-						class="w-fit text-sm text-muted-foreground transition-colors hover:text-foreground"
-						href={link.href}
-						rel={link.external ? "noreferrer" : undefined}
-						target={link.external ? "_blank" : undefined}
-						>
-						{link.label}
-						</a>
-						{/each}
-						</nav>
-						</div> -->
 				</div>
 			</div>
 		</div>
 		<div class="relative container">
 			<FullWidthDivider position="top" class="bg-border/80" />
 			<div class="relative border-x">
-				<!-- <FullWidthDivider position="top" class="bg-border/80" /> -->
-
 				<p
 					class="flex items-center justify-center py-3 text-center text-xs text-muted-foreground sm:text-xs"
 				>
 					&copy; {currentYear} Svelte Efferd. Built by
 					<a
 						class="ml-2 inline-flex items-center gap-1.5 font-medium text-foreground transition-colors hover:text-muted-foreground"
-						href="https://x.com/Sikandar_Bhide"
+						href="https://bhide.dev?utm_source=svelte-efferd"
 						rel="noreferrer"
 						target="_blank"
 					>

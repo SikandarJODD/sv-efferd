@@ -40,6 +40,14 @@
 	] as const;
 	const ogImageUrl = new URL(asset("/og.png"), siteUrl).toString();
 	const logoUrl = new URL(logo, siteUrl).toString();
+	const additionalLinkTags = [
+		{
+			rel: "icon",
+			href: logo,
+			type: "image/svg+xml",
+			sizes: "any"
+		}
+	] as const;
 	const jsonLdSchema = {
 		"@graph": [
 			{
@@ -112,14 +120,11 @@
 	};
 </script>
 
-<svelte:head>
-	<link rel="icon" href={logo} />
-</svelte:head>
-
 <MetaTags
 	{title}
 	{description}
 	{keywords}
+	{additionalLinkTags}
 	openGraph={{
 		type: "website",
 		title,

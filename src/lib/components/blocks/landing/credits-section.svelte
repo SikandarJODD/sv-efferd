@@ -18,7 +18,7 @@
 		{
 			role: "Svelte port by",
 			name: "Bhide Svelte",
-			description: "Ported the idea and experience into Svelte for this project.",
+			description: "Ported all components to Svelte 😁.",
 			href: "https://x.com/Sikandar_Bhide",
 			handle: "@Sikandar_Bhide",
 			avatar: "https://avatars.githubusercontent.com/u/93428946?v=4",
@@ -43,7 +43,7 @@
 		>
 			<div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
 				<StripedPattern
-					class="[mask-image:radial-gradient(circle_at_center,black,transparent_78%)] text-muted-foreground/[0.12]"
+					class="mask-[radial-gradient(circle_at_center,black,transparent_78%)] text-muted-foreground/12"
 					direction="right"
 				/>
 				<div
@@ -70,7 +70,7 @@
 
 			<div class="relative border-b border-dashed border-border/80 px-4 py-4 sm:px-5">
 				<p
-					class="text-[10px] font-medium tracking-[0.24em] text-muted-foreground uppercase"
+					class="text-sm font-medium text-muted-foreground"
 				>
 					Credits
 				</p>
@@ -78,11 +78,8 @@
 					id="credits-title"
 					class="mt-1 text-lg font-semibold tracking-tight text-foreground"
 				>
-					Built on great original work
+					Built on original work
 				</h2>
-				<p class="mt-1 max-w-2xl text-[11px] leading-5 text-muted-foreground">
-					Original concept by Shaban, carefully ported to Svelte by Bhide Svelte.
-				</p>
 			</div>
 
 			<div class="relative grid gap-3 p-4 sm:p-5 lg:grid-cols-2">
@@ -108,7 +105,7 @@
 
 							<div class="min-w-0">
 								<p
-									class="text-[10px] tracking-[0.2em] text-muted-foreground uppercase"
+									class="text-xs text-muted-foreground uppercase"
 								>
 									{person.role}
 								</p>

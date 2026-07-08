@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "@fontsource-variable/geist-mono";
+@import "@fontsource-variable/geist";
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -110,8 +113,8 @@
 	--color-sidebar-ring: var(--sidebar-ring);
 
 	/* Font */
-	--font-sans: "Geist", sans-serif;
-	--font-mono: "Geist Mono", monospace;
+	--font-sans: "Geist Variable", sans-serif;
+	--font-mono: 'Geist Mono Variable', monospace;
 
 	--animate-marquee: marquee var(--duration) linear infinite;
 	--animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;

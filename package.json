@@ -37,6 +37,8 @@
 		"vite": "^7.3.1"
 	},
 	"dependencies": {
+		"@fontsource-variable/geist": "^5.2.9",
+		"@fontsource-variable/geist-mono": "^5.2.8",
 		"@number-flow/svelte": "^0.4.0",
 		"@shikijs/langs": "^4.0.2",
 		"@shikijs/themes": "^4.0.2",
