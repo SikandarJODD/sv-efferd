@@ -1,4 +1,5 @@
 <script lang="ts">
+	import logo from "$lib/assets/logo.svg";
 	import { page } from "$app/state";
 	import "./layout.css";
 	import SiteFooter from "$lib/components/landing/site-footer.svelte";
@@ -18,6 +19,7 @@
 </script>
 
 <svelte:head>
+	<link rel="icon" href={logo} />
 	<title>Svelte Efferd Blocks</title>
 </svelte:head>
 
