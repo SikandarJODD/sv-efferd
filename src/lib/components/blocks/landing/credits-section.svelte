@@ -18,7 +18,7 @@
 		{
 			role: "Svelte port by",
 			name: "Bhide Svelte",
-			description: "Ported all components to Svelte 😁.",
+			description: "Ported all components to Svelte 😁",
 			href: "https://x.com/Sikandar_Bhide",
 			handle: "@Sikandar_Bhide",
 			avatar: "https://avatars.githubusercontent.com/u/93428946?v=4",

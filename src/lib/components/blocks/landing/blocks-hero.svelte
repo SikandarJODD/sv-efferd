@@ -5,17 +5,15 @@
 	import { Github } from "$lib/svgs";
 	import { draggable, bounds, BoundsFrom } from "@neodrag/svelte";
 	import { connectLine } from "$lib/utils/connect-line";
+	import { mode } from "mode-watcher";
 </script>
 
 <section class="relative py-10 sm:py-12 lg:py-12">
 	<div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
 		<StripedPattern
-			class="[mask-image:radial-gradient(circle_at_right,black,transparent_55%)] text-muted-foreground/30"
+			class="mask-[radial-gradient(circle_at_right,black,transparent_55%)] dark:text-amber-500/30 text-amber-200"
 			direction="right"
 		/>
-		<div
-			class="absolute inset-x-[12%] top-0 h-28 bg-[radial-gradient(circle_at_top,color-mix(in_oklab,var(--foreground)_8%,transparent)_0%,transparent_72%)] opacity-80 blur-2xl"
-		></div>
 	</div>
 
 	<DecorIcon class="z-40 size-3.5 bg-background stroke-muted-foreground/80" position="top-left" />
@@ -48,7 +46,7 @@
 			</p>
 
 			<div class="mt-5 flex flex-wrap items-center gap-2">
-				<Button class="right-0 rounded-full border-none! outline-none" href="/blocks/hero">
+				<Button class="right-0 rounded-full border-none! outline-none" href="/blocks/integrations">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="20"
@@ -102,19 +100,19 @@
 		<div id="wrap" class="wrap relative hidden md:block md:col-span-2">
 			<div
 				id="product-pages"
-				class="absolute -top-5 -left-16 w-fit translate-z-10 rounded-full border-2 px-4 py-2 font-mono dark:border-emerald-400 dark:bg-emerald-900/10 dark:text-emerald-400"
+				class="absolute -top-5 -left-16 w-fit translate-z-10 rounded-full border px-4 py-2 font-mono dark:border-emerald-400 dark:bg-emerald-900/10 dark:text-emerald-400 bg-emerald-50 z-50 text-emerald-500 border-emerald-500"
 			>
 				Product Pages
 			</div>
 			<div
 				id="landing-pages"
-				class="absolute top-14 left-1/2 w-fit rounded-full border-2 px-4 py-2 font-mono dark:border-amber-400 dark:bg-amber-900/10 dark:text-amber-400"
+				class="absolute top-14 left-1/2 w-fit rounded-full border px-4 py-2 font-mono dark:border-amber-400 dark:bg-amber-900/10 dark:text-amber-400 bg-amber-50 z-50 text-amber-500 border-amber-500"
 			>
 				Landing Pages
 			</div>
 			<div
 				id="open-source"
-				class="absolute top-28 left-4 w-fit rounded-full border-2 px-4 py-2 font-mono dark:border-blue-400 dark:bg-blue-900/10 dark:text-blue-400"
+				class="absolute top-28 left-4 w-fit rounded-full border px-4 py-2 font-mono dark:border-blue-400 dark:bg-blue-900/10 dark:text-blue-400 bg-blue-50 z-50 text-blue-500 border-blue-500"
 			>
 				Open Source
 			</div>
@@ -137,7 +135,7 @@
 						},
 						container: "wrap",
 						radius: 50,
-						stroke: "white",
+						stroke: mode.current === "dark" ? "#facc15" : "#f59e0b",
 						strokeWidth: 1.4
 					}}
 				/>
@@ -157,9 +155,10 @@
 						},
 						container: "wrap",
 						radius: 50,
-						stroke: "white",
+						stroke: mode.current === "dark" ? "#3b82f6" : "#60a5fa",
 						strokeWidth: 1.4
 					}}
+					stroke-dasharray="4 4"
 				/>
 				<path
 					use:connectLine={{
@@ -177,9 +176,10 @@
 						},
 						container: "wrap",
 						radius: 50,
-						stroke: "white",
+						stroke: mode.current === "dark" ? "#10b981" : "#34d399",
 						strokeWidth: 1.4
 					}}
+					stroke-dasharray="4 4"
 				/>
 			</svg>
 		</div>
