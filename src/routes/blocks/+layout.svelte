@@ -31,7 +31,7 @@
 		<Button
 			size="icon"
 			variant="secondary"
-			class="rounded-full"
+			class="rounded-full cursor-pointer"
 			onclick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 		>
 			<svg

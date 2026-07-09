@@ -1,6 +1,6 @@
 <script lang="ts">
+	import logo from "$lib/assets/logo.svg";
 	import { page } from "$app/state";
-	import favicon from "$lib/assets/favicon.svg";
 	import "./layout.css";
 	import SiteFooter from "$lib/components/landing/site-footer.svelte";
 	import { ModeWatcher, toggleMode } from "mode-watcher";
@@ -14,12 +14,12 @@
 	const keys = new PressedKeys();
 	keys.onKeys(["d"], () => {
 		console.log("open command palette");
-		toggleMode()
+		toggleMode();
 	});
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href={logo} />
 	<title>Svelte Efferd Blocks</title>
 </svelte:head>
 

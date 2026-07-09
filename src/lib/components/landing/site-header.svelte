@@ -1,14 +1,17 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/button";
-	import { Github, Logo, X as XLogo } from "$lib/svgs";
-	import { MoonIcon, SunIcon } from "@lucide/svelte";
-	import { mode, toggleMode } from "mode-watcher";
+	import { Github, X as XLogo } from "$lib/svgs";
 	import { landingNavLinks, landingSocialLinks } from "./config";
 	import MobileNav from "./mobile-nav.svelte";
+	import { ModeSwitch } from "../ui/mode-switch";
+	import { getStars, GitHubButton } from "../ui/github-button";
+	import { onMount } from "svelte";
 
-	function themeLabel() {
-		return mode.current === "dark" ? "Switch to light mode" : "Switch to dark mode";
-	}
+	let stars = $state(30);
+	const repo = { owner: "SikandarJODD", repo: "sv-efferd" };
+	onMount(async () => {
+		stars = await getStars({ ...repo, fallback: 60 });
+	});
 </script>
 
 <header class="relative z-20 mx-auto max-w-7xl border-b border-border/80">
@@ -44,41 +47,16 @@
 				>
 					{#if link.id === "x"}
 						<XLogo class="size-4" />
-					{:else}
-						<Github class="size-4" />
 					{/if}
 				</Button>
 			{/each}
+			<GitHubButton variant='ghost' class='dark:bg-muted/50' repo={repo} stars={stars} />
 
-			<Button
-				aria-label={themeLabel()}
-				size="icon-sm"
-				title={themeLabel()}
-				variant="secondary"
-				onclick={toggleMode}
-			>
-				{#if mode.current === "dark"}
-					<SunIcon class="size-4" />
-				{:else}
-					<MoonIcon class="size-4" />
-				{/if}
-			</Button>
+			<ModeSwitch />
 		</div>
 
 		<div class="flex items-center gap-2 md:hidden">
-			<Button
-				aria-label={themeLabel()}
-				size="icon-sm"
-				title={themeLabel()}
-				variant="secondary"
-				onclick={toggleMode}
-			>
-				{#if mode.current === "dark"}
-					<SunIcon class="size-4" />
-				{:else}
-					<MoonIcon class="size-4" />
-				{/if}
-			</Button>
+			<ModeSwitch />
 			<MobileNav />
 		</div>
 	</nav>
