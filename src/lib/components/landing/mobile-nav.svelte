@@ -5,6 +5,8 @@
 	import { cn } from "$lib/utils";
 	import { MenuIcon, XIcon } from "@lucide/svelte";
 	import { landingNavLinks, landingSocialLinks } from "./config";
+	import { getStars, GitHubButton } from "../ui/github-button";
+	import { onMount } from "svelte";
 
 	let open = $state(false);
 	const blockLinks = [
@@ -25,6 +27,12 @@
 	function closeMenu() {
 		open = false;
 	}
+
+	let stars = $state(30);
+	const repo = { owner: "SikandarJODD", repo: "sv-efferd" };
+	onMount(async () => {
+		stars = await getStars({ ...repo, fallback: 60 });
+	});
 </script>
 
 <div class="md:hidden">
@@ -32,9 +40,9 @@
 		aria-controls="site-mobile-menu"
 		aria-expanded={open}
 		aria-label={open ? "Close menu" : "Open menu"}
-		class="border-border/80 bg-background/70 backdrop-blur-sm"
+		class="border-border/80 bg-muted/50 backdrop-blur-sm lg:bg-background/70"
 		size="icon-sm"
-		variant="outline"
+		variant="secondary"
 		onclick={() => (open = !open)}
 	>
 		{#if open}
@@ -51,7 +59,7 @@
 			<div
 				class={cn(
 					"data-[slot=open]:animate-in data-[slot=open]:fade-in-0 data-[slot=open]:slide-in-from-top-2",
-					"flex-1 overflow-y-auto p-4 z-100 duration-300 ease-out"
+					"z-100 flex-1 overflow-y-auto p-4 duration-300 ease-out"
 				)}
 				data-slot="open"
 				id="site-mobile-menu"
@@ -60,7 +68,7 @@
 					<div
 						class="rounded-2xl border border-border/80 bg-background/95 p-4 shadow-lg backdrop-blur-xl"
 					>
-						<div class="flex items-center pl-4 justify-end gap-3">
+						<div class="flex items-center justify-end gap-3 pl-4">
 							<Button
 								aria-label="Close menu"
 								size="icon-sm"
@@ -107,17 +115,15 @@
 										href={link.href}
 										size="icon-sm"
 										target="_blank"
-										variant="outline"
+										variant="ghost"
 										onclick={closeMenu}
 									>
 										{#if link.id === "x"}
 											<XLogo class="size-4" />
-										{:else}
-											<Github class="size-4" />
 										{/if}
-										<!-- <span>{link.label}</span> -->
 									</Button>
 								{/each}
+								<GitHubButton variant="ghost" class="dark:bg-muted/50" repo={repo} stars={stars} />
 							</div>
 						</div>
 					</div>

@@ -169,13 +169,13 @@
 				<div class="relative max-w-2xl">
 					<div class="flex flex-wrap items-end gap-x-2 gap-y-1">
 						<h2
-							class="text-xl font-medium tracking-tight text-foreground sm:text-[1.4rem]"
+							class="text-xl font-medium tracking-tight text-foreground sm:text-xl"
 						>
 							{title}
 						</h2>
 					</div>
 					{#if description}
-						<p class="mt-1.5 text-[13px] leading-5 text-muted-foreground">
+						<p class="mt-1.5 text-sm text-muted-foreground">
 							{description}
 						</p>
 					{/if}

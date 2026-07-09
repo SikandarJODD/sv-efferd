@@ -23,11 +23,6 @@ export const landingSocialLinks = [
 		label: "X",
 		href: "https://x.com/Sikandar_Bhide"
 	},
-	{
-		id: "github",
-		label: "GitHub",
-		href: "https://github.com/SikandarJODD/sv-efferd"
-	}
 ] as const;
 
 export const landingHero = {
