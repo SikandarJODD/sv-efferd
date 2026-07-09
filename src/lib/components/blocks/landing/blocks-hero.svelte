@@ -106,7 +106,7 @@
 			</div>
 			<div
 				id="landing-pages"
-				class="absolute top-14 left-1/2 w-fit rounded-full border px-4 py-2 font-mono dark:border-amber-400 dark:bg-amber-900/10 dark:text-amber-400 bg-amber-50 z-50 text-amber-500 border-amber-500"
+				class="absolute top-14 left-1/2 w-fit rounded-full border px-4 py-2 font-mono dark:border-amber-400 dark:bg-amber-950/30 dark:text-amber-400 bg-amber-50 z-50 text-amber-500 border-amber-500"
 			>
 				Landing Pages
 			</div>
