@@ -22,7 +22,7 @@
 		[
 			{
 				eyebrow: "Premium blocks",
-				title: "54 ready-to-use marketing blocks",
+				title: "60 ready-to-use marketing blocks",
 				description:
 					"Includes hero, footer, CTA, blog, FAQ, contact, pricing, and more.",
 				icon: BlocksIcon,

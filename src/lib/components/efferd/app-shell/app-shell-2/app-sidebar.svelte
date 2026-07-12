@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
-	import { Logo } from "$lib/svgs";
+	import Logo from "$lib/svgs/logo.svelte";
 	import { cn } from "$lib/utils";
 	import { navGroups, footerNavLinks } from "./app-shared";
 	import LatestChange from "./latest-change.svelte";
@@ -34,14 +34,14 @@
 		</Sidebar.Menu>
 	</Sidebar.Header>
 	<Sidebar.Content>
-		{#each navGroups as group}
+		{#each navGroups as group (group.label ?? group.items[0]?.title)}
 			<NavGroup {...group} />
 		{/each}
 	</Sidebar.Content>
 	<Sidebar.Footer class="gap-0 p-0">
 		<LatestChange />
 		<Sidebar.Menu class="border-t p-2">
-			{#each footerNavLinks as item}
+			{#each footerNavLinks as item (item.title)}
 				{@const Icon = item.icon}
 				<Sidebar.MenuItem>
 					<Sidebar.MenuButton class="text-muted-foreground" isActive={false} size="sm">
