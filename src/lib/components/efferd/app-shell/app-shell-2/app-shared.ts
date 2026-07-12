@@ -31,18 +31,18 @@ export const navGroups: SidebarNavGroup[] = [
         items: [
             {
                 title: "Dashboard",
-                path: "#/dashboard",
+                path: "#",
                 icon: LayoutGridIcon,
                 isActive: true
             },
             {
                 title: "Analytics",
-                path: "#/analytics",
+                path: "#",
                 icon: BarChart3Icon
             },
             {
                 title: "Projects",
-                path: "#/projects",
+                path: "#",
                 icon: BriefcaseIcon
             }
         ]
@@ -52,17 +52,17 @@ export const navGroups: SidebarNavGroup[] = [
         items: [
             {
                 title: "Team",
-                path: "#/team",
+                path: "#",
                 icon: UsersIcon
             },
             {
                 title: "Integrations",
-                path: "#/integrations",
+                path: "#",
                 icon: PlugIcon
             },
             {
                 title: "API Keys",
-                path: "#/api-keys",
+                path: "#",
                 icon: KeyRoundIcon
             }
         ]
@@ -72,12 +72,12 @@ export const navGroups: SidebarNavGroup[] = [
         items: [
             {
                 title: "Settings",
-                path: "#/settings",
+                path: "#",
                 icon: SettingsIcon
             },
             {
                 title: "Billing",
-                path: "#/billing",
+                path: "#",
                 icon: CreditCardIcon
             }
         ]
@@ -87,12 +87,12 @@ export const navGroups: SidebarNavGroup[] = [
 export const footerNavLinks: SidebarNavItem[] = [
     {
         title: "Help Center",
-        path: "#/help",
+        path: "#",
         icon: HelpCircleIcon
     },
     {
         title: "Documentation",
-        path: "#/documentation",
+        path: "#",
         icon: BookOpenIcon
     }
 ];

@@ -23,7 +23,7 @@
 		<Sidebar.Menu>
 			<Sidebar.MenuButton>
 				{#snippet child({ props })}
-					<a {...props} href="#link">
+					<a {...props} href="#">
 						<Logo class="size-6" />
 						<span class="font-mono font-medium tracking-tighter text-foreground!"
 							>Svelte Efferd</span
