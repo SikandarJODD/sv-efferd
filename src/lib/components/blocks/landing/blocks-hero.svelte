@@ -3,7 +3,6 @@
 	import { Button } from "$lib/components/ui/button";
 	import { DecorIcon } from "$lib/components/ui/decor-icon";
 	import { Github } from "$lib/svgs";
-	import { draggable, bounds, BoundsFrom } from "@neodrag/svelte";
 	import { connectLine } from "$lib/utils/connect-line";
 	import { mode } from "mode-watcher";
 </script>
@@ -46,7 +45,7 @@
 			</p>
 
 			<div class="mt-5 flex flex-wrap items-center gap-2">
-				<Button class="right-0 rounded-full border-none! outline-none" href="/blocks/integrations">
+				<Button class="right-0 rounded-full border-none! outline-none" href="/blocks/app-shell">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="20"

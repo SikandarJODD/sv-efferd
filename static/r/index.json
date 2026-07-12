@@ -789,6 +789,28 @@
 		"relativeUrl": "header-five.json"
 	},
 	{
+		"name": "app-shell-2",
+		"title": "App Shell 2",
+		"type": "registry:block",
+		"description": "A compact dashboard shell with a collapsible sidebar, sticky header, and structured content skeleton.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar",
+			"breadcrumb",
+			"button",
+			"collapsible",
+			"dropdown-menu",
+			"kbd",
+			"local:decor-icon",
+			"separator",
+			"sidebar",
+			"tooltip"
+		],
+		"relativeUrl": "app-shell-2.json"
+	},
+	{
 		"name": "pricing-one",
 		"title": "Pricing One",
 		"type": "registry:block",

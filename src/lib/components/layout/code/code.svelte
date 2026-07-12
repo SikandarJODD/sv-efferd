@@ -13,7 +13,7 @@
 		base: "not-prose relative h-full max-h-[650px] overflow-auto rounded-none",
 		variants: {
 			variant: {
-				default: "border-border bg-secondary/10",
+				default: "",
 				secondary: "border-transparent bg-secondary/50"
 			}
 		}
@@ -157,7 +157,7 @@
 	}
 
 	:global(pre.shiki) {
-		@apply overflow-auto rounded-none bg-inherit py-4 text-xs;
+		@apply overflow-auto rounded-none py-4 text-xs;
 		max-height: min(100%, 650px);
 		-ms-overflow-style: none; /* IE and Edge */
 		scrollbar-width: none; /* Firefox */

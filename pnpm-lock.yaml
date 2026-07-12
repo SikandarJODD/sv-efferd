@@ -14,9 +14,6 @@ importers:
       '@fontsource-variable/geist-mono':
         specifier: ^5.2.8
         version: 5.2.8
-      '@neodrag/svelte':
-        specifier: 3.0.0-next.8
-        version: 3.0.0-next.8(@neodrag/core@3.0.0-next.8)(svelte@5.54.1)
       '@number-flow/svelte':
         specifier: ^0.4.0
         version: 0.4.0(svelte@5.54.1)
@@ -345,15 +342,6 @@ packages:
     resolution: {integrity: sha512-0P6mkySd2MapIEgq08tADPmcN4DHndC/02PWwaLkOerXlx5Sv9aT4BxyXLIY+eccr0g/nEyCYiJesqS61YdBZQ==}
     peerDependencies:
       svelte: ^5
-
-  '@neodrag/core@3.0.0-next.8':
-    resolution: {integrity: sha512-RNFwbo2w6M7BEzCh7pls68X2h3n+ofFDW1XnGyIzhtJ2bb8J/2VqixOpOlw9NfSJ61xgUC5ymGQbQFg5BKsWBA==}
-
-  '@neodrag/svelte@3.0.0-next.8':
-    resolution: {integrity: sha512-VkTnOqiHpAaEK5jp2PqQPEEx5AaNGVoKeoC2TuWd2xuteGOVq7NqQjNC4sxk0HAVysfYOC9YhYOsVyRiKo2LFw==}
-    peerDependencies:
-      '@neodrag/core': 3.0.0-next.8
-      svelte: ^3 || ^4 || ^5
 
   '@number-flow/svelte@0.4.0':
     resolution: {integrity: sha512-9tnowrlZlBV3IVe3Gm1V7yXSf4Ugag2k7iW45xqb04HXSa1ApEImopvGWAjJpHDvS849o+UCb0YH461Mtde9lA==}
@@ -1615,13 +1603,6 @@ snapshots:
 
   '@lucide/svelte@0.577.0(svelte@5.54.1)':
     dependencies:
-      svelte: 5.54.1
-
-  '@neodrag/core@3.0.0-next.8': {}
-
-  '@neodrag/svelte@3.0.0-next.8(@neodrag/core@3.0.0-next.8)(svelte@5.54.1)':
-    dependencies:
-      '@neodrag/core': 3.0.0-next.8
       svelte: 5.54.1
 
   '@number-flow/svelte@0.4.0(svelte@5.54.1)':

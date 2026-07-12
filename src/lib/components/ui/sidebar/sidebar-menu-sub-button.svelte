@@ -25,7 +25,7 @@
 		"data-slot": "sidebar-menu-sub-button",
 		"data-sidebar": "menu-sub-button",
 		"data-size": size,
-		"data-active": isActive,
+		"data-active": isActive ? "" : undefined,
 		...restProps
 	});
 </script>

@@ -3,7 +3,6 @@
 @import "@fontsource-variable/geist-mono";
 @import "@fontsource-variable/geist";
 
-
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -114,7 +113,7 @@
 
 	/* Font */
 	--font-sans: "Geist Variable", sans-serif;
-	--font-mono: 'Geist Mono Variable', monospace;
+	--font-mono: "Geist Mono Variable", monospace;
 
 	--animate-marquee: marquee var(--duration) linear infinite;
 	--animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
@@ -150,6 +149,7 @@
 		@apply bg-background text-foreground;
 	}
 	html {
+		scrollbar-gutter: stable;
 		@apply scroll-smooth;
 	}
 

@@ -1495,6 +1495,87 @@
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
+			"name": "app-shell-2",
+			"title": "App Shell 2",
+			"type": "registry:block",
+			"description": "A compact dashboard shell with a collapsible sidebar, sticky header, and structured content skeleton.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-2/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-2/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-shell.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-2/app-shell.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-breadcrumb.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-2/app-breadcrumb.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-2/app-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-sidebar.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-2/app-sidebar.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-2/custom-sidebar-trigger.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-2/custom-sidebar-trigger.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-2/dashboard-skeleton.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-2/dashboard-skeleton.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-2/latest-change.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-2/latest-change.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-2/nav-group.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-2/nav-group.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-2/nav-user.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-2/nav-user.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-shared.ts",
+					"type": "registry:file",
+					"target": "efferd/app-shell/app-shell-2/app-shared.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": [
+				"avatar",
+				"breadcrumb",
+				"button",
+				"collapsible",
+				"dropdown-menu",
+				"kbd",
+				"local:decor-icon",
+				"separator",
+				"sidebar",
+				"tooltip"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
 			"name": "pricing-one",
 			"title": "Pricing One",
 			"type": "registry:block",

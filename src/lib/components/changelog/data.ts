@@ -24,6 +24,21 @@ export const changelogPageData: ChangelogPageData = {
 	description: "Latest product updates and new blocks.",
 	entries: [
 		{
+			id: "2026-07-12",
+			date: "12 July 2026",
+			sortDate: "2026-07-12",
+			title: "App Shell 2",
+			description: "Added a new installable app shell block for dashboard-style layouts.",
+			bullets: [
+				"Registered app-shell-2 in the block registry with install metadata",
+				"Added the new dashboard shell to the changelog with preview and block links"
+			],
+			chips: [
+				{ label: "app-shell", href: "/blocks/app-shell" },
+				{ label: "app-shell-2", href: "/preview/app-shell/2" }
+			]
+		},
+		{
 			id: "2026-03-22",
 			date: "22 March 2026",
 			sortDate: "2026-03-22",
