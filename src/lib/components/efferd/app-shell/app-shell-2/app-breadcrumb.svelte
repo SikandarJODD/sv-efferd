@@ -15,8 +15,8 @@
 	<Breadcrumb.List>
 		<Breadcrumb.Item>
 			<Breadcrumb.Page class="flex items-center gap-2 [&>svg]:size-3.5">
-				{page.title}
 				<IconComponent />
+				{page.title}
 			</Breadcrumb.Page>
 		</Breadcrumb.Item>
 	</Breadcrumb.List>

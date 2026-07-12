@@ -4,11 +4,13 @@
 	import * as Kbd from "$lib/components/ui/kbd/index.js";
 </script>
 
-<Tooltip.Root>
+<Tooltip.Root delayDuration={800}>
 	<Tooltip.Trigger>
-		<Sidebar.Trigger />
+		{#snippet child({ props })}
+			<Sidebar.Trigger size='icon-sm' {...props} />
+		{/snippet}
 	</Tooltip.Trigger>
-	<Tooltip.Content>
+	<Tooltip.Content side="right">
 		Toggle Sidebar
 		<Kbd.Group>
 			<Kbd.Root>⌘</Kbd.Root>
