@@ -36,7 +36,7 @@
 		</div>
 		<main
 			class={cn(
-				"relative container grow",
+				"relative container grow mb-20",
 				"before:absolute before:-inset-y-20 before:-left-px before:z-1 before:border-dashed before:border-primary/20 xl:before:border-l",
 				"after:absolute after:-inset-y-20 after:-right-px after:z-1 after:border-dashed after:border-primary/20 xl:after:border-r"
 			)}

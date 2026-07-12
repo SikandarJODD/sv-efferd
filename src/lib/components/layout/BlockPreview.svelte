@@ -160,9 +160,9 @@
 					position="bottom-right"
 				/> -->
 
-				<!-- <div class="absolute inset-x-0 top-0 h-px bg-border/70"></div> -->
-				<!-- <div class="absolute inset-x-0 bottom-0 h-px bg-border/70"></div> -->
-				<!-- <div
+				<!-- <div class="absolute inset-x-0 top-0 h-px bg-border/70"></div>
+				<div class="absolute inset-x-0 bottom-0 h-px bg-border/70"></div>
+				<div
 					class="pointer-events-none absolute inset-x-0 top-0 h-10 bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.05)_12%,transparent_24%)] [mask-image:linear-gradient(to_bottom,black,transparent)] opacity-25 dark:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.04)_12%,transparent_24%)]"
 				></div> -->
 
@@ -554,7 +554,7 @@
 
 		<!-- lg:border-x -->
 		<div
-			class="relative mx-auto max-w-7xl px-4 lg:px-0"
+			class="relative mx-auto max-w-7xl border-b px-4 lg:px-0"
 			style={`--preview-min-height: ${MIN_PREVIEW_HEIGHT}px;`}
 		>
 			<div class={cn("z-40 bg-white dark:bg-background", mode === "code" && "hidden")}>
@@ -641,7 +641,7 @@
 				{/if}
 			</div>
 
-			<div class="bg-white dark:bg-transparent">
+			<div class="bg-white dark:bg-transparent!">
 				{#if mode === "code"}
 					<CodeEditor {codeTree} />
 				{/if}

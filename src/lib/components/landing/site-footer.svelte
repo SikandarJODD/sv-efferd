@@ -34,7 +34,7 @@
 	const currentYear = new Date().getFullYear();
 </script>
 
-<div class="pt-18">
+<!-- <div class="mt-18"> -->
 	<footer class="relative">
 		<FullWidthDivider position="top" class="bg-border/80" />
 		<div class="container">
@@ -140,4 +140,4 @@
 			</div>
 		</div>
 	</footer>
-</div>
+<!-- </div> -->

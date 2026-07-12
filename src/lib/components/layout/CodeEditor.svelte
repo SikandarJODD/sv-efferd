@@ -53,7 +53,7 @@
 </script>
 
 <!-- border-t -->
-<div class="flex flex-col sm:min-h-[36rem] sm:flex-row">
+<div class="flex flex-col sm:min-h-[32rem] sm:flex-row">
 	<div
 		class="w-full border-b bg-neutral-50 text-black [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:w-72 sm:border-r sm:border-b-0 dark:bg-zinc-900/25 dark:text-white"
 	>
@@ -88,9 +88,11 @@
 		</div>
 	</div>
 
-	<div class="relative min-h-[32rem] min-w-0 flex-1">
+	<div class="relative min-w-0 flex-1">
 		<div class="flex items-center justify-between gap-3 border-b py-1.5 pr-2 pl-4">
-			<p class="min-w-0 truncate flex gap-1.5 items-center font-mono text-sm text-muted-foreground">
+			<p
+				class="flex min-w-0 items-center gap-1.5 truncate font-mono text-sm text-muted-foreground"
+			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="16"
@@ -148,37 +150,43 @@
 			</div>
 		</div>
 
-		{#if activeFile?.code}
-			<Code code={activeFile.code} lang={activeFile.lang} highlight={activeFile.highlight} />
-		{:else if activeFile?.externalUrl}
-			<div class="flex min-h-[20rem] items-center justify-center px-6">
-				<div class="max-w-md text-center">
-					<p class="text-sm font-medium text-foreground">
-						{activeFile.externalLabel ?? activeFile.name}
-					</p>
-					<p class="mt-2 text-sm leading-6 text-muted-foreground">
-						This base UI component is referenced from its original source instead of
-						being duplicated here.
-					</p>
-					<div class="mt-4 flex justify-center">
-						<Button
-							href={activeFile.externalUrl}
-							target="_blank"
-							variant="outline"
-							size="sm"
-						>
-							<ExternalLink class="size-3.5" />
-							<span>Open component docs</span>
-						</Button>
+		<div class=''>
+			{#if activeFile?.code}
+				<Code
+					code={activeFile.code}
+					lang={activeFile.lang}
+					highlight={activeFile.highlight}
+				/>
+			{:else if activeFile?.externalUrl}
+				<div class="flex min-h-[20rem] items-center justify-center px-6">
+					<div class="max-w-md text-center">
+						<p class="text-sm font-medium text-foreground">
+							{activeFile.externalLabel ?? activeFile.name}
+						</p>
+						<p class="mt-2 text-sm leading-6 text-muted-foreground">
+							This base UI component is referenced from its original source instead of
+							being duplicated here.
+						</p>
+						<div class="mt-4 flex justify-center">
+							<Button
+								href={activeFile.externalUrl}
+								target="_blank"
+								variant="outline"
+								size="sm"
+							>
+								<ExternalLink class="size-3.5" />
+								<span>Open component docs</span>
+							</Button>
+						</div>
 					</div>
 				</div>
-			</div>
-		{:else}
-			<div
-				class="flex h-full min-h-[20rem] items-center justify-center px-6 text-sm text-muted-foreground"
-			>
-				No code files are available for this block yet.
-			</div>
-		{/if}
+			{:else}
+				<div
+					class="flex h-full min-h-[20rem] items-center justify-center px-6 text-sm text-muted-foreground"
+				>
+					No code files are available for this block yet.
+				</div>
+			{/if}
+		</div>
 	</div>
 </div>
