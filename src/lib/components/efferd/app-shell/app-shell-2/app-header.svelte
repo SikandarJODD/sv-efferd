@@ -28,10 +28,10 @@
 		<AppBreadcrumb page={activeItem} />
 	</div>
 	<div class="flex items-center gap-3">
-		<Button size="icon-sm" variant="outline">
+		<Button size="icon-xs" variant="outline">
 			<SendIcon />
 		</Button>
-		<Button aria-label="Notifications" size="icon-sm" variant="outline">
+		<Button aria-label="Notifications" size="icon-xs" variant="outline">
 			<BellIcon />
 		</Button>
 		<Separator class="h-4 data-[orientation=vertical]:self-center" orientation="vertical" />

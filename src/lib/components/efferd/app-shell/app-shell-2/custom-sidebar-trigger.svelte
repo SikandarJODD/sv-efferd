@@ -7,7 +7,7 @@
 <Tooltip.Root delayDuration={800}>
 	<Tooltip.Trigger>
 		{#snippet child({ props })}
-			<Sidebar.Trigger size='icon-sm' {...props} />
+			<Sidebar.Trigger size='icon-xs' {...props} />
 		{/snippet}
 	</Tooltip.Trigger>
 	<Tooltip.Content side="right">
