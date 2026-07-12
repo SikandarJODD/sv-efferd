@@ -7,15 +7,15 @@
 		icon?: Component;
 	};
 
-	let { title, icon }: AppBreadcrumbProps = $props();
-	let IconComponent = $derived(icon);
+	let {page }: { page: AppBreadcrumbProps } = $props();
+	let IconComponent = $derived(page.icon);
 </script>
 
 <Breadcrumb.Root>
 	<Breadcrumb.List>
 		<Breadcrumb.Item>
 			<Breadcrumb.Page class="flex items-center gap-2 [&>svg]:size-3.5">
-				{title}
+				{page.title}
 				<IconComponent />
 			</Breadcrumb.Page>
 		</Breadcrumb.Item>

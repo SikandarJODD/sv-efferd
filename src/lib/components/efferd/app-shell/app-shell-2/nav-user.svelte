@@ -9,7 +9,11 @@
 	import CreditCardIcon from "@lucide/svelte/icons/credit-card";
 	import LogOutIcon from "@lucide/svelte/icons/log-out";
 	import SparklesIcon from "@lucide/svelte/icons/sparkles";
-	let { user }: { user: { name: string; email: string; avatar: string } } = $props();
+	const user = {
+		name: "Shaban Haider",
+		email: "shaban@efferd.com",
+		avatar: "https://github.com/shabanhr.png"
+	};
 	const sidebar = useSidebar();
 </script>
 

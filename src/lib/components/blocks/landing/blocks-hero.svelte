@@ -3,7 +3,6 @@
 	import { Button } from "$lib/components/ui/button";
 	import { DecorIcon } from "$lib/components/ui/decor-icon";
 	import { Github } from "$lib/svgs";
-	import { draggable, bounds, BoundsFrom } from "@neodrag/svelte";
 	import { connectLine } from "$lib/utils/connect-line";
 	import { mode } from "mode-watcher";
 </script>
