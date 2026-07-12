@@ -5,13 +5,16 @@
 	import { navGroups, footerNavLinks } from "./app-shared";
 	import LatestChange from "./latest-change.svelte";
 	import NavGroup from "./nav-group.svelte";
+
+	let sidebar = Sidebar.useSidebar();
 </script>
 
 <Sidebar.Root
 	class={cn(
 		"*:data-[slot=sidebar-inner]:bg-background",
-		"*:data-[slot=sidebar-inner]:dark:bg-[radial-gradient(60%_18%_at_10%_0%,--theme(--color-foreground/.08),transparent)]",
-		"**:data-[slot=sidebar-menu-button]:[&>span]:text-foreground/75"
+		"**:data-[slot=sidebar-menu-button]:[&>span]:text-foreground/75",
+		sidebar.open &&
+			"*:data-[slot=sidebar-inner]:dark:bg-[radial-gradient(60%_18%_at_10%_0%,--theme(--color-foreground/.08),transparent)] transition-all duration-300"
 	)}
 	variant="sidebar"
 	collapsible="icon"
