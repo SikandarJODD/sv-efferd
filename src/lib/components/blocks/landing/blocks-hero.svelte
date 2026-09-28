@@ -10,7 +10,7 @@
 <section class="relative py-10 sm:py-12 lg:py-12">
 	<div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
 		<StripedPattern
-			class="mask-[radial-gradient(circle_at_right,black,transparent_55%)] dark:text-amber-500/30 text-amber-200"
+			class="mask-[radial-gradient(circle_at_right,black,transparent_55%)] text-amber-200 dark:text-amber-500/30"
 			direction="right"
 		/>
 	</div>
@@ -45,7 +45,10 @@
 			</p>
 
 			<div class="mt-5 flex flex-wrap items-center gap-2">
-				<Button class="right-0 rounded-full border-none! outline-none" href="/blocks/app-shell">
+				<Button
+					class="right-0 rounded-full border-none! outline-none"
+					href="/blocks/app-shell"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="20"
@@ -96,22 +99,22 @@
 				</Button>
 			</div>
 		</div>
-		<div id="wrap" class="wrap relative hidden md:block md:col-span-2">
+		<div id="wrap" class="wrap relative hidden md:col-span-2 md:block">
 			<div
 				id="product-pages"
-				class="absolute -top-5 -left-16 w-fit translate-z-10 rounded-full border px-4 py-2 font-mono dark:border-emerald-400 dark:bg-emerald-900/10 dark:text-emerald-400 bg-emerald-50 z-50 text-emerald-500 border-emerald-500"
+				class="absolute -top-5 -left-16 z-50 w-fit translate-z-10 rounded-full border border-emerald-500 bg-emerald-50 px-4 py-2 font-mono text-emerald-500 dark:border-emerald-400 dark:bg-emerald-900/10 dark:text-emerald-400"
 			>
-				Product Pages
+				Svelte Blocks
 			</div>
 			<div
 				id="landing-pages"
-				class="absolute top-14 left-1/2 w-fit rounded-full border px-4 py-2 font-mono dark:border-amber-400 dark:bg-amber-950/30 dark:text-amber-400 bg-amber-50 z-50 text-amber-500 border-amber-500"
+				class="absolute top-14 left-1/2 z-50 w-fit rounded-full border border-amber-500 bg-amber-50 px-4 py-2 font-mono text-amber-500 dark:border-amber-400 dark:bg-amber-950/30 dark:text-amber-400"
 			>
-				Landing Pages
+				Customizable
 			</div>
 			<div
 				id="open-source"
-				class="absolute top-28 left-4 w-fit rounded-full border px-4 py-2 font-mono dark:border-blue-400 dark:bg-blue-900/10 dark:text-blue-400 bg-blue-50 z-50 text-blue-500 border-blue-500"
+				class="absolute top-28 left-4 z-50 w-fit rounded-full border border-blue-500 bg-blue-50 px-4 py-2 font-mono text-blue-500 dark:border-blue-400 dark:bg-blue-900/10 dark:text-blue-400"
 			>
 				Open Source
 			</div>
@@ -137,6 +140,7 @@
 						stroke: mode.current === "dark" ? "#facc15" : "#f59e0b",
 						strokeWidth: 1.4
 					}}
+					stroke-dasharray="4 4"
 				/>
 				<path
 					use:connectLine={{

@@ -141,12 +141,12 @@
 		@apply border-border outline-ring/50;
 	}
 	body {
-		/* font-feature-settings:
-			'rlig' 1,
-			'calt' 1; */
-		/* font-synthesis-weight: none; */
-		/* text-rendering: optimizeLegibility; */
-		@apply bg-background text-foreground;
+		font-feature-settings:
+			"rlig" 1,
+			"calt" 1;
+		font-synthesis-weight: none;
+		text-rendering: optimizeLegibility;
+		@apply bg-background text-foreground antialiased;
 	}
 	html {
 		scrollbar-gutter: stable;
