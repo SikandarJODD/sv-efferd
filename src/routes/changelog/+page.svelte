@@ -1,14 +1,11 @@
 <script lang="ts">
+	import Seo from "$lib/components/base/Seo.svelte";
 	import ChangelogPage from "$lib/components/changelog/changelog-page.svelte";
+
+	const description =
+		"Discover new Svelte Efferd blocks, features, fixes, and improvements in the project changelog.";
 </script>
 
-
-<svelte:head>
-  	<title>Changelog - Svelte Efferd Blocks</title>
-	<meta
-		name="description"
-		content="Discover the latest updates and improvements in Svelte Efferd Blocks. Stay informed about new features, bug fixes, and enhancements in our changelog."
-	/>
-</svelte:head>
+<Seo title="Changelog" desc={description} link="/changelog" />
 
 <ChangelogPage />

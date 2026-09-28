@@ -1,5 +1,4 @@
 <script lang="ts">
-	import logo from "$lib/assets/logo.svg";
 	import { page } from "$app/state";
 	import "./layout.css";
 	import SiteFooter from "$lib/components/landing/site-footer.svelte";
@@ -19,7 +18,17 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={logo} />
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<meta name="application-name" content="Svelte Efferd" />
+	<meta name="apple-mobile-web-app-title" content="Svelte Efferd" />
+	<meta name="theme-color" content="#09090b" />
+	<meta
+		name="robots"
+		content={isPreviewRoute
+			? "noindex, nofollow"
+			: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}
+	/>
 	<title>Svelte Efferd Blocks</title>
 </svelte:head>
 

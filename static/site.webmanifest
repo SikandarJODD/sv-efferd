@@ -1,0 +1,17 @@
+{
+  "name": "Svelte Efferd Blocks",
+  "short_name": "Svelte Efferd",
+  "description": "Production-ready marketing blocks for Svelte and shadcn-svelte.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

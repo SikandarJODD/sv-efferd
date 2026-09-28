@@ -6,6 +6,6 @@
 		"Browse compact, production-ready Svelte Efferd marketing blocks for auth, headers, footers, CTAs, galleries, integrations, and more.";
 </script>
 
-<Seo title="Blocks" desc={description} link="/blocks" />
+<Seo title="Blocks" desc={description} link="/" />
 
 <BlocksLandingPage />

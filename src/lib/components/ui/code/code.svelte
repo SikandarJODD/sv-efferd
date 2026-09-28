@@ -31,7 +31,7 @@
 	{@render children?.()}
 </div>
 
-<style>
+<style lang="postcss">
 	@reference '../../../../routes/layout.css';
 
 	:global(.dark) {

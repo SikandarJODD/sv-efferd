@@ -5,10 +5,14 @@
 	import type { Snippet } from "svelte";
 	import { fly } from "svelte/transition";
 	import CategoryNavigation from "$lib/components/layout/CategoryNavigation.svelte";
+	import { blockCategories } from "$lib/blocks/categories";
 
 	let { children }: { children: Snippet } = $props();
 	let visible = $derived(typeof scrollY.current === "undefined" ? 600 : scrollY.current > 1200);
 	let isBlocksRoot = $derived(page.url.pathname === "/blocks");
+	let currentCategory = $derived(
+		blockCategories.find((category) => page.url.pathname === `/blocks/${category.slug}`)
+	);
 </script>
 
 <div>
@@ -19,6 +23,19 @@
 				class="h-6 w-full bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] opacity-35"
 			></div>
 		</section>
+		{#if currentCategory}
+			<header class="border-b border-border/80 px-5 py-8 sm:px-6 lg:px-7">
+				<div class="mx-auto max-w-7xl">
+					<h1 class="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+						{currentCategory.label} Blocks
+					</h1>
+					<p class="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">
+						Production-ready {currentCategory.label.toLowerCase()} sections for Svelte,
+						Tailwind CSS, and shadcn-svelte.
+					</p>
+				</div>
+			</header>
+		{/if}
 	{/if}
 	{@render children()}
 	{#if visible}
