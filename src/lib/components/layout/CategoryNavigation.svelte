@@ -1,10 +1,7 @@
 <script lang="ts">
+	import { resolve } from "$app/paths";
 	import { page } from "$app/state";
-	import {
-		blockCategories,
-		type BlockCategory,
-		type BlockCategoryBadge
-	} from "$lib/blocks/categories";
+	import { blockCategories } from "$lib/blocks/categories";
 	import ScrollArea from "$lib/components/ui/scroll-area/scroll-area.svelte";
 	import { cn } from "$lib/utils";
 	import { Badge } from "../spell/badge";
@@ -12,7 +9,7 @@
 		return page.url.pathname === `/blocks/${slug}`;
 	};
 
-	const categories: readonly BlockCategory[] = blockCategories;
+	const categories = blockCategories;
 </script>
 
 <div class="w-full border-b border-dashed">
@@ -30,7 +27,7 @@
 						)}
 					>
 						<a
-							href="/blocks/{category.slug}"
+							href={resolve(`/blocks/${category.slug}`)}
 							class={cn(
 								"relative flex h-7 w-fit items-center gap-2 rounded-sm px-1 text-[13px] text-nowrap text-muted-foreground transition-all duration-300 hover:bg-muted hover:text-foreground lg:-mx-2 lg:px-3 dark:text-muted-foreground",
 								isActive(category.slug) && "text-emerald-500! dark:text-emerald-400 hover:dark:bg-emerald-900/30 hover:bg-emerald-200/40"
