@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Sponsors from "$lib/components/landing/sponsors.svelte";
 	import BlocksHero from "./blocks-hero.svelte";
 	import CreditsSection from "./credits-section.svelte";
 	import FeaturesSection from "./features-section.svelte";
@@ -7,5 +8,6 @@
 
 <BlocksHero />
 <MarketingSection />
+<Sponsors />
 <CreditsSection />
 <FeaturesSection />

@@ -2,6 +2,8 @@
 @import "tw-animate-css";
 @import "@fontsource-variable/geist-mono";
 @import "@fontsource-variable/geist";
+@import "@fontsource-variable/shantell-sans";
+@import "../lib/styles/neat-annotations.css";
 
 @custom-variant dark (&:is(.dark *));
 

@@ -3,7 +3,10 @@ import adapter from "@sveltejs/adapter-static";
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		alias: {
+			$ui: "src/lib/components/ui",
+		}
 	},
 	vitePlugin: {
 		dynamicCompileOptions: ({ filename }) =>
@@ -14,7 +17,7 @@ const config = {
 			showToggleButton: "always",
 			toggleButtonPos: "bottom-right"
 		}
-	}
+	},
 };
 
 export default config;
