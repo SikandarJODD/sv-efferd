@@ -109,7 +109,7 @@
 		{#each sponsors as sponsor (sponsor.handle)}
 			<article class="min-w-0 p-2">
 				<div
-					class="after:border-ink/40 relative aspect-square w-full p-1.5 after:pointer-events-none after:absolute after:inset-0 after:rounded-xl after:border after:border-dashed after:content-[''] dark:after:border-emerald-500/40"
+					class="relative aspect-square w-full p-1.5 after:pointer-events-none after:absolute after:inset-0 after:rounded-xl after:border after:border-dashed after:border-ink/40 after:content-[''] dark:after:border-emerald-500/40"
 				>
 					<img
 						src={sponsor.avatar}

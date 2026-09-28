@@ -34,7 +34,7 @@
 	}
 
 	const radioItem =
-		"rounded-(--radius) duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
+		"rounded-full duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
 
 	const DEFAULT_SIZE = 100;
 	const SM_SIZE = 30;
@@ -142,7 +142,7 @@
 		</div> -->
 
 		<div class="relative mx-auto max-w-7xl">
-			<div class="relative border-y px-5 py-5 sm:px-6 sm:py-6 lg:px-7">
+			<div class="relative border-b px-5 py-5 sm:px-6 sm:py-4 lg:px-7">
 				<DecorIcon
 					class="hidden size-3.5 bg-background stroke-muted-foreground/70 md:block"
 					position="top-left"

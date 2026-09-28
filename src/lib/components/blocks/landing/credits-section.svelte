@@ -1,13 +1,12 @@
 <script lang="ts">
-	import { StripedPattern } from "$lib/components/magic/striped-pattern";
 	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
-	import { X as XLogo } from "$lib/svgs";
-	import { cn } from "$lib/utils";
+	import { Annotation } from "$lib/components/ui/annotation";
 
 	const credits = [
 		{
-			role: "Original creator",
+			note: "Original Creator",
+			annotationDirection: "e",
+			annotationColor: "light-dark(var(--color-ink), var(--color-emerald-500))",
 			name: "Shaban",
 			description: "Designed the original version that inspired this Svelte adaptation.",
 			href: "https://x.com/shabanhr",
@@ -16,7 +15,9 @@
 			initials: "S"
 		},
 		{
-			role: "Svelte port by",
+			note: "Svelte Port By",
+			annotationDirection: "s",
+			annotationColor: "light-dark(var(--color-amber-500), var(--color-amber-500))",
 			name: "Bhide Svelte",
 			description: "Ported all components to Svelte 😁",
 			href: "https://x.com/Sikandar_Bhide",
@@ -28,110 +29,49 @@
 </script>
 
 <section
-	class="relative border-t border-dashed border-muted-foreground/40 px-4 py-8 sm:px-6 sm:py-16 lg:px-8"
+	class="mx-auto w-full max-w-6xl px-6 py-20 sm:py-24 md:px-4"
 	aria-labelledby="credits-title"
 >
-	<!-- <DecorIcon position="top-left" class='size-3.5 stroke-muted-foreground/40 bg-background'></DecorIcon> -->
-	<DecorIcon class="z-40 size-3.5 bg-background stroke-muted-foreground/80" position="top-left" />
-	<DecorIcon
-		class="z-50 size-3.5 bg-background stroke-muted-foreground/80"
-		position="top-right"
-	/>
-	<div class="mx-auto max-w-7xl">
-		<div
-			class="relative overflow-hidden border border-dashed border-border bg-background backdrop-blur-sm"
-		>
-			<div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
-				<StripedPattern
-					class="mask-[radial-gradient(circle_at_center,black,transparent_78%)] text-muted-foreground/12"
-					direction="right"
-				/>
-				<div
-					class="absolute inset-x-[14%] top-0 h-20 bg-[radial-gradient(circle_at_top,color-mix(in_oklab,var(--foreground)_8%,transparent)_0%,transparent_72%)] opacity-60 blur-2xl"
-				></div>
-			</div>
+	<h2
+		id="credits-title"
+		class="font-gp-circle pl-1 text-3xl font-medium text-foreground sm:text-4xl"
+	>
+		Credits
+	</h2>
 
-			<DecorIcon
-				class="size-3.5 bg-background stroke-muted-foreground/70"
-				position="top-left"
-			/>
-			<DecorIcon
-				class="size-3.5 bg-background stroke-muted-foreground/70"
-				position="top-right"
-			/>
-			<DecorIcon
-				class="size-3.5 bg-background stroke-muted-foreground/70"
-				position="bottom-left"
-			/>
-			<DecorIcon
-				class="size-3.5 bg-background stroke-muted-foreground/70"
-				position="bottom-right"
-			/>
-
-			<div class="relative border-b border-dashed border-border/80 px-4 py-4 sm:px-5">
-				<p
-					class="text-sm font-medium text-muted-foreground"
+	<div class="mt-4 grid gap-6 sm:grid-cols-2 md:mt-8">
+		{#each credits as person}
+			<article class="flex items-start gap-4 rounded-lg border border-border/70 p-5">
+				<Annotation
+					note={person.note}
+					direction={person.annotationDirection}
+					customColor={person.annotationColor}
+					noMark
+					class="shrink-0 max-lg:before:hidden max-lg:after:hidden"
 				>
-					Credits
-				</p>
-				<h2
-					id="credits-title"
-					class="mt-1 text-lg font-semibold tracking-tight text-foreground"
-				>
-					Built on original work
-				</h2>
-			</div>
+					<Avatar class="size-14">
+						<AvatarImage alt={`${person.name} avatar`} src={person.avatar} />
+						<AvatarFallback class="text-xs font-medium">
+							{person.initials}
+						</AvatarFallback>
+					</Avatar>
+				</Annotation>
 
-			<div class="relative grid gap-3 p-4 sm:p-5 lg:grid-cols-2">
-				{#each credits as person, i}
+				<div class="min-w-0">
+					<h3 class="text-sm font-semibold text-foreground">{person.name}</h3>
+					<p class="mt-2 max-w-md text-sm leading-6 text-muted-foreground">
+						{person.description}
+					</p>
 					<a
-						class={cn(
-							"group relative flex h-full flex-col justify-between gap-4 border border-dashed border-border/80 bg-background/80 p-4 transition-colors hover:border-muted-foreground/40",
-							i === 0 &&
-								"border-muted-foreground/40 bg-linear-60 from-secondary/30 to-transparent hover:border-primary/40",
-							i === 1 && "bg-linear-to-bl from-secondary/30 to-transparent"
-						)}
+						class="mt-2 inline-block text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
 						href={person.href}
 						rel="noreferrer"
 						target="_blank"
 					>
-						<div class="flex items-start gap-3">
-							<Avatar class="size-14 border border-dashed border-border/80">
-								<AvatarImage alt={`${person.name} avatar`} src={person.avatar} />
-								<AvatarFallback class="text-[11px] font-medium">
-									{person.initials}
-								</AvatarFallback>
-							</Avatar>
-
-							<div class="min-w-0">
-								<p
-									class="text-xs text-muted-foreground uppercase"
-								>
-									{person.role}
-								</p>
-								<h3 class="mt-1 text-sm font-semibold text-foreground">
-									{person.name}
-								</h3>
-								<p class="mt-1 text-[11px] leading-5 text-muted-foreground">
-									{person.description}
-								</p>
-							</div>
-						</div>
-
-						<div
-							class="flex items-center justify-between border-t border-dashed border-border/80 pt-3 text-[11px] text-muted-foreground"
-						>
-							<span>{person.handle}</span>
-							<span
-								class="inline-flex items-center gap-1.5 transition-colors group-hover:text-foreground"
-							>
-								<XLogo class="size-3.5" />
-								View profile
-							</span>
-						</div>
+						{person.handle}
 					</a>
-				{/each}
-			</div>
-		</div>
+				</div>
+			</article>
+		{/each}
 	</div>
 </section>
