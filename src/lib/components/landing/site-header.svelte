@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { Github, X as XLogo } from "#lib/svgs/index.js";
-	import { landingNavLinks, landingSocialLinks } from "./config";
+	import { landingSocialLinks } from "./config";
 	import MobileNav from "./mobile-nav.svelte";
 	import { ModeSwitch } from "../ui/mode-switch";
 	import { getStars, GitHubButton } from "../ui/github-button";
 	import { onMount } from "svelte";
 	import ImportAliasToggle from "../base/import-alias/ImportAliasToggle.svelte";
 	import { importAliasStyle } from "../base/import-alias/import-alias.svelte.js";
+	import DesktopNav from "./desktop-nav.svelte";
 
 	let stars = $state(30);
 	const repo = { owner: "SikandarJODD", repo: "sv-efferd" };
@@ -26,18 +27,7 @@
 		</a>
 
 		<div class="hidden flex-1 items-center justify-center md:flex">
-			<div class="flex items-center gap-1">
-				{#each landingNavLinks as link}
-					<Button
-						class="rounded-full px-3 text-sm text-muted-foreground hover:text-foreground"
-						href={link.href}
-						size="sm"
-						variant="ghost"
-					>
-						{link.label}
-					</Button>
-				{/each}
-			</div>
+			<DesktopNav />
 		</div>
 
 		<div class="hidden items-center gap-2 md:flex">

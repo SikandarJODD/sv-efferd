@@ -1,11 +1,12 @@
 <script lang="ts">
 	import * as Drawer from "#lib/components/ui/drawer/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
-	import { X as XLogo } from "#lib/svgs/index.js";
-	import { MenuIcon, XIcon } from "@lucide/svelte";
+	import { Github, X as XLogo } from "#lib/svgs/index.js";
+	import { ArrowUpRightIcon, MenuIcon, XIcon } from "@lucide/svelte";
 	import { landingNavLinks, landingSocialLinks } from "./config";
 	import { getStars, GitHubButton } from "../ui/github-button";
 	import { onMount } from "svelte";
+	import { otherProjects, withProjectUtm } from "./other-projects";
 
 	let open = $state(false);
 	const blockLinks = [
@@ -35,12 +36,7 @@
 	<Drawer.Root bind:open>
 		<Drawer.Trigger>
 			{#snippet child({ props })}
-				<Button
-					{...props}
-					aria-label="Open menu"
-					size="icon-sm"
-					variant="ghost"
-				>
+				<Button {...props} aria-label="Open menu" size="icon-sm" variant="ghost">
 					<MenuIcon class="size-4" />
 				</Button>
 			{/snippet}
@@ -96,6 +92,52 @@
 							</Button>
 						{/each}
 					</div>
+
+					<section class="border-t pt-3" aria-labelledby="other-projects-heading">
+						<h2
+							id="other-projects-heading"
+							class="px-2 pb-2 text-xs font-medium tracking-wide text-muted-foreground uppercase"
+						>
+							Other Projects
+						</h2>
+						<div class="space-y-1.5">
+							{#each otherProjects as project (project.url)}
+								<div class="rounded-lg border bg-muted/20 p-2.5">
+									<p class="truncate text-sm font-medium">{project.title}</p>
+									<div class="mt-2 grid grid-cols-2 gap-2">
+										<Button
+											class="min-h-11 text-xs"
+											href={withProjectUtm(
+												project.github,
+												`mobile-navbar-${project.slug}-github`
+											)}
+											target="_blank"
+											rel="noopener noreferrer"
+											variant="outline"
+											onclick={() => (open = false)}
+										>
+											<Github class="size-3.5" />
+											GitHub
+										</Button>
+										<Button
+											class="min-h-11 text-xs"
+											href={withProjectUtm(
+												project.url,
+												`mobile-navbar-${project.slug}`
+											)}
+											target="_blank"
+											rel="noopener noreferrer"
+											variant="secondary"
+											onclick={() => (open = false)}
+										>
+											View Project
+											<ArrowUpRightIcon class="size-3.5" />
+										</Button>
+									</div>
+								</div>
+							{/each}
+						</div>
+					</section>
 				</nav>
 
 				<div class="mt-3 flex items-center justify-end gap-1 border-t pt-3">
