@@ -1,4 +1,4 @@
-import { appShellBlocks } from "$lib/blocks/app-shell/all_app_shell";
+import { appShellBlocks } from "#lib/blocks/app-shell/all_app_shell.js";
 import type { PageLoad } from "./$types";
 
 export const prerender = true;

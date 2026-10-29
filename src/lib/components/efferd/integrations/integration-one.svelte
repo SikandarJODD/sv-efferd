@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { cn } from "$lib/utils";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { cn } from "#lib/utils.js";
 	import { ArrowUpRightIcon } from "@lucide/svelte";
 
 	type Integration = {

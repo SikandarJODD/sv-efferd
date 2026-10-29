@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { Field, FieldGroup, FieldLabel } from "$lib/components/ui/field";
-	import { Input } from "$lib/components/ui/input";
-	import { Textarea } from "$lib/components/ui/textarea";
-	import { cn } from "$lib/utils";
-	import { Icon as LucideIcon, MailIcon, PhoneIcon } from "@lucide/svelte";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { Field, FieldGroup, FieldLabel } from "#lib/components/ui/field/index.js";
+	import { Input } from "#lib/components/ui/input/index.js";
+	import { Textarea } from "#lib/components/ui/textarea/index.js";
+	import { cn } from "#lib/utils.js";
+	import { MailIcon, PhoneIcon, type LucideIcon } from "@lucide/svelte";
 
 	type ContactInfoItem = {
-		icon: typeof LucideIcon;
+		icon: LucideIcon;
 		label: string;
 		value: string;
 		href: string;

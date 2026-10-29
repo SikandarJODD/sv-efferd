@@ -1,14 +1,14 @@
 <script lang="ts">
-	import Seo from "$lib/components/base/Seo.svelte";
-	import BlockPreview from "$lib/components/layout/BlockPreview.svelte";
+	import Seo from "#lib/components/base/Seo.svelte";
+	import BlockPreview from "#lib/components/layout/BlockPreview.svelte";
 	import type { PageProps } from "./$types";
 
 	let { data }: PageProps = $props();
 </script>
 
 <Seo
-	title="CTA Blocks"
-	desc="Preview curated CTA block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte CTA Blocks"
+	desc="Browse Svelte call-to-action blocks for landing pages and product sites. Preview each layout and copy or install the source."
 	link="/blocks/cta"
 />
 

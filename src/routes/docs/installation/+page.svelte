@@ -1,12 +1,12 @@
 <script lang="ts">
-	import DocsPage from "$lib/components/docs/docs-page.svelte";
-	import H2 from "$lib/components/markdown/H2.svelte";
-	import Link from "$lib/components/markdown/Link.svelte";
-	import Paragraph from "$lib/components/markdown/Paragraph.svelte";
-	import Step from "$lib/components/markdown/Step.svelte";
-	import Steps from "$lib/components/markdown/Steps.svelte";
-	import { Button } from "$lib/components/ui/button";
-	import * as Code from "$lib/components/ui/code";
+	import DocsPage from "#lib/components/docs/docs-page.svelte";
+	import H2 from "#lib/components/markdown/H2.svelte";
+	import Link from "#lib/components/markdown/Link.svelte";
+	import Paragraph from "#lib/components/markdown/Paragraph.svelte";
+	import Step from "#lib/components/markdown/Step.svelte";
+	import Steps from "#lib/components/markdown/Steps.svelte";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import * as Code from "#lib/components/ui/code/index.js";
 
 	const initCommand = "pnpm dlx shadcn-svelte@latest init shadcn-svelte";
 	const addCommand = "pnpm dlx shadcn-svelte@latest add https://your-site/r/block-id.json";
@@ -15,9 +15,11 @@
 <DocsPage
 	title="Installation"
 	description="Efferd follows the same registry-style flow already built into the block preview experience: initialize once, then add the block you want."
+	seoTitle="Install Svelte Efferd Blocks"
+	seoDescription="Set up shadcn-svelte, then install Svelte Efferd blocks from their registry URLs."
 >
 	{#snippet actions()}
-		<Button href="/blocks" size="sm">Open Blocks</Button>
+		<Button href="/" size="sm">Open Blocks</Button>
 		<Button
 			href="https://jsrepo.dev/docs/cli/add"
 			size="sm"
@@ -49,7 +51,7 @@
 		<Step>
 			<H2 class="mt-0 text-xl">Add from a block page</H2>
 			<Paragraph>
-				Once the registry is ready, browse <Link href="/blocks">the blocks directory</Link>,
+				Once the registry is ready, browse <Link href="/">the blocks directory</Link>,
 				open the block you want, and use the install action from that page.
 			</Paragraph>
 			<Code.Root class="mt-4" code={addCommand} lang="bash" variant="secondary" />

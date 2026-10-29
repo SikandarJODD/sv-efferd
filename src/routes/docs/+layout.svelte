@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import DocsSidebar from "$lib/components/docs/docs-sidebar.svelte";
-	import { getDocsPage } from "$lib/components/docs/config";
-	import * as Breadcrumb from "$lib/components/ui/breadcrumb";
-	import DecorIcon from "$lib/components/ui/decor-icon/decor-icon.svelte";
+	import DocsSidebar from "#lib/components/docs/docs-sidebar.svelte";
+	import { getDocsPage } from "#lib/components/docs/config.js";
+	import * as Breadcrumb from "#lib/components/ui/breadcrumb/index.js";
+	import DecorIcon from "#lib/components/ui/decor-icon/decor-icon.svelte";
 
 	let { children } = $props();
 	let currentPage = $derived(getDocsPage(page.url.pathname));

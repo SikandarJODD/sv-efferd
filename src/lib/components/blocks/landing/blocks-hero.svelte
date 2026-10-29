@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { StripedPattern } from "$lib/components/magic/striped-pattern";
-	import { Button } from "$lib/components/ui/button";
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
-	import { Github } from "$lib/svgs";
-	import { connectLine } from "$lib/utils/connect-line";
+	import { StripedPattern } from "#lib/components/magic/striped-pattern/index.js";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
+	import { Github } from "#lib/svgs/index.js";
+	import { connectLine } from "#lib/utils/connect-line.js";
 	import { mode } from "mode-watcher";
 </script>
 
@@ -46,7 +46,7 @@
 
 			<div class="mt-5 flex flex-wrap items-center gap-2">
 				<Button
-					class="right-0 rounded-full border-none! outline-none"
+					class="right-0 rounded-full border-none! px-3 outline-none"
 					href="/blocks/app-shell"
 				>
 					<svg
@@ -89,7 +89,7 @@
 					Explore Blocks</Button
 				>
 				<Button
-					class="rounded-full border border-muted"
+					class="rounded-full border border-muted px-3"
 					href="https://github.com/SikandarJODD/sv-efferd"
 					target="_blank"
 					variant="secondary"

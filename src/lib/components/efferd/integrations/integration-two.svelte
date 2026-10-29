@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
 	import IntegrationCardTwo from "./integration-card-two.svelte";
 
 	type DecorPosition = "top-left" | "top-right" | "bottom-left" | "bottom-right";

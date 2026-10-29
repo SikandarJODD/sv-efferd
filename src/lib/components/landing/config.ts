@@ -22,7 +22,7 @@ export const landingSocialLinks = [
 		id: "x",
 		label: "X",
 		href: "https://x.com/Sikandar_Bhide"
-	},
+	}
 ] as const;
 
 export const landingHero = {
@@ -32,7 +32,7 @@ export const landingHero = {
 		"Save hours of design time with clean, ready-to-use shadcn blocks that just work, modern, responsive, and built for speed.",
 	primaryCta: {
 		label: "Explore",
-		href: "/blocks"
+		href: "/"
 	},
 	secondaryCta: {
 		label: "Star on GitHub",

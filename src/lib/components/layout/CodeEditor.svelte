@@ -4,15 +4,17 @@
 		findBlockCodeFile,
 		flattenBlockCodeFiles,
 		type BlockCodeTree
-	} from "$lib/blocks/showcase";
+	} from "#lib/blocks/showcase.js";
 	import Check from "@lucide/svelte/icons/check";
 	import Copy from "@lucide/svelte/icons/copy";
 	import ExternalLink from "@lucide/svelte/icons/external-link";
-	import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
+	import { UseClipboard } from "#lib/hooks/use-clipboard.svelte.js";
 	import { scale } from "svelte/transition";
 	import Button from "../ui/button/button.svelte";
 	import Code from "./code/code.svelte";
 	import CodeTreeNode from "./CodeTreeNode.svelte";
+	import { importAliasStyle } from "#lib/components/base/import-alias/import-alias.svelte.js";
+	import { transformImportAliases } from "#lib/components/base/import-alias/import-alias.js";
 
 	let { codeTree }: { codeTree: BlockCodeTree } = $props();
 
@@ -23,6 +25,11 @@
 	let files = $derived(flattenBlockCodeFiles(codeTree.nodes));
 	let fallbackFileId = $derived(codeTree.defaultFileId || files[0]?.id || "");
 	let activeFile = $derived(findBlockCodeFile(codeTree, activeFileId) ?? files[0]);
+	let displayedCode = $derived(
+		activeFile?.code
+			? transformImportAliases(activeFile.code, importAliasStyle.current)
+			: ""
+	);
 
 	$effect(() => {
 		activeFileId = fallbackFileId;
@@ -47,8 +54,8 @@
 
 	async function copyCode() {
 		if (!activeFile) return;
-		if (!activeFile.code) return;
-		await clipboard.copy(activeFile.code);
+		if (!displayedCode) return;
+		await clipboard.copy(displayedCode);
 	}
 </script>
 
@@ -130,6 +137,7 @@
 
 				{#if activeFile?.code}
 					<Button
+						aria-label={clipboard.status === "success" ? "Code copied" : "Copy code"}
 						class="h-8 w-8 shrink-0"
 						variant="ghost"
 						size="icon"
@@ -150,10 +158,10 @@
 			</div>
 		</div>
 
-		<div class=''>
+		<div class="">
 			{#if activeFile?.code}
 				<Code
-					code={activeFile.code}
+					code={displayedCode}
 					lang={activeFile.lang}
 					highlight={activeFile.highlight}
 				/>

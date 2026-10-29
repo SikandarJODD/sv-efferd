@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn, type WithElementRef } from "$lib/utils.js";
+	import { cn, type WithElementRef } from "#lib/utils.js";
 	import type { HTMLTextareaAttributes } from "svelte/elements";
 
 	type Props = WithElementRef<HTMLTextareaAttributes>;

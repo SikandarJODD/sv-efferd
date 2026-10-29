@@ -1,7 +1,7 @@
 <!-- Portal.svelte -->
 <script lang="ts">
 	import { Portal } from "bits-ui";
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import { onMount } from "svelte";
 	import type { Snippet } from "svelte";
 

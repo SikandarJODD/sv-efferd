@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
-	import { cn } from "$lib/utils";
+	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
+	import { cn } from "#lib/utils.js";
 	import { Mail, MapPin, Phone } from "@lucide/svelte";
 
 	const data = [

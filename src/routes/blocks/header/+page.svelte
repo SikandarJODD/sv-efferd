@@ -1,14 +1,14 @@
 <script lang="ts">
-	import Seo from "$lib/components/base/Seo.svelte";
-	import BlockPreview from "$lib/components/layout/BlockPreview.svelte";
+	import Seo from "#lib/components/base/Seo.svelte";
+	import BlockPreview from "#lib/components/layout/BlockPreview.svelte";
 	import type { PageProps } from "./$types";
 
 	let { data }: PageProps = $props();
 </script>
 
 <Seo
-	title="Header Blocks"
-	desc="Preview curated header block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte Header Blocks"
+	desc="Browse responsive Svelte header blocks with desktop and mobile navigation. Preview each layout and copy or install the source."
 	link="/blocks/header"
 />
 

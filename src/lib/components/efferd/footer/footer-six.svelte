@@ -1,19 +1,20 @@
 <script lang="ts">
-	import AnimatedContainer from "$lib/components/efferd/footer/AnimatedContainer.svelte";
-	import { Button } from "$lib/components/ui/button";
-	import Logo from "$lib/svgs/logo.svelte";
-	import {
-		FacebookIcon,
-		InstagramIcon,
-		LinkedinIcon,
-		YoutubeIcon,
-		type Icon
-	} from "@lucide/svelte";
+	import AnimatedContainer from "#lib/components/efferd/footer/AnimatedContainer.svelte";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import Logo from "#lib/svgs/logo.svelte";
+	import FacebookIcon from "#lib/svgs/facebook.svelte";
+	import InstagramIcon from "#lib/svgs/instagram.svelte";
+	import LinkedinIcon from "#lib/svgs/linkedin.svelte";
+	import YoutubeIcon from "#lib/svgs/youtube.svelte";
+	import type { Component } from "svelte";
+	import type { SVGAttributes } from "svelte/elements";
+
+	type IconComponent = Component<SVGAttributes<SVGSVGElement>>;
 
 	type FooterLink = {
 		title: string;
 		href: string;
-		icon?: typeof Icon;
+		icon?: IconComponent;
 	};
 
 	type FooterLinkGroup = {
@@ -24,7 +25,7 @@
 	type SocialLink = {
 		title: string;
 		href: string;
-		icon: typeof Icon;
+		icon: IconComponent;
 	};
 
 	const socialLinks: SocialLink[] = [

@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import type { Snippet } from "svelte";
 
-	let { class: className, children } = $props<{
+	let { class: className, children }: {
 		class?: string;
 		children?: Snippet;
-	}>();
+	} = $props();
 </script>
 
 <div class={cn("relative mb-12 ml-4 border-l border-border [counter-reset:step]", className)}>

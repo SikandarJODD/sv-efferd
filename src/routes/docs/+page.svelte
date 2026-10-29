@@ -1,23 +1,25 @@
 <script lang="ts">
-	import { blockCategories } from "$lib/blocks/categories";
-	import DocsPage from "$lib/components/docs/docs-page.svelte";
-	import Blockquote from "$lib/components/markdown/Blockquote.svelte";
-	import H2 from "$lib/components/markdown/H2.svelte";
-	import H3 from "$lib/components/markdown/H3.svelte";
-	import Link from "$lib/components/markdown/Link.svelte";
-	import ListItem from "$lib/components/markdown/ListItem.svelte";
-	import Paragraph from "$lib/components/markdown/Paragraph.svelte";
-	import Strong from "$lib/components/markdown/Strong.svelte";
-	import UnorderedList from "$lib/components/markdown/UnorderedList.svelte";
-	import { Button } from "$lib/components/ui/button";
+	import { blockCategories } from "#lib/blocks/categories.js";
+	import DocsPage from "#lib/components/docs/docs-page.svelte";
+	import Blockquote from "#lib/components/markdown/Blockquote.svelte";
+	import H2 from "#lib/components/markdown/H2.svelte";
+	import H3 from "#lib/components/markdown/H3.svelte";
+	import Link from "#lib/components/markdown/Link.svelte";
+	import ListItem from "#lib/components/markdown/ListItem.svelte";
+	import Paragraph from "#lib/components/markdown/Paragraph.svelte";
+	import Strong from "#lib/components/markdown/Strong.svelte";
+	import UnorderedList from "#lib/components/markdown/UnorderedList.svelte";
+	import { Button } from "#lib/components/ui/button/index.js";
 </script>
 
 <DocsPage
 	title="Introduction"
 	description="Svelte Efferd is a growing collection of production-ready Svelte blocks designed to save build time without making the site feel generic."
+	seoTitle="Svelte Efferd Documentation"
+	seoDescription="Learn how to install Svelte Efferd blocks, add them through the shadcn-svelte registry, and adapt the source for your project."
 >
 	{#snippet actions()}
-		<Button href="/blocks" size="sm">Browse Blocks</Button>
+		<Button href="/" size="sm">Browse Blocks</Button>
 		<Button href="/changelog" size="sm" variant="outline">View Changelog</Button>
 	{/snippet}
 
@@ -42,7 +44,7 @@
 
 	<H3>Start here</H3>
 	<Paragraph>
-		If you want to explore the library first, head to <Link href="/blocks">Blocks</Link>. If you
+		If you want to explore the library first, head to <Link href="/">Blocks</Link>. If you
 		already know what you want to add, jump to <Link href="/docs/installation"
 			>Installation</Link
 		>.

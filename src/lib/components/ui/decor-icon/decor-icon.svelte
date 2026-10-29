@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import type { SVGAttributes } from "svelte/elements";
 	import { type VariantProps, tv } from "tailwind-variants";
 

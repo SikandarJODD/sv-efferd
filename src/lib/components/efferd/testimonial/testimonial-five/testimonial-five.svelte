@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
-	import { GridFiller } from "$lib/components/ui/grid-filler";
+	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
+	import { GridFiller } from "#lib/components/ui/grid-filler/index.js";
 	import TestimonialCard from "./testimonial-card.svelte";
 
 	type Testimonial = {

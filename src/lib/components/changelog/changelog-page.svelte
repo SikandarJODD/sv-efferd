@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
-	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
+	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
 	import { StripedPattern } from "../magic/striped-pattern";
 	import ChangelogCard from "./changelog-card.svelte";
 	import { changelogPageData } from "./data";

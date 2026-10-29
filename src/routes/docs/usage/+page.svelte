@@ -1,22 +1,24 @@
 <script lang="ts">
-	import DocsPage from "$lib/components/docs/docs-page.svelte";
-	import H2 from "$lib/components/markdown/H2.svelte";
-	import H3 from "$lib/components/markdown/H3.svelte";
-	import Link from "$lib/components/markdown/Link.svelte";
-	import ListItem from "$lib/components/markdown/ListItem.svelte";
-	import Paragraph from "$lib/components/markdown/Paragraph.svelte";
-	import Step from "$lib/components/markdown/Step.svelte";
-	import Steps from "$lib/components/markdown/Steps.svelte";
-	import UnorderedList from "$lib/components/markdown/UnorderedList.svelte";
-	import { Button } from "$lib/components/ui/button";
+	import DocsPage from "#lib/components/docs/docs-page.svelte";
+	import H2 from "#lib/components/markdown/H2.svelte";
+	import H3 from "#lib/components/markdown/H3.svelte";
+	import Link from "#lib/components/markdown/Link.svelte";
+	import ListItem from "#lib/components/markdown/ListItem.svelte";
+	import Paragraph from "#lib/components/markdown/Paragraph.svelte";
+	import Step from "#lib/components/markdown/Step.svelte";
+	import Steps from "#lib/components/markdown/Steps.svelte";
+	import UnorderedList from "#lib/components/markdown/UnorderedList.svelte";
+	import { Button } from "#lib/components/ui/button/index.js";
 </script>
 
 <DocsPage
 	title="Usage"
 	description="Once the registry is ready, Efferd works best as a fast browse-to-build loop: compare variants, install the exact block, then tailor it to your product."
+	seoTitle="How to Use Svelte Efferd Blocks"
+	seoDescription="Learn how to compare block variants, install the one you need, and adapt its Svelte and Tailwind CSS source."
 >
 	{#snippet actions()}
-		<Button href="/blocks" size="sm">Browse Blocks</Button>
+		<Button href="/" size="sm">Browse Blocks</Button>
 		<Button href="/docs/installation" size="sm" variant="outline">Review Installation</Button>
 	{/snippet}
 
@@ -31,7 +33,7 @@
 		<Step>
 			<H2 class="mt-0 text-xl">Start with the right category</H2>
 			<Paragraph>
-				Open <Link href="/blocks">Blocks</Link> and go to the section family that matches your
+				Open <Link href="/">Blocks</Link> and go to the section family that matches your
 				page: hero, pricing, FAQ, footer, and so on.
 			</Paragraph>
 		</Step>

@@ -1,17 +1,19 @@
 <script lang="ts">
-	import DocsPage from "$lib/components/docs/docs-page.svelte";
-	import { docsSupportLinks } from "$lib/components/docs/config";
-	import H2 from "$lib/components/markdown/H2.svelte";
-	import Link from "$lib/components/markdown/Link.svelte";
-	import ListItem from "$lib/components/markdown/ListItem.svelte";
-	import Paragraph from "$lib/components/markdown/Paragraph.svelte";
-	import UnorderedList from "$lib/components/markdown/UnorderedList.svelte";
-	import { Button } from "$lib/components/ui/button";
+	import DocsPage from "#lib/components/docs/docs-page.svelte";
+	import { docsSupportLinks } from "#lib/components/docs/config.js";
+	import H2 from "#lib/components/markdown/H2.svelte";
+	import Link from "#lib/components/markdown/Link.svelte";
+	import ListItem from "#lib/components/markdown/ListItem.svelte";
+	import Paragraph from "#lib/components/markdown/Paragraph.svelte";
+	import UnorderedList from "#lib/components/markdown/UnorderedList.svelte";
+	import { Button } from "#lib/components/ui/button/index.js";
 </script>
 
 <DocsPage
 	title="Sponsors & Support"
 	description="If Efferd saves you time, the easiest ways to help are starring the repo, sharing it, and reaching out with sponsorship interest."
+	seoTitle="Support Svelte Efferd"
+	seoDescription="Support Svelte Efferd by starring the repository, sharing the project, or getting in touch about sponsorship."
 >
 	{#snippet actions()}
 		<Button href={docsSupportLinks.githubRepo} size="sm" target="_blank" rel="noreferrer">

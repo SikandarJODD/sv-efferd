@@ -1,11 +1,13 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { Github, X as XLogo } from "$lib/svgs";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { Github, X as XLogo } from "#lib/svgs/index.js";
 	import { landingNavLinks, landingSocialLinks } from "./config";
 	import MobileNav from "./mobile-nav.svelte";
 	import { ModeSwitch } from "../ui/mode-switch";
 	import { getStars, GitHubButton } from "../ui/github-button";
 	import { onMount } from "svelte";
+	import ImportAliasToggle from "../base/import-alias/ImportAliasToggle.svelte";
+	import { importAliasStyle } from "../base/import-alias/import-alias.svelte.js";
 
 	let stars = $state(30);
 	const repo = { owner: "SikandarJODD", repo: "sv-efferd" };
@@ -14,8 +16,10 @@
 	});
 </script>
 
-<header class="relative z-20 mx-auto max-w-7xl border-b border-border/80">
-	<nav class="cpx flex h-14 items-center justify-between gap-3">
+<header
+	class="sticky top-0 z-[60] mx-auto max-w-7xl border-b border-border/80 bg-background/95 backdrop-blur-sm"
+>
+	<nav class="cpx flex h-12 items-center justify-between gap-3">
 		<a aria-label="Efferd home" class="flex shrink-0 px-1" href="/">
 			<!-- <Logo class="h-5 w-auto" /> -->
 			<span class="font-mono font-medium tracking-tight">Svelte Efferd</span>
@@ -25,7 +29,7 @@
 			<div class="flex items-center gap-1">
 				{#each landingNavLinks as link}
 					<Button
-						class="px-3 text-sm text-muted-foreground hover:text-foreground"
+						class="rounded-full px-3 text-sm text-muted-foreground hover:text-foreground"
 						href={link.href}
 						size="sm"
 						variant="ghost"
@@ -37,6 +41,7 @@
 		</div>
 
 		<div class="hidden items-center gap-2 md:flex">
+			<ImportAliasToggle bind:value={importAliasStyle.current} />
 			{#each landingSocialLinks as link}
 				<Button
 					target="_blank"
@@ -46,17 +51,18 @@
 					variant="ghost"
 				>
 					{#if link.id === "x"}
-						<XLogo class="size-4" />
+						<XLogo class="size-3.5" />
 					{/if}
 				</Button>
 			{/each}
-			<GitHubButton variant='ghost' class='dark:bg-muted/50' repo={repo} stars={stars} />
+			<GitHubButton variant="ghost" class="dark:bg-muted/50" {repo} {stars} />
 
 			<ModeSwitch />
 		</div>
 
 		<div class="flex items-center gap-2 md:hidden">
-			<ModeSwitch />
+			<ImportAliasToggle bind:value={importAliasStyle.current} />
+			<ModeSwitch variant="ghost" />
 			<MobileNav />
 		</div>
 	</nav>

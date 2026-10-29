@@ -4,18 +4,22 @@
 		AccordionContent,
 		AccordionItem,
 		AccordionTrigger
-	} from "$lib/components/ui/accordion";
-	import { Button } from "$lib/components/ui/button";
+	} from "#lib/components/ui/accordion/index.js";
+	import { Button } from "#lib/components/ui/button/index.js";
 	import {
 		Empty,
 		EmptyContent,
 		EmptyHeader,
 		EmptyMedia,
 		EmptyTitle
-	} from "$lib/components/ui/empty";
-	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
-	import { InputGroup, InputGroupAddon, InputGroupInput } from "$lib/components/ui/input-group";
-	import { cn } from "$lib/utils";
+	} from "#lib/components/ui/empty/index.js";
+	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
+	import {
+		InputGroup,
+		InputGroupAddon,
+		InputGroupInput
+	} from "#lib/components/ui/input-group/index.js";
+	import { cn } from "#lib/utils.js";
 	import { SearchIcon, SearchSlashIcon } from "@lucide/svelte";
 
 	type CategoryId = "all" | "getting-started" | "features" | "billing" | "support";

@@ -1,15 +1,13 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { cn } from "$lib/utils";
-	import Logo from "$lib/svgs/logo.svelte";
-	import XLogo from "$lib/svgs/x.svelte";
-	import {
-		FacebookIcon,
-		GithubIcon,
-		InstagramIcon,
-		LinkedinIcon,
-		YoutubeIcon
-	} from "@lucide/svelte";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { cn } from "#lib/utils.js";
+	import Logo from "#lib/svgs/logo.svelte";
+	import XLogo from "#lib/svgs/x.svelte";
+	import FacebookIcon from "#lib/svgs/facebook.svelte";
+	import GithubIcon from "#lib/svgs/github.svelte";
+	import InstagramIcon from "#lib/svgs/instagram.svelte";
+	import LinkedinIcon from "#lib/svgs/linkedin.svelte";
+	import YoutubeIcon from "#lib/svgs/youtube.svelte";
 	import type { Component } from "svelte";
 
 	type FooterLink = {

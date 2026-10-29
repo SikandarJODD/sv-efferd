@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
-	import { cn } from "$lib/utils";
-	import { ActivityIcon, GlobeIcon, ShieldCheckIcon, ZapIcon, type Icon } from "@lucide/svelte";
+	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
+	import { cn } from "#lib/utils.js";
+	import { ActivityIcon, GlobeIcon, ShieldCheckIcon, ZapIcon, type LucideIcon } from "@lucide/svelte";
 
 	type Feature = {
 		title: string;
-		icon: typeof Icon;
+		icon: LucideIcon;
 		description: string;
 	};
 

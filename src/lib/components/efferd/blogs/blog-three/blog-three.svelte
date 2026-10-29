@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
+	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
 	import BlogCard from "./blog-card.svelte";
 
 	type BlogType = {

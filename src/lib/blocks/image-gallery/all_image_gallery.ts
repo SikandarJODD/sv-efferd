@@ -1,11 +1,11 @@
-import type { BlockShowcaseItem } from "$lib/blocks/showcase";
-import { createBlockCodeTree } from "$lib/blocks/showcase";
-import ImageGallery from "$lib/components/efferd/image-gallery/image-gallery.svelte";
+import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
+import { createBlockCodeTree } from "#lib/blocks/showcase.js";
+import ImageGallery from "#lib/components/efferd/image-gallery/image-gallery.svelte";
 
-import imageGallerySource from "$lib/components/efferd/image-gallery/image-gallery.svelte?raw";
-import lazyImageSource from "$lib/components/efferd/image-gallery/lazy-image.svelte?raw";
-import aspectRatioIndexSource from "$lib/components/ui/aspect-ratio/index.ts?raw";
-import aspectRatioSource from "$lib/components/ui/aspect-ratio/aspect-ratio.svelte?raw";
+import imageGallerySource from "#lib/components/efferd/image-gallery/image-gallery.svelte?raw";
+import lazyImageSource from "#lib/components/efferd/image-gallery/lazy-image.svelte?raw";
+import aspectRatioIndexSource from "#lib/components/ui/aspect-ratio/index.ts?raw";
+import aspectRatioSource from "#lib/components/ui/aspect-ratio/aspect-ratio.svelte?raw";
 
 const aspectRatioFiles = [
 	{

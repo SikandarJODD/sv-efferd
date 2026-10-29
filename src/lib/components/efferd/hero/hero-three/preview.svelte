@@ -1,5 +1,5 @@
 <script lang="ts">
-	import HeaderThree from "$lib/components/efferd/header/header-three/header-three.svelte";
+	import HeaderThree from "#lib/components/efferd/header/header-three/header-three.svelte";
 	import Hero from "./hero.svelte";
 	import LogoSection from "./logo-section.svelte";
 </script>

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
-	import { cn } from "$lib/utils";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
+	import { cn } from "#lib/utils.js";
 	import type { HTMLAttributes } from "svelte/elements";
 
 	type DecorPosition = "top-left" | "top-right" | "bottom-left" | "bottom-right";

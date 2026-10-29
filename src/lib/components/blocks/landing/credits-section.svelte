@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
-	import { Annotation } from "$lib/components/ui/annotation";
+	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
+	import { Annotation } from "#lib/components/ui/annotation/index.js";
 
 	const credits = [
 		{

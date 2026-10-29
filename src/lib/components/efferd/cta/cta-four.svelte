@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ArrowRightIcon, CreditCardIcon } from "@lucide/svelte";
-	import { Button } from "$lib/components/ui/button";
+	import { Button } from "#lib/components/ui/button/index.js";
 </script>
 
 <div

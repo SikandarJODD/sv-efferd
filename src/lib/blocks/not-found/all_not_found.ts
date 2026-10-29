@@ -1,19 +1,19 @@
-import type { BlockShowcaseItem } from "$lib/blocks/showcase";
-import { createBlockCodeTree } from "$lib/blocks/showcase";
-import NotFoundOne from "$lib/components/efferd/not-found/not-found-one.svelte";
-import NotFoundTwo from "$lib/components/efferd/not-found/not-found-two.svelte";
+import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
+import { createBlockCodeTree } from "#lib/blocks/showcase.js";
+import NotFoundOne from "#lib/components/efferd/not-found/not-found-one.svelte";
+import NotFoundTwo from "#lib/components/efferd/not-found/not-found-two.svelte";
 
-import notFoundOneSource from "$lib/components/efferd/not-found/not-found-one.svelte?raw";
-import notFoundTwoSource from "$lib/components/efferd/not-found/not-found-two.svelte?raw";
-import dividerIndexSource from "$lib/components/ui/full-width-divider/index.ts?raw";
-import dividerSource from "$lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
-import emptyContentSource from "$lib/components/ui/empty/empty-content.svelte?raw";
-import emptyDescriptionSource from "$lib/components/ui/empty/empty-description.svelte?raw";
-import emptyHeaderSource from "$lib/components/ui/empty/empty-header.svelte?raw";
-import emptyIndexSource from "$lib/components/ui/empty/index.ts?raw";
-import emptyMediaSource from "$lib/components/ui/empty/empty-media.svelte?raw";
-import emptyRootSource from "$lib/components/ui/empty/empty.svelte?raw";
-import emptyTitleSource from "$lib/components/ui/empty/empty-title.svelte?raw";
+import notFoundOneSource from "#lib/components/efferd/not-found/not-found-one.svelte?raw";
+import notFoundTwoSource from "#lib/components/efferd/not-found/not-found-two.svelte?raw";
+import dividerIndexSource from "#lib/components/ui/full-width-divider/index.ts?raw";
+import dividerSource from "#lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
+import emptyContentSource from "#lib/components/ui/empty/empty-content.svelte?raw";
+import emptyDescriptionSource from "#lib/components/ui/empty/empty-description.svelte?raw";
+import emptyHeaderSource from "#lib/components/ui/empty/empty-header.svelte?raw";
+import emptyIndexSource from "#lib/components/ui/empty/index.ts?raw";
+import emptyMediaSource from "#lib/components/ui/empty/empty-media.svelte?raw";
+import emptyRootSource from "#lib/components/ui/empty/empty.svelte?raw";
+import emptyTitleSource from "#lib/components/ui/empty/empty-title.svelte?raw";
 
 const buttonFiles = [
 	{

@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { Portal, PortalBackdrop } from "$lib/components/ui/portal";
-	import { Github, X as XLogo } from "$lib/svgs";
-	import { cn } from "$lib/utils";
+	import * as Drawer from "#lib/components/ui/drawer/index.js";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { X as XLogo } from "#lib/svgs/index.js";
 	import { MenuIcon, XIcon } from "@lucide/svelte";
 	import { landingNavLinks, landingSocialLinks } from "./config";
 	import { getStars, GitHubButton } from "../ui/github-button";
@@ -24,111 +23,99 @@
 		{ label: "Integrations", href: "/blocks/integrations" }
 	] as const;
 
-	function closeMenu() {
-		open = false;
-	}
-
 	let stars = $state(30);
 	const repo = { owner: "SikandarJODD", repo: "sv-efferd" };
+
 	onMount(async () => {
 		stars = await getStars({ ...repo, fallback: 60 });
 	});
 </script>
 
 <div class="md:hidden">
-	<Button
-		aria-controls="site-mobile-menu"
-		aria-expanded={open}
-		aria-label={open ? "Close menu" : "Open menu"}
-		class="border-border/80 bg-muted/50 backdrop-blur-sm lg:bg-background/70"
-		size="icon-sm"
-		variant="secondary"
-		onclick={() => (open = !open)}
-	>
-		{#if open}
-			<XIcon class="size-4" />
-		{:else}
-			<MenuIcon class="size-4" />
-		{/if}
-	</Button>
+	<Drawer.Root bind:open>
+		<Drawer.Trigger>
+			{#snippet child({ props })}
+				<Button
+					{...props}
+					aria-label="Open menu"
+					size="icon-sm"
+					variant="ghost"
+				>
+					<MenuIcon class="size-4" />
+				</Button>
+			{/snippet}
+		</Drawer.Trigger>
 
-	{#if open}
-		<Portal class="top-0">
-			<PortalBackdrop state="open" />
-
-			<div
-				class={cn(
-					"data-[slot=open]:animate-in data-[slot=open]:fade-in-0 data-[slot=open]:slide-in-from-top-2",
-					"z-100 flex-1 overflow-y-auto p-4 duration-300 ease-out"
-				)}
-				data-slot="open"
-				id="site-mobile-menu"
-			>
-				<div class="mx-auto w-full max-w-7xl">
-					<div
-						class="rounded-2xl border border-border/80 bg-background/95 p-4 shadow-lg backdrop-blur-xl"
-					>
-						<div class="flex items-center justify-end gap-3 pl-4">
+		<Drawer.Content
+			class="z-[70] max-h-[85svh] px-4 pt-2 pb-[calc(1.25rem+env(safe-area-inset-bottom,0px))] data-[vaul-drawer-direction=bottom]:rounded-t-3xl"
+			overlayProps={{ style: "animation-duration: 280ms; transition-duration: 280ms;" }}
+			style="animation-duration: 280ms; transition-duration: 280ms;"
+		>
+			<div class="mx-auto w-full max-w-lg overflow-y-auto">
+				<Drawer.Header class="relative px-0 py-3 text-left">
+					<Drawer.Title class="sr-only">Menu</Drawer.Title>
+					<Drawer.Description class="sr-only">Site navigation</Drawer.Description>
+					<Drawer.Close>
+						{#snippet child({ props })}
 							<Button
+								{...props}
 								aria-label="Close menu"
+								class="absolute top-1 right-0"
 								size="icon-sm"
 								variant="ghost"
-								onclick={closeMenu}
 							>
 								<XIcon class="size-4" />
 							</Button>
-						</div>
+						{/snippet}
+					</Drawer.Close>
+				</Drawer.Header>
 
-						<div class="grid gap-1">
-							{#each landingNavLinks as link (link.href)}
-								<Button
-									class="justify-start rounded-xl text-sm"
-									href={link.href}
-									variant="ghost"
-									onclick={closeMenu}
-								>
-									{link.label}
-								</Button>
-							{/each}
-						</div>
-
-						<div class="mt-4 border-t border-border/80 pt-4">
-							<div class="grid grid-cols-2 gap-2">
-								{#each blockLinks as link (link.href)}
-									<Button
-										class="justify-start rounded-xl text-sm"
-										href={link.href}
-										variant="link"
-										onclick={closeMenu}
-									>
-										{link.label}
-									</Button>
-								{/each}
-							</div>
-						</div>
-
-						<div class="mt-4 border-t border-border/80 pt-4">
-							<div class="flex justify-end gap-2">
-								{#each landingSocialLinks as link (link.href)}
-									<Button
-										aria-label={link.label}
-										href={link.href}
-										size="icon-sm"
-										target="_blank"
-										variant="ghost"
-										onclick={closeMenu}
-									>
-										{#if link.id === "x"}
-											<XLogo class="size-4" />
-										{/if}
-									</Button>
-								{/each}
-								<GitHubButton variant="ghost" class="dark:bg-muted/50" repo={repo} stars={stars} />
-							</div>
-						</div>
+				<nav aria-label="Mobile navigation" class="space-y-3">
+					<div class="grid grid-cols-1 gap-1">
+						{#each landingNavLinks as link (link.href)}
+							<Button
+								class="justify-start"
+								href={link.href}
+								variant="ghost"
+								onclick={() => (open = false)}
+							>
+								{link.label}
+							</Button>
+						{/each}
 					</div>
+
+					<div class="grid grid-cols-2 gap-1 border-t pt-3">
+						{#each blockLinks as link (link.href)}
+							<Button
+								class="h-8 justify-start px-2 text-xs"
+								href={link.href}
+								variant="ghost"
+								onclick={() => (open = false)}
+							>
+								{link.label}
+							</Button>
+						{/each}
+					</div>
+				</nav>
+
+				<div class="mt-3 flex items-center justify-end gap-1 border-t pt-3">
+					{#each landingSocialLinks as link (link.href)}
+						<Button
+							aria-label={link.label}
+							href={link.href}
+							size="icon-sm"
+							target="_blank"
+							variant="ghost"
+							onclick={() => (open = false)}
+						>
+							{#if link.id === "x"}
+								<XLogo class="size-4" />
+							{/if}
+						</Button>
+					{/each}
+					<GitHubButton variant="ghost" class="dark:bg-muted/50" {repo} {stars} />
 				</div>
 			</div>
-		</Portal>
-	{/if}
+		</Drawer.Content>
+	</Drawer.Root>
 </div>

@@ -1,4 +1,4 @@
-import { heroBlocks } from "$lib/blocks/hero/all_hero";
+import { heroBlocks } from "#lib/blocks/hero/all_hero.js";
 import type { PageLoad } from "./$types";
 
 export const prerender = true;

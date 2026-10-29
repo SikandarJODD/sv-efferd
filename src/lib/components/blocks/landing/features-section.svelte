@@ -4,13 +4,13 @@
 		Bookmark,
 		LayoutTemplateIcon,
 		PackageOpenIcon,
-		type Icon
+		type LucideIcon
 	} from "@lucide/svelte";
 
 	type Feature = {
 		title: string;
 		description: string;
-		icon: typeof Icon;
+		icon: LucideIcon;
 	};
 
 	const features: Feature[] = [

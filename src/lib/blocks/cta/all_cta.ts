@@ -1,24 +1,24 @@
-import type { BlockShowcaseItem } from "$lib/blocks/showcase";
-import { createBlockCodeTree } from "$lib/blocks/showcase";
-import CtaFive from "$lib/components/efferd/cta/cta-five.svelte";
-import CtaFour from "$lib/components/efferd/cta/cta-four.svelte";
-import CtaOne from "$lib/components/efferd/cta/cta-one.svelte";
-import CtaThree from "$lib/components/efferd/cta/cta-three.svelte";
-import CtaTwo from "$lib/components/efferd/cta/cta-two.svelte";
+import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
+import { createBlockCodeTree } from "#lib/blocks/showcase.js";
+import CtaFive from "#lib/components/efferd/cta/cta-five.svelte";
+import CtaFour from "#lib/components/efferd/cta/cta-four.svelte";
+import CtaOne from "#lib/components/efferd/cta/cta-one.svelte";
+import CtaThree from "#lib/components/efferd/cta/cta-three.svelte";
+import CtaTwo from "#lib/components/efferd/cta/cta-two.svelte";
 
-import ctaFiveSource from "$lib/components/efferd/cta/cta-five.svelte?raw";
-import ctaFourSource from "$lib/components/efferd/cta/cta-four.svelte?raw";
-import ctaOneSource from "$lib/components/efferd/cta/cta-one.svelte?raw";
-import ctaThreeSource from "$lib/components/efferd/cta/cta-three.svelte?raw";
-import ctaTwoSource from "$lib/components/efferd/cta/cta-two.svelte?raw";
-import decorIconIndexSource from "$lib/components/ui/decor-icon/index.ts?raw";
-import decorIconSource from "$lib/components/ui/decor-icon/decor-icon.svelte?raw";
-import dividerIndexSource from "$lib/components/ui/full-width-divider/index.ts?raw";
-import dividerSource from "$lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
-import inputGroupAddonSource from "$lib/components/ui/input-group/input-group-addon.svelte?raw";
-import inputGroupIndexSource from "$lib/components/ui/input-group/index.ts?raw";
-import inputGroupInputSource from "$lib/components/ui/input-group/input-group-input.svelte?raw";
-import inputGroupSource from "$lib/components/ui/input-group/input-group.svelte?raw";
+import ctaFiveSource from "#lib/components/efferd/cta/cta-five.svelte?raw";
+import ctaFourSource from "#lib/components/efferd/cta/cta-four.svelte?raw";
+import ctaOneSource from "#lib/components/efferd/cta/cta-one.svelte?raw";
+import ctaThreeSource from "#lib/components/efferd/cta/cta-three.svelte?raw";
+import ctaTwoSource from "#lib/components/efferd/cta/cta-two.svelte?raw";
+import decorIconIndexSource from "#lib/components/ui/decor-icon/index.ts?raw";
+import decorIconSource from "#lib/components/ui/decor-icon/decor-icon.svelte?raw";
+import dividerIndexSource from "#lib/components/ui/full-width-divider/index.ts?raw";
+import dividerSource from "#lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
+import inputGroupAddonSource from "#lib/components/ui/input-group/input-group-addon.svelte?raw";
+import inputGroupIndexSource from "#lib/components/ui/input-group/index.ts?raw";
+import inputGroupInputSource from "#lib/components/ui/input-group/input-group-input.svelte?raw";
+import inputGroupSource from "#lib/components/ui/input-group/input-group.svelte?raw";
 
 const buttonFiles = [
 	{

@@ -1,14 +1,14 @@
 <script lang="ts">
-	import Seo from "$lib/components/base/Seo.svelte";
-	import BlockPreview from "$lib/components/layout/BlockPreview.svelte";
+	import Seo from "#lib/components/base/Seo.svelte";
+	import BlockPreview from "#lib/components/layout/BlockPreview.svelte";
 	import type { PageProps } from "./$types";
 
 	let { data }: PageProps = $props();
 </script>
 
 <Seo
-	title="Testimonials Blocks"
-	desc="Preview curated testimonial block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte Testimonial Blocks"
+	desc="Browse Svelte testimonial blocks for customer quotes and social proof. Preview each layout and copy the source."
 	link="/blocks/testimonials"
 />
 

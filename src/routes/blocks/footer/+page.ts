@@ -1,4 +1,4 @@
-import { footerBlocks } from "$lib/blocks/footer/all_footer";
+import { footerBlocks } from "#lib/blocks/footer/all_footer.js";
 import type { PageLoad } from "./$types";
 
 export const prerender = true;

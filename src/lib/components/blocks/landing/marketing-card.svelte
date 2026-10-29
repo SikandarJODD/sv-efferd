@@ -16,7 +16,7 @@
 	class="group relative block aspect-video rounded-md border transition-all duration-200 hover:border-muted-foreground/40"
 	aria-label={`${title} - ${countLabel}`}
 >
-	<div class="relative h-full group">
+	<div class="group relative h-full">
 		<PreviewComponent {title} {countLabel} />
 	</div>
 </a>

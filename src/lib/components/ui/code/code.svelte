@@ -1,9 +1,11 @@
 <script lang="ts">
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 	import { codeVariants } from ".";
 	import type { CodeRootProps } from "./types";
 	import { useCode } from "./code.svelte.js";
 	import { box } from "svelte-toolbelt";
+	import { importAliasStyle } from "#lib/components/base/import-alias/import-alias.svelte.js";
+	import { transformImportAliases } from "#lib/components/base/import-alias/import-alias.js";
 	// import '../../../../routes/layout.css'
 
 	let {
@@ -17,9 +19,10 @@
 		children,
 		...rest
 	}: CodeRootProps = $props();
+	let displayedCode = $derived(transformImportAliases(code, importAliasStyle.current));
 
 	const codeState = useCode({
-		code: box.with(() => code),
+		code: box.with(() => displayedCode),
 		hideLines: box.with(() => hideLines),
 		highlight: box.with(() => highlight),
 		lang: box.with(() => lang)

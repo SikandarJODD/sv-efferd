@@ -1,12 +1,16 @@
 <script lang="ts">
 	import { AtSignIcon } from "@lucide/svelte";
-	import { Button } from "$lib/components/ui/button";
-	import { AuthDivider } from "$lib/components/ui/auth-divider";
-	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
-	import { InputGroup, InputGroupAddon, InputGroupInput } from "$lib/components/ui/input-group";
-	import GoogleLogo from "$lib/svgs/google.svelte";
-	import Logo from "$lib/svgs/logo.svelte";
-	import { cn } from "$lib/utils";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { AuthDivider } from "#lib/components/ui/auth-divider/index.js";
+	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
+	import {
+		InputGroup,
+		InputGroupAddon,
+		InputGroupInput
+	} from "#lib/components/ui/input-group/index.js";
+	import GoogleLogo from "#lib/svgs/google.svelte";
+	import Logo from "#lib/svgs/logo.svelte";
+	import { cn } from "#lib/utils.js";
 	import type { HTMLAttributes } from "svelte/elements";
 
 	type AuthFourProps = HTMLAttributes<HTMLDivElement> & {

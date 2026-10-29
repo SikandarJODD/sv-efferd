@@ -11,7 +11,7 @@
 </script>
 
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import { cubicInOut } from "svelte/easing";
 	import { Tween } from "svelte/motion";
 	import { Button, type ButtonProps, type ButtonSize } from "../button";

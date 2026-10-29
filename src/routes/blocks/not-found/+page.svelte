@@ -1,14 +1,14 @@
 <script lang="ts">
-	import Seo from "$lib/components/base/Seo.svelte";
-	import BlockPreview from "$lib/components/layout/BlockPreview.svelte";
+	import Seo from "#lib/components/base/Seo.svelte";
+	import BlockPreview from "#lib/components/layout/BlockPreview.svelte";
 	import type { PageProps } from "./$types";
 
 	let { data }: PageProps = $props();
 </script>
 
 <Seo
-	title="Not Found Blocks"
-	desc="Preview curated not-found block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte 404 Page Blocks"
+	desc="Browse Svelte 404 page blocks with clear recovery actions and navigation. Preview each layout and copy the source."
 	link="/blocks/not-found"
 />
 

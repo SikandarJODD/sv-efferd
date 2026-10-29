@@ -4,9 +4,9 @@
 	import DOMPurify from "dompurify";
 	import { onMount } from "svelte";
 	import type { HighlighterCore } from "shiki";
-	import { CopyButton } from "$lib/components/ui/copy-button";
-	import { cn } from "$lib/utils";
-	import { browser } from "$app/environment";
+	import { CopyButton } from "#lib/components/ui/copy-button/index.js";
+	import { cn } from "#lib/utils.js";
+	import { browser } from "$app/env";
 
 	// border-l
 	const style = tv({

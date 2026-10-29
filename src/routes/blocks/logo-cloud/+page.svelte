@@ -1,14 +1,14 @@
 <script lang="ts">
-	import Seo from "$lib/components/base/Seo.svelte";
-	import BlockPreview from "$lib/components/layout/BlockPreview.svelte";
+	import Seo from "#lib/components/base/Seo.svelte";
+	import BlockPreview from "#lib/components/layout/BlockPreview.svelte";
 	import type { PageProps } from "./$types";
 
 	let { data }: PageProps = $props();
 </script>
 
 <Seo
-	title="Logo Cloud Blocks"
-	desc="Preview curated logo cloud block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte Logo Cloud Blocks"
+	desc="Browse Svelte logo cloud blocks for customer, partner, and integration logos. Preview each layout and copy the source."
 	link="/blocks/logo-cloud"
 />
 

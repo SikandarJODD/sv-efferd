@@ -1,26 +1,26 @@
-import type { BlockShowcaseItem } from "$lib/blocks/showcase";
-import { createBlockCodeTree } from "$lib/blocks/showcase";
-import FeatureFive from "$lib/components/efferd/features/feature-five/feature-five.svelte";
-import FeatureFour from "$lib/components/efferd/features/feature-four/feature-four.svelte";
-import FeatureOne from "$lib/components/efferd/features/feature-one.svelte";
-import FeatureThree from "$lib/components/efferd/features/feature-three.svelte";
-import FeatureTwo from "$lib/components/efferd/features/feature-two.svelte";
+import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
+import { createBlockCodeTree } from "#lib/blocks/showcase.js";
+import FeatureFive from "#lib/components/efferd/features/feature-five/feature-five.svelte";
+import FeatureFour from "#lib/components/efferd/features/feature-four/feature-four.svelte";
+import FeatureOne from "#lib/components/efferd/features/feature-one.svelte";
+import FeatureThree from "#lib/components/efferd/features/feature-three.svelte";
+import FeatureTwo from "#lib/components/efferd/features/feature-two.svelte";
 
-import featureFiveCardSource from "$lib/components/efferd/features/feature-five/feature-card.svelte?raw";
-import featureFiveSource from "$lib/components/efferd/features/feature-five/feature-five.svelte?raw";
-import featureFourCardSource from "$lib/components/efferd/features/feature-four/feature-card.svelte?raw";
-import featureFourSource from "$lib/components/efferd/features/feature-four/feature-four.svelte?raw";
-import featureOneSource from "$lib/components/efferd/features/feature-one.svelte?raw";
-import featureThreeSource from "$lib/components/efferd/features/feature-three.svelte?raw";
-import featureTwoSource from "$lib/components/efferd/features/feature-two.svelte?raw";
-import dashedLineIndexSource from "$lib/components/ui/dashed-line/index.ts?raw";
-import dashedLineSource from "$lib/components/ui/dashed-line/dashed-line.svelte?raw";
-import decorIconIndexSource from "$lib/components/ui/decor-icon/index.ts?raw";
-import decorIconSource from "$lib/components/ui/decor-icon/decor-icon.svelte?raw";
-import dividerIndexSource from "$lib/components/ui/full-width-divider/index.ts?raw";
-import dividerSource from "$lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
-import gridPatternIndexSource from "$lib/components/ui/grid-pattern/index.ts?raw";
-import gridPatternSource from "$lib/components/ui/grid-pattern/grid-pattern.svelte?raw";
+import featureFiveCardSource from "#lib/components/efferd/features/feature-five/feature-card.svelte?raw";
+import featureFiveSource from "#lib/components/efferd/features/feature-five/feature-five.svelte?raw";
+import featureFourCardSource from "#lib/components/efferd/features/feature-four/feature-card.svelte?raw";
+import featureFourSource from "#lib/components/efferd/features/feature-four/feature-four.svelte?raw";
+import featureOneSource from "#lib/components/efferd/features/feature-one.svelte?raw";
+import featureThreeSource from "#lib/components/efferd/features/feature-three.svelte?raw";
+import featureTwoSource from "#lib/components/efferd/features/feature-two.svelte?raw";
+import dashedLineIndexSource from "#lib/components/ui/dashed-line/index.ts?raw";
+import dashedLineSource from "#lib/components/ui/dashed-line/dashed-line.svelte?raw";
+import decorIconIndexSource from "#lib/components/ui/decor-icon/index.ts?raw";
+import decorIconSource from "#lib/components/ui/decor-icon/decor-icon.svelte?raw";
+import dividerIndexSource from "#lib/components/ui/full-width-divider/index.ts?raw";
+import dividerSource from "#lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
+import gridPatternIndexSource from "#lib/components/ui/grid-pattern/index.ts?raw";
+import gridPatternSource from "#lib/components/ui/grid-pattern/grid-pattern.svelte?raw";
 
 const dashedLineFiles = [
 	{

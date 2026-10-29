@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
+	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
 </script>
 
 <figure class="mx-auto flex w-full max-w-lg flex-col items-center justify-center">

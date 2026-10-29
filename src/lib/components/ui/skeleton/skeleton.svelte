@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn, type WithElementRef, type WithoutChildren } from "$lib/utils.js";
+	import { cn, type WithElementRef, type WithoutChildren } from "#lib/utils.js";
 	import type { HTMLAttributes } from "svelte/elements";
 
 	let {
@@ -12,6 +12,6 @@
 <div
 	bind:this={ref}
 	data-slot="skeleton"
-	class={cn("animate-pulse rounded-md bg-accent", className)}
+	class={cn("bg-muted rounded-md animate-pulse", className)}
 	{...restProps}
 ></div>

@@ -1,4 +1,4 @@
-import { notFoundBlocks } from "$lib/blocks/not-found/all_not_found";
+import { notFoundBlocks } from "#lib/blocks/not-found/all_not_found.js";
 import type { PageLoad } from "./$types";
 
 export const prerender = true;

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import CtaTwo from "$lib/components/efferd/cta/cta-two.svelte";
+	import CtaTwo from "#lib/components/efferd/cta/cta-two.svelte";
 </script>
 
 <svelte:head>

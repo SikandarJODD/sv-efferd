@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
-	import { GridPattern } from "$lib/components/ui/grid-pattern";
-	import { cn } from "$lib/utils";
+	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
+	import { GridPattern } from "#lib/components/ui/grid-pattern/index.js";
+	import { cn } from "#lib/utils.js";
 	import type { HTMLAttributes } from "svelte/elements";
 	type Testimonial = {
 		name: string;

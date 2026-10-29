@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Check } from "@lucide/svelte";
-	import { Button } from "$lib/components/ui/button";
-	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
 
 	type PricingPlan = {
 		name: string;

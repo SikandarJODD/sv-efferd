@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
-	import { cn } from "$lib/utils.js";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { UseClipboard } from "#lib/hooks/use-clipboard.svelte.js";
+	import { cn } from "#lib/utils.js";
 	import CheckIcon from "@lucide/svelte/icons/check";
 	import CopyIcon from "@lucide/svelte/icons/copy";
 	import XIcon from "@lucide/svelte/icons/x";
@@ -17,15 +17,14 @@
 		size = "icon",
 		onCopy,
 		class: className,
-		tabindex = -1,
+		tabindex = 0,
+		"aria-label": ariaLabel = "Copy to clipboard",
 		children,
 		...rest
 	}: CopyButtonProps = $props();
 
-	// this way if the user passes text then the button will be the default size
-	if (size === "icon" && children) {
-		size = "default";
-	}
+	// If the user passes text, the button uses the default size.
+	let resolvedSize = $derived(size === "icon" && children ? "default" : size);
 
 	const clipboard = new UseClipboard();
 </script>
@@ -34,7 +33,8 @@
 	{...rest}
 	bind:ref
 	{variant}
-	{size}
+	aria-label={ariaLabel}
+	size={resolvedSize}
 	{tabindex}
 	class={cn("flex items-center gap-2", className)}
 	type="button"

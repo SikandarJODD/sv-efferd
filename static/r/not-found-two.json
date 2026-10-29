@@ -8,7 +8,7 @@
 		"@lucide/svelte"
 	],
 	"devDependencies": [
-		"@lucide/svelte@^0.577.0"
+		"@lucide/svelte@^1.62.0"
 	],
 	"registryDependencies": [
 		"button",
@@ -17,7 +17,7 @@
 	],
 	"files": [
 		{
-			"content": "<script lang=\"ts\">\n\timport { FullWidthDivider } from \"$lib/components/ui/full-width-divider\";\n\timport * as Empty from \"$lib/components/ui/empty/index\";\n\timport { Button } from \"$lib/components/ui/button\";\n\timport { CompassIcon, HomeIcon } from \"@lucide/svelte\";\n</script>\n\n<div class=\"relative flex min-h-screen w-full items-center justify-center overflow-hidden\">\n\t<Empty.Root>\n\t\t<Empty.Header>\n\t\t\t<Empty.Title class=\"mask-b-from-20% mask-b-to-80% text-9xl font-extrabold\"\n\t\t\t\t>404</Empty.Title\n\t\t\t>\n\t\t\t<Empty.Description class=\"-mt-8 text-nowrap text-foreground/80\">\n\t\t\t\tThe page you're looking for might have been <br />\n\t\t\t\tmoved or doesn't exist.\n\t\t\t</Empty.Description>\n\t\t</Empty.Header>\n\t\t<Empty.Content>\n\t\t\t<div class=\"flex gap-2\">\n\t\t\t\t<Button href=\"/\">\n\t\t\t\t\t<HomeIcon data-icon=\"inline-start\" />\n\t\t\t\t\tGo Home\n\t\t\t\t</Button>\n\n\t\t\t\t<Button href=\"/\" variant=\"outline\">\n\t\t\t\t\t<CompassIcon data-icon=\"inline-start\" />{\" \"}\n\t\t\t\t\tExplore\n\t\t\t\t</Button>\n\t\t\t</div>\n\t\t</Empty.Content>\n\t</Empty.Root>\n</div>\n",
+			"content": "<script lang=\"ts\">\n\timport { FullWidthDivider } from \"#lib/components/ui/full-width-divider/index.js\";\n\timport * as Empty from \"#lib/components/ui/empty/index.js\";\n\timport { Button } from \"#lib/components/ui/button/index.js\";\n\timport { CompassIcon, HomeIcon } from \"@lucide/svelte\";\n</script>\n\n<div class=\"relative flex min-h-screen w-full items-center justify-center overflow-hidden\">\n\t<Empty.Root>\n\t\t<Empty.Header>\n\t\t\t<Empty.Title class=\"mask-b-from-20% mask-b-to-80% text-9xl font-extrabold\"\n\t\t\t\t>404</Empty.Title\n\t\t\t>\n\t\t\t<Empty.Description class=\"-mt-8 text-nowrap text-foreground/80\">\n\t\t\t\tThe page you're looking for might have been <br />\n\t\t\t\tmoved or doesn't exist.\n\t\t\t</Empty.Description>\n\t\t</Empty.Header>\n\t\t<Empty.Content>\n\t\t\t<div class=\"flex gap-2\">\n\t\t\t\t<Button href=\"/\">\n\t\t\t\t\t<HomeIcon data-icon=\"inline-start\" />\n\t\t\t\t\tGo Home\n\t\t\t\t</Button>\n\n\t\t\t\t<Button href=\"/\" variant=\"outline\">\n\t\t\t\t\t<CompassIcon data-icon=\"inline-start\" />{\" \"}\n\t\t\t\t\tExplore\n\t\t\t\t</Button>\n\t\t\t</div>\n\t\t</Empty.Content>\n\t</Empty.Root>\n</div>\n",
 			"type": "registry:component",
 			"target": "efferd/not-found/not-found-two.svelte"
 		}

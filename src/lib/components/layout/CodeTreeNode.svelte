@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { BlockCodeNode } from "$lib/blocks/showcase";
-	import { cn } from "$lib/utils";
+	import type { BlockCodeNode } from "#lib/blocks/showcase.js";
+	import { cn } from "#lib/utils.js";
 	import ChevronDown from "@lucide/svelte/icons/chevron-down";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 	import ExternalLink from "@lucide/svelte/icons/external-link";
@@ -31,7 +31,7 @@
 	<div>
 		<button
 			type="button"
-			class="flex w-full items-center gap-2 rounded-md px-2 py-2 text-left text-[13px] font-mono text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
+			class="flex w-full items-center gap-2 rounded-md px-2 py-2 text-left font-mono text-[13px] text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
 			onclick={() => onToggleFolder(node.id)}
 		>
 			<span class="flex w-4 shrink-0 items-center justify-center">
@@ -101,7 +101,7 @@
 {:else}
 	<div
 		class={cn(
-			"flex items-center gap-1 rounded-md text-[13px] my-px transition-colors",
+			"my-px flex items-center gap-1 rounded-md text-[13px] transition-colors",
 			activeFileId === node.id
 				? "bg-accent text-foreground"
 				: "text-muted-foreground hover:bg-muted/60 hover:text-foreground"

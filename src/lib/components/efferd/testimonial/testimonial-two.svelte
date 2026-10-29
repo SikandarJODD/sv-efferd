@@ -1,6 +1,6 @@
 <script>
-	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
-	import MaskLine from "$lib/components/ui/mask-line/mask-line.svelte";
+	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
+	import MaskLine from "#lib/components/ui/mask-line/mask-line.svelte";
 </script>
 
 <figure

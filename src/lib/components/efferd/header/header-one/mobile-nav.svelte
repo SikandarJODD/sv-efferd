@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { Portal, PortalBackdrop } from "$lib/components/ui/portal";
-	import { cn } from "$lib/utils";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { Portal, PortalBackdrop } from "#lib/components/ui/portal/index.js";
+	import { cn } from "#lib/utils.js";
 	import { MenuIcon, XIcon } from "@lucide/svelte";
 	import { navLinks } from "./nav-links";
 	import { fade } from "svelte/transition";

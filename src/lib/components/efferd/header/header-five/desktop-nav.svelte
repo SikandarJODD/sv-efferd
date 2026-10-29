@@ -1,5 +1,5 @@
 <script lang="ts">
-	import * as NavigationMenu from "$lib/components/ui/navigation-menu/index";
+	import * as NavigationMenu from "#lib/components/ui/navigation-menu/index.js";
 	import LinkItem from "./link-item.svelte";
 	import { companyLinks, companyLinks2, productLinks } from "./nav-links";
 </script>

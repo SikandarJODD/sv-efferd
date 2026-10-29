@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import type { BlockCodeTree } from "$lib/blocks/showcase";
-	import { IsMobile } from "$lib/hooks/is-mobile.svelte.js";
-	import { cn } from "$lib/utils";
+	import type { BlockCodeTree } from "#lib/blocks/showcase.js";
+	import { IsMobile } from "#lib/hooks/is-mobile.svelte.js";
+	import { cn } from "#lib/utils.js";
 	import Palette from "@lucide/svelte/icons/palette";
 	import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
 	import { watch } from "runed";
@@ -10,6 +10,7 @@
 	import { MediaQuery } from "svelte/reactivity";
 	import { scale } from "svelte/transition";
 	import Button from "../ui/button/button.svelte";
+	import { CopyButton } from "../ui/copy-button/index.js";
 	import { DecorIcon } from "../ui/decor-icon";
 	import Separator from "../ui/separator/separator.svelte";
 	import {
@@ -17,7 +18,7 @@
 		TooltipContent,
 		TooltipProvider,
 		TooltipTrigger
-	} from "$lib/components/ui/tooltip";
+	} from "#lib/components/ui/tooltip/index.js";
 	import CodeEditor from "./CodeEditor.svelte";
 	import InstallComponent from "./InstallComponent.svelte";
 
@@ -98,6 +99,7 @@
 		return null;
 	});
 	let canInstall = $derived(Boolean(installId));
+	let blockUrl = $derived(`${page.url.origin}${page.url.pathname}#${id}`);
 
 	function applyIframeScrollbarStyles(
 		iframe: HTMLIFrameElement | null,
@@ -130,7 +132,7 @@
 	);
 </script>
 
-<section {id} class="group">
+<section {id} class="group scroll-mt-10">
 	<div class="relative">
 		<!-- <div class="absolute inset-x-4 -top-14 bottom-0 mx-auto max-w-7xl lg:inset-x-0">
 			<div
@@ -171,6 +173,13 @@
 						<h2 class="text-xl font-medium tracking-tight text-foreground sm:text-xl">
 							{title}
 						</h2>
+						<CopyButton
+							text={blockUrl}
+							size="icon-xs"
+							class="text-muted-foreground hover:text-foreground"
+							aria-label={`Copy link to ${title}`}
+							title={`Copy link to ${title}`}
+						/>
 					</div>
 					{#if description}
 						<p class="mt-1.5 text-sm text-muted-foreground">
@@ -258,7 +267,7 @@
 					</div>
 
 					{#if showViewportControls}
-						<Separator orientation="vertical" class="hidden h-4! lg:block" />
+						<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
 						<span class="hidden text-sm text-muted-foreground lg:block">
 							{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}
 						</span>

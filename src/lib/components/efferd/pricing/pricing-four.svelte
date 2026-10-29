@@ -2,9 +2,9 @@
 	import NumberFlow from "@number-flow/svelte";
 	import { CircleCheck, Star } from "@lucide/svelte";
 	import { AnimatePresence, createLayoutMotion } from "motion-sv";
-	import FrequencyToggle from "$lib/components/efferd/pricing/frequency-toggle.svelte";
-	import { Button } from "$lib/components/ui/button";
-	import { cn } from "$lib/utils";
+	import FrequencyToggle from "#lib/components/efferd/pricing/frequency-toggle.svelte";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { cn } from "#lib/utils.js";
 	import type { FREQUENCY } from "./frequency-toggle.svelte";
 
 	type Plan = {

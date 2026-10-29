@@ -1,25 +1,25 @@
-import type { BlockShowcaseItem } from "$lib/blocks/showcase";
-import { createBlockCodeTree } from "$lib/blocks/showcase";
-import FooterFive from "$lib/components/efferd/footer/footer-five.svelte";
-import FooterFour from "$lib/components/efferd/footer/footer-four.svelte";
-import FooterOne from "$lib/components/efferd/footer/footer-one.svelte";
-import FooterSix from "$lib/components/efferd/footer/footer-six.svelte";
-import FooterThree from "$lib/components/efferd/footer/footer-three.svelte";
-import FooterTwo from "$lib/components/efferd/footer/footer-two.svelte";
+import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
+import { createBlockCodeTree } from "#lib/blocks/showcase.js";
+import FooterFive from "#lib/components/efferd/footer/footer-five.svelte";
+import FooterFour from "#lib/components/efferd/footer/footer-four.svelte";
+import FooterOne from "#lib/components/efferd/footer/footer-one.svelte";
+import FooterSix from "#lib/components/efferd/footer/footer-six.svelte";
+import FooterThree from "#lib/components/efferd/footer/footer-three.svelte";
+import FooterTwo from "#lib/components/efferd/footer/footer-two.svelte";
 
-import animatedContainerSource from "$lib/components/efferd/footer/AnimatedContainer.svelte?raw";
-import linkGroupSource from "$lib/components/efferd/footer/LinkGroup.svelte?raw";
-import footerFiveSource from "$lib/components/efferd/footer/footer-five.svelte?raw";
-import footerFourSource from "$lib/components/efferd/footer/footer-four.svelte?raw";
-import footerOneSource from "$lib/components/efferd/footer/footer-one.svelte?raw";
-import footerSixSource from "$lib/components/efferd/footer/footer-six.svelte?raw";
-import footerThreeSource from "$lib/components/efferd/footer/footer-three.svelte?raw";
-import footerTwoSource from "$lib/components/efferd/footer/footer-two.svelte?raw";
-import appleSvgSource from "$lib/svgs/apple.svelte?raw";
-import githubSvgSource from "$lib/svgs/github.svelte?raw";
-import logoSvgSource from "$lib/svgs/logo.svelte?raw";
-import playStoreSvgSource from "$lib/svgs/play-store.svelte?raw";
-import xSvgSource from "$lib/svgs/x.svelte?raw";
+import animatedContainerSource from "#lib/components/efferd/footer/AnimatedContainer.svelte?raw";
+import linkGroupSource from "#lib/components/efferd/footer/LinkGroup.svelte?raw";
+import footerFiveSource from "#lib/components/efferd/footer/footer-five.svelte?raw";
+import footerFourSource from "#lib/components/efferd/footer/footer-four.svelte?raw";
+import footerOneSource from "#lib/components/efferd/footer/footer-one.svelte?raw";
+import footerSixSource from "#lib/components/efferd/footer/footer-six.svelte?raw";
+import footerThreeSource from "#lib/components/efferd/footer/footer-three.svelte?raw";
+import footerTwoSource from "#lib/components/efferd/footer/footer-two.svelte?raw";
+import appleSvgSource from "#lib/svgs/apple.svelte?raw";
+import githubSvgSource from "#lib/svgs/github.svelte?raw";
+import logoSvgSource from "#lib/svgs/logo.svelte?raw";
+import playStoreSvgSource from "#lib/svgs/play-store.svelte?raw";
+import xSvgSource from "#lib/svgs/x.svelte?raw";
 
 const buttonFiles = [
 	{

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { cn } from "$lib/utils";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { cn } from "#lib/utils.js";
 	import { XIcon } from "@lucide/svelte";
 
 	const latestChange = {
@@ -37,7 +37,8 @@
 			{latestChange.readMore.label}
 		</Button>
 		<Button
-			class="absolute top-2 right-2 z-10 size-6 rounded-full opacity-0 transition-opacity group-hover/latest-change:opacity-100"
+			aria-label="Dismiss update"
+			class="absolute top-2 right-2 z-10 size-6 rounded-full opacity-0 transition-opacity group-hover/latest-change:opacity-100 focus-visible:opacity-100"
 			onclick={() => (isOpen = false)}
 			size="icon-sm"
 			variant="ghost"

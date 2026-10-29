@@ -39,8 +39,14 @@
 				</div>
 			</div>
 			<div class="flex flex-col p-2">
-				<h3 class="font-heading text-sm font-medium md:text-base group-hover:text-emerald-500">{title}</h3>
-				<p class="text-xs text-muted-foreground group-hover:text-emerald-700">{countLabel}</p>
+				<h3
+					class="font-heading text-sm font-medium group-hover:text-emerald-500 md:text-base"
+				>
+					{title}
+				</h3>
+				<p class="text-xs text-muted-foreground group-hover:text-emerald-700">
+					{countLabel}
+				</p>
 				<div class="grid grid-cols-4 gap-0.5 pt-2 pb-1">
 					<div class="h-6 w-full rounded-xs border border-border/80"></div>
 					<div class="h-6 w-full rounded-xs border border-border/80"></div>

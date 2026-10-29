@@ -1,14 +1,14 @@
 <script lang="ts">
-	import Seo from "$lib/components/base/Seo.svelte";
-	import BlockPreview from "$lib/components/layout/BlockPreview.svelte";
+	import Seo from "#lib/components/base/Seo.svelte";
+	import BlockPreview from "#lib/components/layout/BlockPreview.svelte";
 	import type { PageProps } from "./$types";
 
 	let { data }: PageProps = $props();
 </script>
 
 <Seo
-	title="App Shell Blocks"
-	desc="Preview app shell block variants with reusable dashboard layouts, navigation structure, and install-ready source in Svelte Efferd."
+	title="Svelte App Shell Blocks"
+	desc="Browse Svelte app shell blocks for dashboards with sidebars, navigation, and responsive layouts. Copy or install the shadcn-svelte source."
 	link="/blocks/app-shell"
 />
 

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import LogoCloudTwo from "$lib/components/efferd/logo-cloud/two/logo-cloud-two.svelte";
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
-	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
+	import LogoCloudTwo from "#lib/components/efferd/logo-cloud/two/logo-cloud-two.svelte";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
+	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
 </script>
 
 <section class="mb-12">

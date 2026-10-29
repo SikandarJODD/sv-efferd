@@ -1,15 +1,14 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import type { HTMLAttributes } from "svelte/elements";
 	import type { LinkItemType } from "./types";
-	import type { Component } from "svelte";
-	import type { Icon } from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
 
 	type Props = LinkItemType & HTMLAttributes<HTMLAnchorElement>;
 	let { label, description, icon, href, class: className, ...props }: Props = $props();
 
 	// i have added Svelte Component, Lucide Icon so you can have custom-icon.svelte and lucide icon both
-	let IconComponent: Component | typeof Icon = $derived(icon);
+	let IconComponent: LucideIcon = $derived(icon);
 </script>
 
 <a class={cn("flex items-center gap-x-2", className)} {href} {...props}>

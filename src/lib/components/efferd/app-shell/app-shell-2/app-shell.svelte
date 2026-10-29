@@ -1,6 +1,6 @@
 <script lang="ts">
-	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
-	import { cn } from "$lib/utils";
+	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
+	import { cn } from "#lib/utils.js";
 	import type { Snippet } from "svelte";
 	import AppHeader from "./app-header.svelte";
 	import AppSidebar from "./app-sidebar.svelte";

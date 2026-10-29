@@ -8,7 +8,6 @@ Total Blocks: 64
 
 Live Preview: [sv-efferd.pages.dev](https://sv-efferd.pages.dev)
 
-
 ## Categories :
 
 - [Logo Cloud](https://sv-efferd.pages.dev/blocks/logo-cloud)
@@ -45,12 +44,11 @@ pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/hero-one.json
 
 ```svelte
 <script lang="ts">
-  import HeroOne from "$lib/components/efferd/hero/hero-one.svelte";
+  import HeroOne from "#lib/components/efferd/hero/hero-one.svelte";
 </script>
 
 <HeroOne />
 ```
-
 
 ## Credits
 
