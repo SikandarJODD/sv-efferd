@@ -6,6 +6,8 @@
 	import { ModeSwitch } from "../ui/mode-switch";
 	import { getStars, GitHubButton } from "../ui/github-button";
 	import { onMount } from "svelte";
+	import ImportAliasToggle from "../base/import-alias/ImportAliasToggle.svelte";
+	import { importAliasStyle } from "../base/import-alias/import-alias.svelte.js";
 
 	let stars = $state(30);
 	const repo = { owner: "SikandarJODD", repo: "sv-efferd" };
@@ -39,6 +41,7 @@
 		</div>
 
 		<div class="hidden items-center gap-2 md:flex">
+			<ImportAliasToggle bind:value={importAliasStyle.current} />
 			{#each landingSocialLinks as link}
 				<Button
 					target="_blank"
@@ -58,6 +61,7 @@
 		</div>
 
 		<div class="flex items-center gap-2 md:hidden">
+			<ImportAliasToggle bind:value={importAliasStyle.current} />
 			<ModeSwitch variant="ghost" />
 			<MobileNav />
 		</div>

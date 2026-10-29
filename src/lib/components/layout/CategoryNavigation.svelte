@@ -27,6 +27,7 @@
 								isActive(category.slug) &&
 									"bg-emerald-50 text-emerald-500! hover:bg-emerald-200/40 hover:text-emerald-500! dark:bg-emerald-700/20 dark:text-emerald-400 hover:dark:bg-emerald-900/30"
 							)}
+							data-s-event={"category:" + category.slug}
 						>
 							<span class="block w-max text-nowrap capitalize">{category.label}</span>
 						</a>

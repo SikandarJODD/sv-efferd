@@ -13,6 +13,8 @@
 	import Button from "../ui/button/button.svelte";
 	import Code from "./code/code.svelte";
 	import CodeTreeNode from "./CodeTreeNode.svelte";
+	import { importAliasStyle } from "#lib/components/base/import-alias/import-alias.svelte.js";
+	import { transformImportAliases } from "#lib/components/base/import-alias/import-alias.js";
 
 	let { codeTree }: { codeTree: BlockCodeTree } = $props();
 
@@ -23,6 +25,11 @@
 	let files = $derived(flattenBlockCodeFiles(codeTree.nodes));
 	let fallbackFileId = $derived(codeTree.defaultFileId || files[0]?.id || "");
 	let activeFile = $derived(findBlockCodeFile(codeTree, activeFileId) ?? files[0]);
+	let displayedCode = $derived(
+		activeFile?.code
+			? transformImportAliases(activeFile.code, importAliasStyle.current)
+			: ""
+	);
 
 	$effect(() => {
 		activeFileId = fallbackFileId;
@@ -47,8 +54,8 @@
 
 	async function copyCode() {
 		if (!activeFile) return;
-		if (!activeFile.code) return;
-		await clipboard.copy(activeFile.code);
+		if (!displayedCode) return;
+		await clipboard.copy(displayedCode);
 	}
 </script>
 
@@ -154,7 +161,7 @@
 		<div class="">
 			{#if activeFile?.code}
 				<Code
-					code={activeFile.code}
+					code={displayedCode}
 					lang={activeFile.lang}
 					highlight={activeFile.highlight}
 				/>
