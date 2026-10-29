@@ -7,8 +7,8 @@
 </script>
 
 <Seo
-	title="Integration Blocks"
-	desc="Preview curated integration block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte Integration Blocks"
+	desc="Browse Svelte integration blocks for connected apps, tools, and services. Preview each layout and copy the source."
 	link="/blocks/integrations"
 />
 

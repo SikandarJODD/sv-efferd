@@ -8,12 +8,14 @@
 	import UnorderedList from "#lib/components/markdown/UnorderedList.svelte";
 	import { Button } from "#lib/components/ui/button/index.js";
 
-	const roadmapItems = ["Add SEO metatags", "Build templates", "Expand docs and product polish"];
+	const roadmapItems = ["Build templates", "Expand docs and product polish"];
 </script>
 
 <DocsPage
 	title="Roadmap & Feedback"
 	description="The roadmap is short on purpose right now: ship the essentials first, then iterate with feedback."
+	seoTitle="Svelte Efferd Roadmap and Feedback"
+	seoDescription="See what is planned for Svelte Efferd and where to report bugs, request blocks, or share feedback."
 >
 	{#snippet actions()}
 		<Button href={docsSupportLinks.githubIssues} size="sm" target="_blank" rel="noreferrer">

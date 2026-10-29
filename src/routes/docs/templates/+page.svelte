@@ -11,6 +11,8 @@
 <DocsPage
 	title="Templates"
 	description="Templates are planned, but this section stays honest for now: the feature is not ready yet."
+	seoTitle="Svelte Efferd Templates"
+	seoDescription="Svelte Efferd templates are planned. Until they arrive, combine individual blocks to build complete pages."
 >
 	{#snippet actions()}
 		<Button href="/docs/roadmap-feedback" size="sm" variant="outline">See Roadmap</Button>
@@ -29,6 +31,6 @@
 
 	<Paragraph>
 		For now, the best workflow is to combine individual blocks from the
-		<Link href="/blocks">Blocks</Link> section and track upcoming work on the roadmap page.
+		<Link href="/">Blocks</Link> section and track upcoming work on the roadmap page.
 	</Paragraph>
 </DocsPage>

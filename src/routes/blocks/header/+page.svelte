@@ -7,8 +7,8 @@
 </script>
 
 <Seo
-	title="Header Blocks"
-	desc="Preview curated header block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte Header Blocks"
+	desc="Browse responsive Svelte header blocks with desktop and mobile navigation. Preview each layout and copy or install the source."
 	link="/blocks/header"
 />
 

@@ -7,8 +7,8 @@
 </script>
 
 <Seo
-	title="Hero Blocks"
-	desc="Preview curated hero block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte Hero Blocks"
+	desc="Browse Svelte hero blocks for product and landing pages. Preview each layout, copy the source, or install it with shadcn-svelte."
 	link="/blocks/hero"
 />
 

@@ -7,8 +7,8 @@
 </script>
 
 <Seo
-	title="Pricing Blocks"
-	desc="Preview curated pricing block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte Pricing Blocks"
+	desc="Browse Svelte pricing blocks for plans, feature comparisons, and billing options. Preview each layout and copy the source."
 	link="/blocks/pricing"
 />
 

@@ -7,8 +7,8 @@
 </script>
 
 <Seo
-	title="Auth Blocks"
-	desc="Preview curated auth block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte Auth Blocks"
+	desc="Browse Svelte auth blocks for sign-in, sign-up, and account screens. Preview each layout and copy or install the source."
 	link="/blocks/auth"
 />
 

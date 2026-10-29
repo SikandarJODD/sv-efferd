@@ -6,9 +6,9 @@
 	const siteName = "Svelte Efferd Blocks";
 	const siteUrl = "https://sv-efferd.pages.dev";
 	const canonicalUrl = `${siteUrl}/`;
-	const title = "Svelte Efferd Blocks | Marketing Blocks for Shadcn-Svelte";
+	const title = "Svelte Marketing Blocks for shadcn-svelte | Efferd";
 	const description =
-		"Browse beautiful shadcn-svelte marketing blocks for landing pages, hero sections, CTAs, pricing, testimonials, FAQs, headers, footers, and more.";
+		"Browse 60+ open-source Svelte marketing blocks built with Tailwind CSS and shadcn-svelte. Preview each block and copy or install the source.";
 	const keywords = [
 		"shadcn-svelte marketing blocks",
 		"Svelte marketing blocks",

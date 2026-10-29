@@ -15,9 +15,11 @@
 <DocsPage
 	title="Introduction"
 	description="Svelte Efferd is a growing collection of production-ready Svelte blocks designed to save build time without making the site feel generic."
+	seoTitle="Svelte Efferd Documentation"
+	seoDescription="Learn how to install Svelte Efferd blocks, add them through the shadcn-svelte registry, and adapt the source for your project."
 >
 	{#snippet actions()}
-		<Button href="/blocks" size="sm">Browse Blocks</Button>
+		<Button href="/" size="sm">Browse Blocks</Button>
 		<Button href="/changelog" size="sm" variant="outline">View Changelog</Button>
 	{/snippet}
 
@@ -42,7 +44,7 @@
 
 	<H3>Start here</H3>
 	<Paragraph>
-		If you want to explore the library first, head to <Link href="/blocks">Blocks</Link>. If you
+		If you want to explore the library first, head to <Link href="/">Blocks</Link>. If you
 		already know what you want to add, jump to <Link href="/docs/installation"
 			>Installation</Link
 		>.

@@ -14,9 +14,11 @@
 <DocsPage
 	title="Usage"
 	description="Once the registry is ready, Efferd works best as a fast browse-to-build loop: compare variants, install the exact block, then tailor it to your product."
+	seoTitle="How to Use Svelte Efferd Blocks"
+	seoDescription="Learn how to compare block variants, install the one you need, and adapt its Svelte and Tailwind CSS source."
 >
 	{#snippet actions()}
-		<Button href="/blocks" size="sm">Browse Blocks</Button>
+		<Button href="/" size="sm">Browse Blocks</Button>
 		<Button href="/docs/installation" size="sm" variant="outline">Review Installation</Button>
 	{/snippet}
 
@@ -31,7 +33,7 @@
 		<Step>
 			<H2 class="mt-0 text-xl">Start with the right category</H2>
 			<Paragraph>
-				Open <Link href="/blocks">Blocks</Link> and go to the section family that matches your
+				Open <Link href="/">Blocks</Link> and go to the section family that matches your
 				page: hero, pricing, FAQ, footer, and so on.
 			</Paragraph>
 		</Step>

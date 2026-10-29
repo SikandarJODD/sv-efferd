@@ -7,8 +7,8 @@
 </script>
 
 <Seo
-	title="App Shell Blocks"
-	desc="Preview app shell block variants with reusable dashboard layouts, navigation structure, and install-ready source in Svelte Efferd."
+	title="Svelte App Shell Blocks"
+	desc="Browse Svelte app shell blocks for dashboards with sidebars, navigation, and responsive layouts. Copy or install the shadcn-svelte source."
 	link="/blocks/app-shell"
 />
 

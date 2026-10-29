@@ -14,7 +14,7 @@
 
 	const productLinks: FooterLink[] = [
 		{ label: "Home", href: "/" },
-		{ label: "Blocks", href: "/blocks" },
+		{ label: "Blocks", href: "/" },
 		{ label: "Changelog", href: "/changelog" }
 	];
 

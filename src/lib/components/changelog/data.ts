@@ -24,6 +24,13 @@ export const changelogPageData: ChangelogPageData = {
 	description: "Latest product updates and new blocks.",
 	entries: [
 		{
+			id: "2026-10-29",
+			date: "29 October 2026",
+			sortDate: "2026-10-29",
+			title: "SvelteKit 3",
+			description: "Updated the site to SvelteKit 3."
+		},
+		{
 			id: "2026-07-12",
 			date: "12 July 2026",
 			sortDate: "2026-07-12",

@@ -7,8 +7,8 @@
 </script>
 
 <Seo
-	title="Contact Blocks"
-	desc="Preview curated contact block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte Contact Blocks"
+	desc="Browse Svelte contact blocks with forms, contact details, and support layouts. Preview each design and copy the source."
 	link="/blocks/contact"
 />
 

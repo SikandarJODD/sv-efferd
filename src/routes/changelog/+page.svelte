@@ -3,7 +3,7 @@
 	import ChangelogPage from "#lib/components/changelog/changelog-page.svelte";
 
 	const description =
-		"Discover new Svelte Efferd blocks, features, fixes, and improvements in the project changelog.";
+		"See new Svelte Efferd blocks, dependency updates, and site changes.";
 </script>
 
 <Seo title="Changelog" desc={description} link="/changelog" />

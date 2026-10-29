@@ -9,16 +9,32 @@
 	type DocsPageProps = {
 		title: string;
 		description: string;
+		seoTitle?: string;
+		seoDescription?: string;
 		class?: string;
 		actions?: Snippet;
 		children?: Snippet;
 	};
 
-	let { title, description, class: className = "", actions, children }: DocsPageProps = $props();
-	let seoTitle = $derived(title === "Introduction" ? "Svelte Blocks Documentation" : title);
+	let {
+		title,
+		description,
+		seoTitle,
+		seoDescription,
+		class: className = "",
+		actions,
+		children
+	}: DocsPageProps = $props();
+	let resolvedSeoTitle = $derived(
+		seoTitle ?? (title === "Introduction" ? "Svelte Blocks Documentation" : title)
+	);
 </script>
 
-<Seo title={seoTitle} desc={description} link={page.url.pathname} />
+<Seo
+	title={resolvedSeoTitle}
+	desc={seoDescription ?? description}
+	link={page.url.pathname}
+/>
 
 <section class={cn("mx-auto w-full max-w-4xl pb-16 sm:pb-0", className)}>
 	<div class="overflow-hidden border-x border-border/80">

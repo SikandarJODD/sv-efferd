@@ -7,8 +7,8 @@
 </script>
 
 <Seo
-	title="Image Gallery Blocks"
-	desc="Preview curated image gallery block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte Image Gallery Blocks"
+	desc="Browse responsive Svelte image gallery blocks for portfolios, products, and editorial layouts. Preview and copy the source."
 	link="/blocks/image-gallery"
 />
 

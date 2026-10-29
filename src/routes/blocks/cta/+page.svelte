@@ -7,8 +7,8 @@
 </script>
 
 <Seo
-	title="CTA Blocks"
-	desc="Preview curated CTA block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte CTA Blocks"
+	desc="Browse Svelte call-to-action blocks for landing pages and product sites. Preview each layout and copy or install the source."
 	link="/blocks/cta"
 />
 

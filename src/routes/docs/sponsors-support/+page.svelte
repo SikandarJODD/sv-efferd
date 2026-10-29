@@ -12,6 +12,8 @@
 <DocsPage
 	title="Sponsors & Support"
 	description="If Efferd saves you time, the easiest ways to help are starring the repo, sharing it, and reaching out with sponsorship interest."
+	seoTitle="Support Svelte Efferd"
+	seoDescription="Support Svelte Efferd by starring the repository, sharing the project, or getting in touch about sponsorship."
 >
 	{#snippet actions()}
 		<Button href={docsSupportLinks.githubRepo} size="sm" target="_blank" rel="noreferrer">

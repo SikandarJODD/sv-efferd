@@ -37,7 +37,7 @@
 	<div class=" relative z-10 mx-auto flex flex-col items-center text-center">
 		<a
 			class="group mx-auto flex w-fit items-center gap-3 rounded-full border bg-transparent py-1 pr-1 pl-3 shadow-lg backdrop-blur-lg"
-			href="/blocks"
+			href="/"
 			id="link"
 		>
 			<Rocket class="size-3 text-muted-foreground" />

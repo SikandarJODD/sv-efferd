@@ -7,8 +7,8 @@
 </script>
 
 <Seo
-	title="FAQ Blocks"
-	desc="Preview curated FAQ block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte FAQ Blocks"
+	desc="Browse Svelte FAQ blocks with accordion and split-page layouts. Preview each design and copy the shadcn-svelte source."
 	link="/blocks/faqs"
 />
 

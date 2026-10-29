@@ -32,7 +32,7 @@ export const landingHero = {
 		"Save hours of design time with clean, ready-to-use shadcn blocks that just work, modern, responsive, and built for speed.",
 	primaryCta: {
 		label: "Explore",
-		href: "/blocks"
+		href: "/"
 	},
 	secondaryCta: {
 		label: "Star on GitHub",

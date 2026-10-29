@@ -7,8 +7,8 @@
 </script>
 
 <Seo
-	title="Feature Blocks"
-	desc="Preview curated feature block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte Feature Blocks"
+	desc="Browse Svelte feature blocks for product benefits, capabilities, and workflows. Preview each layout and copy the source."
 	link="/blocks/features"
 />
 

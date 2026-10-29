@@ -7,8 +7,8 @@
 </script>
 
 <Seo
-	title="Testimonials Blocks"
-	desc="Preview curated testimonial block variants with a tree-style source explorer in Svelte Efferd Blocks."
+	title="Svelte Testimonial Blocks"
+	desc="Browse Svelte testimonial blocks for customer quotes and social proof. Preview each layout and copy the source."
 	link="/blocks/testimonials"
 />
 
