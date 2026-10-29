@@ -120,6 +120,9 @@ importers:
       typescript:
         specifier: ^6.0.0
         version: 6.0.3
+      vaul-svelte:
+        specifier: 1.0.0-next.7
+        version: 1.0.0-next.7(svelte@5.57.3)
       vite:
         specifier: ^8.0.12
         version: 8.3.5(jiti@2.7.0)
@@ -1251,6 +1254,12 @@ packages:
   unist-util-visit@5.2.0:
     resolution: {integrity: sha512-fpsYs/VVoZxfGY9/j3FQpZmN8wdLJaV1Pt38AaJNZu9uKIHcFU3halCdBveEq1HGKO1OEfJY65w1zvoFV1b3qQ==}
 
+  vaul-svelte@1.0.0-next.7:
+    resolution: {integrity: sha512-7zN7Bi3dFQixvvbUJY9uGDe7Ws/dGZeBQR2pXdXmzQiakjrxBvWo0QrmsX3HK+VH+SZOltz378cmgmCS9f9rSg==}
+    engines: {node: '>=18', pnpm: '>=8.7.0'}
+    peerDependencies:
+      svelte: ^5.0.0
+
   vfile-message@4.0.3:
     resolution: {integrity: sha512-QTHzsGd1EhbZs4AsQ20JX1rC3cOlt/IWJruk893DfLRr57lcnOeMaWG4K0JrRta4mIJZKth2Au3mM3u03/JWKw==}
 
@@ -2328,6 +2337,12 @@ snapshots:
       '@types/unist': 3.0.3
       unist-util-is: 6.0.1
       unist-util-visit-parents: 6.1.0
+
+  vaul-svelte@1.0.0-next.7(svelte@5.57.3):
+    dependencies:
+      runed: 0.23.4(svelte@5.57.3)
+      svelte: 5.57.3
+      svelte-toolbelt: 0.7.1(svelte@5.57.3)
 
   vfile-message@4.0.3:
     dependencies:

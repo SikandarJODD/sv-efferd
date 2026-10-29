@@ -17,7 +17,8 @@
 		size = "icon",
 		onCopy,
 		class: className,
-		tabindex = -1,
+		tabindex = 0,
+		"aria-label": ariaLabel = "Copy to clipboard",
 		children,
 		...rest
 	}: CopyButtonProps = $props();
@@ -32,6 +33,7 @@
 	{...rest}
 	bind:ref
 	{variant}
+	aria-label={ariaLabel}
 	size={resolvedSize}
 	{tabindex}
 	class={cn("flex items-center gap-2", className)}

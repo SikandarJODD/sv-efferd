@@ -46,6 +46,7 @@
 {#snippet scrollToTop()}
 	<div in:fly={{ y: 20 }} out:fly={{ y: 20 }} class="fixed right-4 bottom-4 z-50">
 		<Button
+			aria-label="Scroll to top"
 			size="icon"
 			variant="secondary"
 			class="cursor-pointer rounded-full"

@@ -21,7 +21,15 @@
 	<Tooltip.Root>
 		<Tooltip.Trigger>
 			{#snippet child({ props })}
-				<Button {...props} onclick={toggleMode} {variant} {size}>
+				<Button
+					{...props}
+					aria-label={mode.current === "dark"
+						? "Switch to light mode"
+						: "Switch to dark mode"}
+					onclick={toggleMode}
+					{variant}
+					{size}
+				>
 					{#if mode.current === "light"}
 						<SunIcon
 							class="scale-100 rotate-0 transition-all! dark:scale-0 dark:-rotate-90"

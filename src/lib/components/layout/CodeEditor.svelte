@@ -130,6 +130,7 @@
 
 				{#if activeFile?.code}
 					<Button
+						aria-label={clipboard.status === "success" ? "Code copied" : "Copy code"}
 						class="h-8 w-8 shrink-0"
 						variant="ghost"
 						size="icon"

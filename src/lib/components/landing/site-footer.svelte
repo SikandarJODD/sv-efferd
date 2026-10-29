@@ -66,7 +66,14 @@
 					</div>
 
 					<div class="flex flex-wrap items-center gap-2">
-						<Button onclick={toggleMode} variant="outline" size="icon-sm">
+						<Button
+							aria-label={mode.current === "dark"
+								? "Switch to light mode"
+								: "Switch to dark mode"}
+							onclick={toggleMode}
+							variant="outline"
+							size="icon-sm"
+						>
 							{#if mode.current === "dark"}
 								<SunIcon class="size-4" />
 							{:else}

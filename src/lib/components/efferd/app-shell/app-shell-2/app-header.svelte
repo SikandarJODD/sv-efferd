@@ -28,7 +28,7 @@
 		<AppBreadcrumb page={activeItem} />
 	</div>
 	<div class="flex items-center gap-3">
-		<Button size="icon-xs" variant="outline">
+		<Button aria-label="Send" size="icon-xs" variant="outline">
 			<SendIcon />
 		</Button>
 		<Button aria-label="Notifications" size="icon-xs" variant="outline">
