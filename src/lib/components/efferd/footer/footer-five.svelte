@@ -3,7 +3,9 @@
 	import AppleLogo from "#lib/svgs/apple.svelte";
 	import PlayStoreLogo from "#lib/svgs/play-store.svelte";
 	import XLogo from "#lib/svgs/x.svelte";
-	import { FacebookIcon, InstagramIcon, LinkedinIcon } from "@lucide/svelte";
+	import FacebookIcon from "#lib/svgs/facebook.svelte";
+	import InstagramIcon from "#lib/svgs/instagram.svelte";
+	import LinkedinIcon from "#lib/svgs/linkedin.svelte";
 	import type { Component } from "svelte";
 
 	type FooterLink = {

@@ -6,13 +6,13 @@
 		Settings2Icon,
 		SparklesIcon,
 		ZapIcon,
-		type Icon
+		type LucideIcon
 	} from "@lucide/svelte";
 	import FeatureCard from "./feature-card.svelte";
 
 	type Feature = {
 		title: string;
-		icon: typeof Icon;
+		icon: LucideIcon;
 		description: string;
 	};
 

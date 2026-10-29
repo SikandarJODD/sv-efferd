@@ -12,16 +12,15 @@
 		LayoutGridIcon,
 		LifeBuoyIcon,
 		PowerIcon,
-		type Icon
+		type LucideIcon
 	} from "@lucide/svelte";
-	import type { Component } from "svelte";
 
 	type CategoryId = "all" | "getting-started" | "features" | "billing" | "support";
 
 	type Category = {
 		id: CategoryId;
 		label: string;
-		icon: Component | typeof Icon;
+		icon: LucideIcon;
 	};
 
 	type Faq = {

@@ -1,12 +1,11 @@
 <script lang="ts">
-	import { CheckCircle2, type Icon as IconType } from "@lucide/svelte";
+	import { CheckCircle2, type LucideIcon } from "@lucide/svelte";
 	import { Button, type ButtonVariant } from "#lib/components/ui/button/index.js";
 	import { cn } from "#lib/utils.js";
-	import type { Component } from "svelte";
 	import type { HTMLAttributes } from "svelte/elements";
 
 	type PricingCardProps = HTMLAttributes<HTMLDivElement> & {
-		icon: typeof IconType | Component;
+		icon: LucideIcon;
 		name: string;
 		price: string;
 		description: string;

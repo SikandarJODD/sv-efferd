@@ -37,7 +37,7 @@
 	);
 
 	let imageSource = $derived(
-		fallbackSource ?? (inView ? (view.isInView ? src : undefined) : src)
+		fallbackSource ?? (inView ? (view.current ? src : undefined) : src)
 	);
 
 	function handleError() {

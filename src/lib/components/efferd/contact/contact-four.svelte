@@ -4,10 +4,10 @@
 	import { Input } from "#lib/components/ui/input/index.js";
 	import { Textarea } from "#lib/components/ui/textarea/index.js";
 	import { cn } from "#lib/utils.js";
-	import { Icon as LucideIcon, MailIcon, PhoneIcon } from "@lucide/svelte";
+	import { MailIcon, PhoneIcon, type LucideIcon } from "@lucide/svelte";
 
 	type ContactInfoItem = {
-		icon: typeof LucideIcon;
+		icon: LucideIcon;
 		label: string;
 		value: string;
 		href: string;

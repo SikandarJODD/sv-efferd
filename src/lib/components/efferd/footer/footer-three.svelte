@@ -2,18 +2,17 @@
 	import AnimatedContainer from "#lib/components/efferd/footer/AnimatedContainer.svelte";
 	import { cn } from "#lib/utils.js";
 	import Logo from "#lib/svgs/logo.svelte";
-	import {
-		FacebookIcon,
-		InstagramIcon,
-		LinkedinIcon,
-		YoutubeIcon,
-		type Icon
-	} from "@lucide/svelte";
+	import FacebookIcon from "#lib/svgs/facebook.svelte";
+	import InstagramIcon from "#lib/svgs/instagram.svelte";
+	import LinkedinIcon from "#lib/svgs/linkedin.svelte";
+	import YoutubeIcon from "#lib/svgs/youtube.svelte";
+	import type { Component } from "svelte";
+	import type { SVGAttributes } from "svelte/elements";
 
 	type FooterLink = {
 		title: string;
 		href: string;
-		icon?: typeof Icon;
+		icon?: Component<SVGAttributes<SVGSVGElement>>;
 	};
 
 	type FooterSection = {

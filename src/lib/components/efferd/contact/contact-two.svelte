@@ -2,15 +2,16 @@
 	import { cn } from "#lib/utils.js";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import XLogo from "#lib/svgs/x.svelte";
-	import { Mail, Users, type Icon as IconType } from "@lucide/svelte";
+	import { Mail, Users, type LucideIcon } from "@lucide/svelte";
 	import type { Component } from "svelte";
+	import type { SVGAttributes } from "svelte/elements";
 
 	const APP_EMAIL = "mail@example.com";
 
 	type Data = {
 		title: string;
 		description: string;
-		icon: typeof IconType | Component;
+		icon: LucideIcon | Component<SVGAttributes<SVGSVGElement>>;
 		href: string;
 		label: string;
 	};

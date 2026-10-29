@@ -3,7 +3,7 @@
 	import GithubLogo from "#lib/svgs/github.svelte";
 	import XLogo from "#lib/svgs/x.svelte";
 	import { cn } from "#lib/utils.js";
-	import { Mail, MapPin, Phone, type Icon as IconType } from "@lucide/svelte";
+	import { Mail, MapPin, Phone, type LucideIcon } from "@lucide/svelte";
 	import type { Component } from "svelte";
 
 	const APP_EMAIL = "mail@example.com";
@@ -13,7 +13,7 @@
 	type ContactItem = {
 		title: string;
 		description: string;
-		icon: typeof IconType;
+		icon: LucideIcon;
 		content: {
 			type: "link" | "text";
 			label: string;

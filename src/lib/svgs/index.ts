@@ -13,6 +13,10 @@ import Clerk from "./clerk.svelte";
 import Openai from "./openai.svelte";
 import Apple from "./apple.svelte";
 import PlayStore from "./play-store.svelte";
+import Facebook from "./facebook.svelte";
+import Instagram from "./instagram.svelte";
+import Linkedin from "./linkedin.svelte";
+import Youtube from "./youtube.svelte";
 
 export {
 	Github,
@@ -29,5 +33,9 @@ export {
 	Clerk,
 	Openai,
 	Apple,
-	PlayStore
+	PlayStore,
+	Facebook,
+	Instagram,
+	Linkedin,
+	Youtube
 };
