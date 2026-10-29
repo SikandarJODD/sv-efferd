@@ -221,29 +221,27 @@ number-flow-svelte::part(suffix) {
 }
 
 /* Scroll Fade Effect  */
-@layer base {
-	@keyframes show-top-mask {
-		to {
-			--top-mask-height: var(--mask-height);
-		}
+@keyframes show-top-mask {
+	to {
+		--top-mask-height: var(--mask-height);
 	}
+}
 
-	@keyframes hide-bottom-mask {
-		to {
-			--bottom-mask-height: 0px;
-		}
+@keyframes hide-bottom-mask {
+	to {
+		--bottom-mask-height: 0px;
 	}
+}
 
-	@keyframes show-left-mask {
-		to {
-			--left-mask-width: var(--mask-width);
-		}
+@keyframes show-left-mask {
+	to {
+		--left-mask-width: var(--mask-width);
 	}
+}
 
-	@keyframes hide-right-mask {
-		to {
-			--right-mask-width: 0px;
-		}
+@keyframes hide-right-mask {
+	to {
+		--right-mask-width: 0px;
 	}
 }
 

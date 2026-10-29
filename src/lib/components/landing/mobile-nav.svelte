@@ -38,19 +38,20 @@
 				<Button
 					{...props}
 					aria-label="Open menu"
-					class="border-border/80 bg-muted/50 backdrop-blur-sm lg:bg-background/70"
 					size="icon-sm"
-					variant="secondary"
+					variant="ghost"
 				>
 					<MenuIcon class="size-4" />
 				</Button>
 			{/snippet}
 		</Drawer.Trigger>
 
-		<Drawer.Content class="max-h-[85svh] px-4 pt-2 pb-5">
+		<Drawer.Content
+			class="z-[70] max-h-[85svh] px-4 pt-2 pb-[calc(1.25rem+env(safe-area-inset-bottom,0px))] data-[vaul-drawer-direction=bottom]:rounded-t-3xl"
+		>
 			<div class="mx-auto w-full max-w-lg overflow-y-auto">
 				<Drawer.Header class="relative px-0 py-3 text-left">
-					<Drawer.Title>Menu</Drawer.Title>
+					<Drawer.Title class="sr-only">Menu</Drawer.Title>
 					<Drawer.Description class="sr-only">Site navigation</Drawer.Description>
 					<Drawer.Close>
 						{#snippet child({ props })}
@@ -68,7 +69,7 @@
 				</Drawer.Header>
 
 				<nav aria-label="Mobile navigation" class="space-y-3">
-					<div class="grid grid-cols-2 gap-1">
+					<div class="grid grid-cols-1 gap-1">
 						{#each landingNavLinks as link (link.href)}
 							<Button
 								class="justify-start"

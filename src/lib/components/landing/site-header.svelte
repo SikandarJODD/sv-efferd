@@ -14,7 +14,9 @@
 	});
 </script>
 
-<header class="relative z-20 mx-auto max-w-7xl border-b border-border/80">
+<header
+	class="sticky top-0 z-[60] mx-auto max-w-7xl border-b border-border/80 bg-background/95 backdrop-blur-sm"
+>
 	<nav class="cpx flex h-14 items-center justify-between gap-3">
 		<a aria-label="Efferd home" class="flex shrink-0 px-1" href="/">
 			<!-- <Logo class="h-5 w-auto" /> -->
@@ -56,7 +58,7 @@
 		</div>
 
 		<div class="flex items-center gap-2 md:hidden">
-			<ModeSwitch />
+			<ModeSwitch variant="ghost" />
 			<MobileNav />
 		</div>
 	</nav>

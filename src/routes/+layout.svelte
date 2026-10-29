@@ -46,9 +46,7 @@
 		Skip to content
 	</a>
 	<div class="relative supports-[overflow:clip]:overflow-clip dark:bg-background">
-		<div>
-			<SiteHeader />
-		</div>
+		<SiteHeader />
 		<main
 			id="main"
 			class={cn(

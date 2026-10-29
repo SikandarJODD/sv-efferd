@@ -19,7 +19,9 @@
 			position="bottom-right"
 		/>
 		<div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-			<h2 class="text-sm font-semibold tracking-tight text-foreground">Marketing</h2>
+			<h2 class="text-sm font-medium tracking-tight text-foreground lg:font-semibold">
+				Marketing
+			</h2>
 		</div>
 	</div>
 
@@ -51,8 +53,8 @@
 		/>
 		<div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
 			<div class="flex items-center gap-2">
-				<h2 class="text-sm font-semibold tracking-tight text-foreground">
-					Sidebar / Dashboard
+				<h2 class="text-sm font-medium tracking-tight text-foreground lg:font-semibold">
+					App Shell
 				</h2>
 				<Badge variant="emerald">New</Badge>
 			</div>
