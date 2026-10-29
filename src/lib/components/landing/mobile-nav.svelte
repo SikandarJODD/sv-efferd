@@ -48,6 +48,8 @@
 
 		<Drawer.Content
 			class="z-[70] max-h-[85svh] px-4 pt-2 pb-[calc(1.25rem+env(safe-area-inset-bottom,0px))] data-[vaul-drawer-direction=bottom]:rounded-t-3xl"
+			overlayProps={{ style: "animation-duration: 280ms; transition-duration: 280ms;" }}
+			style="animation-duration: 280ms; transition-duration: 280ms;"
 		>
 			<div class="mx-auto w-full max-w-lg overflow-y-auto">
 				<Drawer.Header class="relative px-0 py-3 text-left">

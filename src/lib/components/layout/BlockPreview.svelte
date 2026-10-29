@@ -258,7 +258,7 @@
 					</div>
 
 					{#if showViewportControls}
-						<Separator orientation="vertical" class="hidden h-4! lg:block" />
+						<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
 						<span class="hidden text-sm text-muted-foreground lg:block">
 							{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}
 						</span>

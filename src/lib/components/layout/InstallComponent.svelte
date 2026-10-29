@@ -22,7 +22,7 @@
 				<Add.Button
 					class="min-h-8 min-w-0 py-1 pr-1 md:h-8 md:py-0 md:pr-2 md:pl-1 [&>div]:size-8"
 				/>
-				<Add.GroupSeparator class="h-4" />
+				<Add.GroupSeparator />
 				<Add.Dropdown class="size-8">
 					<Add.DropdownContent>
 						{#each AGENTS as addAgent (addAgent)}

@@ -10,15 +10,17 @@
 		ref = $bindable(null),
 		class: className,
 		portalProps,
+		overlayProps,
 		children,
 		...restProps
 	}: DrawerPrimitive.ContentProps & {
 		portalProps?: WithoutChildrenOrChild<ComponentProps<typeof DrawerPortal>>;
+		overlayProps?: WithoutChildrenOrChild<ComponentProps<typeof DrawerOverlay>>;
 	} = $props();
 </script>
 
 <DrawerPortal {...portalProps}>
-	<DrawerOverlay />
+	<DrawerOverlay {...overlayProps} />
 	<DrawerPrimitive.Content
 		bind:ref
 		data-slot="drawer-content"

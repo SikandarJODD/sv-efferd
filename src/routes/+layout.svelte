@@ -39,12 +39,12 @@
 		{@render children()}
 	</div>
 {:else}
-	<a
+	<!-- <a
 		class="fixed top-3 left-3 z-[100] -translate-y-20 rounded-md bg-background px-3 py-2 text-sm font-medium shadow-md transition-transform focus:translate-y-0"
 		href="#main"
 	>
 		Skip to content
-	</a>
+	</a> -->
 	<div class="relative supports-[overflow:clip]:overflow-clip dark:bg-background">
 		<SiteHeader />
 		<main

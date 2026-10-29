@@ -17,7 +17,7 @@
 <header
 	class="sticky top-0 z-[60] mx-auto max-w-7xl border-b border-border/80 bg-background/95 backdrop-blur-sm"
 >
-	<nav class="cpx flex h-14 items-center justify-between gap-3">
+	<nav class="cpx flex h-12 items-center justify-between gap-3">
 		<a aria-label="Efferd home" class="flex shrink-0 px-1" href="/">
 			<!-- <Logo class="h-5 w-auto" /> -->
 			<span class="font-mono font-medium tracking-tight">Svelte Efferd</span>
@@ -27,7 +27,7 @@
 			<div class="flex items-center gap-1">
 				{#each landingNavLinks as link}
 					<Button
-						class="px-3 text-sm text-muted-foreground hover:text-foreground"
+						class="rounded-full px-3 text-sm text-muted-foreground hover:text-foreground"
 						href={link.href}
 						size="sm"
 						variant="ghost"
@@ -48,7 +48,7 @@
 					variant="ghost"
 				>
 					{#if link.id === "x"}
-						<XLogo class="size-4" />
+						<XLogo class="size-3.5" />
 					{/if}
 				</Button>
 			{/each}

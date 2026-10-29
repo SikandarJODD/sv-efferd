@@ -39,7 +39,7 @@
 				</Button>
 			{/snippet}
 		</Tooltip.Trigger>
-		<Tooltip.Content side="bottom" align="center">
+		<Tooltip.Content side="bottom" align="center" class="z-[100]">
 			<p>Press <Kbd>D</Kbd></p>
 		</Tooltip.Content>
 	</Tooltip.Root>

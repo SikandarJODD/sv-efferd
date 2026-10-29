@@ -18,11 +18,11 @@
 <div>
 	{#if !isBlocksRoot}
 		<CategoryNavigation />
-		<section>
+		<!-- <section>
 			<div
 				class="h-6 w-full bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] opacity-35"
 			></div>
-		</section>
+		</section> -->
 		{#if currentCategory}
 			<header class="border-b border-border/80 px-5 py-8 sm:px-6 lg:px-7">
 				<div class="mx-auto max-w-7xl">
