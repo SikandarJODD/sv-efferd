@@ -17,8 +17,7 @@ export default defineConfig({
 			// 		toggleButtonPos: "bottom-right"
 			// 	}
 			// },
-			adapter: adapter(),
-			alias: { $ui: "src/lib/components/ui" }
+			adapter: adapter()
 		})
 	]
 });
