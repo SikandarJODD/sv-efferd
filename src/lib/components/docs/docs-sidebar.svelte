@@ -1,15 +1,15 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import { StripedPattern } from "$lib/components/magic/striped-pattern";
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
-	import { cn } from "$lib/utils";
+	import { StripedPattern } from "#lib/components/magic/striped-pattern/index.js";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
+	import { cn } from "#lib/utils.js";
 	import { docsPrimaryPages, docsSecondaryPages, normalizeDocsPath } from "./config";
 
 	let currentPath = $derived(normalizeDocsPath(page.url.pathname));
 
 	function navItemClass(isActive: boolean, tone: "primary" | "secondary") {
 		return cn(
-			"flex items-center rounded-md  px-2.5 py-2 text-sm leading-none transition-colors",
+			"flex items-center rounded-md px-2.5 py-2 text-sm leading-none transition-colors",
 			isActive
 				? "border-border/80 bg-foreground/[0.04] font-medium text-primary/80!"
 				: "border-transparent hover:bg-foreground/[0.03] hover:text-foreground",

@@ -1,14 +1,18 @@
 <script lang="ts">
 	import { AtSignIcon, ChevronLeftIcon } from "@lucide/svelte";
-	import { Button } from "$lib/components/ui/button";
-	import { AuthDivider } from "$lib/components/ui/auth-divider";
-	import { FloatingPaths } from "$lib/components/ui/floating-paths";
-	import { InputGroup, InputGroupAddon, InputGroupInput } from "$lib/components/ui/input-group";
-	import AppleLogo from "$lib/svgs/apple.svelte";
-	import GithubLogo from "$lib/svgs/github.svelte";
-	import GoogleLogo from "$lib/svgs/google.svelte";
-	import Logo from "$lib/svgs/logo.svelte";
-	import { cn } from "$lib/utils";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { AuthDivider } from "#lib/components/ui/auth-divider/index.js";
+	import { FloatingPaths } from "#lib/components/ui/floating-paths/index.js";
+	import {
+		InputGroup,
+		InputGroupAddon,
+		InputGroupInput
+	} from "#lib/components/ui/input-group/index.js";
+	import AppleLogo from "#lib/svgs/apple.svelte";
+	import GithubLogo from "#lib/svgs/github.svelte";
+	import GoogleLogo from "#lib/svgs/google.svelte";
+	import Logo from "#lib/svgs/logo.svelte";
+	import { cn } from "#lib/utils.js";
 	import type { HTMLAttributes } from "svelte/elements";
 
 	type AuthFiveProps = HTMLAttributes<HTMLElement> & {

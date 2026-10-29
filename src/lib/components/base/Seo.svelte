@@ -13,7 +13,7 @@
 	let titleTemplate = `%s | ${siteName}`;
 	let locale = "en_US";
 	let twitterHandle = "@Sikandar_Bhide";
-	let ogImageUrl = new URL(asset("/og.png"), siteUrl).toString();
+	let ogImageUrl = new URL(asset("og.png"), siteUrl).toString();
 
 	let { title, desc, link }: Props = $props();
 
@@ -26,10 +26,10 @@
 </script>
 
 <MetaTags
-	title={title}
+	{title}
 	description={desc}
-	titleTemplate={titleTemplate}
-	canonical={canonical}
+	{titleTemplate}
+	{canonical}
 	openGraph={{
 		type: "website",
 		title: fullTitle,

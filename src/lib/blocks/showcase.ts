@@ -1,4 +1,4 @@
-import type { SupportedLanguage } from "$lib/components/layout/code/shiki";
+import type { SupportedLanguage } from "#lib/components/layout/code/shiki.js";
 import type { Component } from "svelte";
 
 export type BlockCodeHighlight = (number | [number, number])[];

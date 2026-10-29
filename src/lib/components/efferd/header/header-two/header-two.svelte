@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { createScroll } from "$lib/hooks/use-scroll.svelte";
-	import Logo from "$lib/svgs/logo.svelte";
-	import { cn } from "$lib/utils";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { createScroll } from "#lib/hooks/use-scroll.svelte.js";
+	import Logo from "#lib/svgs/logo.svelte";
+	import { cn } from "#lib/utils.js";
 	import MobileNav from "./mobile-nav.svelte";
 	import { navLinks } from "./nav-links";
 	let scroll = createScroll(10);

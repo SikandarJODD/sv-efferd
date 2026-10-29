@@ -1,5 +1,5 @@
 <script lang="ts">
-	import CtaFive from "$lib/components/efferd/cta/cta-five.svelte";
+	import CtaFive from "#lib/components/efferd/cta/cta-five.svelte";
 </script>
 
 <svelte:head>

@@ -1,23 +1,23 @@
-import type { BlockShowcaseItem } from "$lib/blocks/showcase";
-import { createBlockCodeTree } from "$lib/blocks/showcase";
-import IntegrationFive from "$lib/components/efferd/integrations/integration-five.svelte";
-import IntegrationFour from "$lib/components/efferd/integrations/integration-four.svelte";
-import IntegrationOne from "$lib/components/efferd/integrations/integration-one.svelte";
-import IntegrationThree from "$lib/components/efferd/integrations/integration-three.svelte";
-import IntegrationTwo from "$lib/components/efferd/integrations/integration-two.svelte";
+import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
+import { createBlockCodeTree } from "#lib/blocks/showcase.js";
+import IntegrationFive from "#lib/components/efferd/integrations/integration-five.svelte";
+import IntegrationFour from "#lib/components/efferd/integrations/integration-four.svelte";
+import IntegrationOne from "#lib/components/efferd/integrations/integration-one.svelte";
+import IntegrationThree from "#lib/components/efferd/integrations/integration-three.svelte";
+import IntegrationTwo from "#lib/components/efferd/integrations/integration-two.svelte";
 
-import integrationCardFourSource from "$lib/components/efferd/integrations/integration-card-four.svelte?raw";
-import integrationCardThreeSource from "$lib/components/efferd/integrations/integration-card-three.svelte?raw";
-import integrationCardTwoSource from "$lib/components/efferd/integrations/integration-card-two.svelte?raw";
-import integrationFiveSource from "$lib/components/efferd/integrations/integration-five.svelte?raw";
-import integrationFourSource from "$lib/components/efferd/integrations/integration-four.svelte?raw";
-import integrationOneSource from "$lib/components/efferd/integrations/integration-one.svelte?raw";
-import integrationThreeSource from "$lib/components/efferd/integrations/integration-three.svelte?raw";
-import integrationTwoSource from "$lib/components/efferd/integrations/integration-two.svelte?raw";
-import decorIconIndexSource from "$lib/components/ui/decor-icon/index.ts?raw";
-import decorIconSource from "$lib/components/ui/decor-icon/decor-icon.svelte?raw";
-import dividerIndexSource from "$lib/components/ui/full-width-divider/index.ts?raw";
-import dividerSource from "$lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
+import integrationCardFourSource from "#lib/components/efferd/integrations/integration-card-four.svelte?raw";
+import integrationCardThreeSource from "#lib/components/efferd/integrations/integration-card-three.svelte?raw";
+import integrationCardTwoSource from "#lib/components/efferd/integrations/integration-card-two.svelte?raw";
+import integrationFiveSource from "#lib/components/efferd/integrations/integration-five.svelte?raw";
+import integrationFourSource from "#lib/components/efferd/integrations/integration-four.svelte?raw";
+import integrationOneSource from "#lib/components/efferd/integrations/integration-one.svelte?raw";
+import integrationThreeSource from "#lib/components/efferd/integrations/integration-three.svelte?raw";
+import integrationTwoSource from "#lib/components/efferd/integrations/integration-two.svelte?raw";
+import decorIconIndexSource from "#lib/components/ui/decor-icon/index.ts?raw";
+import decorIconSource from "#lib/components/ui/decor-icon/decor-icon.svelte?raw";
+import dividerIndexSource from "#lib/components/ui/full-width-divider/index.ts?raw";
+import dividerSource from "#lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
 
 const buttonFiles = [
 	{

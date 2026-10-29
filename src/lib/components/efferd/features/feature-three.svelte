@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
-	import { cn } from "$lib/utils";
+	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
+	import { cn } from "#lib/utils.js";
 	import { ActivityIcon, GlobeIcon, ShieldCheckIcon, ZapIcon, type Icon } from "@lucide/svelte";
 
 	type Feature = {

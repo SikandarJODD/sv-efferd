@@ -8,9 +8,9 @@
 				default:
 					"bg-neutral-700 text-neutral-100 dark:bg-neutral-200 dark:text-neutral-800",
 				secondary: "bg-secondary text-secondary-foreground",
-				outline: "border-input bg-background border",
+				outline: "border border-input bg-background",
 				destructive:
-					"bg-destructive dark:text-destructive-foreground text-primary-foreground",
+					"dark:text-destructive-foreground bg-destructive text-primary-foreground",
 				red: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400",
 				blue: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400",
 				green: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400",
@@ -29,17 +29,17 @@
 				sky: "bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-400",
 				slate: "bg-slate-100 text-slate-700 dark:bg-slate-900/30 dark:text-slate-400",
 				fuchsia:
-					"bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-400",
+					"bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-400"
 			},
 			size: {
 				default: "px-1.5 py-1",
-				sm: "p-1",
-			},
+				sm: "p-1"
+			}
 		},
 		defaultVariants: {
 			variant: "default",
-			size: "default",
-		},
+			size: "default"
+		}
 	});
 
 	export type BadgeVariant = VariantProps<typeof badgeVariants>["variant"];
@@ -48,7 +48,7 @@
 
 <script lang="ts">
 	import type { HTMLAnchorAttributes } from "svelte/elements";
-	import { cn, type WithElementRef } from "$lib/utils.js";
+	import { cn, type WithElementRef } from "#lib/utils.js";
 
 	let {
 		ref = $bindable(null),

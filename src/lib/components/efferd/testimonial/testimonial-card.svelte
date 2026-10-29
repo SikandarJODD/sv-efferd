@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Avatar, AvatarFallback, AvatarImage } from "$lib/components/ui/avatar";
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
-	import { cn } from "$lib/utils";
+	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
+	import { cn } from "#lib/utils.js";
 	import { QuoteIcon } from "@lucide/svelte";
 	import type { HTMLAttributes } from "svelte/elements";
 

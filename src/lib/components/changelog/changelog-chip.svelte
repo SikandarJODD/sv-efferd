@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import { ArrowUpRight } from "@lucide/svelte";
 	import type { ChangelogChip as ChangelogChipType } from "./data";
 

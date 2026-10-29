@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
-	import { Github } from "$lib/svgs";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
+	import { Github } from "#lib/svgs/index.js";
 	import { ArrowRight, Rocket } from "@lucide/svelte";
 	import { landingHero } from "./config";
 	import { DashedLines } from "../ui/dashed-lines";

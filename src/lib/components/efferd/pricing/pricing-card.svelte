@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { CheckCircle2, type Icon as IconType } from "@lucide/svelte";
-	import { Button, type ButtonVariant } from "$lib/components/ui/button";
-	import { cn } from "$lib/utils";
+	import { Button, type ButtonVariant } from "#lib/components/ui/button/index.js";
+	import { cn } from "#lib/utils.js";
 	import type { Component } from "svelte";
 	import type { HTMLAttributes } from "svelte/elements";
 

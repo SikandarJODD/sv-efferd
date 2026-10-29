@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import { Check } from "@lucide/svelte";
 	import ChangelogChip from "./changelog-chip.svelte";
 	import ChangelogDateBadge from "./changelog-date-badge.svelte";

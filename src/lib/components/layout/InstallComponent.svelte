@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import * as Add from "$lib/components/ui/add";
-	import { AGENTS, type Agent } from "$lib/components/ui/add";
-	import { cn } from "$lib/utils";
+	import * as Add from "#lib/components/ui/add/index.js";
+	import { AGENTS, type Agent } from "#lib/components/ui/add/index.js";
+	import { cn } from "#lib/utils.js";
 
 	interface InstallComponentProps {
 		id?: string;

@@ -20,8 +20,8 @@
 </script>
 
 <script lang="ts">
-	import { cn } from "$lib/utils.js";
-	import { Button, type ButtonElementProps } from "$lib/components/ui/button";
+	import { cn } from "#lib/utils.js";
+	import { Button, type ButtonElementProps } from "#lib/components/ui/button/index.js";
 
 	let {
 		ref = $bindable(null),

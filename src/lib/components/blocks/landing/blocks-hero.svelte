@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { StripedPattern } from "$lib/components/magic/striped-pattern";
-	import { Button } from "$lib/components/ui/button";
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
-	import { Github } from "$lib/svgs";
-	import { connectLine } from "$lib/utils/connect-line";
+	import { StripedPattern } from "#lib/components/magic/striped-pattern/index.js";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
+	import { Github } from "#lib/svgs/index.js";
+	import { connectLine } from "#lib/utils/connect-line.js";
 	import { mode } from "mode-watcher";
 </script>
 

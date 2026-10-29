@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
 	import LogoCard from "./logo-card.svelte";
 </script>
 

@@ -1,8 +1,12 @@
 <script lang="ts">
 	import { ArrowRightIcon, AtSignIcon } from "@lucide/svelte";
-	import { Button } from "$lib/components/ui/button";
-	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
-	import { InputGroup, InputGroupAddon, InputGroupInput } from "$lib/components/ui/input-group";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
+	import {
+		InputGroup,
+		InputGroupAddon,
+		InputGroupInput
+	} from "#lib/components/ui/input-group/index.js";
 
 	const avatars = [
 		{

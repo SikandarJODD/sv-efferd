@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
-	import { Button } from "$lib/components/ui/button";
-	import XLogo from "$lib/svgs/x.svelte";
+	import { cn } from "#lib/utils.js";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import XLogo from "#lib/svgs/x.svelte";
 	import { Mail, Users, type Icon as IconType } from "@lucide/svelte";
 	import type { Component } from "svelte";
 

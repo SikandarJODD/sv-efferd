@@ -4,8 +4,8 @@
 		AccordionContent,
 		AccordionItem,
 		AccordionTrigger
-	} from "$lib/components/ui/accordion";
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
+	} from "#lib/components/ui/accordion/index.js";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
 
 	type FaqItem = {
 		id: string;

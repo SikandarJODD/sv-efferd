@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Briefcase, Building, Users, type Icon as IconType } from "@lucide/svelte";
-	import PricingCard from "$lib/components/efferd/pricing/pricing-card.svelte";
-	import { cn } from "$lib/utils";
+	import PricingCard from "#lib/components/efferd/pricing/pricing-card.svelte";
+	import { cn } from "#lib/utils.js";
 	import type { Component } from "svelte";
 
 	type Plan = {

@@ -1,23 +1,23 @@
-import type { BlockShowcaseItem } from "$lib/blocks/showcase";
-import { createBlockCodeTree } from "$lib/blocks/showcase";
-import LogoCloudFive from "$lib/components/efferd/logo-cloud/five/logo-cloud-five.svelte";
-import LogoCloudFour from "$lib/components/efferd/logo-cloud/four/logo-cloud-four.svelte";
-import LogoCloudOne from "$lib/components/efferd/logo-cloud/logo-cloud-one.svelte";
-import LogoCloudThree from "$lib/components/efferd/logo-cloud/three/logo-cloud-three.svelte";
-import LogoCloudTwo from "$lib/components/efferd/logo-cloud/two/logo-cloud-two.svelte";
+import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
+import { createBlockCodeTree } from "#lib/blocks/showcase.js";
+import LogoCloudFive from "#lib/components/efferd/logo-cloud/five/logo-cloud-five.svelte";
+import LogoCloudFour from "#lib/components/efferd/logo-cloud/four/logo-cloud-four.svelte";
+import LogoCloudOne from "#lib/components/efferd/logo-cloud/logo-cloud-one.svelte";
+import LogoCloudThree from "#lib/components/efferd/logo-cloud/three/logo-cloud-three.svelte";
+import LogoCloudTwo from "#lib/components/efferd/logo-cloud/two/logo-cloud-two.svelte";
 
-import logoCloudFiveSource from "$lib/components/efferd/logo-cloud/five/logo-cloud-five.svelte?raw";
-import logoCloudFourSource from "$lib/components/efferd/logo-cloud/four/logo-cloud-four.svelte?raw";
-import logoCloudOneSource from "$lib/components/efferd/logo-cloud/logo-cloud-one.svelte?raw";
-import logoCloudThreeSource from "$lib/components/efferd/logo-cloud/three/logo-cloud-three.svelte?raw";
-import logoCloudTwoSource from "$lib/components/efferd/logo-cloud/two/logo-cloud-two.svelte?raw";
-import logoCardSource from "$lib/components/efferd/logo-cloud/two/logo-card.svelte?raw";
-import decorIconIndexSource from "$lib/components/ui/decor-icon/index.ts?raw";
-import decorIconSource from "$lib/components/ui/decor-icon/decor-icon.svelte?raw";
-import marqueeIndexSource from "$lib/components/magic/marquee/index.ts?raw";
-import marqueeSource from "$lib/components/magic/marquee/marquee.svelte?raw";
-import progressiveBlurIndexSource from "$lib/components/ui/progressive-blur/index.ts?raw";
-import progressiveBlurSource from "$lib/components/ui/progressive-blur/progressive-blur.svelte?raw";
+import logoCloudFiveSource from "#lib/components/efferd/logo-cloud/five/logo-cloud-five.svelte?raw";
+import logoCloudFourSource from "#lib/components/efferd/logo-cloud/four/logo-cloud-four.svelte?raw";
+import logoCloudOneSource from "#lib/components/efferd/logo-cloud/logo-cloud-one.svelte?raw";
+import logoCloudThreeSource from "#lib/components/efferd/logo-cloud/three/logo-cloud-three.svelte?raw";
+import logoCloudTwoSource from "#lib/components/efferd/logo-cloud/two/logo-cloud-two.svelte?raw";
+import logoCardSource from "#lib/components/efferd/logo-cloud/two/logo-card.svelte?raw";
+import decorIconIndexSource from "#lib/components/ui/decor-icon/index.ts?raw";
+import decorIconSource from "#lib/components/ui/decor-icon/decor-icon.svelte?raw";
+import marqueeIndexSource from "#lib/components/magic/marquee/index.ts?raw";
+import marqueeSource from "#lib/components/magic/marquee/marquee.svelte?raw";
+import progressiveBlurIndexSource from "#lib/components/ui/progressive-blur/index.ts?raw";
+import progressiveBlurSource from "#lib/components/ui/progressive-blur/progressive-blur.svelte?raw";
 
 const decorIconFiles = [
 	{

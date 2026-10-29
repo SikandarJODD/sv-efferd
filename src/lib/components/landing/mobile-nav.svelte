@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { Portal, PortalBackdrop } from "$lib/components/ui/portal";
-	import { Github, X as XLogo } from "$lib/svgs";
-	import { cn } from "$lib/utils";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { Portal, PortalBackdrop } from "#lib/components/ui/portal/index.js";
+	import { Github, X as XLogo } from "#lib/svgs/index.js";
+	import { cn } from "#lib/utils.js";
 	import { MenuIcon, XIcon } from "@lucide/svelte";
 	import { landingNavLinks, landingSocialLinks } from "./config";
 	import { getStars, GitHubButton } from "../ui/github-button";
@@ -123,7 +123,12 @@
 										{/if}
 									</Button>
 								{/each}
-								<GitHubButton variant="ghost" class="dark:bg-muted/50" repo={repo} stars={stars} />
+								<GitHubButton
+									variant="ghost"
+									class="dark:bg-muted/50"
+									{repo}
+									{stars}
+								/>
 							</div>
 						</div>
 					</div>

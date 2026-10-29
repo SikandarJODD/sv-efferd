@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import type { SVGAttributes } from "svelte/elements";
 
 	interface DashedLinesProps extends SVGAttributes<SVGSVGElement> {

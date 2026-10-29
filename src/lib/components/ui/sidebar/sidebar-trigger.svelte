@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Button, type ButtonElementProps } from "$lib/components/ui/button";
+	import { Button, type ButtonElementProps } from "#lib/components/ui/button/index.js";
 	import PanelLeftIcon from "@lucide/svelte/icons/panel-left";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "#lib/utils.js";
 	import { useSidebar } from "./context.svelte.js";
 
 	let {

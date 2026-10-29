@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Marquee } from "$lib/components/magic/marquee";
+	import { Marquee } from "#lib/components/magic/marquee/index.js";
 
 	const logos = [
 		{

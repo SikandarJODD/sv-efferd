@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Marquee } from "$lib/components/magic/marquee";
-	import { ProgressiveBlur } from "$lib/components/ui/progressive-blur";
+	import { Marquee } from "#lib/components/magic/marquee/index.js";
+	import { ProgressiveBlur } from "#lib/components/ui/progressive-blur/index.js";
 
 	const logos = [
 		{

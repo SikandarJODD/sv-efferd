@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
-	import { cn } from "$lib/utils";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
+	import { cn } from "#lib/utils.js";
 	import IntegrationCardThree from "./integration-card-three.svelte";
 
 	type LogoType = {

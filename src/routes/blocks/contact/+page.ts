@@ -1,4 +1,4 @@
-import { contactBlocks } from "$lib/blocks/contact/all_contact";
+import { contactBlocks } from "#lib/blocks/contact/all_contact.js";
 import type { PageLoad } from "./$types";
 
 export const prerender = true;

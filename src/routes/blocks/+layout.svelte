@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import { scrollY } from "svelte/reactivity/window";
-	import Button from "$lib/components/ui/button/button.svelte";
+	import Button from "#lib/components/ui/button/button.svelte";
 	import type { Snippet } from "svelte";
 	import { fly } from "svelte/transition";
-	import CategoryNavigation from "$lib/components/layout/CategoryNavigation.svelte";
-	import { blockCategories } from "$lib/blocks/categories";
+	import CategoryNavigation from "#lib/components/layout/CategoryNavigation.svelte";
+	import { blockCategories } from "#lib/blocks/categories.js";
 
 	let { children }: { children: Snippet } = $props();
 	let visible = $derived(typeof scrollY.current === "undefined" ? 600 : scrollY.current > 1200);
@@ -30,8 +30,8 @@
 						{currentCategory.label} Blocks
 					</h1>
 					<p class="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">
-						Production-ready {currentCategory.label.toLowerCase()} sections for Svelte,
-						Tailwind CSS, and shadcn-svelte.
+						Production-ready {currentCategory.label.toLowerCase()} sections for Svelte, Tailwind
+						CSS, and shadcn-svelte.
 					</p>
 				</div>
 			</header>
@@ -48,7 +48,7 @@
 		<Button
 			size="icon"
 			variant="secondary"
-			class="rounded-full cursor-pointer"
+			class="cursor-pointer rounded-full"
 			onclick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 		>
 			<svg

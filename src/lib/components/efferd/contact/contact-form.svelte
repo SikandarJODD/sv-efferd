@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { Input } from "$lib/components/ui/input";
-	import { Textarea } from "$lib/components/ui/textarea";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { Input } from "#lib/components/ui/input/index.js";
+	import { Textarea } from "#lib/components/ui/textarea/index.js";
 
-	import { Field, FieldGroup, FieldLabel } from "$lib/components/ui/field";
+	import { Field, FieldGroup, FieldLabel } from "#lib/components/ui/field/index.js";
 </script>
 
 <form class="w-full">

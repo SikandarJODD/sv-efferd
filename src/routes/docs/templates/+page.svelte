@@ -1,11 +1,11 @@
 <script lang="ts">
-	import DocsPage from "$lib/components/docs/docs-page.svelte";
-	import Blockquote from "$lib/components/markdown/Blockquote.svelte";
-	import H2 from "$lib/components/markdown/H2.svelte";
-	import Link from "$lib/components/markdown/Link.svelte";
-	import Paragraph from "$lib/components/markdown/Paragraph.svelte";
-	import Strong from "$lib/components/markdown/Strong.svelte";
-	import { Button } from "$lib/components/ui/button";
+	import DocsPage from "#lib/components/docs/docs-page.svelte";
+	import Blockquote from "#lib/components/markdown/Blockquote.svelte";
+	import H2 from "#lib/components/markdown/H2.svelte";
+	import Link from "#lib/components/markdown/Link.svelte";
+	import Paragraph from "#lib/components/markdown/Paragraph.svelte";
+	import Strong from "#lib/components/markdown/Strong.svelte";
+	import { Button } from "#lib/components/ui/button/index.js";
 </script>
 
 <DocsPage

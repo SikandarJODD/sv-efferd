@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
-	import { Separator } from "$lib/components/ui/separator";
-	import { cn } from "$lib/utils";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
+	import { Separator } from "#lib/components/ui/separator/index.js";
+	import { cn } from "#lib/utils.js";
 	import { BellIcon, SendIcon } from "@lucide/svelte";
 	import AppBreadcrumb from "./app-breadcrumb.svelte";
 	import CustomSidebarTrigger from "./custom-sidebar-trigger.svelte";

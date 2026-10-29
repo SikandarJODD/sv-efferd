@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
-	import * as Empty from "$lib/components/ui/empty/index";
-	import { Button } from "$lib/components/ui/button";
+	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
+	import * as Empty from "#lib/components/ui/empty/index.js";
+	import { Button } from "#lib/components/ui/button/index.js";
 	import { CompassIcon, HomeIcon } from "@lucide/svelte";
 </script>
 

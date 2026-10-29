@@ -1,12 +1,12 @@
 <script lang="ts">
-	import DocsPage from "$lib/components/docs/docs-page.svelte";
-	import H2 from "$lib/components/markdown/H2.svelte";
-	import Link from "$lib/components/markdown/Link.svelte";
-	import Paragraph from "$lib/components/markdown/Paragraph.svelte";
-	import Step from "$lib/components/markdown/Step.svelte";
-	import Steps from "$lib/components/markdown/Steps.svelte";
-	import { Button } from "$lib/components/ui/button";
-	import * as Code from "$lib/components/ui/code";
+	import DocsPage from "#lib/components/docs/docs-page.svelte";
+	import H2 from "#lib/components/markdown/H2.svelte";
+	import Link from "#lib/components/markdown/Link.svelte";
+	import Paragraph from "#lib/components/markdown/Paragraph.svelte";
+	import Step from "#lib/components/markdown/Step.svelte";
+	import Steps from "#lib/components/markdown/Steps.svelte";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import * as Code from "#lib/components/ui/code/index.js";
 
 	const initCommand = "pnpm dlx shadcn-svelte@latest init shadcn-svelte";
 	const addCommand = "pnpm dlx shadcn-svelte@latest add https://your-site/r/block-id.json";

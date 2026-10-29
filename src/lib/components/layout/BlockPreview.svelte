@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import type { BlockCodeTree } from "$lib/blocks/showcase";
-	import { IsMobile } from "$lib/hooks/is-mobile.svelte.js";
-	import { cn } from "$lib/utils";
+	import type { BlockCodeTree } from "#lib/blocks/showcase.js";
+	import { IsMobile } from "#lib/hooks/is-mobile.svelte.js";
+	import { cn } from "#lib/utils.js";
 	import Palette from "@lucide/svelte/icons/palette";
 	import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
 	import { watch } from "runed";
@@ -17,7 +17,7 @@
 		TooltipContent,
 		TooltipProvider,
 		TooltipTrigger
-	} from "$lib/components/ui/tooltip";
+	} from "#lib/components/ui/tooltip/index.js";
 	import CodeEditor from "./CodeEditor.svelte";
 	import InstallComponent from "./InstallComponent.svelte";
 

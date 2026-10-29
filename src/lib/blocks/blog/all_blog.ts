@@ -1,21 +1,21 @@
-import type { BlockShowcaseItem } from "$lib/blocks/showcase";
-import { createBlockCodeTree } from "$lib/blocks/showcase";
-import BlogOne from "$lib/components/efferd/blogs/blog-one/blog-one.svelte";
-import BlogThree from "$lib/components/efferd/blogs/blog-three/blog-three.svelte";
-import BlogTwo from "$lib/components/efferd/blogs/blog-two/blog-two.svelte";
+import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
+import { createBlockCodeTree } from "#lib/blocks/showcase.js";
+import BlogOne from "#lib/components/efferd/blogs/blog-one/blog-one.svelte";
+import BlogThree from "#lib/components/efferd/blogs/blog-three/blog-three.svelte";
+import BlogTwo from "#lib/components/efferd/blogs/blog-two/blog-two.svelte";
 
-import blogOneCardSource from "$lib/components/efferd/blogs/blog-one/blog-card.svelte?raw";
-import blogOneSource from "$lib/components/efferd/blogs/blog-one/blog-one.svelte?raw";
-import blogThreeCardSource from "$lib/components/efferd/blogs/blog-three/blog-card.svelte?raw";
-import blogThreeSource from "$lib/components/efferd/blogs/blog-three/blog-three.svelte?raw";
-import blogTwoCardSource from "$lib/components/efferd/blogs/blog-two/blog-card.svelte?raw";
-import blogTwoSource from "$lib/components/efferd/blogs/blog-two/blog-two.svelte?raw";
-import aspectRatioIndexSource from "$lib/components/ui/aspect-ratio/index.ts?raw";
-import aspectRatioSource from "$lib/components/ui/aspect-ratio/aspect-ratio.svelte?raw";
-import dividerIndexSource from "$lib/components/ui/full-width-divider/index.ts?raw";
-import dividerSource from "$lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
-import gridFillerIndexSource from "$lib/components/ui/grid-filler/index.ts?raw";
-import gridFillerSource from "$lib/components/ui/grid-filler/grid-filler.svelte?raw";
+import blogOneCardSource from "#lib/components/efferd/blogs/blog-one/blog-card.svelte?raw";
+import blogOneSource from "#lib/components/efferd/blogs/blog-one/blog-one.svelte?raw";
+import blogThreeCardSource from "#lib/components/efferd/blogs/blog-three/blog-card.svelte?raw";
+import blogThreeSource from "#lib/components/efferd/blogs/blog-three/blog-three.svelte?raw";
+import blogTwoCardSource from "#lib/components/efferd/blogs/blog-two/blog-card.svelte?raw";
+import blogTwoSource from "#lib/components/efferd/blogs/blog-two/blog-two.svelte?raw";
+import aspectRatioIndexSource from "#lib/components/ui/aspect-ratio/index.ts?raw";
+import aspectRatioSource from "#lib/components/ui/aspect-ratio/aspect-ratio.svelte?raw";
+import dividerIndexSource from "#lib/components/ui/full-width-divider/index.ts?raw";
+import dividerSource from "#lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
+import gridFillerIndexSource from "#lib/components/ui/grid-filler/index.ts?raw";
+import gridFillerSource from "#lib/components/ui/grid-filler/grid-filler.svelte?raw";
 
 const dividerFiles = [
 	{

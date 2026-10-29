@@ -6,7 +6,7 @@
 </script>
 
 <script lang="ts">
-	import * as Tooltip from "$lib/components/ui/tooltip/index.js";
+	import * as Tooltip from "#lib/components/ui/tooltip/index.js";
 	import SunIcon from "@lucide/svelte/icons/sun";
 	import MoonIcon from "@lucide/svelte/icons/moon";
 	import { mode, toggleMode } from "mode-watcher";
@@ -36,7 +36,7 @@
 			{/snippet}
 		</Tooltip.Trigger>
 		<Tooltip.Content side="bottom" align="center">
-			<p >Press <Kbd>D</Kbd></p>
+			<p>Press <Kbd>D</Kbd></p>
 		</Tooltip.Content>
 	</Tooltip.Root>
 </Tooltip.Provider>

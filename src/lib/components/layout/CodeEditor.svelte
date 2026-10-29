@@ -4,11 +4,11 @@
 		findBlockCodeFile,
 		flattenBlockCodeFiles,
 		type BlockCodeTree
-	} from "$lib/blocks/showcase";
+	} from "#lib/blocks/showcase.js";
 	import Check from "@lucide/svelte/icons/check";
 	import Copy from "@lucide/svelte/icons/copy";
 	import ExternalLink from "@lucide/svelte/icons/external-link";
-	import { UseClipboard } from "$lib/hooks/use-clipboard.svelte";
+	import { UseClipboard } from "#lib/hooks/use-clipboard.svelte.js";
 	import { scale } from "svelte/transition";
 	import Button from "../ui/button/button.svelte";
 	import Code from "./code/code.svelte";
@@ -150,7 +150,7 @@
 			</div>
 		</div>
 
-		<div class=''>
+		<div class="">
 			{#if activeFile?.code}
 				<Code
 					code={activeFile.code}

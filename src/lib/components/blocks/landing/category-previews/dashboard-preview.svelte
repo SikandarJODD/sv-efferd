@@ -22,9 +22,7 @@
 			<div class="flex flex-col gap-1.5 p-2.5">
 				<div class="flex items-end justify-between ps-1 pe-4">
 					<h3 class="font-heading text-sm font-medium md:text-base">Dashboard</h3>
-					<p class="text-xs text-muted-foreground">
-						10 block
-					</p>
+					<p class="text-xs text-muted-foreground">10 block</p>
 				</div>
 				<div class="overflow-hidden rounded-t-sm border">
 					<div class="grid grid-cols-4 gap-px bg-border *:bg-background">

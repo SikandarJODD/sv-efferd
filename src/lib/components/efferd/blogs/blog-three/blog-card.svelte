@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { AspectRatio } from "$lib/components/ui/aspect-ratio";
-	import { cn } from "$lib/utils";
+	import { AspectRatio } from "#lib/components/ui/aspect-ratio/index.js";
+	import { cn } from "#lib/utils.js";
 	import type { HTMLAnchorAttributes } from "svelte/elements";
 
 	type BlogCard = {

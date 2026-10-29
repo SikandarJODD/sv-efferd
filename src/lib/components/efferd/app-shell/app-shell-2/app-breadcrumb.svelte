@@ -1,5 +1,5 @@
 <script lang="ts">
-	import * as Breadcrumb from "$lib/components/ui/breadcrumb/index.js";
+	import * as Breadcrumb from "#lib/components/ui/breadcrumb/index.js";
 	import type { Component } from "svelte";
 	// Use LucideIcon type if using lucide icons
 	type AppBreadcrumbProps = {
@@ -7,7 +7,7 @@
 		icon?: Component;
 	};
 
-	let {page }: { page: AppBreadcrumbProps } = $props();
+	let { page }: { page: AppBreadcrumbProps } = $props();
 	let IconComponent = $derived(page.icon);
 </script>
 

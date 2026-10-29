@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
-	import { FullWidthDivider } from "$lib/components/ui/full-width-divider";
-	import { Github, X as XLogo } from "$lib/svgs";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
+	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
+	import { Github, X as XLogo } from "#lib/svgs/index.js";
 	import { MoonIcon, SunIcon } from "@lucide/svelte";
 	import { mode, toggleMode } from "mode-watcher";
 
@@ -35,109 +35,105 @@
 </script>
 
 <!-- <div class="mt-18"> -->
-	<footer class="relative">
-		<FullWidthDivider position="top" class="bg-border/80" />
-		<div class="container">
-			<div class="relative border-x border-border/80">
-				<DecorIcon class="size-3.5 bg-background opacity-80" position="top-left" />
-				<DecorIcon class="size-3.5 bg-background opacity-80" position="top-right" />
-				<DecorIcon
-					class="size-3.5 -translate-x-[calc(50%+0.5px)] translate-y-[calc(50%-0.5px)] bg-background opacity-80"
-					position="bottom-left"
-				/>
-				<DecorIcon
-					class="size-3.5 translate-y-[calc(50%-0.5px)] bg-background opacity-80"
-					position="bottom-right"
-				/>
+<footer class="relative">
+	<FullWidthDivider position="top" class="bg-border/80" />
+	<div class="container">
+		<div class="relative border-x border-border/80">
+			<DecorIcon class="size-3.5 bg-background opacity-80" position="top-left" />
+			<DecorIcon class="size-3.5 bg-background opacity-80" position="top-right" />
+			<DecorIcon
+				class="size-3.5 -translate-x-[calc(50%+0.5px)] translate-y-[calc(50%-0.5px)] bg-background opacity-80"
+				position="bottom-left"
+			/>
+			<DecorIcon
+				class="size-3.5 translate-y-[calc(50%-0.5px)] bg-background opacity-80"
+				position="bottom-right"
+			/>
 
-				<div class="cpx grid gap-10 py-12 lg:grid-cols-5">
-					<div class="col-span-4 flex flex-col gap-6">
-						<div class="space-y-3">
-							<a
-								aria-label="Svelte Efferd home"
-								class="inline-flex w-fit rounded-md font-mono text-xl font-semibold tracking-tight transition-colors hover:text-foreground/80"
-								href="/"
+			<div class="cpx grid gap-10 py-12 lg:grid-cols-5">
+				<div class="col-span-4 flex flex-col gap-6">
+					<div class="space-y-3">
+						<a
+							aria-label="Svelte Efferd home"
+							class="inline-flex w-fit rounded-md font-mono text-xl font-semibold tracking-tight transition-colors hover:text-foreground/80"
+							href="/"
+						>
+							Svelte Efferd
+						</a>
+						<p class="max-w-sm text-sm text-muted-foreground">
+							Less effort. More effect.
+						</p>
+					</div>
+
+					<div class="flex flex-wrap items-center gap-2">
+						<Button onclick={toggleMode} variant="outline" size="icon-sm">
+							{#if mode.current === "dark"}
+								<SunIcon class="size-4" />
+							{:else}
+								<MoonIcon class="size-4" />
+							{/if}
+						</Button>
+
+						{#each socialLinks as social (social.id)}
+							<Button
+								aria-label={social.label}
+								href={social.href}
+								rel="noreferrer"
+								size="icon-sm"
+								target="_blank"
+								variant="ghost"
 							>
-								Svelte Efferd
-							</a>
-							<p class="max-w-sm text-sm text-muted-foreground">
-								Less effort. More effect.
-							</p>
-						</div>
-
-						<div class="flex flex-wrap items-center gap-2">
-							<Button onclick={toggleMode} variant="outline" size="icon-sm">
-								{#if mode.current === "dark"}
-									<SunIcon class="size-4" />
+								{#if social.id === "x"}
+									<XLogo class="size-4" />
 								{:else}
-									<MoonIcon class="size-4" />
+									<Github class="size-4" />
 								{/if}
 							</Button>
-
-							{#each socialLinks as social (social.id)}
-								<Button
-									aria-label={social.label}
-									href={social.href}
-									rel="noreferrer"
-									size="icon-sm"
-									target="_blank"
-									variant="ghost"
-								>
-									{#if social.id === "x"}
-										<XLogo class="size-4" />
-									{:else}
-										<Github class="size-4" />
-									{/if}
-								</Button>
-							{/each}
-						</div>
+						{/each}
 					</div>
+				</div>
 
-					<div class="space-y-4">
-						<h2
-							class="text-xs font-semibold text-muted-foreground uppercase"
-						>
-							Project
-						</h2>
+				<div class="space-y-4">
+					<h2 class="text-xs font-semibold text-muted-foreground uppercase">Project</h2>
 
-						<nav class="flex flex-col gap-3">
-							{#each productLinks as link (link.label)}
-								<a
-									class="w-fit text-sm text-muted-foreground transition-colors hover:text-foreground"
-									href={link.href}
-								>
-									{link.label}
-								</a>
-							{/each}
-						</nav>
-					</div>
+					<nav class="flex flex-col gap-3">
+						{#each productLinks as link (link.label)}
+							<a
+								class="w-fit text-sm text-muted-foreground transition-colors hover:text-foreground"
+								href={link.href}
+							>
+								{link.label}
+							</a>
+						{/each}
+					</nav>
 				</div>
 			</div>
 		</div>
-		<div class="relative container">
-			<FullWidthDivider position="top" class="bg-border/80" />
-			<div class="relative border-x">
-				<p
-					class="flex items-center justify-center py-3 text-center text-xs text-muted-foreground sm:text-xs"
+	</div>
+	<div class="relative container">
+		<FullWidthDivider position="top" class="bg-border/80" />
+		<div class="relative border-x">
+			<p
+				class="flex items-center justify-center py-3 text-center text-xs text-muted-foreground sm:text-xs"
+			>
+				&copy; {currentYear} Svelte Efferd. Built by
+				<a
+					class="ml-2 inline-flex items-center gap-1.5 font-medium text-foreground transition-colors hover:text-muted-foreground"
+					href="https://bhide.dev?utm_source=svelte-efferd"
+					rel="noreferrer"
+					target="_blank"
 				>
-					&copy; {currentYear} Svelte Efferd. Built by
-					<a
-						class="ml-2 inline-flex items-center gap-1.5 font-medium text-foreground transition-colors hover:text-muted-foreground"
-						href="https://bhide.dev?utm_source=svelte-efferd"
-						rel="noreferrer"
-						target="_blank"
-					>
-						<img
-							alt="Bhide Svelte avatar"
-							class="size-5 rounded-full border border-border/80 object-cover"
-							height="20"
-							src="https://avatars.githubusercontent.com/u/93428946?v=4"
-							width="20"
-						/>
-						Bhide Svelte
-					</a>
-				</p>
-			</div>
+					<img
+						alt="Bhide Svelte avatar"
+						class="size-5 rounded-full border border-border/80 object-cover"
+						height="20"
+						src="https://avatars.githubusercontent.com/u/93428946?v=4"
+						width="20"
+					/>
+					Bhide Svelte
+				</a>
+			</p>
 		</div>
-	</footer>
+	</div>
+</footer>
 <!-- </div> -->

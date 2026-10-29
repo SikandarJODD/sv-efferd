@@ -1,20 +1,20 @@
-import type { BlockShowcaseItem } from "$lib/blocks/showcase";
-import { createBlockCodeTree } from "$lib/blocks/showcase";
-import PricingFour from "$lib/components/efferd/pricing/pricing-four.svelte";
-import PricingOne from "$lib/components/efferd/pricing/pricing-one.svelte";
-import PricingThree from "$lib/components/efferd/pricing/pricing-three.svelte";
-import PricingTwo from "$lib/components/efferd/pricing/pricing-two.svelte";
+import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
+import { createBlockCodeTree } from "#lib/blocks/showcase.js";
+import PricingFour from "#lib/components/efferd/pricing/pricing-four.svelte";
+import PricingOne from "#lib/components/efferd/pricing/pricing-one.svelte";
+import PricingThree from "#lib/components/efferd/pricing/pricing-three.svelte";
+import PricingTwo from "#lib/components/efferd/pricing/pricing-two.svelte";
 
-import frequencyToggleSource from "$lib/components/efferd/pricing/frequency-toggle.svelte?raw";
-import pricingCardSource from "$lib/components/efferd/pricing/pricing-card.svelte?raw";
-import pricingFourSource from "$lib/components/efferd/pricing/pricing-four.svelte?raw";
-import pricingOneSource from "$lib/components/efferd/pricing/pricing-one.svelte?raw";
-import pricingThreeSource from "$lib/components/efferd/pricing/pricing-three.svelte?raw";
-import pricingTwoSource from "$lib/components/efferd/pricing/pricing-two.svelte?raw";
-import decorIconIndexSource from "$lib/components/ui/decor-icon/index.ts?raw";
-import decorIconSource from "$lib/components/ui/decor-icon/decor-icon.svelte?raw";
-import dividerIndexSource from "$lib/components/ui/full-width-divider/index.ts?raw";
-import dividerSource from "$lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
+import frequencyToggleSource from "#lib/components/efferd/pricing/frequency-toggle.svelte?raw";
+import pricingCardSource from "#lib/components/efferd/pricing/pricing-card.svelte?raw";
+import pricingFourSource from "#lib/components/efferd/pricing/pricing-four.svelte?raw";
+import pricingOneSource from "#lib/components/efferd/pricing/pricing-one.svelte?raw";
+import pricingThreeSource from "#lib/components/efferd/pricing/pricing-three.svelte?raw";
+import pricingTwoSource from "#lib/components/efferd/pricing/pricing-two.svelte?raw";
+import decorIconIndexSource from "#lib/components/ui/decor-icon/index.ts?raw";
+import decorIconSource from "#lib/components/ui/decor-icon/decor-icon.svelte?raw";
+import dividerIndexSource from "#lib/components/ui/full-width-divider/index.ts?raw";
+import dividerSource from "#lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
 
 const buttonFiles = [
 	{

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
-	import { DashedLine } from "$lib/components/ui/dashed-line";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
+	import { DashedLine } from "#lib/components/ui/dashed-line/index.js";
 	import { CommandIcon, HistoryIcon, SquareDashedIcon, type Icon } from "@lucide/svelte";
 
 	type Feature = {

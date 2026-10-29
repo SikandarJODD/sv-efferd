@@ -1,19 +1,19 @@
-import type { BlockShowcaseItem } from "$lib/blocks/showcase";
-import { createBlockCodeTree } from "$lib/blocks/showcase";
-import AppShellTwoPreview from "$lib/components/efferd/app-shell/app-shell-2/preview.svelte";
+import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
+import { createBlockCodeTree } from "#lib/blocks/showcase.js";
+import AppShellTwoPreview from "#lib/components/efferd/app-shell/app-shell-2/preview.svelte";
 
-import appBreadcrumbSource from "$lib/components/efferd/app-shell/app-shell-2/app-breadcrumb.svelte?raw";
-import appHeaderSource from "$lib/components/efferd/app-shell/app-shell-2/app-header.svelte?raw";
-import appSharedSource from "$lib/components/efferd/app-shell/app-shell-2/app-shared.ts?raw";
-import appShellSource from "$lib/components/efferd/app-shell/app-shell-2/app-shell.svelte?raw";
-import appSidebarSource from "$lib/components/efferd/app-shell/app-shell-2/app-sidebar.svelte?raw";
-import customSidebarTriggerSource from "$lib/components/efferd/app-shell/app-shell-2/custom-sidebar-trigger.svelte?raw";
-import dashboardSkeletonSource from "$lib/components/efferd/app-shell/app-shell-2/dashboard-skeleton.svelte?raw";
-import latestChangeSource from "$lib/components/efferd/app-shell/app-shell-2/latest-change.svelte?raw";
-import navGroupSource from "$lib/components/efferd/app-shell/app-shell-2/nav-group.svelte?raw";
-import navUserSource from "$lib/components/efferd/app-shell/app-shell-2/nav-user.svelte?raw";
-import previewSource from "$lib/components/efferd/app-shell/app-shell-2/preview.svelte?raw";
-import logoSource from "$lib/svgs/logo.svelte?raw";
+import appBreadcrumbSource from "#lib/components/efferd/app-shell/app-shell-2/app-breadcrumb.svelte?raw";
+import appHeaderSource from "#lib/components/efferd/app-shell/app-shell-2/app-header.svelte?raw";
+import appSharedSource from "#lib/components/efferd/app-shell/app-shell-2/app-shared.ts?raw";
+import appShellSource from "#lib/components/efferd/app-shell/app-shell-2/app-shell.svelte?raw";
+import appSidebarSource from "#lib/components/efferd/app-shell/app-shell-2/app-sidebar.svelte?raw";
+import customSidebarTriggerSource from "#lib/components/efferd/app-shell/app-shell-2/custom-sidebar-trigger.svelte?raw";
+import dashboardSkeletonSource from "#lib/components/efferd/app-shell/app-shell-2/dashboard-skeleton.svelte?raw";
+import latestChangeSource from "#lib/components/efferd/app-shell/app-shell-2/latest-change.svelte?raw";
+import navGroupSource from "#lib/components/efferd/app-shell/app-shell-2/nav-group.svelte?raw";
+import navUserSource from "#lib/components/efferd/app-shell/app-shell-2/nav-user.svelte?raw";
+import previewSource from "#lib/components/efferd/app-shell/app-shell-2/preview.svelte?raw";
+import logoSource from "#lib/svgs/logo.svelte?raw";
 
 const sharedFiles = [
 	{

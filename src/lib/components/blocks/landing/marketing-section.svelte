@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Badge } from "$lib/components/spell/badge";
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
+	import { Badge } from "#lib/components/spell/badge/index.js";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
 	import { dashboardSidebarCards } from "./dashboard-sidebar-cards";
 	import MarketingCard from "./marketing-card.svelte";
 	import { marketingCards } from "./marketing-cards";
@@ -54,7 +54,7 @@
 				<h2 class="text-sm font-semibold tracking-tight text-foreground">
 					Sidebar / Dashboard
 				</h2>
-				<Badge variant='emerald'>New</Badge>
+				<Badge variant="emerald">New</Badge>
 			</div>
 		</div>
 	</div>

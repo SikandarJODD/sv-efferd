@@ -1,7 +1,7 @@
 <script lang="ts">
-	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
-	import Logo from "$lib/svgs/logo.svelte";
-	import { cn } from "$lib/utils";
+	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
+	import Logo from "#lib/svgs/logo.svelte";
+	import { cn } from "#lib/utils.js";
 	import { navGroups, footerNavLinks } from "./app-shared";
 	import LatestChange from "./latest-change.svelte";
 	import NavGroup from "./nav-group.svelte";
@@ -14,7 +14,7 @@
 		"*:data-[slot=sidebar-inner]:bg-background",
 		"**:data-[slot=sidebar-menu-button]:[&>span]:text-foreground/75",
 		sidebar.open &&
-			"*:data-[slot=sidebar-inner]:dark:bg-[radial-gradient(60%_18%_at_10%_0%,--theme(--color-foreground/.08),transparent)] transition-all duration-300"
+			"transition-all duration-300 *:data-[slot=sidebar-inner]:dark:bg-[radial-gradient(60%_18%_at_10%_0%,--theme(--color-foreground/.08),transparent)]"
 	)}
 	variant="sidebar"
 	collapsible="icon"

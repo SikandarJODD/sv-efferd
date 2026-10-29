@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from "#lib/utils.js";
 	import type { Snippet } from "svelte";
-	import H1 from "$lib/components/markdown/H1.svelte";
-	import Paragraph from "$lib/components/markdown/Paragraph.svelte";
-	import Seo from "$lib/components/base/Seo.svelte";
+	import H1 from "#lib/components/markdown/H1.svelte";
+	import Paragraph from "#lib/components/markdown/Paragraph.svelte";
+	import Seo from "#lib/components/base/Seo.svelte";
 	import { page } from "$app/state";
 
 	type DocsPageProps = {

@@ -135,7 +135,7 @@
 <script lang="ts">
 	import SearchForm from "./search-form.svelte";
 	import VersionSwitcher from "./version-switcher.svelte";
-	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
+	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
 	import type { ComponentProps } from "svelte";
 
 	let { ref = $bindable(null), ...restProps }: ComponentProps<typeof Sidebar.Root> = $props();

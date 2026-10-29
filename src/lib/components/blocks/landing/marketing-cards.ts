@@ -1,15 +1,15 @@
-import { authBlocks } from "$lib/blocks/auth/all_auth";
-import { blogBlocks } from "$lib/blocks/blog/all_blog";
-import { contactBlocks } from "$lib/blocks/contact/all_contact";
-import { ctaBlocks } from "$lib/blocks/cta/all_cta";
-import { faqBlocks } from "$lib/blocks/faqs/all_faqs";
-import { featureBlocks } from "$lib/blocks/features/all_features";
-import { footerBlocks } from "$lib/blocks/footer/all_footer";
-import { headerBlocks } from "$lib/blocks/header/all_header";
-import { heroBlocks } from "$lib/blocks/hero/all_hero";
-import { imageGalleryBlocks } from "$lib/blocks/image-gallery/all_image_gallery";
-import { integrationBlocks } from "$lib/blocks/integrations/all_integrations";
-import { logoCloudBlocks } from "$lib/blocks/logo-cloud/all_logo_cloud";
+import { authBlocks } from "#lib/blocks/auth/all_auth.js";
+import { blogBlocks } from "#lib/blocks/blog/all_blog.js";
+import { contactBlocks } from "#lib/blocks/contact/all_contact.js";
+import { ctaBlocks } from "#lib/blocks/cta/all_cta.js";
+import { faqBlocks } from "#lib/blocks/faqs/all_faqs.js";
+import { featureBlocks } from "#lib/blocks/features/all_features.js";
+import { footerBlocks } from "#lib/blocks/footer/all_footer.js";
+import { headerBlocks } from "#lib/blocks/header/all_header.js";
+import { heroBlocks } from "#lib/blocks/hero/all_hero.js";
+import { imageGalleryBlocks } from "#lib/blocks/image-gallery/all_image_gallery.js";
+import { integrationBlocks } from "#lib/blocks/integrations/all_integrations.js";
+import { logoCloudBlocks } from "#lib/blocks/logo-cloud/all_logo_cloud.js";
 import type { Component } from "svelte";
 import AuthPreview from "./category-previews/auth-preview.svelte";
 import BlogPreview from "./category-previews/blog-preview.svelte";
@@ -133,5 +133,5 @@ export const marketingCards: MarketingCardConfig[] = [
 		count: integrationBlocks.length,
 		countLabel: formatBlockLabel(integrationBlocks.length),
 		previewComponent: IntegrationsPreview
-	},
+	}
 ];

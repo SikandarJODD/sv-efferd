@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
-	import { Github, X as XLogo } from "$lib/svgs";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { Github, X as XLogo } from "#lib/svgs/index.js";
 	import { landingNavLinks, landingSocialLinks } from "./config";
 	import MobileNav from "./mobile-nav.svelte";
 	import { ModeSwitch } from "../ui/mode-switch";
@@ -50,7 +50,7 @@
 					{/if}
 				</Button>
 			{/each}
-			<GitHubButton variant='ghost' class='dark:bg-muted/50' repo={repo} stars={stars} />
+			<GitHubButton variant="ghost" class="dark:bg-muted/50" {repo} {stars} />
 
 			<ModeSwitch />
 		</div>

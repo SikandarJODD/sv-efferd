@@ -22,7 +22,7 @@ export const landingSocialLinks = [
 		id: "x",
 		label: "X",
 		href: "https://x.com/Sikandar_Bhide"
-	},
+	}
 ] as const;
 
 export const landingHero = {

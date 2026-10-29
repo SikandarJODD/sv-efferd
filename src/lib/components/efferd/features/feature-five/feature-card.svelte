@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { GridPattern } from "$lib/components/ui/grid-pattern";
-	import { cn } from "$lib/utils";
+	import { GridPattern } from "#lib/components/ui/grid-pattern/index.js";
+	import { cn } from "#lib/utils.js";
 	import type { Icon } from "@lucide/svelte";
 	import type { HTMLAttributes } from "svelte/elements";
 

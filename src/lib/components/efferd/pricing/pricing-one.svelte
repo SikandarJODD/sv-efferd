@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { ShieldCheck } from "@lucide/svelte";
-	import { Button } from "$lib/components/ui/button";
-	import { DecorIcon } from "$lib/components/ui/decor-icon";
-	import { cn } from "$lib/utils";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
+	import { cn } from "#lib/utils.js";
 
 	type Plan = {
 		name: string;

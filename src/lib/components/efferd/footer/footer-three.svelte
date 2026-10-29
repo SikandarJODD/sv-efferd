@@ -1,7 +1,7 @@
 <script lang="ts">
-	import AnimatedContainer from "$lib/components/efferd/footer/AnimatedContainer.svelte";
-	import { cn } from "$lib/utils";
-	import Logo from "$lib/svgs/logo.svelte";
+	import AnimatedContainer from "#lib/components/efferd/footer/AnimatedContainer.svelte";
+	import { cn } from "#lib/utils.js";
+	import Logo from "#lib/svgs/logo.svelte";
 	import {
 		FacebookIcon,
 		InstagramIcon,
