@@ -7,16 +7,6 @@ export default defineConfig({
 	plugins: [
 		tailwindcss(),
 		sveltekit({
-			// vitePlugin: {
-			// 	dynamicCompileOptions: ({ filename }) =>
-			// 		filename.includes("node_modules") ? undefined : { runes: true },
-			// 	inspector: {
-			// 		toggleKeyCombo: "ctrl-shift",
-			// 		holdMode: true,
-			// 		showToggleButton: "always",
-			// 		toggleButtonPos: "bottom-right"
-			// 	}
-			// },
 			adapter: adapter()
 		})
 	]

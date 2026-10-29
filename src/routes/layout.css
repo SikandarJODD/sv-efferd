@@ -4,6 +4,8 @@
 @import "@fontsource-variable/geist";
 @import "@fontsource-variable/shantell-sans";
 @import "../lib/styles/neat-annotations.css";
+@import "shadcn-svelte/tailwind.css";
+@import "@fontsource-variable/inter";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -27,11 +29,11 @@
 	--border: oklch(0.922 0 0);
 	--input: oklch(0.922 0 0);
 	--ring: oklch(0.708 0 0);
-	--chart-1: oklch(0.646 0.222 41.116);
-	--chart-2: oklch(0.6 0.118 184.704);
-	--chart-3: oklch(0.398 0.07 227.392);
-	--chart-4: oklch(0.828 0.189 84.429);
-	--chart-5: oklch(0.769 0.188 70.08);
+	--chart-1: oklch(0.87 0 0);
+	--chart-2: oklch(0.556 0 0);
+	--chart-3: oklch(0.439 0 0);
+	--chart-4: oklch(0.371 0 0);
+	--chart-5: oklch(0.269 0 0);
 	--sidebar: oklch(0.985 0 0);
 	--sidebar-foreground: oklch(0.145 0 0);
 	--sidebar-primary: oklch(0.205 0 0);
@@ -63,11 +65,11 @@
 	--border: oklch(1 0 0 / 10%);
 	--input: oklch(1 0 0 / 15%);
 	--ring: oklch(0.556 0 0);
-	--chart-1: oklch(0.488 0.243 264.376);
-	--chart-2: oklch(0.696 0.17 162.48);
-	--chart-3: oklch(0.769 0.188 70.08);
-	--chart-4: oklch(0.627 0.265 303.9);
-	--chart-5: oklch(0.645 0.246 16.439);
+	--chart-1: oklch(0.87 0 0);
+	--chart-2: oklch(0.556 0 0);
+	--chart-3: oklch(0.439 0 0);
+	--chart-4: oklch(0.371 0 0);
+	--chart-5: oklch(0.269 0 0);
 	--sidebar: oklch(0.205 0 0);
 	--sidebar-foreground: oklch(0.985 0 0);
 	--sidebar-primary: oklch(0.488 0.243 264.376);
@@ -120,7 +122,7 @@
 	--color-ink-dim: var(--ink-dim);
 
 	/* Font */
-	--font-sans: "Geist Variable", sans-serif;
+	--font-sans: 'Inter Variable', sans-serif;
 	--font-mono: "Geist Mono Variable", monospace;
 
 	--animate-marquee: marquee var(--duration) linear infinite;
@@ -142,6 +144,9 @@
 			transform: translateY(calc(-100% - var(--gap)));
 		}
 	}
+	--radius-2xl: calc(var(--radius) * 1.8);
+	--radius-3xl: calc(var(--radius) * 2.2);
+	--radius-4xl: calc(var(--radius) * 2.6)
 }
 
 @layer base {
@@ -154,11 +159,11 @@
 			"calt" 1;
 		font-synthesis-weight: none;
 		text-rendering: optimizeLegibility;
-		@apply bg-background text-foreground antialiased;
+		@apply antialiased bg-background text-foreground;
 	}
 	html {
 		scrollbar-gutter: stable;
-		@apply scroll-smooth;
+		@apply scroll-smooth font-sans;
 	}
 
 	/* Custom scrollbar styling. Thanks @pranathiperii. */
