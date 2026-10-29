@@ -1,11 +1,12 @@
 <script lang="ts">
 	import * as Drawer from "#lib/components/ui/drawer/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
-	import { X as XLogo } from "#lib/svgs/index.js";
-	import { MenuIcon, XIcon } from "@lucide/svelte";
+	import { Github, X as XLogo } from "#lib/svgs/index.js";
+	import { ArrowUpRightIcon, MenuIcon, XIcon } from "@lucide/svelte";
 	import { landingNavLinks, landingSocialLinks } from "./config";
 	import { getStars, GitHubButton } from "../ui/github-button";
 	import { onMount } from "svelte";
+	import { otherProjects, withProjectUtm } from "./other-projects";
 
 	let open = $state(false);
 	const blockLinks = [
@@ -35,12 +36,7 @@
 	<Drawer.Root bind:open>
 		<Drawer.Trigger>
 			{#snippet child({ props })}
-				<Button
-					{...props}
-					aria-label="Open menu"
-					size="icon-sm"
-					variant="ghost"
-				>
+				<Button {...props} aria-label="Open menu" size="icon-sm" variant="ghost">
 					<MenuIcon class="size-4" />
 				</Button>
 			{/snippet}
@@ -51,7 +47,7 @@
 			overlayProps={{ style: "animation-duration: 280ms; transition-duration: 280ms;" }}
 			style="animation-duration: 280ms; transition-duration: 280ms;"
 		>
-			<div class="mx-auto w-full max-w-lg overflow-y-auto">
+			<div class="mx-auto w-full max-w-lg overflow-y-auto scroll-fade-effect-y">
 				<Drawer.Header class="relative px-0 py-3 text-left">
 					<Drawer.Title class="sr-only">Menu</Drawer.Title>
 					<Drawer.Description class="sr-only">Site navigation</Drawer.Description>
@@ -84,10 +80,10 @@
 						{/each}
 					</div>
 
-					<div class="grid grid-cols-2 gap-1 border-t pt-3">
+					<div class="grid grid-cols-1 gap-1 border-t pt-3">
 						{#each blockLinks as link (link.href)}
 							<Button
-								class="h-8 justify-start px-2 text-xs"
+								class="h-9 justify-start px-2 text-sm"
 								href={link.href}
 								variant="ghost"
 								onclick={() => (open = false)}
@@ -96,6 +92,56 @@
 							</Button>
 						{/each}
 					</div>
+
+					<section class="border-t pt-3" aria-labelledby="other-projects-heading">
+						<h2 id="other-projects-heading" class="px-2 pb-2 text-sm font-medium">
+							Other Projects
+						</h2>
+						<div class="divide-y">
+							{#each otherProjects as project (project.url)}
+								<div class="px-2 py-3 first:pt-1">
+									<p class="text-sm font-medium">{project.title}</p>
+									<p
+										class="mt-1 line-clamp-2 text-xs leading-relaxed text-muted-foreground"
+									>
+										{project.description}
+									</p>
+									<div class="mt-2 flex items-center gap-2">
+										<Button
+											aria-label={`View ${project.title} on GitHub`}
+											class="rounded-full"
+											href={withProjectUtm(
+												project.github,
+												`mobile-navbar-${project.slug}-github`
+											)}
+											size="icon-sm"
+											target="_blank"
+											rel="noopener noreferrer"
+											variant="secondary"
+											onclick={() => (open = false)}
+										>
+											<Github class="size-3.5" />
+										</Button>
+										<Button
+											class="rounded-full text-xs"
+											href={withProjectUtm(
+												project.url,
+												`mobile-navbar-${project.slug}`
+											)}
+											size="sm"
+											target="_blank"
+											rel="noopener noreferrer"
+											variant="outline"
+											onclick={() => (open = false)}
+										>
+											View Project
+											<ArrowUpRightIcon class="size-3.5" />
+										</Button>
+									</div>
+								</div>
+							{/each}
+						</div>
+					</section>
 				</nav>
 
 				<div class="mt-3 flex items-center justify-end gap-1 border-t pt-3">
