@@ -47,7 +47,7 @@
 			overlayProps={{ style: "animation-duration: 280ms; transition-duration: 280ms;" }}
 			style="animation-duration: 280ms; transition-duration: 280ms;"
 		>
-			<div class="mx-auto w-full max-w-lg overflow-y-auto">
+			<div class="mx-auto w-full max-w-lg overflow-y-auto scroll-fade-effect-y">
 				<Drawer.Header class="relative px-0 py-3 text-left">
 					<Drawer.Title class="sr-only">Menu</Drawer.Title>
 					<Drawer.Description class="sr-only">Site navigation</Drawer.Description>
@@ -80,10 +80,10 @@
 						{/each}
 					</div>
 
-					<div class="grid grid-cols-2 gap-1 border-t pt-3">
+					<div class="grid grid-cols-1 gap-1 border-t pt-3">
 						{#each blockLinks as link (link.href)}
 							<Button
-								class="h-8 justify-start px-2 text-xs"
+								class="h-9 justify-start px-2 text-sm"
 								href={link.href}
 								variant="ghost"
 								onclick={() => (open = false)}
@@ -94,40 +94,44 @@
 					</div>
 
 					<section class="border-t pt-3" aria-labelledby="other-projects-heading">
-						<h2
-							id="other-projects-heading"
-							class="px-2 pb-2 text-xs font-medium tracking-wide text-muted-foreground uppercase"
-						>
+						<h2 id="other-projects-heading" class="px-2 pb-2 text-sm font-medium">
 							Other Projects
 						</h2>
-						<div class="space-y-1.5">
+						<div class="divide-y">
 							{#each otherProjects as project (project.url)}
-								<div class="rounded-lg border bg-muted/20 p-2.5">
-									<p class="truncate text-sm font-medium">{project.title}</p>
-									<div class="mt-2 grid grid-cols-2 gap-2">
+								<div class="px-2 py-3 first:pt-1">
+									<p class="text-sm font-medium">{project.title}</p>
+									<p
+										class="mt-1 line-clamp-2 text-xs leading-relaxed text-muted-foreground"
+									>
+										{project.description}
+									</p>
+									<div class="mt-2 flex items-center gap-2">
 										<Button
-											class="min-h-11 text-xs"
+											aria-label={`View ${project.title} on GitHub`}
+											class="rounded-full"
 											href={withProjectUtm(
 												project.github,
 												`mobile-navbar-${project.slug}-github`
 											)}
+											size="icon-sm"
 											target="_blank"
 											rel="noopener noreferrer"
-											variant="outline"
+											variant="secondary"
 											onclick={() => (open = false)}
 										>
 											<Github class="size-3.5" />
-											GitHub
 										</Button>
 										<Button
-											class="min-h-11 text-xs"
+											class="rounded-full text-xs"
 											href={withProjectUtm(
 												project.url,
 												`mobile-navbar-${project.slug}`
 											)}
+											size="sm"
 											target="_blank"
 											rel="noopener noreferrer"
-											variant="secondary"
+											variant="outline"
 											onclick={() => (open = false)}
 										>
 											View Project
