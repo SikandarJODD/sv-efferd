@@ -26,9 +26,7 @@
 	let fallbackFileId = $derived(codeTree.defaultFileId || files[0]?.id || "");
 	let activeFile = $derived(findBlockCodeFile(codeTree, activeFileId) ?? files[0]);
 	let displayedCode = $derived(
-		activeFile?.code
-			? transformImportAliases(activeFile.code, importAliasStyle.current)
-			: ""
+		activeFile?.code ? transformImportAliases(activeFile.code, importAliasStyle.current) : ""
 	);
 
 	$effect(() => {

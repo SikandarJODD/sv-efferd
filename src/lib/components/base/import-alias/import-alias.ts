@@ -5,8 +5,7 @@ type CodeSnippet = {
 };
 
 const SVELTEKIT_ALIASES = ["$app", "$env", "$service-worker"];
-const MODULE_SPECIFIER =
-	/(\b(?:from|import)\s*(?:\(\s*)?)(["'])([$#][^"']+)\2/g;
+const MODULE_SPECIFIER = /(\b(?:from|import)\s*(?:\(\s*)?)(["'])([$#][^"']+)\2/g;
 
 function isSvelteKitAlias(specifier: string) {
 	return SVELTEKIT_ALIASES.some(
@@ -14,10 +13,7 @@ function isSvelteKitAlias(specifier: string) {
 	);
 }
 
-export function transformImportAliases(
-	source: string,
-	style: ImportAliasStyle
-) {
+export function transformImportAliases(source: string, style: ImportAliasStyle) {
 	return source.replace(
 		MODULE_SPECIFIER,
 		(match, prefix: string, quote: string, specifier: string) => {

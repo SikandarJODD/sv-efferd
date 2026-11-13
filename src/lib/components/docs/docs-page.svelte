@@ -30,11 +30,7 @@
 	);
 </script>
 
-<Seo
-	title={resolvedSeoTitle}
-	desc={seoDescription ?? description}
-	link={page.url.pathname}
-/>
+<Seo title={resolvedSeoTitle} desc={seoDescription ?? description} link={page.url.pathname} />
 
 <section class={cn("mx-auto w-full max-w-4xl pb-16 sm:pb-0", className)}>
 	<div class="overflow-hidden border-x border-border/80">
