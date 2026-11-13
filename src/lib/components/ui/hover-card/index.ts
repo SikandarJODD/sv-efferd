@@ -11,5 +11,5 @@ export {
 	Root as HoverCard,
 	Content as HoverCardContent,
 	Trigger as HoverCardTrigger,
-	Portal as HoverCardPortal,
+	Portal as HoverCardPortal
 };

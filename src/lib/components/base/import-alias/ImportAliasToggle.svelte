@@ -14,11 +14,10 @@
 		value?: ImportAliasStyle;
 	} = $props();
 
-	const options: { label: string; value: ImportAliasStyle; title: string }[] =
-		[
-			{ label: "$", value: "dollar", title: "SvelteKit 2" },
-			{ label: "#", value: "hash", title: "SvelteKit 3" }
-		];
+	const options: { label: string; value: ImportAliasStyle; title: string }[] = [
+		{ label: "$", value: "dollar", title: "SvelteKit 2" },
+		{ label: "#", value: "hash", title: "SvelteKit 3" }
+	];
 </script>
 
 <HoverCard openDelay={200}>
@@ -56,15 +55,11 @@
 	>
 		<p class="flex items-center justify-between gap-3 font-mono">
 			SvelteKit 2
-			<kbd class="rounded bg-muted px-1.5 py-0.5 font-mono text-[10px]"
-				>$</kbd
-			>
+			<kbd class="rounded bg-muted px-1.5 py-0.5 font-mono text-[10px]">$</kbd>
 		</p>
 		<p class="flex items-center justify-between gap-3 font-mono">
 			SvelteKit 3
-			<kbd class="rounded bg-muted px-1.5 py-0.5 font-mono text-[10px]"
-				>#</kbd
-			>
+			<kbd class="rounded bg-muted px-1.5 py-0.5 font-mono text-[10px]">#</kbd>
 		</p>
 	</HoverCardContent>
 </HoverCard>

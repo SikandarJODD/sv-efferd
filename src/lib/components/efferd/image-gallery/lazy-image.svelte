@@ -36,9 +36,7 @@
 		() => ({ once: true }) as any
 	);
 
-	let imageSource = $derived(
-		fallbackSource ?? (inView ? (view.current ? src : undefined) : src)
-	);
+	let imageSource = $derived(fallbackSource ?? (inView ? (view.current ? src : undefined) : src));
 
 	function handleError() {
 		if (fallback && imageSource !== fallback) {

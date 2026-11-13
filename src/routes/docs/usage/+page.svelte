@@ -33,8 +33,8 @@
 		<Step>
 			<H2 class="mt-0 text-xl">Start with the right category</H2>
 			<Paragraph>
-				Open <Link href="/">Blocks</Link> and go to the section family that matches your
-				page: hero, pricing, FAQ, footer, and so on.
+				Open <Link href="/">Blocks</Link> and go to the section family that matches your page:
+				hero, pricing, FAQ, footer, and so on.
 			</Paragraph>
 		</Step>
 
