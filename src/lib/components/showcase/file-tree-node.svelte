@@ -1,16 +1,14 @@
 <script lang="ts">
 	import type { BlockCodeNode } from "#lib/blocks/showcase.js";
 	import { cn } from "#lib/utils.js";
-	import ChevronDown from "@lucide/svelte/icons/chevron-down";
 	import ChevronRight from "@lucide/svelte/icons/chevron-right";
 	import ExternalLink from "@lucide/svelte/icons/external-link";
-	import FileCode2 from "@lucide/svelte/icons/file-code-2";
 	import Folder from "@lucide/svelte/icons/folder";
 	import FolderOpen from "@lucide/svelte/icons/folder-open";
-	import CodeTreeNode from "./code-tree-node.svelte";
+	import FileTreeNode from "./file-tree-node.svelte";
 	import { slide } from "svelte/transition";
 
-	interface CodeTreeNodeProps {
+	interface FileTreeNodeProps {
 		node: BlockCodeNode;
 		activeFileId: string;
 		openFolderIds: Set<string>;
@@ -18,7 +16,7 @@
 		onToggleFolder: (folderId: string) => void;
 	}
 
-	let { node, activeFileId, openFolderIds, onSelectFile, onToggleFolder }: CodeTreeNodeProps =
+	let { node, activeFileId, openFolderIds, onSelectFile, onToggleFolder }: FileTreeNodeProps =
 		$props();
 
 	let isOpen = $derived(node.type === "folder" ? openFolderIds.has(node.id) : false);
@@ -35,11 +33,6 @@
 			onclick={() => onToggleFolder(node.id)}
 		>
 			<span class="flex w-4 shrink-0 items-center justify-center">
-				<!-- {#if isOpen}
-					<ChevronDown class="size-3.5" />
-				{:else}
-					<ChevronRight class="size-3.5" />
-					{/if} -->
 				<ChevronRight
 					class={[
 						"size-3.5 transition duration-150 ease-out",
@@ -58,7 +51,7 @@
 		{#if isOpen}
 			<div transition:slide={{ duration: 180 }} class="ml-4 border-l border-border/60 pl-1.5">
 				{#each node.children as child (child.id)}
-					<CodeTreeNode
+					<FileTreeNode
 						node={child}
 						{activeFileId}
 						{openFolderIds}
@@ -77,8 +70,6 @@
 		aria-label={`Open ${node.externalLabel ?? node.name}`}
 		class="flex items-center gap-1 rounded-md pl-2 text-[13px] text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
 	>
-		<!-- <span class="w-4 shrink-0"></span> -->
-		<!-- <FileCode2 class="size-3.5 shrink-0 text-sky-500" /> -->
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="16"
@@ -112,8 +103,6 @@
 			class="flex min-w-0 flex-1 items-center gap-2 px-2 py-1.5 text-left"
 			onclick={() => onSelectFile(node.id)}
 		>
-			<!-- <span class="w-4 shrink-0"></span> -->
-			<!-- <FileCode2 class="size-3.5 shrink-0 text-sky-500" /> -->
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="16"

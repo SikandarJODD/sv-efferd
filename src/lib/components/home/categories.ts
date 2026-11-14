@@ -1,3 +1,4 @@
+import { appShellBlocks } from "#lib/blocks/all-app-shell.js";
 import { authBlocks } from "#lib/blocks/all-auth.js";
 import { blogBlocks } from "#lib/blocks/all-blog.js";
 import { contactBlocks } from "#lib/blocks/all-contact.js";
@@ -11,20 +12,21 @@ import { imageGalleryBlocks } from "#lib/blocks/all-image-gallery.js";
 import { integrationBlocks } from "#lib/blocks/all-integrations.js";
 import { logoCloudBlocks } from "#lib/blocks/all-logo-cloud.js";
 import type { Component } from "svelte";
-import AuthPreview from "./category-previews/auth-preview.svelte";
-import BlogPreview from "./category-previews/blog-preview.svelte";
-import ContactPreview from "./category-previews/contact-preview.svelte";
-import CtaPreview from "./category-previews/cta-preview.svelte";
-import FaqsPreview from "./category-previews/faqs-preview.svelte";
-import FeaturesPreview from "./category-previews/features-preview.svelte";
-import FooterPreview from "./category-previews/footer-preview.svelte";
-import HeaderPreview from "./category-previews/header-preview.svelte";
-import HeroPreview from "./category-previews/hero-preview.svelte";
-import ImageGalleryPreview from "./category-previews/image-gallery-preview.svelte";
-import IntegrationsPreview from "./category-previews/integrations-preview.svelte";
-import LogoCloudPreview from "./category-previews/logo-cloud-preview.svelte";
+import AppShellPreview from "./previews/app-shell.svelte";
+import AuthPreview from "./previews/auth.svelte";
+import BlogPreview from "./previews/blog.svelte";
+import ContactPreview from "./previews/contact.svelte";
+import CtaPreview from "./previews/cta.svelte";
+import FaqsPreview from "./previews/faqs.svelte";
+import FeaturesPreview from "./previews/features.svelte";
+import FooterPreview from "./previews/footer.svelte";
+import HeaderPreview from "./previews/header.svelte";
+import HeroPreview from "./previews/hero.svelte";
+import ImageGalleryPreview from "./previews/image-gallery.svelte";
+import IntegrationsPreview from "./previews/integrations.svelte";
+import LogoCloudPreview from "./previews/logo-cloud.svelte";
 
-export type MarketingCardConfig = {
+export type CategoryConfig = {
 	slug: string;
 	title: string;
 	href: string;
@@ -37,7 +39,7 @@ function formatBlockLabel(count: number) {
 	return `${count} ${count === 1 ? "block" : "blocks"}`;
 }
 
-export const marketingCards: MarketingCardConfig[] = [
+export const marketingCategories: CategoryConfig[] = [
 	{
 		slug: "header",
 		title: "Header",
@@ -133,5 +135,16 @@ export const marketingCards: MarketingCardConfig[] = [
 		count: integrationBlocks.length,
 		countLabel: formatBlockLabel(integrationBlocks.length),
 		previewComponent: IntegrationsPreview
+	}
+];
+
+export const appShellCategories: CategoryConfig[] = [
+	{
+		slug: "app-shell",
+		title: "App Shell",
+		href: "/blocks/app-shell",
+		count: appShellBlocks.length,
+		countLabel: formatBlockLabel(appShellBlocks.length),
+		previewComponent: AppShellPreview
 	}
 ];

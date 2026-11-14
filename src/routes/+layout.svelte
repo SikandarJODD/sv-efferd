@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import "./layout.css";
-	import SiteFooter from "#lib/components/landing/site-footer.svelte";
+	import SiteFooter from "#lib/components/site/footer.svelte";
 	import { ModeWatcher, toggleMode } from "mode-watcher";
 	import { cn } from "#lib/utils.js";
-	import SiteHeader from "#lib/components/landing/site-header.svelte";
+	import SiteHeader from "#lib/components/site/header.svelte";
 	import { PressedKeys } from "runed";
 
 	let { children } = $props();
@@ -12,7 +12,6 @@
 
 	const keys = new PressedKeys();
 	keys.onKeys(["d"], () => {
-		console.log("open command palette");
 		toggleMode();
 	});
 </script>
@@ -39,12 +38,6 @@
 		{@render children()}
 	</div>
 {:else}
-	<!-- <a
-		class="fixed top-3 left-3 z-[100] -translate-y-20 rounded-md bg-background px-3 py-2 text-sm font-medium shadow-md transition-transform focus:translate-y-0"
-		href="#main"
-	>
-		Skip to content
-	</a> -->
 	<div class="relative supports-[overflow:clip]:overflow-clip dark:bg-background">
 		<SiteHeader />
 		<main

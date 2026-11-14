@@ -19,8 +19,8 @@
 		TooltipProvider,
 		TooltipTrigger
 	} from "#lib/components/ui/tooltip/index.js";
-	import CodeEditor from "./code-editor.svelte";
-	import InstallComponent from "./install-component.svelte";
+	import CodeViewer from "./code-viewer.svelte";
+	import InstallButton from "./install-button.svelte";
 
 	interface BlockPreviewProps {
 		id: string;
@@ -80,7 +80,6 @@
 	let canToggleResponsivePreview = $derived(Boolean(previewHref) && previewMode === "inline");
 	let showIframeComp = $state(false);
 	let shouldRenderInIframe = $derived(Boolean(previewHref) && (startsInIframe || showIframeComp));
-	let shouldShowIframeScrollHint = $derived(shouldRenderInIframe && isHeroPreview);
 	let isLargeViewport = $derived(large.current);
 	let showViewportControls = $derived(shouldRenderInIframe && !isMobile.current);
 	let resolvedIframeHeight = $derived(
@@ -134,15 +133,6 @@
 
 <section {id} class="group scroll-mt-10">
 	<div class="relative">
-		<!-- <div class="absolute inset-x-4 -top-14 bottom-0 mx-auto max-w-7xl lg:inset-x-0">
-			<div
-				class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
-			></div>
-			<div
-				class="absolute top-0 right-0 bottom-0 w-px bg-linear-to-b from-transparent to-(--color-border) to-75%"
-			></div>
-		</div> -->
-
 		<div class="relative mx-auto max-w-7xl">
 			<div class="relative border-b px-5 py-5 sm:px-6 sm:py-4 lg:px-7">
 				<DecorIcon
@@ -153,21 +143,6 @@
 					class="z-999 hidden size-3.5 translate-x-[calc(50%)] -translate-y-[calc(50%+0.5px)] bg-background stroke-muted-foreground/70 md:block"
 					position="top-right"
 				/>
-				<!-- <DecorIcon
-					class="size-3.5 bg-background stroke-muted-foreground/40"
-					position="bottom-left"
-				/>
-				<DecorIcon
-					class="size-3.5 bg-background stroke-muted-foreground/40"
-					position="bottom-right"
-				/> -->
-
-				<!-- <div class="absolute inset-x-0 top-0 h-px bg-border/70"></div>
-				<div class="absolute inset-x-0 bottom-0 h-px bg-border/70"></div>
-				<div
-					class="pointer-events-none absolute inset-x-0 top-0 h-10 bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.05)_12%,transparent_24%)] [mask-image:linear-gradient(to_bottom,black,transparent)] opacity-25 dark:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.04)_12%,transparent_24%)]"
-				></div> -->
-
 				<div class="relative max-w-2xl">
 					<div class="flex flex-wrap items-end gap-x-2 gap-y-1">
 						<h2 class="text-xl font-medium tracking-tight text-foreground sm:text-xl">
@@ -271,12 +246,6 @@
 						<span class="hidden text-sm text-muted-foreground lg:block">
 							{width < MD_SIZE ? "Mobile" : width < LG_SIZE ? "Tablet" : "Desktop"}
 						</span>
-
-						<!-- {#if shouldShowIframeScrollHint}
-							<span class="hidden text-sm text-muted-foreground lg:block">
-								Scroll inside preview
-							</span>
-						{/if} -->
 					{/if}
 				</div>
 
@@ -536,7 +505,7 @@
 					{/if}
 
 					{#if canInstall}
-						<InstallComponent id={installId} class={cn(isMobile.current && "flex-1")} />
+						<InstallButton id={installId} class={cn(isMobile.current && "flex-1")} />
 					{/if}
 
 					{#if themeSetupHref}
@@ -556,12 +525,6 @@
 	</div>
 
 	<div class="relative">
-		<!-- <div class="absolute inset-x-4 -bottom-14 mx-auto h-14 max-w-7xl lg:inset-x-0">
-			<div class="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-(--color-border)"></div>
-			<div class="absolute top-0 right-0 bottom-0 w-px bg-linear-to-b from-(--color-border)"></div>
-		</div> -->
-
-		<!-- lg:border-x -->
 		<div
 			class="relative mx-auto max-w-7xl border-b px-4 lg:px-0"
 			style={`--preview-min-height: ${MIN_PREVIEW_HEIGHT}px;`}
@@ -652,7 +615,7 @@
 
 			<div class="bg-white dark:bg-transparent!">
 				{#if mode === "code"}
-					<CodeEditor {codeTree} />
+					<CodeViewer {codeTree} />
 				{/if}
 			</div>
 		</div>

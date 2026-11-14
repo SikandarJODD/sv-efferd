@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { Github, X as XLogo } from "#lib/svgs/index.js";
-	import { landingSocialLinks } from "./config";
+	import { socialLinks } from "./navigation.js";
 	import MobileNav from "./mobile-nav.svelte";
 	import { ModeSwitch } from "../ui/mode-switch";
 	import { getStars, GitHubButton } from "../ui/github-button";
 	import { onMount } from "svelte";
-	import ImportAliasToggle from "../base/import-alias/import-alias-toggle.svelte";
-	import { importAliasStyle } from "../base/import-alias/import-alias.svelte.js";
+	import ImportAliasToggle from "../import-alias/toggle.svelte";
+	import { importAliasStyle } from "../import-alias/preference.svelte.js";
 	import DesktopNav from "./desktop-nav.svelte";
 
 	let stars = $state(30);
@@ -22,7 +22,6 @@
 >
 	<nav class="cpx flex h-12 items-center justify-between gap-3">
 		<a aria-label="Efferd home" class="flex shrink-0 px-1" href="/">
-			<!-- <Logo class="h-5 w-auto" /> -->
 			<span class="font-mono font-medium tracking-tight">Svelte Efferd</span>
 		</a>
 
@@ -32,7 +31,7 @@
 
 		<div class="hidden items-center gap-2 md:flex">
 			<ImportAliasToggle bind:value={importAliasStyle.current} />
-			{#each landingSocialLinks as link}
+			{#each socialLinks as link}
 				<Button
 					target="_blank"
 					aria-label={link.label}

@@ -1,7 +1,12 @@
 <script lang="ts">
 	import { asset } from "$app/paths";
+	import BlockCatalog from "#lib/components/home/block-catalog.svelte";
+	import Credits from "#lib/components/home/credits.svelte";
+	import Features from "#lib/components/home/features.svelte";
+	import Hero from "#lib/components/home/hero.svelte";
+	import Sponsors from "#lib/components/home/sponsors.svelte";
+	import { Separator } from "#lib/components/ui/separator/index.js";
 	import { MetaTags, JsonLd } from "svelte-meta-tags";
-	import BlocksLandingPage from "#lib/components/blocks/landing/blocks-landing-page.svelte";
 
 	const siteName = "Svelte Efferd Blocks";
 	const siteUrl = "https://sv-efferd.pages.dev";
@@ -146,4 +151,11 @@
 />
 <JsonLd schema={jsonLdSchema} />
 
-<BlocksLandingPage />
+<Hero />
+<BlockCatalog />
+<Separator />
+<Sponsors />
+<Separator />
+<Credits />
+<Separator />
+<Features />

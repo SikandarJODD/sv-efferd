@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Seo from "#lib/components/base/seo.svelte";
-	import BlockPreview from "#lib/components/layout/block-preview.svelte";
+	import Seo from "#lib/components/site/seo.svelte";
+	import BlockPreview from "#lib/components/showcase/block-preview.svelte";
 	import type { PageProps } from "./$types";
 
 	let { data }: PageProps = $props();

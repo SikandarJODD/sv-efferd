@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { Badge } from "#lib/components/spell/badge/index.js";
 	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
-	import { dashboardSidebarCards } from "./dashboard-sidebar-cards";
-	import MarketingCard from "./marketing-card.svelte";
-	import { marketingCards } from "./marketing-cards";
+	import { appShellCategories, marketingCategories } from "./categories.js";
+	import CategoryCard from "./category-card.svelte";
 </script>
 
 <section class="relative">
@@ -27,8 +26,8 @@
 
 	<div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-7 lg:px-8">
 		<div class="grid grid-cols-1 gap-3.5 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
-			{#each marketingCards as card (card.slug)}
-				<MarketingCard
+			{#each marketingCategories as card (card.slug)}
+				<CategoryCard
 					title={card.title}
 					href={card.href}
 					countLabel={card.countLabel}
@@ -62,8 +61,8 @@
 	</div>
 	<div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-7 lg:px-8">
 		<div class="grid grid-cols-1 gap-3.5 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
-			{#each dashboardSidebarCards as card (card.slug)}
-				<MarketingCard
+			{#each appShellCategories as card (card.slug)}
+				<CategoryCard
 					title={card.title}
 					href={card.href}
 					countLabel={card.countLabel}

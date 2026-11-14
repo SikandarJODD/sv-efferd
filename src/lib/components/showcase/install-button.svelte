@@ -4,12 +4,12 @@
 	import { AGENTS, type Agent } from "#lib/components/ui/add/index.js";
 	import { cn } from "#lib/utils.js";
 
-	interface InstallComponentProps {
+	interface InstallButtonProps {
 		id?: string;
 		class?: string;
 	}
 
-	let { id, class: className = "" }: InstallComponentProps = $props();
+	let { id, class: className = "" }: InstallButtonProps = $props();
 
 	let currentAgent: Agent = $state("pnpm");
 	let installUrl = $derived(id?.trim() ? `${page.url.origin}/r/${id.trim()}.json` : "");

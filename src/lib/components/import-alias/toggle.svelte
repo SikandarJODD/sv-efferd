@@ -6,7 +6,7 @@
 		HoverCardTrigger
 	} from "#lib/components/ui/hover-card/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
-	import type { ImportAliasStyle } from "./import-alias";
+	import type { ImportAliasStyle } from "./transform.js";
 
 	let {
 		value = $bindable<ImportAliasStyle>("dollar")

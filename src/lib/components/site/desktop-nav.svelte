@@ -2,13 +2,13 @@
 	import { ArrowUpRightIcon } from "@lucide/svelte";
 	import * as NavigationMenu from "#lib/components/ui/navigation-menu/index.js";
 	import { Github } from "#lib/svgs/index.js";
-	import { landingNavLinks } from "./config";
-	import { otherProjects, withProjectUtm } from "./other-projects";
+	import { navLinks } from "./navigation.js";
+	import { otherProjects, withProjectUtm } from "./projects.js";
 </script>
 
 <NavigationMenu.Root>
 	<NavigationMenu.List class="gap-1">
-		{#each landingNavLinks as link (link.href)}
+		{#each navLinks as link (link.href)}
 			<NavigationMenu.Item>
 				<NavigationMenu.Link
 					class="rounded-full px-3 py-1.5 text-muted-foreground hover:text-foreground"

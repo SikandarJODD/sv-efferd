@@ -14,8 +14,7 @@
 
 	const productLinks: FooterLink[] = [
 		{ label: "Home", href: "/" },
-		{ label: "Blocks", href: "/" },
-		{ label: "Changelog", href: "/changelog" }
+		{ label: "Blocks", href: "/blocks/hero" }
 	];
 
 	const socialLinks = [
@@ -34,7 +33,6 @@
 	const currentYear = new Date().getFullYear();
 </script>
 
-<!-- <div class="mt-18"> -->
 <footer class="relative">
 	<FullWidthDivider position="top" class="bg-border/80" />
 	<div class="container">
@@ -143,4 +141,3 @@
 		</div>
 	</div>
 </footer>
-<!-- </div> -->

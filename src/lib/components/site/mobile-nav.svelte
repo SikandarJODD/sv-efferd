@@ -3,10 +3,10 @@
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { Github, X as XLogo } from "#lib/svgs/index.js";
 	import { ArrowUpRightIcon, MenuIcon, XIcon } from "@lucide/svelte";
-	import { landingNavLinks, landingSocialLinks } from "./config";
+	import { navLinks, socialLinks } from "./navigation.js";
 	import { getStars, GitHubButton } from "../ui/github-button";
 	import { onMount } from "svelte";
-	import { otherProjects, withProjectUtm } from "./other-projects";
+	import { otherProjects, withProjectUtm } from "./projects.js";
 
 	let open = $state(false);
 	const blockLinks = [
@@ -68,7 +68,7 @@
 
 				<nav aria-label="Mobile navigation" class="space-y-3">
 					<div class="grid grid-cols-1 gap-1">
-						{#each landingNavLinks as link (link.href)}
+						{#each navLinks as link (link.href)}
 							<Button
 								class="justify-start"
 								href={link.href}
@@ -145,7 +145,7 @@
 				</nav>
 
 				<div class="mt-3 flex items-center justify-end gap-1 border-t pt-3">
-					{#each landingSocialLinks as link (link.href)}
+					{#each socialLinks as link (link.href)}
 						<Button
 							aria-label={link.label}
 							href={link.href}

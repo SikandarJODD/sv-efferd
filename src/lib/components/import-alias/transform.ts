@@ -1,9 +1,5 @@
 export type ImportAliasStyle = "dollar" | "hash";
 
-type CodeSnippet = {
-	code: string;
-};
-
 const SVELTEKIT_ALIASES = ["$app", "$env", "$service-worker"];
 const MODULE_SPECIFIER = /(\b(?:from|import)\s*(?:\(\s*)?)(["'])([$#][^"']+)\2/g;
 
@@ -31,31 +27,3 @@ export function transformImportAliases(source: string, style: ImportAliasStyle) 
 		}
 	);
 }
-
-export function transformCodeImports<T extends CodeSnippet | CodeSnippet[]>(
-	value: T,
-	style: ImportAliasStyle
-): T {
-	if (Array.isArray(value)) {
-		return value.map((item) => ({
-			...item,
-			code: transformImportAliases(item.code, style)
-		})) as T;
-	}
-
-	return {
-		...value,
-		code: transformImportAliases(value.code, style)
-	} as T;
-}
-
-/*
-Usage
-
-	let importAliasStyle = new PersistedState<ImportAliasStyle>(
-		"sveltekit-import-alias-style",
-		"dollar"
-	);
-	let displayedCode = $derived(transformCodeImports(code, importAliasStyle.current));
-
- */

@@ -13,9 +13,9 @@
 	import { scale } from "svelte/transition";
 	import Button from "../ui/button/button.svelte";
 	import * as CodeBlock from "../ui/code-block/index.js";
-	import CodeTreeNode from "./code-tree-node.svelte";
-	import { importAliasStyle } from "#lib/components/base/import-alias/import-alias.svelte.js";
-	import { transformImportAliases } from "#lib/components/base/import-alias/import-alias.js";
+	import FileTreeNode from "./file-tree-node.svelte";
+	import { importAliasStyle } from "#lib/components/import-alias/preference.svelte.js";
+	import { transformImportAliases } from "#lib/components/import-alias/transform.js";
 
 	let { codeTree }: { codeTree: BlockCodeTree } = $props();
 
@@ -68,7 +68,6 @@
 	}
 </script>
 
-<!-- border-t -->
 <div class="flex flex-col sm:min-h-[32rem] sm:flex-row">
 	<div
 		class="w-full border-b bg-neutral-50 text-black [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:w-72 sm:border-r sm:border-b-0 dark:bg-zinc-900/25 dark:text-white"
@@ -93,7 +92,7 @@
 		</div>
 		<div class="max-h-[18rem] overflow-auto px-2 py-3 sm:max-h-[36rem]">
 			{#each codeTree.nodes as node (node.id)}
-				<CodeTreeNode
+				<FileTreeNode
 					{node}
 					{activeFileId}
 					{openFolderIds}

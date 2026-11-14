@@ -4,7 +4,7 @@
 	import Button from "#lib/components/ui/button/button.svelte";
 	import type { Snippet } from "svelte";
 	import { fly } from "svelte/transition";
-	import CategoryNavigation from "#lib/components/layout/category-navigation.svelte";
+	import CategoryNav from "#lib/components/showcase/category-nav.svelte";
 	import { blockCategories } from "#lib/blocks/categories.js";
 
 	let { children }: { children: Snippet } = $props();
@@ -15,12 +15,7 @@
 </script>
 
 <div>
-	<CategoryNavigation />
-	<!-- <section>
-			<div
-				class="h-6 w-full bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] opacity-35"
-			></div>
-		</section> -->
+	<CategoryNav />
 	{#if currentCategory}
 		<header class="border-b border-border/80 px-5 py-8 sm:px-6 lg:px-7">
 			<div class="mx-auto max-w-7xl">
