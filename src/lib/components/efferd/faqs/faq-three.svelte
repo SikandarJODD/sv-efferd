@@ -59,7 +59,7 @@
 	];
 </script>
 
-<section class="mx-auto grid min-h-screen w-full max-w-5xl grid-cols-1 md:grid-cols-2 lg:border-x">
+<section class="mx-auto grid min-h-svh w-full max-w-5xl grid-cols-1 md:grid-cols-2 lg:border-x">
 	<div class="px-4 pt-12 pb-6">
 		<div class="space-y-5">
 			<h2 class="text-4xl font-bold text-balance md:text-6xl lg:font-black">

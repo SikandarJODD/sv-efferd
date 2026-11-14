@@ -162,8 +162,23 @@
 		@apply bg-background text-foreground antialiased;
 	}
 	html {
+		-webkit-tap-highlight-color: transparent;
+		-webkit-text-size-adjust: 100%;
 		scrollbar-gutter: stable;
-		@apply scroll-smooth font-sans;
+		@apply font-sans;
+	}
+	button,
+	a,
+	input,
+	select,
+	textarea,
+	[role="button"] {
+		touch-action: manipulation;
+	}
+	@media (prefers-reduced-motion: no-preference) {
+		html {
+			@apply scroll-smooth;
+		}
 	}
 
 	/* Custom scrollbar styling. Thanks @pranathiperii. */

@@ -91,7 +91,7 @@
 	];
 </script>
 
-<div class="mx-auto min-h-screen max-w-5xl space-y-8 overflow-x-clip border-x py-6">
+<div class="mx-auto min-h-svh max-w-5xl space-y-8 overflow-x-clip border-x py-6">
 	<div class="flex flex-col gap-2 px-4 md:px-6">
 		<h1 class="text-3xl font-semibold tracking-wide text-balance md:text-4xl xl:font-bold">
 			Real Results, Real Voices

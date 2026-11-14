@@ -37,10 +37,12 @@
 		quoteAuthor = "~ Ali Hassan",
 		...restProps
 	}: AuthFiveProps = $props();
+	const id = $props.id();
+	const emailId = `${id}-email`;
 </script>
 
 <main
-	class={cn("relative md:h-screen md:overflow-hidden lg:grid lg:grid-cols-2", className)}
+	class={cn("relative md:h-dvh md:overflow-hidden lg:grid lg:grid-cols-2", className)}
 	{...restProps}
 >
 	<div
@@ -67,7 +69,7 @@
 		</div>
 	</div>
 
-	<div class="relative flex min-h-screen flex-col justify-center px-8">
+	<div class="relative flex min-h-svh flex-col justify-center px-8">
 		<div aria-hidden="true" class="absolute inset-0 isolate -z-10 opacity-60 contain-strict">
 			<div
 				class="absolute top-0 right-0 h-320 w-140 -translate-y-87.5 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,--theme(--color-foreground/.06)_0,hsla(0,0%,55%,.02)_50%,--theme(--color-foreground/.01)_80%)]"
@@ -115,18 +117,24 @@
 			<AuthDivider>OR</AuthDivider>
 
 			<form class="space-y-2">
-				<p class="text-start text-xs text-muted-foreground">
+				<label class="block text-start text-xs text-muted-foreground" for={emailId}>
 					Enter your email address to sign in or create an account
-				</p>
+				</label>
 
 				<InputGroup>
-					<InputGroupInput placeholder={emailPlaceholder} type="email" />
+					<InputGroupInput
+						autocomplete="email"
+						id={emailId}
+						name="email"
+						placeholder={emailPlaceholder}
+						type="email"
+					/>
 					<InputGroupAddon align="inline-start">
 						<AtSignIcon />
 					</InputGroupAddon>
 				</InputGroup>
 
-				<Button class="w-full" type="button">Continue With Email</Button>
+				<Button class="w-full" type="submit">Continue With Email</Button>
 			</form>
 
 			<p class="mt-8 text-sm text-muted-foreground">

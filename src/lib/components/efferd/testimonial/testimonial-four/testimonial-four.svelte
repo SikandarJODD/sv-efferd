@@ -32,7 +32,7 @@
 	];
 </script>
 
-<section class="relative mx-auto min-h-screen w-full max-w-4xl place-content-center border-x">
+<section class="relative mx-auto min-h-svh w-full max-w-4xl place-content-center border-x">
 	<FullWidthDivider />
 	<div class="grid md:grid-cols-[2fr_1px_1fr]">
 		<div class="divide-y">

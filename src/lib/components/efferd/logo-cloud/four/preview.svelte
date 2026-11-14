@@ -2,7 +2,7 @@
 	import LogoCloudFour from "./logo-cloud-four.svelte";
 </script>
 
-<div class="min-h-screen w-full place-content-center p-4">
+<div class="min-h-svh w-full place-content-center p-4">
 	<div class="w-full">
 		<h2 class="mb-5 text-center">
 			<span class="block text-2xl font-medium text-muted-foreground"> Already used by </span>

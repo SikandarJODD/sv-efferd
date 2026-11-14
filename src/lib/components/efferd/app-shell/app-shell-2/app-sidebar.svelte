@@ -14,7 +14,7 @@
 		"*:data-[slot=sidebar-inner]:bg-background",
 		"**:data-[slot=sidebar-menu-button]:[&>span]:text-foreground/75",
 		sidebar.open &&
-			"transition-all duration-300 *:data-[slot=sidebar-inner]:dark:bg-[radial-gradient(60%_18%_at_10%_0%,--theme(--color-foreground/.08),transparent)]"
+			"*:data-[slot=sidebar-inner]:dark:bg-[radial-gradient(60%_18%_at_10%_0%,--theme(--color-foreground/.08),transparent)]"
 	)}
 	variant="sidebar"
 	collapsible="icon"

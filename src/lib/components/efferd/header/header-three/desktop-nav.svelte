@@ -64,12 +64,5 @@
 				</div>
 			</NavigationMenu.Content>
 		</NavigationMenu.Item>
-		<NavigationMenu.Item>
-			<NavigationMenu.Link class="rounded-md p-2 px-4 hover:bg-accent">
-				{#snippet child({ props })}
-					<a href="/docs" {...props}>Docs</a>
-				{/snippet}
-			</NavigationMenu.Link>
-		</NavigationMenu.Item>
 	</NavigationMenu.List>
 </NavigationMenu.Root>

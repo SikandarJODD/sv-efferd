@@ -11,14 +11,14 @@
 
 <header
 	class={cn(
-		"sticky top-0 z-50 mx-auto w-full max-w-5xl border-b border-border  shadow-sm backdrop-blur-sm transition-[max-width] duration-300 ease-out supports-backdrop-filter:bg-background/50 md:transition-all md:ease-out",
+		"sticky top-0 z-50 mx-auto w-full max-w-5xl border-b border-border shadow-sm backdrop-blur-sm transition-[max-width,background-color,border-color,box-shadow,backdrop-filter] duration-200 ease-out supports-backdrop-filter:bg-background/50 motion-reduce:transition-none",
 		scroll.scrolled &&
 			"rounded-full border border-border bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/50 md:top-2 md:max-w-4xl md:shadow"
 	)}
 >
 	<nav
 		class={cn(
-			"flex h-14 w-full items-center justify-between px-4 md:h-14 md:transition-all md:ease-out",
+			"flex h-14 w-full items-center justify-between px-4 md:h-14",
 			scroll.scrolled && "md:h-12 md:px-2"
 		)}
 	>

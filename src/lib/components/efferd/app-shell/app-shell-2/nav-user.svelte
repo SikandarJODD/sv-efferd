@@ -17,7 +17,10 @@
 </script>
 
 <DropdownMenu.Root>
-	<DropdownMenu.Trigger>
+	<DropdownMenu.Trigger
+		aria-label="Open account menu"
+		class="flex size-11 items-center justify-center rounded-lg"
+	>
 		<Avatar.Root class="size-8">
 			<Avatar.Image src={user.avatar} alt={user.name} />
 			<Avatar.Fallback class="rounded-lg">CN</Avatar.Fallback>

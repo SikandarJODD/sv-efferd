@@ -5,7 +5,7 @@
 	import { CompassIcon, HomeIcon } from "@lucide/svelte";
 </script>
 
-<div class="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
+<div class="relative flex min-h-svh w-full items-center justify-center overflow-hidden">
 	<Empty.Root>
 		<Empty.Header>
 			<Empty.Title class="mask-b-from-20% mask-b-to-80% text-9xl font-extrabold"

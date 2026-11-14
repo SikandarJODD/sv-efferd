@@ -27,11 +27,13 @@
 		emailPlaceholder = "your.email@example.com",
 		...restProps
 	}: AuthTwoProps = $props();
+	const id = $props.id();
+	const emailId = `${id}-email`;
 </script>
 
 <div
 	class={cn(
-		"relative flex h-screen w-full items-center justify-center overflow-hidden px-6 md:px-8",
+		"relative flex min-h-svh w-full items-center justify-center overflow-hidden px-6 md:px-8",
 		className
 	)}
 	{...restProps}
@@ -50,7 +52,7 @@
 		<DecorIcon position="top-left" />
 		<DecorIcon position="bottom-right" />
 
-		<div class="w-full max-w-sm animate-in space-y-8">
+		<div class="w-full max-w-sm animate-in space-y-8 motion-reduce:animate-none">
 			<div class="flex flex-col space-y-1">
 				<h1 class="text-2xl font-bold tracking-wide">Join Now!</h1>
 				<p class="text-base text-muted-foreground">Login or create your efferd account.</p>
@@ -58,14 +60,21 @@
 
 			<div class="space-y-4">
 				<form class="space-y-2">
+					<label class="sr-only" for={emailId}>Email address</label>
 					<InputGroup>
-						<InputGroupInput placeholder={emailPlaceholder} type="email" />
+						<InputGroupInput
+							autocomplete="email"
+							id={emailId}
+							name="email"
+							placeholder={emailPlaceholder}
+							type="email"
+						/>
 						<InputGroupAddon align="inline-start">
 							<AtSignIcon />
 						</InputGroupAddon>
 					</InputGroup>
 
-					<Button class="w-full" size="sm" type="button">Continue With Email</Button>
+					<Button class="w-full" size="sm" type="submit">Continue With Email</Button>
 				</form>
 
 				<AuthDivider>OR</AuthDivider>

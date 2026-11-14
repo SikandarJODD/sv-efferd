@@ -33,9 +33,9 @@
 	}: AuthFourProps = $props();
 </script>
 
-<div class={cn("relative w-full overflow-hidden px-4 md:h-screen", className)} {...restProps}>
+<div class={cn("relative w-full overflow-hidden px-4 md:h-dvh", className)} {...restProps}>
 	<div
-		class="relative mx-auto flex min-h-screen w-full max-w-sm flex-col justify-center border-x *:px-6"
+		class="relative mx-auto flex min-h-svh w-full max-w-sm flex-col justify-center border-x *:px-6"
 	>
 		<div class="flex flex-col space-y-6">
 			<a aria-label="Home" href={logoHref}>
@@ -64,6 +64,8 @@
 				<InputGroup>
 					<InputGroupInput
 						aria-label={emailAriaLabel}
+						autocomplete="email"
+						name="email"
 						placeholder={emailPlaceholder}
 						type="email"
 					/>

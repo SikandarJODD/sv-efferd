@@ -39,7 +39,7 @@
 </script>
 
 <div
-	class="mx-auto flex min-h-screen w-full max-w-5xl flex-col justify-center gap-12 px-4 py-12 md:px-8"
+	class="mx-auto flex min-h-svh w-full max-w-5xl flex-col justify-center gap-12 px-4 py-12 md:px-8"
 >
 	<div class="mx-auto max-w-2xl space-y-2 text-center">
 		<h2 class="text-3xl font-medium tracking-tight md:text-5xl">Build apps faster</h2>

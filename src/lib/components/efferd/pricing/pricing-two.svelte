@@ -42,7 +42,7 @@
 	];
 </script>
 
-<section class="mx-auto min-h-screen max-w-5xl place-content-center border-x py-4">
+<section class="mx-auto min-h-svh max-w-5xl place-content-center border-x py-4">
 	<div class="relative">
 		<FullWidthDivider position="top" />
 		<FullWidthDivider position="bottom" />

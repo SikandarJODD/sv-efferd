@@ -6,7 +6,7 @@
 </script>
 
 <div class="flex w-full items-center justify-center overflow-hidden">
-	<div class="flex h-screen items-center border-x">
+	<div class="flex min-h-svh items-center border-x">
 		<div>
 			<FullWidthDivider />
 			<Empty.Root>

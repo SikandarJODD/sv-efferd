@@ -58,7 +58,7 @@
 			src={imageSrc}
 			alt={title}
 			loading="lazy"
-			class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+			class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.02] motion-reduce:transition-none"
 			onerror={handleImageError}
 		/>
 	</AspectRatio>

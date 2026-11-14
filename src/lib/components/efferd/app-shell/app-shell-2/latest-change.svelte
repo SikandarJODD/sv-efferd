@@ -38,7 +38,7 @@
 		</Button>
 		<Button
 			aria-label="Dismiss update"
-			class="absolute top-2 right-2 z-10 size-6 rounded-full opacity-0 transition-opacity group-hover/latest-change:opacity-100 focus-visible:opacity-100"
+			class="absolute top-1 right-1 z-10 size-8 rounded-full opacity-100 transition-opacity before:absolute before:-inset-1.5 md:opacity-0 md:group-hover/latest-change:opacity-100 md:focus-visible:opacity-100"
 			onclick={() => (isOpen = false)}
 			size="icon-sm"
 			variant="ghost"
