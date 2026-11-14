@@ -6,10 +6,13 @@
 	import Step from "#lib/components/markdown/Step.svelte";
 	import Steps from "#lib/components/markdown/Steps.svelte";
 	import { Button } from "#lib/components/ui/button/index.js";
-	import * as Code from "#lib/components/ui/code/index.js";
+	import * as CodeBlock from "#lib/components/ui/code-block/index.js";
+	import { useHighlightedCode } from "#lib/hooks/use-highlighted-code.svelte.js";
 
 	const initCommand = "pnpm dlx shadcn-svelte@latest init shadcn-svelte";
 	const addCommand = "pnpm dlx shadcn-svelte@latest add https://your-site/r/block-id.json";
+	const initCommandLines = useHighlightedCode(() => initCommand, () => "bash");
+	const addCommandLines = useHighlightedCode(() => addCommand, () => "bash");
 </script>
 
 <DocsPage
@@ -45,7 +48,13 @@
 				Run the init command for your package manager before adding blocks. The preview UI
 				can copy this for you, but the underlying flow is the same.
 			</Paragraph>
-			<Code.Root class="mt-4" code={initCommand} lang="bash" variant="secondary" />
+			<CodeBlock.Root class="mt-4 border-transparent bg-secondary/50">
+				<CodeBlock.Content>
+					{#each initCommandLines.current as line, index (index)}
+						<CodeBlock.Line code={line} />
+					{/each}
+				</CodeBlock.Content>
+			</CodeBlock.Root>
 		</Step>
 
 		<Step>
@@ -54,7 +63,13 @@
 				Once the registry is ready, browse <Link href="/">the blocks directory</Link>, open
 				the block you want, and use the install action from that page.
 			</Paragraph>
-			<Code.Root class="mt-4" code={addCommand} lang="bash" variant="secondary" />
+			<CodeBlock.Root class="mt-4 border-transparent bg-secondary/50">
+				<CodeBlock.Content>
+					{#each addCommandLines.current as line, index (index)}
+						<CodeBlock.Line code={line} />
+					{/each}
+				</CodeBlock.Content>
+			</CodeBlock.Root>
 		</Step>
 	</Steps>
 

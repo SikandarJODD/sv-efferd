@@ -9,9 +9,10 @@
 	import Copy from "@lucide/svelte/icons/copy";
 	import ExternalLink from "@lucide/svelte/icons/external-link";
 	import { UseClipboard } from "#lib/hooks/use-clipboard.svelte.js";
+	import { useHighlightedCode } from "#lib/hooks/use-highlighted-code.svelte.js";
 	import { scale } from "svelte/transition";
 	import Button from "../ui/button/button.svelte";
-	import Code from "./code/code.svelte";
+	import * as CodeBlock from "../ui/code-block/index.js";
 	import CodeTreeNode from "./CodeTreeNode.svelte";
 	import { importAliasStyle } from "#lib/components/base/import-alias/import-alias.svelte.js";
 	import { transformImportAliases } from "#lib/components/base/import-alias/import-alias.js";
@@ -27,6 +28,10 @@
 	let activeFile = $derived(findBlockCodeFile(codeTree, activeFileId) ?? files[0]);
 	let displayedCode = $derived(
 		activeFile?.code ? transformImportAliases(activeFile.code, importAliasStyle.current) : ""
+	);
+	let highlightedCode = useHighlightedCode(
+		() => displayedCode,
+		() => activeFile?.lang ?? "svelte"
 	);
 
 	$effect(() => {
@@ -54,6 +59,12 @@
 		if (!activeFile) return;
 		if (!displayedCode) return;
 		await clipboard.copy(displayedCode);
+	}
+
+	function isLineHighlighted(line: number) {
+		return activeFile?.highlight?.some((range) =>
+			typeof range === "number" ? range === line : range[0] <= line && line <= range[1]
+		);
 	}
 </script>
 
@@ -158,11 +169,19 @@
 
 		<div class="">
 			{#if activeFile?.code}
-				<Code
-					code={displayedCode}
-					lang={activeFile.lang}
-					highlight={activeFile.highlight}
-				/>
+				<CodeBlock.Root
+					class="max-h-[650px] rounded-none border-0 dark:bg-transparent"
+					size="sm"
+				>
+					<CodeBlock.Content lineNumbers>
+						{#each highlightedCode.current as line, index (index)}
+							<CodeBlock.Line
+								code={line}
+								variant={isLineHighlighted(index + 1) ? "highlighted" : "default"}
+							/>
+						{/each}
+					</CodeBlock.Content>
+				</CodeBlock.Root>
 			{:else if activeFile?.externalUrl}
 				<div class="flex min-h-[20rem] items-center justify-center px-6">
 					<div class="max-w-md text-center">
