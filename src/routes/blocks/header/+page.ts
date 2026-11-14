@@ -1,4 +1,4 @@
-import { headerBlocks } from "#lib/blocks/header/all_header.js";
+import { headerBlocks } from "#lib/blocks/all-header.js";
 import type { PageLoad } from "./$types";
 
 export const prerender = true;

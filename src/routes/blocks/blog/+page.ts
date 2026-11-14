@@ -1,4 +1,4 @@
-import { blogBlocks } from "#lib/blocks/blog/all_blog.js";
+import { blogBlocks } from "#lib/blocks/all-blog.js";
 import type { PageLoad } from "./$types";
 
 export const prerender = true;

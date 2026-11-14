@@ -13,7 +13,7 @@
 	import { scale } from "svelte/transition";
 	import Button from "../ui/button/button.svelte";
 	import * as CodeBlock from "../ui/code-block/index.js";
-	import CodeTreeNode from "./CodeTreeNode.svelte";
+	import CodeTreeNode from "./code-tree-node.svelte";
 	import { importAliasStyle } from "#lib/components/base/import-alias/import-alias.svelte.js";
 	import { transformImportAliases } from "#lib/components/base/import-alias/import-alias.js";
 

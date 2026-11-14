@@ -1,5 +1,5 @@
 import type { Component } from "svelte";
-import { appShellBlocks } from "#lib/blocks/app-shell/all_app_shell.js";
+import { appShellBlocks } from "#lib/blocks/all-app-shell.js";
 import AppShellPreview from "./category-previews/app-shell-preview.svelte";
 
 export type DashboardSidebarCardConfig = {

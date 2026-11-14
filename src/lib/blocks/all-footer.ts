@@ -7,8 +7,8 @@ import FooterSix from "#lib/components/efferd/footer/footer-six.svelte";
 import FooterThree from "#lib/components/efferd/footer/footer-three.svelte";
 import FooterTwo from "#lib/components/efferd/footer/footer-two.svelte";
 
-import animatedContainerSource from "#lib/components/efferd/footer/AnimatedContainer.svelte?raw";
-import linkGroupSource from "#lib/components/efferd/footer/LinkGroup.svelte?raw";
+import animatedContainerSource from "#lib/components/efferd/footer/animated-container.svelte?raw";
+import linkGroupSource from "#lib/components/efferd/footer/link-group.svelte?raw";
 import footerFiveSource from "#lib/components/efferd/footer/footer-five.svelte?raw";
 import footerFourSource from "#lib/components/efferd/footer/footer-four.svelte?raw";
 import footerOneSource from "#lib/components/efferd/footer/footer-one.svelte?raw";
@@ -33,7 +33,7 @@ const buttonFiles = [
 const animatedContainerFiles = [
 	{
 		id: "shared:animated-container",
-		path: "components/efferd/footer/AnimatedContainer.svelte",
+		path: "components/efferd/footer/animated-container.svelte",
 		lang: "svelte" as const,
 		code: animatedContainerSource
 	}
@@ -42,7 +42,7 @@ const animatedContainerFiles = [
 const linkGroupFiles = [
 	{
 		id: "shared:link-group",
-		path: "components/efferd/footer/LinkGroup.svelte",
+		path: "components/efferd/footer/link-group.svelte",
 		lang: "svelte" as const,
 		code: linkGroupSource
 	}

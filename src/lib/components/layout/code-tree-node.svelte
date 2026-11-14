@@ -7,7 +7,7 @@
 	import FileCode2 from "@lucide/svelte/icons/file-code-2";
 	import Folder from "@lucide/svelte/icons/folder";
 	import FolderOpen from "@lucide/svelte/icons/folder-open";
-	import CodeTreeNode from "./CodeTreeNode.svelte";
+	import CodeTreeNode from "./code-tree-node.svelte";
 	import { slide } from "svelte/transition";
 
 	interface CodeTreeNodeProps {

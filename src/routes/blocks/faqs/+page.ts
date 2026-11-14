@@ -1,4 +1,4 @@
-import { faqBlocks } from "#lib/blocks/faqs/all_faqs.js";
+import { faqBlocks } from "#lib/blocks/all-faqs.js";
 import type { PageLoad } from "./$types";
 
 export const prerender = true;

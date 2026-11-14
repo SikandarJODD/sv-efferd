@@ -946,9 +946,9 @@
 					"target": "efferd/footer/footer-three.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/footer/AnimatedContainer.svelte",
+					"path": "src/lib/components/efferd/footer/animated-container.svelte",
 					"type": "registry:component",
-					"target": "efferd/footer/AnimatedContainer.svelte"
+					"target": "efferd/footer/animated-container.svelte"
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
@@ -971,9 +971,9 @@
 					"target": "efferd/footer/footer-four.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/footer/LinkGroup.svelte",
+					"path": "src/lib/components/efferd/footer/link-group.svelte",
 					"type": "registry:component",
-					"target": "efferd/footer/LinkGroup.svelte"
+					"target": "efferd/footer/link-group.svelte"
 				}
 			],
 			"registryDependencies": [],
@@ -1021,9 +1021,9 @@
 					"target": "efferd/footer/footer-six.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/footer/AnimatedContainer.svelte",
+					"path": "src/lib/components/efferd/footer/animated-container.svelte",
 					"type": "registry:component",
-					"target": "efferd/footer/AnimatedContainer.svelte"
+					"target": "efferd/footer/animated-container.svelte"
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",

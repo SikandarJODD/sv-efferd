@@ -1,4 +1,4 @@
-import { logoCloudBlocks } from "#lib/blocks/logo-cloud/all_logo_cloud.js";
+import { logoCloudBlocks } from "#lib/blocks/all-logo-cloud.js";
 import type { PageLoad } from "./$types";
 
 export const prerender = true;

@@ -6,7 +6,7 @@
 	import { ModeSwitch } from "../ui/mode-switch";
 	import { getStars, GitHubButton } from "../ui/github-button";
 	import { onMount } from "svelte";
-	import ImportAliasToggle from "../base/import-alias/ImportAliasToggle.svelte";
+	import ImportAliasToggle from "../base/import-alias/import-alias-toggle.svelte";
 	import { importAliasStyle } from "../base/import-alias/import-alias.svelte.js";
 	import DesktopNav from "./desktop-nav.svelte";
 

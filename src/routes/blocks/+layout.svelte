@@ -4,7 +4,7 @@
 	import Button from "#lib/components/ui/button/button.svelte";
 	import type { Snippet } from "svelte";
 	import { fly } from "svelte/transition";
-	import CategoryNavigation from "#lib/components/layout/CategoryNavigation.svelte";
+	import CategoryNavigation from "#lib/components/layout/category-navigation.svelte";
 	import { blockCategories } from "#lib/blocks/categories.js";
 
 	let { children }: { children: Snippet } = $props();

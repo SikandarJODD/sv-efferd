@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AnimatedContainer from "#lib/components/efferd/footer/AnimatedContainer.svelte";
+	import AnimatedContainer from "#lib/components/efferd/footer/animated-container.svelte";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import Logo from "#lib/svgs/logo.svelte";
 	import FacebookIcon from "#lib/svgs/facebook.svelte";
