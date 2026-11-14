@@ -12,16 +12,8 @@ const languages = {
 	css: () => import("shiki/langs/css.mjs"),
 	markdown: () => import("shiki/langs/markdown.mjs"),
 	svelte: () => import("shiki/langs/svelte.mjs"),
-	typescript: () => import("shiki/langs/typescript.mjs")
-	// diff: () => import("shiki/langs/diff.mjs"),
-	// html: () => import("shiki/langs/html.mjs"),
-	// javascript: () => import("shiki/langs/javascript.mjs"),
-	// json: () => import("shiki/langs/json.mjs"),
-	// jsx: () => import("shiki/langs/jsx.mjs"),
-	// python: () => import("shiki/langs/python.mjs"),
-	// sql: () => import("shiki/langs/sql.mjs"),
-	// tsx: () => import("shiki/langs/tsx.mjs"),
-	// yaml: () => import("shiki/langs/yaml.mjs"),
+	typescript: () => import("shiki/langs/typescript.mjs"),
+	diff: () => import("shiki/langs/diff.mjs")
 };
 
 export type SupportedLanguage = keyof typeof languages;
