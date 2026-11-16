@@ -124,6 +124,7 @@
 	/* Font */
 	--font-sans: "Inter Variable", sans-serif;
 	--font-mono: "Geist Mono Variable", monospace;
+	--font-cursive: "Shantell Sans Variable", cursive;
 
 	--animate-marquee: marquee var(--duration) linear infinite;
 	--animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
@@ -147,7 +148,8 @@
 	--radius-2xl: calc(var(--radius) * 1.8);
 	--radius-3xl: calc(var(--radius) * 2.2);
 	--radius-4xl: calc(var(--radius) * 2.6);
-	--animate-spinner-opacity: spinner-opacity var(--tw-animation-duration, var(--tw-duration, 1s)) linear infinite;
+	--animate-spinner-opacity: spinner-opacity var(--tw-animation-duration, var(--tw-duration, 1s))
+		linear infinite;
 	@keyframes spinner-opacity {
 		from {
 			opacity: 1;

@@ -7,7 +7,7 @@
 
 <section class="relative">
 	<div class="relative border-y border-border/80">
-		<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-left" />
+		<!-- <DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-left" />
 		<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-right" />
 		<DecorIcon
 			class="size-3.5 bg-background  stroke-muted-foreground/70"
@@ -16,9 +16,9 @@
 		<DecorIcon
 			class="size-3.5 bg-background stroke-muted-foreground/70"
 			position="bottom-right"
-		/>
-		<div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-			<h2 class="text-sm font-medium tracking-tight text-foreground lg:font-semibold">
+		/> -->
+		<div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-3 lg:px-8">
+			<h2 class="text-sm font-medium text-primary md:text-base lg:font-semibold">
 				Marketing
 			</h2>
 		</div>
@@ -40,7 +40,7 @@
 
 <section>
 	<div class="relative border-y border-border/80">
-		<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-left" />
+		<!-- <DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-left" />
 		<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-right" />
 		<DecorIcon
 			class="size-3.5 bg-background  stroke-muted-foreground/70"
@@ -49,13 +49,13 @@
 		<DecorIcon
 			class="size-3.5 bg-background stroke-muted-foreground/70"
 			position="bottom-right"
-		/>
+		/> -->
 		<div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
 			<div class="flex items-center gap-2">
 				<h2 class="text-sm font-medium tracking-tight text-foreground lg:font-semibold">
 					App Shell
 				</h2>
-				<Badge variant="emerald">New</Badge>
+				<Badge variant="cyan" class="font-cursive">New</Badge>
 			</div>
 		</div>
 	</div>
