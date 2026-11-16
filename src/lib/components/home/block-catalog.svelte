@@ -9,7 +9,7 @@
 		class="pointer-events-none absolute inset-x-0 top-0 z-10 mx-auto max-w-7xl -translate-y-full px-4 sm:px-6 lg:px-0"
 	>
 		<a
-			class="pointer-events-auto relative -ml-2 block h-10 w-64"
+			class="pointer-events-auto relative -ml-2 block h-9.5 w-62"
 			href="https://bhide.dev?utm_source=sv-efferd&utm_medium=referral&utm_campaign=sv-efferd"
 			target="_blank"
 			rel="noreferrer"
@@ -18,6 +18,7 @@
 			<svg
 				class="absolute inset-0 size-full overflow-visible text-border/80"
 				viewBox="0 0 256 40"
+				preserveAspectRatio="none"
 				fill="none"
 				aria-hidden="true"
 			>
@@ -32,16 +33,16 @@
 			</svg>
 
 			<span
-				class="absolute inset-x-8 top-2.5 flex items-center justify-center gap-2 text-sm whitespace-nowrap"
+				class="absolute inset-x-8 top-2.5 flex items-center justify-center gap-1.5 text-[13px] whitespace-nowrap"
 			>
 				<span class="font-cursive text-muted-foreground">Port by</span>
-				<span class="flex items-center gap-1.5">
+				<span class="flex items-center gap-1">
 					<img
-						class="size-5 rounded-full object-cover"
+						class="size-4.5 rounded-full object-cover"
 						src="https://github.com/SikandarJODD.png?size=48"
 						alt=""
-						width="20"
-						height="20"
+						width="18"
+						height="18"
 					/>
 					<span class="font-cursive font-medium text-foreground">Bhide Svelte</span>
 				</span>
