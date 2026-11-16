@@ -15,14 +15,14 @@
 </script>
 
 <header
-	class="pointer-events-none sticky top-0 z-50 flex h-14 items-center justify-between px-2 md:h-12"
+	class="pointer-events-none fixed inset-x-2 top-2 z-50 flex items-start justify-between md:top-2 md:right-2 md:left-auto"
 >
 	<Sidebar.Trigger
-		class="pointer-events-auto size-10 rounded-[calc(var(--radius)+2px)] border border-border bg-background shadow-none md:hidden"
+		class="pointer-events-auto size-10 rounded-lg border border-border bg-background shadow-none md:hidden"
 	/>
 
 	<div
-		class="pointer-events-auto ml-auto flex items-center gap-0.5 rounded-full border border-border bg-background p-1"
+		class="pointer-events-auto ml-auto flex items-center gap-px rounded-full border border-border bg-background p-0.5"
 	>
 		<ImportAliasToggle bind:value={importAliasStyle.current} />
 		<GitHubButton
@@ -33,8 +33,8 @@
 			rel="noreferrer"
 			variant="ghost"
 			size="sm"
-			class="rounded-full px-2 max-md:h-10"
+			class="rounded-full px-2"
 		/>
-		<ModeSwitch variant="ghost" class="rounded-full max-md:size-10" />
+		<ModeSwitch variant="ghost" class="rounded-full" />
 	</div>
 </header>
