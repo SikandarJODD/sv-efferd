@@ -10,7 +10,7 @@
 </script>
 
 <Sidebar.MenuItem>
-	<Sidebar.MenuButton {isActive}>
+	<Sidebar.MenuButton class="text-[13px]!" {isActive}>
 		{#snippet child({ props })}
 			<a href={item.href} {...props}>{item.title}</a>
 		{/snippet}

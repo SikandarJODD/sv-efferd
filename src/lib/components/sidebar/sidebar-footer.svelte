@@ -6,21 +6,21 @@
 	import { Github } from "#lib/svgs/index.js";
 </script>
 
-<Sidebar.Footer>
+<Sidebar.Footer class="p-0.5">
 	<div class="grid grid-cols-2 gap-2">
-		<Button href="/llms.txt" variant="outline" size="sm" class="min-w-0">
-			<FileText class="size-3.5" />
+		<Button href="/llms.txt" variant="secondary" size="sm" class="min-w-0 text-xs">
+			<FileText class="size-3" />
 			llms.txt
 		</Button>
 		<Button
 			href="https://github.com/SikandarJODD/sv-efferd"
 			target="_blank"
 			rel="noreferrer"
-			variant="outline"
+			variant="secondary"
 			size="sm"
-			class="min-w-0"
+			class="min-w-0 text-xs"
 		>
-			<Github class="size-3.5" />
+			<Github class="size-3" />
 			GitHub
 		</Button>
 	</div>

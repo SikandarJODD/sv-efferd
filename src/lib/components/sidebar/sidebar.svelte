@@ -12,5 +12,5 @@
 	<SidebarHeader />
 	<SidebarContent />
 	<SidebarFooter />
-	<Sidebar.Rail />
+	<!-- <Sidebar.Rail /> -->
 </Sidebar.Root>
