@@ -1,11 +1,54 @@
 <script lang="ts">
 	import { Badge } from "#lib/components/spell/badge/index.js";
-	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
 	import { appShellCategories, marketingCategories } from "./categories.js";
 	import CategoryCard from "./category-card.svelte";
 </script>
 
 <section class="relative">
+	<div
+		class="pointer-events-none absolute inset-x-0 top-0 z-10 mx-auto max-w-7xl -translate-y-full px-4 sm:px-6 lg:px-0"
+	>
+		<a
+			class="pointer-events-auto relative -ml-2 block h-10 w-64"
+			href="https://github.com/SikandarJODD"
+			target="_blank"
+			rel="noreferrer"
+			aria-label="Bhide Svelte on GitHub"
+		>
+			<svg
+				class="absolute inset-0 size-full overflow-visible text-border/80"
+				viewBox="0 0 256 40"
+				fill="none"
+				aria-hidden="true"
+			>
+				<rect y="39" width="256" height="3" class="fill-background" />
+				<path
+					d="M0 40.5H18C28 40.5 36 33 36 23V15C36 7.5 42 2.5 49.5 2.5H206.5C214 2.5 220 7.5 220 15V23C220 33 228 40.5 238 40.5H256"
+					stroke="currentColor"
+					stroke-width="1"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			</svg>
+
+			<span
+				class="absolute inset-x-8 top-2.5 flex items-center justify-center gap-2 text-sm whitespace-nowrap"
+			>
+				<span class="font-cursive text-muted-foreground">Port by</span>
+				<span class="flex items-center gap-1.5">
+					<img
+						class="size-5 rounded-full object-cover"
+						src="https://github.com/SikandarJODD.png?size=48"
+						alt=""
+						width="20"
+						height="20"
+					/>
+					<span class="font-cursive font-medium text-foreground">Bhide Svelte</span>
+				</span>
+			</span>
+		</a>
+	</div>
+
 	<div class="relative border-y border-border/80">
 		<!-- <DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-left" />
 		<DecorIcon class="size-3.5 bg-background stroke-muted-foreground/70" position="top-right" />
