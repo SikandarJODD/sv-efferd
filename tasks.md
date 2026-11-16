@@ -1,8 +1,8 @@
 Tasks
 
 1. [✅] So let's port all stuff that's depend on ui/code to ui/code-block like Block Preview and Mist Block Preview
-2. [ ] Add sidebar-01 from shadcn-svelte - i will do it
-3. [ ] create new components/sidebar folder and include all sidebar related components in it. like we need sidebar header, content, footer, group, items sorted.
+2. [✅] Add sidebar-01 from shadcn-svelte - i will do it
+3. [ ] create new components/sidebar folder and include all sidebar related components in it. like we need sidebar header, content, footer, group, items.
 4. [ ] Sidebar should have sections and sidebar variant inset
 
    Get Started

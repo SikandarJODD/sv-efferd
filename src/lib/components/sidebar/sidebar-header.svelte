@@ -1,0 +1,19 @@
+<script lang="ts">
+	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
+	import { Logo } from "#lib/svgs/index.js";
+</script>
+
+<Sidebar.Header>
+	<Sidebar.Menu>
+		<Sidebar.MenuItem>
+			<Sidebar.MenuButton size="lg">
+				{#snippet child({ props })}
+					<a href="/" aria-label="Svelte Efferd home" {...props}>
+						<Logo class="size-5" />
+						<span class="font-mono font-medium tracking-tight">Svelte Efferd</span>
+					</a>
+				{/snippet}
+			</Sidebar.MenuButton>
+		</Sidebar.MenuItem>
+	</Sidebar.Menu>
+</Sidebar.Header>
