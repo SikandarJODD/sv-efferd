@@ -48,6 +48,7 @@
 </script>
 
 <Button
+	{...rest}
 	href={`https://github.com/${repo.owner}/${repo.repo}`}
 	class={cn("gap-2 font-mono text-xs [&_span]:text-muted-foreground", className)}
 	{variant}
@@ -65,7 +66,10 @@
 		/>
 	</svg>
 	{#if stars !== undefined}
-		<span aria-label="Stars on GitHub" class="inline-block min-w-[3ch] text-right tabular-nums">
+		<span
+			aria-label="Stars on GitHub"
+			class="inline-block min-w-[3ch] text-right font-mono tabular-nums"
+		>
 			{displayStars(starsTweened.current)}
 		</span>
 	{/if}

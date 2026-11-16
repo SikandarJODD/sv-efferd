@@ -36,7 +36,7 @@
 						class={cn(
 							"size-7 rounded-full font-mono text-xs font-normal text-muted-foreground active:not-aria-[haspopup]:translate-y-0",
 							value === option.value
-								? "bg-emerald-100/60 text-emerald-800 hover:bg-emerald-50 dark:bg-muted/70 dark:text-foreground dark:ring-border dark:hover:bg-muted/70"
+								? "bg-emerald-100/60 text-emerald-800 hover:bg-emerald-50 dark:bg-emerald-400/15 dark:text-emerald-300 dark:hover:bg-emerald-400/20"
 								: "hover:bg-muted/60 hover:text-foreground dark:hover:bg-muted/40"
 						)}
 						aria-label={option.title}
