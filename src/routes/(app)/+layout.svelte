@@ -1,9 +1,8 @@
 <script lang="ts">
 	import SiteSidebar from "#lib/components/sidebar/sidebar.svelte";
 	import SiteFooter from "#lib/components/site/footer.svelte";
-	import SiteHeader from "#lib/components/site/header.svelte";
+	import SiteToolbar from "#lib/components/site/toolbar.svelte";
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
-	import { cn } from "#lib/utils.js";
 
 	let { children } = $props();
 </script>
@@ -18,17 +17,10 @@
 <Sidebar.Provider>
 	<SiteSidebar />
 	<Sidebar.Inset
-		class="dark:shadown-sm border shadow-none! supports-[overflow:clip]:overflow-clip dark:border-muted dark:bg-background"
+		class="border shadow-none! supports-[overflow:clip]:overflow-clip dark:border-muted dark:bg-background"
 	>
-		<!-- <SiteHeader /> -->
-		<div
-			id="main"
-			// class={cn(
-			// 	"relative container mb-20 grow",
-			// 	"before:absolute before:-inset-y-20 before:-left-px before:z-1 before:border-dashed before:border-primary/20 xl:before:border-l",
-			// 	"after:absolute after:-inset-y-20 after:-right-px after:z-1 after:border-dashed after:border-primary/20 xl:after:border-r"
-			// )}
-		>
+		<SiteToolbar />
+		<div id="main">
 			{@render children()}
 		</div>
 		<SiteFooter />

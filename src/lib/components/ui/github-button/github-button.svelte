@@ -54,7 +54,7 @@
 	{size}
 >
 	<svg
-		class={cn("size-4 shrink-0 fill-current text-foreground", className)}
+		class="size-4 shrink-0 fill-current text-foreground"
 		viewBox="0 0 256 250"
 		xmlns="http://www.w3.org/2000/svg"
 		preserveAspectRatio="xMidYMid"
@@ -65,7 +65,7 @@
 		/>
 	</svg>
 	{#if stars !== undefined}
-		<span aria-label="Stars on GitHub" class="tabular-nums">
+		<span aria-label="Stars on GitHub" class="inline-block min-w-[3ch] text-right tabular-nums">
 			{displayStars(starsTweened.current)}
 		</span>
 	{/if}

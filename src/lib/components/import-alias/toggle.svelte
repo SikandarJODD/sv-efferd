@@ -25,7 +25,7 @@
 		{#snippet child({ props })}
 			<div
 				{...props}
-				class="flex h-8 items-center justify-center gap-px rounded-md border border-border/40 bg-background/30 px-0.5 dark:bg-transparent"
+				class="flex h-8 items-center justify-center gap-px rounded-full px-0.5 max-md:h-10"
 				role="group"
 				aria-label="SvelteKit import alias version"
 			>
@@ -34,7 +34,7 @@
 						variant="ghost"
 						size="icon-xs"
 						class={cn(
-							"rounded-lg font-mono text-xs font-normal text-muted-foreground [corner-shape:superellipse(2)] active:not-aria-[haspopup]:translate-y-0",
+							"size-7 rounded-full font-mono text-xs font-normal text-muted-foreground active:not-aria-[haspopup]:translate-y-0 max-md:size-9",
 							value === option.value
 								? "bg-emerald-100/60 text-emerald-800 hover:bg-emerald-50 dark:bg-muted/70 dark:text-foreground dark:ring-border dark:hover:bg-muted/70"
 								: "hover:bg-muted/60 hover:text-foreground dark:hover:bg-muted/40"
