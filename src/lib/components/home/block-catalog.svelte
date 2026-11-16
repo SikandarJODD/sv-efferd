@@ -10,7 +10,7 @@
 	>
 		<a
 			class="pointer-events-auto relative -ml-2 block h-10 w-64"
-			href="https://github.com/SikandarJODD"
+			href="https://bhide.dev?utm_source=sv-efferd&utm_medium=referral&utm_campaign=sv-efferd"
 			target="_blank"
 			rel="noreferrer"
 			aria-label="Bhide Svelte on GitHub"
