@@ -15,22 +15,8 @@
 		/>
 	</div>
 
-	<!-- <DecorIcon class="z-40 size-3.5 bg-background stroke-muted-foreground/80" position="top-left" />
-	<DecorIcon
-		class="z-40 size-3.5 bg-background stroke-muted-foreground/80"
-		position="top-right"
-	/>
-	<DecorIcon
-		class="z-40 size-3.5 bg-background stroke-muted-foreground/80"
-		position="bottom-left"
-	/>
-	<DecorIcon
-		class="z-40 size-3.5 bg-background stroke-muted-foreground/80"
-		position="bottom-right"
-	/> -->
-
 	<div
-		class="relative mx-auto grid max-w-7xl grid-cols-1 px-4 sm:px-6 md:grid-cols-6 lg:px-8 lg:py-10"
+		class="relative mx-auto grid max-w-7xl grid-cols-1 px-4 sm:px-6 md:grid-cols-6 lg:px-8 lg:py-12"
 	>
 		<div class="max-w-2xl text-left md:col-span-4 lg:max-w-3xl">
 			<h1

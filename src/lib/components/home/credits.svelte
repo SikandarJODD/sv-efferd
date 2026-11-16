@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
 	import { Annotation } from "#lib/components/ui/annotation/index.js";
+	import { ArrowUpRight } from "@lucide/svelte";
 
 	const credits = [
 		{
@@ -41,36 +42,42 @@
 
 	<div class="mt-4 grid gap-6 sm:grid-cols-2 md:mt-8">
 		{#each credits as person}
-			<article class="flex items-start gap-4 rounded-lg border border-border/70 p-5">
-				<Annotation
-					note={person.note}
-					direction={person.annotationDirection}
-					customColor={person.annotationColor}
-					noMark
-					class="shrink-0 max-lg:before:hidden max-lg:after:hidden"
+			<article>
+				<a
+					class="group flex items-start gap-4 rounded-lg border border-border/70 p-5 transition-colors hover:border-foreground/20 hover:bg-muted/30 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none"
+					href={person.href}
+					target="_blank"
+					rel="noreferrer"
+					aria-label={`Open ${person.name}'s X profile`}
 				>
-					<Avatar class="size-14">
-						<AvatarImage alt={`${person.name} avatar`} src={person.avatar} />
-						<AvatarFallback class="text-xs font-medium">
-							{person.initials}
-						</AvatarFallback>
-					</Avatar>
-				</Annotation>
-
-				<div class="min-w-0">
-					<h3 class="text-sm font-semibold text-foreground">{person.name}</h3>
-					<p class="mt-2 max-w-md text-sm leading-6 text-muted-foreground">
-						{person.description}
-					</p>
-					<a
-						class="mt-2 inline-block text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
-						href={person.href}
-						rel="noreferrer"
-						target="_blank"
+					<Annotation
+						note={person.note}
+						direction={person.annotationDirection}
+						customColor={person.annotationColor}
+						noMark
+						class="shrink-0 max-lg:before:hidden max-lg:after:hidden"
 					>
-						{person.handle}
-					</a>
-				</div>
+						<Avatar class="size-14">
+							<AvatarImage alt={`${person.name} avatar`} src={person.avatar} />
+							<AvatarFallback class="text-xs font-medium">
+								{person.initials}
+							</AvatarFallback>
+						</Avatar>
+					</Annotation>
+
+					<div class="min-w-0 flex-1">
+						<h3 class="text-sm font-semibold text-foreground">{person.name}</h3>
+						<p class="mt-2 max-w-md text-sm leading-6 text-muted-foreground">
+							{person.description}
+						</p>
+						<span
+							class="mt-2 inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors group-hover:text-foreground"
+						>
+							{person.handle}
+							<ArrowUpRight class="size-3.5" strokeWidth={1.5} aria-hidden="true" />
+						</span>
+					</div>
+				</a>
 			</article>
 		{/each}
 	</div>
