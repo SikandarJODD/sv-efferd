@@ -1,14 +1,13 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
+	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
 	import { Github, X as XLogo } from "#lib/svgs/index.js";
 	import { socialLinks } from "./navigation.js";
-	import MobileNav from "./mobile-nav.svelte";
 	import { ModeSwitch } from "../ui/mode-switch";
 	import { getStars, GitHubButton } from "../ui/github-button";
 	import { onMount } from "svelte";
 	import ImportAliasToggle from "../import-alias/toggle.svelte";
 	import { importAliasStyle } from "../import-alias/preference.svelte.js";
-	import DesktopNav from "./desktop-nav.svelte";
 
 	let stars = $state(30);
 	const repo = { owner: "SikandarJODD", repo: "sv-efferd" };
@@ -21,12 +20,11 @@
 	class="sticky top-0 z-[60] mx-auto max-w-7xl border-b border-border/80 bg-background/95 backdrop-blur-sm"
 >
 	<nav class="cpx flex h-12 items-center justify-between gap-3">
-		<a aria-label="Efferd home" class="flex shrink-0 px-1" href="/">
-			<span class="font-mono font-medium tracking-tight">Svelte Efferd</span>
-		</a>
-
-		<div class="hidden flex-1 items-center justify-center md:flex">
-			<DesktopNav />
+		<div class="flex items-center gap-1">
+			<Sidebar.Trigger class="-ms-1" />
+			<a aria-label="Efferd home" class="flex shrink-0 px-1 md:hidden" href="/">
+				<span class="font-mono font-medium tracking-tight">Svelte Efferd</span>
+			</a>
 		</div>
 
 		<div class="hidden items-center gap-2 md:flex">
@@ -52,7 +50,6 @@
 		<div class="flex items-center gap-2 md:hidden">
 			<ImportAliasToggle bind:value={importAliasStyle.current} />
 			<ModeSwitch variant="ghost" />
-			<MobileNav />
 		</div>
 	</nav>
 </header>
