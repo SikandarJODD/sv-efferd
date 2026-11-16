@@ -15,7 +15,7 @@
 <Sidebar.Group>
 	<Sidebar.GroupLabel>{label}</Sidebar.GroupLabel>
 	<Sidebar.GroupContent>
-		<Sidebar.Menu>
+		<Sidebar.Menu class="gap-0.5">
 			{#each items as item (item.href)}
 				<SidebarItem {item} />
 			{/each}
