@@ -789,6 +789,20 @@
 		"relativeUrl": "header-five.json"
 	},
 	{
+		"name": "settings-one",
+		"title": "Settings One",
+		"type": "registry:block",
+		"description": "A settings form for profile details and email preferences. It includes an avatar picker and save action.",
+		"registryDependencies": [
+			"avatar",
+			"button",
+			"field",
+			"input",
+			"switch"
+		],
+		"relativeUrl": "settings-one.json"
+	},
+	{
 		"name": "app-shell-2",
 		"title": "App Shell 2",
 		"type": "registry:block",
