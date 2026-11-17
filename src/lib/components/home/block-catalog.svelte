@@ -44,7 +44,9 @@
 						width="18"
 						height="18"
 					/>
-					<span class="font-cursive font-medium text-foreground">Bhide Svelte</span>
+					<span class="font-cursive font-medium text-ink/80 dark:text-foreground"
+						>Bhide Svelte</span
+					>
 				</span>
 			</span>
 		</a>

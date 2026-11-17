@@ -7,6 +7,8 @@ export type BlockCategory = {
 export type BlockCategoryBadge = "new" | "beta";
 
 export const blockCategories = [
+	{ slug: "app-shell", label: "App Shell", badge: "new" },
+	{ slug: "settings", label: "Settings", badge: "new" },
 	{ slug: "hero", label: "Hero" },
 	{ slug: "header", label: "Header" },
 	{ slug: "logo-cloud", label: "Logo Cloud" },
@@ -18,8 +20,6 @@ export const blockCategories = [
 	{ slug: "pricing", label: "Pricing" },
 	{ slug: "blog", label: "Blog" },
 	{ slug: "auth", label: "Auth" },
-	{ slug: "app-shell", label: "App Shell", badge: "new" },
-	{ slug: "settings", label: "Settings", badge: "new" },
 	{ slug: "faqs", label: "FAQ's" },
 	{ slug: "contact", label: "Contact" },
 	{ slug: "footer", label: "Footer" },
