@@ -2,7 +2,9 @@
 	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
-	import { Github, Linkedin, X } from "#lib/svgs/index.js";
+	import Github from "#lib/svgs/github.svelte";
+	import Linkedin from "#lib/svgs/linkedin.svelte";
+	import X from "#lib/svgs/x.svelte";
 
 	type SocialLabel = "X" | "GitHub" | "LinkedIn";
 

@@ -8,7 +8,7 @@
 		"@lucide/svelte"
 	],
 	"devDependencies": [
-		"@lucide/svelte@^1.62.0"
+		"@lucide/svelte@^1.73.0"
 	],
 	"registryDependencies": [
 		"./dashed-line.json",

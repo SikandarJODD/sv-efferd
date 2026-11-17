@@ -15,7 +15,7 @@
 			"target": "efferd/footer/footer-three.svelte"
 		},
 		{
-			"content": "<script lang=\"ts\">\n\timport { cn } from \"#lib/utils.js\";\n\timport { motion } from \"motion-sv\";\n\timport type { Snippet } from \"svelte\";\n\n\ttype Props = {\n\t\tclass?: string;\n\t\tdelay?: number;\n\t\tchildren?: Snippet;\n\t};\n\n\tlet { class: className, delay = 0.1, children }: Props = $props();\n</script>\n\n<motion.div\n\tclass={cn(className)}\n\tinitial={{ filter: \"blur(4px)\", translateY: -8, opacity: 0 }}\n\ttransition={{ delay, duration: 0.8 }}\n\twhileInView={{ filter: \"blur(0px)\", translateY: 0, opacity: 1 }}\n>\n\t{@render children?.()}\n</motion.div>\n",
+			"content": "<script lang=\"ts\">\n\timport { cn } from \"#lib/utils.js\";\n\timport { motion, useReducedMotion } from \"motion-sv\";\n\timport type { Snippet } from \"svelte\";\n\n\ttype Props = {\n\t\tclass?: string;\n\t\tdelay?: number;\n\t\tchildren?: Snippet;\n\t};\n\n\tlet { class: className, delay = 0.1, children }: Props = $props();\n\tlet prefersReducedMotion = useReducedMotion();\n</script>\n\n<motion.div\n\tclass={cn(className)}\n\tinitial={prefersReducedMotion.current\n\t\t? false\n\t\t: { filter: \"blur(4px)\", translateY: -8, opacity: 0 }}\n\ttransition={{ delay: prefersReducedMotion.current ? 0 : delay, duration: 0.35 }}\n\twhileInView={{ filter: \"blur(0px)\", translateY: 0, opacity: 1 }}\n>\n\t{@render children?.()}\n</motion.div>\n",
 			"type": "registry:component",
 			"target": "efferd/footer/animated-container.svelte"
 		},

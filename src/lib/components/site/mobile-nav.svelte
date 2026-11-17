@@ -14,6 +14,7 @@
 		{ label: "Hero", href: "/blocks/hero" },
 		{ label: "Auth", href: "/blocks/auth" },
 		{ label: "Features", href: "/blocks/features" },
+		{ label: "Team", href: "/blocks/team" },
 		{ label: "Blog", href: "/blocks/blog" },
 		{ label: "Contact", href: "/blocks/contact" },
 		{ label: "CTA", href: "/blocks/cta" },

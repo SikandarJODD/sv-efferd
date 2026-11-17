@@ -867,6 +867,41 @@
 		"relativeUrl": "pricing-four.json"
 	},
 	{
+		"name": "team-one",
+		"title": "Team One",
+		"type": "registry:block",
+		"description": "A compact team grid with grayscale portraits and a hiring call to action.",
+		"registryDependencies": [
+			"avatar",
+			"button"
+		],
+		"relativeUrl": "team-one.json"
+	},
+	{
+		"name": "team-two",
+		"title": "Team Two",
+		"type": "registry:block",
+		"description": "A bordered team directory with compact profiles and social links.",
+		"registryDependencies": [
+			"avatar",
+			"button",
+			"local:full-width-divider"
+		],
+		"relativeUrl": "team-two.json"
+	},
+	{
+		"name": "team-three",
+		"title": "Team Three",
+		"type": "registry:block",
+		"description": "A portrait-led team grid with roles, social links, and a hiring call to action.",
+		"registryDependencies": [
+			"avatar",
+			"button",
+			"local:full-width-divider"
+		],
+		"relativeUrl": "team-three.json"
+	},
+	{
 		"name": "testimonial-one",
 		"title": "Testimonial One",
 		"type": "registry:block",

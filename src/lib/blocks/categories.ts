@@ -13,6 +13,7 @@ export const blockCategories = [
 	{ slug: "features", label: "Features" },
 	{ slug: "integrations", label: "Integrations" },
 	{ slug: "testimonials", label: "Testimonials" },
+	{ slug: "team", label: "Team" },
 	{ slug: "cta", label: "CTA" },
 	{ slug: "pricing", label: "Pricing" },
 	{ slug: "blog", label: "Blog" },
