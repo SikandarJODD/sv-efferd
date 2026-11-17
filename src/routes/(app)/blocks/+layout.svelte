@@ -15,7 +15,7 @@
 </script>
 
 <div>
-	<CategoryNav />
+	<!-- <CategoryNav /> -->
 	{#if currentCategory}
 		<header class="border-b border-border/80 px-5 py-8 sm:px-6 lg:px-7">
 			<div class="mx-auto max-w-7xl">

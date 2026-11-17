@@ -12,12 +12,12 @@
 <Sidebar.MenuItem>
 	<Sidebar.MenuButton class="text-[13px]!" {isActive}>
 		{#snippet child({ props })}
-			<a href={item.href} {...props}>{item.title}</a>
+			<a href={item.href} {...props}>
+				{item.title}
+				{#if item.badge === "new"}
+					<Badge variant="emerald" class="px-1 py-0.5 text-[10px]">New</Badge>
+				{/if}
+			</a>
 		{/snippet}
 	</Sidebar.MenuButton>
-	{#if item.badge === "new"}
-		<Sidebar.MenuBadge>
-			<Badge variant="emerald" class="px-1 py-0.5 text-[10px]">New</Badge>
-		</Sidebar.MenuBadge>
-	{/if}
 </Sidebar.MenuItem>

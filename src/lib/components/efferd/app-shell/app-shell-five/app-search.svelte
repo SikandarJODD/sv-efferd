@@ -5,7 +5,7 @@
 	import { SearchIcon } from "@lucide/svelte";
 	import { PressedKeys } from "runed";
 
-	let groupRef: HTMLDivElement;
+	let groupRef: HTMLDivElement | null = null;
 	const sidebar = useSidebar();
 	const pressedKeys = new PressedKeys();
 	const focusSearch = () => {

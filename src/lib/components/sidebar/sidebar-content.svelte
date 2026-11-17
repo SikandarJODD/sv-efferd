@@ -6,7 +6,8 @@
 
 	const componentItems = blockCategories.map((category): SidebarNavItem => ({
 		title: category.label,
-		href: `/blocks/${category.slug}`
+		href: `/blocks/${category.slug}`,
+		badge: "badge" in category && category.badge === "new" ? "new" : undefined
 	}));
 </script>
 

@@ -41,15 +41,6 @@
 		mobile && "gap-3 py-3"
 	)}
 >
-	<DecorIcon
-		class="hidden size-3.5 bg-background stroke-muted-foreground/70 md:block"
-		position="top-left"
-	/>
-	<DecorIcon
-		class="hidden size-3.5 bg-background stroke-muted-foreground/70 md:block"
-		position="top-right"
-	/>
-
 	<div class={cn("flex min-w-0 flex-wrap items-center gap-2.5", mobile && "gap-2")}>
 		<PreviewModeControls bind:mode {width} showViewportLabel={showViewportControls} />
 	</div>
