@@ -878,6 +878,25 @@
 		"relativeUrl": "settings-five.json"
 	},
 	{
+		"name": "app-shell-one",
+		"title": "App Shell One",
+		"type": "registry:block",
+		"description": "A focused dashboard shell with an off-canvas sidebar, compact utility header, and responsive content area.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar",
+			"breadcrumb",
+			"button",
+			"dropdown-menu",
+			"local:full-width-divider",
+			"separator",
+			"sidebar"
+		],
+		"relativeUrl": "app-shell-one.json"
+	},
+	{
 		"name": "app-shell-2",
 		"title": "App Shell 2",
 		"type": "registry:block",
@@ -898,6 +917,27 @@
 			"tooltip"
 		],
 		"relativeUrl": "app-shell-2.json"
+	},
+	{
+		"name": "app-shell-three",
+		"title": "App Shell Three",
+		"type": "registry:block",
+		"description": "A customer-support workspace with nested navigation, quick actions, account controls, and an inset content area.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar",
+			"breadcrumb",
+			"button",
+			"collapsible",
+			"dropdown-menu",
+			"kbd",
+			"separator",
+			"sidebar",
+			"tooltip"
+		],
+		"relativeUrl": "app-shell-three.json"
 	},
 	{
 		"name": "pricing-one",

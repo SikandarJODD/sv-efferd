@@ -1775,6 +1775,69 @@
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
+			"name": "app-shell-one",
+			"title": "App Shell One",
+			"type": "registry:block",
+			"description": "A focused dashboard shell with an off-canvas sidebar, compact utility header, and responsive content area.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-shell.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/app-shell.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-breadcrumbs.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/app-breadcrumbs.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/app-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-sidebar.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/app-sidebar.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/dashboard-skeleton.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/dashboard-skeleton.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/nav-user.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/nav-user.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-shared.ts",
+					"type": "registry:file",
+					"target": "efferd/app-shell/app-shell-one/app-shared.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": [
+				"avatar",
+				"breadcrumb",
+				"button",
+				"dropdown-menu",
+				"local:full-width-divider",
+				"separator",
+				"sidebar"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
 			"name": "app-shell-2",
 			"title": "App Shell 2",
 			"type": "registry:block",
@@ -1849,6 +1912,86 @@
 				"dropdown-menu",
 				"kbd",
 				"local:decor-icon",
+				"separator",
+				"sidebar",
+				"tooltip"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "app-shell-three",
+			"title": "App Shell Three",
+			"type": "registry:block",
+			"description": "A customer-support workspace with nested navigation, quick actions, account controls, and an inset content area.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-shell.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/app-shell.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-breadcrumbs.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/app-breadcrumbs.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/app-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-sidebar.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/app-sidebar.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/custom-sidebar-trigger.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/custom-sidebar-trigger.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/dashboard-skeleton.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/dashboard-skeleton.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/latest-change.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/latest-change.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/nav-group.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/nav-group.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/nav-user.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/nav-user.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-shared.ts",
+					"type": "registry:file",
+					"target": "efferd/app-shell/app-shell-three/app-shared.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo-icon.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo-icon.svelte"
+				}
+			],
+			"registryDependencies": [
+				"avatar",
+				"breadcrumb",
+				"button",
+				"collapsible",
+				"dropdown-menu",
+				"kbd",
 				"separator",
 				"sidebar",
 				"tooltip"
