@@ -1529,6 +1529,65 @@
 			"registryDependencies": ["avatar", "button", "field", "input", "switch"]
 		},
 		{
+			"name": "settings-two",
+			"title": "Settings Two",
+			"type": "registry:block",
+			"description": "A comprehensive account settings dashboard for profile, appearance, notifications, security, and destructive actions.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/profile-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/profile-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/appearance-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/appearance-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/notification-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/notification-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/security-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/security-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/danger-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/danger-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/setting-field.svelte"
+				}
+			],
+			"registryDependencies": [
+				"avatar",
+				"button",
+				"card",
+				"field",
+				"input-group",
+				"select",
+				"switch",
+				"toggle-group"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
 			"name": "app-shell-2",
 			"title": "App Shell 2",
 			"type": "registry:block",

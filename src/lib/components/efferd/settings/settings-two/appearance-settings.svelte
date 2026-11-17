@@ -56,7 +56,7 @@
 	</SettingField>
 	<FieldSeparator />
 	<SettingField description="Used across the interface." htmlFor="language" label="Language">
-		<Select bind:value={language}>
+		<Select bind:value={language} type="single">
 			<SelectTrigger id="language">
 				<SelectValue />
 			</SelectTrigger>

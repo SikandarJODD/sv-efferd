@@ -803,6 +803,26 @@
 		"relativeUrl": "settings-one.json"
 	},
 	{
+		"name": "settings-two",
+		"title": "Settings Two",
+		"type": "registry:block",
+		"description": "A comprehensive account settings dashboard for profile, appearance, notifications, security, and destructive actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar",
+			"button",
+			"card",
+			"field",
+			"input-group",
+			"select",
+			"switch",
+			"toggle-group"
+		],
+		"relativeUrl": "settings-two.json"
+	},
+	{
 		"name": "app-shell-2",
 		"title": "App Shell 2",
 		"type": "registry:block",

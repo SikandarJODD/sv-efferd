@@ -11,7 +11,7 @@ import { heroBlocks } from "#lib/blocks/all-hero.js";
 import { imageGalleryBlocks } from "#lib/blocks/all-image-gallery.js";
 import { integrationBlocks } from "#lib/blocks/all-integrations.js";
 import { logoCloudBlocks } from "#lib/blocks/all-logo-cloud.js";
-import { settingsBlocks } from "#lib/blocks/settings/settings-one.js";
+import { settingsBlocks } from "#lib/blocks/settings/index.js";
 import type { Component } from "svelte";
 import AppShellPreview from "./previews/app-shell.svelte";
 import AuthPreview from "./previews/auth.svelte";

@@ -85,5 +85,3 @@ export const settingsOneBlock: BlockShowcaseItem = {
 		...uiFiles
 	])
 };
-
-export const settingsBlocks = [settingsOneBlock];

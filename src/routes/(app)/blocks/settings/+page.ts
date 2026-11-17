@@ -1,4 +1,4 @@
-import { settingsBlocks } from "#lib/blocks/settings/settings-one.js";
+import { settingsBlocks } from "#lib/blocks/settings/index.js";
 import type { PageLoad } from "./$types";
 
 export const prerender = true;
