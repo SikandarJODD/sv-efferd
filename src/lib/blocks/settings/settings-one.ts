@@ -2,6 +2,7 @@ import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
 import { createBlockCodeTree } from "#lib/blocks/showcase.js";
 import Settings from "#lib/components/efferd/settings/settings-one/settings.svelte";
 
+import indexSource from "#lib/components/efferd/settings/settings-one/index.ts?raw";
 import notificationSettingsSource from "#lib/components/efferd/settings/settings-one/notification-settings.svelte?raw";
 import profileSettingsSource from "#lib/components/efferd/settings/settings-one/profile-settings.svelte?raw";
 import settingFieldSource from "#lib/components/efferd/settings/settings-one/setting-field.svelte?raw";
@@ -52,6 +53,12 @@ export const settingsOneBlock: BlockShowcaseItem = {
 	previewHeight: 760,
 	installId: "settings-one",
 	codeTree: createBlockCodeTree("settings-one:component", [
+		{
+			id: "settings-one:index",
+			path: "components/efferd/settings/settings-one/index.ts",
+			lang: "typescript",
+			code: indexSource
+		},
 		{
 			id: "settings-one:component",
 			path: "components/efferd/settings/settings-one/settings.svelte",

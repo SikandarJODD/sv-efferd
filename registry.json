@@ -1501,6 +1501,11 @@
 			"description": "A settings form for profile details and email preferences. It includes an avatar picker and save action.",
 			"files": [
 				{
+					"path": "src/lib/components/efferd/settings/settings-one/index.ts",
+					"type": "registry:file",
+					"target": "efferd/settings/settings-one/index.ts"
+				},
+				{
 					"path": "src/lib/components/efferd/settings/settings-one/settings.svelte",
 					"type": "registry:component",
 					"target": "efferd/settings/settings-one/settings.svelte"
