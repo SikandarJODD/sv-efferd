@@ -1495,6 +1495,40 @@
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
+			"name": "settings-one",
+			"title": "Settings One",
+			"type": "registry:block",
+			"description": "A settings form for profile details and email preferences. It includes an avatar picker and save action.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/profile-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/profile-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/notification-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/notification-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/setting-field.svelte"
+				}
+			],
+			"registryDependencies": ["avatar", "button", "field", "input", "switch"]
+		},
+		{
 			"name": "app-shell-2",
 			"title": "App Shell 2",
 			"type": "registry:block",

@@ -19,6 +19,7 @@ export const blockCategories = [
 	{ slug: "blog", label: "Blog" },
 	{ slug: "auth", label: "Auth" },
 	{ slug: "app-shell", label: "App Shell", badge: "new" },
+	{ slug: "settings", label: "Settings", badge: "new" },
 	{ slug: "faqs", label: "FAQ's" },
 	{ slug: "contact", label: "Contact" },
 	{ slug: "footer", label: "Footer" },

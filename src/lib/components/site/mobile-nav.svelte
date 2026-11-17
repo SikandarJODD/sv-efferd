@@ -13,6 +13,7 @@
 		{ label: "Header", href: "/blocks/header" },
 		{ label: "Hero", href: "/blocks/hero" },
 		{ label: "Auth", href: "/blocks/auth" },
+		{ label: "Settings", href: "/blocks/settings" },
 		{ label: "Features", href: "/blocks/features" },
 		{ label: "Team", href: "/blocks/team" },
 		{ label: "Blog", href: "/blocks/blog" },

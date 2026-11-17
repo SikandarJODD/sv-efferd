@@ -11,6 +11,7 @@ import { heroBlocks } from "#lib/blocks/all-hero.js";
 import { imageGalleryBlocks } from "#lib/blocks/all-image-gallery.js";
 import { integrationBlocks } from "#lib/blocks/all-integrations.js";
 import { logoCloudBlocks } from "#lib/blocks/all-logo-cloud.js";
+import { settingsBlocks } from "#lib/blocks/settings/settings-one.js";
 import type { Component } from "svelte";
 import AppShellPreview from "./previews/app-shell.svelte";
 import AuthPreview from "./previews/auth.svelte";
@@ -25,6 +26,7 @@ import HeroPreview from "./previews/hero.svelte";
 import ImageGalleryPreview from "./previews/image-gallery.svelte";
 import IntegrationsPreview from "./previews/integrations.svelte";
 import LogoCloudPreview from "./previews/logo-cloud.svelte";
+import SettingsPreview from "./previews/settings.svelte";
 
 export type CategoryConfig = {
 	slug: string;
@@ -138,7 +140,7 @@ export const marketingCategories: CategoryConfig[] = [
 	}
 ];
 
-export const appShellCategories: CategoryConfig[] = [
+export const applicationCategories: CategoryConfig[] = [
 	{
 		slug: "app-shell",
 		title: "App Shell",
@@ -146,5 +148,13 @@ export const appShellCategories: CategoryConfig[] = [
 		count: appShellBlocks.length,
 		countLabel: formatBlockLabel(appShellBlocks.length),
 		previewComponent: AppShellPreview
+	},
+	{
+		slug: "settings",
+		title: "Settings",
+		href: "/blocks/settings",
+		count: settingsBlocks.length,
+		countLabel: formatBlockLabel(settingsBlocks.length),
+		previewComponent: SettingsPreview
 	}
 ];

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Badge } from "#lib/components/spell/badge/index.js";
-	import { appShellCategories, marketingCategories } from "./categories.js";
+	import { applicationCategories, marketingCategories } from "./categories.js";
 	import CategoryCard from "./category-card.svelte";
 </script>
 
@@ -97,7 +97,7 @@
 		<div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
 			<div class="flex items-center gap-2">
 				<h2 class="text-sm font-medium tracking-tight text-foreground lg:font-semibold">
-					App Shell
+					Application
 				</h2>
 				<Badge variant="cyan" class="font-cursive">New</Badge>
 			</div>
@@ -105,7 +105,7 @@
 	</div>
 	<div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-7 lg:px-8">
 		<div class="grid grid-cols-1 gap-3.5 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
-			{#each appShellCategories as card (card.slug)}
+			{#each applicationCategories as card (card.slug)}
 				<CategoryCard
 					title={card.title}
 					href={card.href}
