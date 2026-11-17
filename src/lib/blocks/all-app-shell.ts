@@ -1,7 +1,12 @@
 import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
 import { createBlockCodeTree } from "#lib/blocks/showcase.js";
 import AppShellTwoPreview from "#lib/components/efferd/app-shell/app-shell-2/preview.svelte";
-import { appShellOneBlock, appShellThreeBlock } from "./app-shell/index.js";
+import {
+	appShellFiveBlock,
+	appShellFourBlock,
+	appShellOneBlock,
+	appShellThreeBlock
+} from "./app-shell/index.js";
 
 import appBreadcrumbSource from "#lib/components/efferd/app-shell/app-shell-2/app-breadcrumb.svelte?raw";
 import appHeaderSource from "#lib/components/efferd/app-shell/app-shell-2/app-header.svelte?raw";
@@ -123,7 +128,9 @@ export const appShellBlocks: BlockShowcaseItem[] = [
 			...sharedFiles
 		])
 	},
-	appShellThreeBlock
+	appShellThreeBlock,
+	appShellFourBlock,
+	appShellFiveBlock
 ];
 
 export function getAppShellBlock(id: string) {

@@ -940,6 +940,49 @@
 		"relativeUrl": "app-shell-three.json"
 	},
 	{
+		"name": "app-shell-four",
+		"title": "App Shell Four",
+		"type": "registry:block",
+		"description": "An ecommerce dashboard shell with grouped navigation, nested store links, account controls, and a floating collapsible sidebar.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar",
+			"breadcrumb",
+			"button",
+			"collapsible",
+			"dropdown-menu",
+			"kbd",
+			"separator",
+			"sidebar",
+			"tooltip"
+		],
+		"relativeUrl": "app-shell-four.json"
+	},
+	{
+		"name": "app-shell-five",
+		"title": "App Shell Five",
+		"type": "registry:block",
+		"description": "An analytics workspace with searchable navigation, an off-canvas sidebar, responsive controls, and built-in theme switching.",
+		"dependencies": [
+			"@lucide/svelte",
+			"mode-watcher",
+			"runed"
+		],
+		"registryDependencies": [
+			"avatar",
+			"breadcrumb",
+			"button",
+			"dropdown-menu",
+			"input-group",
+			"kbd",
+			"separator",
+			"sidebar"
+		],
+		"relativeUrl": "app-shell-five.json"
+	},
+	{
 		"name": "pricing-one",
 		"title": "Pricing One",
 		"type": "registry:block",

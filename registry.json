@@ -1999,6 +1999,160 @@
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
+			"name": "app-shell-four",
+			"title": "App Shell Four",
+			"type": "registry:block",
+			"description": "An ecommerce dashboard shell with grouped navigation, nested store links, account controls, and a floating collapsible sidebar.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-shell.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/app-shell.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-breadcrumbs.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/app-breadcrumbs.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/app-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-sidebar.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/app-sidebar.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/custom-sidebar-trigger.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/custom-sidebar-trigger.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/dashboard-skeleton.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/dashboard-skeleton.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/latest-change.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/latest-change.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/nav-group.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/nav-group.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/nav-user.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/nav-user.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-shared.ts",
+					"type": "registry:file",
+					"target": "efferd/app-shell/app-shell-four/app-shared.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo-icon.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo-icon.svelte"
+				}
+			],
+			"registryDependencies": [
+				"avatar",
+				"breadcrumb",
+				"button",
+				"collapsible",
+				"dropdown-menu",
+				"kbd",
+				"separator",
+				"sidebar",
+				"tooltip"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "app-shell-five",
+			"title": "App Shell Five",
+			"type": "registry:block",
+			"description": "An analytics workspace with searchable navigation, an off-canvas sidebar, responsive controls, and built-in theme switching.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-shell.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/app-shell.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/app-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-search.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/app-search.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-sidebar.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/app-sidebar.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/custom-trigger.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/custom-trigger.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/latest-change.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/latest-change.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/nav-user.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/nav-user.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/theme-switcher.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/theme-switcher.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-shared.ts",
+					"type": "registry:file",
+					"target": "efferd/app-shell/app-shell-five/app-shared.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo-icon.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo-icon.svelte"
+				}
+			],
+			"registryDependencies": [
+				"avatar",
+				"breadcrumb",
+				"button",
+				"dropdown-menu",
+				"input-group",
+				"kbd",
+				"separator",
+				"sidebar"
+			],
+			"dependencies": ["@lucide/svelte", "mode-watcher", "runed"]
+		},
+		{
 			"name": "pricing-one",
 			"title": "Pricing One",
 			"type": "registry:block",
