@@ -823,6 +823,61 @@
 		"relativeUrl": "settings-two.json"
 	},
 	{
+		"name": "settings-three",
+		"title": "Settings Three",
+		"type": "registry:block",
+		"description": "An agent settings dashboard for profile, availability, notifications, and destructive account actions.",
+		"registryDependencies": [
+			"alert-dialog",
+			"avatar",
+			"badge",
+			"button",
+			"card",
+			"checkbox",
+			"field",
+			"input",
+			"switch",
+			"toggle-group"
+		],
+		"relativeUrl": "settings-three.json"
+	},
+	{
+		"name": "settings-four",
+		"title": "Settings Four",
+		"type": "registry:block",
+		"description": "A stacked account settings form for name, email, avatar, user ID, and account deletion.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar",
+			"button",
+			"card",
+			"field",
+			"input-group"
+		],
+		"relativeUrl": "settings-four.json"
+	},
+	{
+		"name": "settings-five",
+		"title": "Settings Five",
+		"type": "registry:block",
+		"description": "An account overview for profile, security, localization, and destructive account actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"alert-dialog",
+			"avatar",
+			"badge",
+			"button",
+			"card",
+			"label",
+			"select"
+		],
+		"relativeUrl": "settings-five.json"
+	},
+	{
 		"name": "app-shell-2",
 		"title": "App Shell 2",
 		"type": "registry:block",

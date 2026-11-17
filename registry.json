@@ -1588,6 +1588,188 @@
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
+			"name": "settings-three",
+			"title": "Settings Three",
+			"type": "registry:block",
+			"description": "An agent settings dashboard for profile, availability, notifications, and destructive account actions.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/agent-preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/agent-preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/profile-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/profile-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/availability-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/availability-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/notification-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/notification-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/danger-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/danger-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/setting-field.svelte"
+				}
+			],
+			"registryDependencies": [
+				"alert-dialog",
+				"avatar",
+				"badge",
+				"button",
+				"card",
+				"checkbox",
+				"field",
+				"input",
+				"switch",
+				"toggle-group"
+			]
+		},
+		{
+			"name": "settings-four",
+			"title": "Settings Four",
+			"type": "registry:block",
+			"description": "A stacked account settings form for name, email, avatar, user ID, and account deletion.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/name-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/name-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/email-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/email-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/avatar-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/avatar-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/user-id-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/user-id-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/delete-account-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/delete-account-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/setting-field.svelte"
+				},
+				{
+					"path": "src/lib/hooks/use-clipboard.svelte.ts",
+					"type": "registry:hook"
+				}
+			],
+			"registryDependencies": ["avatar", "button", "card", "field", "input-group"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "settings-five",
+			"title": "Settings Five",
+			"type": "registry:block",
+			"description": "An account overview for profile, security, localization, and destructive account actions.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/settings-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/settings-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/profile-information.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/profile-information.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/security-information.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/security-information.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/localization-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/localization-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/danger-zone-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/danger-zone-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/setting-field.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:lib",
+					"target": "svgs/google.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:lib",
+					"target": "svgs/github.svelte"
+				}
+			],
+			"registryDependencies": [
+				"alert-dialog",
+				"avatar",
+				"badge",
+				"button",
+				"card",
+				"label",
+				"select"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
 			"name": "app-shell-2",
 			"title": "App Shell 2",
 			"type": "registry:block",
