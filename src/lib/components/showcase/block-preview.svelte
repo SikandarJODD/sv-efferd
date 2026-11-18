@@ -98,7 +98,7 @@
 		/>
 	</div>
 
-	<div class="relative px-2 sm:px-3">
+	<div class="relative px-2 sm:px-1">
 		<div
 			class="relative w-full overflow-hidden rounded-2xl border bg-background"
 			style={`--preview-min-height: ${MIN_PREVIEW_HEIGHT}px;`}
