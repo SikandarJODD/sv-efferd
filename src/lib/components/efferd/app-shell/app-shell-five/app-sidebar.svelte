@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
-	import LogoIcon from "#lib/svgs/logo-icon.svelte";
+	import Logo from "#lib/svgs/logo.svelte";
 	import { cn } from "#lib/utils.js";
 	import { SettingsIcon } from "@lucide/svelte";
 	import AppSearch from "./app-search.svelte";
@@ -19,7 +19,7 @@
 	variant="sidebar"
 >
 	<Sidebar.Header class="h-(--app-header-height,3rem) flex-row items-center justify-between">
-		<Button href="#link" variant="ghost"><LogoIcon /><span class="font-medium">Efferd</span></Button>
+		<Button href="#link" variant="ghost"><Logo /><span class="font-medium">Efferd</span></Button>
 		<CustomTrigger place="sidebar" />
 	</Sidebar.Header>
 	<Sidebar.Content>

@@ -1980,9 +1980,9 @@
 					"target": "efferd/app-shell/app-shell-three/app-shared.ts"
 				},
 				{
-					"path": "src/lib/svgs/logo-icon.svelte",
+					"path": "src/lib/svgs/logo.svelte",
 					"type": "registry:lib",
-					"target": "svgs/logo-icon.svelte"
+					"target": "svgs/logo.svelte"
 				}
 			],
 			"registryDependencies": [
@@ -2060,9 +2060,9 @@
 					"target": "efferd/app-shell/app-shell-four/app-shared.ts"
 				},
 				{
-					"path": "src/lib/svgs/logo-icon.svelte",
+					"path": "src/lib/svgs/logo.svelte",
 					"type": "registry:lib",
-					"target": "svgs/logo-icon.svelte"
+					"target": "svgs/logo.svelte"
 				}
 			],
 			"registryDependencies": [
@@ -2135,9 +2135,9 @@
 					"target": "efferd/app-shell/app-shell-five/app-shared.ts"
 				},
 				{
-					"path": "src/lib/svgs/logo-icon.svelte",
+					"path": "src/lib/svgs/logo.svelte",
 					"type": "registry:lib",
-					"target": "svgs/logo-icon.svelte"
+					"target": "svgs/logo.svelte"
 				}
 			],
 			"registryDependencies": [

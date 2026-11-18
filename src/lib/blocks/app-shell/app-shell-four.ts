@@ -13,7 +13,7 @@ import latestChangeSource from "#lib/components/efferd/app-shell/app-shell-four/
 import navGroupSource from "#lib/components/efferd/app-shell/app-shell-four/nav-group.svelte?raw";
 import navUserSource from "#lib/components/efferd/app-shell/app-shell-four/nav-user.svelte?raw";
 import previewSource from "#lib/components/efferd/app-shell/app-shell-four/preview.svelte?raw";
-import logoIconSource from "#lib/svgs/logo-icon.svelte?raw";
+import logoSource from "#lib/svgs/logo.svelte?raw";
 
 const uiFiles = [
 	{
@@ -94,7 +94,7 @@ export const appShellFourBlock: BlockShowcaseItem = {
 		{ id: "app-shell-four:nav-group", path: "app-shell/nav-group.svelte", lang: "svelte", code: navGroupSource },
 		{ id: "app-shell-four:nav-user", path: "app-shell/nav-user.svelte", lang: "svelte", code: navUserSource },
 		{ id: "app-shell-four:app-shared", path: "app-shell/app-shared.ts", lang: "typescript", code: appSharedSource },
-		{ id: "shared:logo-icon", path: "svgs/logo-icon.svelte", lang: "svelte", code: logoIconSource },
+		{ id: "shared:logo", path: "svgs/logo.svelte", lang: "svelte", code: logoSource },
 		...uiFiles
 	])
 };

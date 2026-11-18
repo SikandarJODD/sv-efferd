@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
-	import LogoIcon from "#lib/svgs/logo-icon.svelte";
+	import Logo from "#lib/svgs/logo.svelte";
 	import { PlusIcon, SearchIcon } from "@lucide/svelte";
 	import { footerNavLinks, navGroups } from "./app-shared.js";
 	import LatestChange from "./latest-change.svelte";
@@ -13,7 +13,7 @@
 <Sidebar.Root collapsible="icon" variant="floating">
 	<Sidebar.Header class="h-14 justify-center">
 		<Sidebar.MenuButton>
-			{#snippet child({ props })}<a href="#link" {...props}><LogoIcon /><span class="font-medium">Efferd</span></a>{/snippet}
+			{#snippet child({ props })}<a href="#link" {...props}><Logo /><span class="font-medium">Efferd</span></a>{/snippet}
 		</Sidebar.MenuButton>
 	</Sidebar.Header>
 	<Sidebar.Content>

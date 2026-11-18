@@ -12,7 +12,7 @@ import latestChangeSource from "#lib/components/efferd/app-shell/app-shell-five/
 import navUserSource from "#lib/components/efferd/app-shell/app-shell-five/nav-user.svelte?raw";
 import previewSource from "#lib/components/efferd/app-shell/app-shell-five/preview.svelte?raw";
 import themeSwitcherSource from "#lib/components/efferd/app-shell/app-shell-five/theme-switcher.svelte?raw";
-import logoIconSource from "#lib/svgs/logo-icon.svelte?raw";
+import logoSource from "#lib/svgs/logo.svelte?raw";
 
 const uiFiles = [
 	{
@@ -86,7 +86,7 @@ export const appShellFiveBlock: BlockShowcaseItem = {
 		{ id: "app-shell-five:nav-user", path: "app-shell/nav-user.svelte", lang: "svelte", code: navUserSource },
 		{ id: "app-shell-five:theme-switcher", path: "app-shell/theme-switcher.svelte", lang: "svelte", code: themeSwitcherSource },
 		{ id: "app-shell-five:app-shared", path: "app-shell/app-shared.ts", lang: "typescript", code: appSharedSource },
-		{ id: "shared:logo-icon", path: "svgs/logo-icon.svelte", lang: "svelte", code: logoIconSource },
+		{ id: "shared:logo", path: "svgs/logo.svelte", lang: "svelte", code: logoSource },
 		...uiFiles
 	])
 };
