@@ -897,8 +897,8 @@
 		"relativeUrl": "app-shell-one.json"
 	},
 	{
-		"name": "app-shell-2",
-		"title": "App Shell 2",
+		"name": "app-shell-two",
+		"title": "App Shell Two",
 		"type": "registry:block",
 		"description": "A compact dashboard shell with a collapsible sidebar, sticky header, and structured content skeleton.",
 		"dependencies": [
@@ -916,7 +916,7 @@
 			"sidebar",
 			"tooltip"
 		],
-		"relativeUrl": "app-shell-2.json"
+		"relativeUrl": "app-shell-two.json"
 	},
 	{
 		"name": "app-shell-three",

@@ -3,8 +3,8 @@
 </script>
 
 <svelte:head>
-	<title>App Shell 2 Preview | Svelte Efferd</title>
-	<meta name="description" content="Standalone preview for App Shell 2 in Svelte Efferd." />
+	<title>App Shell Two Preview | Svelte Efferd</title>
+	<meta name="description" content="Standalone preview for App Shell Two in Svelte Efferd." />
 </svelte:head>
 
 <Preview />

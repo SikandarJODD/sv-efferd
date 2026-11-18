@@ -1838,65 +1838,65 @@
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
-			"name": "app-shell-2",
-			"title": "App Shell 2",
+			"name": "app-shell-two",
+			"title": "App Shell Two",
 			"type": "registry:block",
 			"description": "A compact dashboard shell with a collapsible sidebar, sticky header, and structured content skeleton.",
 			"files": [
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/preview.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/preview.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/preview.svelte"
+					"target": "efferd/app-shell/app-shell-two/preview.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-shell.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-shell.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/app-shell.svelte"
+					"target": "efferd/app-shell/app-shell-two/app-shell.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-breadcrumb.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-breadcrumb.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/app-breadcrumb.svelte"
+					"target": "efferd/app-shell/app-shell-two/app-breadcrumb.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-header.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-header.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/app-header.svelte"
+					"target": "efferd/app-shell/app-shell-two/app-header.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-sidebar.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-sidebar.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/app-sidebar.svelte"
+					"target": "efferd/app-shell/app-shell-two/app-sidebar.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/custom-sidebar-trigger.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/custom-sidebar-trigger.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/custom-sidebar-trigger.svelte"
+					"target": "efferd/app-shell/app-shell-two/custom-sidebar-trigger.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/dashboard-skeleton.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/dashboard-skeleton.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/dashboard-skeleton.svelte"
+					"target": "efferd/app-shell/app-shell-two/dashboard-skeleton.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/latest-change.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/latest-change.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/latest-change.svelte"
+					"target": "efferd/app-shell/app-shell-two/latest-change.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/nav-group.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/nav-group.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/nav-group.svelte"
+					"target": "efferd/app-shell/app-shell-two/nav-group.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/nav-user.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/nav-user.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/nav-user.svelte"
+					"target": "efferd/app-shell/app-shell-two/nav-user.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-shared.ts",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-shared.ts",
 					"type": "registry:file",
-					"target": "efferd/app-shell/app-shell-2/app-shared.ts"
+					"target": "efferd/app-shell/app-shell-two/app-shared.ts"
 				},
 				{
 					"path": "src/lib/svgs/logo.svelte",
