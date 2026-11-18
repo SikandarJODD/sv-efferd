@@ -1,6 +1,6 @@
 import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
 import { createBlockCodeTree } from "#lib/blocks/showcase.js";
-import AppShellTwoPreview from "#lib/components/efferd/app-shell/app-shell-2/preview.svelte";
+import AppShellTwoPreview from "#lib/components/efferd/app-shell/app-shell-two/preview.svelte";
 import {
 	appShellFiveBlock,
 	appShellFourBlock,

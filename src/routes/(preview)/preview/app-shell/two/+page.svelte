@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Preview from "#lib/components/efferd/app-shell/app-shell-2/preview.svelte";
+	import Preview from "#lib/components/efferd/app-shell/app-shell-two/preview.svelte";
 </script>
 
 <svelte:head>
