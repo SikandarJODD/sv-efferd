@@ -57,57 +57,57 @@ export const dashboardOneBlock: BlockShowcaseItem = {
 	codeTree: createBlockCodeTree("dashboard-one:component", [
 		{
 			id: "dashboard-one:preview",
-			path: "efferd/dashboard/dashboard-one/preview.svelte",
+			path: "dashboard/preview.svelte",
 			lang: "svelte",
 			code: previewSource
 		},
 		{
 			id: "dashboard-one:index",
-			path: "efferd/dashboard/dashboard-one/index.ts",
+			path: "dashboard/index.ts",
 			lang: "typescript",
 			code: indexSource
 		},
 		{
 			id: "dashboard-one:component",
-			path: "efferd/dashboard/dashboard-one/dashboard.svelte",
+			path: "dashboard/dashboard.svelte",
 			lang: "svelte",
 			code: dashboardSource
 		},
 		{
 			id: "dashboard-one:stats",
-			path: "efferd/dashboard/dashboard-one/dashboard-stats.svelte",
+			path: "dashboard/dashboard-stats.svelte",
 			lang: "svelte",
 			code: dashboardStatsSource
 		},
 		{
 			id: "dashboard-one:sales-chart",
-			path: "efferd/dashboard/dashboard-one/sales-chart.svelte",
+			path: "dashboard/sales-chart.svelte",
 			lang: "svelte",
 			code: salesChartSource
 		},
 		{
 			id: "dashboard-one:invoices",
-			path: "efferd/dashboard/dashboard-one/dashboard-invoices.svelte",
+			path: "dashboard/dashboard-invoices.svelte",
 			lang: "svelte",
 			code: dashboardInvoicesSource
 		},
 		{
 			id: "dashboard-one:delta",
-			path: "efferd/dashboard/dashboard-one/delta.svelte",
+			path: "dashboard/delta.svelte",
 			lang: "svelte",
 			code: deltaSource
 		},
 		{
 			id: "dashboard-one:formatter",
-			path: "efferd/dashboard/dashboard-one/formatter.ts",
+			path: "dashboard/formatter.ts",
 			lang: "typescript",
 			code: formatterSource
 		},
 		{
-			id: "related:app-shell-two",
-			path: "related/app-shell-two",
-			externalUrl: "/blocks/app-shell#app-shell-two",
-			externalLabel: "View App Shell Two"
+			id: "related:app-shell-one",
+			path: "related/app-shell-one",
+			externalUrl: "/blocks/app-shell#app-shell-one",
+			externalLabel: "View App Shell One"
 		},
 		...uiFiles
 	])

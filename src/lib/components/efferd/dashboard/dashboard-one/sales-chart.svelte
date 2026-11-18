@@ -60,6 +60,7 @@
 	const retailGradient = `sales-retail-${uid}`;
 	let period = $state<Period>("7");
 	const periodDays = $derived(Number(period));
+	const periodLabel = $derived(period === "7" ? "Last 7 days" : "Last 30 days");
 
 	const chartRows = $derived.by(() => {
 		const lastDate = chartData.at(-1)?.date;
@@ -99,7 +100,7 @@
 					class="w-full min-w-36 sm:w-fit"
 					size="sm"
 				>
-					<Select.Value placeholder="Range" />
+					{periodLabel}
 				</Select.Trigger>
 				<Select.Content align="end">
 					<Select.Group>
