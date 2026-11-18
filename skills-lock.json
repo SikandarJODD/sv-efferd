@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "skills": {
+    "evilcharts-svelte": {
+      "source": "mielsense/evilcharts-sv",
+      "commit": "4e0080b81a0adf778f96e9aa2e03236e7e9d945b",
+      "sourceType": "github",
+      "skillPath": "skills/evilcharts-svelte/SKILL.md",
+      "computedHash": "b8f5cf1430a852e1390043a864e7b0464ae2bfa998988513e00b6a90e83eb561"
+    }
+  }
+}
