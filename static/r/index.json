@@ -789,6 +789,26 @@
 		"relativeUrl": "header-five.json"
 	},
 	{
+		"name": "dashboard-one",
+		"title": "Dashboard One",
+		"type": "registry:block",
+		"description": "A responsive analytics dashboard with KPI summaries, an interactive stacked sales chart, and a recent invoices table.",
+		"dependencies": [
+			"@lucide/svelte",
+			"d3-scale",
+			"d3-shape",
+			"layerchart"
+		],
+		"registryDependencies": [
+			"badge",
+			"card",
+			"chart",
+			"select",
+			"table"
+		],
+		"relativeUrl": "dashboard-one.json"
+	},
+	{
 		"name": "settings-one",
 		"title": "Settings One",
 		"type": "registry:block",

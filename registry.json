@@ -1495,6 +1495,51 @@
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
+			"name": "dashboard-one",
+			"title": "Dashboard One",
+			"type": "registry:block",
+			"description": "A responsive analytics dashboard with KPI summaries, an interactive stacked sales chart, and a recent invoices table.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-one/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/dashboard-stats.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/dashboard-stats.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/sales-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/sales-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/dashboard-invoices.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/dashboard-invoices.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-one/formatter.ts"
+				}
+			],
+			"registryDependencies": ["badge", "card", "chart", "select", "table"],
+			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"]
+		},
+		{
 			"name": "settings-one",
 			"title": "Settings One",
 			"type": "registry:block",

@@ -9,6 +9,13 @@ export type BlockCategoryBadge = "new" | "beta";
 
 export const blockCategories = [
 	{
+		slug: "dashboard",
+		label: "Dashboard",
+		description:
+			"Dashboard layouts for analytics, key metrics, interactive charts, and operational data.",
+		badge: "new"
+	},
+	{
 		slug: "app-shell",
 		label: "App Shell",
 		description:

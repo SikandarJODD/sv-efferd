@@ -3,6 +3,7 @@ import { authBlocks } from "#lib/blocks/all-auth.js";
 import { blogBlocks } from "#lib/blocks/all-blog.js";
 import { contactBlocks } from "#lib/blocks/all-contact.js";
 import { ctaBlocks } from "#lib/blocks/all-cta.js";
+import { dashboardBlocks } from "#lib/blocks/dashboard/index.js";
 import { faqBlocks } from "#lib/blocks/all-faqs.js";
 import { featureBlocks } from "#lib/blocks/all-features.js";
 import { footerBlocks } from "#lib/blocks/all-footer.js";
@@ -18,6 +19,7 @@ import AuthPreview from "./previews/auth.svelte";
 import BlogPreview from "./previews/blog.svelte";
 import ContactPreview from "./previews/contact.svelte";
 import CtaPreview from "./previews/cta.svelte";
+import DashboardPreview from "./previews/dashboard.svelte";
 import FaqsPreview from "./previews/faqs.svelte";
 import FeaturesPreview from "./previews/features.svelte";
 import FooterPreview from "./previews/footer.svelte";
@@ -141,6 +143,14 @@ export const marketingCategories: CategoryConfig[] = [
 ];
 
 export const applicationCategories: CategoryConfig[] = [
+	{
+		slug: "dashboard",
+		title: "Dashboard",
+		href: "/blocks/dashboard",
+		count: dashboardBlocks.length,
+		countLabel: formatBlockLabel(dashboardBlocks.length),
+		previewComponent: DashboardPreview
+	},
 	{
 		slug: "app-shell",
 		title: "App Shell",

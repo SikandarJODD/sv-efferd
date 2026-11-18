@@ -10,6 +10,7 @@
 
 	let open = $state(false);
 	const blockLinks = [
+		{ label: "Dashboard", href: "/blocks/dashboard" },
 		{ label: "Header", href: "/blocks/header" },
 		{ label: "Hero", href: "/blocks/hero" },
 		{ label: "Auth", href: "/blocks/auth" },

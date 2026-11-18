@@ -1,3 +1,12 @@
+<script lang="ts">
+	interface Props {
+		title: string;
+		countLabel: string;
+	}
+
+	let { title, countLabel }: Props = $props();
+</script>
+
 <div class="flex size-full grid-cols-2">
 	<div class="flex flex-1">
 		<div class="w-[5%] border-r">
@@ -21,8 +30,8 @@
 		<div class="w-full gap-1">
 			<div class="flex flex-col gap-1.5 p-2.5">
 				<div class="flex items-end justify-between ps-1 pe-4">
-					<h3 class="font-heading text-sm font-medium md:text-base">Dashboard</h3>
-					<p class="text-xs text-muted-foreground">10 block</p>
+					<h3 class="font-heading text-sm font-medium md:text-base">{title}</h3>
+					<p class="text-xs text-muted-foreground">{countLabel}</p>
 				</div>
 				<div class="overflow-hidden rounded-t-sm border">
 					<div class="grid grid-cols-4 gap-px bg-border *:bg-background">
