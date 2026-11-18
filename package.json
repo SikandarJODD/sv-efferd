@@ -46,7 +46,6 @@
 		"mode-watcher": "^1.1.0",
 		"motion-sv": "^0.2.2",
 		"package-manager-detector": "^1.9.0",
-		"paneforge": "^1.0.2",
 		"runed": "^0.38.0",
 		"shadcn-svelte": "^1.8.1",
 		"shiki": "^3.23.0",

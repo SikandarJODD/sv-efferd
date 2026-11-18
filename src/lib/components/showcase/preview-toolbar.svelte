@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { cn } from "#lib/utils.js";
-	import type { PaneAPI } from "paneforge";
 	import PreviewActions from "./preview-actions.svelte";
 	import PreviewModeControls from "./preview-mode-controls.svelte";
 	import PreviewViewportControls from "./preview-viewport-controls.svelte";
@@ -10,7 +9,6 @@
 	interface PreviewToolbarProps {
 		mode?: PreviewMode;
 		width: number;
-		pane?: PaneAPI;
 		showViewportControls: boolean;
 		canToggleResponsivePreview: boolean;
 		responsivePreviewEnabled?: boolean;
@@ -22,8 +20,7 @@
 
 	let {
 		mode = $bindable<PreviewMode>("preview"),
-		width,
-		pane,
+		width = $bindable(),
 		showViewportControls,
 		canToggleResponsivePreview,
 		responsivePreviewEnabled = $bindable(false),
@@ -51,7 +48,7 @@
 
 	<div class={cn("flex flex-wrap items-center gap-2", mobile && "w-full gap-1.5")}>
 		{#if showViewportControls}
-			<PreviewViewportControls {pane} {width} />
+			<PreviewViewportControls bind:width />
 		{/if}
 		<PreviewActions
 			bind:responsivePreviewEnabled

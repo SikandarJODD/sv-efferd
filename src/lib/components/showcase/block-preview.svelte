@@ -2,7 +2,6 @@
 	import { page } from "$app/state";
 	import type { BlockCodeTree } from "#lib/blocks/showcase.js";
 	import { IsMobile } from "#lib/hooks/is-mobile.svelte.js";
-	import type { PaneAPI } from "paneforge";
 	import { watch } from "runed";
 	import type { Component } from "svelte";
 	import { MediaQuery } from "svelte/reactivity";
@@ -40,7 +39,6 @@
 
 	let mode = $state<"preview" | "code">("preview");
 	let width = $state(DEFAULT_PREVIEW_SIZE);
-	let pane = $state<PaneAPI>();
 	let responsivePreviewEnabled = $state(false);
 	let mobile = new IsMobile();
 	let largeViewport = new MediaQuery("min-width: 1024px");
@@ -89,9 +87,8 @@
 		<PreviewHeading {title} {description} url={blockUrl} />
 		<PreviewToolbar
 			bind:mode
+			bind:width
 			bind:responsivePreviewEnabled
-			{width}
-			{pane}
 			{showViewportControls}
 			{canToggleResponsivePreview}
 			{previewHref}
@@ -107,8 +104,7 @@
 			style={`--preview-min-height: ${MIN_PREVIEW_HEIGHT}px;`}
 		>
 			<PreviewCanvas
-				bind:width
-				bind:pane
+				{width}
 				{id}
 				{title}
 				{previewComponent}

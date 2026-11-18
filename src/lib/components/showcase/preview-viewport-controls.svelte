@@ -9,7 +9,6 @@
 	import Laptop from "@lucide/svelte/icons/laptop";
 	import Smartphone from "@lucide/svelte/icons/smartphone";
 	import Tablet from "@lucide/svelte/icons/tablet";
-	import type { PaneAPI } from "paneforge";
 	import {
 		DESKTOP_PREVIEW_SIZE,
 		DEFAULT_PREVIEW_SIZE,
@@ -18,11 +17,10 @@
 	} from "./preview-sizes.js";
 
 	interface PreviewViewportControlsProps {
-		pane?: PaneAPI;
 		width: number;
 	}
 
-	let { pane, width }: PreviewViewportControlsProps = $props();
+	let { width = $bindable() }: PreviewViewportControlsProps = $props();
 
 	let activeViewport = $derived(
 		width < TABLET_PREVIEW_SIZE ? "mobile" : width < DESKTOP_PREVIEW_SIZE ? "tablet" : "desktop"
@@ -36,7 +34,7 @@
 				{#snippet child({ props })}
 					<Button
 						{...props}
-						onclick={() => pane?.resize(DEFAULT_PREVIEW_SIZE)}
+						onclick={() => (width = DEFAULT_PREVIEW_SIZE)}
 						size="icon"
 						class="relative h-7 w-7 cursor-pointer rounded-[calc(var(--radius-md)-2px)] shadow-none"
 						variant={activeViewport === "desktop" ? "secondary" : "ghost"}
@@ -61,7 +59,7 @@
 				{#snippet child({ props })}
 					<Button
 						{...props}
-						onclick={() => pane?.resize(TABLET_PREVIEW_SIZE)}
+						onclick={() => (width = TABLET_PREVIEW_SIZE)}
 						size="icon"
 						class="relative h-7 w-7 cursor-pointer rounded-[calc(var(--radius-md)-2px)] shadow-none"
 						variant={activeViewport === "tablet" ? "secondary" : "ghost"}
@@ -86,7 +84,7 @@
 				{#snippet child({ props })}
 					<Button
 						{...props}
-						onclick={() => pane?.resize(MOBILE_PREVIEW_SIZE)}
+						onclick={() => (width = MOBILE_PREVIEW_SIZE)}
 						size="icon"
 						class="relative h-7 w-7 cursor-pointer rounded-[calc(var(--radius-md)-2px)] shadow-none"
 						variant={activeViewport === "mobile" ? "secondary" : "ghost"}

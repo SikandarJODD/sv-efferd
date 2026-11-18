@@ -186,10 +186,8 @@
 	[role="button"] {
 		touch-action: manipulation;
 	}
-	@media (prefers-reduced-motion: no-preference) {
-		html {
-			@apply scroll-smooth;
-		}
+	html {
+		scroll-behavior: auto;
 	}
 	@media (pointer: fine) {
 		html {

@@ -1,13 +1,8 @@
 <script lang="ts">
 	import { cn } from "#lib/utils.js";
-	import { Pane, PaneGroup, PaneResizer, type PaneAPI } from "paneforge";
-	import type { Component } from "svelte";
+	import { onDestroy, type Component } from "svelte";
 	import { scale } from "svelte/transition";
-	import {
-		DEFAULT_PREVIEW_SIZE,
-		MIN_PREVIEW_HEIGHT,
-		MOBILE_PREVIEW_SIZE
-	} from "./preview-sizes.js";
+	import { DEFAULT_PREVIEW_SIZE, MIN_PREVIEW_HEIGHT } from "./preview-sizes.js";
 
 	type ScopedTheme = "veil" | "mist";
 
@@ -23,7 +18,6 @@
 		largeViewport: boolean;
 		hidden?: boolean;
 		width?: number;
-		pane?: PaneAPI;
 	}
 
 	let {
@@ -37,13 +31,13 @@
 		activeTheme,
 		largeViewport,
 		hidden = false,
-		width = $bindable(DEFAULT_PREVIEW_SIZE),
-		pane = $bindable<PaneAPI | undefined>()
+		width = DEFAULT_PREVIEW_SIZE
 	}: PreviewCanvasProps = $props();
 
 	let iframe = $state<HTMLIFrameElement | null>(null);
 	let iframeHeight = $state(0);
 	let loading = $state(false);
+	let removeIframeWheelListener: (() => void) | undefined;
 
 	let resolvedIframeHeight = $derived(
 		Math.max(previewHeight ?? iframeHeight, MIN_PREVIEW_HEIGHT)
@@ -51,6 +45,7 @@
 
 	$effect(() => {
 		loading = renderIframe && Boolean(previewHref);
+		if (!renderIframe) cleanupIframeWheelForwarding();
 	});
 
 	function hideIframeScrollbar() {
@@ -61,9 +56,43 @@
 		iframeDocument.body.classList.toggle("no-scrollbar", !heroPreview);
 	}
 
+	function cleanupIframeWheelForwarding() {
+		removeIframeWheelListener?.();
+		removeIframeWheelListener = undefined;
+	}
+
+	function setupIframeWheelForwarding() {
+		const iframeDocument = iframe?.contentDocument;
+		const iframeWindow = iframe?.contentWindow;
+		if (!iframeDocument || !iframeWindow) return;
+
+		cleanupIframeWheelForwarding();
+		iframeDocument.documentElement.style.overflow = "hidden";
+		iframeDocument.body.style.overflow = "hidden";
+
+		const forwardWheelToPage = (event: WheelEvent) => {
+			if (event.ctrlKey) return;
+
+			const multiplier =
+				event.deltaMode === WheelEvent.DOM_DELTA_LINE
+					? 16
+					: event.deltaMode === WheelEvent.DOM_DELTA_PAGE
+						? window.innerHeight
+						: 1;
+
+			event.preventDefault();
+			window.scrollBy(event.deltaX * multiplier, event.deltaY * multiplier);
+		};
+
+		iframeWindow.addEventListener("wheel", forwardWheelToPage, { passive: false });
+		removeIframeWheelListener = () =>
+			iframeWindow.removeEventListener("wheel", forwardWheelToPage);
+	}
+
 	function handleIframeLoad() {
 		loading = false;
 		hideIframeScrollbar();
+		setupIframeWheelForwarding();
 
 		if (previewHeight) {
 			iframeHeight = previewHeight;
@@ -73,58 +102,45 @@
 		const contentHeight = iframe?.contentWindow?.document.body.scrollHeight;
 		if (contentHeight) iframeHeight = contentHeight + 20;
 	}
+
+	onDestroy(cleanupIframeWheelForwarding);
 </script>
 
 <div class={cn("z-40 bg-white dark:bg-background", hidden && "hidden")}>
 	{#if renderIframe && previewHref}
-		<PaneGroup direction="horizontal">
-			<Pane
-				bind:this={pane}
-				id={`preview-${id}`}
-				order={1}
-				onResize={(size) => (width = Number(size))}
-				defaultSize={DEFAULT_PREVIEW_SIZE}
-				minSize={MOBILE_PREVIEW_SIZE}
-				class={cn("h-fit", largeViewport && "border-r")}
-			>
-				<iframe
-					loading="lazy"
-					allowFullScreen
-					bind:this={iframe}
-					{title}
-					height={resolvedIframeHeight}
-					class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) min-h-(--preview-min-height) w-full duration-200 will-change-auto"
-					src={previewHref}
-					id={`block-${id}`}
-					style={`--iframe-height: ${resolvedIframeHeight}px;`}
-					onload={handleIframeLoad}
-				></iframe>
+		<div
+			class={cn(
+				"relative h-fit",
+				largeViewport && width < DEFAULT_PREVIEW_SIZE && "border-r"
+			)}
+			style:width={largeViewport ? `${width}%` : "100%"}
+		>
+			<iframe
+				loading="lazy"
+				allowFullScreen
+				bind:this={iframe}
+				{title}
+				height={resolvedIframeHeight}
+				class="@starting:opacity-0 @starting:blur-xl no-scrollbar block h-(--iframe-height) min-h-(--preview-min-height) w-full duration-200 will-change-auto"
+				src={previewHref}
+				id={`block-${id}`}
+				style={`--iframe-height: ${resolvedIframeHeight}px;`}
+				onload={handleIframeLoad}
+			></iframe>
 
-				{#if loading}
+			{#if loading}
+				<div
+					class="absolute inset-0 right-2 flex items-center justify-center border-x bg-background"
+					role="status"
+					aria-label="Loading preview"
+				>
 					<div
-						class="absolute inset-0 right-2 flex items-center justify-center border-x bg-background"
-						role="status"
-						aria-label="Loading preview"
-					>
-						<div
-							class="size-6 animate-spin rounded-full border border-primary border-t-transparent"
-							aria-hidden="true"
-						></div>
-					</div>
-				{/if}
-			</Pane>
-
-			{#if largeViewport}
-				<PaneResizer
-					class="relative w-2 before:absolute before:inset-0 before:m-auto before:h-12 before:w-1 before:rounded-full before:bg-zinc-300 before:transition-[height,background] hover:before:h-16 hover:before:bg-zinc-400 focus:before:bg-zinc-400 dark:before:bg-zinc-600 dark:hover:before:bg-zinc-500 dark:focus:before:bg-zinc-400"
-				/>
-				<Pane
-					id={`preview-resizer-${id}`}
-					order={2}
-					defaultSize={100 - DEFAULT_PREVIEW_SIZE}
-				/>
+						class="size-6 animate-spin rounded-full border border-primary border-t-transparent"
+						aria-hidden="true"
+					></div>
+				</div>
 			{/if}
-		</PaneGroup>
+		</div>
 	{:else if activeTheme}
 		<div data-theme={activeTheme}>
 			<div
