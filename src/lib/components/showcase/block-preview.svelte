@@ -51,6 +51,7 @@
 	let showViewportControls = $derived(renderIframe && !mobile.current);
 	let heroPreview = $derived(previewHref?.startsWith("/preview/hero/") ?? false);
 	let headerPreview = $derived(previewHref?.startsWith("/preview/header/") ?? false);
+	let dashboardPreview = $derived(previewHref?.startsWith("/preview/dashboard/") ?? false);
 	let activeTheme = $derived(resolveScopedTheme(page.url.pathname));
 	let themeSetupHref = $derived(
 		activeTheme === "veil"
@@ -93,7 +94,9 @@
 			{showViewportControls}
 			{canToggleResponsivePreview}
 			{previewHref}
-			openPreviewNote={headerPreview ? "Open this preview, then scroll." : undefined}
+			openPreviewNote={headerPreview || dashboardPreview
+				? "Open this preview, then scroll."
+				: undefined}
 			{installId}
 			{themeSetupHref}
 			mobile={mobile.current}
