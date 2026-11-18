@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Dashboard from "#lib/components/efferd/dashboard/dashboard-one/dashboard.svelte";
+	import Preview from "#lib/components/efferd/dashboard/dashboard-one/preview.svelte";
 </script>
 
 <svelte:head>
@@ -10,8 +10,4 @@
 	/>
 </svelte:head>
 
-<main class="min-h-screen bg-background px-4 py-10 sm:px-6">
-	<div class="mx-auto w-full max-w-7xl">
-		<Dashboard />
-	</div>
-</main>
+<Preview />

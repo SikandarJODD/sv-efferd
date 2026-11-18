@@ -1,6 +1,6 @@
 import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
 import { createBlockCodeTree } from "#lib/blocks/showcase.js";
-import Dashboard from "#lib/components/efferd/dashboard/dashboard-one/dashboard.svelte";
+import DashboardOnePreview from "#lib/components/efferd/dashboard/dashboard-one/preview.svelte";
 
 import dashboardInvoicesSource from "#lib/components/efferd/dashboard/dashboard-one/dashboard-invoices.svelte?raw";
 import dashboardStatsSource from "#lib/components/efferd/dashboard/dashboard-one/dashboard-stats.svelte?raw";
@@ -8,6 +8,7 @@ import dashboardSource from "#lib/components/efferd/dashboard/dashboard-one/dash
 import deltaSource from "#lib/components/efferd/dashboard/dashboard-one/delta.svelte?raw";
 import formatterSource from "#lib/components/efferd/dashboard/dashboard-one/formatter.ts?raw";
 import indexSource from "#lib/components/efferd/dashboard/dashboard-one/index.ts?raw";
+import previewSource from "#lib/components/efferd/dashboard/dashboard-one/preview.svelte?raw";
 import salesChartSource from "#lib/components/efferd/dashboard/dashboard-one/sales-chart.svelte?raw";
 
 const uiFiles = [
@@ -48,12 +49,18 @@ export const dashboardOneBlock: BlockShowcaseItem = {
 	title: "Dashboard One",
 	description:
 		"A responsive analytics dashboard with KPI summaries, an interactive stacked sales chart, and a recent invoices table.",
-	previewComponent: Dashboard,
+	previewComponent: DashboardOnePreview,
 	previewHref: "/preview/dashboard/one",
 	previewMode: "iframe",
 	previewHeight: 900,
 	installId: "dashboard-one",
 	codeTree: createBlockCodeTree("dashboard-one:component", [
+		{
+			id: "dashboard-one:preview",
+			path: "efferd/dashboard/dashboard-one/preview.svelte",
+			lang: "svelte",
+			code: previewSource
+		},
 		{
 			id: "dashboard-one:index",
 			path: "efferd/dashboard/dashboard-one/index.ts",
@@ -95,6 +102,12 @@ export const dashboardOneBlock: BlockShowcaseItem = {
 			path: "efferd/dashboard/dashboard-one/formatter.ts",
 			lang: "typescript",
 			code: formatterSource
+		},
+		{
+			id: "related:app-shell-two",
+			path: "related/app-shell-two",
+			externalUrl: "/blocks/app-shell#app-shell-two",
+			externalLabel: "View App Shell Two"
 		},
 		...uiFiles
 	])
