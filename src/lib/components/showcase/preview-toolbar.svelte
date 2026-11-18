@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
 	import { cn } from "#lib/utils.js";
 	import type { PaneAPI } from "paneforge";
 	import PreviewActions from "./preview-actions.svelte";
@@ -37,22 +36,26 @@
 
 <div
 	class={cn(
-		"relative z-40 flex flex-col gap-2 border-b px-4 py-2.5 sm:px-5 lg:flex-row lg:items-center lg:justify-between lg:gap-3 lg:px-6",
+		"relative z-40 flex flex-col gap-2 bg-background px-4 py-2.5 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-3 lg:px-3",
 		mobile && "gap-3 py-3"
 	)}
 >
 	<div class={cn("flex min-w-0 flex-wrap items-center gap-2.5", mobile && "gap-2")}>
-		<PreviewModeControls bind:mode {width} showViewportLabel={showViewportControls} />
+		<PreviewModeControls
+			bind:mode
+			{width}
+			{previewHref}
+			showViewportLabel={showViewportControls}
+		/>
 	</div>
 
 	<div class={cn("flex flex-wrap items-center gap-2", mobile && "w-full gap-1.5")}>
 		{#if showViewportControls}
-			<PreviewViewportControls {pane} />
+			<PreviewViewportControls {pane} {width} />
 		{/if}
 		<PreviewActions
 			bind:responsivePreviewEnabled
 			{canToggleResponsivePreview}
-			{previewHref}
 			{installId}
 			{themeSetupHref}
 			{mobile}

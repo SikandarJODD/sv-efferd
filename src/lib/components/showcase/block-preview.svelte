@@ -84,28 +84,30 @@
 	);
 </script>
 
-<section {id} class="group scroll-mt-10">
+<section {id} class="group mb-10 scroll-mt-10">
 	<div class="relative">
-		<div class="relative mx-auto max-w-7xl">
-			<PreviewHeading {title} {description} url={blockUrl} />
-			<PreviewToolbar
-				bind:mode
-				bind:responsivePreviewEnabled
-				{width}
-				{pane}
-				{showViewportControls}
-				{canToggleResponsivePreview}
-				{previewHref}
-				{installId}
-				{themeSetupHref}
-				mobile={mobile.current}
-			/>
+		<div>
+			<div class="relative mx-auto max-w-7xl">
+				<PreviewHeading {title} {description} url={blockUrl} />
+			</div>
 		</div>
+		<PreviewToolbar
+			bind:mode
+			bind:responsivePreviewEnabled
+			{width}
+			{pane}
+			{showViewportControls}
+			{canToggleResponsivePreview}
+			{previewHref}
+			{installId}
+			{themeSetupHref}
+			mobile={mobile.current}
+		/>
 	</div>
 
-	<div class="relative">
+	<div class="relative px-2 sm:px-3">
 		<div
-			class="relative mx-auto max-w-7xl border-b px-4 lg:px-0"
+			class="relative w-full overflow-hidden rounded-2xl border bg-background"
 			style={`--preview-min-height: ${MIN_PREVIEW_HEIGHT}px;`}
 		>
 			<PreviewCanvas

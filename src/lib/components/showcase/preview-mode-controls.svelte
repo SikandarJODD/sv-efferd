@@ -4,6 +4,7 @@
 	import CodeXml from "@lucide/svelte/icons/code-xml";
 	import Eye from "@lucide/svelte/icons/eye";
 	import { DESKTOP_PREVIEW_SIZE, TABLET_PREVIEW_SIZE } from "./preview-sizes.js";
+	import Maximize from "@lucide/svelte/icons/maximize";
 
 	type PreviewMode = "preview" | "code";
 
@@ -11,47 +12,57 @@
 		mode?: PreviewMode;
 		width: number;
 		showViewportLabel: boolean;
+		previewHref?: string;
 	}
 
 	let {
 		mode = $bindable<PreviewMode>("preview"),
 		width,
-		showViewportLabel
+		showViewportLabel,
+		previewHref
 	}: PreviewModeControlsProps = $props();
-
-	const tabClass =
-		"rounded-full duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted";
-
-	let viewportLabel = $derived(
-		width < TABLET_PREVIEW_SIZE ? "Mobile" : width < DESKTOP_PREVIEW_SIZE ? "Tablet" : "Desktop"
-	);
 </script>
 
-<div class="flex w-fit items-center gap-0.5 md:-ml-3" role="group" aria-label="Preview mode">
+<div class="flex w-fit items-center gap-0.5" role="group" aria-label="Preview mode">
 	<Button
 		variant={mode === "preview" ? "secondary" : "ghost"}
 		onclick={() => (mode = "preview")}
-		class={tabClass}
+		class="cursor-pointer gap-1.5 rounded-full pr-3 pl-2.5 text-xs! shadow-none transition-[background-color,color]"
 		size="sm"
 		aria-pressed={mode === "preview"}
 	>
-		<Eye class="size-6 sm:opacity-80" strokeWidth={1.5} aria-hidden="true" />
-		<span class="text-[13px]">Preview</span>
+		<Eye class="size-3.5 opacity-70" strokeWidth={1.75} aria-hidden="true" />
+		<span>Preview</span>
 	</Button>
 
 	<Button
 		variant={mode === "code" ? "secondary" : "ghost"}
 		onclick={() => (mode = "code")}
 		size="sm"
-		class={tabClass}
 		aria-pressed={mode === "code"}
+		class="cursor-pointer gap-1.5 rounded-full pr-3 pl-2.5 text-xs shadow-none transition-[background-color,color]"
 	>
-		<CodeXml class="size-6 sm:opacity-70" strokeWidth={1.4} aria-hidden="true" />
-		<span class="text-[13px]">Code</span>
+		<CodeXml class="size-3.5 opacity-70" strokeWidth={1.75} aria-hidden="true" />
+		<span>Code</span>
 	</Button>
 </div>
 
-{#if showViewportLabel}
-	<Separator orientation="vertical" class="my-auto hidden h-4! lg:block" />
-	<span class="hidden text-sm text-muted-foreground lg:block">{viewportLabel}</span>
+{#if previewHref}
+	<Separator orientation="vertical" class="my-auto h-4!" />
+	<Button
+		variant="secondary"
+		size="sm"
+		href={previewHref}
+		target="_blank"
+		rel="noreferrer"
+		class="group/open-preview rounded-full px-3 text-xs text-muted-foreground shadow-none transition-[background-color,color] duration-150 hover:bg-ink-dim hover:text-ink dark:hover:bg-primary/10 dark:hover:text-primary"
+		aria-label="Open preview in new tab"
+	>
+		<Maximize
+			class="size-3.5 transition-transform duration-150 ease-out group-hover/open-preview:rotate-45 motion-reduce:transform-none motion-reduce:transition-none"
+			strokeWidth={1.6}
+			aria-hidden="true"
+		/>
+		<span>Open preview</span>
+	</Button>
 {/if}

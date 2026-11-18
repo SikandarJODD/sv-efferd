@@ -7,7 +7,6 @@
 		TooltipTrigger
 	} from "#lib/components/ui/tooltip/index.js";
 	import { cn } from "#lib/utils.js";
-	import Maximize from "@lucide/svelte/icons/maximize";
 	import Palette from "@lucide/svelte/icons/palette";
 	import ResponsivePreviewIcon from "./icons/responsive-preview-icon.svelte";
 	import InstallButton from "./install-button.svelte";
@@ -15,7 +14,6 @@
 	interface PreviewActionsProps {
 		canToggleResponsivePreview: boolean;
 		responsivePreviewEnabled?: boolean;
-		previewHref?: string;
 		installId?: string;
 		themeSetupHref?: string | null;
 		mobile: boolean;
@@ -24,7 +22,6 @@
 	let {
 		canToggleResponsivePreview,
 		responsivePreviewEnabled = $bindable(false),
-		previewHref,
 		installId,
 		themeSetupHref,
 		mobile
@@ -51,35 +48,6 @@
 			</TooltipTrigger>
 			<TooltipContent align="center" class="px-2 py-1 text-[10px]">
 				Responsive UI
-			</TooltipContent>
-		</Tooltip>
-	</TooltipProvider>
-{/if}
-
-{#if previewHref}
-	<TooltipProvider>
-		<Tooltip>
-			<TooltipTrigger>
-				{#snippet child({ props })}
-					<Button
-						{...props}
-						variant="outline"
-						size="icon-sm"
-						href={previewHref}
-						target="_blank"
-						rel="noreferrer"
-						aria-label="Open preview in new tab"
-					>
-						<Maximize
-							class="size-4! sm:opacity-70"
-							strokeWidth={1.6}
-							aria-hidden="true"
-						/>
-					</Button>
-				{/snippet}
-			</TooltipTrigger>
-			<TooltipContent align="center" class="px-2 py-1 text-[10px]">
-				Open Preview in New Tab
 			</TooltipContent>
 		</Tooltip>
 	</TooltipProvider>

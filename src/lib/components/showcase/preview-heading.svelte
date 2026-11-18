@@ -11,7 +11,7 @@
 	let { title, description = "", url }: PreviewHeadingProps = $props();
 </script>
 
-<div class="relative border-b px-5 py-5 sm:px-6 sm:py-4 lg:px-7">
+<div class="relative px-5 py-5 sm:px-6 sm:py-4 lg:px-7">
 	<div class="relative max-w-2xl">
 		<div class="flex flex-wrap items-end gap-x-2 gap-y-1">
 			<h2 class="text-xl font-medium tracking-tight text-foreground sm:text-xl">
