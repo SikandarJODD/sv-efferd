@@ -77,7 +77,7 @@
 			direction="w"
 			noMark
 			labelMaxWidth="9rem"
-			class="max-md:before:hidden max-md:after:hidden"
+			class="after:text-sm! max-md:before:hidden max-md:after:hidden"
 		>
 			{@render openPreviewButton()}
 		</Annotation>
