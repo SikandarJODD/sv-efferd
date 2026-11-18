@@ -86,11 +86,7 @@
 
 <section {id} class="group mb-10 scroll-mt-10">
 	<div class="relative">
-		<div>
-			<div class="relative mx-auto max-w-7xl">
-				<PreviewHeading {title} {description} url={blockUrl} />
-			</div>
-		</div>
+		<PreviewHeading {title} {description} url={blockUrl} />
 		<PreviewToolbar
 			bind:mode
 			bind:responsivePreviewEnabled
