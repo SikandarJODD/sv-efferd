@@ -12,31 +12,31 @@ import settingsSource from "#lib/components/efferd/settings/settings-one/setting
 const uiFiles = [
 	{
 		id: "shared:avatar",
-		path: "components/ui/avatar/avatar.svelte",
+		path: "ui/avatar",
 		externalUrl: "https://shadcn-svelte.com/docs/components/avatar",
 		externalLabel: "Shadcn Svelte Avatar"
 	},
 	{
 		id: "shared:button",
-		path: "components/ui/button/button.svelte",
+		path: "ui/button",
 		externalUrl: "https://shadcn-svelte.com/docs/components/button",
 		externalLabel: "Shadcn Svelte Button"
 	},
 	{
 		id: "shared:field",
-		path: "components/ui/field/field.svelte",
+		path: "ui/field",
 		externalUrl: "https://shadcn-svelte.com/docs/components/field",
 		externalLabel: "Shadcn Svelte Field"
 	},
 	{
 		id: "shared:input",
-		path: "components/ui/input/input.svelte",
+		path: "ui/input",
 		externalUrl: "https://shadcn-svelte.com/docs/components/input",
 		externalLabel: "Shadcn Svelte Input"
 	},
 	{
 		id: "shared:switch",
-		path: "components/ui/switch/switch.svelte",
+		path: "ui/switch",
 		externalUrl: "https://shadcn-svelte.com/docs/components/switch",
 		externalLabel: "Shadcn Svelte Switch"
 	}
@@ -55,37 +55,37 @@ export const settingsOneBlock: BlockShowcaseItem = {
 	codeTree: createBlockCodeTree("settings-one:component", [
 		{
 			id: "settings-one:index",
-			path: "components/efferd/settings/settings-one/index.ts",
+			path: "efferd/settings/index.ts",
 			lang: "typescript",
 			code: indexSource
 		},
 		{
 			id: "settings-one:component",
-			path: "components/efferd/settings/settings-one/settings.svelte",
+			path: "efferd/settings/settings.svelte",
 			lang: "svelte",
 			code: settingsSource
 		},
 		{
 			id: "settings-one:profile-settings",
-			path: "components/efferd/settings/settings-one/profile-settings.svelte",
+			path: "efferd/settings/profile-settings.svelte",
 			lang: "svelte",
 			code: profileSettingsSource
 		},
 		{
 			id: "settings-one:notification-settings",
-			path: "components/efferd/settings/settings-one/notification-settings.svelte",
+			path: "efferd/settings/notification-settings.svelte",
 			lang: "svelte",
 			code: notificationSettingsSource
 		},
 		{
 			id: "settings-one:settings-section",
-			path: "components/efferd/settings/settings-one/settings-section.svelte",
+			path: "efferd/settings/settings-section.svelte",
 			lang: "svelte",
 			code: settingsSectionSource
 		},
 		{
 			id: "settings-one:setting-field",
-			path: "components/efferd/settings/settings-one/setting-field.svelte",
+			path: "efferd/settings/setting-field.svelte",
 			lang: "svelte",
 			code: settingFieldSource
 		},

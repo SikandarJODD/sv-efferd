@@ -13,7 +13,7 @@
 
 	let fileName = $derived(file.name.toLowerCase());
 	let isShadcnSvelte = $derived(
-		/(^|\/)components\/ui\//.test(file.path.replaceAll("\\", "/"))
+		file.externalUrl?.startsWith("https://shadcn-svelte.com/") ?? false
 	);
 </script>
 
