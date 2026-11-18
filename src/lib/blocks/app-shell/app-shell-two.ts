@@ -3,6 +3,7 @@ import { createBlockCodeTree } from "#lib/blocks/showcase.js";
 import AppShellTwoPreview from "#lib/components/efferd/app-shell/app-shell-two/preview.svelte";
 
 import appBreadcrumbSource from "#lib/components/efferd/app-shell/app-shell-two/app-breadcrumb.svelte?raw";
+import appHeaderSource from "#lib/components/efferd/app-shell/app-shell-two/app-header.svelte?raw";
 import appSharedSource from "#lib/components/efferd/app-shell/app-shell-two/app-shared.ts?raw";
 import appShellSource from "#lib/components/efferd/app-shell/app-shell-two/app-shell.svelte?raw";
 import appSidebarSource from "#lib/components/efferd/app-shell/app-shell-two/app-sidebar.svelte?raw";
@@ -12,35 +13,76 @@ import latestChangeSource from "#lib/components/efferd/app-shell/app-shell-two/l
 import navGroupSource from "#lib/components/efferd/app-shell/app-shell-two/nav-group.svelte?raw";
 import navUserSource from "#lib/components/efferd/app-shell/app-shell-two/nav-user.svelte?raw";
 import previewSource from "#lib/components/efferd/app-shell/app-shell-two/preview.svelte?raw";
+import decorIconSource from "#lib/components/ui/decor-icon/decor-icon.svelte?raw";
+import decorIconIndexSource from "#lib/components/ui/decor-icon/index.ts?raw";
 import logoSource from "#lib/svgs/logo.svelte?raw";
 
-const sharedFiles = [
+const uiFiles = [
 	{
-		id: "shared:button",
-		path: "components/ui/button/button.svelte",
-		externalUrl: "https://shadcn-svelte.com/docs/components/button",
-		externalLabel: "Shadcn Svelte Button"
+		id: "shared:avatar",
+		path: "ui/avatar",
+		externalUrl: "https://shadcn-svelte.com/docs/components/avatar",
+		externalLabel: "Shadcn Svelte Avatar"
 	},
 	{
 		id: "shared:breadcrumb",
-		path: "components/ui/breadcrumb/index.ts",
+		path: "ui/breadcrumb",
 		externalUrl: "https://shadcn-svelte.com/docs/components/breadcrumb",
 		externalLabel: "Shadcn Svelte Breadcrumb"
 	},
 	{
+		id: "shared:button",
+		path: "ui/button",
+		externalUrl: "https://shadcn-svelte.com/docs/components/button",
+		externalLabel: "Shadcn Svelte Button"
+	},
+	{
+		id: "shared:collapsible",
+		path: "ui/collapsible",
+		externalUrl: "https://shadcn-svelte.com/docs/components/collapsible",
+		externalLabel: "Shadcn Svelte Collapsible"
+	},
+	{
+		id: "shared:decor-icon-index",
+		path: "ui/decor-icon/index.ts",
+		lang: "typescript" as const,
+		code: decorIconIndexSource
+	},
+	{
+		id: "shared:decor-icon",
+		path: "ui/decor-icon/decor-icon.svelte",
+		lang: "svelte" as const,
+		code: decorIconSource
+	},
+	{
+		id: "shared:dropdown-menu",
+		path: "ui/dropdown-menu",
+		externalUrl: "https://shadcn-svelte.com/docs/components/dropdown-menu",
+		externalLabel: "Shadcn Svelte Dropdown Menu"
+	},
+	{
+		id: "shared:kbd",
+		path: "ui/kbd",
+		externalUrl: "https://shadcn-svelte.com/docs/components/kbd",
+		externalLabel: "Shadcn Svelte Kbd"
+	},
+	{
+		id: "shared:separator",
+		path: "ui/separator",
+		externalUrl: "https://shadcn-svelte.com/docs/components/separator",
+		externalLabel: "Shadcn Svelte Separator"
+	},
+	{
 		id: "shared:sidebar",
-		path: "components/ui/sidebar/index.ts",
+		path: "ui/sidebar",
 		externalUrl: "https://shadcn-svelte.com/docs/components/sidebar",
 		externalLabel: "Shadcn Svelte Sidebar"
-	}
-];
-
-const logoFiles = [
+	},
 	{
-		id: "shared:logo",
-		path: "components/svgs/logo.svelte",
-		lang: "svelte" as const,
-		code: logoSource
+		id: "shared:tooltip",
+		path: "ui/tooltip",
+		externalUrl: "https://shadcn-svelte.com/docs/components/tooltip",
+		externalLabel: "Shadcn Svelte Tooltip"
 	}
 ];
 
@@ -54,68 +96,74 @@ export const appShellTwoBlock: BlockShowcaseItem = {
 	previewMode: "iframe",
 	previewHeight: 860,
 	installId: "app-shell-two",
-	codeTree: createBlockCodeTree("app-shell-two:preview", [
+	codeTree: createBlockCodeTree("app-shell-two:app-shell", [
 		{
 			id: "app-shell-two:preview",
-			path: "components/app-shell-two/preview.svelte",
+			path: "app-shell/preview.svelte",
 			lang: "svelte",
 			code: previewSource
 		},
 		{
 			id: "app-shell-two:app-shell",
-			path: "components/app-shell-two/app-shell.svelte",
+			path: "app-shell/app-shell.svelte",
 			lang: "svelte",
 			code: appShellSource
 		},
 		{
 			id: "app-shell-two:app-breadcrumb",
-			path: "components/app-shell-two/app-breadcrumb.svelte",
+			path: "app-shell/app-breadcrumb.svelte",
 			lang: "svelte",
 			code: appBreadcrumbSource
 		},
 		{
+			id: "app-shell-two:app-header",
+			path: "app-shell/app-header.svelte",
+			lang: "svelte",
+			code: appHeaderSource
+		},
+		{
 			id: "app-shell-two:app-sidebar",
-			path: "components/app-shell-two/app-sidebar.svelte",
+			path: "app-shell/app-sidebar.svelte",
 			lang: "svelte",
 			code: appSidebarSource
 		},
 		{
 			id: "app-shell-two:custom-sidebar-trigger",
-			path: "components/app-shell-two/custom-sidebar-trigger.svelte",
+			path: "app-shell/custom-sidebar-trigger.svelte",
 			lang: "svelte",
 			code: customSidebarTriggerSource
 		},
 		{
 			id: "app-shell-two:dashboard-skeleton",
-			path: "components/app-shell-two/dashboard-skeleton.svelte",
+			path: "app-shell/dashboard-skeleton.svelte",
 			lang: "svelte",
 			code: dashboardSkeletonSource
 		},
 		{
 			id: "app-shell-two:latest-change",
-			path: "components/app-shell-two/latest-change.svelte",
+			path: "app-shell/latest-change.svelte",
 			lang: "svelte",
 			code: latestChangeSource
 		},
 		{
 			id: "app-shell-two:nav-group",
-			path: "components/app-shell-two/nav-group.svelte",
+			path: "app-shell/nav-group.svelte",
 			lang: "svelte",
 			code: navGroupSource
 		},
 		{
 			id: "app-shell-two:nav-user",
-			path: "components/app-shell-two/nav-user.svelte",
+			path: "app-shell/nav-user.svelte",
 			lang: "svelte",
 			code: navUserSource
 		},
 		{
 			id: "app-shell-two:app-shared",
-			path: "components/app-shell-two/app-shared.ts",
+			path: "app-shell/app-shared.ts",
 			lang: "typescript",
 			code: appSharedSource
 		},
-		...logoFiles,
-		...sharedFiles
+		{ id: "shared:logo", path: "svgs/logo.svelte", lang: "svelte", code: logoSource },
+		...uiFiles
 	])
 };
