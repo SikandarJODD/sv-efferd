@@ -68,9 +68,9 @@
 	}
 </script>
 
-<div class="flex flex-col sm:min-h-[32rem] sm:flex-row">
+<div class="flex flex-col sm:h-[calc(650px+2.75rem)] sm:min-h-[32rem] sm:flex-row">
 	<div
-		class="w-full border-b bg-neutral-50 text-black [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:w-72 sm:border-r sm:border-b-0 dark:bg-zinc-900/25 dark:text-white"
+		class="flex w-full flex-col overflow-hidden border-b bg-neutral-50 text-black [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:w-72 sm:border-r sm:border-b-0 dark:bg-zinc-900/25 dark:text-white"
 	>
 		<div
 			class="flex items-center gap-1.5 border-b px-4 py-3 font-mono text-sm text-muted-foreground"
@@ -90,7 +90,7 @@
 			>
 			Files
 		</div>
-		<div class="max-h-[18rem] overflow-auto px-2 py-3 sm:max-h-[36rem]">
+		<div class="no-scrollbar scroll-fade-effect-y min-h-0 flex-1 overflow-y-auto px-2 py-3">
 			{#each codeTree.nodes as node (node.id)}
 				<FileTreeNode
 					{node}

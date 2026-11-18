@@ -30,7 +30,7 @@
 	<div>
 		<button
 			type="button"
-			class="flex w-full items-center gap-2 rounded-md px-2 py-2 text-left font-mono text-[13px] text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
+			class="flex w-full cursor-pointer items-center gap-2 rounded-md px-2 py-2 text-left font-mono text-[13px] text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
 			onclick={() => onToggleFolder(node.id)}
 		>
 			<span class="flex w-4 shrink-0 items-center justify-center">
@@ -69,7 +69,7 @@
 		target="_blank"
 		rel="noreferrer"
 		aria-label={`Open ${node.externalLabel ?? node.name}`}
-		class="flex items-center gap-1 rounded-md pl-2 text-[13px] text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
+		class="flex cursor-pointer items-center gap-1 rounded-md pl-2 text-[13px] text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
 	>
 		<CodeFileIcon file={node} class="size-4 shrink-0" />
 		<span class="min-w-0 flex-1 truncate py-1.5">{node.name}</span>
@@ -88,7 +88,7 @@
 	>
 		<button
 			type="button"
-			class="flex min-w-0 flex-1 items-center gap-2 px-2 py-1.5 text-left"
+			class="flex min-w-0 flex-1 cursor-pointer items-center gap-2 px-2 py-1.5 text-left"
 			onclick={() => onSelectFile(node.id)}
 		>
 			<CodeFileIcon file={node} class="size-4 shrink-0" />
@@ -101,7 +101,7 @@
 				target="_blank"
 				rel="noreferrer"
 				aria-label={`Open ${node.externalLabel ?? node.name}`}
-				class="mr-2 inline-flex size-7 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+				class="mr-2 inline-flex size-7 shrink-0 cursor-pointer items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
 			>
 				<ExternalLink class="size-3.5" />
 			</a>
