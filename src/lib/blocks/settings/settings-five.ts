@@ -16,43 +16,43 @@ import googleSvgSource from "#lib/svgs/google.svelte?raw";
 const uiFiles = [
 	{
 		id: "shared:alert-dialog",
-		path: "components/ui/alert-dialog/alert-dialog.svelte",
+		path: "ui/alert-dialog",
 		externalUrl: "https://shadcn-svelte.com/docs/components/alert-dialog",
 		externalLabel: "Shadcn Svelte Alert Dialog"
 	},
 	{
 		id: "shared:avatar",
-		path: "components/ui/avatar/avatar.svelte",
+		path: "ui/avatar",
 		externalUrl: "https://shadcn-svelte.com/docs/components/avatar",
 		externalLabel: "Shadcn Svelte Avatar"
 	},
 	{
 		id: "shared:badge",
-		path: "components/ui/badge/badge.svelte",
+		path: "ui/badge",
 		externalUrl: "https://shadcn-svelte.com/docs/components/badge",
 		externalLabel: "Shadcn Svelte Badge"
 	},
 	{
 		id: "shared:button",
-		path: "components/ui/button/button.svelte",
+		path: "ui/button",
 		externalUrl: "https://shadcn-svelte.com/docs/components/button",
 		externalLabel: "Shadcn Svelte Button"
 	},
 	{
 		id: "shared:card",
-		path: "components/ui/card/card.svelte",
+		path: "ui/card",
 		externalUrl: "https://shadcn-svelte.com/docs/components/card",
 		externalLabel: "Shadcn Svelte Card"
 	},
 	{
 		id: "shared:label",
-		path: "components/ui/label/label.svelte",
+		path: "ui/label",
 		externalUrl: "https://shadcn-svelte.com/docs/components/label",
 		externalLabel: "Shadcn Svelte Label"
 	},
 	{
 		id: "shared:select",
-		path: "components/ui/select/select.svelte",
+		path: "ui/select",
 		externalUrl: "https://shadcn-svelte.com/docs/components/select",
 		externalLabel: "Shadcn Svelte Select"
 	}
@@ -71,49 +71,49 @@ export const settingsFiveBlock: BlockShowcaseItem = {
 	codeTree: createBlockCodeTree("settings-five:component", [
 		{
 			id: "settings-five:component",
-			path: "components/efferd/settings/settings-five/settings.svelte",
+			path: "efferd/settings/settings.svelte",
 			lang: "svelte",
 			code: settingsSource
 		},
 		{
 			id: "settings-five:settings-header",
-			path: "components/efferd/settings/settings-five/settings-header.svelte",
+			path: "efferd/settings/settings-header.svelte",
 			lang: "svelte",
 			code: settingsHeaderSource
 		},
 		{
 			id: "settings-five:profile-information",
-			path: "components/efferd/settings/settings-five/profile-information.svelte",
+			path: "efferd/settings/profile-information.svelte",
 			lang: "svelte",
 			code: profileInformationSource
 		},
 		{
 			id: "settings-five:security-information",
-			path: "components/efferd/settings/settings-five/security-information.svelte",
+			path: "efferd/settings/security-information.svelte",
 			lang: "svelte",
 			code: securityInformationSource
 		},
 		{
 			id: "settings-five:localization-settings",
-			path: "components/efferd/settings/settings-five/localization-settings.svelte",
+			path: "efferd/settings/localization-settings.svelte",
 			lang: "svelte",
 			code: localizationSettingsSource
 		},
 		{
 			id: "settings-five:danger-zone-settings",
-			path: "components/efferd/settings/settings-five/danger-zone-settings.svelte",
+			path: "efferd/settings/danger-zone-settings.svelte",
 			lang: "svelte",
 			code: dangerZoneSettingsSource
 		},
 		{
 			id: "settings-five:settings-section",
-			path: "components/efferd/settings/settings-five/settings-section.svelte",
+			path: "efferd/settings/settings-section.svelte",
 			lang: "svelte",
 			code: settingsSectionSource
 		},
 		{
 			id: "settings-five:setting-field",
-			path: "components/efferd/settings/settings-five/setting-field.svelte",
+			path: "efferd/settings/setting-field.svelte",
 			lang: "svelte",
 			code: settingFieldSource
 		},

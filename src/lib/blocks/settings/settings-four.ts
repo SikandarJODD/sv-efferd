@@ -15,31 +15,31 @@ import clipboardHookSource from "#lib/hooks/use-clipboard.svelte.ts?raw";
 const uiFiles = [
 	{
 		id: "shared:avatar",
-		path: "components/ui/avatar/avatar.svelte",
+		path: "ui/avatar",
 		externalUrl: "https://shadcn-svelte.com/docs/components/avatar",
 		externalLabel: "Shadcn Svelte Avatar"
 	},
 	{
 		id: "shared:button",
-		path: "components/ui/button/button.svelte",
+		path: "ui/button",
 		externalUrl: "https://shadcn-svelte.com/docs/components/button",
 		externalLabel: "Shadcn Svelte Button"
 	},
 	{
 		id: "shared:card",
-		path: "components/ui/card/card.svelte",
+		path: "ui/card",
 		externalUrl: "https://shadcn-svelte.com/docs/components/card",
 		externalLabel: "Shadcn Svelte Card"
 	},
 	{
 		id: "shared:field",
-		path: "components/ui/field/field.svelte",
+		path: "ui/field",
 		externalUrl: "https://shadcn-svelte.com/docs/components/field",
 		externalLabel: "Shadcn Svelte Field"
 	},
 	{
 		id: "shared:input-group",
-		path: "components/ui/input-group/input-group.svelte",
+		path: "ui/input-group",
 		externalUrl: "https://shadcn-svelte.com/docs/components/input-group",
 		externalLabel: "Shadcn Svelte Input Group"
 	}
@@ -58,49 +58,49 @@ export const settingsFourBlock: BlockShowcaseItem = {
 	codeTree: createBlockCodeTree("settings-four:component", [
 		{
 			id: "settings-four:component",
-			path: "components/efferd/settings/settings-four/settings.svelte",
+			path: "efferd/settings/settings.svelte",
 			lang: "svelte",
 			code: settingsSource
 		},
 		{
 			id: "settings-four:name-field",
-			path: "components/efferd/settings/settings-four/name-field.svelte",
+			path: "efferd/settings/name-field.svelte",
 			lang: "svelte",
 			code: nameFieldSource
 		},
 		{
 			id: "settings-four:email-field",
-			path: "components/efferd/settings/settings-four/email-field.svelte",
+			path: "efferd/settings/email-field.svelte",
 			lang: "svelte",
 			code: emailFieldSource
 		},
 		{
 			id: "settings-four:avatar-field",
-			path: "components/efferd/settings/settings-four/avatar-field.svelte",
+			path: "efferd/settings/avatar-field.svelte",
 			lang: "svelte",
 			code: avatarFieldSource
 		},
 		{
 			id: "settings-four:user-id-field",
-			path: "components/efferd/settings/settings-four/user-id-field.svelte",
+			path: "efferd/settings/user-id-field.svelte",
 			lang: "svelte",
 			code: userIdFieldSource
 		},
 		{
 			id: "settings-four:delete-account-field",
-			path: "components/efferd/settings/settings-four/delete-account-field.svelte",
+			path: "efferd/settings/delete-account-field.svelte",
 			lang: "svelte",
 			code: deleteAccountFieldSource
 		},
 		{
 			id: "settings-four:settings-section",
-			path: "components/efferd/settings/settings-four/settings-section.svelte",
+			path: "efferd/settings/settings-section.svelte",
 			lang: "svelte",
 			code: settingsSectionSource
 		},
 		{
 			id: "settings-four:setting-field",
-			path: "components/efferd/settings/settings-four/setting-field.svelte",
+			path: "efferd/settings/setting-field.svelte",
 			lang: "svelte",
 			code: settingFieldSource
 		},

@@ -14,49 +14,49 @@ import settingsSource from "#lib/components/efferd/settings/settings-two/setting
 const uiFiles = [
 	{
 		id: "shared:avatar",
-		path: "components/ui/avatar/avatar.svelte",
+		path: "ui/avatar",
 		externalUrl: "https://shadcn-svelte.com/docs/components/avatar",
 		externalLabel: "Shadcn Svelte Avatar"
 	},
 	{
 		id: "shared:button",
-		path: "components/ui/button/button.svelte",
+		path: "ui/button",
 		externalUrl: "https://shadcn-svelte.com/docs/components/button",
 		externalLabel: "Shadcn Svelte Button"
 	},
 	{
 		id: "shared:card",
-		path: "components/ui/card/card.svelte",
+		path: "ui/card",
 		externalUrl: "https://shadcn-svelte.com/docs/components/card",
 		externalLabel: "Shadcn Svelte Card"
 	},
 	{
 		id: "shared:field",
-		path: "components/ui/field/field.svelte",
+		path: "ui/field",
 		externalUrl: "https://shadcn-svelte.com/docs/components/field",
 		externalLabel: "Shadcn Svelte Field"
 	},
 	{
 		id: "shared:input-group",
-		path: "components/ui/input-group/input-group.svelte",
+		path: "ui/input-group",
 		externalUrl: "https://shadcn-svelte.com/docs/components/input-group",
 		externalLabel: "Shadcn Svelte Input Group"
 	},
 	{
 		id: "shared:select",
-		path: "components/ui/select/select.svelte",
+		path: "ui/select",
 		externalUrl: "https://shadcn-svelte.com/docs/components/select",
 		externalLabel: "Shadcn Svelte Select"
 	},
 	{
 		id: "shared:switch",
-		path: "components/ui/switch/switch.svelte",
+		path: "ui/switch",
 		externalUrl: "https://shadcn-svelte.com/docs/components/switch",
 		externalLabel: "Shadcn Svelte Switch"
 	},
 	{
 		id: "shared:toggle-group",
-		path: "components/ui/toggle-group/toggle-group.svelte",
+		path: "ui/toggle-group",
 		externalUrl: "https://shadcn-svelte.com/docs/components/toggle-group",
 		externalLabel: "Shadcn Svelte Toggle Group"
 	}
@@ -75,49 +75,49 @@ export const settingsTwoBlock: BlockShowcaseItem = {
 	codeTree: createBlockCodeTree("settings-two:component", [
 		{
 			id: "settings-two:component",
-			path: "components/efferd/settings/settings-two/settings.svelte",
+			path: "efferd/settings/settings.svelte",
 			lang: "svelte",
 			code: settingsSource
 		},
 		{
 			id: "settings-two:profile-settings",
-			path: "components/efferd/settings/settings-two/profile-settings.svelte",
+			path: "efferd/settings/profile-settings.svelte",
 			lang: "svelte",
 			code: profileSettingsSource
 		},
 		{
 			id: "settings-two:appearance-settings",
-			path: "components/efferd/settings/settings-two/appearance-settings.svelte",
+			path: "efferd/settings/appearance-settings.svelte",
 			lang: "svelte",
 			code: appearanceSettingsSource
 		},
 		{
 			id: "settings-two:notification-settings",
-			path: "components/efferd/settings/settings-two/notification-settings.svelte",
+			path: "efferd/settings/notification-settings.svelte",
 			lang: "svelte",
 			code: notificationSettingsSource
 		},
 		{
 			id: "settings-two:security-settings",
-			path: "components/efferd/settings/settings-two/security-settings.svelte",
+			path: "efferd/settings/security-settings.svelte",
 			lang: "svelte",
 			code: securitySettingsSource
 		},
 		{
 			id: "settings-two:danger-settings",
-			path: "components/efferd/settings/settings-two/danger-settings.svelte",
+			path: "efferd/settings/danger-settings.svelte",
 			lang: "svelte",
 			code: dangerSettingsSource
 		},
 		{
 			id: "settings-two:settings-section",
-			path: "components/efferd/settings/settings-two/settings-section.svelte",
+			path: "efferd/settings/settings-section.svelte",
 			lang: "svelte",
 			code: settingsSectionSource
 		},
 		{
 			id: "settings-two:setting-field",
-			path: "components/efferd/settings/settings-two/setting-field.svelte",
+			path: "efferd/settings/setting-field.svelte",
 			lang: "svelte",
 			code: settingFieldSource
 		},
