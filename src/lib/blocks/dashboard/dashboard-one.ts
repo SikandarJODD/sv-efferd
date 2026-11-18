@@ -53,7 +53,6 @@ export const dashboardOneBlock: BlockShowcaseItem = {
 	previewHref: "/preview/dashboard/one",
 	previewMode: "iframe",
 	previewHeight: 900,
-	scrollablePreview: true,
 	installId: "dashboard-one",
 	codeTree: createBlockCodeTree("dashboard-one:component", [
 		{

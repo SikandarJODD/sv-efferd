@@ -13,6 +13,7 @@
 		canToggleResponsivePreview: boolean;
 		responsivePreviewEnabled?: boolean;
 		previewHref?: string;
+		openPreviewNote?: string;
 		installId?: string;
 		themeSetupHref?: string | null;
 		mobile: boolean;
@@ -25,6 +26,7 @@
 		canToggleResponsivePreview,
 		responsivePreviewEnabled = $bindable(false),
 		previewHref,
+		openPreviewNote,
 		installId,
 		themeSetupHref,
 		mobile
@@ -42,6 +44,7 @@
 			bind:mode
 			{width}
 			{previewHref}
+			{openPreviewNote}
 			showViewportLabel={showViewportControls}
 		/>
 	</div>

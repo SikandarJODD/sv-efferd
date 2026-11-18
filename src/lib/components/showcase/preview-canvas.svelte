@@ -12,9 +12,10 @@
 		previewComponent: Component;
 		previewHref?: string;
 		previewHeight?: number;
-		scrollablePreview: boolean;
 		renderIframe: boolean;
 		heroPreview: boolean;
+		headerPreview: boolean;
+		autoSizeIframe: boolean;
 		activeTheme: ScopedTheme | null;
 		largeViewport: boolean;
 		hidden?: boolean;
@@ -27,9 +28,10 @@
 		previewComponent: PreviewComponent,
 		previewHref,
 		previewHeight,
-		scrollablePreview,
 		renderIframe,
 		heroPreview,
+		headerPreview,
+		autoSizeIframe,
 		activeTheme,
 		largeViewport,
 		hidden = false,
@@ -39,24 +41,31 @@
 	let iframe = $state<HTMLIFrameElement | null>(null);
 	let iframeHeight = $state(0);
 	let loading = $state(false);
+	let iframeResizeObserver: ResizeObserver | undefined;
 	let removeIframeWheelListener: (() => void) | undefined;
 
 	let resolvedIframeHeight = $derived(
-		Math.max(previewHeight ?? iframeHeight, MIN_PREVIEW_HEIGHT)
+		Math.max(previewHeight ?? 0, iframeHeight, MIN_PREVIEW_HEIGHT)
 	);
 
 	$effect(() => {
 		loading = renderIframe && Boolean(previewHref);
-		if (!renderIframe || scrollablePreview) cleanupIframeWheelForwarding();
+		if (!renderIframe) cleanupIframe();
 	});
 
 	function hideIframeScrollbar() {
 		const iframeDocument = iframe?.contentDocument;
 		if (!iframeDocument) return;
 
-		const hideScrollbar = !heroPreview && !scrollablePreview;
+		const hideScrollbar = !heroPreview && autoSizeIframe;
 		iframeDocument.documentElement.classList.toggle("no-scrollbar", hideScrollbar);
 		iframeDocument.body.classList.toggle("no-scrollbar", hideScrollbar);
+	}
+
+	function cleanupIframe() {
+		iframeResizeObserver?.disconnect();
+		iframeResizeObserver = undefined;
+		cleanupIframeWheelForwarding();
 	}
 
 	function cleanupIframeWheelForwarding() {
@@ -70,7 +79,7 @@
 		if (!iframeDocument || !iframeWindow) return;
 
 		cleanupIframeWheelForwarding();
-		if (scrollablePreview) {
+		if (!autoSizeIframe) {
 			iframeDocument.documentElement.style.overflow = "auto";
 			iframeDocument.body.style.overflow = "auto";
 			return;
@@ -98,21 +107,35 @@
 			iframeWindow.removeEventListener("wheel", forwardWheelToPage);
 	}
 
+	function setupIframeAutoHeight() {
+		const iframeDocument = iframe?.contentDocument;
+		if (!iframeDocument || !autoSizeIframe) return;
+
+		iframeResizeObserver?.disconnect();
+
+		const syncHeight = () => {
+			const contentHeight = Math.max(
+				iframeDocument.documentElement.scrollHeight,
+				iframeDocument.body.scrollHeight
+			);
+
+			if (contentHeight > 0) iframeHeight = contentHeight;
+		};
+
+		iframeResizeObserver = new ResizeObserver(syncHeight);
+		iframeResizeObserver.observe(iframeDocument.documentElement);
+		iframeResizeObserver.observe(iframeDocument.body);
+		syncHeight();
+	}
+
 	function handleIframeLoad() {
 		loading = false;
 		hideIframeScrollbar();
 		setupIframeWheelForwarding();
-
-		if (previewHeight) {
-			iframeHeight = previewHeight;
-			return;
-		}
-
-		const contentHeight = iframe?.contentWindow?.document.body.scrollHeight;
-		if (contentHeight) iframeHeight = contentHeight + 20;
+		setupIframeAutoHeight();
 	}
 
-	onDestroy(cleanupIframeWheelForwarding);
+	onDestroy(cleanupIframe);
 </script>
 
 <div class={cn("z-40 bg-white dark:bg-background", hidden && "hidden")}>
@@ -154,17 +177,37 @@
 		<div data-theme={activeTheme}>
 			<div
 				in:scale={{ start: 0.85 }}
-				class="theme-container min-h-(--preview-min-height) w-full overflow-hidden"
+				class={cn(
+					"theme-container min-h-(--preview-min-height) w-full overflow-hidden",
+					headerPreview && "relative"
+				)}
 			>
 				<PreviewComponent />
+				{#if headerPreview}
+					<p
+						class="pointer-events-none absolute inset-x-6 top-1/2 -translate-y-1/2 text-center font-cursive text-base text-muted-foreground"
+					>
+						Open the full preview and scroll to see the header change.
+					</p>
+				{/if}
 			</div>
 		</div>
 	{:else}
 		<div
 			in:scale={{ start: 0.85 }}
-			class="flex min-h-(--preview-min-height) w-full items-center justify-center overflow-hidden"
+			class={cn(
+				"relative flex min-h-(--preview-min-height) w-full items-center justify-center overflow-hidden",
+				headerPreview && "items-start justify-start"
+			)}
 		>
 			<PreviewComponent />
+			{#if headerPreview}
+				<p
+					class="pointer-events-none absolute inset-x-6 top-1/2 -translate-y-1/2 text-center font-cursive text-base text-muted-foreground"
+				>
+					Open the full preview and scroll to see the header change.
+				</p>
+			{/if}
 		</div>
 	{/if}
 </div>

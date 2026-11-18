@@ -22,7 +22,6 @@
 		previewHref={block.previewHref}
 		previewMode={block.previewMode}
 		previewHeight={block.previewHeight}
-		scrollablePreview={block.scrollablePreview}
 		installId={block.installId}
 	/>
 {/each}

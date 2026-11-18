@@ -154,9 +154,8 @@ export const headerBlocks: BlockShowcaseItem[] = [
 		description: "A clean sticky header with simple nav links and a compact mobile sheet.",
 		previewComponent: HeaderOne,
 		previewHref: "/preview/header/one",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 860,
-		scrollablePreview: true,
 		installId: "header-one",
 		codeTree: createBlockCodeTree("header-one:component", [
 			{
@@ -189,9 +188,8 @@ export const headerBlocks: BlockShowcaseItem[] = [
 		description: "A framed sticky header with tighter proportions and a softer product shell.",
 		previewComponent: HeaderTwo,
 		previewHref: "/preview/header/two",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 860,
-		scrollablePreview: true,
 		installId: "header-two",
 		codeTree: createBlockCodeTree("header-two:component", [
 			{
@@ -224,9 +222,8 @@ export const headerBlocks: BlockShowcaseItem[] = [
 		description: "A richer sticky header with mega-menu navigation and a full mobile fallback.",
 		previewComponent: HeaderThree,
 		previewHref: "/preview/header/three",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 980,
-		scrollablePreview: true,
 		installId: "header-three",
 		codeTree: createBlockCodeTree("header-three:component", [
 			{
@@ -279,9 +276,8 @@ export const headerBlocks: BlockShowcaseItem[] = [
 			"A floating rounded header with stronger auth actions and a simplified mobile drawer.",
 		previewComponent: HeaderFour,
 		previewHref: "/preview/header/four",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 860,
-		scrollablePreview: true,
 		installId: "header-four",
 		codeTree: createBlockCodeTree("header-four:component", [
 			{
@@ -315,9 +311,8 @@ export const headerBlocks: BlockShowcaseItem[] = [
 			"A polished rounded header with compact mega-menu panels and stronger pill-shaped actions.",
 		previewComponent: HeaderFive,
 		previewHref: "/preview/header/five",
-		previewMode: "iframe",
+		previewMode: "inline",
 		previewHeight: 980,
-		scrollablePreview: true,
 		installId: "header-five",
 		codeTree: createBlockCodeTree("header-five:component", [
 			{

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
+	import { Annotation } from "#lib/components/ui/annotation/index.js";
 	import { Separator } from "#lib/components/ui/separator/index.js";
 	import CodeXml from "@lucide/svelte/icons/code-xml";
 	import Eye from "@lucide/svelte/icons/eye";
@@ -13,15 +14,36 @@
 		width: number;
 		showViewportLabel: boolean;
 		previewHref?: string;
+		openPreviewNote?: string;
 	}
 
 	let {
 		mode = $bindable<PreviewMode>("preview"),
 		width,
 		showViewportLabel,
-		previewHref
+		previewHref,
+		openPreviewNote
 	}: PreviewModeControlsProps = $props();
 </script>
+
+{#snippet openPreviewButton()}
+	<Button
+		variant="secondary"
+		size="sm"
+		href={previewHref}
+		target="_blank"
+		rel="noreferrer"
+		class="group/open-preview rounded-full px-3 text-xs text-muted-foreground shadow-none transition-[background-color,color] duration-150 hover:bg-ink-dim hover:text-ink dark:hover:bg-primary/10 dark:hover:text-primary"
+		aria-label="Open preview in new tab"
+	>
+		<Maximize
+			class="size-3.5 transition-transform duration-150 ease-out group-hover/open-preview:rotate-45 motion-reduce:transform-none motion-reduce:transition-none"
+			strokeWidth={1.6}
+			aria-hidden="true"
+		/>
+		<span>Open preview</span>
+	</Button>
+{/snippet}
 
 <div class="flex w-fit items-center gap-0.5" role="group" aria-label="Preview mode">
 	<Button
@@ -49,20 +71,17 @@
 
 {#if previewHref}
 	<Separator orientation="vertical" class="my-auto h-4!" />
-	<Button
-		variant="secondary"
-		size="sm"
-		href={previewHref}
-		target="_blank"
-		rel="noreferrer"
-		class="group/open-preview rounded-full px-3 text-xs text-muted-foreground shadow-none transition-[background-color,color] duration-150 hover:bg-ink-dim hover:text-ink dark:hover:bg-primary/10 dark:hover:text-primary"
-		aria-label="Open preview in new tab"
-	>
-		<Maximize
-			class="size-3.5 transition-transform duration-150 ease-out group-hover/open-preview:rotate-45 motion-reduce:transform-none motion-reduce:transition-none"
-			strokeWidth={1.6}
-			aria-hidden="true"
-		/>
-		<span>Open preview</span>
-	</Button>
+	{#if openPreviewNote}
+		<Annotation
+			note={openPreviewNote}
+			direction="w"
+			noMark
+			labelMaxWidth="9rem"
+			class="max-md:before:hidden max-md:after:hidden"
+		>
+			{@render openPreviewButton()}
+		</Annotation>
+	{:else}
+		{@render openPreviewButton()}
+	{/if}
 {/if}

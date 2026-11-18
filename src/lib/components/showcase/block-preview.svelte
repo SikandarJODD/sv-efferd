@@ -20,7 +20,6 @@
 		previewHref?: string;
 		previewMode: "inline" | "iframe";
 		previewHeight?: number;
-		scrollablePreview?: boolean;
 		installId?: string;
 	}
 
@@ -35,7 +34,6 @@
 		previewHref,
 		previewMode,
 		previewHeight,
-		scrollablePreview = false,
 		installId
 	}: BlockPreviewProps = $props();
 
@@ -52,6 +50,7 @@
 	let canToggleResponsivePreview = $derived(Boolean(previewHref) && previewMode === "inline");
 	let showViewportControls = $derived(renderIframe && !mobile.current);
 	let heroPreview = $derived(previewHref?.startsWith("/preview/hero/") ?? false);
+	let headerPreview = $derived(previewHref?.startsWith("/preview/header/") ?? false);
 	let activeTheme = $derived(resolveScopedTheme(page.url.pathname));
 	let themeSetupHref = $derived(
 		activeTheme === "veil"
@@ -94,6 +93,7 @@
 			{showViewportControls}
 			{canToggleResponsivePreview}
 			{previewHref}
+			openPreviewNote={headerPreview ? "Open this preview, then scroll." : undefined}
 			{installId}
 			{themeSetupHref}
 			mobile={mobile.current}
@@ -112,9 +112,10 @@
 				{previewComponent}
 				{previewHref}
 				{previewHeight}
-				{scrollablePreview}
 				{renderIframe}
 				{heroPreview}
+				{headerPreview}
+				autoSizeIframe={startsInIframe}
 				{activeTheme}
 				largeViewport={largeViewport.current}
 				hidden={mode === "code"}

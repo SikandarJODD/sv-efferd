@@ -39,7 +39,6 @@ export type BlockShowcaseItem = {
 	previewHref?: string;
 	previewMode: "inline" | "iframe";
 	previewHeight?: number;
-	scrollablePreview?: boolean;
 	installId?: string;
 };
 
