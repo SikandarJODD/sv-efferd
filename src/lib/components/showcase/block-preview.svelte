@@ -117,7 +117,9 @@
 				hidden={mode === "code"}
 			/>
 
-			<div class="bg-white dark:bg-transparent!">
+			<div
+				class="bg-white [&_[data-slot=code-block-content]]:no-scrollbar dark:bg-transparent!"
+			>
 				{#if mode === "code"}
 					<CodeViewer {codeTree} />
 				{/if}

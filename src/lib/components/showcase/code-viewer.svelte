@@ -172,7 +172,7 @@
 					class="max-h-[650px] rounded-none border-0 dark:bg-transparent"
 					size="sm"
 				>
-					<CodeBlock.Content lineNumbers>
+					<CodeBlock.Content lineNumbers wrap>
 						{#each highlightedCode.current as line, index (index)}
 							<CodeBlock.Line
 								code={line}
