@@ -20,6 +20,7 @@
 		previewHref?: string;
 		previewMode: "inline" | "iframe";
 		previewHeight?: number;
+		scrollablePreview?: boolean;
 		installId?: string;
 	}
 
@@ -34,6 +35,7 @@
 		previewHref,
 		previewMode,
 		previewHeight,
+		scrollablePreview = false,
 		installId
 	}: BlockPreviewProps = $props();
 
@@ -110,6 +112,7 @@
 				{previewComponent}
 				{previewHref}
 				{previewHeight}
+				{scrollablePreview}
 				{renderIframe}
 				{heroPreview}
 				{activeTheme}
@@ -118,7 +121,7 @@
 			/>
 
 			<div
-				class="bg-white [&_[data-slot=code-block-content]]:no-scrollbar dark:bg-transparent!"
+				class="bg-white dark:bg-transparent! [&_[data-slot=code-block-content]]:no-scrollbar"
 			>
 				{#if mode === "code"}
 					<CodeViewer {codeTree} />

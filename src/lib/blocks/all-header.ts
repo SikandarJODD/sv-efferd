@@ -156,6 +156,7 @@ export const headerBlocks: BlockShowcaseItem[] = [
 		previewHref: "/preview/header/one",
 		previewMode: "iframe",
 		previewHeight: 860,
+		scrollablePreview: true,
 		installId: "header-one",
 		codeTree: createBlockCodeTree("header-one:component", [
 			{
@@ -190,6 +191,7 @@ export const headerBlocks: BlockShowcaseItem[] = [
 		previewHref: "/preview/header/two",
 		previewMode: "iframe",
 		previewHeight: 860,
+		scrollablePreview: true,
 		installId: "header-two",
 		codeTree: createBlockCodeTree("header-two:component", [
 			{
@@ -224,6 +226,7 @@ export const headerBlocks: BlockShowcaseItem[] = [
 		previewHref: "/preview/header/three",
 		previewMode: "iframe",
 		previewHeight: 980,
+		scrollablePreview: true,
 		installId: "header-three",
 		codeTree: createBlockCodeTree("header-three:component", [
 			{
@@ -278,6 +281,7 @@ export const headerBlocks: BlockShowcaseItem[] = [
 		previewHref: "/preview/header/four",
 		previewMode: "iframe",
 		previewHeight: 860,
+		scrollablePreview: true,
 		installId: "header-four",
 		codeTree: createBlockCodeTree("header-four:component", [
 			{
@@ -313,6 +317,7 @@ export const headerBlocks: BlockShowcaseItem[] = [
 		previewHref: "/preview/header/five",
 		previewMode: "iframe",
 		previewHeight: 980,
+		scrollablePreview: true,
 		installId: "header-five",
 		codeTree: createBlockCodeTree("header-five:component", [
 			{

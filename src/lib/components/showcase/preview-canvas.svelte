@@ -12,6 +12,7 @@
 		previewComponent: Component;
 		previewHref?: string;
 		previewHeight?: number;
+		scrollablePreview: boolean;
 		renderIframe: boolean;
 		heroPreview: boolean;
 		activeTheme: ScopedTheme | null;
@@ -26,6 +27,7 @@
 		previewComponent: PreviewComponent,
 		previewHref,
 		previewHeight,
+		scrollablePreview,
 		renderIframe,
 		heroPreview,
 		activeTheme,
@@ -45,15 +47,16 @@
 
 	$effect(() => {
 		loading = renderIframe && Boolean(previewHref);
-		if (!renderIframe) cleanupIframeWheelForwarding();
+		if (!renderIframe || scrollablePreview) cleanupIframeWheelForwarding();
 	});
 
 	function hideIframeScrollbar() {
 		const iframeDocument = iframe?.contentDocument;
 		if (!iframeDocument) return;
 
-		iframeDocument.documentElement.classList.toggle("no-scrollbar", !heroPreview);
-		iframeDocument.body.classList.toggle("no-scrollbar", !heroPreview);
+		const hideScrollbar = !heroPreview && !scrollablePreview;
+		iframeDocument.documentElement.classList.toggle("no-scrollbar", hideScrollbar);
+		iframeDocument.body.classList.toggle("no-scrollbar", hideScrollbar);
 	}
 
 	function cleanupIframeWheelForwarding() {
@@ -67,6 +70,12 @@
 		if (!iframeDocument || !iframeWindow) return;
 
 		cleanupIframeWheelForwarding();
+		if (scrollablePreview) {
+			iframeDocument.documentElement.style.overflow = "auto";
+			iframeDocument.body.style.overflow = "auto";
+			return;
+		}
+
 		iframeDocument.documentElement.style.overflow = "hidden";
 		iframeDocument.body.style.overflow = "hidden";
 

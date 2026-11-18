@@ -15,6 +15,7 @@
 		retail: number;
 		online: number;
 	};
+	const thirtyDayTickIndexes = [0, 4, 8, 12, 16, 19, 22, 25, 29];
 
 	const chartData: SalesChartRow[] = [
 		{ date: new Date("2026-03-15T12:00:00"), retail: 198, online: 96 },
@@ -71,6 +72,15 @@
 		return chartData.filter((item) => item.date >= startDate);
 	});
 
+	const axisTicks = $derived.by(() => {
+		if (periodDays === 7) return chartRows.map((row) => row.date);
+
+		return thirtyDayTickIndexes.flatMap((index) => {
+			const row = chartRows[index];
+			return row ? [row.date] : [];
+		});
+	});
+
 	const growth = $derived.by(() => {
 		const first = chartRows[0];
 		const last = chartRows.at(-1);
@@ -118,6 +128,7 @@
 				x="date"
 				xScale={scaleUtc()}
 				yPadding={[0, 16]}
+				padding={{ left: 16, right: 16 }}
 				axis="x"
 				series={[
 					{ key: "online", label: "Online", color: chartConfig.online.color },
@@ -126,7 +137,7 @@
 				seriesLayout="stack"
 				props={{
 					xAxis: {
-						ticks: periodDays === 7 ? 7 : undefined,
+						ticks: axisTicks,
 						format: (date: Date) => formatDate(date)
 					},
 					yAxis: { format: () => "" }
