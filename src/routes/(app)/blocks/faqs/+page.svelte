@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte FAQ Blocks"
-	desc="Browse Svelte FAQ blocks with accordion and split-page layouts. Preview each design and copy the shadcn-svelte source."
+	desc="FAQ sections that organize common questions in accordions and split layouts."
 	link="/blocks/faqs"
 />
 

@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte 404 Page Blocks"
-	desc="Browse Svelte 404 page blocks with clear recovery actions and navigation. Preview each layout and copy the source."
+	desc="404 pages that explain what went wrong and help visitors find their way back."
 	link="/blocks/not-found"
 />
 

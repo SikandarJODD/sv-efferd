@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte Settings Blocks"
-	desc="Browse Svelte settings blocks for profile, appearance, notification, and account preferences. Preview each layout and copy the source."
+	desc="Settings pages for profiles, accounts, notifications, appearance, and preferences."
 	link="/blocks/settings"
 />
 

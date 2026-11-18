@@ -15,7 +15,7 @@
 </script>
 
 <header
-	class="pointer-events-none fixed inset-x-2 top-2 z-50 flex items-start justify-between md:top-2 md:right-2 md:left-auto"
+	class="pointer-events-none fixed inset-x-2 top-2 z-50 flex items-start justify-between md:top-2.5 md:right-2.5 md:left-auto"
 >
 	<Sidebar.Trigger
 		class="pointer-events-auto size-10 rounded-lg border border-border bg-background shadow-none md:hidden"

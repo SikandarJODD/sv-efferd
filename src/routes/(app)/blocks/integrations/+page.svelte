@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte Integration Blocks"
-	desc="Browse Svelte integration blocks for connected apps, tools, and services. Preview each layout and copy the source."
+	desc="Sections for showing the apps, tools, and services a product connects with."
 	link="/blocks/integrations"
 />
 

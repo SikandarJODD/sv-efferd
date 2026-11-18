@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte Feature Blocks"
-	desc="Browse Svelte feature blocks for product benefits, capabilities, and workflows. Preview each layout and copy the source."
+	desc="Feature sections that explain what a product does and why it matters."
 	link="/blocks/features"
 />
 

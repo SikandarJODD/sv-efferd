@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte Footer Blocks"
-	desc="Browse responsive Svelte footer blocks with navigation, social links, and newsletter layouts. Preview and copy the source."
+	desc="Responsive footers with navigation, legal links, social profiles, and newsletter forms."
 	link="/blocks/footer"
 />
 

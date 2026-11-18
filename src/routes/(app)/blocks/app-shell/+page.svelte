@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte App Shell Blocks"
-	desc="Browse Svelte app shell blocks for dashboards with sidebars, navigation, and responsive layouts. Copy or install the shadcn-svelte source."
+	desc="Dashboard and app layouts with sidebars, navigation, and responsive content areas."
 	link="/blocks/app-shell"
 />
 

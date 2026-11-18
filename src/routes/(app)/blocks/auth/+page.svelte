@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte Auth Blocks"
-	desc="Browse Svelte auth blocks for sign-in, sign-up, and account screens. Preview each layout and copy or install the source."
+	desc="Account access pages for sign-in, sign-up, password recovery, and verification."
 	link="/blocks/auth"
 />
 

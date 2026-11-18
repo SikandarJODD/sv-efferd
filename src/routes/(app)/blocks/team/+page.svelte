@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte Team Section Blocks"
-	desc="Browse Svelte team sections with member profiles, social links, and hiring calls to action. Preview each layout and copy the source."
+	desc="Team sections with member profiles, roles, social links, and hiring prompts."
 	link="/blocks/team"
 />
 

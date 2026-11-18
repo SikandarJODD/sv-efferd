@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte Header Blocks"
-	desc="Browse responsive Svelte header blocks with desktop and mobile navigation. Preview each layout and copy or install the source."
+	desc="Responsive headers with navigation, menus, account actions, and mobile layouts."
 	link="/blocks/header"
 />
 

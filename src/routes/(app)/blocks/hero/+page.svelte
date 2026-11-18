@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte Hero Blocks"
-	desc="Browse Svelte hero blocks for product and landing pages. Preview each layout, copy the source, or install it with shadcn-svelte."
+	desc="Hero sections that introduce a product and guide visitors to the main action."
 	link="/blocks/hero"
 />
 

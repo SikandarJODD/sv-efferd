@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte Blog Blocks"
-	desc="Browse Svelte blog blocks for article lists, featured posts, and content pages. Preview each layout and copy the source."
+	desc="Blog layouts for featured stories, article lists, and post previews."
 	link="/blocks/blog"
 />
 

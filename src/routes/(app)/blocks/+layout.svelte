@@ -17,14 +17,15 @@
 <div>
 	<!-- <CategoryNav /> -->
 	{#if currentCategory}
-		<header class="border-b border-border/80 px-5 py-8 sm:px-6 lg:px-7">
-			<div class="mx-auto max-w-7xl">
+		<header
+			class="mx-2 mt-1 rounded-l-xl rounded-r-3xl border border-border/80 px-5 py-8 sm:mx-1 sm:px-6 lg:px-7"
+		>
+			<div class="max-w-7xl">
 				<h1 class="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
 					{currentCategory.label} Blocks
 				</h1>
 				<p class="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">
-					Production-ready {currentCategory.label.toLowerCase()} sections for Svelte, Tailwind
-					CSS, and shadcn-svelte.
+					{currentCategory.description}
 				</p>
 			</div>
 		</header>

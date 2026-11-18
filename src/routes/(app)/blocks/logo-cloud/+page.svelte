@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte Logo Cloud Blocks"
-	desc="Browse Svelte logo cloud blocks for customer, partner, and integration logos. Preview each layout and copy the source."
+	desc="Logo sections for customers, partners, sponsors, and integrations."
 	link="/blocks/logo-cloud"
 />
 

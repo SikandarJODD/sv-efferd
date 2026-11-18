@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte CTA Blocks"
-	desc="Browse Svelte call-to-action blocks for landing pages and product sites. Preview each layout and copy or install the source."
+	desc="Call-to-action sections for sign-ups, trials, downloads, and contact prompts."
 	link="/blocks/cta"
 />
 

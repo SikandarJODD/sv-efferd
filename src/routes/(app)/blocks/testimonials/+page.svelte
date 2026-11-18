@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte Testimonial Blocks"
-	desc="Browse Svelte testimonial blocks for customer quotes and social proof. Preview each layout and copy the source."
+	desc="Customer quote and review layouts for adding social proof to a page."
 	link="/blocks/testimonials"
 />
 

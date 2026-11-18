@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte Contact Blocks"
-	desc="Browse Svelte contact blocks with forms, contact details, and support layouts. Preview each design and copy the source."
+	desc="Contact sections with forms, support details, office locations, and response times."
 	link="/blocks/contact"
 />
 

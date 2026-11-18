@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte Image Gallery Blocks"
-	desc="Browse responsive Svelte image gallery blocks for portfolios, products, and editorial layouts. Preview and copy the source."
+	desc="Gallery layouts for portfolios, product images, and editorial collections."
 	link="/blocks/image-gallery"
 />
 

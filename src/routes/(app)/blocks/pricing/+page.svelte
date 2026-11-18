@@ -8,7 +8,7 @@
 
 <Seo
 	title="Svelte Pricing Blocks"
-	desc="Browse Svelte pricing blocks for plans, feature comparisons, and billing options. Preview each layout and copy the source."
+	desc="Pricing layouts for plans, billing options, feature comparisons, and purchase actions."
 	link="/blocks/pricing"
 />
 
