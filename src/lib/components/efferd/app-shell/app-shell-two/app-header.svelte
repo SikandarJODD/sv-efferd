@@ -2,6 +2,7 @@
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
 	import { Separator } from "#lib/components/ui/separator/index.js";
+	import * as Tooltip from "#lib/components/ui/tooltip/index.js";
 	import { cn } from "#lib/utils.js";
 	import { BellIcon, SendIcon } from "@lucide/svelte";
 	import AppBreadcrumb from "./app-breadcrumb.svelte";
@@ -27,11 +28,29 @@
 		/>
 		<AppBreadcrumb page={activeItem} />
 	</div>
-	<div class="flex items-center gap-2">
-		<Button aria-label="Send" class="size-11" size="icon-xs" variant="outline">
-			<SendIcon />
-		</Button>
-		<Button aria-label="Notifications" class="size-11" size="icon-xs" variant="outline">
+	<div class="flex items-center gap-1.5">
+		<Tooltip.Root delayDuration={500}>
+			<Tooltip.Trigger>
+				{#snippet child({ props })}
+					<Button
+						aria-label="Send message"
+						class="relative before:absolute before:-inset-0.5 [&_svg]:size-4.5"
+						size="icon-lg"
+						variant="outline"
+						{...props}
+					>
+						<SendIcon />
+					</Button>
+				{/snippet}
+			</Tooltip.Trigger>
+			<Tooltip.Content>Send message</Tooltip.Content>
+		</Tooltip.Root>
+		<Button
+			aria-label="Notifications"
+			class="relative before:absolute before:-inset-0.5 [&_svg]:size-4.5"
+			size="icon-lg"
+			variant="outline"
+		>
 			<BellIcon />
 		</Button>
 		<Separator class="h-4 data-[orientation=vertical]:self-center" orientation="vertical" />
