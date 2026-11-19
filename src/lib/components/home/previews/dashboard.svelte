@@ -7,9 +7,9 @@
 	let { title, countLabel }: Props = $props();
 </script>
 
-<div class="flex size-full grid-cols-2">
-	<div class="flex flex-1">
-		<div class="w-[5%] border-r">
+<div class="flex size-full overflow-hidden">
+	<div class="flex size-full min-w-0">
+		<div class="w-[5%] shrink-0 border-r">
 			<div class="flex h-4 items-center border-b px-1">
 				<div class="h-1.5 w-full rounded-full bg-muted-foreground/25"></div>
 			</div>
@@ -27,13 +27,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="w-full gap-1">
-			<div class="flex flex-col gap-1.5 p-2.5">
+		<div class="min-w-0 flex-1">
+			<div class="flex h-full min-h-0 flex-col gap-1.5 p-2.5">
 				<div class="flex items-end justify-between ps-1 pe-4">
 					<h3 class="font-heading text-sm font-medium md:text-base">{title}</h3>
 					<p class="text-xs text-muted-foreground">{countLabel}</p>
 				</div>
-				<div class="overflow-hidden rounded-t-sm border">
+				<div class="min-h-0 overflow-hidden rounded-sm border">
 					<div class="grid grid-cols-4 gap-px bg-border *:bg-background">
 						<div class="flex flex-col gap-1 p-1.5">
 							<div class="h-1 w-2/3 rounded-full bg-muted-foreground/20"></div>
@@ -177,19 +177,19 @@
 								<div class="h-6.5 flex-1 rounded-t-xs bg-muted-foreground/15"></div>
 							</div>
 						</div>
-						<div class="flex h-16 flex-col gap-0.5 p-1.5 md:h-20">
+						<div class="flex h-10 flex-col gap-0.5 p-1.5 md:h-12">
 							<div class="h-0.5 w-1/4 rounded-full bg-muted-foreground/20"></div>
 							<div class="h-1 w-3/4 rounded-xs bg-muted-foreground/10"></div>
 						</div>
-						<div class="flex h-16 flex-col gap-0.5 p-1.5 md:h-20">
+						<div class="flex h-10 flex-col gap-0.5 p-1.5 md:h-12">
 							<div class="h-0.5 w-1/4 rounded-full bg-muted-foreground/20"></div>
 							<div class="h-1 w-3/4 rounded-xs bg-muted-foreground/10"></div>
 						</div>
-						<div class="flex h-16 flex-col gap-0.5 p-1.5 md:h-20">
+						<div class="flex h-10 flex-col gap-0.5 p-1.5 md:h-12">
 							<div class="h-0.5 w-1/4 rounded-full bg-muted-foreground/20"></div>
 							<div class="h-1 w-3/4 rounded-xs bg-muted-foreground/10"></div>
 						</div>
-						<div class="flex h-16 flex-col gap-0.5 p-1.5 md:h-20">
+						<div class="flex h-10 flex-col gap-0.5 p-1.5 md:h-12">
 							<div class="h-0.5 w-1/4 rounded-full bg-muted-foreground/20"></div>
 							<div class="h-1 w-3/4 rounded-xs bg-muted-foreground/10"></div>
 						</div>
