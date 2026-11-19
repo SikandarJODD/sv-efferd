@@ -1,5 +1,6 @@
 import { dashboardOneBlock } from "./dashboard-one.js";
+import { dashboardTwoBlock } from "./dashboard-two.js";
 
-export { dashboardOneBlock };
+export { dashboardOneBlock, dashboardTwoBlock };
 
-export const dashboardBlocks = [dashboardOneBlock];
+export const dashboardBlocks = [dashboardOneBlock, dashboardTwoBlock];

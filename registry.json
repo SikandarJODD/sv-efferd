@@ -1540,6 +1540,71 @@
 			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"]
 		},
 		{
+			"name": "dashboard-two",
+			"title": "Dashboard Two",
+			"type": "registry:block",
+			"description": "A responsive business dashboard with KPI summaries, revenue and channel charts, invoices, billing health, and recent activity.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-two/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard-card.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard-stats.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard-stats.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/net-revenue-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/net-revenue-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/channel-sales-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/channel-sales-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard-invoices.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard-invoices.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/billing-health.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/billing-health.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard-activity.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard-activity.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-two/formatter.ts"
+				}
+			],
+			"registryDependencies": ["badge", "button", "card", "chart", "empty", "table"],
+			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"]
+		},
+		{
 			"name": "settings-one",
 			"title": "Settings One",
 			"type": "registry:block",

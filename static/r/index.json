@@ -809,6 +809,27 @@
 		"relativeUrl": "dashboard-one.json"
 	},
 	{
+		"name": "dashboard-two",
+		"title": "Dashboard Two",
+		"type": "registry:block",
+		"description": "A responsive business dashboard with KPI summaries, revenue and channel charts, invoices, billing health, and recent activity.",
+		"dependencies": [
+			"@lucide/svelte",
+			"d3-scale",
+			"d3-shape",
+			"layerchart"
+		],
+		"registryDependencies": [
+			"badge",
+			"button",
+			"card",
+			"chart",
+			"empty",
+			"table"
+		],
+		"relativeUrl": "dashboard-two.json"
+	},
+	{
 		"name": "settings-one",
 		"title": "Settings One",
 		"type": "registry:block",
