@@ -9,7 +9,7 @@
 
 <Sidebar.Provider>
 	<AppSidebar {pathname} />
-	<Sidebar.Inset class="p-4 md:p-6">
+	<Sidebar.Inset class="px-4 pt-2 pb-4 md:px-6 md:pt-3 md:pb-6">
 		<AppHeader {pathname} />
 		<div class="flex flex-1 flex-col gap-4">{@render children?.()}</div>
 	</Sidebar.Inset>

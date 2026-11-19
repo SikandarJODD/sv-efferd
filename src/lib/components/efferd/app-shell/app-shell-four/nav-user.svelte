@@ -19,7 +19,7 @@
 </script>
 
 <DropdownMenu.Root>
-	<DropdownMenu.Trigger aria-label="Open account menu">
+	<DropdownMenu.Trigger aria-label="Open account menu" class="flex size-9 items-center justify-center rounded-full">
 		<Avatar.Root class="size-8">
 			<Avatar.Image src={user.avatar} alt={user.name} />
 			<Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
