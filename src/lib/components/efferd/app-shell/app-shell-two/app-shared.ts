@@ -1,6 +1,5 @@
 import {
 	LayoutGridIcon,
-	BarChart3Icon,
 	BriefcaseIcon,
 	UsersIcon,
 	PlugIcon,
@@ -27,48 +26,43 @@ export type SidebarNavGroup = {
 
 export const navGroups: SidebarNavGroup[] = [
 	{
-		label: "Product",
+		label: "Sales",
 		items: [
 			{
-				title: "Dashboard",
+				title: "Overview",
 				path: "#",
 				icon: LayoutGridIcon,
 				isActive: true
 			},
 			{
-				title: "Analytics",
-				path: "#",
-				icon: BarChart3Icon
-			},
-			{
-				title: "Projects",
+				title: "Orders",
 				path: "#",
 				icon: BriefcaseIcon
+			},
+			{
+				title: "Customers",
+				path: "#",
+				icon: UsersIcon
 			}
 		]
 	},
 	{
-		label: "Workspace",
+		label: "Connect",
 		items: [
-			{
-				title: "Team",
-				path: "#",
-				icon: UsersIcon
-			},
 			{
 				title: "Integrations",
 				path: "#",
 				icon: PlugIcon
 			},
 			{
-				title: "API Keys",
+				title: "API keys",
 				path: "#",
 				icon: KeyRoundIcon
 			}
 		]
 	},
 	{
-		label: "Administration",
+		label: "Account",
 		items: [
 			{
 				title: "Settings",
@@ -86,12 +80,12 @@ export const navGroups: SidebarNavGroup[] = [
 
 export const footerNavLinks: SidebarNavItem[] = [
 	{
-		title: "Help Center",
+		title: "Help center",
 		path: "#",
 		icon: HelpCircleIcon
 	},
 	{
-		title: "Documentation",
+		title: "API docs",
 		path: "#",
 		icon: BookOpenIcon
 	}

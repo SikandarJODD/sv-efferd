@@ -7,7 +7,6 @@
 	import BellIcon from "@lucide/svelte/icons/bell";
 	import CreditCardIcon from "@lucide/svelte/icons/credit-card";
 	import LogOutIcon from "@lucide/svelte/icons/log-out";
-	import SparklesIcon from "@lucide/svelte/icons/sparkles";
 	const user = {
 		name: "Bhide Svelte",
 		email: "example@example.com",
@@ -45,8 +44,7 @@
 		<DropdownMenu.Separator />
 		<DropdownMenu.Group>
 			<DropdownMenu.Item>
-				<SparklesIcon />
-				Upgrade to Pro
+				Compare plans
 			</DropdownMenu.Item>
 		</DropdownMenu.Group>
 		<DropdownMenu.Separator />

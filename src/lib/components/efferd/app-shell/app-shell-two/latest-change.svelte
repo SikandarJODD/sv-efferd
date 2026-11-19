@@ -4,10 +4,10 @@
 	import { XIcon } from "@lucide/svelte";
 
 	const latestChange = {
-		badge: "CHANGELOG",
-		title: "Product update",
-		description: "Performance boosts and UI polish.", // TIP: Use a single line of text for the description. (max 5 words)
-		readMore: { href: "/", label: "Learn more" }
+		badge: "NEW",
+		title: "Invoice exports",
+		description: "CSV exports now include fees.",
+		readMore: { href: "/", label: "View export update" }
 	} as const;
 
 	let isOpen = $state(true);
