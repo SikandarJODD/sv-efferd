@@ -10,7 +10,7 @@
 <div class="flex h-full flex-col items-center justify-center px-3 py-3 sm:px-4 sm:py-4">
 	<div class="pb-3 text-center">
 		<h3 class="font-heading text-sm font-semibold tracking-tight text-foreground">{title}</h3>
-		<p class="mt-0.5 text-[11px] leading-4 text-muted-foreground">{countLabel}</p>
+		<p class="mt-0.5 text-xs leading-4 text-muted-foreground">{countLabel}</p>
 	</div>
 	<div
 		class="h-px w-full max-w-[55%] bg-border/80 [mask-image:linear-gradient(to_right,transparent,black,transparent)]"

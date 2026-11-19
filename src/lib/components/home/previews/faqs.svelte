@@ -10,7 +10,7 @@
 <div class="grid h-full grid-cols-2">
 	<div class="border-r px-3 py-3 sm:px-4 sm:py-4">
 		<h3 class="font-heading text-sm font-semibold tracking-tight text-foreground">{title}</h3>
-		<p class="mt-0.5 text-[11px] leading-4 text-muted-foreground">{countLabel}</p>
+		<p class="mt-0.5 text-xs leading-4 text-muted-foreground">{countLabel}</p>
 	</div>
 	<div class="flex items-center">
 		<div class="w-full border-t border-border/70">

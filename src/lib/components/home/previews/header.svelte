@@ -20,7 +20,7 @@
 		</div>
 	</div>
 	<div class="mt-auto text-center">
-		<p class="text-[11px] leading-4 text-muted-foreground">{countLabel}</p>
+		<p class="text-xs leading-4 text-muted-foreground">{countLabel}</p>
 		<h3 class="font-heading mt-0.5 text-sm font-semibold tracking-tight text-foreground">
 			{title}
 		</h3>

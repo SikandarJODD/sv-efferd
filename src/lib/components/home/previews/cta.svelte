@@ -14,7 +14,7 @@
 	<div class="w-full border-y border-border/70 px-3 py-1.5">
 		<div class="grid grid-cols-2 border-x border-border/70">
 			<div class="flex items-center border-r border-border/70 px-2">
-				<p class="text-[11px] leading-4 text-muted-foreground">{countLabel}</p>
+				<p class="text-xs leading-4 text-muted-foreground">{countLabel}</p>
 			</div>
 			<div class="flex items-center gap-2 px-2 py-1.5">
 				<div class="h-4 flex-1 rounded-sm bg-muted-foreground/16"></div>
