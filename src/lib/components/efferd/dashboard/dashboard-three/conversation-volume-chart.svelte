@@ -56,7 +56,7 @@
 				data={chartRows}
 				x="date"
 				xScale={scaleUtc()}
-				axis="both"
+				axis={true}
 				series={[{ key: "conversations", label: "New threads", color: chartConfig.conversations.color }]}
 				props={{
 					xAxis: { ticks: period === "7" ? 7 : undefined, format: (date: Date) => date.toLocaleDateString("en-US", period === "7" ? { weekday: "short" } : { day: "numeric", month: "short" }) },
