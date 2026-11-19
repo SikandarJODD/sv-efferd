@@ -14,7 +14,7 @@
 	/>
 </svelte:head>
 
-<Sidebar.Provider>
+<Sidebar.Provider style="--sidebar-width: 13rem;">
 	<SiteSidebar />
 	<Sidebar.Inset
 		class="border shadow-none! supports-[overflow:clip]:overflow-clip dark:border-muted dark:bg-background"
