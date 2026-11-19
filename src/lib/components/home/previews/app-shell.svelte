@@ -39,12 +39,10 @@
 				</div>
 			</div>
 			<div class="flex flex-col p-2">
-				<h3
-					class="font-heading text-sm font-medium group-hover:text-emerald-500 md:text-base"
-				>
+				<h3 class="font-heading text-sm font-medium md:text-base">
 					{title}
 				</h3>
-				<p class="text-xs text-muted-foreground group-hover:text-emerald-700">
+				<p class="text-xs text-muted-foreground">
 					{countLabel}
 				</p>
 				<div class="grid grid-cols-4 gap-0.5 pt-2 pb-1">
