@@ -7,7 +7,7 @@
 	let { title, countLabel }: Props = $props();
 </script>
 
-<div class="grid h-full grid-cols-2 place-content-center px-3 py-3 sm:px-4 sm:py-4">
+<div class="grid h-full grid-cols-2 place-content-center overflow-hidden px-3 py-3 sm:px-4 sm:py-4">
 	<div class="flex items-center">
 		<div>
 			<h3 class="font-heading text-base font-normal text-foreground">
@@ -17,26 +17,26 @@
 		</div>
 	</div>
 	<div class="relative mx-auto size-20">
+		<div class="absolute inset-2 rounded-full border border-dashed border-border/70"></div>
+		<div class="absolute top-1/2 left-2 h-px w-16 -translate-y-1/2 bg-border/80"></div>
+		<div class="absolute top-2 left-1/2 h-16 w-px -translate-x-1/2 bg-border/80"></div>
+
 		<div
-			class="absolute inset-0 z-20 m-auto size-7 rounded-full border border-border bg-card"
-		></div>
-		<div
-			class="absolute top-0 left-0 z-20 size-4 rounded-md border border-muted-foreground/20 bg-muted"
-		></div>
-		<div
-			class="absolute top-0 right-0 z-20 size-4 rounded-md border border-muted-foreground/20 bg-muted"
-		></div>
-		<div
-			class="absolute bottom-0 left-0 z-20 size-4 rounded-md border border-muted-foreground/20 bg-muted"
-		></div>
-		<div
-			class="absolute right-0 bottom-0 z-20 size-4 rounded-md border border-muted-foreground/20 bg-muted"
-		></div>
-		<div
-			class="absolute top-1/2 left-1/2 h-px w-full -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-border/80"
-		></div>
-		<div
-			class="absolute top-1/2 left-1/2 h-px w-full -translate-x-1/2 -translate-y-1/2 rotate-45 bg-border/80"
-		></div>
+			class="absolute inset-0 m-auto flex size-8 items-center justify-center rounded-md border border-muted-foreground/20 bg-background shadow-xs transition-colors duration-200 group-hover:border-muted-foreground/30"
+		>
+			<div class="size-3 rounded-sm bg-muted-foreground/18"></div>
+		</div>
+		<div class="absolute top-0 left-1/2 flex size-4 -translate-x-1/2 items-center justify-center rounded-sm border bg-background">
+			<div class="size-1.5 rounded-full bg-muted-foreground/16"></div>
+		</div>
+		<div class="absolute top-1/2 right-0 flex size-4 -translate-y-1/2 items-center justify-center rounded-sm border bg-background">
+			<div class="size-1.5 rounded-xs bg-muted-foreground/16"></div>
+		</div>
+		<div class="absolute bottom-0 left-1/2 flex size-4 -translate-x-1/2 items-center justify-center rounded-sm border bg-background">
+			<div class="h-1.5 w-2 rounded-full bg-muted-foreground/16"></div>
+		</div>
+		<div class="absolute top-1/2 left-0 flex size-4 -translate-y-1/2 items-center justify-center rounded-sm border bg-background">
+			<div class="size-1.5 rounded-full border border-muted-foreground/20"></div>
+		</div>
 	</div>
 </div>
