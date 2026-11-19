@@ -113,10 +113,10 @@ export const dashboardTwoBlock: BlockShowcaseItem = {
 			code: formatterSource
 		},
 		{
-			id: "related:app-shell-one",
-			path: "related/app-shell-one",
-			externalUrl: "/blocks/app-shell#app-shell-one",
-			externalLabel: "View App Shell One"
+			id: "related:app-shell-two",
+			path: "related/app-shell-two",
+			externalUrl: "/blocks/app-shell#app-shell-two",
+			externalLabel: "View App Shell Two"
 		},
 		...uiFiles
 	])

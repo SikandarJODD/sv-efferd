@@ -53,10 +53,10 @@ export const dashboardFourBlock: BlockShowcaseItem = {
 			code
 		})),
 		{
-			id: "related:app-shell-one",
-			path: "related/app-shell-one",
-			externalUrl: "/blocks/app-shell#app-shell-one",
-			externalLabel: "View App Shell One"
+			id: "related:app-shell-four",
+			path: "related/app-shell-four",
+			externalUrl: "/blocks/app-shell#app-shell-four",
+			externalLabel: "View App Shell Four"
 		},
 		...uiFiles
 	])

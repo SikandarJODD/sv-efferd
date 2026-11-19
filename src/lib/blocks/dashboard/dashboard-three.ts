@@ -55,10 +55,10 @@ export const dashboardThreeBlock: BlockShowcaseItem = {
 	codeTree: createBlockCodeTree("dashboard-three:component", [
 		...files.map(([id, path, lang, code]) => ({ id: `dashboard-three:${id}`, path: `dashboard/${path}`, lang, code })),
 		{
-			id: "related:app-shell-one",
-			path: "related/app-shell-one",
-			externalUrl: "/blocks/app-shell#app-shell-one",
-			externalLabel: "View App Shell One"
+			id: "related:app-shell-three",
+			path: "related/app-shell-three",
+			externalUrl: "/blocks/app-shell#app-shell-three",
+			externalLabel: "View App Shell Three"
 		},
 		...uiFiles
 	])
