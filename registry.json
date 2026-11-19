@@ -1754,6 +1754,91 @@
 			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"]
 		},
 		{
+			"name": "dashboard-five",
+			"title": "Dashboard Five",
+			"type": "registry:block",
+			"description": "A responsive web analytics dashboard with visitor trends, audience insights, acquisition data, top content, and Core Web Vitals.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-five/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/visitors-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/visitors-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/online-now.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/online-now.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/top-pages.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/top-pages.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/top-countries.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/top-countries.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/traffic-sources-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/traffic-sources-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/audience-mix.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/audience-mix.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/browser-share.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/browser-share.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/top-referrers.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/top-referrers.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/web-vitals.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/web-vitals.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/share-bar-list.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/share-bar-list.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/status-indicator.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/status-indicator.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-five/formatter.ts"
+				}
+			],
+			"registryDependencies": ["badge", "button", "card", "chart", "table", "tooltip"],
+			"dependencies": ["@lucide/svelte", "d3-shape", "layerchart"]
+		},
+		{
 			"name": "settings-one",
 			"title": "Settings One",
 			"type": "registry:block",

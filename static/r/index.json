@@ -873,6 +873,26 @@
 		"relativeUrl": "dashboard-four.json"
 	},
 	{
+		"name": "dashboard-five",
+		"title": "Dashboard Five",
+		"type": "registry:block",
+		"description": "A responsive web analytics dashboard with visitor trends, audience insights, acquisition data, top content, and Core Web Vitals.",
+		"dependencies": [
+			"@lucide/svelte",
+			"d3-shape",
+			"layerchart"
+		],
+		"registryDependencies": [
+			"badge",
+			"button",
+			"card",
+			"chart",
+			"table",
+			"tooltip"
+		],
+		"relativeUrl": "dashboard-five.json"
+	},
+	{
 		"name": "settings-one",
 		"title": "Settings One",
 		"type": "registry:block",
