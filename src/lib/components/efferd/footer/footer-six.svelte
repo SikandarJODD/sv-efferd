@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AnimatedContainer from "#lib/components/efferd/footer/AnimatedContainer.svelte";
+	import AnimatedContainer from "#lib/components/efferd/footer/animated-container.svelte";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import Logo from "#lib/svgs/logo.svelte";
 	import FacebookIcon from "#lib/svgs/facebook.svelte";
@@ -115,7 +115,7 @@
 	style="clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);"
 >
 	<div class="fixed bottom-0 h-(--footer-height) w-full">
-		<div class="sticky top-[calc(100vh-var(--footer-height))] h-full overflow-y-auto">
+		<div class="sticky top-[calc(100dvh-var(--footer-height))] h-full overflow-y-auto">
 			<div
 				aria-hidden="true"
 				class="absolute inset-0 isolate z-0 opacity-50 contain-strict dark:opacity-60"

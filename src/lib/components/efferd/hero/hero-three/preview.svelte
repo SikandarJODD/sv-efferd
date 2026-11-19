@@ -4,7 +4,7 @@
 	import LogoSection from "./logo-section.svelte";
 </script>
 
-<div class="flex min-h-screen flex-col">
+<div class="flex min-h-svh flex-col">
 	<HeaderThree />
 	<main class="grow">
 		<Hero />

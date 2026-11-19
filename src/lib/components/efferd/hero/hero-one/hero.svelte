@@ -15,7 +15,7 @@
 
 	<div
 		aria-hidden="true"
-		class="absolute inset-0 mx-auto hidden min-h-screen w-full max-w-5xl lg:block"
+		class="absolute inset-0 mx-auto hidden min-h-svh w-full max-w-5xl lg:block"
 	>
 		<div
 			class="absolute inset-y-0 left-0 z-10 h-full w-px bg-foreground/15 [mask-image:linear-gradient(to_bottom,transparent_0%,black_20%,black_80%,transparent_100%)]"
@@ -42,7 +42,7 @@
 		</div>
 
 		<a
-			class="group mx-auto flex w-fit animate-in items-center gap-3 rounded-full border bg-card px-3 py-1 shadow transition-all delay-500 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in"
+			class="group mx-auto flex w-fit animate-in items-center gap-3 rounded-full border bg-card px-3 py-1 shadow transition-colors delay-300 duration-300 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in motion-reduce:animate-none"
 			href="/"
 		>
 			<Rocket class="size-3 text-muted-foreground" />
@@ -52,7 +52,7 @@
 		</a>
 
 		<h1
-			class="animate-in text-center text-4xl tracking-tight text-balance delay-100 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 [text-shadow:0_0_50px_color-mix(in_oklab,var(--foreground)_20%,transparent)] fade-in md:text-5xl lg:text-6xl"
+			class="animate-in text-center text-4xl tracking-tight text-balance delay-100 duration-300 ease-out fill-mode-backwards slide-in-from-bottom-10 [text-shadow:0_0_50px_color-mix(in_oklab,var(--foreground)_20%,transparent)] fade-in motion-reduce:animate-none md:text-5xl lg:text-6xl"
 		>
 			Building Teams Help
 			<br />
@@ -60,7 +60,7 @@
 		</h1>
 
 		<p
-			class="mx-auto max-w-md animate-in text-center text-base tracking-wider text-foreground/80 delay-200 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in sm:text-lg md:text-xl"
+			class="mx-auto max-w-md animate-in text-center text-base tracking-wider text-foreground/80 delay-200 duration-300 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in motion-reduce:animate-none sm:text-lg md:text-xl"
 		>
 			Conecting you with world-class talent
 			<br />
@@ -68,7 +68,7 @@
 		</p>
 
 		<div
-			class="flex animate-in flex-row flex-wrap items-center justify-center gap-3 pt-2 delay-300 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in"
+			class="flex animate-in flex-row flex-wrap items-center justify-center gap-3 pt-2 delay-300 duration-300 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in motion-reduce:animate-none"
 		>
 			<Button class="rounded-full" href="/" size="lg" variant="secondary">
 				<PhoneCall class="size-4" />

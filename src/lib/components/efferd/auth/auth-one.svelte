@@ -24,10 +24,10 @@
 	}: AuthOneProps = $props();
 </script>
 
-<div class={cn("relative w-full md:h-screen md:overflow-hidden", className)} {...restProps}>
+<div class={cn("relative w-full md:h-dvh md:overflow-hidden", className)} {...restProps}>
 	<Particles class="absolute inset-0" color="#666666" ease={20} quantity={120} />
 
-	<div class="relative mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-8">
+	<div class="relative mx-auto flex min-h-svh max-w-5xl flex-col justify-center px-8">
 		<Button class="absolute top-4 left-4" href={homeHref} variant="ghost">
 			<ChevronLeftIcon data-icon="inline-start" />
 			Home

@@ -7,7 +7,7 @@
 		"bits-ui"
 	],
 	"devDependencies": [
-		"bits-ui@^2.20.2",
+		"bits-ui@^2.21.0",
 		"@internationalized/date@^3.12.4"
 	],
 	"files": [

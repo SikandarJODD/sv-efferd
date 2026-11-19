@@ -2,7 +2,7 @@
 	import LogoCloudTwo from "./logo-cloud-two.svelte";
 </script>
 
-<div class="min-h-screen w-full place-content-center px-4">
+<div class="min-h-svh w-full place-content-center px-4">
 	<section class="relative mx-auto max-w-3xl py-12">
 		<h2
 			class="mb-6 text-center text-lg font-medium tracking-tight text-muted-foreground md:text-2xl"

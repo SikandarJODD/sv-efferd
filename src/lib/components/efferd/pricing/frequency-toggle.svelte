@@ -4,7 +4,7 @@
 
 <script lang="ts">
 	import { cn } from "#lib/utils.js";
-	import { createLayoutMotion } from "motion-sv";
+	import { createLayoutMotion, useReducedMotion } from "motion-sv";
 	import type { HTMLAttributes } from "svelte/elements";
 
 	type FREQUENCY = "monthly" | "yearly";
@@ -16,6 +16,7 @@
 	};
 
 	const layout = createLayoutMotion();
+	let prefersReducedMotion = useReducedMotion();
 
 	let {
 		frequency,
@@ -39,7 +40,7 @@
 	{#each frequencies as freq}
 		<button
 			aria-pressed={frequency === freq}
-			class="relative px-4 py-1 text-sm capitalize"
+			class="relative min-h-11 px-4 py-1 text-sm capitalize"
 			onclick={() => selectFrequency(freq)}
 			type="button"
 		>
@@ -49,7 +50,9 @@
 				<layout.span
 					class="absolute inset-0 z-10 rounded-xl bg-background mix-blend-difference dark:bg-foreground"
 					layoutId="frequency-toggle"
-					transition={{ type: "spring", duration: 0.4 }}
+					transition={prefersReducedMotion.current
+						? { duration: 0 }
+						: { type: "spring", duration: 0.4 }}
 				/>
 			{/if}
 		</button>

@@ -15,11 +15,7 @@
 			"border-border bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/50 md:top-2 md:max-w-3xl md:shadow"
 	)}
 >
-	<nav
-		class={cn(
-			"flex h-11 w-full items-center justify-between md:h-11  md:transition-all md:ease-out"
-		)}
-	>
+	<nav class={cn("flex h-11 w-full items-center justify-between md:h-11")}>
 		<a
 			class="rounded-md border border-border p-2 hover:bg-muted dark:hover:bg-muted/50"
 			href="/"

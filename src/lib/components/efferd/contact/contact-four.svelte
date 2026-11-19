@@ -32,13 +32,18 @@
 	let email = $state("");
 	let phone = $state("");
 	let message = $state("");
+	const id = $props.id();
+	const fullNameId = `${id}-full-name`;
+	const emailId = `${id}-email`;
+	const phoneId = `${id}-phone`;
+	const messageId = `${id}-message`;
 </script>
 
 <div
 	class="relative mx-auto grid h-full w-full max-w-4xl rounded-2xl border md:grid-cols-[1fr_0.70fr]"
 >
 	<div class="col-span-1 flex flex-col space-y-4 p-8 lg:p-10">
-		<h1 class="text-2xl font-medium tracking-wide md:text-3xl">Contact With Us</h1>
+		<h1 class="text-2xl font-medium tracking-wide md:text-3xl">Contact us</h1>
 		<p class="max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
 			If you have any questions regarding our Services or need help, please fill out the form
 			here.
@@ -68,50 +73,54 @@
 		<form class="w-full">
 			<FieldGroup>
 				<Field>
-					<FieldLabel for="full-name">Full name</FieldLabel>
+					<FieldLabel for={fullNameId}>Full name</FieldLabel>
 					<Input
-						id="full-name"
+						autocomplete="name"
+						id={fullNameId}
+						name="name"
 						type="text"
 						placeholder="John Doe"
-						autocomplete="off"
 						bind:value={fullName}
 					/>
 				</Field>
 
 				<Field>
-					<FieldLabel for="email">Email</FieldLabel>
+					<FieldLabel for={emailId}>Email</FieldLabel>
 					<Input
-						id="email"
+						autocomplete="email"
+						id={emailId}
+						name="email"
 						type="email"
 						placeholder="johndoe@example.com"
-						autocomplete="off"
 						bind:value={email}
 					/>
 				</Field>
 
 				<Field>
-					<FieldLabel for="phone">Phone</FieldLabel>
+					<FieldLabel for={phoneId}>Phone</FieldLabel>
 					<Input
-						id="phone"
+						autocomplete="tel"
+						id={phoneId}
+						name="phone"
 						type="tel"
 						placeholder="+1 (555) 123-4567"
-						autocomplete="off"
 						bind:value={phone}
 					/>
 				</Field>
 
 				<Field>
-					<FieldLabel for="message">Message</FieldLabel>
+					<FieldLabel for={messageId}>Message</FieldLabel>
 					<Textarea
-						id="message"
-						placeholder="Your message"
 						autocomplete="off"
+						id={messageId}
+						name="message"
+						placeholder="Your message"
 						bind:value={message}
 					/>
 				</Field>
 			</FieldGroup>
 
-			<Button class="mt-8 w-full" type="submit">Submit</Button>
+			<Button class="mt-8 w-full" type="submit">Send message</Button>
 		</form>
 	</div>
 </div>

@@ -28,7 +28,7 @@
 		</div>
 
 		<a
-			class="group mx-auto flex w-fit animate-in items-center gap-3 rounded-sm border bg-card p-1 shadow transition-all delay-500 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in"
+			class="group mx-auto flex w-fit animate-in items-center gap-3 rounded-sm border bg-card p-1 shadow transition-colors delay-300 duration-300 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in motion-reduce:animate-none"
 			href="/"
 		>
 			<div class="rounded-xs border bg-card px-1.5 py-0.5 shadow-sm">
@@ -46,13 +46,13 @@
 		</a>
 
 		<h1
-			class="max-w-2xl animate-in text-center text-3xl text-balance text-foreground delay-100 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in md:text-5xl lg:text-6xl"
+			class="max-w-2xl animate-in text-center text-3xl text-balance text-foreground delay-100 duration-300 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in motion-reduce:animate-none md:text-5xl lg:text-6xl"
 		>
 			Building Digital Experiences That Drive Growth
 		</h1>
 
 		<p
-			class="animate-in text-center text-sm tracking-wider text-muted-foreground delay-200 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in sm:text-lg"
+			class="animate-in text-center text-sm tracking-wider text-muted-foreground delay-200 duration-300 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in motion-reduce:animate-none sm:text-lg"
 		>
 			We help brands scale faster through design,
 			<br />
@@ -60,7 +60,7 @@
 		</p>
 
 		<div
-			class="flex w-fit animate-in items-center justify-center gap-3 pt-2 delay-300 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in"
+			class="flex w-fit animate-in items-center justify-center gap-3 pt-2 delay-300 duration-300 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in motion-reduce:animate-none"
 		>
 			<Button href="/" variant="outline">
 				<PhoneCall class="size-4" />
@@ -84,16 +84,16 @@
 			<img
 				alt="light app screen"
 				class="dark:hidden"
-				height="auto"
+				height="1080"
 				src="https://storage.efferd.com/screen/dashboard-light.webp"
-				width="auto"
+				width="1920"
 			/>
 			<img
 				alt="dark app screen"
 				class="hidden dark:block"
-				height="auto"
+				height="1080"
 				src="https://storage.efferd.com/screen/dashboard-dark.webp"
-				width="auto"
+				width="1920"
 			/>
 		</div>
 		<FullWidthDivider class="-bottom-px" />

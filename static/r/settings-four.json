@@ -1,0 +1,67 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "settings-four",
+	"title": "Settings Four",
+	"type": "registry:block",
+	"description": "A stacked account settings form for name, email, avatar, user ID, and account deletion.",
+	"dependencies": [
+		"@lucide/svelte"
+	],
+	"devDependencies": [
+		"@lucide/svelte@^1.73.0"
+	],
+	"registryDependencies": [
+		"avatar",
+		"button",
+		"card",
+		"field",
+		"input-group"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport AvatarField from \"./avatar-field.svelte\";\n\timport DeleteAccountField from \"./delete-account-field.svelte\";\n\timport EmailField from \"./email-field.svelte\";\n\timport NameField from \"./name-field.svelte\";\n\timport UserIdField from \"./user-id-field.svelte\";\n</script>\n\n<div class=\"flex flex-col gap-6\">\n\t<NameField />\n\t<EmailField />\n\t<AvatarField />\n\t<UserIdField />\n\t<DeleteAccountField />\n</div>\n",
+			"type": "registry:component",
+			"target": "efferd/settings/settings-four/settings.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport UserIcon from \"@lucide/svelte/icons/user\";\n\timport { Button } from \"#lib/components/ui/button/index.js\";\n\timport {\n\t\tInputGroup,\n\t\tInputGroupAddon,\n\t\tInputGroupInput\n\t} from \"#lib/components/ui/input-group/index.js\";\n\timport SettingField from \"./setting-field.svelte\";\n\timport SettingsSection from \"./settings-section.svelte\";\n</script>\n\n<SettingsSection hint=\"Max 32 characters.\">\n\t{#snippet action()}<Button type=\"button\">Save Changes</Button>{/snippet}\n\t<SettingField\n\t\tdescription=\"This is your display name on Efferd.\"\n\t\thtmlFor=\"display-name\"\n\t\tlabel=\"Your Name\"\n\t>\n\t\t<InputGroup>\n\t\t\t<InputGroupAddon><UserIcon aria-hidden=\"true\" /></InputGroupAddon>\n\t\t\t<InputGroupInput\n\t\t\t\taria-describedby=\"display-name-hint\"\n\t\t\t\tautocomplete=\"name\"\n\t\t\t\tid=\"display-name\"\n\t\t\t\tmaxlength={32}\n\t\t\t\tvalue=\"Shaban Haider\"\n\t\t\t/>\n\t\t</InputGroup>\n\t</SettingField>\n</SettingsSection>\n",
+			"type": "registry:component",
+			"target": "efferd/settings/settings-four/name-field.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport AtSignIcon from \"@lucide/svelte/icons/at-sign\";\n\timport { Button } from \"#lib/components/ui/button/index.js\";\n\timport {\n\t\tInputGroup,\n\t\tInputGroupAddon,\n\t\tInputGroupInput\n\t} from \"#lib/components/ui/input-group/index.js\";\n\timport SettingField from \"./setting-field.svelte\";\n\timport SettingsSection from \"./settings-section.svelte\";\n</script>\n\n<SettingsSection hint=\"We'll send a confirmation link before this address updates.\">\n\t{#snippet action()}<Button type=\"button\">Save Changes</Button>{/snippet}\n\t<SettingField\n\t\tdescription=\"Used to log in and receive notifications. Confirmation required for changes.\"\n\t\thtmlFor=\"email\"\n\t\tlabel=\"Your Email\"\n\t>\n\t\t<InputGroup>\n\t\t\t<InputGroupAddon><AtSignIcon aria-hidden=\"true\" /></InputGroupAddon>\n\t\t\t<InputGroupInput\n\t\t\t\taria-describedby=\"email-hint\"\n\t\t\t\tautocomplete=\"email\"\n\t\t\t\tid=\"email\"\n\t\t\t\ttype=\"email\"\n\t\t\t\tvalue=\"shaban@efferd.com\"\n\t\t\t/>\n\t\t</InputGroup>\n\t</SettingField>\n</SettingsSection>\n",
+			"type": "registry:component",
+			"target": "efferd/settings/settings-four/email-field.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport { Avatar, AvatarFallback, AvatarImage } from \"#lib/components/ui/avatar/index.js\";\n\timport { Button } from \"#lib/components/ui/button/index.js\";\n\timport SettingField from \"./setting-field.svelte\";\n\timport SettingsSection from \"./settings-section.svelte\";\n\n\tconst defaultAvatarSrc = \"https://github.com/shabanhr.png\";\n\tlet avatarSrc = $state(defaultAvatarSrc);\n\n\t$effect(() => {\n\t\tif (!avatarSrc.startsWith(\"blob:\")) return;\n\t\tconst objectUrl = avatarSrc;\n\t\treturn () => URL.revokeObjectURL(objectUrl);\n\t});\n\n\tfunction updateAvatar(event: Event) {\n\t\tconst file = (event.currentTarget as HTMLInputElement).files?.[0];\n\t\tif (file) avatarSrc = URL.createObjectURL(file);\n\t}\n</script>\n\n<SettingsSection\n\thint=\"Square image recommended. Accepted file types: .png, .jpg, .webp, .avif. Max file size: 2MB.\"\n>\n\t{#snippet action()}<Button type=\"button\">Save Changes</Button>{/snippet}\n\t<SettingField\n\t\tdescription=\"This is your avatar image on your Efferd account. Click your avatar to upload a new image.\"\n\t\thtmlFor=\"avatar\"\n\t\tlabel=\"Your Avatar\"\n\t>\n\t\t<div class=\"flex items-center justify-center gap-2\">\n\t\t\t<label class=\"cursor-pointer\" for=\"avatar\">\n\t\t\t\t<span class=\"sr-only\">Upload a new avatar</span>\n\t\t\t\t<Avatar class=\"size-16\">\n\t\t\t\t\t<AvatarImage alt=\"Shaban Haider\" src={avatarSrc} />\n\t\t\t\t\t<AvatarFallback>SH</AvatarFallback>\n\t\t\t\t</Avatar>\n\t\t\t\t<input\n\t\t\t\t\taccept=\".png,.jpg,.jpeg,.webp,.avif\"\n\t\t\t\t\taria-describedby=\"avatar-hint\"\n\t\t\t\t\tclass=\"sr-only\"\n\t\t\t\t\tid=\"avatar\"\n\t\t\t\t\tonchange={updateAvatar}\n\t\t\t\t\ttype=\"file\"\n\t\t\t\t/>\n\t\t\t</label>\n\t\t</div>\n\t</SettingField>\n</SettingsSection>\n",
+			"type": "registry:component",
+			"target": "efferd/settings/settings-four/avatar-field.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport CheckIcon from \"@lucide/svelte/icons/check\";\n\timport CopyIcon from \"@lucide/svelte/icons/copy\";\n\timport {\n\t\tInputGroup,\n\t\tInputGroupAddon,\n\t\tInputGroupButton,\n\t\tInputGroupInput\n\t} from \"#lib/components/ui/input-group/index.js\";\n\timport { UseClipboard } from \"#lib/hooks/use-clipboard.svelte.js\";\n\timport SettingField from \"./setting-field.svelte\";\n\timport SettingsSection from \"./settings-section.svelte\";\n\n\tconst userId = \"user_1UNKM8D5KJZV19B0KHC4VDQ9X\";\n\tconst clipboard = new UseClipboard();\n</script>\n\n<SettingsSection hint=\"This may be used to identify your account in the API.\">\n\t<SettingField\n\t\tdescription=\"This is your unique account identifier on Efferd.\"\n\t\thtmlFor=\"user-id\"\n\t\tlabel=\"Your User ID\"\n\t>\n\t\t<InputGroup>\n\t\t\t<InputGroupInput\n\t\t\t\taria-describedby=\"user-id-hint\"\n\t\t\t\tclass=\"font-mono tabular-nums\"\n\t\t\t\tid=\"user-id\"\n\t\t\t\treadonly\n\t\t\t\tvalue={userId}\n\t\t\t/>\n\t\t\t<InputGroupAddon align=\"inline-end\">\n\t\t\t\t<InputGroupButton\n\t\t\t\t\taria-label={clipboard.copied ? \"Copied\" : \"Copy user ID\"}\n\t\t\t\t\tonclick={() => clipboard.copy(userId)}\n\t\t\t\t\tsize=\"icon-xs\"\n\t\t\t\t>\n\t\t\t\t\t{#if clipboard.copied}<CheckIcon />{:else}<CopyIcon />{/if}\n\t\t\t\t</InputGroupButton>\n\t\t\t</InputGroupAddon>\n\t\t</InputGroup>\n\t</SettingField>\n</SettingsSection>\n",
+			"type": "registry:component",
+			"target": "efferd/settings/settings-four/user-id-field.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport { Button } from \"#lib/components/ui/button/index.js\";\n\timport SettingField from \"./setting-field.svelte\";\n\timport SettingsSection from \"./settings-section.svelte\";\n</script>\n\n<SettingsSection>\n\t{#snippet action()}\n\t\t<Button id=\"delete-account\" type=\"button\" variant=\"destructive\">Delete Account</Button>\n\t{/snippet}\n\t<SettingField\n\t\tdescription=\"Deletes your account and all data. This cannot be undone.\"\n\t\thtmlFor=\"delete-account\"\n\t\tlabel=\"Delete Account\"\n\t/>\n</SettingsSection>\n",
+			"type": "registry:component",
+			"target": "efferd/settings/settings-four/delete-account-field.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport { Card, CardContent, CardFooter } from \"#lib/components/ui/card/index.js\";\n\timport { FieldGroup } from \"#lib/components/ui/field/index.js\";\n\timport { cn } from \"#lib/utils.js\";\n\timport type { ComponentProps, Snippet } from \"svelte\";\n\n\ttype Props = ComponentProps<typeof Card> & {\n\t\thint?: string;\n\t\taction?: Snippet;\n\t\tchildren: Snippet;\n\t};\n\n\tlet { hint, action, children, class: className, ...restProps }: Props = $props();\n</script>\n\n<Card class={cn(\"pt-[calc(var(--card-spacing)*1.5)]\", className)} {...restProps}>\n\t<CardContent>\n\t\t<FieldGroup>{@render children()}</FieldGroup>\n\t</CardContent>\n\t{#if hint || action}\n\t\t<CardFooter\n\t\t\tclass={cn(\n\t\t\t\t\"gap-4\",\n\t\t\t\taction && hint && \"justify-between\",\n\t\t\t\taction && !hint && \"justify-end\"\n\t\t\t)}\n\t\t>\n\t\t\t{#if hint}<p class=\"text-xs text-pretty text-muted-foreground\">{hint}</p>{/if}\n\t\t\t{@render action?.()}\n\t\t</CardFooter>\n\t{/if}\n</Card>\n",
+			"type": "registry:component",
+			"target": "efferd/settings/settings-four/settings-section.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport {\n\t\tField,\n\t\tFieldContent,\n\t\tFieldDescription,\n\t\tFieldLabel\n\t} from \"#lib/components/ui/field/index.js\";\n\timport type { ComponentProps, Snippet } from \"svelte\";\n\n\ttype Props = ComponentProps<typeof Field> & {\n\t\tlabel: string;\n\t\thtmlFor: string;\n\t\tdescription: string;\n\t\tchildren?: Snippet;\n\t};\n\n\tlet { label, htmlFor, description, children, ...restProps }: Props = $props();\n</script>\n\n<Field orientation=\"responsive\" {...restProps}>\n\t<FieldContent>\n\t\t<FieldLabel class=\"mb-1\" for={htmlFor}>{label}</FieldLabel>\n\t\t<FieldDescription>{description}</FieldDescription>\n\t</FieldContent>\n\t{#if children}\n\t\t<FieldContent>{@render children()}</FieldContent>\n\t{/if}\n</Field>\n",
+			"type": "registry:component",
+			"target": "efferd/settings/settings-four/setting-field.svelte"
+		},
+		{
+			"content": "type Options = {\n\t/** The time before the copied status is reset. */\n\tdelay: number;\n};\n\n/** Use this hook to copy text to the clipboard and show a copied state.\n *\n * ## Usage\n * ```svelte\n * <script lang=\"ts\">\n * \t\timport { UseClipboard } from \"#lib/hooks/use-clipboard.svelte.js\";\n *\n * \t\tconst clipboard = new UseClipboard();\n * </script>\n *\n * <button onclick={clipboard.copy('Hello, World!')}>\n *     {#if clipboard.copied === 'success'}\n *         Copied!\n *     {:else if clipboard.copied === 'failure'}\n *         Failed to copy!\n *     {:else}\n *         Copy\n *     {/if}\n * </button>\n * ```\n *\n */\nexport class UseClipboard {\n\t#copiedStatus = $state<\"success\" | \"failure\">();\n\tprivate delay: number;\n\tprivate timeout: ReturnType<typeof setTimeout> | undefined = undefined;\n\n\tconstructor({ delay = 500 }: Partial<Options> = {}) {\n\t\tthis.delay = delay;\n\t}\n\n\t/** Copies the given text to the users clipboard.\n\t *\n\t * ## Usage\n\t * ```ts\n\t * clipboard.copy('Hello, World!');\n\t * ```\n\t *\n\t * @param text\n\t * @returns\n\t */\n\tasync copy(text: string) {\n\t\tif (this.timeout) {\n\t\t\tthis.#copiedStatus = undefined;\n\t\t\tclearTimeout(this.timeout);\n\t\t}\n\n\t\ttry {\n\t\t\tawait navigator.clipboard.writeText(text);\n\n\t\t\tthis.#copiedStatus = \"success\";\n\n\t\t\tthis.timeout = setTimeout(() => {\n\t\t\t\tthis.#copiedStatus = undefined;\n\t\t\t}, this.delay);\n\t\t} catch {\n\t\t\t// an error can occur when not in the browser or if the user hasn't given clipboard access\n\t\t\tthis.#copiedStatus = \"failure\";\n\n\t\t\tthis.timeout = setTimeout(() => {\n\t\t\t\tthis.#copiedStatus = undefined;\n\t\t\t}, this.delay);\n\t\t}\n\n\t\treturn this.#copiedStatus;\n\t}\n\n\t/** true when the user has just copied to the clipboard. */\n\tget copied() {\n\t\treturn this.#copiedStatus === \"success\";\n\t}\n\n\t/**\tIndicates whether a copy has occurred\n\t * and gives a status of either `success` or `failure`. */\n\tget status() {\n\t\treturn this.#copiedStatus;\n\t}\n}\n",
+			"type": "registry:hook",
+			"target": "use-clipboard.svelte.ts"
+		}
+	]
+}

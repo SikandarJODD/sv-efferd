@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LinkGroup from "#lib/components/efferd/footer/LinkGroup.svelte";
+	import LinkGroup from "#lib/components/efferd/footer/link-group.svelte";
 	import { cn } from "#lib/utils.js";
 	import { ArrowRightIcon } from "@lucide/svelte";
 

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
-	import { Portal, PortalBackdrop } from "#lib/components/ui/portal/index.js";
-	import { cn } from "#lib/utils.js";
+	import * as Sheet from "#lib/components/ui/sheet/index.js";
 	import { MenuIcon, XIcon } from "@lucide/svelte";
 	import LinkItem from "./link-item.svelte";
 	import { productLinks, companyLinks, companyLinks2 } from "./nav-links";
@@ -10,64 +9,73 @@
 </script>
 
 <div class="md:hidden">
-	<Button
-		aria-controls="mobile-menu"
-		aria-expanded={open}
-		aria-label="Toggle menu"
-		class="md:hidden"
-		onclick={() => (open = !open)}
-		size="icon"
-		variant="outline"
-	>
-		<div class={cn("transition-all", open ? "scale-100 opacity-100" : "scale-0 opacity-0")}>
-			<XIcon />
-		</div>
-		<div
-			class={cn(
-				"absolute transition-all",
-				open ? "scale-0 opacity-0" : "scale-100 opacity-100"
-			)}
+	<Sheet.Root bind:open>
+		<Sheet.Trigger>
+			{#snippet child({ props })}
+				<Button
+					{...props}
+					aria-label="Open menu"
+					class="size-11 md:hidden"
+					size="icon"
+					variant="outline"
+				>
+					<MenuIcon />
+				</Button>
+			{/snippet}
+		</Sheet.Trigger>
+
+		<Sheet.Content
+			class="top-14 gap-0 border-x-0 p-4 pb-[calc(1rem+env(safe-area-inset-bottom,0px))] shadow-none data-[side=top]:h-[calc(100dvh-3.5rem)] motion-reduce:transition-none motion-reduce:data-open:animate-none motion-reduce:data-closed:animate-none"
+			showCloseButton={false}
+			side="top"
 		>
-			<MenuIcon />
-		</div>
-	</Button>
-	{#if open}
-		<Portal class="top-14">
-			<PortalBackdrop />
-			<div
-				class={cn(
-					"size-full overflow-y-auto p-4",
-					"ease-out data-[slot=open]:animate-in data-[slot=open]:zoom-in-97"
-				)}
-				data-slot={open ? "open" : "closed"}
-			>
+			<Sheet.Title class="sr-only">Navigation menu</Sheet.Title>
+			<Sheet.Description class="sr-only">Product and company navigation</Sheet.Description>
+			<Sheet.Close>
+				{#snippet child({ props })}
+					<Button
+						{...props}
+						aria-label="Close menu"
+						class="absolute top-2 right-4 size-11"
+						size="icon"
+						variant="ghost"
+					>
+						<XIcon />
+					</Button>
+				{/snippet}
+			</Sheet.Close>
+
+			<nav aria-label="Mobile navigation" class="mt-12 overflow-y-auto overscroll-contain">
 				<div class="flex w-full flex-col gap-y-2">
 					<span class="text-sm">Product</span>
 					{#each productLinks as link}
 						<LinkItem
-							class="rounded-lg p-2 active:bg-muted dark:active:bg-muted/50"
+							class="min-h-11 rounded-lg p-2 active:bg-muted dark:active:bg-muted/50"
 							{...link}
+							onclick={() => (open = false)}
 						/>
 					{/each}
 					<span class="text-sm">Company</span>
 					{#each companyLinks as link}
 						<LinkItem
-							class="rounded-lg p-2 active:bg-muted dark:active:bg-muted/50"
+							class="min-h-11 rounded-lg p-2 active:bg-muted dark:active:bg-muted/50"
 							{...link}
+							onclick={() => (open = false)}
 						/>
 					{/each}
 					{#each companyLinks2 as link}
 						<LinkItem
-							class="rounded-lg p-2 active:bg-muted dark:active:bg-muted/50"
+							class="min-h-11 rounded-lg p-2 active:bg-muted dark:active:bg-muted/50"
 							{...link}
+							onclick={() => (open = false)}
 						/>
 					{/each}
 				</div>
 				<div class="mt-5 flex flex-col gap-2">
-					<Button class="w-full" variant="outline">Sign In</Button>
-					<Button class="w-full">Get Started</Button>
+					<Button class="min-h-11 w-full" variant="outline">Sign In</Button>
+					<Button class="min-h-11 w-full">Get Started</Button>
 				</div>
-			</div>
-		</Portal>
-	{/if}
+			</nav>
+		</Sheet.Content>
+	</Sheet.Root>
 </div>

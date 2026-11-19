@@ -133,7 +133,7 @@
 	let currentCategory = $derived(categories.find((category) => category.id === activeCategory));
 </script>
 
-<section class="mx-auto min-h-screen w-full max-w-5xl">
+<section class="mx-auto min-h-svh w-full max-w-5xl">
 	<div class="flex flex-col items-center justify-center gap-4 px-4 py-16">
 		<h2 class="font-mono text-4xl font-black text-balance md:text-5xl lg:font-black">FaQs</h2>
 		<p class="text-muted-foreground">Your questions answered here.</p>

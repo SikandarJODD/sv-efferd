@@ -1,52 +1,5 @@
 <script lang="ts">
-	const logos = [
-		{
-			src: "https://storage.efferd.com/logo/vercel-wordmark.svg",
-			alt: "Vercel Logo"
-		},
-		{
-			src: "https://storage.efferd.com/logo/supabase-wordmark.svg",
-			alt: "Supabase Logo"
-		},
-		{
-			src: "https://storage.efferd.com/logo/openai-wordmark.svg",
-			alt: "OpenAI Logo"
-		},
-		{
-			src: "https://storage.efferd.com/logo/dub-wordmark.svg",
-			alt: "Dub Logo"
-		},
-		{
-			src: "https://storage.efferd.com/logo/turso-wordmark.svg",
-			alt: "Turso Logo"
-		},
-
-		{
-			src: "https://storage.efferd.com/logo/github-wordmark.svg",
-			alt: "GitHub Logo"
-		},
-		{
-			src: "https://storage.efferd.com/logo/claude-wordmark.svg",
-			alt: "Claude AI Logo"
-		},
-		{
-			src: "https://storage.efferd.com/logo/nvidia-wordmark.svg",
-			alt: "Nvidia Logo"
-		},
-		{
-			src: "https://storage.efferd.com/logo/clerk-wordmark.svg",
-			alt: "Clerk Logo"
-		},
-		{
-			src: "https://storage.efferd.com/logo/bolt-wordmark.svg",
-			alt: "Bolt Logo"
-		},
-
-		{
-			src: "https://storage.efferd.com/logo/stripe-wordmark.svg",
-			alt: "Stripe Logo"
-		}
-	];
+	import { extendedWordmarkLogos as logos } from "../wordmark-logos";
 </script>
 
 <div
@@ -56,10 +9,10 @@
 		<img
 			alt={logo.alt}
 			class="pointer-events-none h-5 w-fit select-none dark:brightness-0 dark:invert"
-			height="auto"
+			height={logo.height}
 			loading="lazy"
 			src={logo.src}
-			width="auto"
+			width={logo.width}
 		/>
 	{/each}
 </div>

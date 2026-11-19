@@ -36,12 +36,17 @@
 >
 	{#each Array(repeat).fill(0) as _, i (i)}
 		<div
-			class={cn("flex shrink-0 justify-around gap-(--gap)", {
-				"animate-marquee flex-row": !vertical,
-				"animate-marquee-vertical flex-col": vertical,
-				"group-hover:paused": pauseOnHover,
-				"direction-[reverse]": reverse
-			})}
+			aria-hidden={i > 0}
+			class={cn(
+				"flex shrink-0 justify-around gap-(--gap) motion-reduce:animate-none",
+				i > 0 && "motion-reduce:hidden",
+				{
+					"animate-marquee flex-row": !vertical,
+					"animate-marquee-vertical flex-col": vertical,
+					"group-hover:paused": pauseOnHover,
+					"direction-[reverse]": reverse
+				}
+			)}
 		>
 			{@render children?.()}
 		</div>

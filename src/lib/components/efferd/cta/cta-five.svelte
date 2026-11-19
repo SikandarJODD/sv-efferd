@@ -26,6 +26,8 @@
 			src: "https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?q=80&w=72"
 		}
 	];
+	const id = $props.id();
+	const emailId = `${id}-email`;
 </script>
 
 <div
@@ -35,26 +37,33 @@
 
 	<div class="space-y-1">
 		<h2 class="text-center text-2xl font-semibold tracking-tight md:text-4xl">
-			Subscripe to our newsletter
+			Subscribe to our newsletter
 		</h2>
 		<p class="text-center text-sm text-balance text-muted-foreground md:text-base">
 			Get the latest updates and insights delivered right to your inbox.
 		</p>
 	</div>
 
-	<div class="flex items-center justify-center gap-2">
+	<form class="flex items-center justify-center gap-2">
+		<label class="sr-only" for={emailId}>Email address</label>
 		<InputGroup class="max-w-[280px] bg-card">
-			<InputGroupInput placeholder="Enter your email" />
+			<InputGroupInput
+				autocomplete="email"
+				id={emailId}
+				name="email"
+				placeholder="Enter your email"
+				type="email"
+			/>
 			<InputGroupAddon>
 				<AtSignIcon data-icon="inline-start" />
 			</InputGroupAddon>
 		</InputGroup>
 
-		<Button>
+		<Button type="submit">
 			Subscribe
 			<ArrowRightIcon data-icon="inline-end" />
 		</Button>
-	</div>
+	</form>
 
 	<div class="flex items-center justify-center gap-2">
 		<p class="text-sm text-muted-foreground">

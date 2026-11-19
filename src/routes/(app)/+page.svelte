@@ -1,0 +1,163 @@
+<script lang="ts">
+	import { asset } from "$app/paths";
+	import BlockCatalog from "#lib/components/home/block-catalog.svelte";
+	import Credits from "#lib/components/home/credits.svelte";
+	import Features from "#lib/components/home/features.svelte";
+	import Hero from "#lib/components/home/hero.svelte";
+	import Sponsors from "#lib/components/home/sponsors.svelte";
+	import { Separator } from "#lib/components/ui/separator/index.js";
+	import { MetaTags, JsonLd } from "svelte-meta-tags";
+
+	const siteName = "Svelte Efferd Blocks";
+	const siteUrl = "https://sv-efferd.pages.dev";
+	const canonicalUrl = `${siteUrl}/`;
+	const title = "Svelte Marketing Blocks for shadcn-svelte | Efferd";
+	const description =
+		"Browse 60+ open-source Svelte marketing blocks built with Tailwind CSS and shadcn-svelte. Preview each block and copy or install the source.";
+	const keywords = [
+		"shadcn-svelte marketing blocks",
+		"Svelte marketing blocks",
+		"shadcn blocks for marketing",
+		"landing page blocks for Svelte",
+		"hero sections",
+		"CTA blocks",
+		"pricing sections",
+		"testimonial sections",
+		"team sections",
+		"FAQ sections",
+		"header blocks",
+		"footer blocks",
+		"contact sections"
+	] as const;
+	const categoryNames = [
+		"Hero sections",
+		"CTA sections",
+		"Pricing sections",
+		"Testimonial sections",
+		"Team sections",
+		"FAQ sections",
+		"Blog sections",
+		"Contact sections",
+		"Header sections",
+		"Footer sections",
+		"Logo cloud sections",
+		"Integration sections",
+		"Feature sections"
+	] as const;
+	const ogImageUrl = new URL(asset("og.png"), siteUrl).toString();
+	const logoUrl = new URL("/favicon.svg", siteUrl).toString();
+	const jsonLdSchema = {
+		"@graph": [
+			{
+				"@type": "Organization",
+				"@id": `${canonicalUrl}#organization`,
+				name: "Svelte Efferd",
+				url: canonicalUrl,
+				logo: {
+					"@type": "ImageObject",
+					url: logoUrl
+				},
+				sameAs: [
+					"https://github.com/SikandarJODD/sv-efferd",
+					"https://x.com/Sikandar_Bhide"
+				]
+			},
+			{
+				"@type": "WebSite",
+				"@id": `${canonicalUrl}#website`,
+				url: canonicalUrl,
+				name: siteName,
+				description,
+				alternateName: ["Svelte Efferd", "Efferd Blocks"],
+				inLanguage: "en",
+				publisher: {
+					"@id": `${canonicalUrl}#organization`
+				}
+			},
+			{
+				"@type": "CollectionPage",
+				"@id": `${canonicalUrl}#webpage`,
+				url: canonicalUrl,
+				name: title,
+				description,
+				isPartOf: {
+					"@id": `${canonicalUrl}#website`
+				},
+				about: [
+					{
+						"@type": "Thing",
+						name: "Marketing blocks"
+					},
+					{
+						"@type": "Thing",
+						name: "shadcn-svelte components"
+					},
+					{
+						"@type": "Thing",
+						name: "Svelte landing page sections"
+					}
+				],
+				primaryImageOfPage: {
+					"@type": "ImageObject",
+					url: ogImageUrl
+				},
+				mainEntity: {
+					"@type": "ItemList",
+					name: "Marketing block categories",
+					numberOfItems: categoryNames.length,
+					itemListElement: categoryNames.map((name, index) => ({
+						"@type": "ListItem",
+						position: index + 1,
+						name
+					}))
+				},
+				publisher: {
+					"@id": `${canonicalUrl}#organization`
+				}
+			}
+		]
+	};
+</script>
+
+<MetaTags
+	{title}
+	{description}
+	{keywords}
+	openGraph={{
+		type: "website",
+		title,
+		description,
+		images: [
+			{
+				url: ogImageUrl,
+				alt: "Svelte Efferd marketing blocks preview",
+				width: 1200,
+				height: 630,
+				type: "image/png"
+			}
+		],
+		siteName,
+		url: canonicalUrl,
+		locale: "en_US"
+	}}
+	canonical={canonicalUrl}
+	twitter={{
+		cardType: "summary_large_image",
+		title,
+		description,
+		image: ogImageUrl,
+		imageAlt: "Svelte Efferd marketing blocks preview",
+		site: "@Sikandar_Bhide",
+		creator: "@Sikandar_Bhide"
+	}}
+/>
+<JsonLd schema={jsonLdSchema} />
+
+<Hero />
+<BlockCatalog />
+<Separator />
+<Sponsors />
+<Separator />
+<Credits />
+<Separator />
+<Features />

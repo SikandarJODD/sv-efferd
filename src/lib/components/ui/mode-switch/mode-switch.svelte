@@ -2,6 +2,7 @@
 	export type LightSwitchProps = {
 		variant?: "outline" | "ghost";
 		size?: ButtonSize;
+		class?: string;
 	};
 </script>
 
@@ -13,7 +14,7 @@
 	import { Button, type ButtonSize } from "../button";
 	import Kbd from "../kbd/kbd.svelte";
 
-	let { variant = "outline", size = "icon-sm" }: LightSwitchProps = $props();
+	let { variant = "outline", size = "icon-sm", class: className }: LightSwitchProps = $props();
 </script>
 
 <Tooltip.Provider>
@@ -22,6 +23,7 @@
 			{#snippet child({ props })}
 				<Button
 					{...props}
+					class={className}
 					aria-label={mode.current === "dark"
 						? "Switch to light mode"
 						: "Switch to dark mode"}

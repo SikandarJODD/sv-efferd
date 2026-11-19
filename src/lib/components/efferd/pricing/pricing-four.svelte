@@ -1,7 +1,7 @@
 <script lang="ts">
 	import NumberFlow from "@number-flow/svelte";
 	import { CircleCheck, Star } from "@lucide/svelte";
-	import { AnimatePresence, createLayoutMotion } from "motion-sv";
+	import { AnimatePresence, createLayoutMotion, useReducedMotion } from "motion-sv";
 	import FrequencyToggle from "#lib/components/efferd/pricing/frequency-toggle.svelte";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { cn } from "#lib/utils.js";
@@ -101,6 +101,7 @@
 	];
 
 	const layout = createLayoutMotion();
+	let prefersReducedMotion = useReducedMotion();
 
 	let frequency = $state<FREQUENCY>("monthly");
 
@@ -172,6 +173,7 @@
 						class="absolute top-2 right-2 z-10 flex items-center gap-2"
 						layout
 						layoutDependency={frequency}
+						transition={{ duration: prefersReducedMotion.current ? 0 : 0.15 }}
 					>
 						<AnimatePresence initial={false}>
 							{#each getBadges(plan, frequency) as badge (badge.id)}
@@ -186,7 +188,13 @@
 									exit={{ opacity: 0, scale: 0.95, y: -4 }}
 									initial={{ opacity: 0, scale: 0.95, y: -4 }}
 									layout
-									transition={{ duration: badge.id === "popular" ? 0.1 : 0.15 }}
+									transition={{
+										duration: prefersReducedMotion.current
+											? 0
+											: badge.id === "popular"
+												? 0.1
+												: 0.15
+									}}
 								>
 									{#if badge.id === "popular"}
 										<Star class="size-3 fill-current" />

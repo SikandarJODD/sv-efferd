@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="relative flex min-h-screen flex-col overflow-hidden px-4 supports-[overflow:clip]:overflow-clip"
+	class="relative flex min-h-svh flex-col overflow-hidden px-4 supports-[overflow:clip]:overflow-clip"
 >
 	<HeaderTwo />
 	<main
