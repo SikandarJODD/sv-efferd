@@ -1681,7 +1681,76 @@
 					"target": "efferd/dashboard/dashboard-three/formatter.ts"
 				}
 			],
-			"registryDependencies": ["avatar", "badge", "button", "card", "chart", "dropdown-menu", "select", "table"],
+			"registryDependencies": [
+				"avatar",
+				"badge",
+				"button",
+				"card",
+				"chart",
+				"dropdown-menu",
+				"select",
+				"table"
+			],
+			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"]
+		},
+		{
+			"name": "dashboard-four",
+			"title": "Dashboard Four",
+			"type": "registry:block",
+			"description": "A responsive commerce dashboard with revenue metrics, sales trends, return rates, category performance, and store-management shortcuts.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-four/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/dashboard-stats.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/dashboard-stats.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/revenue-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/revenue-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/revenue-chart-data.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-four/revenue-chart-data.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/refund-return-rate-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/refund-return-rate-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/category-rank-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/category-rank-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/quick-actions.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/quick-actions.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-four/formatter.ts"
+				}
+			],
+			"registryDependencies": ["button", "card", "chart", "item", "select"],
 			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"]
 		},
 		{

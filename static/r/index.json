@@ -853,6 +853,26 @@
 		"relativeUrl": "dashboard-three.json"
 	},
 	{
+		"name": "dashboard-four",
+		"title": "Dashboard Four",
+		"type": "registry:block",
+		"description": "A responsive commerce dashboard with revenue metrics, sales trends, return rates, category performance, and store-management shortcuts.",
+		"dependencies": [
+			"@lucide/svelte",
+			"d3-scale",
+			"d3-shape",
+			"layerchart"
+		],
+		"registryDependencies": [
+			"button",
+			"card",
+			"chart",
+			"item",
+			"select"
+		],
+		"relativeUrl": "dashboard-four.json"
+	},
+	{
 		"name": "settings-one",
 		"title": "Settings One",
 		"type": "registry:block",
