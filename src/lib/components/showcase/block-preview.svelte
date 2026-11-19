@@ -95,7 +95,7 @@
 			{canToggleResponsivePreview}
 			{previewHref}
 			openPreviewNote={headerPreview || dashboardPreview
-				? "Open this preview, then scroll."
+				? "Open and have a little scroll."
 				: undefined}
 			{installId}
 			{themeSetupHref}
