@@ -13,7 +13,7 @@
 		<p class="mt-0.5 text-xs leading-4 text-muted-foreground">{countLabel}</p>
 	</div>
 
-	<div class="grid flex-1 grid-cols-3 items-end gap-1.5 mask-b-from-90%">
+	<div class="grid flex-1 grid-cols-3 items-end gap-1.5">
 		<div class="flex h-16 flex-col items-center justify-center gap-1.5 rounded-sm border bg-background p-1.5">
 			<div class="flex size-5 items-center justify-center rounded-sm bg-muted/60">
 				<div class="size-2 rounded-full border border-muted-foreground/25"></div>
