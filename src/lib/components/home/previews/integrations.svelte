@@ -7,8 +7,20 @@
 	let { title, countLabel }: Props = $props();
 </script>
 
-<div class="grid h-full grid-cols-2 place-content-center overflow-hidden px-3 py-3 sm:px-4 sm:py-4">
-	<div class="flex items-center">
+<div class="relative grid h-full grid-cols-2 place-content-center overflow-hidden px-3 py-3 sm:px-4 sm:py-4">
+	<svg
+		class="pointer-events-none absolute inset-0 size-full text-muted-foreground/16 [mask-image:linear-gradient(to_right,transparent_0%,transparent_42%,black_64%,black_100%)]"
+		aria-hidden="true"
+	>
+		<defs>
+			<pattern id="integration-graph-grid" width="12" height="12" patternUnits="userSpaceOnUse">
+				<path d="M12 0H0V12" fill="none" stroke="currentColor" stroke-width="0.65" />
+			</pattern>
+		</defs>
+		<rect width="100%" height="100%" fill="url(#integration-graph-grid)" />
+	</svg>
+
+	<div class="relative flex items-center">
 		<div>
 			<h3 class="font-heading text-base font-normal text-foreground">
 				{title}
