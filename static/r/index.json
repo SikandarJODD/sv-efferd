@@ -830,6 +830,29 @@
 		"relativeUrl": "dashboard-two.json"
 	},
 	{
+		"name": "dashboard-three",
+		"title": "Dashboard Three",
+		"type": "registry:block",
+		"description": "A responsive support dashboard with queue metrics, conversation charts, team availability, inbox activity, and CSAT reporting.",
+		"dependencies": [
+			"@lucide/svelte",
+			"d3-scale",
+			"d3-shape",
+			"layerchart"
+		],
+		"registryDependencies": [
+			"avatar",
+			"badge",
+			"button",
+			"card",
+			"chart",
+			"dropdown-menu",
+			"select",
+			"table"
+		],
+		"relativeUrl": "dashboard-three.json"
+	},
+	{
 		"name": "settings-one",
 		"title": "Settings One",
 		"type": "registry:block",

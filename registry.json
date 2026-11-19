@@ -1605,6 +1605,86 @@
 			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"]
 		},
 		{
+			"name": "dashboard-three",
+			"title": "Dashboard Three",
+			"type": "registry:block",
+			"description": "A responsive support dashboard with queue metrics, conversation charts, team availability, inbox activity, and CSAT reporting.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-three/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/dashboard-stats.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/dashboard-stats.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/conversation-volume-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/conversation-volume-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/conversation-volume-data.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-three/conversation-volume-data.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/channel-breakdown-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/channel-breakdown-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/csat-responses-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/csat-responses-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/first-reply-time-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/first-reply-time-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/recent-conversations.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/recent-conversations.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/team-on-duty.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/team-on-duty.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/support-activity.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/support-activity.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/status-indicator.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/status-indicator.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-three/formatter.ts"
+				}
+			],
+			"registryDependencies": ["avatar", "badge", "button", "card", "chart", "dropdown-menu", "select", "table"],
+			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"]
+		},
+		{
 			"name": "settings-one",
 			"title": "Settings One",
 			"type": "registry:block",
