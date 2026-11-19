@@ -8,7 +8,7 @@
 </script>
 
 <div class="flex h-full flex-col items-center justify-center gap-2">
-	<h3 class="font-heading px-3 text-center text-sm font-semibold tracking-tight text-foreground">
+	<h3 class="font-heading px-3 text-center text-base font-normal text-foreground">
 		{title}
 	</h3>
 	<div class="w-full border-y border-border/70 px-3 py-1.5">

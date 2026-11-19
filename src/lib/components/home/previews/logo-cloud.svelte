@@ -9,7 +9,7 @@
 
 <div class="flex h-full flex-col items-center justify-center px-3 py-3 sm:px-4 sm:py-4">
 	<div class="pb-3 text-center">
-		<h3 class="font-heading text-sm font-semibold tracking-tight text-foreground">{title}</h3>
+		<h3 class="font-heading text-base font-normal text-foreground">{title}</h3>
 		<p class="mt-0.5 text-xs leading-4 text-muted-foreground">{countLabel}</p>
 	</div>
 	<div

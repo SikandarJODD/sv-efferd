@@ -16,7 +16,7 @@
 	<div
 		class="absolute inset-y-0 right-4 w-px bg-linear-to-b from-transparent via-border/80 to-border/80"
 	></div>
-	<h3 class="font-heading text-sm font-semibold tracking-tight text-foreground">{title}</h3>
+	<h3 class="font-heading text-base font-normal text-foreground">{title}</h3>
 	<p class="mt-0.5 text-xs leading-4 text-muted-foreground">{countLabel}</p>
 	<div class="mt-3 grid grid-cols-2 gap-2">
 		<div class="h-4 w-12 rounded-sm bg-muted-foreground/14"></div>
