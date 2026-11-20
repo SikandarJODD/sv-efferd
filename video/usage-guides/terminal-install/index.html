@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../shared.css" />
+		<style>
+			.heading {
+				position: absolute;
+				top: 150px;
+				left: 230px;
+			}
+
+			h1 {
+				font-size: 54px;
+				font-weight: 560;
+				letter-spacing: -0.035em;
+			}
+
+			.heading p {
+				margin-top: 14px;
+				color: var(--muted-foreground);
+				font-size: 24px;
+			}
+
+			.terminal {
+				position: absolute;
+				top: 326px;
+				left: 230px;
+				width: 1460px;
+				height: 550px;
+				overflow: hidden;
+				border-radius: 16px;
+				background: #151515;
+				color: #f5f5f5;
+				box-shadow: 0 1px 0 rgb(0 0 0 / 8%);
+			}
+
+			.terminal-bar {
+				display: flex;
+				height: 62px;
+				align-items: center;
+				border-bottom: 1px solid #2f2f2f;
+				padding: 0 28px;
+				color: #9a9a9a;
+				font-size: 17px;
+			}
+
+			.terminal-body {
+				padding: 42px 48px;
+				font-size: 21px;
+				line-height: 1.9;
+			}
+
+			.command-line {
+				display: flex;
+				align-items: baseline;
+				white-space: nowrap;
+			}
+
+			.prompt {
+				margin-right: 16px;
+				color: #a3a3a3;
+			}
+
+			.command {
+				will-change: opacity, transform;
+			}
+
+			.caret {
+				display: inline-block;
+				width: 10px;
+				height: 23px;
+				margin-left: 6px;
+				vertical-align: -3px;
+				background: #d4d4d4;
+			}
+
+			.output {
+				margin-top: 30px;
+				color: #bdbdbd;
+			}
+
+			.output-line {
+				display: flex;
+				align-items: center;
+				gap: 14px;
+				height: 42px;
+				opacity: 0;
+				will-change: opacity, transform;
+			}
+
+			.tick {
+				color: #4ade80;
+				font-weight: 700;
+			}
+
+			.complete {
+				display: inline-flex;
+				align-items: center;
+				gap: 12px;
+				margin-top: 24px;
+				color: #f5f5f5;
+				font-weight: 600;
+				opacity: 0;
+				will-change: opacity, transform;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="scene">
+			<div class="heading">
+				<h1>Install the block</h1>
+				<p>Paste the copied command into your terminal.</p>
+			</div>
+
+			<div class="terminal mono">
+				<div class="terminal-bar">Terminal — sv-efferd</div>
+				<div class="terminal-body" id="terminal-body">
+					<div class="command-line">
+						<span class="prompt">~ %</span>
+						<span class="command" id="command">pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/feature-one.json</span>
+						<span class="caret" id="caret"></span>
+					</div>
+					<div class="output">
+						<div class="output-line"><span class="tick">✓</span><span>Checking registry.</span></div>
+						<div class="output-line"><span class="tick">✓</span><span>Installing dependencies.</span></div>
+						<div class="output-line"><span class="tick">✓</span><span>Created component files.</span></div>
+						<div class="complete" id="complete"><span class="tick">✓</span><span>Feature One installed</span></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="../shared.js"></script>
+		<script>
+			window.DURATION = 6;
+			const command = document.getElementById("command");
+			const caret = document.getElementById("caret");
+			const lines = [...document.querySelectorAll(".output-line")];
+			const complete = document.getElementById("complete");
+			const terminalBody = document.getElementById("terminal-body");
+
+			window.render = (time) => {
+				const reset = interval(time, 5.45, 0.35, easeOut);
+				terminalBody.style.opacity = 1 - reset;
+
+				const pasted = interval(time, 0.38, 0.18, easeOut);
+				command.style.opacity = pasted;
+				command.style.transform = `translateY(${lerp(8, 0, pasted)}px)`;
+				caret.style.opacity = pasted > 0.95 && Math.floor(time * 2.5) % 2 === 0 ? 1 : 0;
+
+				const starts = [1.45, 2.15, 2.85];
+				lines.forEach((line, index) => {
+					const progress = interval(time, starts[index], 0.25, easeOut);
+					line.style.opacity = progress;
+					line.style.transform = `translateY(${lerp(9, 0, progress)}px)`;
+				});
+
+				const done = interval(time, 3.65, 0.3, easeOut);
+				complete.style.opacity = done;
+				complete.style.transform = `translateY(${lerp(10, 0, done)}px)`;
+			};
+
+			window.render(0);
+		</script>
+	</body>
+</html>

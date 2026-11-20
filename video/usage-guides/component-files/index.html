@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../shared.css" />
+		<style>
+			.heading {
+				position: absolute;
+				top: 112px;
+				left: 270px;
+			}
+
+			h1 {
+				font-size: 54px;
+				font-weight: 560;
+				letter-spacing: -0.035em;
+			}
+
+			.heading p {
+				margin-top: 14px;
+				color: var(--muted-foreground);
+				font-size: 24px;
+			}
+
+			.tree {
+				position: absolute;
+				top: 278px;
+				left: 270px;
+				width: 1380px;
+				height: 662px;
+				border: 1px solid var(--border);
+				border-radius: 14px;
+				background: #fafafa;
+				padding: 42px 54px;
+				font-size: 23px;
+				line-height: 1.58;
+			}
+
+			.folder {
+				color: #737373;
+			}
+
+			.file {
+				display: flex;
+				width: fit-content;
+				min-width: 850px;
+				height: 36px;
+				align-items: center;
+				border-radius: 6px;
+				color: #a3a3a3;
+				will-change: color, background-color;
+			}
+
+			.file .prefix {
+				white-space: pre;
+			}
+
+			.file .name {
+				font-weight: 520;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="scene">
+			<div class="heading">
+				<h1>Use the component</h1>
+				<p>The installed source lives alongside the rest of your Svelte components.</p>
+			</div>
+
+			<div class="tree mono">
+				<div class="folder">src/</div>
+				<div class="folder">└── lib/</div>
+				<div class="folder">&nbsp;&nbsp;&nbsp;&nbsp;└── components/</div>
+				<div class="folder">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── efferd/</div>
+				<div class="folder">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── features/</div>
+				<div class="file"><span class="prefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── </span><span class="name">feature-one.svelte</span></div>
+				<div class="file"><span class="prefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── </span><span class="name">feature-two.svelte</span></div>
+				<div class="file"><span class="prefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── </span><span class="name">feature-three.svelte</span></div>
+				<div class="file"><span class="prefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── </span><span class="name">feature-four/feature-four.svelte</span></div>
+				<div class="file"><span class="prefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── </span><span class="name">feature-five/feature-five.svelte</span></div>
+			</div>
+			<img class="cursor" id="cursor" src="../cursors/hand.png" alt="" />
+		</section>
+
+		<script src="../shared.js"></script>
+		<script>
+			window.DURATION = 6;
+			const files = [...document.querySelectorAll(".file")];
+			const cursor = document.getElementById("cursor");
+			const clicks = [0.95, 1.75, 2.55, 3.35, 4.15];
+			const targets = files.map((file) => {
+				const name = file.querySelector(".name").getBoundingClientRect();
+				return { x: name.right - 24, y: name.top + name.height / 2 - 16 };
+			});
+			const start = { x: 1980, y: 760 };
+			const exit = { x: 1990, y: 680 };
+
+			function cursorPoint(time) {
+				if (time < clicks[0]) {
+					const progress = interval(time, 0.22, 0.62);
+					return quadraticPoint(start, { x: 1740, y: 710 }, targets[0], progress);
+				}
+
+				for (let index = 1; index < clicks.length; index += 1) {
+					if (time < clicks[index]) {
+						const progress = interval(time, clicks[index - 1] + 0.12, 0.48);
+						return {
+							x: lerp(targets[index - 1].x, targets[index].x, progress),
+							y: lerp(targets[index - 1].y, targets[index].y, progress)
+						};
+					}
+				}
+
+				const progress = interval(time, 4.75, 0.8);
+				return quadraticPoint(targets.at(-1), { x: 1700, y: 760 }, exit, progress);
+			}
+
+			window.render = (time) => {
+				const point = cursorPoint(time);
+				const visible = interval(time, 0.15, 0.15) * (1 - interval(time, 5.45, 0.15));
+				const press = Math.max(...clicks.map((click) => pressAmount(time, click)));
+				setCursor(cursor, point, visible, 1 - press * 0.08);
+
+				let selected = -1;
+				clicks.forEach((click, index) => {
+					if (time >= click) selected = index;
+				});
+				if (time >= 5.45) selected = -1;
+
+				files.forEach((file, index) => {
+					const active = index === selected;
+					file.style.color = active ? "#2563eb" : "#a3a3a3";
+					file.style.backgroundColor = active ? "#eff6ff" : "transparent";
+				});
+			};
+
+			window.render(0);
+		</script>
+	</body>
+</html>

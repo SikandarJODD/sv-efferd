@@ -23,9 +23,7 @@ src/
 │           ├── docs-pagination.svelte
 │           ├── docs-seo.svelte
 │           └── usage/
-│               ├── block-picker-illustration.svelte
-│               ├── package-manager-illustration.svelte
-│               └── copy-command-illustration.svelte
+│               └── usage-video.svelte
 └── routes/
     └── (app)/
         └── docs/
@@ -38,6 +36,12 @@ src/
             └── usage/
                 ├── +page.svelte
                 └── +page.ts
+static/
+└── videos/
+    └── usage/
+        ├── usage-install-command-light-6s.mp4
+        ├── usage-terminal-install-light-6s.mp4
+        └── usage-component-files-light-6s.mp4
 ```
 
 ## Phase 1: Introduction page
@@ -67,19 +71,19 @@ src/
 
 ## Phase 3: Usage page
 
-- [ ] Create `src/routes/(app)/docs/usage/+page.svelte` and its `+page.ts`.
-- [ ] Use the title `Use a block` and the description: `Choose a block, copy its install command, and edit the Svelte source in your project.`
-- [ ] Keep this page shorter than Installation. Use three numbered sections that match the actual block catalog flow.
-- [ ] Add three focused illustrations under `src/lib/components/docs/usage/`. Build them from semantic HTML and existing UI styles so they stay crisp in both themes and do not require new image assets.
-- [ ] Illustration 1, `Choose a block`: depict a small block preview with the block title and relevant controls. Mark the selected block without reproducing the whole site chrome.
-- [ ] Illustration 2, `Pick a package manager`: depict the install control with `pnpm` selected and make the package-manager selector the clear point of attention.
-- [ ] Illustration 3, `Copy and run the command`: depict the copy action and a short registry command, then connect it to the local component file the CLI adds.
-- [ ] Wrap each visual in `<figure>` and provide a useful `<figcaption>`. Treat decorative shapes and cursor markers as `aria-hidden`; the surrounding heading and text must contain the full instruction.
-- [ ] Use one border-based surface system for the illustrations. Match the real block toolbar proportions, avoid browser-window dots, and do not add fake screenshots or floating callout bubbles.
-- [ ] Follow the illustrations with a compact `CodeFrame` named for a real Svelte file, showing the installed component imported and rendered. Keep the example consistent with the registry output path.
-- [ ] Add one closing note that the installed source belongs to the user's app and can be edited like any other Svelte component.
-- [ ] Add bottom navigation with `Installation` as previous and no next link.
-- [ ] SEO title: `Use Svelte Efferd Blocks`. Target keywords: `use Svelte Efferd blocks`, `Svelte block registry`, `copy Svelte components`, `shadcn-svelte blocks`, and `Svelte component source`.
+- [x] Create `src/routes/(app)/docs/usage/+page.svelte` and its `+page.ts`.
+- [x] Use the title `Use a block` and the description: `Choose a block, copy its install command, and edit the Svelte source in your project.`
+- [x] Keep this page shorter than Installation. Use three numbered sections that match the actual block catalog flow.
+- [x] Add three six-second light-theme motion illustrations at 3840×2160 and 60 fps. Keep their deterministic HTML sources under `video/usage-guides/` and the web-ready H.264 files under `static/videos/usage/`.
+- [x] Video 1, `Copy the install command`: focus on the Feature One toolbar command, cursor click, and copied checkmark.
+- [x] Video 2, `Run the command`: show the registry command pasted into a monospace terminal followed by concise completion ticks.
+- [x] Video 3, `Use the component`: show an ASCII source tree with five feature entries and a cursor moving between highlighted files.
+- [x] Render every video through one reusable `<figure>` component with a useful `<figcaption>`, native controls, muted playback, and autoplay disabled when reduced motion is preferred.
+- [x] Use one restrained surface system inside the videos. Match the real toolbar proportions and avoid browser-window dots, fake screenshots, or floating callouts.
+- [x] Follow the videos with a compact `CodeFrame` named for a real Svelte file, showing the installed component imported and rendered from the registry output path.
+- [x] Add one closing note that the installed source belongs to the user's app and can be edited like any other Svelte component.
+- [x] Add bottom navigation with `Installation` as previous and no next link.
+- [x] SEO title: `Use Svelte Efferd Blocks`. Target keywords: `use Svelte Efferd blocks`, `Svelte block registry`, `copy Svelte components`, `shadcn-svelte blocks`, and `Svelte component source`.
 
 ## Phase 4: Quality, SEO, and verification
 
@@ -101,5 +105,5 @@ src/
 - [ ] Installation commands use the secondary `PMCommand` variant.
 - [ ] Code examples use `CodeSnippet` or `CodeFrame` from the existing code component folder.
 - [ ] The Introduction page uses `FaviconLink` for Efferd and Bhide Svelte credits.
-- [ ] The Usage page contains exactly three purposeful, accessible illustrations.
+- [x] The Usage page contains exactly three purposeful, accessible motion illustrations.
 - [ ] The production build, metadata checks, keyboard pass, and responsive pass succeed.
