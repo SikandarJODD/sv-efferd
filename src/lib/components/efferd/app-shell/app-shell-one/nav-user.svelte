@@ -14,9 +14,9 @@
 	} from "@lucide/svelte";
 
 	const user = {
-		name: "Shaban Haider",
-		email: "shaban@efferd.com",
-		avatar: "https://github.com/shabanhr.png"
+		name: "Bhide Svelte",
+		email: "email@example.com",
+		avatar: "https://github.com/SikandarJODD.png"
 	};
 	const sidebar = Sidebar.useSidebar();
 </script>

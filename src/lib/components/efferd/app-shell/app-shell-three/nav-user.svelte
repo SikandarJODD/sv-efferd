@@ -12,9 +12,9 @@
 	} from "@lucide/svelte";
 
 	const user = {
-		name: "Shaban Haider",
-		email: "shaban@efferd.com",
-		avatar: "https://github.com/shabanhr.png"
+		name: "Bhide Svelte",
+		email: "email@example.com",
+		avatar: "https://github.com/SikandarJODD.png"
 	};
 </script>
 
@@ -34,12 +34,18 @@
 				</Avatar.Root>
 				<div>
 					<span class="font-medium text-foreground">{user.name}</span><br />
-					<div class="max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-xs text-muted-foreground">{user.email}</div>
+					<div
+						class="max-w-full overflow-hidden text-xs text-ellipsis whitespace-nowrap text-muted-foreground"
+					>
+						{user.email}
+					</div>
 				</div>
 			</DropdownMenu.Label>
 		</DropdownMenu.Group>
 		<DropdownMenu.Separator />
-		<DropdownMenu.Group><DropdownMenu.Item><UserIcon />Profile</DropdownMenu.Item></DropdownMenu.Group>
+		<DropdownMenu.Group
+			><DropdownMenu.Item><UserIcon />Profile</DropdownMenu.Item></DropdownMenu.Group
+		>
 		<DropdownMenu.Separator />
 		<DropdownMenu.Group>
 			<DropdownMenu.Item><BellIcon />Notifications</DropdownMenu.Item>
@@ -51,8 +57,14 @@
 			<DropdownMenu.Item><GraduationCapIcon />Agent training</DropdownMenu.Item>
 		</DropdownMenu.Group>
 		<DropdownMenu.Separator />
-		<DropdownMenu.Group><DropdownMenu.Item><CreditCardIcon />Subscription</DropdownMenu.Item></DropdownMenu.Group>
+		<DropdownMenu.Group
+			><DropdownMenu.Item><CreditCardIcon />Subscription</DropdownMenu.Item
+			></DropdownMenu.Group
+		>
 		<DropdownMenu.Separator />
-		<DropdownMenu.Group><DropdownMenu.Item variant="destructive"><LogOutIcon />Log out</DropdownMenu.Item></DropdownMenu.Group>
+		<DropdownMenu.Group
+			><DropdownMenu.Item variant="destructive"><LogOutIcon />Log out</DropdownMenu.Item
+			></DropdownMenu.Group
+		>
 	</DropdownMenu.Content>
 </DropdownMenu.Root>

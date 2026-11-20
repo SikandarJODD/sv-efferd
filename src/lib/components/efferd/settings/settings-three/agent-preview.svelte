@@ -16,10 +16,10 @@
 	</CardHeader>
 	<CardContent class="flex flex-1 flex-col items-start justify-center px-(--card-spacing) py-8">
 		<Avatar class="size-20">
-			<AvatarImage alt="" src="https://github.com/shabanhr.png" />
+			<AvatarImage alt="" src="https://github.com/SikandarJODD.png" />
 			<AvatarFallback>SH</AvatarFallback>
 		</Avatar>
-		<p class="font-heading mt-4 text-xl font-medium text-balance">Shaban Haider</p>
+		<p class="font-heading mt-4 text-xl font-medium text-balance">Bhide Svelte</p>
 		<p class="mt-1 text-sm text-pretty text-muted-foreground">Support lead · Karachi</p>
 		<div class="mt-3 flex items-center gap-1.5 text-xs">
 			<span class="relative flex size-2" aria-hidden="true">

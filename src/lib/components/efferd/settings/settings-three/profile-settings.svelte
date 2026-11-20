@@ -7,7 +7,7 @@
 	import SettingField from "./setting-field.svelte";
 	import SettingsSection from "./settings-section.svelte";
 
-	const defaultSrc = "https://github.com/shabanhr.png";
+	const defaultSrc = "https://github.com/SikandarJODD.png";
 	let avatarSrc = $state(defaultSrc);
 
 	$effect(() => {
@@ -66,7 +66,7 @@
 				htmlFor="display-name"
 				label="Display name"
 			>
-				<Input autocomplete="name" id="display-name" value="Shaban Haider" />
+				<Input autocomplete="name" id="display-name" value="Bhide Svelte" />
 			</SettingField>
 			<FieldSeparator />
 			<SettingField
@@ -74,7 +74,7 @@
 				htmlFor="email"
 				label="Primary Email"
 			>
-				<Input autocomplete="email" id="email" type="email" value="shaban@efferd.com" />
+				<Input autocomplete="email" id="email" type="email" value="email@example.com" />
 			</SettingField>
 		</FieldGroup>
 	</CardContent>

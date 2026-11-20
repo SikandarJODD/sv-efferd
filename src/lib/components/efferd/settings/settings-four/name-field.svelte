@@ -24,7 +24,7 @@
 				autocomplete="name"
 				id="display-name"
 				maxlength={32}
-				value="Shaban Haider"
+				value="Bhide Svelte"
 			/>
 		</InputGroup>
 	</SettingField>

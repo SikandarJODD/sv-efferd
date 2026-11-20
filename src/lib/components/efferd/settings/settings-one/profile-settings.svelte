@@ -1,15 +1,11 @@
 <script lang="ts">
-	import {
-		Avatar,
-		AvatarFallback,
-		AvatarImage
-	} from "#lib/components/ui/avatar/index.js";
+	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
 	import { FieldSeparator } from "#lib/components/ui/field/index.js";
 	import { Input } from "#lib/components/ui/input/index.js";
 	import SettingField from "./setting-field.svelte";
 	import SettingsSection from "./settings-section.svelte";
 
-	const defaultSrc = "https://github.com/shabanhr.png";
+	const defaultSrc = "https://github.com/SikandarJODD.png";
 	let avatarSrc = $state(defaultSrc);
 
 	$effect(() => {
@@ -58,14 +54,10 @@
 		htmlFor="display-name"
 		label="Display name"
 	>
-		<Input autocomplete="name" id="display-name" value="Shaban Haider" />
+		<Input autocomplete="name" id="display-name" value="Bhide Svelte" />
 	</SettingField>
 	<FieldSeparator />
-	<SettingField
-		description="Sign-in and billing receipts go here."
-		htmlFor="email"
-		label="Email"
-	>
-		<Input autocomplete="email" id="email" type="email" value="shaban@efferd.com" />
+	<SettingField description="Sign-in and billing receipts go here." htmlFor="email" label="Email">
+		<Input autocomplete="email" id="email" type="email" value="email@example.com" />
 	</SettingField>
 </SettingsSection>

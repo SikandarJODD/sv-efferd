@@ -21,10 +21,10 @@
 		</div>
 		<div class="grid gap-6 sm:grid-cols-2">
 			<SettingField label="Full name"
-				><span class="truncate text-sm">Shaban Haider</span></SettingField
+				><span class="truncate text-sm">Bhide Svelte</span></SettingField
 			>
 			<SettingField label="Primary email">
-				<span class="truncate text-sm">shaban@efferd.com</span>
+				<span class="truncate text-sm">email@example.com</span>
 			</SettingField>
 		</div>
 	</SettingsSection>

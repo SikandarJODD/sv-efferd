@@ -4,7 +4,7 @@
 	import SettingField from "./setting-field.svelte";
 	import SettingsSection from "./settings-section.svelte";
 
-	const defaultAvatarSrc = "https://github.com/shabanhr.png";
+	const defaultAvatarSrc = "https://github.com/SikandarJODD.png";
 	let avatarSrc = $state(defaultAvatarSrc);
 
 	$effect(() => {
@@ -32,7 +32,7 @@
 			<label class="cursor-pointer" for="avatar">
 				<span class="sr-only">Upload a new avatar</span>
 				<Avatar class="size-16">
-					<AvatarImage alt="Shaban Haider" src={avatarSrc} />
+					<AvatarImage alt="Bhide Svelte" src={avatarSrc} />
 					<AvatarFallback>SH</AvatarFallback>
 				</Avatar>
 				<input

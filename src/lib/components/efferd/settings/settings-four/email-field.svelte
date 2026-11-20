@@ -24,7 +24,7 @@
 				autocomplete="email"
 				id="email"
 				type="email"
-				value="shaban@efferd.com"
+				value="email@example.com"
 			/>
 		</InputGroup>
 	</SettingField>

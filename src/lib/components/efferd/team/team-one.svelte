@@ -11,9 +11,9 @@
 
 	const team: TeamMember[] = [
 		{
-			name: "Shaban Haider",
+			name: "Bhide Svelte",
 			role: "Founder & CEO",
-			image: "https://github.com/shabanhr.png",
+			image: "https://github.com/SikandarJODD.png",
 			link: "#"
 		},
 		{

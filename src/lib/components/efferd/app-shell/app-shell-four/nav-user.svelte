@@ -12,14 +12,17 @@
 	} from "@lucide/svelte";
 
 	const user = {
-		name: "Shaban Haider",
-		email: "shaban@efferd.com",
-		avatar: "https://github.com/shabanhr.png"
+		name: "Bhide Svelte",
+		email: "email@example.com",
+		avatar: "https://github.com/SikandarJODD.png"
 	};
 </script>
 
 <DropdownMenu.Root>
-	<DropdownMenu.Trigger aria-label="Open account menu" class="flex size-9 items-center justify-center rounded-full">
+	<DropdownMenu.Trigger
+		aria-label="Open account menu"
+		class="flex size-9 items-center justify-center rounded-full"
+	>
 		<Avatar.Root class="size-8">
 			<Avatar.Image src={user.avatar} alt={user.name} />
 			<Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
@@ -32,11 +35,20 @@
 					<Avatar.Image src={user.avatar} alt={user.name} />
 					<Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
 				</Avatar.Root>
-				<div><span class="font-medium text-foreground">{user.name}</span><br /><div class="max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-xs text-muted-foreground">{user.email}</div></div>
+				<div>
+					<span class="font-medium text-foreground">{user.name}</span><br />
+					<div
+						class="max-w-full overflow-hidden text-xs text-ellipsis whitespace-nowrap text-muted-foreground"
+					>
+						{user.email}
+					</div>
+				</div>
 			</DropdownMenu.Label>
 		</DropdownMenu.Group>
 		<DropdownMenu.Separator />
-		<DropdownMenu.Group><DropdownMenu.Item><UserIcon />Profile</DropdownMenu.Item></DropdownMenu.Group>
+		<DropdownMenu.Group
+			><DropdownMenu.Item><UserIcon />Profile</DropdownMenu.Item></DropdownMenu.Group
+		>
 		<DropdownMenu.Separator />
 		<DropdownMenu.Group>
 			<DropdownMenu.Item><BellIcon />Notifications</DropdownMenu.Item>
@@ -48,8 +60,14 @@
 			<DropdownMenu.Item><BookOpenIcon />Seller guides</DropdownMenu.Item>
 		</DropdownMenu.Group>
 		<DropdownMenu.Separator />
-		<DropdownMenu.Group><DropdownMenu.Item><CreditCardIcon />Plan &amp; billing</DropdownMenu.Item></DropdownMenu.Group>
+		<DropdownMenu.Group
+			><DropdownMenu.Item><CreditCardIcon />Plan &amp; billing</DropdownMenu.Item
+			></DropdownMenu.Group
+		>
 		<DropdownMenu.Separator />
-		<DropdownMenu.Group><DropdownMenu.Item variant="destructive"><LogOutIcon />Log out</DropdownMenu.Item></DropdownMenu.Group>
+		<DropdownMenu.Group
+			><DropdownMenu.Item variant="destructive"><LogOutIcon />Log out</DropdownMenu.Item
+			></DropdownMenu.Group
+		>
 	</DropdownMenu.Content>
 </DropdownMenu.Root>

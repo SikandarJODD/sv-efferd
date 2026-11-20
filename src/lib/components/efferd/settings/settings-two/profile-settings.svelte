@@ -12,7 +12,7 @@
 	import SettingField from "./setting-field.svelte";
 	import SettingsSection from "./settings-section.svelte";
 
-	const defaultSrc = "https://github.com/shabanhr.png";
+	const defaultSrc = "https://github.com/SikandarJODD.png";
 	let avatarSrc = $state(defaultSrc);
 
 	$effect(() => {
@@ -64,7 +64,7 @@
 			<InputGroupAddon>
 				<UserIcon aria-hidden="true" class="size-4" />
 			</InputGroupAddon>
-			<InputGroupInput autocomplete="name" id="display-name" value="Shaban Haider" />
+			<InputGroupInput autocomplete="name" id="display-name" value="Bhide Svelte" />
 		</InputGroup>
 	</SettingField>
 	<FieldSeparator />
@@ -77,7 +77,7 @@
 				autocomplete="email"
 				id="email"
 				type="email"
-				value="shaban@efferd.com"
+				value="email@example.com"
 			/>
 		</InputGroup>
 	</SettingField>
