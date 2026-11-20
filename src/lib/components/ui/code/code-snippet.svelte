@@ -10,10 +10,10 @@
 </script>
 
 <div class="w-full">
-	<div class="border-border overflow-hidden rounded-lg border">
+	<div class="overflow-hidden rounded-lg border border-border">
 		{#if code.isExpand}
 			<CodeBlockOverflow collapsed={true}>
-				<Root class="bg-background rounded-none border-0">
+				<Root class="rounded-none border-0 bg-background">
 					<Actions class="[[data-slot=code-block]>&]:opacity-100">
 						<CopyButton
 							value={code.filecode}
@@ -30,7 +30,7 @@
 				</Root>
 			</CodeBlockOverflow>
 		{:else}
-			<Root class="bg-background rounded-none border-0">
+			<Root class="rounded-none border-0 bg-background">
 				<Actions
 					class="[[data-slot=code-block]>&]:end-2 [[data-slot=code-block]>&]:top-2 [[data-slot=code-block]>&]:opacity-100"
 				>

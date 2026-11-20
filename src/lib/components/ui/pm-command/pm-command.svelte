@@ -2,13 +2,13 @@
 	import { tv, type VariantProps } from "tailwind-variants";
 
 	const style = tv({
-		base: "border-border w-full rounded-lg border",
+		base: "w-full rounded-lg border border-border",
 		variants: {
 			variant: {
 				default: "bg-card",
-				secondary: "bg-secondary/50 border-transparent",
-			},
-		},
+				secondary: "border-transparent bg-secondary/50"
+			}
+		}
 	});
 
 	type Variant = VariantProps<typeof style>["variant"];
@@ -42,7 +42,7 @@
 		command,
 		agents = ["npm", "pnpm", "yarn", "bun"],
 		args,
-		agent = $bindable("pnpm"),
+		agent = $bindable("pnpm")
 	}: PMCommandProps = $props();
 
 	const cmd = $derived(resolveCommand(agent, command, args));
@@ -58,10 +58,10 @@
 </script>
 
 <div class={cn(style({ variant }), className)}>
-	<div class="border-border flex place-items-center justify-between gap-2 border-b py-1 pr-2">
+	<div class="flex place-items-center justify-between gap-2 border-b border-border py-1 pr-2">
 		<div class="flex place-items-center gap-2 px-2">
-			<div class="bg-foreground flex size-4 place-items-center justify-center opacity-50">
-				<TerminalIcon class="text-background size-3" />
+			<div class="flex size-4 place-items-center justify-center bg-foreground opacity-50">
+				<TerminalIcon class="size-3 text-background" />
 			</div>
 			<Tabs.Root bind:value={agent}>
 				<Tabs.List class="h-auto bg-transparent p-0">
@@ -98,7 +98,7 @@
 	</div>
 	<div class="no-scrollbar overflow-x-auto p-3">
 		<span
-			class="text-primary font-mono text-xs leading-none font-light text-nowrap subpixel-antialiased md:text-sm"
+			class="font-mono text-xs leading-none font-light text-nowrap text-primary subpixel-antialiased md:text-sm"
 		>
 			{commandText}
 		</span>

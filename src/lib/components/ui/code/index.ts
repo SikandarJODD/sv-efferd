@@ -11,7 +11,7 @@ export {
 	Snippet as CodeSnippet,
 	File as CodeFile,
 	FileBrowser as CodeFileBrowser,
-	Frame as CodeFrame,
+	Frame as CodeFrame
 };
 
 export type { CodeBlock } from "./types.js";

@@ -11,7 +11,7 @@
 		lang = "svelte",
 		highlight = [],
 		hideLines = false,
-		class: className,
+		class: className
 	}: {
 		code: string;
 		lang?: SupportedLanguage;

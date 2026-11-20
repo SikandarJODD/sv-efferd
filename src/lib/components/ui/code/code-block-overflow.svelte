@@ -6,7 +6,7 @@
 	let {
 		collapsed = $bindable(true),
 		class: className,
-		children,
+		children
 	}: {
 		collapsed?: boolean;
 		class?: string;
@@ -22,7 +22,7 @@
 	{@render children?.()}
 	{#if collapsed}
 		<div
-			class="from-background pointer-events-none absolute inset-0 z-10 bg-linear-to-t to-transparent"
+			class="pointer-events-none absolute inset-0 z-10 bg-linear-to-t from-background to-transparent"
 		></div>
 	{/if}
 	<Button

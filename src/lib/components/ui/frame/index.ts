@@ -19,5 +19,5 @@ export {
 	Header as FrameHeader,
 	Title as FrameTitle,
 	Description as FrameDescription,
-	Footer as FrameFooter,
+	Footer as FrameFooter
 };

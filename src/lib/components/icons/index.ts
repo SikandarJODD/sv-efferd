@@ -42,5 +42,5 @@ export {
 	DollarIcon,
 	Codex,
 	ChatGPT,
-	Claude,
+	Claude
 };

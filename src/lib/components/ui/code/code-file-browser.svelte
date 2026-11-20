@@ -19,7 +19,7 @@
 	>
 		<div>
 			<div
-				class="dark:hover:bg-muted/50 flex items-center gap-1.5 py-2 pr-5.5 pl-4 font-mono text-xs hover:bg-white/5"
+				class="flex items-center gap-1.5 py-2 pr-5.5 pl-4 font-mono text-xs hover:bg-white/5 dark:hover:bg-muted/50"
 			>
 				<svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 16 16">
 					<path
@@ -64,7 +64,7 @@
 								"transition-all duration-200",
 								selectedIndex === index
 									? "text-black! dark:text-white!"
-									: "text-muted-foreground",
+									: "text-muted-foreground"
 							]}>{item.filename || "Svelte"}</span
 						>
 					</Button>
