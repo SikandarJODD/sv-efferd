@@ -36,5 +36,5 @@ export {
 	Overlay as AlertDialogOverlay,
 	Content as AlertDialogContent,
 	Description as AlertDialogDescription,
-	Media as AlertDialogMedia,
+	Media as AlertDialogMedia
 };

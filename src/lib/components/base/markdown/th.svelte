@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-	import { cn } from '#lib/utils.js';
+	import type { Snippet } from "svelte";
+	import { cn } from "#lib/utils.js";
 
 	type ComponentProps = {
 		class?: string;
@@ -8,13 +8,13 @@
 		[prop: string]: unknown;
 	};
 
-	const { children, class: className = '', ...restProps }: ComponentProps = $props();
+	const { children, class: className = "", ...restProps }: ComponentProps = $props();
 </script>
 
 <th
 	{...restProps}
 	class={cn(
-		'h-10 px-4 text-left align-middle text-sm font-normal text-muted-foreground',
+		"h-10 px-4 text-left align-middle text-sm font-normal text-muted-foreground",
 		className
 	)}
 >

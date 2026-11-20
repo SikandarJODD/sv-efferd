@@ -1,22 +1,22 @@
 <script lang="ts">
-	import { cn } from '#lib/utils.js';
+	import { cn } from "#lib/utils.js";
 	import {
 		HoverCard,
 		HoverCardContent,
 		HoverCardTrigger
-	} from '#lib/components/ui/hover-card/index.js';
-	import { Button } from '#lib/components/ui/button/index.js';
-	import type { ImportAliasStyle } from './transform.js';
+	} from "#lib/components/ui/hover-card/index.js";
+	import { Button } from "#lib/components/ui/button/index.js";
+	import type { ImportAliasStyle } from "./transform.js";
 
 	let {
-		value = $bindable<ImportAliasStyle>('dollar')
+		value = $bindable<ImportAliasStyle>("dollar")
 	}: {
 		value?: ImportAliasStyle;
 	} = $props();
 
 	const options: { label: string; value: ImportAliasStyle; title: string }[] = [
-		{ label: '$', value: 'dollar', title: 'SvelteKit 2' },
-		{ label: '#', value: 'hash', title: 'SvelteKit 3' }
+		{ label: "$", value: "dollar", title: "SvelteKit 2" },
+		{ label: "#", value: "hash", title: "SvelteKit 3" }
 	];
 </script>
 
@@ -34,10 +34,10 @@
 						variant="ghost"
 						size="icon-xs"
 						class={cn(
-							'size-7 rounded-full font-mono text-xs font-normal text-muted-foreground active:not-aria-[haspopup]:translate-y-0',
+							"size-7 rounded-full font-mono text-xs font-normal text-muted-foreground active:not-aria-[haspopup]:translate-y-0",
 							value === option.value
-								? 'bg-emerald-100/60 text-emerald-800 hover:bg-emerald-50 dark:bg-emerald-400/15 dark:text-emerald-300 dark:hover:bg-emerald-400/20'
-								: 'hover:bg-muted/60 hover:text-foreground dark:hover:bg-muted/40'
+								? "bg-emerald-100/60 text-emerald-800 hover:bg-emerald-50 dark:bg-emerald-400/15 dark:text-emerald-300 dark:hover:bg-emerald-400/20"
+								: "hover:bg-muted/60 hover:text-foreground dark:hover:bg-muted/40"
 						)}
 						aria-label={option.title}
 						aria-pressed={value === option.value}

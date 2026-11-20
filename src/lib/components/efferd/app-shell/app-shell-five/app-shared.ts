@@ -43,8 +43,14 @@ export const navGroups: SidebarNavGroup[] = [
 			{ title: "Profiles", path: "#/profiles", icon: UserIcon }
 		]
 	},
-	{ label: "Configure", items: [{ title: "Integrations", path: "#/integrations", icon: PlugIcon }] },
-	{ label: "Administration", items: [{ title: "Settings", path: "#/settings", icon: SettingsIcon }] }
+	{
+		label: "Configure",
+		items: [{ title: "Integrations", path: "#/integrations", icon: PlugIcon }]
+	},
+	{
+		label: "Administration",
+		items: [{ title: "Settings", path: "#/settings", icon: SettingsIcon }]
+	}
 ];
 
 export const navLinks = navGroups.flatMap((group) =>

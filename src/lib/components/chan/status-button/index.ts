@@ -1,7 +1,4 @@
-import Root, {
-	type ButtonStatus,
-	type StatusButtonProps
-} from "./status-button.svelte";
+import Root, { type ButtonStatus, type StatusButtonProps } from "./status-button.svelte";
 import SuccessIcon from "./success-icon.svelte";
 
 export {

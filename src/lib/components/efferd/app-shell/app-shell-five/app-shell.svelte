@@ -12,6 +12,13 @@
 	<AppSidebar {pathname} />
 	<Sidebar.Inset class="bg-muted dark:bg-background">
 		<AppHeader {pathname} />
-		<div class={cn("flex flex-1 flex-col p-4 md:p-6", "mx-auto w-full max-w-(--app-wrapper-max-width)")}>{@render children?.()}</div>
+		<div
+			class={cn(
+				"flex flex-1 flex-col p-4 md:p-6",
+				"mx-auto w-full max-w-(--app-wrapper-max-width)"
+			)}
+		>
+			{@render children?.()}
+		</div>
 	</Sidebar.Inset>
 </Sidebar.Provider>

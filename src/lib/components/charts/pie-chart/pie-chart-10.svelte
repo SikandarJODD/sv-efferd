@@ -1,31 +1,31 @@
 <script lang="ts">
-	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { Arc, PieChart, Text } from 'layerchart';
-	import * as Card from '#lib/components/ui/card/index.js';
-	import * as Chart from '#lib/components/ui/chart/index.js';
-	import * as Select from '#lib/components/ui/select/index.js';
-	import ChartStyle from '#lib/components/ui/chart/chart-style.svelte';
+	import TrendingUpIcon from "@lucide/svelte/icons/trending-up";
+	import { Arc, PieChart, Text } from "layerchart";
+	import * as Card from "#lib/components/ui/card/index.js";
+	import * as Chart from "#lib/components/ui/chart/index.js";
+	import * as Select from "#lib/components/ui/select/index.js";
+	import ChartStyle from "#lib/components/ui/chart/chart-style.svelte";
 
 	const desktopData = [
-		{ month: 'january', desktop: 186, color: 'var(--color-january)' },
-		{ month: 'february', desktop: 305, color: 'var(--color-february)' },
-		{ month: 'march', desktop: 237, color: 'var(--color-march)' },
-		{ month: 'april', desktop: 173, color: 'var(--color-april)' },
-		{ month: 'may', desktop: 209, color: 'var(--color-may)' }
+		{ month: "january", desktop: 186, color: "var(--color-january)" },
+		{ month: "february", desktop: 305, color: "var(--color-february)" },
+		{ month: "march", desktop: 237, color: "var(--color-march)" },
+		{ month: "april", desktop: 173, color: "var(--color-april)" },
+		{ month: "may", desktop: 209, color: "var(--color-may)" }
 	];
 
 	const chartConfig = {
-		desktop: { label: 'Desktop' },
-		january: { label: 'January', color: 'var(--chart-1)' },
-		february: { label: 'February', color: 'var(--chart-2)' },
-		march: { label: 'March', color: 'var(--chart-3)' },
-		april: { label: 'April', color: 'var(--chart-4)' },
-		may: { label: 'May', color: 'var(--chart-5)' }
+		desktop: { label: "Desktop" },
+		january: { label: "January", color: "var(--chart-1)" },
+		february: { label: "February", color: "var(--chart-2)" },
+		march: { label: "March", color: "var(--chart-3)" },
+		april: { label: "April", color: "var(--chart-4)" },
+		may: { label: "May", color: "var(--chart-5)" }
 	} satisfies Chart.ChartConfig;
 
 	let activeMonth = $state(desktopData[0].month);
 
-	const id = 'pie-interactive';
+	const id = "pie-interactive";
 
 	const activeIndex = $derived(desktopData.findIndex((item) => item.month === activeMonth));
 
@@ -48,14 +48,20 @@
 					class="flex h-3 w-3 shrink-0 rounded-sm"
 					style:background-color={`var(--color-${activeMonth})`}
 				></span>
-				{activeMonth ? chartConfig[activeMonth as keyof typeof chartConfig].label : 'Select month'}
+				{activeMonth
+					? chartConfig[activeMonth as keyof typeof chartConfig].label
+					: "Select month"}
 			</Select.Trigger>
 			<Select.Content align="end" class="rounded-xl">
 				{#each months as month (month)}
 					{@const config = chartConfig[month as keyof typeof chartConfig]}
 
 					{#if config}
-						<Select.Item value={month} label={config.label} class="rounded-lg [&_span]:flex">
+						<Select.Item
+							value={month}
+							label={config.label}
+							class="rounded-lg [&_span]:flex"
+						>
 							<div class="flex items-center gap-2 text-xs">
 								{config?.label}
 							</div>
@@ -76,10 +82,10 @@
 				props={{
 					pie: {
 						sort: (a, b) => {
-							const monthOrder = ['january', 'february', 'march', 'april', 'may'];
+							const monthOrder = ["january", "february", "march", "april", "may"];
 							return monthOrder.indexOf(a.month) - monthOrder.indexOf(b.month);
 						},
-						motion: 'tween'
+						motion: "tween"
 					}
 				}}
 				innerRadius={60}
@@ -103,7 +109,9 @@
 				{/snippet}
 				{#snippet arc({ props, index })}
 					{@const isActive = index === activeIndex}
-					{@const arcProps = isActive ? { ...props, outerRadius: 60, innerRadius: 105 } : props}
+					{@const arcProps = isActive
+						? { ...props, outerRadius: 60, innerRadius: 105 }
+						: props}
 
 					{#if isActive}
 						<g>

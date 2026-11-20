@@ -14,16 +14,22 @@
 
 		<div class="mt-auto flex items-center gap-1.5 pb-1">
 			<div class="flex">
-				<div class="size-2 rounded-full border border-background bg-muted-foreground/18"></div>
-				<div class="-ml-0.5 size-2 rounded-full border border-background bg-muted-foreground/13"></div>
-				<div class="-ml-0.5 size-2 rounded-full border border-background bg-muted-foreground/9"></div>
+				<div
+					class="size-2 rounded-full border border-background bg-muted-foreground/18"
+				></div>
+				<div
+					class="-ml-0.5 size-2 rounded-full border border-background bg-muted-foreground/13"
+				></div>
+				<div
+					class="-ml-0.5 size-2 rounded-full border border-background bg-muted-foreground/9"
+				></div>
 			</div>
 			<div class="h-1 w-8 rounded-full bg-muted-foreground/12"></div>
 		</div>
 	</div>
 
 	<div class="flex items-center bg-muted/20 px-2.5 py-3">
-		<div class="w-full rounded-sm border bg-background p-2 shadow-xs mask-b-from-90%">
+		<div class="w-full rounded-sm border bg-background mask-b-from-90% p-2 shadow-xs">
 			<div class="mb-2 flex items-center justify-center gap-1.5">
 				<div class="size-2.5 rounded-full bg-muted-foreground/20"></div>
 				<div class="h-1.5 w-10 rounded-full bg-muted-foreground/18"></div>

@@ -1,23 +1,23 @@
 <script lang="ts">
-	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { scaleBand } from 'd3-scale';
-	import { curveLinearClosed } from 'd3-shape';
-	import { LineChart } from 'layerchart';
-	import * as Card from '#lib/components/ui/card/index.js';
-	import * as Chart from '#lib/components/ui/chart/index.js';
+	import TrendingUpIcon from "@lucide/svelte/icons/trending-up";
+	import { scaleBand } from "d3-scale";
+	import { curveLinearClosed } from "d3-shape";
+	import { LineChart } from "layerchart";
+	import * as Card from "#lib/components/ui/card/index.js";
+	import * as Chart from "#lib/components/ui/chart/index.js";
 
 	const chartData = [
-		{ month: 'January', desktop: 186, mobile: 160 },
-		{ month: 'February', desktop: 185, mobile: 170 },
-		{ month: 'March', desktop: 207, mobile: 180 },
-		{ month: 'April', desktop: 173, mobile: 160 },
-		{ month: 'May', desktop: 160, mobile: 190 },
-		{ month: 'June', desktop: 174, mobile: 204 }
+		{ month: "January", desktop: 186, mobile: 160 },
+		{ month: "February", desktop: 185, mobile: 170 },
+		{ month: "March", desktop: 207, mobile: 180 },
+		{ month: "April", desktop: 173, mobile: 160 },
+		{ month: "May", desktop: 160, mobile: 190 },
+		{ month: "June", desktop: 174, mobile: 204 }
 	];
 
 	const chartConfig = {
-		desktop: { label: 'Desktop', color: 'var(--chart-1)' },
-		mobile: { label: 'Mobile', color: 'var(--chart-2)' }
+		desktop: { label: "Desktop", color: "var(--chart-1)" },
+		mobile: { label: "Mobile", color: "var(--chart-2)" }
 	} satisfies Chart.ChartConfig;
 </script>
 
@@ -36,23 +36,23 @@
 				padding={12}
 				series={[
 					{
-						key: 'desktop',
-						label: 'Desktop',
+						key: "desktop",
+						label: "Desktop",
 						color: chartConfig.desktop.color,
-						props: { class: 'fill-none stroke-[2]' }
+						props: { class: "fill-none stroke-[2]" }
 					},
 					{
-						key: 'mobile',
-						label: 'Mobile',
+						key: "mobile",
+						label: "Mobile",
 						color: chartConfig.mobile.color,
-						props: { class: 'fill-none stroke-[2]' }
+						props: { class: "fill-none stroke-[2]" }
 					}
 				]}
 				props={{
-					spline: { curve: curveLinearClosed, motion: 'tween' },
-					grid: { radialY: 'linear', x: false },
-					yAxis: { format: () => '' },
-					tooltip: { context: { mode: 'voronoi' } }
+					spline: { curve: curveLinearClosed, motion: "tween" },
+					grid: { radialY: "linear", x: false },
+					yAxis: { format: () => "" },
+					tooltip: { context: { mode: "voronoi" } }
 				}}
 			>
 				{#snippet tooltip()}

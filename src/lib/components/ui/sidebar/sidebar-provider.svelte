@@ -5,7 +5,7 @@
 		SIDEBAR_COOKIE_MAX_AGE,
 		SIDEBAR_COOKIE_NAME,
 		SIDEBAR_WIDTH,
-		SIDEBAR_WIDTH_ICON,
+		SIDEBAR_WIDTH_ICON
 	} from "./constants.js";
 	import { setSidebar } from "./context.svelte.js";
 	import type { HTMLAttributes } from "svelte/elements";
@@ -31,7 +31,7 @@
 
 			// This sets the cookie to keep the sidebar state.
 			document.cookie = `${SIDEBAR_COOKIE_NAME}=${open}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
-		},
+		}
 	});
 </script>
 

@@ -44,7 +44,10 @@ test("excludes UI internals and generated sources even when the showcase root co
 	const { root, ui, showcase } = fixture(t);
 	writeFileSync(join(ui, "button", "button.svelte"), 'import * as Card from "../card";');
 	mkdirSync(join(root, ".svelte-kit"));
-	writeFileSync(join(root, ".svelte-kit", "generated.js"), 'import Input from "./input/index.js";');
+	writeFileSync(
+		join(root, ".svelte-kit", "generated.js"),
+		'import Input from "./input/index.js";'
+	);
 	writeFileSync(join(showcase, "page.ts"), 'import { Button } from "@ui/button";');
 	const result = spawnSync(process.execPath, [script, ui, root], { encoding: "utf8" });
 	assert.equal(result.status, 1);

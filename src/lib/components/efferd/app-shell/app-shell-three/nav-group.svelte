@@ -12,7 +12,8 @@
 	<Sidebar.Menu>
 		{#each items as item (item.title)}
 			<Collapsible.Root
-				open={item.path === pathname || item.subItems?.some((subItem) => subItem.path === pathname)}
+				open={item.path === pathname ||
+					item.subItems?.some((subItem) => subItem.path === pathname)}
 				class="group/collapsible"
 			>
 				{#snippet child({ props })}
@@ -20,10 +21,15 @@
 						{#if item.subItems?.length}
 							<Collapsible.Trigger>
 								{#snippet child({ props })}
-									<Sidebar.MenuButton isActive={item.path === pathname} {...props}>
+									<Sidebar.MenuButton
+										isActive={item.path === pathname}
+										{...props}
+									>
 										{#if item.icon}<item.icon />{/if}
 										<span>{item.title}</span>
-										<ChevronRightIcon class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+										<ChevronRightIcon
+											class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90"
+										/>
 									</Sidebar.MenuButton>
 								{/snippet}
 							</Collapsible.Trigger>
@@ -31,10 +37,14 @@
 								<Sidebar.MenuSub>
 									{#each item.subItems as subItem (subItem.title)}
 										<Sidebar.MenuSubItem>
-											<Sidebar.MenuSubButton isActive={subItem.path === pathname}>
+											<Sidebar.MenuSubButton
+												isActive={subItem.path === pathname}
+											>
 												{#snippet child({ props })}
 													<a href={subItem.path} {...props}>
-														{#if subItem.icon}<subItem.icon />{/if}<span>{subItem.title}</span>
+														{#if subItem.icon}<subItem.icon />{/if}<span
+															>{subItem.title}</span
+														>
 													</a>
 												{/snippet}
 											</Sidebar.MenuSubButton>

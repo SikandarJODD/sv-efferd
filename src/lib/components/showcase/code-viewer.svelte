@@ -90,7 +90,7 @@
 			>
 			Files
 		</div>
-		<div class="no-scrollbar scroll-fade-effect-y min-h-0 flex-1 overflow-y-auto px-2 py-3">
+		<div class="no-scrollbar min-h-0 flex-1 overflow-y-auto scroll-fade-effect-y px-2 py-3">
 			{#each codeTree.nodes as node (node.id)}
 				<FileTreeNode
 					{node}

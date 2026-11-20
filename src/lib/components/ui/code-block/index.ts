@@ -7,12 +7,12 @@ import Title from "./code-block-title.svelte";
 import Line, {
 	codeBlockLineVariants,
 	type CodeBlockLineToken,
-	type CodeBlockLineVariant,
+	type CodeBlockLineVariant
 } from "./code-block-line.svelte";
 import Root, {
 	codeBlockVariants,
 	type CodeBlockSize,
-	type CodeBlockVariant,
+	type CodeBlockVariant
 } from "./code-block.svelte";
 
 export {
@@ -38,5 +38,5 @@ export {
 	CopyButton as CodeBlockCopyButton,
 	Content as CodeBlockContent,
 	Line as CodeBlockLine,
-	Footer as CodeBlockFooter,
+	Footer as CodeBlockFooter
 };

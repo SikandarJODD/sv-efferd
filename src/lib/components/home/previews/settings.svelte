@@ -13,7 +13,9 @@
 		<p class="text-xs text-muted-foreground">{countLabel}</p>
 	</div>
 
-	<div class="mt-2.5 flex min-h-0 flex-1 overflow-hidden rounded-sm border bg-muted/20 mask-b-from-85%">
+	<div
+		class="mt-2.5 flex min-h-0 flex-1 overflow-hidden rounded-sm border bg-muted/20 mask-b-from-85%"
+	>
 		<div class="flex w-[18%] shrink-0 flex-col gap-1 border-r p-1.5">
 			<div class="mb-1 size-3 rounded-full bg-muted-foreground/20"></div>
 			<div class="h-1.5 w-full rounded-full bg-muted-foreground/25"></div>
@@ -40,7 +42,9 @@
 
 			<div class="flex min-h-7 items-center justify-between gap-2">
 				<div class="h-1.5 w-9 rounded-full bg-muted-foreground/20"></div>
-				<div class="flex h-3.5 w-12 shrink-0 items-center justify-between rounded-xs border px-1">
+				<div
+					class="flex h-3.5 w-12 shrink-0 items-center justify-between rounded-xs border px-1"
+				>
 					<div class="h-1 w-5 rounded-full bg-muted-foreground/15"></div>
 					<div class="size-1 rounded-full bg-muted-foreground/25"></div>
 				</div>

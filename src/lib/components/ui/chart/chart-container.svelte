@@ -22,7 +22,7 @@
 	setChartContext({
 		get config() {
 			return config;
-		},
+		}
 	});
 </script>
 

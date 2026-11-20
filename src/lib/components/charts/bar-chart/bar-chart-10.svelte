@@ -1,21 +1,21 @@
 <script lang="ts">
-	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { scaleBand } from 'd3-scale';
-	import { BarChart } from 'layerchart';
-	import * as Card from '#lib/components/ui/card/index.js';
-	import * as Chart from '#lib/components/ui/chart/index.js';
+	import TrendingUpIcon from "@lucide/svelte/icons/trending-up";
+	import { scaleBand } from "d3-scale";
+	import { BarChart } from "layerchart";
+	import * as Card from "#lib/components/ui/card/index.js";
+	import * as Chart from "#lib/components/ui/chart/index.js";
 
 	const chartData = [
-		{ month: 'January', visitors: 186 },
-		{ month: 'February', visitors: 205 },
-		{ month: 'March', visitors: -207 },
-		{ month: 'April', visitors: 173 },
-		{ month: 'May', visitors: -209 },
-		{ month: 'June', visitors: 214 }
+		{ month: "January", visitors: 186 },
+		{ month: "February", visitors: 205 },
+		{ month: "March", visitors: -207 },
+		{ month: "April", visitors: 173 },
+		{ month: "May", visitors: -209 },
+		{ month: "June", visitors: 214 }
 	];
 
 	const chartConfig = {
-		visitors: { label: 'Visitors' }
+		visitors: { label: "Visitors" }
 	} satisfies Chart.ChartConfig;
 </script>
 
@@ -32,9 +32,9 @@
 					value: (d) => d.month,
 					fill: (d) => {
 						if (d.visitors > 0) {
-							return 'var(--chart-1)';
+							return "var(--chart-1)";
 						} else if (d.visitors < 0) {
-							return 'var(--chart-2)';
+							return "var(--chart-2)";
 						}
 					}
 				}}
@@ -44,12 +44,12 @@
 				y="visitors"
 				yNice={4}
 				yBaseline={0}
-				cRange={['var(--chart-1)', 'var(--chart-2)']}
-				c={(d) => (d.visitors > 0 ? 'var(--chart-1)' : 'var(--chart-2)')}
+				cRange={["var(--chart-1)", "var(--chart-2)"]}
+				c={(d) => (d.visitors > 0 ? "var(--chart-1)" : "var(--chart-2)")}
 				axis={false}
 				props={{
-					bars: { stroke: 'none', radius: 0 },
-					highlight: { area: { fill: 'none' } },
+					bars: { stroke: "none", radius: 0 },
+					highlight: { area: { fill: "none" } },
 					xAxis: { format: (d) => d.slice(0, 3) }
 				}}
 			>

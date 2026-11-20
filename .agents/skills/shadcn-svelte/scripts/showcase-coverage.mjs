@@ -62,7 +62,8 @@ const missing = components.filter(
 			return (
 				parts.at(-1) === name ||
 				(parts.at(-2) === name &&
-					(/^index\.[cm]?[jt]s$/.test(basename(specifier)) || /\.svelte$/.test(specifier)))
+					(/^index\.[cm]?[jt]s$/.test(basename(specifier)) ||
+						/\.svelte$/.test(specifier)))
 			);
 		})
 );

@@ -4,10 +4,7 @@
 
 	export type ButtonStatus = "idle" | "loading" | "success" | "failed";
 
-	export type StatusButtonProps = Omit<
-		ButtonProps,
-		"children" | "onclick"
-	> & {
+	export type StatusButtonProps = Omit<ButtonProps, "children" | "onclick"> & {
 		children: Snippet;
 		/**
 		 * Uncontrolled mode: loading while the returned promise is pending, then
@@ -119,9 +116,7 @@
 	const isBusy = $derived(currentStatus !== "idle");
 
 	const shouldReduceMotion = useReducedMotion();
-	const variants = $derived(
-		shouldReduceMotion.current ? reducedMotionVariants : swapVariants
-	);
+	const variants = $derived(shouldReduceMotion.current ? reducedMotionVariants : swapVariants);
 	const transition = $derived<Transition>(
 		shouldReduceMotion.current ? { duration: 0 } : swapTransition
 	);
@@ -140,14 +135,8 @@
 		([nextStatus, nextSuccessDuration, nextFailedDuration]) => {
 			if (nextStatus !== "success" && nextStatus !== "failed") return;
 
-			const duration =
-				nextStatus === "success"
-					? nextSuccessDuration
-					: nextFailedDuration;
-			const timeoutId = window.setTimeout(
-				() => setStatus("idle"),
-				duration
-			);
+			const duration = nextStatus === "success" ? nextSuccessDuration : nextFailedDuration;
+			const timeoutId = window.setTimeout(() => setStatus("idle"), duration);
 			return () => window.clearTimeout(timeoutId);
 		}
 	);
@@ -251,9 +240,7 @@
 		{:else if currentStatus === "success"}
 			<motion.span
 				role="status"
-				variants={shouldReduceMotion.current
-					? variants
-					: successVariants}
+				variants={shouldReduceMotion.current ? variants : successVariants}
 				initial="initial"
 				animate="animate"
 				exit={exitVariant}
@@ -264,9 +251,7 @@
 		{:else}
 			<motion.span
 				role="alert"
-				variants={shouldReduceMotion.current
-					? variants
-					: failedVariants}
+				variants={shouldReduceMotion.current ? variants : failedVariants}
 				initial="initial"
 				animate="animate"
 				exit={exitVariant}

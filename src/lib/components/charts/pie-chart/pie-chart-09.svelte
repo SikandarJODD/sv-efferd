@@ -1,41 +1,41 @@
 <script lang="ts">
-	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { Arc, PieChart } from 'layerchart';
-	import * as Card from '#lib/components/ui/card/index.js';
-	import * as Chart from '#lib/components/ui/chart/index.js';
+	import TrendingUpIcon from "@lucide/svelte/icons/trending-up";
+	import { Arc, PieChart } from "layerchart";
+	import * as Card from "#lib/components/ui/card/index.js";
+	import * as Chart from "#lib/components/ui/chart/index.js";
 
 	const desktopData = [
-		{ month: 'january', desktop: 186, color: 'var(--color-january)' },
-		{ month: 'february', desktop: 305, color: 'var(--color-february)' },
-		{ month: 'march', desktop: 237, color: 'var(--color-march)' },
-		{ month: 'april', desktop: 173, color: 'var(--color-april)' },
-		{ month: 'may', desktop: 209, color: 'var(--color-may)' }
+		{ month: "january", desktop: 186, color: "var(--color-january)" },
+		{ month: "february", desktop: 305, color: "var(--color-february)" },
+		{ month: "march", desktop: 237, color: "var(--color-march)" },
+		{ month: "april", desktop: 173, color: "var(--color-april)" },
+		{ month: "may", desktop: 209, color: "var(--color-may)" }
 	];
 
 	const mobileData = [
-		{ month: 'january', mobile: 80, color: 'var(--color-january)' },
-		{ month: 'february', mobile: 200, color: 'var(--color-february)' },
-		{ month: 'march', mobile: 120, color: 'var(--color-march)' },
-		{ month: 'april', mobile: 190, color: 'var(--color-april)' },
-		{ month: 'may', mobile: 130, color: 'var(--color-may)' }
+		{ month: "january", mobile: 80, color: "var(--color-january)" },
+		{ month: "february", mobile: 200, color: "var(--color-february)" },
+		{ month: "march", mobile: 120, color: "var(--color-march)" },
+		{ month: "april", mobile: 190, color: "var(--color-april)" },
+		{ month: "may", mobile: 130, color: "var(--color-may)" }
 	];
 
 	type PieDataItem = { month: string; value: number; color: string };
 
-	const monthOrder = ['january', 'february', 'march', 'april', 'may'];
+	const monthOrder = ["january", "february", "march", "april", "may"];
 
 	const sortMonths = (a: PieDataItem, b: PieDataItem) => {
 		return monthOrder.indexOf(a.month) - monthOrder.indexOf(b.month);
 	};
 
 	const chartConfig = {
-		desktop: { label: 'Desktop' },
-		mobile: { label: 'Mobile' },
-		january: { label: 'January', color: 'var(--chart-1)' },
-		february: { label: 'February', color: 'var(--chart-2)' },
-		march: { label: 'March', color: 'var(--chart-3)' },
-		april: { label: 'April', color: 'var(--chart-4)' },
-		may: { label: 'May', color: 'var(--chart-5)' }
+		desktop: { label: "Desktop" },
+		mobile: { label: "Mobile" },
+		january: { label: "January", color: "var(--chart-1)" },
+		february: { label: "February", color: "var(--chart-2)" },
+		march: { label: "March", color: "var(--chart-3)" },
+		april: { label: "April", color: "var(--chart-4)" },
+		may: { label: "May", color: "var(--chart-5)" }
 	} satisfies Chart.ChartConfig;
 
 	const tooltipLabelFormatter = (_: unknown, payload: Array<{ key: string }>) => {
@@ -57,7 +57,7 @@
 				props={{
 					pie: {
 						sort: sortMonths,
-						motion: 'tween'
+						motion: "tween"
 					},
 					tooltip: {
 						context: {
@@ -67,8 +67,8 @@
 				}}
 				series={[
 					{
-						key: 'desktop',
-						value: 'value',
+						key: "desktop",
+						value: "value",
 						data: desktopData.map((d) => ({
 							month: d.month,
 							value: d.desktop,
@@ -77,8 +77,8 @@
 						props: { innerRadius: -20 }
 					},
 					{
-						key: 'mobile',
-						value: 'value',
+						key: "mobile",
+						value: "value",
 						data: mobileData.map((d) => ({
 							month: d.month,
 							value: d.mobile,
@@ -93,7 +93,11 @@
 					<Arc {...props} fill={props.data.color} />
 				{/snippet}
 				{#snippet tooltip()}
-					<Chart.Tooltip nameKey="month" indicator="line" labelFormatter={tooltipLabelFormatter} />
+					<Chart.Tooltip
+						nameKey="month"
+						indicator="line"
+						labelFormatter={tooltipLabelFormatter}
+					/>
 				{/snippet}
 			</PieChart>
 		</Chart.Container>

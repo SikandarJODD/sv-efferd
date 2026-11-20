@@ -12,7 +12,9 @@
 		{title}
 	</h3>
 	<div class="w-full px-3">
-		<div class="grid grid-cols-2 overflow-hidden rounded-sm border border-border/80 bg-muted/15">
+		<div
+			class="grid grid-cols-2 overflow-hidden rounded-sm border border-border/80 bg-muted/15"
+		>
 			<div class="flex flex-col justify-center gap-1 border-r border-border/70 px-2 py-2">
 				<p class="text-xs leading-4 text-muted-foreground">{countLabel}</p>
 				<div class="h-1.5 w-4/5 rounded-full bg-muted-foreground/18"></div>

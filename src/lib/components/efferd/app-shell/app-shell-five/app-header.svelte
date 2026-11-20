@@ -11,9 +11,17 @@
 	let activeItem = $derived(navLinks.find((item) => item.path === pathname));
 </script>
 
-<header class="sticky top-0 z-50 flex h-(--app-header-height) w-full shrink-0 items-center justify-between gap-2 border-b bg-background px-4 md:px-6">
+<header
+	class="sticky top-0 z-50 flex h-(--app-header-height) w-full shrink-0 items-center justify-between gap-2 border-b bg-background px-4 md:px-6"
+>
 	<div class="flex items-center gap-3"><CustomTrigger place="navbar" /></div>
-	<Breadcrumb.Root><Breadcrumb.List><Breadcrumb.Item><Breadcrumb.Page>{activeItem?.title}</Breadcrumb.Page></Breadcrumb.Item></Breadcrumb.List></Breadcrumb.Root>
+	<Breadcrumb.Root
+		><Breadcrumb.List
+			><Breadcrumb.Item
+				><Breadcrumb.Page>{activeItem?.title}</Breadcrumb.Page></Breadcrumb.Item
+			></Breadcrumb.List
+		></Breadcrumb.Root
+	>
 	<div class="flex items-center gap-3">
 		<Button aria-label="Help" size="icon-sm" variant="outline"><HelpCircleIcon /></Button>
 		<Button aria-label="Notifications" size="icon-sm" variant="outline"><BellIcon /></Button>

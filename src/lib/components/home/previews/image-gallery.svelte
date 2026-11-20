@@ -19,7 +19,9 @@
 				<div class="aspect-square rounded-sm bg-muted-foreground/8"></div>
 			</div>
 			<div class="flex flex-col gap-1.5 pt-5">
-				<div class="relative aspect-square overflow-hidden rounded-sm bg-muted-foreground/10">
+				<div
+					class="relative aspect-square overflow-hidden rounded-sm bg-muted-foreground/10"
+				>
 					<div
 						class="absolute inset-y-0 left-0 w-1/3 -translate-x-full -skew-x-12 bg-linear-to-r from-transparent via-background/45 to-transparent transition-transform duration-500 group-hover:translate-x-[400%]"
 					></div>

@@ -1,25 +1,25 @@
 <!-- Area Chart - Icons -->
 <script lang="ts">
-	import TrendingDownIcon from '@lucide/svelte/icons/trending-down';
-	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { scaleUtc } from 'd3-scale';
-	import { curveNatural } from 'd3-shape';
-	import { AreaChart } from 'layerchart';
-	import * as Card from '#lib/components/ui/card/index.js';
-	import * as Chart from '#lib/components/ui/chart/index.js';
+	import TrendingDownIcon from "@lucide/svelte/icons/trending-down";
+	import TrendingUpIcon from "@lucide/svelte/icons/trending-up";
+	import { scaleUtc } from "d3-scale";
+	import { curveNatural } from "d3-shape";
+	import { AreaChart } from "layerchart";
+	import * as Card from "#lib/components/ui/card/index.js";
+	import * as Chart from "#lib/components/ui/chart/index.js";
 
 	const chartData = [
-		{ date: new Date('2024-01-01'), desktop: 186, mobile: 80 },
-		{ date: new Date('2024-02-01'), desktop: 305, mobile: 200 },
-		{ date: new Date('2024-03-01'), desktop: 237, mobile: 120 },
-		{ date: new Date('2024-04-01'), desktop: 73, mobile: 190 },
-		{ date: new Date('2024-05-01'), desktop: 209, mobile: 130 },
-		{ date: new Date('2024-06-01'), desktop: 214, mobile: 140 }
+		{ date: new Date("2024-01-01"), desktop: 186, mobile: 80 },
+		{ date: new Date("2024-02-01"), desktop: 305, mobile: 200 },
+		{ date: new Date("2024-03-01"), desktop: 237, mobile: 120 },
+		{ date: new Date("2024-04-01"), desktop: 73, mobile: 190 },
+		{ date: new Date("2024-05-01"), desktop: 209, mobile: 130 },
+		{ date: new Date("2024-06-01"), desktop: 214, mobile: 140 }
 	];
 
 	const chartConfig = {
-		desktop: { label: 'Desktop', color: 'var(--chart-1)', icon: TrendingDownIcon },
-		mobile: { label: 'Mobile', color: 'var(--chart-2)', icon: TrendingUpIcon }
+		desktop: { label: "Desktop", color: "var(--chart-1)", icon: TrendingDownIcon },
+		mobile: { label: "Mobile", color: "var(--chart-2)", icon: TrendingUpIcon }
 	} satisfies Chart.ChartConfig;
 </script>
 
@@ -37,13 +37,13 @@
 				xScale={scaleUtc()}
 				series={[
 					{
-						key: 'mobile',
-						label: 'Mobile',
+						key: "mobile",
+						label: "Mobile",
 						color: chartConfig.mobile.color
 					},
 					{
-						key: 'desktop',
-						label: 'Desktop',
+						key: "desktop",
+						label: "Desktop",
 						color: chartConfig.desktop.color
 					}
 				]}
@@ -52,20 +52,20 @@
 					area: {
 						curve: curveNatural,
 						fillOpacity: 0.4,
-						line: { class: 'stroke-1' },
-						motion: 'tween'
+						line: { class: "stroke-1" },
+						motion: "tween"
 					},
 					xAxis: {
-						format: (v: Date) => v.toLocaleDateString('en-US', { month: 'short' })
+						format: (v: Date) => v.toLocaleDateString("en-US", { month: "short" })
 					},
-					yAxis: { format: () => '' }
+					yAxis: { format: () => "" }
 				}}
 			>
 				{#snippet tooltip()}
 					<Chart.Tooltip
 						labelFormatter={(v: Date) => {
-							return v.toLocaleDateString('en-US', {
-								month: 'long'
+							return v.toLocaleDateString("en-US", {
+								month: "long"
 							});
 						}}
 					/>

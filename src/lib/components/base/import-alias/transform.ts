@@ -1,6 +1,6 @@
-export type ImportAliasStyle = 'dollar' | 'hash';
+export type ImportAliasStyle = "dollar" | "hash";
 
-const SVELTEKIT_ALIASES = ['$app', '$env', '$service-worker'];
+const SVELTEKIT_ALIASES = ["$app", "$env", "$service-worker"];
 const MODULE_SPECIFIER = /(\b(?:from|import)\s*(?:\(\s*)?)(["'])([$#][^"']+)\2/g;
 
 function isSvelteKitAlias(specifier: string) {
@@ -15,11 +15,11 @@ export function transformImportAliases(source: string, style: ImportAliasStyle) 
 		(match, prefix: string, quote: string, specifier: string) => {
 			if (isSvelteKitAlias(specifier)) return match;
 
-			if (style === 'hash' && specifier.startsWith('$')) {
+			if (style === "hash" && specifier.startsWith("$")) {
 				return `${prefix}${quote}#${specifier.slice(1)}${quote}`;
 			}
 
-			if (style === 'dollar' && specifier.startsWith('#')) {
+			if (style === "dollar" && specifier.startsWith("#")) {
 				return `${prefix}${quote}$${specifier.slice(1)}${quote}`;
 			}
 

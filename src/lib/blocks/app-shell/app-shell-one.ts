@@ -76,14 +76,54 @@ export const appShellOneBlock: BlockShowcaseItem = {
 	previewHeight: 860,
 	installId: "app-shell-one",
 	codeTree: createBlockCodeTree("app-shell-one:app-shell", [
-		{ id: "app-shell-one:preview", path: "app-shell/preview.svelte", lang: "svelte", code: previewSource },
-		{ id: "app-shell-one:app-shell", path: "app-shell/app-shell.svelte", lang: "svelte", code: appShellSource },
-		{ id: "app-shell-one:app-breadcrumbs", path: "app-shell/app-breadcrumbs.svelte", lang: "svelte", code: appBreadcrumbsSource },
-		{ id: "app-shell-one:app-header", path: "app-shell/app-header.svelte", lang: "svelte", code: appHeaderSource },
-		{ id: "app-shell-one:app-sidebar", path: "app-shell/app-sidebar.svelte", lang: "svelte", code: appSidebarSource },
-		{ id: "app-shell-one:dashboard-skeleton", path: "app-shell/dashboard-skeleton.svelte", lang: "svelte", code: dashboardSkeletonSource },
-		{ id: "app-shell-one:nav-user", path: "app-shell/nav-user.svelte", lang: "svelte", code: navUserSource },
-		{ id: "app-shell-one:app-shared", path: "app-shell/app-shared.ts", lang: "typescript", code: appSharedSource },
+		{
+			id: "app-shell-one:preview",
+			path: "app-shell/preview.svelte",
+			lang: "svelte",
+			code: previewSource
+		},
+		{
+			id: "app-shell-one:app-shell",
+			path: "app-shell/app-shell.svelte",
+			lang: "svelte",
+			code: appShellSource
+		},
+		{
+			id: "app-shell-one:app-breadcrumbs",
+			path: "app-shell/app-breadcrumbs.svelte",
+			lang: "svelte",
+			code: appBreadcrumbsSource
+		},
+		{
+			id: "app-shell-one:app-header",
+			path: "app-shell/app-header.svelte",
+			lang: "svelte",
+			code: appHeaderSource
+		},
+		{
+			id: "app-shell-one:app-sidebar",
+			path: "app-shell/app-sidebar.svelte",
+			lang: "svelte",
+			code: appSidebarSource
+		},
+		{
+			id: "app-shell-one:dashboard-skeleton",
+			path: "app-shell/dashboard-skeleton.svelte",
+			lang: "svelte",
+			code: dashboardSkeletonSource
+		},
+		{
+			id: "app-shell-one:nav-user",
+			path: "app-shell/nav-user.svelte",
+			lang: "svelte",
+			code: navUserSource
+		},
+		{
+			id: "app-shell-one:app-shared",
+			path: "app-shell/app-shared.ts",
+			lang: "typescript",
+			code: appSharedSource
+		},
 		{ id: "shared:logo", path: "svgs/logo.svelte", lang: "svelte", code: logoSource },
 		...uiFiles
 	])

@@ -24,13 +24,20 @@
 	<Sidebar.Content>
 		{#each navGroups as group (group.label)}
 			<Sidebar.Group>
-				{#if group.label}<Sidebar.GroupLabel class="font-normal">{group.label}</Sidebar.GroupLabel>{/if}
+				{#if group.label}<Sidebar.GroupLabel class="font-normal"
+						>{group.label}</Sidebar.GroupLabel
+					>{/if}
 				<Sidebar.Menu>
 					{#each group.items as item (item.title)}
 						<Sidebar.MenuItem>
-							<Sidebar.MenuButton isActive={item.url === pathname} tooltipContent={item.title}>
+							<Sidebar.MenuButton
+								isActive={item.url === pathname}
+								tooltipContent={item.title}
+							>
 								{#snippet child({ props })}
-									<a href={item.url} {...props}><item.icon /><span>{item.title}</span></a>
+									<a href={item.url} {...props}
+										><item.icon /><span>{item.title}</span></a
+									>
 								{/snippet}
 							</Sidebar.MenuButton>
 						</Sidebar.MenuItem>
@@ -43,7 +50,11 @@
 		<Sidebar.Menu class="border-t p-2">
 			{#each footerNavLinks as item (item.title)}
 				<Sidebar.MenuItem>
-					<Sidebar.MenuButton class="text-muted-foreground" isActive={item.url === pathname} size="sm">
+					<Sidebar.MenuButton
+						class="text-muted-foreground"
+						isActive={item.url === pathname}
+						size="sm"
+					>
 						{#snippet child({ props })}
 							<a href={item.url} {...props}><item.icon /><span>{item.title}</span></a>
 						{/snippet}

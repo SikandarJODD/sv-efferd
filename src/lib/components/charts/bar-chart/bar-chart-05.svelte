@@ -1,23 +1,23 @@
 <script lang="ts">
-	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { scaleBand } from 'd3-scale';
-	import { BarChart, Highlight } from 'layerchart';
-	import { cubicInOut } from 'svelte/easing';
-	import * as Card from '#lib/components/ui/card/index.js';
-	import * as Chart from '#lib/components/ui/chart/index.js';
+	import TrendingUpIcon from "@lucide/svelte/icons/trending-up";
+	import { scaleBand } from "d3-scale";
+	import { BarChart, Highlight } from "layerchart";
+	import { cubicInOut } from "svelte/easing";
+	import * as Card from "#lib/components/ui/card/index.js";
+	import * as Chart from "#lib/components/ui/chart/index.js";
 
 	const chartData = [
-		{ month: 'January', desktop: 186, mobile: 80 },
-		{ month: 'February', desktop: 305, mobile: 200 },
-		{ month: 'March', desktop: 237, mobile: 120 },
-		{ month: 'April', desktop: 73, mobile: 190 },
-		{ month: 'May', desktop: 209, mobile: 130 },
-		{ month: 'June', desktop: 214, mobile: 140 }
+		{ month: "January", desktop: 186, mobile: 80 },
+		{ month: "February", desktop: 305, mobile: 200 },
+		{ month: "March", desktop: 237, mobile: 120 },
+		{ month: "April", desktop: 73, mobile: 190 },
+		{ month: "May", desktop: 209, mobile: 130 },
+		{ month: "June", desktop: 214, mobile: 140 }
 	];
 
 	const chartConfig = {
-		desktop: { label: 'Desktop', color: 'var(--chart-1)' },
-		mobile: { label: 'Mobile', color: 'var(--chart-2)' }
+		desktop: { label: "Desktop", color: "var(--chart-1)" },
+		mobile: { label: "Mobile", color: "var(--chart-2)" }
 	} satisfies Chart.ChartConfig;
 </script>
 
@@ -36,22 +36,22 @@
 				rule={false}
 				series={[
 					{
-						key: 'desktop',
-						label: 'Desktop',
+						key: "desktop",
+						label: "Desktop",
 						color: chartConfig.desktop.color,
-						props: { rounded: 'bottom' }
+						props: { rounded: "bottom" }
 					},
 					{
-						key: 'mobile',
-						label: 'Mobile',
+						key: "mobile",
+						label: "Mobile",
 						color: chartConfig.mobile.color
 					}
 				]}
 				seriesLayout="stack"
 				props={{
 					bars: {
-						stroke: 'none',
-						motion: { type: 'tween', duration: 500, easing: cubicInOut }
+						stroke: "none",
+						motion: { type: "tween", duration: 500, easing: cubicInOut }
 					},
 					highlight: { area: false },
 					xAxis: { format: (d) => d.slice(0, 3) }
@@ -59,7 +59,7 @@
 				legend
 			>
 				{#snippet belowMarks()}
-					<Highlight area={{ class: 'fill-muted' }} />
+					<Highlight area={{ class: "fill-muted" }} />
 				{/snippet}
 
 				{#snippet tooltip()}

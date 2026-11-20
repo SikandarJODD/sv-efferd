@@ -15,7 +15,9 @@
 	<div class="grid min-h-0 flex-1 grid-cols-2 gap-2">
 		<div class="overflow-hidden rounded-sm border border-border/80 bg-background shadow-xs">
 			<div class="relative flex h-9 items-end overflow-hidden bg-muted/40 p-1.5">
-				<div class="absolute -top-3 -right-2 size-10 rounded-full border border-muted-foreground/10"></div>
+				<div
+					class="absolute -top-3 -right-2 size-10 rounded-full border border-muted-foreground/10"
+				></div>
 				<div class="h-1.5 w-8 rounded-full bg-muted-foreground/16"></div>
 			</div>
 			<div class="flex flex-col gap-1 border-t border-border/70 px-1.5 py-1.5">
@@ -30,7 +32,9 @@
 
 		<div class="overflow-hidden rounded-sm border border-border/80 bg-background">
 			<div class="relative flex h-9 items-end overflow-hidden bg-muted/25 p-1.5">
-				<div class="absolute top-1.5 left-1/2 h-6 w-9 -translate-x-1/2 rounded-t-sm border border-b-0 border-muted-foreground/12"></div>
+				<div
+					class="absolute top-1.5 left-1/2 h-6 w-9 -translate-x-1/2 rounded-t-sm border border-b-0 border-muted-foreground/12"
+				></div>
 				<div class="h-1.5 w-7 rounded-full bg-muted-foreground/14"></div>
 			</div>
 			<div class="flex flex-col gap-1 border-t border-border/70 px-1.5 py-1.5">

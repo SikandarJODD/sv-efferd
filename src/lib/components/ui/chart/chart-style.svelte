@@ -19,7 +19,7 @@
 				return color ? `\t--color-${key}: ${color};` : null;
 			});
 
-			content += color.join("\n") +"\n}";
+			content += color.join("\n") + "\n}";
 
 			themeContents.push(content);
 		}

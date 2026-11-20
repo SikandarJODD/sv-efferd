@@ -173,7 +173,7 @@ Render the matrix with `StateMatrix` and `previewState` from the helpers:
     "outline",
     "ghost",
     "destructive",
-    "link",
+    "link"
   ] as const;
 </script>
 

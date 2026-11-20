@@ -83,17 +83,72 @@ export const appShellFourBlock: BlockShowcaseItem = {
 	previewHeight: 860,
 	installId: "app-shell-four",
 	codeTree: createBlockCodeTree("app-shell-four:app-shell", [
-		{ id: "app-shell-four:preview", path: "app-shell/preview.svelte", lang: "svelte", code: previewSource },
-		{ id: "app-shell-four:app-shell", path: "app-shell/app-shell.svelte", lang: "svelte", code: appShellSource },
-		{ id: "app-shell-four:app-breadcrumbs", path: "app-shell/app-breadcrumbs.svelte", lang: "svelte", code: appBreadcrumbsSource },
-		{ id: "app-shell-four:app-header", path: "app-shell/app-header.svelte", lang: "svelte", code: appHeaderSource },
-		{ id: "app-shell-four:app-sidebar", path: "app-shell/app-sidebar.svelte", lang: "svelte", code: appSidebarSource },
-		{ id: "app-shell-four:custom-sidebar-trigger", path: "app-shell/custom-sidebar-trigger.svelte", lang: "svelte", code: customSidebarTriggerSource },
-		{ id: "app-shell-four:dashboard-skeleton", path: "app-shell/dashboard-skeleton.svelte", lang: "svelte", code: dashboardSkeletonSource },
-		{ id: "app-shell-four:latest-change", path: "app-shell/latest-change.svelte", lang: "svelte", code: latestChangeSource },
-		{ id: "app-shell-four:nav-group", path: "app-shell/nav-group.svelte", lang: "svelte", code: navGroupSource },
-		{ id: "app-shell-four:nav-user", path: "app-shell/nav-user.svelte", lang: "svelte", code: navUserSource },
-		{ id: "app-shell-four:app-shared", path: "app-shell/app-shared.ts", lang: "typescript", code: appSharedSource },
+		{
+			id: "app-shell-four:preview",
+			path: "app-shell/preview.svelte",
+			lang: "svelte",
+			code: previewSource
+		},
+		{
+			id: "app-shell-four:app-shell",
+			path: "app-shell/app-shell.svelte",
+			lang: "svelte",
+			code: appShellSource
+		},
+		{
+			id: "app-shell-four:app-breadcrumbs",
+			path: "app-shell/app-breadcrumbs.svelte",
+			lang: "svelte",
+			code: appBreadcrumbsSource
+		},
+		{
+			id: "app-shell-four:app-header",
+			path: "app-shell/app-header.svelte",
+			lang: "svelte",
+			code: appHeaderSource
+		},
+		{
+			id: "app-shell-four:app-sidebar",
+			path: "app-shell/app-sidebar.svelte",
+			lang: "svelte",
+			code: appSidebarSource
+		},
+		{
+			id: "app-shell-four:custom-sidebar-trigger",
+			path: "app-shell/custom-sidebar-trigger.svelte",
+			lang: "svelte",
+			code: customSidebarTriggerSource
+		},
+		{
+			id: "app-shell-four:dashboard-skeleton",
+			path: "app-shell/dashboard-skeleton.svelte",
+			lang: "svelte",
+			code: dashboardSkeletonSource
+		},
+		{
+			id: "app-shell-four:latest-change",
+			path: "app-shell/latest-change.svelte",
+			lang: "svelte",
+			code: latestChangeSource
+		},
+		{
+			id: "app-shell-four:nav-group",
+			path: "app-shell/nav-group.svelte",
+			lang: "svelte",
+			code: navGroupSource
+		},
+		{
+			id: "app-shell-four:nav-user",
+			path: "app-shell/nav-user.svelte",
+			lang: "svelte",
+			code: navUserSource
+		},
+		{
+			id: "app-shell-four:app-shared",
+			path: "app-shell/app-shared.ts",
+			lang: "typescript",
+			code: appSharedSource
+		},
 		{ id: "shared:logo", path: "svgs/logo.svelte", lang: "svelte", code: logoSource },
 		...uiFiles
 	])

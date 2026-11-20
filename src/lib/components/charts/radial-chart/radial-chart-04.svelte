@@ -1,14 +1,14 @@
 <script lang="ts">
-	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { ArcChart, Text } from 'layerchart';
-	import * as Card from '#lib/components/ui/card/index.js';
-	import * as Chart from '#lib/components/ui/chart/index.js';
+	import TrendingUpIcon from "@lucide/svelte/icons/trending-up";
+	import { ArcChart, Text } from "layerchart";
+	import * as Card from "#lib/components/ui/card/index.js";
+	import * as Chart from "#lib/components/ui/chart/index.js";
 
-	const chartData = [{ browser: 'safari', visitors: 1260, color: 'var(--color-safari)' }];
+	const chartData = [{ browser: "safari", visitors: 1260, color: "var(--color-safari)" }];
 
 	const chartConfig = {
-		visitors: { label: 'Visitors' },
-		safari: { label: 'Safari', color: 'var(--chart-2)' }
+		visitors: { label: "Visitors" },
+		safari: { label: "Safari", color: "var(--chart-2)" }
 	} satisfies Chart.ChartConfig;
 </script>
 
@@ -35,7 +35,7 @@
 					data: [d]
 				}))}
 				props={{
-					arc: { track: { fill: 'var(--muted)' }, motion: 'tween' },
+					arc: { track: { fill: "var(--muted)" }, motion: "tween" },
 					tooltip: { context: { hideDelay: 350 } }
 				}}
 				tooltipContext={false}

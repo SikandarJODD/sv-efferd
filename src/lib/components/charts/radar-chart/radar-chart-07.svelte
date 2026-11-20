@@ -1,22 +1,22 @@
 <script lang="ts">
-	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { scaleBand } from 'd3-scale';
-	import { curveLinearClosed } from 'd3-shape';
-	import { LineChart } from 'layerchart';
-	import * as Card from '#lib/components/ui/card/index.js';
-	import * as Chart from '#lib/components/ui/chart/index.js';
+	import TrendingUpIcon from "@lucide/svelte/icons/trending-up";
+	import { scaleBand } from "d3-scale";
+	import { curveLinearClosed } from "d3-shape";
+	import { LineChart } from "layerchart";
+	import * as Card from "#lib/components/ui/card/index.js";
+	import * as Chart from "#lib/components/ui/chart/index.js";
 
 	const chartData = [
-		{ month: 'January', desktop: 186 },
-		{ month: 'February', desktop: 305 },
-		{ month: 'March', desktop: 237 },
-		{ month: 'April', desktop: 273 },
-		{ month: 'May', desktop: 209 },
-		{ month: 'June', desktop: 214 }
+		{ month: "January", desktop: 186 },
+		{ month: "February", desktop: 305 },
+		{ month: "March", desktop: 237 },
+		{ month: "April", desktop: 273 },
+		{ month: "May", desktop: 209 },
+		{ month: "June", desktop: 214 }
 	];
 
 	const chartConfig = {
-		desktop: { label: 'Desktop', color: 'var(--chart-1)' }
+		desktop: { label: "Desktop", color: "var(--chart-1)" }
 	} satisfies Chart.ChartConfig;
 </script>
 
@@ -31,8 +31,8 @@
 				data={chartData}
 				series={[
 					{
-						key: 'desktop',
-						label: 'Desktop',
+						key: "desktop",
+						label: "Desktop",
 						color: chartConfig.desktop.color
 					}
 				]}
@@ -45,23 +45,23 @@
 				props={{
 					spline: {
 						curve: curveLinearClosed,
-						fill: 'var(--color-desktop)',
+						fill: "var(--color-desktop)",
 						fillOpacity: 0.6,
-						stroke: '0',
-						motion: 'tween'
+						stroke: "0",
+						motion: "tween"
 					},
 					xAxis: {
 						tickLength: 0
 					},
 					yAxis: {
-						format: () => ''
+						format: () => ""
 					},
 					grid: {
-						radialY: 'circle'
+						radialY: "circle"
 					},
 					tooltip: {
 						context: {
-							mode: 'voronoi'
+							mode: "voronoi"
 						}
 					},
 					highlight: {

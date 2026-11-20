@@ -26,7 +26,9 @@
 <Card.Root class="shadow-none md:col-span-2 dark:ring-0">
 	<Card.Header>
 		<Card.Title>CSAT responses</Card.Title>
-		<Card.Description>Post-resolution surveys submitted per day by channel, last 10 days.</Card.Description>
+		<Card.Description
+			>Post-resolution surveys submitted per day by channel, last 10 days.</Card.Description
+		>
 	</Card.Header>
 	<Card.Content>
 		<Chart.Container config={chartConfig} class="aspect-video w-full">
@@ -37,12 +39,26 @@
 				axis="x"
 				rule={false}
 				series={[
-					{ key: "social", label: "Social", color: chartConfig.social.color, props: { rounded: "bottom" } },
+					{
+						key: "social",
+						label: "Social",
+						color: chartConfig.social.color,
+						props: { rounded: "bottom" }
+					},
 					{ key: "email", label: "Email", color: chartConfig.email.color },
-					{ key: "direct", label: "Direct", color: chartConfig.direct.color, props: { rounded: "top" } }
+					{
+						key: "direct",
+						label: "Direct",
+						color: chartConfig.direct.color,
+						props: { rounded: "top" }
+					}
 				]}
 				seriesLayout="stack"
-				props={{ bars: { stroke: "none", motion: "tween" }, highlight: { area: false }, xAxis: { format: (day) => String(day) } }}
+				props={{
+					bars: { stroke: "none", motion: "tween" },
+					highlight: { area: false },
+					xAxis: { format: (day) => String(day) }
+				}}
 			>
 				{#snippet belowMarks()}
 					<Highlight area={{ class: "fill-muted/50" }} />

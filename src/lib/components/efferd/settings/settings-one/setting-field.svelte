@@ -15,21 +15,11 @@
 		children: Snippet;
 	};
 
-	let {
-		label,
-		description,
-		htmlFor,
-		children,
-		class: className,
-		...restProps
-	}: Props = $props();
+	let { label, description, htmlFor, children, class: className, ...restProps }: Props = $props();
 </script>
 
 <Field
-	class={cn(
-		"px-4 @md/field-group:has-[>[data-slot=field-content]]:items-center",
-		className
-	)}
+	class={cn("px-4 @md/field-group:has-[>[data-slot=field-content]]:items-center", className)}
 	orientation="responsive"
 	{...restProps}
 >

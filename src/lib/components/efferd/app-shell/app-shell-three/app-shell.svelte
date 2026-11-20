@@ -12,7 +12,9 @@
 		<AppSidebar {pathname} />
 		<Sidebar.Inset class="md:peer-data-[variant=inset]:ml-0">
 			<AppHeader {pathname} />
-			<div class="flex flex-1 flex-col gap-4 overflow-y-auto p-4 md:p-6">{@render children()}</div>
+			<div class="flex flex-1 flex-col gap-4 overflow-y-auto p-4 md:p-6">
+				{@render children()}
+			</div>
 		</Sidebar.Inset>
 	</Sidebar.Provider>
 </div>

@@ -1,23 +1,23 @@
 <script lang="ts">
-	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { scaleBand } from 'd3-scale';
-	import { curveLinearClosed } from 'd3-shape';
-	import { Axis, LineChart, Text } from 'layerchart';
-	import * as Card from '#lib/components/ui/card/index.js';
-	import * as Chart from '#lib/components/ui/chart/index.js';
+	import TrendingUpIcon from "@lucide/svelte/icons/trending-up";
+	import { scaleBand } from "d3-scale";
+	import { curveLinearClosed } from "d3-shape";
+	import { Axis, LineChart, Text } from "layerchart";
+	import * as Card from "#lib/components/ui/card/index.js";
+	import * as Chart from "#lib/components/ui/chart/index.js";
 
 	const chartData = [
-		{ month: 'January', desktop: 186, mobile: 80 },
-		{ month: 'February', desktop: 305, mobile: 200 },
-		{ month: 'March', desktop: 237, mobile: 120 },
-		{ month: 'April', desktop: 73, mobile: 190 },
-		{ month: 'May', desktop: 209, mobile: 130 },
-		{ month: 'June', desktop: 214, mobile: 140 }
+		{ month: "January", desktop: 186, mobile: 80 },
+		{ month: "February", desktop: 305, mobile: 200 },
+		{ month: "March", desktop: 237, mobile: 120 },
+		{ month: "April", desktop: 73, mobile: 190 },
+		{ month: "May", desktop: 209, mobile: 130 },
+		{ month: "June", desktop: 214, mobile: 140 }
 	];
 
 	const chartConfig = {
-		desktop: { label: 'Desktop', color: 'var(--chart-1)' },
-		mobile: { label: 'Mobile', color: 'var(--chart-2)' }
+		desktop: { label: "Desktop", color: "var(--chart-1)" },
+		mobile: { label: "Mobile", color: "var(--chart-2)" }
 	} satisfies Chart.ChartConfig;
 </script>
 
@@ -32,8 +32,8 @@
 				data={chartData}
 				series={[
 					{
-						key: 'desktop',
-						label: 'Desktop',
+						key: "desktop",
+						label: "Desktop",
 						color: chartConfig.desktop.color,
 						props: {
 							fill: chartConfig.desktop.color,
@@ -41,8 +41,8 @@
 						}
 					},
 					{
-						key: 'mobile',
-						label: 'Mobile',
+						key: "mobile",
+						label: "Mobile",
 						color: chartConfig.mobile.color,
 						props: {
 							fill: chartConfig.mobile.color
@@ -56,21 +56,21 @@
 				props={{
 					spline: {
 						curve: curveLinearClosed,
-						stroke: '0',
-						motion: 'tween'
+						stroke: "0",
+						motion: "tween"
 					},
 					xAxis: {
 						tickLength: 0
 					},
 					yAxis: {
-						format: () => ''
+						format: () => ""
 					},
 					grid: {
-						radialY: 'linear'
+						radialY: "linear"
 					},
 					tooltip: {
 						context: {
-							mode: 'voronoi'
+							mode: "voronoi"
 						}
 					},
 					highlight: {
@@ -83,18 +83,23 @@
 					<Axis placement="angle" tickLength={0}>
 						{#snippet tickLabel({ props, index })}
 							{@const y = props.y
-								? typeof props.y === 'number'
+								? typeof props.y === "number"
 									? props.y
-									: typeof props.y === 'string'
+									: typeof props.y === "string"
 										? Number.parseInt(props.y)
 										: 0
 								: 0}
 							{@const data = chartData[index]}
-							<Text {...props} {y} value="{data.desktop} / {data.mobile}" class="fill-foreground" />
+							<Text
+								{...props}
+								{y}
+								value="{data.desktop} / {data.mobile}"
+								class="fill-foreground"
+							/>
 							<Text {...props} y={y + 14} />
 						{/snippet}
 					</Axis>
-					<Axis placement="radius" format={() => ''} />
+					<Axis placement="radius" format={() => ""} />
 				{/snippet}
 				{#snippet tooltip()}
 					<Chart.Tooltip />

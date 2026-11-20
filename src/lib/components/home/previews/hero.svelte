@@ -7,9 +7,7 @@
 	let { title, countLabel }: Props = $props();
 </script>
 
-<div
-	class="relative flex h-full flex-col overflow-hidden px-3 py-3 text-center sm:px-4 sm:py-4"
->
+<div class="relative flex h-full flex-col overflow-hidden px-3 py-3 text-center sm:px-4 sm:py-4">
 	<div
 		class="absolute inset-y-0 left-4 w-px bg-linear-to-b from-transparent via-border/80 to-border/80"
 	></div>
@@ -38,9 +36,15 @@
 
 		<div class="mt-2 flex items-center gap-1.5">
 			<div class="flex">
-				<div class="size-2.5 rounded-full border border-background bg-muted-foreground/18"></div>
-				<div class="-ml-0.5 size-2.5 rounded-full border border-background bg-muted-foreground/14"></div>
-				<div class="-ml-0.5 size-2.5 rounded-full border border-background bg-muted-foreground/10"></div>
+				<div
+					class="size-2.5 rounded-full border border-background bg-muted-foreground/18"
+				></div>
+				<div
+					class="-ml-0.5 size-2.5 rounded-full border border-background bg-muted-foreground/14"
+				></div>
+				<div
+					class="-ml-0.5 size-2.5 rounded-full border border-background bg-muted-foreground/10"
+				></div>
 			</div>
 			<div class="h-1 w-10 rounded-full bg-muted-foreground/12"></div>
 		</div>

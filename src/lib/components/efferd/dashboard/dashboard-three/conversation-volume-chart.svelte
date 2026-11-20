@@ -38,7 +38,11 @@
 			<Card.Description>New threads per day for the selected window.</Card.Description>
 		</div>
 		<Select.Root type="single" bind:value={period}>
-			<Select.Trigger class="w-full min-w-36 sm:w-fit" size="sm" aria-label="Conversation volume time range">
+			<Select.Trigger
+				class="w-full min-w-36 sm:w-fit"
+				size="sm"
+				aria-label="Conversation volume time range"
+			>
 				{selectedLabel}
 			</Select.Trigger>
 			<Select.Content align="end">
@@ -57,23 +61,60 @@
 				x="date"
 				xScale={scaleUtc()}
 				axis={true}
-				series={[{ key: "conversations", label: "New threads", color: chartConfig.conversations.color }]}
+				series={[
+					{
+						key: "conversations",
+						label: "New threads",
+						color: chartConfig.conversations.color
+					}
+				]}
 				props={{
-					xAxis: { ticks: period === "7" ? 7 : undefined, format: (date: Date) => date.toLocaleDateString("en-US", period === "7" ? { weekday: "short" } : { day: "numeric", month: "short" }) },
+					xAxis: {
+						ticks: period === "7" ? 7 : undefined,
+						format: (date: Date) =>
+							date.toLocaleDateString(
+								"en-US",
+								period === "7"
+									? { weekday: "short" }
+									: { day: "numeric", month: "short" }
+							)
+					},
 					yAxis: { ticks: 4 }
 				}}
 			>
 				{#snippet marks({ context })}
 					{#each context.series.visibleSeries as series (series.key)}
-						<LinearGradient stops={[series.color ?? "", `color-mix(in lch, ${series.color} 10%, transparent)`]} vertical>
+						<LinearGradient
+							stops={[
+								series.color ?? "",
+								`color-mix(in lch, ${series.color} 10%, transparent)`
+							]}
+							vertical
+						>
 							{#snippet children({ gradient })}
-								<Area {...series.props} seriesKey={series.key} curve={curveNatural} fill={gradient} fillOpacity={0.45} line={{ class: "stroke-2" }} motion="tween" />
+								<Area
+									{...series.props}
+									seriesKey={series.key}
+									curve={curveNatural}
+									fill={gradient}
+									fillOpacity={0.45}
+									line={{ class: "stroke-2" }}
+									motion="tween"
+								/>
 							{/snippet}
 						</LinearGradient>
 					{/each}
 				{/snippet}
 				{#snippet tooltip()}
-					<Chart.Tooltip indicator="line" labelFormatter={(date: Date) => date.toLocaleDateString("en-US", { weekday: "long", day: "numeric", month: "short" })} />
+					<Chart.Tooltip
+						indicator="line"
+						labelFormatter={(date: Date) =>
+							date.toLocaleDateString("en-US", {
+								weekday: "long",
+								day: "numeric",
+								month: "short"
+							})}
+					/>
 				{/snippet}
 			</AreaChart>
 		</Chart.Container>

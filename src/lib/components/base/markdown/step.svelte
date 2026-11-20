@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { cn } from '#lib/utils.js';
-	import type { Snippet } from 'svelte';
+	import { cn } from "#lib/utils.js";
+	import type { Snippet } from "svelte";
 
 	type Props = {
 		id?: string;
@@ -10,12 +10,12 @@
 		children?: Snippet;
 		[prop: string]: unknown;
 	};
-	let { id = '', class: className, children, title, titleBaseClass }: Props = $props();
+	let { id = "", class: className, children, title, titleBaseClass }: Props = $props();
 </script>
 
-<div class={cn('relative pb-10 pl-8', className)} {id}>
+<div class={cn("relative pb-10 pl-8", className)} {id}>
 	{#if title}
-		<div class={cn('mb-2 flex h-8 items-center', titleBaseClass)}>
+		<div class={cn("mb-2 flex h-8 items-center", titleBaseClass)}>
 			<span
 				class="absolute -left-4 flex size-8 items-center justify-center rounded-full border border-border bg-card text-xs font-medium text-foreground [counter-increment:step] before:content-[counter(step)]"
 			></span>

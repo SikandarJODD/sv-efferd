@@ -36,7 +36,16 @@ const files = [
 	["formatter", "formatter.ts", "typescript", formatterSource]
 ] as const;
 
-const uiFiles = ["avatar", "badge", "button", "card", "chart", "dropdown-menu", "select", "table"].map((name) => ({
+const uiFiles = [
+	"avatar",
+	"badge",
+	"button",
+	"card",
+	"chart",
+	"dropdown-menu",
+	"select",
+	"table"
+].map((name) => ({
 	id: `shared:${name}`,
 	path: `ui/${name}`,
 	externalUrl: `https://shadcn-svelte.com/docs/components/${name}`,
@@ -46,14 +55,20 @@ const uiFiles = ["avatar", "badge", "button", "card", "chart", "dropdown-menu", 
 export const dashboardThreeBlock: BlockShowcaseItem = {
 	id: "dashboard-three",
 	title: "Dashboard Three",
-	description: "A responsive support dashboard with queue metrics, conversation charts, team availability, inbox activity, and CSAT reporting.",
+	description:
+		"A responsive support dashboard with queue metrics, conversation charts, team availability, inbox activity, and CSAT reporting.",
 	previewComponent: DashboardThreePreview,
 	previewHref: "/preview/dashboard/three",
 	previewMode: "iframe",
 	previewHeight: 1400,
 	installId: "dashboard-three",
 	codeTree: createBlockCodeTree("dashboard-three:component", [
-		...files.map(([id, path, lang, code]) => ({ id: `dashboard-three:${id}`, path: `dashboard/${path}`, lang, code })),
+		...files.map(([id, path, lang, code]) => ({
+			id: `dashboard-three:${id}`,
+			path: `dashboard/${path}`,
+			lang,
+			code
+		})),
 		{
 			id: "related:app-shell-three",
 			path: "related/app-shell-three",

@@ -76,16 +76,66 @@ export const appShellFiveBlock: BlockShowcaseItem = {
 	previewHeight: 860,
 	installId: "app-shell-five",
 	codeTree: createBlockCodeTree("app-shell-five:app-shell", [
-		{ id: "app-shell-five:preview", path: "app-shell/preview.svelte", lang: "svelte", code: previewSource },
-		{ id: "app-shell-five:app-shell", path: "app-shell/app-shell.svelte", lang: "svelte", code: appShellSource },
-		{ id: "app-shell-five:app-header", path: "app-shell/app-header.svelte", lang: "svelte", code: appHeaderSource },
-		{ id: "app-shell-five:app-search", path: "app-shell/app-search.svelte", lang: "svelte", code: appSearchSource },
-		{ id: "app-shell-five:app-sidebar", path: "app-shell/app-sidebar.svelte", lang: "svelte", code: appSidebarSource },
-		{ id: "app-shell-five:custom-trigger", path: "app-shell/custom-trigger.svelte", lang: "svelte", code: customTriggerSource },
-		{ id: "app-shell-five:latest-change", path: "app-shell/latest-change.svelte", lang: "svelte", code: latestChangeSource },
-		{ id: "app-shell-five:nav-user", path: "app-shell/nav-user.svelte", lang: "svelte", code: navUserSource },
-		{ id: "app-shell-five:theme-switcher", path: "app-shell/theme-switcher.svelte", lang: "svelte", code: themeSwitcherSource },
-		{ id: "app-shell-five:app-shared", path: "app-shell/app-shared.ts", lang: "typescript", code: appSharedSource },
+		{
+			id: "app-shell-five:preview",
+			path: "app-shell/preview.svelte",
+			lang: "svelte",
+			code: previewSource
+		},
+		{
+			id: "app-shell-five:app-shell",
+			path: "app-shell/app-shell.svelte",
+			lang: "svelte",
+			code: appShellSource
+		},
+		{
+			id: "app-shell-five:app-header",
+			path: "app-shell/app-header.svelte",
+			lang: "svelte",
+			code: appHeaderSource
+		},
+		{
+			id: "app-shell-five:app-search",
+			path: "app-shell/app-search.svelte",
+			lang: "svelte",
+			code: appSearchSource
+		},
+		{
+			id: "app-shell-five:app-sidebar",
+			path: "app-shell/app-sidebar.svelte",
+			lang: "svelte",
+			code: appSidebarSource
+		},
+		{
+			id: "app-shell-five:custom-trigger",
+			path: "app-shell/custom-trigger.svelte",
+			lang: "svelte",
+			code: customTriggerSource
+		},
+		{
+			id: "app-shell-five:latest-change",
+			path: "app-shell/latest-change.svelte",
+			lang: "svelte",
+			code: latestChangeSource
+		},
+		{
+			id: "app-shell-five:nav-user",
+			path: "app-shell/nav-user.svelte",
+			lang: "svelte",
+			code: navUserSource
+		},
+		{
+			id: "app-shell-five:theme-switcher",
+			path: "app-shell/theme-switcher.svelte",
+			lang: "svelte",
+			code: themeSwitcherSource
+		},
+		{
+			id: "app-shell-five:app-shared",
+			path: "app-shell/app-shared.ts",
+			lang: "typescript",
+			code: appSharedSource
+		},
 		{ id: "shared:logo", path: "svgs/logo.svelte", lang: "svelte", code: logoSource },
 		...uiFiles
 	])

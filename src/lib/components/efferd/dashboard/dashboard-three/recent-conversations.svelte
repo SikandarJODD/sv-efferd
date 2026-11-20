@@ -9,10 +9,34 @@
 
 	type State = "waiting" | "open" | "snoozed";
 	const rows = [
-		{ customer: "Northwind Labs", subject: "Billing portal access", channel: "email", waitMinutes: 6, state: "waiting" },
-		{ customer: "Blue River Co.", subject: "Shipment ETA", channel: "chat", waitMinutes: 1, state: "open" },
-		{ customer: "Oak Street Studio", subject: "API rate limits", channel: "email", waitMinutes: 58, state: "snoozed" },
-		{ customer: "Harbor Freight LLC", subject: "Workspace SSO", channel: "chat", waitMinutes: 3, state: "open" }
+		{
+			customer: "Northwind Labs",
+			subject: "Billing portal access",
+			channel: "email",
+			waitMinutes: 6,
+			state: "waiting"
+		},
+		{
+			customer: "Blue River Co.",
+			subject: "Shipment ETA",
+			channel: "chat",
+			waitMinutes: 1,
+			state: "open"
+		},
+		{
+			customer: "Oak Street Studio",
+			subject: "API rate limits",
+			channel: "email",
+			waitMinutes: 58,
+			state: "snoozed"
+		},
+		{
+			customer: "Harbor Freight LLC",
+			subject: "Workspace SSO",
+			channel: "chat",
+			waitMinutes: 3,
+			state: "open"
+		}
 	] as const;
 
 	function waitLabel(minutes: number) {
@@ -47,22 +71,40 @@
 			<Table.Body>
 				{#each rows as row (`${row.customer}-${row.subject}`)}
 					<Table.Row class="h-14 hover:bg-transparent">
-						<Table.Cell class="max-w-36 truncate pl-6 font-medium">{row.customer}</Table.Cell>
-						<Table.Cell class="hidden max-w-32 sm:table-cell"><span class="line-clamp-1 text-sm text-muted-foreground">{row.subject}</span></Table.Cell>
+						<Table.Cell class="max-w-36 truncate pl-6 font-medium"
+							>{row.customer}</Table.Cell
+						>
+						<Table.Cell class="hidden max-w-32 sm:table-cell"
+							><span class="line-clamp-1 text-sm text-muted-foreground"
+								>{row.subject}</span
+							></Table.Cell
+						>
 						<Table.Cell>
-							<span class="inline-flex items-center gap-2 text-sm font-medium capitalize">
-								{#if row.channel === "email"}<MailIcon class="size-3.5" />{:else}<MessageCircleIcon class="size-3.5" />{/if}
+							<span
+								class="inline-flex items-center gap-2 text-sm font-medium capitalize"
+							>
+								{#if row.channel === "email"}<MailIcon
+										class="size-3.5"
+									/>{:else}<MessageCircleIcon class="size-3.5" />{/if}
 								{row.channel}
 							</span>
 						</Table.Cell>
-						<Table.Cell class="text-right text-sm text-muted-foreground">{waitLabel(row.waitMinutes)}</Table.Cell>
-						<Table.Cell class="pr-6 text-right"><Badge variant={status(row.state).variant}>{status(row.state).label}</Badge></Table.Cell>
+						<Table.Cell class="text-right text-sm text-muted-foreground"
+							>{waitLabel(row.waitMinutes)}</Table.Cell
+						>
+						<Table.Cell class="pr-6 text-right"
+							><Badge variant={status(row.state).variant}
+								>{status(row.state).label}</Badge
+							></Table.Cell
+						>
 					</Table.Row>
 				{/each}
 			</Table.Body>
 		</Table.Root>
 		<div class="flex justify-center border-t py-3">
-			<Button href="#/inbox" size="sm" variant="ghost">View all conversations <ArrowRightIcon data-icon="inline-end" /></Button>
+			<Button href="#/inbox" size="sm" variant="ghost"
+				>View all conversations <ArrowRightIcon data-icon="inline-end" /></Button
+			>
 		</div>
 	</Card.Content>
 </Card.Root>

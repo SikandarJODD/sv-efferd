@@ -1,24 +1,24 @@
 <!-- Step Area Chart -->
 <script lang="ts">
-	import ActivityIcon from '@lucide/svelte/icons/activity';
-	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { scaleUtc } from 'd3-scale';
-	import { curveStep } from 'd3-shape';
-	import { AreaChart } from 'layerchart';
-	import * as Card from '#lib/components/ui/card/index.js';
-	import * as Chart from '#lib/components/ui/chart/index.js';
+	import ActivityIcon from "@lucide/svelte/icons/activity";
+	import TrendingUpIcon from "@lucide/svelte/icons/trending-up";
+	import { scaleUtc } from "d3-scale";
+	import { curveStep } from "d3-shape";
+	import { AreaChart } from "layerchart";
+	import * as Card from "#lib/components/ui/card/index.js";
+	import * as Chart from "#lib/components/ui/chart/index.js";
 
 	const chartData = [
-		{ date: new Date('2024-01-01'), desktop: 186 },
-		{ date: new Date('2024-02-01'), desktop: 305 },
-		{ date: new Date('2024-03-01'), desktop: 237 },
-		{ date: new Date('2024-04-01'), desktop: 73 },
-		{ date: new Date('2024-05-01'), desktop: 209 },
-		{ date: new Date('2024-06-01'), desktop: 214 }
+		{ date: new Date("2024-01-01"), desktop: 186 },
+		{ date: new Date("2024-02-01"), desktop: 305 },
+		{ date: new Date("2024-03-01"), desktop: 237 },
+		{ date: new Date("2024-04-01"), desktop: 73 },
+		{ date: new Date("2024-05-01"), desktop: 209 },
+		{ date: new Date("2024-06-01"), desktop: 214 }
 	];
 
 	const chartConfig = {
-		desktop: { label: 'Desktop', color: 'var(--chart-1)', icon: ActivityIcon }
+		desktop: { label: "Desktop", color: "var(--chart-1)", icon: ActivityIcon }
 	} satisfies Chart.ChartConfig;
 </script>
 
@@ -35,8 +35,8 @@
 				xScale={scaleUtc()}
 				series={[
 					{
-						key: 'desktop',
-						label: 'Desktop',
+						key: "desktop",
+						label: "Desktop",
 						color: chartConfig.desktop.color
 					}
 				]}
@@ -45,13 +45,13 @@
 					area: {
 						curve: curveStep,
 						fillOpacity: 0.4,
-						line: { class: 'stroke-1' },
-						motion: 'tween'
+						line: { class: "stroke-1" },
+						motion: "tween"
 					},
 					xAxis: {
-						format: (v: Date) => v.toLocaleDateString('en-US', { month: 'short' })
+						format: (v: Date) => v.toLocaleDateString("en-US", { month: "short" })
 					},
-					yAxis: { format: () => '' }
+					yAxis: { format: () => "" }
 				}}
 			>
 				{#snippet tooltip()}

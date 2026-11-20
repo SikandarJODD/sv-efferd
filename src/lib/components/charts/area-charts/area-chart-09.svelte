@@ -1,24 +1,24 @@
 <!-- Area Chart - Gradient -->
 <script lang="ts">
-	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { scaleUtc } from 'd3-scale';
-	import { curveNatural } from 'd3-shape';
-	import { Area, AreaChart, LinearGradient } from 'layerchart';
-	import * as Card from '#lib/components/ui/card/index.js';
-	import * as Chart from '#lib/components/ui/chart/index.js';
+	import TrendingUpIcon from "@lucide/svelte/icons/trending-up";
+	import { scaleUtc } from "d3-scale";
+	import { curveNatural } from "d3-shape";
+	import { Area, AreaChart, LinearGradient } from "layerchart";
+	import * as Card from "#lib/components/ui/card/index.js";
+	import * as Chart from "#lib/components/ui/chart/index.js";
 
 	const chartData = [
-		{ date: new Date('2024-01-01'), desktop: 186, mobile: 80 },
-		{ date: new Date('2024-02-01'), desktop: 305, mobile: 200 },
-		{ date: new Date('2024-03-01'), desktop: 237, mobile: 120 },
-		{ date: new Date('2024-04-01'), desktop: 73, mobile: 190 },
-		{ date: new Date('2024-05-01'), desktop: 209, mobile: 130 },
-		{ date: new Date('2024-06-01'), desktop: 214, mobile: 140 }
+		{ date: new Date("2024-01-01"), desktop: 186, mobile: 80 },
+		{ date: new Date("2024-02-01"), desktop: 305, mobile: 200 },
+		{ date: new Date("2024-03-01"), desktop: 237, mobile: 120 },
+		{ date: new Date("2024-04-01"), desktop: 73, mobile: 190 },
+		{ date: new Date("2024-05-01"), desktop: 209, mobile: 130 },
+		{ date: new Date("2024-06-01"), desktop: 214, mobile: 140 }
 	];
 
 	const chartConfig = {
-		desktop: { label: 'Desktop', color: 'var(--chart-1)' },
-		mobile: { label: 'Mobile', color: 'var(--chart-2)' }
+		desktop: { label: "Desktop", color: "var(--chart-1)" },
+		mobile: { label: "Mobile", color: "var(--chart-2)" }
 	} satisfies Chart.ChartConfig;
 </script>
 
@@ -36,30 +36,30 @@
 				yPadding={[0, 25]}
 				series={[
 					{
-						key: 'mobile',
-						label: 'Mobile',
-						color: 'var(--color-mobile)'
+						key: "mobile",
+						label: "Mobile",
+						color: "var(--color-mobile)"
 					},
 					{
-						key: 'desktop',
-						label: 'Desktop',
-						color: 'var(--color-desktop)'
+						key: "desktop",
+						label: "Desktop",
+						color: "var(--color-desktop)"
 					}
 				]}
 				seriesLayout="stack"
 				props={{
 					xAxis: {
-						format: (v: Date) => v.toLocaleDateString('en-US', { month: 'short' })
+						format: (v: Date) => v.toLocaleDateString("en-US", { month: "short" })
 					},
-					yAxis: { format: () => '' }
+					yAxis: { format: () => "" }
 				}}
 			>
 				{#snippet tooltip()}
 					<Chart.Tooltip
 						indicator="dot"
 						labelFormatter={(v: Date) => {
-							return v.toLocaleDateString('en-US', {
-								month: 'long'
+							return v.toLocaleDateString("en-US", {
+								month: "long"
 							});
 						}}
 					/>
@@ -67,7 +67,10 @@
 				{#snippet marks({ context })}
 					{#each context.series.visibleSeries as s (s.key)}
 						<LinearGradient
-							stops={[s.color ?? '', 'color-mix(in lch,' + s.color + '10%, transparent)']}
+							stops={[
+								s.color ?? "",
+								"color-mix(in lch," + s.color + "10%, transparent)"
+							]}
 							vertical
 						>
 							{#snippet children({ gradient })}
@@ -75,7 +78,7 @@
 									seriesKey={s.key}
 									curve={curveNatural}
 									fillOpacity={0.4}
-									line={{ class: 'stroke-1' }}
+									line={{ class: "stroke-1" }}
 									motion="tween"
 									{...s.props}
 									fill={gradient}

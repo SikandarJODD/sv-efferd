@@ -43,9 +43,7 @@
 		</DropdownMenu.Label>
 		<DropdownMenu.Separator />
 		<DropdownMenu.Group>
-			<DropdownMenu.Item>
-				Compare plans
-			</DropdownMenu.Item>
+			<DropdownMenu.Item>Compare plans</DropdownMenu.Item>
 		</DropdownMenu.Group>
 		<DropdownMenu.Separator />
 		<DropdownMenu.Group>

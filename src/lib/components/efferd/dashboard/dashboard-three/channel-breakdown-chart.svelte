@@ -40,7 +40,15 @@
 				{#snippet arc({ props, visibleData, index })}
 					<Arc {...props} cornerRadius={8} padAngle={0.02}>
 						{#snippet children({ centroid })}
-							<Text value={`${visibleData[index].share}%`} x={centroid[0]} y={centroid[1]} textAnchor="middle" verticalAnchor="middle" font-size="12" class="fill-background font-medium" />
+							<Text
+								value={`${visibleData[index].share}%`}
+								x={centroid[0]}
+								y={centroid[1]}
+								textAnchor="middle"
+								verticalAnchor="middle"
+								font-size="12"
+								class="fill-background font-medium"
+							/>
 						{/snippet}
 					</Arc>
 				{/snippet}

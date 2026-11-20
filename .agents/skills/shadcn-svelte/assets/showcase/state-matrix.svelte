@@ -6,7 +6,7 @@
 		rows,
 		states = ["default", "hover", "focus", "active", "disabled"],
 		render,
-		class: className,
+		class: className
 	}: {
 		rows: readonly Row[];
 		states?: readonly string[];
@@ -21,7 +21,10 @@
 			<tr>
 				<th scope="col"><span class="sr-only">Variant</span></th>
 				{#each states as state (state)}
-					<th scope="col" class="text-left font-mono text-xs font-normal text-muted-foreground">
+					<th
+						scope="col"
+						class="text-left font-mono text-xs font-normal text-muted-foreground"
+					>
 						{state}
 					</th>
 				{/each}

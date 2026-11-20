@@ -6,9 +6,10 @@ export function parseIsoCalendarDate(isoDate: string): Date {
 
 export function formatChartAxisTick(isoDate: string, periodDays: number): string {
 	const date = parseIsoCalendarDate(isoDate);
-	return date.toLocaleDateString(DASHBOARD_LOCALE, periodDays <= 7
-		? { weekday: "short" }
-		: { day: "numeric", month: "short" });
+	return date.toLocaleDateString(
+		DASHBOARD_LOCALE,
+		periodDays <= 7 ? { weekday: "short" } : { day: "numeric", month: "short" }
+	);
 }
 
 export function formatChartTooltipDate(isoDate: string): string {

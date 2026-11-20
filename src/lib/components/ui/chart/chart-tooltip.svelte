@@ -32,7 +32,8 @@
 		labelKey?: string;
 		hideIndicator?: boolean;
 		labelClassName?: string;
-		labelFormatter?: // eslint-disable-next-line @typescript-eslint/no-explicit-any
+		labelFormatter?:
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			((value: any, payload: TooltipPayload[]) => string | number | Snippet) | null;
 		formatter?: Snippet<
 			[
@@ -42,7 +43,7 @@
 					item: TooltipPayload;
 					index: number;
 					payload: TooltipPayload[];
-				},
+				}
 			]
 		>;
 	} = $props();
@@ -136,7 +137,7 @@
 							name: item.label,
 							item,
 							index: i,
-							payload: visibleSeries,
+							payload: visibleSeries
 						})}
 					{:else}
 						{#if itemConfig?.icon}
@@ -144,12 +145,16 @@
 						{:else if !hideIndicator}
 							<div
 								style="--color-bg: {indicatorColor}; --color-border: {indicatorColor};"
-								class={cn("shrink-0 rounded-[2px] border-(--color-border) bg-(--color-bg)", {
-									"h-2.5 w-2.5": indicator === "dot",
-									"h-full w-1": indicator === "line",
-									"w-0 border-[1.5px] border-dashed bg-transparent": indicator === "dashed",
-									"my-0.5": nestLabel && indicator === "dashed",
-								})}
+								class={cn(
+									"shrink-0 rounded-[2px] border-(--color-border) bg-(--color-bg)",
+									{
+										"h-2.5 w-2.5": indicator === "dot",
+										"h-full w-1": indicator === "line",
+										"w-0 border-[1.5px] border-dashed bg-transparent":
+											indicator === "dashed",
+										"my-0.5": nestLabel && indicator === "dashed"
+									}
+								)}
 							></div>
 						{/if}
 						<div

@@ -1,14 +1,14 @@
 <script lang="ts">
-	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { PieChart, Text } from 'layerchart';
-	import * as Card from '#lib/components/ui/card/index.js';
-	import * as Chart from '#lib/components/ui/chart/index.js';
+	import TrendingUpIcon from "@lucide/svelte/icons/trending-up";
+	import { PieChart, Text } from "layerchart";
+	import * as Card from "#lib/components/ui/card/index.js";
+	import * as Chart from "#lib/components/ui/chart/index.js";
 
-	const chartData = [{ month: 'january', desktop: 1260, mobile: 570 }];
+	const chartData = [{ month: "january", desktop: 1260, mobile: 570 }];
 
 	const chartConfig = {
-		desktop: { label: 'Desktop', color: 'var(--chart-1)' },
-		mobile: { label: 'Mobile', color: 'var(--chart-2)' }
+		desktop: { label: "Desktop", color: "var(--chart-1)" },
+		mobile: { label: "Mobile", color: "var(--chart-2)" }
 	} satisfies Chart.ChartConfig;
 </script>
 
@@ -21,8 +21,8 @@
 		<Chart.Container config={chartConfig} class="mx-auto aspect-square max-h-[250px]">
 			<PieChart
 				data={[
-					{ platform: 'mobile', visitors: 570, color: chartConfig.mobile.color },
-					{ platform: 'desktop', visitors: 1260, color: chartConfig.desktop.color }
+					{ platform: "mobile", visitors: 570, color: chartConfig.mobile.color },
+					{ platform: "desktop", visitors: 1260, color: chartConfig.desktop.color }
 				]}
 				key="platform"
 				value="visitors"

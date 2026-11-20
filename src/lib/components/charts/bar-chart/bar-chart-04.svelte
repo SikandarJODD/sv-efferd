@@ -1,23 +1,23 @@
 <script lang="ts">
-	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { scaleBand } from 'd3-scale';
-	import { BarChart } from 'layerchart';
-	import { cubicInOut } from 'svelte/easing';
-	import * as Card from '#lib/components/ui/card/index.js';
-	import * as Chart from '#lib/components/ui/chart/index.js';
+	import TrendingUpIcon from "@lucide/svelte/icons/trending-up";
+	import { scaleBand } from "d3-scale";
+	import { BarChart } from "layerchart";
+	import { cubicInOut } from "svelte/easing";
+	import * as Card from "#lib/components/ui/card/index.js";
+	import * as Chart from "#lib/components/ui/chart/index.js";
 
 	const chartData = [
-		{ month: 'January', desktop: 186, mobile: 80 },
-		{ month: 'February', desktop: 305, mobile: 200 },
-		{ month: 'March', desktop: 237, mobile: 120 },
-		{ month: 'April', desktop: 73, mobile: 190 },
-		{ month: 'May', desktop: 209, mobile: 130 },
-		{ month: 'June', desktop: 214, mobile: 140 }
+		{ month: "January", desktop: 186, mobile: 80 },
+		{ month: "February", desktop: 305, mobile: 200 },
+		{ month: "March", desktop: 237, mobile: 120 },
+		{ month: "April", desktop: 73, mobile: 190 },
+		{ month: "May", desktop: 209, mobile: 130 },
+		{ month: "June", desktop: 214, mobile: 140 }
 	];
 
 	const chartConfig = {
-		desktop: { label: 'Desktop', color: 'var(--chart-1)' },
-		mobile: { label: 'Mobile', color: 'var(--chart-2)' }
+		desktop: { label: "Desktop", color: "var(--chart-1)" },
+		mobile: { label: "Mobile", color: "var(--chart-2)" }
 	} satisfies Chart.ChartConfig;
 </script>
 
@@ -34,20 +34,20 @@
 				x="month"
 				axis="x"
 				series={[
-					{ key: 'desktop', label: 'Desktop', color: chartConfig.desktop.color },
-					{ key: 'mobile', label: 'Mobile', color: chartConfig.mobile.color }
+					{ key: "desktop", label: "Desktop", color: chartConfig.desktop.color },
+					{ key: "mobile", label: "Mobile", color: chartConfig.mobile.color }
 				]}
 				x1Scale={scaleBand().paddingInner(0.2)}
 				seriesLayout="group"
 				rule={false}
 				props={{
 					bars: {
-						stroke: 'none',
+						stroke: "none",
 						strokeWidth: 0,
-						rounded: 'all',
-						motion: { type: 'tween', duration: 500, easing: cubicInOut }
+						rounded: "all",
+						motion: { type: "tween", duration: 500, easing: cubicInOut }
 					},
-					highlight: { area: { fill: 'none' } },
+					highlight: { area: { fill: "none" } },
 					xAxis: { format: (d) => d.slice(0, 3) }
 				}}
 			>

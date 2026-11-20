@@ -24,8 +24,14 @@
 				<Sidebar.MenuButton
 					class="min-w-8 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
 					tooltipContent="Quick Create"
-				><PlusIcon /><span>New Conversation</span></Sidebar.MenuButton>
-				<Button aria-label="Search conversations" class="size-8 group-data-[collapsible=icon]:opacity-0" size="icon" variant="outline">
+					><PlusIcon /><span>New Conversation</span></Sidebar.MenuButton
+				>
+				<Button
+					aria-label="Search conversations"
+					class="size-8 group-data-[collapsible=icon]:opacity-0"
+					size="icon"
+					variant="outline"
+				>
 					<SearchIcon /><span class="sr-only">Search conversations</span>
 				</Button>
 			</Sidebar.MenuItem>
@@ -39,9 +45,15 @@
 		<Sidebar.Menu class="mt-2">
 			{#each footerNavLinks as item (item.title)}
 				<Sidebar.MenuItem>
-					<Sidebar.MenuButton class="text-muted-foreground" isActive={item.path === pathname} size="sm">
+					<Sidebar.MenuButton
+						class="text-muted-foreground"
+						isActive={item.path === pathname}
+						size="sm"
+					>
 						{#snippet child({ props })}
-							<a href={item.path} {...props}>{#if item.icon}<item.icon />{/if}<span>{item.title}</span></a>
+							<a href={item.path} {...props}
+								>{#if item.icon}<item.icon />{/if}<span>{item.title}</span></a
+							>
 						{/snippet}
 					</Sidebar.MenuButton>
 				</Sidebar.MenuItem>

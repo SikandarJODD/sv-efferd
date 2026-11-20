@@ -14,7 +14,9 @@
 	</div>
 
 	<div class="grid flex-1 grid-cols-3 items-end gap-1.5">
-		<div class="flex h-16 flex-col items-center justify-center gap-1.5 rounded-sm border bg-background p-1.5">
+		<div
+			class="flex h-16 flex-col items-center justify-center gap-1.5 rounded-sm border bg-background p-1.5"
+		>
 			<div class="flex size-5 items-center justify-center rounded-sm bg-muted/60">
 				<div class="size-2 rounded-full border border-muted-foreground/25"></div>
 			</div>
@@ -34,7 +36,9 @@
 			<div class="h-1 w-9 rounded-full bg-muted-foreground/12"></div>
 		</div>
 
-		<div class="flex h-16 flex-col items-center justify-center gap-1.5 rounded-sm border bg-background p-1.5">
+		<div
+			class="flex h-16 flex-col items-center justify-center gap-1.5 rounded-sm border bg-background p-1.5"
+		>
 			<div class="flex size-5 items-center justify-center rounded-sm bg-muted/60">
 				<div class="size-2 border border-muted-foreground/25"></div>
 			</div>

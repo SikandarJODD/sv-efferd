@@ -9,7 +9,9 @@
 	const sidebar = useSidebar();
 	const pressedKeys = new PressedKeys();
 	const focusSearch = () => {
-		groupRef?.querySelector<HTMLInputElement>("[data-slot=input-group-control]")?.focus({ preventScroll: true });
+		groupRef
+			?.querySelector<HTMLInputElement>("[data-slot=input-group-control]")
+			?.focus({ preventScroll: true });
 		sidebar.setOpen(true);
 	};
 
@@ -20,5 +22,7 @@
 <InputGroup.Root bind:ref={groupRef}>
 	<InputGroup.Addon align="inline-start" class="pl-1.75"><SearchIcon /></InputGroup.Addon>
 	<InputGroup.Input aria-label="Search" name="q" placeholder="Search..." type="search" />
-	<InputGroup.Addon align="inline-end"><Kbd.Group><Kbd.Root>⌘</Kbd.Root><Kbd.Root>K</Kbd.Root></Kbd.Group></InputGroup.Addon>
+	<InputGroup.Addon align="inline-end"
+		><Kbd.Group><Kbd.Root>⌘</Kbd.Root><Kbd.Root>K</Kbd.Root></Kbd.Group></InputGroup.Addon
+	>
 </InputGroup.Root>

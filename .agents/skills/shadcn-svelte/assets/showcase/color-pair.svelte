@@ -5,7 +5,7 @@
 		name,
 		background,
 		foreground,
-		class: className,
+		class: className
 	}: {
 		name: string;
 		background: string;

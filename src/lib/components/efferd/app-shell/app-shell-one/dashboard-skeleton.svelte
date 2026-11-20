@@ -6,7 +6,9 @@
 	<div
 		class="grid grid-cols-2 gap-px bg-border p-px *:min-h-36 *:w-full *:bg-background lg:grid-cols-3"
 	>
-		<div></div><div></div><div></div>
+		<div></div>
+		<div></div>
+		<div></div>
 		<div class="col-span-1 min-h-80! md:col-span-2"></div>
 		<div class="col-span-2 min-h-80! md:col-span-1"></div>
 		<div class="col-span-2 min-h-80! md:col-span-3"></div>

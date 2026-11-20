@@ -7,7 +7,9 @@
 	let { title, countLabel }: Props = $props();
 </script>
 
-<div class="flex h-full flex-col items-center justify-center overflow-hidden px-3 py-3 sm:px-4 sm:py-4">
+<div
+	class="flex h-full flex-col items-center justify-center overflow-hidden px-3 py-3 sm:px-4 sm:py-4"
+>
 	<div class="pb-2.5 text-center">
 		<h3 class="font-heading text-base font-normal text-foreground">{title}</h3>
 		<p class="mt-0.5 text-xs leading-4 text-muted-foreground">{countLabel}</p>

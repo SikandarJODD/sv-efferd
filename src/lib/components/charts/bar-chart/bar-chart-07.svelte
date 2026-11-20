@@ -1,24 +1,24 @@
 <script lang="ts">
-	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { scaleBand } from 'd3-scale';
-	import { BarChart } from 'layerchart';
-	import { cubicInOut } from 'svelte/easing';
-	import * as Card from '#lib/components/ui/card/index.js';
-	import * as Chart from '#lib/components/ui/chart/index.js';
+	import TrendingUpIcon from "@lucide/svelte/icons/trending-up";
+	import { scaleBand } from "d3-scale";
+	import { BarChart } from "layerchart";
+	import { cubicInOut } from "svelte/easing";
+	import * as Card from "#lib/components/ui/card/index.js";
+	import * as Chart from "#lib/components/ui/chart/index.js";
 
 	const chartData = [
-		{ month: 'January', desktop: 186, mobile: 80 },
-		{ month: 'February', desktop: 305, mobile: 200 },
-		{ month: 'March', desktop: 237, mobile: 120 },
-		{ month: 'April', desktop: 73, mobile: 190 },
-		{ month: 'May', desktop: 209, mobile: 130 },
-		{ month: 'June', desktop: 214, mobile: 140 }
+		{ month: "January", desktop: 186, mobile: 80 },
+		{ month: "February", desktop: 305, mobile: 200 },
+		{ month: "March", desktop: 237, mobile: 120 },
+		{ month: "April", desktop: 73, mobile: 190 },
+		{ month: "May", desktop: 209, mobile: 130 },
+		{ month: "June", desktop: 214, mobile: 140 }
 	];
 
 	const chartConfig = {
-		desktop: { label: 'Desktop', color: 'var(--chart-1)' },
-		mobile: { label: 'Mobile', color: 'var(--chart-2)' },
-		label: { color: 'var(--background)' }
+		desktop: { label: "Desktop", color: "var(--chart-1)" },
+		mobile: { label: "Mobile", color: "var(--chart-2)" },
+		label: { color: "var(--background)" }
 	} satisfies Chart.ChartConfig;
 </script>
 
@@ -37,21 +37,21 @@
 				y="month"
 				axis="y"
 				rule={false}
-				series={[{ key: 'desktop', label: 'Desktop', color: chartConfig.desktop.color }]}
+				series={[{ key: "desktop", label: "Desktop", color: chartConfig.desktop.color }]}
 				padding={{ right: 16 }}
 				props={{
 					bars: {
-						stroke: 'none',
+						stroke: "none",
 						radius: 5,
-						rounded: 'all',
-						motion: { type: 'tween', duration: 500, easing: cubicInOut }
+						rounded: "all",
+						motion: { type: "tween", duration: 500, easing: cubicInOut }
 					},
-					highlight: { area: { fill: 'none' } },
+					highlight: { area: { fill: "none" } },
 					yAxis: {
 						tickLabelProps: {
-							textAnchor: 'start',
+							textAnchor: "start",
 							dx: 6,
-							class: 'stroke-none fill-background!'
+							class: "stroke-none fill-background!"
 						},
 						tickLength: 0
 					}

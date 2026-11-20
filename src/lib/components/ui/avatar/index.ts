@@ -18,5 +18,5 @@ export {
 	Fallback as AvatarFallback,
 	Badge as AvatarBadge,
 	Group as AvatarGroup,
-	GroupCount as AvatarGroupCount,
+	GroupCount as AvatarGroupCount
 };
