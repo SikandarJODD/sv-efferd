@@ -20,13 +20,13 @@
 		<Add.Root item={installUrl} withoutRegistry>
 			<Add.Group class={cn("min-h-8 w-full max-w-full sm:h-8 sm:w-80", className)}>
 				<Add.Button
-					class="min-h-8 min-w-0 py-1 pr-1 md:h-8 md:py-0 md:pr-2 md:pl-1 [&>div]:size-8"
+					class="min-h-8 min-w-0 cursor-pointer py-1 pr-1 md:h-8 md:py-0 md:pr-2 md:pl-1 [&>div]:size-8"
 				/>
 				<Add.GroupSeparator />
-				<Add.Dropdown class="size-8">
+				<Add.Dropdown class="size-8 cursor-pointer">
 					<Add.DropdownContent>
 						{#each AGENTS as addAgent (addAgent)}
-							<Add.DropdownAgentOption agent={addAgent} />
+							<Add.DropdownAgentOption agent={addAgent} class="cursor-pointer" />
 						{/each}
 					</Add.DropdownContent>
 				</Add.Dropdown>
