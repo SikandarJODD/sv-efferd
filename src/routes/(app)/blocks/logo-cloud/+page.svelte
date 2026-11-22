@@ -10,6 +10,7 @@
 	title="Svelte Logo Cloud Blocks"
 	desc="Logo sections for customers, partners, sponsors, and integrations."
 	link="/blocks/logo-cloud"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

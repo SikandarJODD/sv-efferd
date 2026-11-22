@@ -10,6 +10,7 @@
 	title="Svelte Image Gallery Blocks"
 	desc="Gallery layouts for portfolios, product images, and editorial collections."
 	link="/blocks/image-gallery"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

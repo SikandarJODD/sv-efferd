@@ -4,9 +4,33 @@
 
 Browse beautiful shadcn-svelte marketing blocks for landing pages, hero sections, CTAs, pricing, testimonials, FAQs, headers, footers, and more.
 
-Total Blocks: 64
+Total Blocks: 82
 
 Live Preview: [sv-efferd.pages.dev](https://sv-efferd.pages.dev)
+
+## Features
+
+- 82 free and open-source blocks across 19 categories
+- Responsive layouts for mobile and desktop
+- Light and dark mode support
+- Built with Svelte 5, Tailwind CSS, and shadcn-svelte
+- Live previews with responsive controls
+- One-command installs with the shadcn-svelte CLI
+- Fully editable source code
+- Component metadata for AI tools
+
+## AI and agent resources
+
+- [`llms.txt`](https://sv-efferd.pages.dev/llms.txt): A short project guide for AI tools
+- [`component-manifest.json`](https://sv-efferd.pages.dev/component-manifest.json): Categories, tags, previews, and install commands
+- [`registry index`](https://sv-efferd.pages.dev/r/index.json): All installable registry items
+
+## New Categories
+
+- [Dashboard](https://sv-efferd.pages.dev/blocks/dashboard)
+- [App Shell](https://sv-efferd.pages.dev/blocks/app-shell)
+- [Settings](https://sv-efferd.pages.dev/blocks/settings)
+- [Team](https://sv-efferd.pages.dev/blocks/team)
 
 ## Categories :
 

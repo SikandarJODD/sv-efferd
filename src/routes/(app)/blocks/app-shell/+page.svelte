@@ -10,6 +10,7 @@
 	title="Svelte App Shell Blocks"
 	desc="Dashboard and app layouts with sidebars, navigation, and responsive content areas."
 	link="/blocks/app-shell"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

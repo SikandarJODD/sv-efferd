@@ -10,6 +10,7 @@
 	title="Svelte Blog Blocks"
 	desc="Blog layouts for featured stories, article lists, and post previews."
 	link="/blocks/blog"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

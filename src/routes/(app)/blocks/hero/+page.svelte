@@ -10,6 +10,7 @@
 	title="Svelte Hero Blocks"
 	desc="Hero sections that introduce a product and guide visitors to the main action."
 	link="/blocks/hero"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

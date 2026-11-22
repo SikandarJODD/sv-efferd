@@ -10,6 +10,7 @@
 	title="Svelte Contact Blocks"
 	desc="Contact sections with forms, support details, office locations, and response times."
 	link="/blocks/contact"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

@@ -10,6 +10,7 @@
 	title="Svelte CTA Blocks"
 	desc="Call-to-action sections for sign-ups, trials, downloads, and contact prompts."
 	link="/blocks/cta"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

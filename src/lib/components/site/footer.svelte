@@ -14,7 +14,9 @@
 
 	const productLinks: FooterLink[] = [
 		{ label: "Home", href: "/" },
-		{ label: "Blocks", href: "/blocks/hero" }
+		{ label: "Blocks", href: "/blocks/hero" },
+		{ label: "llms.txt", href: "/llms.txt" },
+		{ label: "Component manifest", href: "/component-manifest.json" }
 	];
 
 	const socialLinks = [

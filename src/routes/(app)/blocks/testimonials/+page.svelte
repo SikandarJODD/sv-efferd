@@ -10,6 +10,7 @@
 	title="Svelte Testimonial Blocks"
 	desc="Customer quote and review layouts for adding social proof to a page."
 	link="/blocks/testimonials"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

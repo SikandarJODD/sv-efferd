@@ -10,6 +10,7 @@
 	title="Svelte Integration Blocks"
 	desc="Sections for showing the apps, tools, and services a product connects with."
 	link="/blocks/integrations"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

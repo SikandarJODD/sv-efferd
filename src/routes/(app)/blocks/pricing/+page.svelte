@@ -10,6 +10,7 @@
 	title="Svelte Pricing Blocks"
 	desc="Pricing layouts for plans, billing options, feature comparisons, and purchase actions."
 	link="/blocks/pricing"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

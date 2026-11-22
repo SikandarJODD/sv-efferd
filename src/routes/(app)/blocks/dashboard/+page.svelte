@@ -10,6 +10,7 @@
 	title="Svelte Dashboard Blocks"
 	desc="Responsive Svelte dashboard blocks with KPI cards, interactive charts, and data tables for admin and analytics interfaces."
 	link="/blocks/dashboard"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

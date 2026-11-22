@@ -1,0 +1,5090 @@
+{
+	"schemaVersion": 1,
+	"site": {
+		"name": "Svelte Efferd",
+		"url": "https://sv-efferd.pages.dev",
+		"framework": "Svelte",
+		"registryUrl": "https://sv-efferd.pages.dev/r/index.json"
+	},
+	"categories": [
+		{
+			"slug": "dashboard",
+			"label": "Dashboard",
+			"description": "Dashboard layouts for analytics, key metrics, interactive charts, and operational data.",
+			"url": "https://sv-efferd.pages.dev/blocks/dashboard",
+			"badge": "new"
+		},
+		{
+			"slug": "app-shell",
+			"label": "App Shell",
+			"description": "Dashboard and app layouts with sidebars, navigation, and responsive content areas.",
+			"url": "https://sv-efferd.pages.dev/blocks/app-shell",
+			"badge": "new"
+		},
+		{
+			"slug": "settings",
+			"label": "Settings",
+			"description": "Settings pages for profiles, accounts, notifications, appearance, and preferences.",
+			"url": "https://sv-efferd.pages.dev/blocks/settings",
+			"badge": "new"
+		},
+		{
+			"slug": "hero",
+			"label": "Hero",
+			"description": "Hero sections that introduce a product and guide visitors to the main action.",
+			"url": "https://sv-efferd.pages.dev/blocks/hero"
+		},
+		{
+			"slug": "header",
+			"label": "Header",
+			"description": "Responsive headers with navigation, menus, account actions, and mobile layouts.",
+			"url": "https://sv-efferd.pages.dev/blocks/header"
+		},
+		{
+			"slug": "logo-cloud",
+			"label": "Logo Cloud",
+			"description": "Logo sections for customers, partners, sponsors, and integrations.",
+			"url": "https://sv-efferd.pages.dev/blocks/logo-cloud"
+		},
+		{
+			"slug": "features",
+			"label": "Features",
+			"description": "Feature sections that explain what a product does and why it matters.",
+			"url": "https://sv-efferd.pages.dev/blocks/features"
+		},
+		{
+			"slug": "integrations",
+			"label": "Integrations",
+			"description": "Sections for showing the apps, tools, and services a product connects with.",
+			"url": "https://sv-efferd.pages.dev/blocks/integrations"
+		},
+		{
+			"slug": "testimonials",
+			"label": "Testimonials",
+			"description": "Customer quote and review layouts for adding social proof to a page.",
+			"url": "https://sv-efferd.pages.dev/blocks/testimonials"
+		},
+		{
+			"slug": "team",
+			"label": "Team",
+			"description": "Team sections with member profiles, roles, social links, and hiring prompts.",
+			"url": "https://sv-efferd.pages.dev/blocks/team"
+		},
+		{
+			"slug": "cta",
+			"label": "CTA",
+			"description": "Call-to-action sections for sign-ups, trials, downloads, and contact prompts.",
+			"url": "https://sv-efferd.pages.dev/blocks/cta"
+		},
+		{
+			"slug": "pricing",
+			"label": "Pricing",
+			"description": "Pricing layouts for plans, billing options, feature comparisons, and purchase actions.",
+			"url": "https://sv-efferd.pages.dev/blocks/pricing"
+		},
+		{
+			"slug": "blog",
+			"label": "Blog",
+			"description": "Blog layouts for featured stories, article lists, and post previews.",
+			"url": "https://sv-efferd.pages.dev/blocks/blog"
+		},
+		{
+			"slug": "auth",
+			"label": "Auth",
+			"description": "Account access pages for sign-in, sign-up, password recovery, and verification.",
+			"url": "https://sv-efferd.pages.dev/blocks/auth"
+		},
+		{
+			"slug": "faqs",
+			"label": "FAQs",
+			"description": "FAQ sections that organize common questions in accordions and split layouts.",
+			"url": "https://sv-efferd.pages.dev/blocks/faqs"
+		},
+		{
+			"slug": "contact",
+			"label": "Contact",
+			"description": "Contact sections with forms, support details, office locations, and response times.",
+			"url": "https://sv-efferd.pages.dev/blocks/contact"
+		},
+		{
+			"slug": "footer",
+			"label": "Footer",
+			"description": "Responsive footers with navigation, legal links, social profiles, and newsletter forms.",
+			"url": "https://sv-efferd.pages.dev/blocks/footer"
+		},
+		{
+			"slug": "image-gallery",
+			"label": "Image Gallery",
+			"description": "Gallery layouts for portfolios, product images, and editorial collections.",
+			"url": "https://sv-efferd.pages.dev/blocks/image-gallery"
+		},
+		{
+			"slug": "not-found",
+			"label": "Not Found",
+			"description": "404 pages that explain what went wrong and help visitors find their way back.",
+			"url": "https://sv-efferd.pages.dev/blocks/not-found"
+		}
+	],
+	"components": [
+		{
+			"name": "cta-one",
+			"title": "CTA One",
+			"description": "A split CTA with quiet structure, balanced actions, and full-width dividers.",
+			"category": "cta",
+			"layout": [
+				"split"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"marketing",
+				"conversion"
+			],
+			"visualTraits": [
+				"minimal",
+				"bordered",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/cta",
+				"preview": "https://sv-efferd.pages.dev/preview/cta/one",
+				"registry": "https://sv-efferd.pages.dev/r/cta-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/cta-one.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"button",
+				"local:full-width-divider"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/cta/cta-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/cta/cta-one.svelte"
+				}
+			]
+		},
+		{
+			"name": "cta-two",
+			"title": "CTA Two",
+			"description": "A centered CTA with a softer secondary band and directional primary action.",
+			"category": "cta",
+			"layout": [
+				"centered",
+				"stacked"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"marketing",
+				"conversion"
+			],
+			"visualTraits": [
+				"minimal",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/cta",
+				"preview": "https://sv-efferd.pages.dev/preview/cta/two",
+				"registry": "https://sv-efferd.pages.dev/r/cta-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/cta-two.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:full-width-divider"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/cta/cta-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/cta/cta-two.svelte"
+				}
+			]
+		},
+		{
+			"name": "cta-three",
+			"title": "CTA Three",
+			"description": "A more decorative CTA with corner accents and a stronger editorial feel.",
+			"category": "cta",
+			"layout": [
+				"centered",
+				"stacked"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"marketing",
+				"conversion"
+			],
+			"visualTraits": [
+				"decorative",
+				"editorial",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/cta",
+				"preview": "https://sv-efferd.pages.dev/preview/cta/three",
+				"registry": "https://sv-efferd.pages.dev/r/cta-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/cta-three.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:decor-icon"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/cta/cta-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/cta/cta-three.svelte"
+				}
+			]
+		},
+		{
+			"name": "cta-four",
+			"title": "CTA Four",
+			"description": "A compact card CTA with credit-card reassurance and elevated actions.",
+			"category": "cta",
+			"layout": [
+				"centered",
+				"stacked"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"marketing",
+				"conversion"
+			],
+			"visualTraits": [
+				"card",
+				"compact"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/cta",
+				"preview": "https://sv-efferd.pages.dev/preview/cta/four",
+				"registry": "https://sv-efferd.pages.dev/r/cta-four.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/cta-four.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/cta/cta-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/cta/cta-four.svelte"
+				}
+			]
+		},
+		{
+			"name": "cta-five",
+			"title": "CTA Five",
+			"description": "A newsletter CTA that blends subscription form controls with social proof.",
+			"category": "cta",
+			"layout": [
+				"split"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"marketing",
+				"conversion",
+				"social-proof"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/cta",
+				"preview": "https://sv-efferd.pages.dev/preview/cta/five",
+				"registry": "https://sv-efferd.pages.dev/r/cta-five.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/cta-five.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:full-width-divider",
+				"input-group"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/cta/cta-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/cta/cta-five.svelte"
+				}
+			]
+		},
+		{
+			"name": "not-found-one",
+			"title": "Not Found One",
+			"description": "A framed 404 layout with full-width dividers and balanced recovery actions.",
+			"category": "not-found",
+			"layout": [
+				"centered",
+				"stacked"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"error-page",
+				"navigation"
+			],
+			"visualTraits": [
+				"bordered",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/not-found",
+				"preview": "https://sv-efferd.pages.dev/preview/not-found/one",
+				"registry": "https://sv-efferd.pages.dev/r/not-found-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/not-found-one.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:full-width-divider",
+				"empty"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/not-found/not-found-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/not-found/not-found-one.svelte"
+				}
+			]
+		},
+		{
+			"name": "not-found-two",
+			"title": "Not Found Two",
+			"description": "A minimal full-screen 404 with oversized typography and direct recovery actions.",
+			"category": "not-found",
+			"layout": [
+				"centered",
+				"full-screen"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"error-page",
+				"navigation"
+			],
+			"visualTraits": [
+				"minimal",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/not-found",
+				"preview": "https://sv-efferd.pages.dev/preview/not-found/two",
+				"registry": "https://sv-efferd.pages.dev/r/not-found-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/not-found-two.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:full-width-divider",
+				"empty"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/not-found/not-found-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/not-found/not-found-two.svelte"
+				}
+			]
+		},
+		{
+			"name": "logo-cloud-one",
+			"title": "Logo Cloud One",
+			"description": "A clean partner grid with a framed card surface and balanced spacing.",
+			"category": "logo-cloud",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"marketing",
+				"social-proof"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/logo-cloud",
+				"preview": "https://sv-efferd.pages.dev/preview/logo-cloud/one",
+				"registry": "https://sv-efferd.pages.dev/r/logo-cloud-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/logo-cloud-one.json",
+			"dependencies": [],
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/logo-cloud/logo-cloud-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/logo-cloud/logo-cloud-one.svelte"
+				}
+			]
+		},
+		{
+			"name": "logo-cloud-two",
+			"title": "Logo Cloud Two",
+			"description": "A bordered logo grid with alternating panels and decorative corner accents.",
+			"category": "logo-cloud",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"marketing",
+				"social-proof"
+			],
+			"visualTraits": [
+				"bordered",
+				"decorative"
+			],
+			"responsive": [
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/logo-cloud",
+				"preview": "https://sv-efferd.pages.dev/preview/logo-cloud/two",
+				"registry": "https://sv-efferd.pages.dev/r/logo-cloud-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/logo-cloud-two.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"local:decor-icon"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/logo-cloud/two/logo-cloud-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/logo-cloud/two/logo-cloud-two.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/logo-cloud/two/logo-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/logo-cloud/two/logo-card.svelte"
+				}
+			]
+		},
+		{
+			"name": "logo-cloud-three",
+			"title": "Logo Cloud Three",
+			"description": "A scrolling logo marquee with a soft edge mask and editorial rhythm.",
+			"category": "logo-cloud",
+			"layout": [
+				"list"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"marketing",
+				"social-proof"
+			],
+			"visualTraits": [
+				"minimal",
+				"animated",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-scroll",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/logo-cloud",
+				"preview": "https://sv-efferd.pages.dev/preview/logo-cloud/three",
+				"registry": "https://sv-efferd.pages.dev/r/logo-cloud-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/logo-cloud-three.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"local:marquee"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/logo-cloud/three/logo-cloud-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/logo-cloud/three/logo-cloud-three.svelte"
+				}
+			]
+		},
+		{
+			"name": "logo-cloud-four",
+			"title": "Logo Cloud Four",
+			"description": "A marquee logo band with progressive edge blur and a layered track surface.",
+			"category": "logo-cloud",
+			"layout": [
+				"list"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"marketing",
+				"social-proof"
+			],
+			"visualTraits": [
+				"animated",
+				"decorative",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-scroll",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/logo-cloud",
+				"preview": "https://sv-efferd.pages.dev/preview/logo-cloud/four",
+				"registry": "https://sv-efferd.pages.dev/r/logo-cloud-four.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/logo-cloud-four.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"local:marquee",
+				"local:progressive-blur"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/logo-cloud/four/logo-cloud-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/logo-cloud/four/logo-cloud-four.svelte"
+				}
+			]
+		},
+		{
+			"name": "logo-cloud-five",
+			"title": "Logo Cloud Five",
+			"description": "A flexible wrapped logo cloud designed for broader brand collections.",
+			"category": "logo-cloud",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"marketing",
+				"social-proof"
+			],
+			"visualTraits": [
+				"minimal"
+			],
+			"responsive": [
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/logo-cloud",
+				"preview": "https://sv-efferd.pages.dev/preview/logo-cloud/five",
+				"registry": "https://sv-efferd.pages.dev/r/logo-cloud-five.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/logo-cloud-five.json",
+			"dependencies": [],
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/logo-cloud/five/logo-cloud-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/logo-cloud/five/logo-cloud-five.svelte"
+				}
+			]
+		},
+		{
+			"name": "contact-one",
+			"title": "Contact One",
+			"description": "A compact contact strip with quick details framed by full-width dividers.",
+			"category": "contact",
+			"layout": [
+				"split"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"contact",
+				"support"
+			],
+			"visualTraits": [
+				"compact",
+				"bordered",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/contact",
+				"preview": "https://sv-efferd.pages.dev/preview/contact/one",
+				"registry": "https://sv-efferd.pages.dev/r/contact-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/contact-one.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"local:full-width-divider"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/contact/contact-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/contact/contact-one.svelte"
+				}
+			]
+		},
+		{
+			"name": "contact-two",
+			"title": "Contact Two",
+			"description": "A three-column contact hub for email, social DMs, and community support.",
+			"category": "contact",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"contact",
+				"support"
+			],
+			"visualTraits": [
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/contact",
+				"preview": "https://sv-efferd.pages.dev/preview/contact/two",
+				"registry": "https://sv-efferd.pages.dev/r/contact-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/contact-two.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/contact/contact-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/contact/contact-two.svelte"
+				},
+				{
+					"path": "src/lib/svgs/x.svelte",
+					"type": "registry:lib",
+					"target": "svgs/x.svelte"
+				}
+			]
+		},
+		{
+			"name": "contact-three",
+			"title": "Contact Three",
+			"description": "A full-page contact layout with detailed channels, office info, and social links.",
+			"category": "contact",
+			"layout": [
+				"grid",
+				"full-screen"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"contact",
+				"support"
+			],
+			"visualTraits": [
+				"editorial",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/contact",
+				"preview": "https://sv-efferd.pages.dev/preview/contact/three",
+				"registry": "https://sv-efferd.pages.dev/r/contact-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/contact-three.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"local:full-width-divider"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/contact/contact-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/contact/contact-three.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:lib",
+					"target": "svgs/github.svelte"
+				},
+				{
+					"path": "src/lib/svgs/x.svelte",
+					"type": "registry:lib",
+					"target": "svgs/x.svelte"
+				}
+			]
+		},
+		{
+			"name": "contact-four",
+			"title": "Contact Four",
+			"description": "A split contact form with direct support details and a structured inquiry panel.",
+			"category": "contact",
+			"layout": [
+				"split",
+				"form"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"contact",
+				"support"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/contact",
+				"preview": "https://sv-efferd.pages.dev/preview/contact/four",
+				"registry": "https://sv-efferd.pages.dev/r/contact-four.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/contact-four.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"field",
+				"input",
+				"textarea"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/contact/contact-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/contact/contact-four.svelte"
+				}
+			]
+		},
+		{
+			"name": "contact-five",
+			"title": "Contact Five",
+			"description": "A bordered contact card pairing essential details with a reusable message form.",
+			"category": "contact",
+			"layout": [
+				"split",
+				"form"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"contact",
+				"support"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/contact",
+				"preview": "https://sv-efferd.pages.dev/preview/contact/five",
+				"registry": "https://sv-efferd.pages.dev/r/contact-five.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/contact-five.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:decor-icon",
+				"field",
+				"input",
+				"textarea"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/contact/contact-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/contact/contact-five.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/contact/contact-form.svelte",
+					"type": "registry:component",
+					"target": "efferd/contact/contact-form.svelte"
+				}
+			]
+		},
+		{
+			"name": "blog-one",
+			"title": "Blog One",
+			"description": "A vertical editorial list with full-width dividers and compact summaries.",
+			"category": "blog",
+			"layout": [
+				"list"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"content",
+				"marketing"
+			],
+			"visualTraits": [
+				"editorial",
+				"bordered",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/blog",
+				"preview": "https://sv-efferd.pages.dev/preview/blog/one",
+				"registry": "https://sv-efferd.pages.dev/r/blog-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/blog-one.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"local:full-width-divider"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/blogs/blog-one/blog-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/blogs/blog-one/blog-one.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/blogs/blog-one/blog-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/blogs/blog-one/blog-card.svelte"
+				}
+			]
+		},
+		{
+			"name": "blog-two",
+			"title": "Blog Two",
+			"description": "A structured blog grid with metadata rows and filler cells for balance.",
+			"category": "blog",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"content",
+				"marketing"
+			],
+			"visualTraits": [
+				"bordered",
+				"editorial"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/blog",
+				"preview": "https://sv-efferd.pages.dev/preview/blog/two",
+				"registry": "https://sv-efferd.pages.dev/r/blog-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/blog-two.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"local:full-width-divider",
+				"local:grid-filler"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/blogs/blog-two/blog-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/blogs/blog-two/blog-two.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/blogs/blog-two/blog-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/blogs/blog-two/blog-card.svelte"
+				}
+			]
+		},
+		{
+			"name": "blog-three",
+			"title": "Blog Three",
+			"description": "A card-based blog grid with media thumbnails and richer reading metadata.",
+			"category": "blog",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"content",
+				"marketing"
+			],
+			"visualTraits": [
+				"card",
+				"image-led"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/blog",
+				"preview": "https://sv-efferd.pages.dev/preview/blog/three",
+				"registry": "https://sv-efferd.pages.dev/r/blog-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/blog-three.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"local:full-width-divider",
+				"aspect-ratio"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/blogs/blog-three/blog-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/blogs/blog-three/blog-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/blogs/blog-three/blog-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/blogs/blog-three/blog-card.svelte"
+				}
+			]
+		},
+		{
+			"name": "auth-one",
+			"title": "Auth One",
+			"description": "A centered auth entry screen with ambient particles and social sign-in actions.",
+			"category": "auth",
+			"layout": [
+				"centered",
+				"form",
+				"full-screen"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"authentication"
+			],
+			"visualTraits": [
+				"decorative",
+				"animated"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/auth",
+				"preview": "https://sv-efferd.pages.dev/preview/auth/one",
+				"registry": "https://sv-efferd.pages.dev/r/auth-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/auth-one.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:particles"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/auth/auth-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/auth/auth-one.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:lib",
+					"target": "svgs/google.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:lib",
+					"target": "svgs/github.svelte"
+				}
+			]
+		},
+		{
+			"name": "auth-two",
+			"title": "Auth Two",
+			"description": "A framed auth panel that combines email capture with side-by-side social login.",
+			"category": "auth",
+			"layout": [
+				"split",
+				"form"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"authentication"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/auth",
+				"preview": "https://sv-efferd.pages.dev/preview/auth/two",
+				"registry": "https://sv-efferd.pages.dev/r/auth-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/auth-two.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:auth-divider",
+				"local:decor-icon",
+				"input-group"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/auth/auth-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/auth/auth-two.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:lib",
+					"target": "svgs/google.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:lib",
+					"target": "svgs/github.svelte"
+				}
+			]
+		},
+		{
+			"name": "auth-three",
+			"title": "Auth Three",
+			"description": "A minimal single-column auth flow with brand header and stacked sign-in options.",
+			"category": "auth",
+			"layout": [
+				"centered",
+				"stacked",
+				"form"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"authentication"
+			],
+			"visualTraits": [
+				"minimal"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/auth",
+				"preview": "https://sv-efferd.pages.dev/preview/auth/three",
+				"registry": "https://sv-efferd.pages.dev/r/auth-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/auth-three.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:auth-divider",
+				"input-group"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/auth/auth-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/auth/auth-three.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:lib",
+					"target": "svgs/google.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:lib",
+					"target": "svgs/github.svelte"
+				}
+			]
+		},
+		{
+			"name": "auth-four",
+			"title": "Auth Four",
+			"description": "A bordered auth layout with divider rails and a gentle email-first continuation flow.",
+			"category": "auth",
+			"layout": [
+				"centered",
+				"stacked",
+				"form"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"authentication"
+			],
+			"visualTraits": [
+				"bordered",
+				"decorative"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/auth",
+				"preview": "https://sv-efferd.pages.dev/preview/auth/four",
+				"registry": "https://sv-efferd.pages.dev/r/auth-four.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/auth-four.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:auth-divider",
+				"local:full-width-divider",
+				"input-group"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/auth/auth-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/auth/auth-four.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:lib",
+					"target": "svgs/google.svelte"
+				}
+			]
+		},
+		{
+			"name": "auth-five",
+			"title": "Auth Five",
+			"description": "A split-screen auth experience with animated background paths and broader provider options.",
+			"category": "auth",
+			"layout": [
+				"split",
+				"form",
+				"full-screen"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"authentication"
+			],
+			"visualTraits": [
+				"decorative",
+				"animated"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/auth",
+				"preview": "https://sv-efferd.pages.dev/preview/auth/five",
+				"registry": "https://sv-efferd.pages.dev/r/auth-five.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/auth-five.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:auth-divider",
+				"local:floating-paths",
+				"input-group"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/auth/auth-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/auth/auth-five.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:lib",
+					"target": "svgs/google.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:lib",
+					"target": "svgs/github.svelte"
+				},
+				{
+					"path": "src/lib/svgs/apple.svelte",
+					"type": "registry:lib",
+					"target": "svgs/apple.svelte"
+				}
+			]
+		},
+		{
+			"name": "faq-one",
+			"title": "FAQ One",
+			"description": "A compact FAQ stack with a centered heading and a classic single-column accordion.",
+			"category": "faqs",
+			"layout": [
+				"centered",
+				"stacked"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"support",
+				"content"
+			],
+			"visualTraits": [
+				"minimal"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/faqs",
+				"preview": "https://sv-efferd.pages.dev/preview/faqs/one",
+				"registry": "https://sv-efferd.pages.dev/r/faq-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/faq-one.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"accordion"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/faqs/faq-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/faqs/faq-one.svelte"
+				}
+			]
+		},
+		{
+			"name": "faq-two",
+			"title": "FAQ Two",
+			"description": "A split FAQ layout with a fixed intro column and full-height answer rail.",
+			"category": "faqs",
+			"layout": [
+				"split"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"support",
+				"content"
+			],
+			"visualTraits": [
+				"editorial",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/faqs",
+				"preview": "https://sv-efferd.pages.dev/preview/faqs/two",
+				"registry": "https://sv-efferd.pages.dev/r/faq-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/faq-two.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"accordion"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/faqs/faq-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/faqs/faq-two.svelte"
+				}
+			]
+		},
+		{
+			"name": "faq-three",
+			"title": "FAQ Three",
+			"description": "A guided editorial FAQ with divider rails and decorative timeline markers.",
+			"category": "faqs",
+			"layout": [
+				"split",
+				"stacked"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"support",
+				"content"
+			],
+			"visualTraits": [
+				"editorial",
+				"decorative",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/faqs",
+				"preview": "https://sv-efferd.pages.dev/preview/faqs/three",
+				"registry": "https://sv-efferd.pages.dev/r/faq-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/faq-three.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"accordion",
+				"local:decor-icon"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/faqs/faq-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/faqs/faq-three.svelte"
+				}
+			]
+		},
+		{
+			"name": "faq-four",
+			"title": "FAQ Four",
+			"description": "A categorized FAQ explorer with topic switching and softly framed accordion rows.",
+			"category": "faqs",
+			"layout": [
+				"split",
+				"stacked"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"support",
+				"content"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/faqs",
+				"preview": "https://sv-efferd.pages.dev/preview/faqs/four",
+				"registry": "https://sv-efferd.pages.dev/r/faq-four.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/faq-four.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"accordion"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/faqs/faq-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/faqs/faq-four.svelte"
+				}
+			]
+		},
+		{
+			"name": "faq-five",
+			"title": "FAQ Five",
+			"description": "A searchable FAQ page with category filters, empty state handling, and structured dividers.",
+			"category": "faqs",
+			"layout": [
+				"stacked",
+				"list"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"support",
+				"content"
+			],
+			"visualTraits": [
+				"bordered",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/faqs",
+				"preview": "https://sv-efferd.pages.dev/preview/faqs/five",
+				"registry": "https://sv-efferd.pages.dev/r/faq-five.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/faq-five.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"accordion",
+				"local:full-width-divider",
+				"input-group",
+				"empty"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/faqs/faq-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/faqs/faq-five.svelte"
+				}
+			]
+		},
+		{
+			"name": "feature-one",
+			"title": "Feature One",
+			"description": "A compact four-column feature strip with lightweight icon-led messaging.",
+			"category": "features",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"marketing",
+				"content"
+			],
+			"visualTraits": [
+				"minimal",
+				"compact"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/features",
+				"preview": "https://sv-efferd.pages.dev/preview/features/one",
+				"registry": "https://sv-efferd.pages.dev/r/feature-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/feature-one.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/features/feature-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/features/feature-one.svelte"
+				}
+			]
+		},
+		{
+			"name": "feature-two",
+			"title": "Feature Two",
+			"description": "An editorial feature frame with dashed rails, corner accents, and three focused highlights.",
+			"category": "features",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"marketing",
+				"content"
+			],
+			"visualTraits": [
+				"editorial",
+				"decorative",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/features",
+				"preview": "https://sv-efferd.pages.dev/preview/features/two",
+				"registry": "https://sv-efferd.pages.dev/r/feature-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/feature-two.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"local:dashed-line",
+				"local:decor-icon"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/features/feature-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/features/feature-two.svelte"
+				}
+			]
+		},
+		{
+			"name": "feature-three",
+			"title": "Feature Three",
+			"description": "A bordered feature grid with full-width divider rails and stronger product framing.",
+			"category": "features",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"marketing",
+				"content"
+			],
+			"visualTraits": [
+				"bordered",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/features",
+				"preview": "https://sv-efferd.pages.dev/preview/features/three",
+				"registry": "https://sv-efferd.pages.dev/r/feature-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/feature-three.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"local:full-width-divider"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/features/feature-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/features/feature-three.svelte"
+				}
+			]
+		},
+		{
+			"name": "feature-four",
+			"title": "Feature Four",
+			"description": "A product-feature showcase with structured cards and subtle editorial chrome.",
+			"category": "features",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"marketing",
+				"content"
+			],
+			"visualTraits": [
+				"card",
+				"editorial"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/features",
+				"preview": "https://sv-efferd.pages.dev/preview/features/four",
+				"registry": "https://sv-efferd.pages.dev/r/feature-four.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/feature-four.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"local:decor-icon"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/features/feature-four/feature-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/features/feature-four/feature-four.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/features/feature-four/feature-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/features/feature-four/feature-card.svelte"
+				}
+			]
+		},
+		{
+			"name": "feature-five",
+			"title": "Feature Five",
+			"description": "A dense capability grid with patterned card backgrounds and a stronger product voice.",
+			"category": "features",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"marketing",
+				"content"
+			],
+			"visualTraits": [
+				"card",
+				"decorative",
+				"compact"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/features",
+				"preview": "https://sv-efferd.pages.dev/preview/features/five",
+				"registry": "https://sv-efferd.pages.dev/r/feature-five.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/feature-five.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"local:grid-pattern"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/features/feature-five/feature-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/features/feature-five/feature-five.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/features/feature-five/feature-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/features/feature-five/feature-card.svelte"
+				}
+			]
+		},
+		{
+			"name": "footer-one",
+			"title": "Footer One",
+			"description": "A compact product footer with inline social links and a simple closing bar.",
+			"category": "footer",
+			"layout": [
+				"split"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"navigation",
+				"marketing"
+			],
+			"visualTraits": [
+				"minimal",
+				"compact"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/footer",
+				"preview": "https://sv-efferd.pages.dev/preview/footer/one",
+				"registry": "https://sv-efferd.pages.dev/r/footer-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/footer-one.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"button"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/footer/footer-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/footer-one.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:lib",
+					"target": "svgs/github.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/svgs/x.svelte",
+					"type": "registry:lib",
+					"target": "svgs/x.svelte"
+				}
+			]
+		},
+		{
+			"name": "footer-two",
+			"title": "Footer Two",
+			"description": "A structured multi-column footer with brand intro and outlined social actions.",
+			"category": "footer",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"navigation",
+				"marketing"
+			],
+			"visualTraits": [
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/footer",
+				"preview": "https://sv-efferd.pages.dev/preview/footer/two",
+				"registry": "https://sv-efferd.pages.dev/r/footer-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/footer-two.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/footer/footer-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/footer-two.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/svgs/x.svelte",
+					"type": "registry:lib",
+					"target": "svgs/x.svelte"
+				}
+			]
+		},
+		{
+			"name": "footer-three",
+			"title": "Footer Three",
+			"description": "An animated rounded footer with grouped link columns and softer visual depth.",
+			"category": "footer",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"navigation",
+				"marketing"
+			],
+			"visualTraits": [
+				"card",
+				"animated"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/footer",
+				"preview": "https://sv-efferd.pages.dev/preview/footer/three",
+				"registry": "https://sv-efferd.pages.dev/r/footer-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/footer-three.json",
+			"dependencies": [
+				"@lucide/svelte",
+				"motion-sv"
+			],
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/footer/footer-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/footer-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/footer/animated-container.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/animated-container.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "footer-four",
+			"title": "Footer Four",
+			"description": "A directory-style footer with stacked social headers and nested link groups.",
+			"category": "footer",
+			"layout": [
+				"grid",
+				"list"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"navigation",
+				"marketing"
+			],
+			"visualTraits": [
+				"editorial"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/footer",
+				"preview": "https://sv-efferd.pages.dev/preview/footer/four",
+				"registry": "https://sv-efferd.pages.dev/r/footer-four.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/footer-four.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/footer/footer-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/footer-four.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/footer/link-group.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/link-group.svelte"
+				}
+			]
+		},
+		{
+			"name": "footer-five",
+			"title": "Footer Five",
+			"description": "A marketplace-style footer with store badges, social actions, and dense support links.",
+			"category": "footer",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"navigation",
+				"marketing"
+			],
+			"visualTraits": [
+				"compact",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/footer",
+				"preview": "https://sv-efferd.pages.dev/preview/footer/five",
+				"registry": "https://sv-efferd.pages.dev/r/footer-five.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/footer-five.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/footer/footer-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/footer-five.svelte"
+				},
+				{
+					"path": "src/lib/svgs/apple.svelte",
+					"type": "registry:lib",
+					"target": "svgs/apple.svelte"
+				},
+				{
+					"path": "src/lib/svgs/play-store.svelte",
+					"type": "registry:lib",
+					"target": "svgs/play-store.svelte"
+				},
+				{
+					"path": "src/lib/svgs/x.svelte",
+					"type": "registry:lib",
+					"target": "svgs/x.svelte"
+				}
+			]
+		},
+		{
+			"name": "footer-six",
+			"title": "Footer Six",
+			"description": "A cinematic sticky footer with animated columns and a long-form enterprise sitemap.",
+			"category": "footer",
+			"layout": [
+				"grid",
+				"full-screen"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"navigation",
+				"marketing"
+			],
+			"visualTraits": [
+				"animated",
+				"sticky",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/footer",
+				"preview": "https://sv-efferd.pages.dev/preview/footer/six",
+				"registry": "https://sv-efferd.pages.dev/r/footer-six.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/footer-six.json",
+			"dependencies": [
+				"@lucide/svelte",
+				"motion-sv"
+			],
+			"registryDependencies": [
+				"button"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/footer/footer-six.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/footer-six.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/footer/animated-container.svelte",
+					"type": "registry:component",
+					"target": "efferd/footer/animated-container.svelte"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "integration-one",
+			"title": "Integration One",
+			"description": "A compact integration strip with lightweight cards and a simple link-out action.",
+			"category": "integrations",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"marketing",
+				"social-proof"
+			],
+			"visualTraits": [
+				"card",
+				"compact"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/integrations",
+				"preview": "https://sv-efferd.pages.dev/preview/integrations/one",
+				"registry": "https://sv-efferd.pages.dev/r/integration-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/integration-one.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/integrations/integration-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-one.svelte"
+				}
+			]
+		},
+		{
+			"name": "integration-two",
+			"title": "Integration Two",
+			"description": "A structured integration grid with framed cards and decorative corner accents.",
+			"category": "integrations",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"marketing",
+				"social-proof"
+			],
+			"visualTraits": [
+				"card",
+				"bordered",
+				"decorative"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/integrations",
+				"preview": "https://sv-efferd.pages.dev/preview/integrations/two",
+				"registry": "https://sv-efferd.pages.dev/r/integration-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/integration-two.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"local:decor-icon"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/integrations/integration-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-two.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/integrations/integration-card-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-card-two.svelte"
+				}
+			]
+		},
+		{
+			"name": "integration-three",
+			"title": "Integration Three",
+			"description": "A split integration hero with grid-positioned logos and divider rails.",
+			"category": "integrations",
+			"layout": [
+				"split",
+				"grid"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"marketing",
+				"social-proof"
+			],
+			"visualTraits": [
+				"bordered",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/integrations",
+				"preview": "https://sv-efferd.pages.dev/preview/integrations/three",
+				"registry": "https://sv-efferd.pages.dev/r/integration-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/integration-three.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"button",
+				"local:full-width-divider"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/integrations/integration-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/integrations/integration-card-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-card-three.svelte"
+				}
+			]
+		},
+		{
+			"name": "integration-four",
+			"title": "Integration Four",
+			"description": "A bolder integration grid pairing a large product statement with floating logo tiles.",
+			"category": "integrations",
+			"layout": [
+				"split",
+				"grid"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"marketing",
+				"social-proof"
+			],
+			"visualTraits": [
+				"decorative",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/integrations",
+				"preview": "https://sv-efferd.pages.dev/preview/integrations/four",
+				"registry": "https://sv-efferd.pages.dev/r/integration-four.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/integration-four.json",
+			"dependencies": [],
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/integrations/integration-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-four.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/integrations/integration-card-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-card-four.svelte"
+				}
+			]
+		},
+		{
+			"name": "integration-five",
+			"title": "Integration Five",
+			"description": "A centered integration cluster with overlapping logo pills and a stronger primary CTA.",
+			"category": "integrations",
+			"layout": [
+				"centered",
+				"grid"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"marketing",
+				"social-proof"
+			],
+			"visualTraits": [
+				"card",
+				"decorative"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/integrations",
+				"preview": "https://sv-efferd.pages.dev/preview/integrations/five",
+				"registry": "https://sv-efferd.pages.dev/r/integration-five.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/integration-five.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/integrations/integration-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/integrations/integration-five.svelte"
+				}
+			]
+		},
+		{
+			"name": "hero-one",
+			"title": "Hero One",
+			"description": "A full hero composition with sticky header, editorial spotlight, and a marquee trust band.",
+			"category": "hero",
+			"layout": [
+				"centered",
+				"stacked"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"marketing",
+				"conversion",
+				"social-proof"
+			],
+			"visualTraits": [
+				"minimal",
+				"animated",
+				"sticky"
+			],
+			"responsive": [
+				"mobile-stack",
+				"mobile-menu",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/hero",
+				"preview": "https://sv-efferd.pages.dev/preview/hero/one",
+				"registry": "https://sv-efferd.pages.dev/r/hero-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/hero-one.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:logo-cloud-three",
+				"local:portal"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/hero/hero-one/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-one/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/hero/hero-one/hero.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-one/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/hero/hero-one/logo-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-one/logo-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-one/header-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-one/header-one.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-one/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-one/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-one/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-one/nav-links.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:hook"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "hero-two",
+			"title": "Hero Two",
+			"description": "A framed product hero with a floating screen, structured header, and bordered logo section.",
+			"category": "hero",
+			"layout": [
+				"centered",
+				"stacked"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"marketing",
+				"conversion",
+				"social-proof"
+			],
+			"visualTraits": [
+				"bordered",
+				"decorative",
+				"image-led",
+				"animated",
+				"sticky"
+			],
+			"responsive": [
+				"mobile-stack",
+				"mobile-menu",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/hero",
+				"preview": "https://sv-efferd.pages.dev/preview/hero/two",
+				"registry": "https://sv-efferd.pages.dev/r/hero-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/hero-two.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:decor-icon",
+				"local:full-width-divider",
+				"local:logo-cloud-two",
+				"local:portal"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/hero/hero-two/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-two/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/hero/hero-two/hero.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-two/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/hero/hero-two/logo-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-two/logo-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-two/header-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-two/header-two.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-two/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-two/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-two/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-two/nav-links.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:hook"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "hero-three",
+			"title": "Hero Three",
+			"description": "A modern hero layout with mega-nav header, device mockup spotlight, and compact logo grid.",
+			"category": "hero",
+			"layout": [
+				"stacked"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"marketing",
+				"conversion",
+				"social-proof"
+			],
+			"visualTraits": [
+				"bordered",
+				"image-led",
+				"animated",
+				"sticky",
+				"compact"
+			],
+			"responsive": [
+				"mobile-stack",
+				"mobile-menu",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/hero",
+				"preview": "https://sv-efferd.pages.dev/preview/hero/three",
+				"registry": "https://sv-efferd.pages.dev/r/hero-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/hero-three.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:logo-cloud-five",
+				"navigation-menu",
+				"local:portal"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/hero/hero-three/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-three/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/hero/hero-three/hero.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-three/hero.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/hero/hero-three/logo-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/hero/hero-three/logo-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/header-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/header-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/desktop-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/desktop-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/link-item.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/link-item.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-three/nav-links.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/types.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-three/types.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:hook"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "header-one",
+			"title": "Header One",
+			"description": "A clean sticky header with simple nav links and a compact mobile sheet.",
+			"category": "header",
+			"layout": [
+				"split"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"navigation",
+				"conversion"
+			],
+			"visualTraits": [
+				"minimal",
+				"sticky",
+				"compact"
+			],
+			"responsive": [
+				"mobile-menu",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/header",
+				"preview": "https://sv-efferd.pages.dev/preview/header/one",
+				"registry": "https://sv-efferd.pages.dev/r/header-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/header-one.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:portal"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/header/header-one/header-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-one/header-one.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-one/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-one/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-one/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-one/nav-links.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:hook"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "header-two",
+			"title": "Header Two",
+			"description": "A framed sticky header with tighter proportions and a softer product shell.",
+			"category": "header",
+			"layout": [
+				"split"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"navigation",
+				"conversion"
+			],
+			"visualTraits": [
+				"bordered",
+				"sticky",
+				"compact"
+			],
+			"responsive": [
+				"mobile-menu",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/header",
+				"preview": "https://sv-efferd.pages.dev/preview/header/two",
+				"registry": "https://sv-efferd.pages.dev/r/header-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/header-two.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:portal"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/header/header-two/header-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-two/header-two.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-two/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-two/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-two/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-two/nav-links.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:hook"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "header-three",
+			"title": "Header Three",
+			"description": "A richer sticky header with mega-menu navigation and a full mobile fallback.",
+			"category": "header",
+			"layout": [
+				"split"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"navigation",
+				"conversion"
+			],
+			"visualTraits": [
+				"sticky",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-menu",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/header",
+				"preview": "https://sv-efferd.pages.dev/preview/header/three",
+				"registry": "https://sv-efferd.pages.dev/r/header-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/header-three.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"navigation-menu",
+				"local:portal"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/header/header-three/header-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/header-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/desktop-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/desktop-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/link-item.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-three/link-item.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-three/nav-links.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-three/types.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-three/types.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:hook"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "header-four",
+			"title": "Header Four",
+			"description": "A floating rounded header with stronger auth actions and a simplified mobile drawer.",
+			"category": "header",
+			"layout": [
+				"split"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"navigation",
+				"conversion"
+			],
+			"visualTraits": [
+				"card",
+				"sticky",
+				"compact"
+			],
+			"responsive": [
+				"mobile-menu",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/header",
+				"preview": "https://sv-efferd.pages.dev/preview/header/four",
+				"registry": "https://sv-efferd.pages.dev/r/header-four.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/header-four.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:portal"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/header/header-four/header-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-four/header-four.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-four/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-four/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-four/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-four/nav-links.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:hook"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "header-five",
+			"title": "Header Five",
+			"description": "A polished rounded header with compact mega-menu panels and stronger pill-shaped actions.",
+			"category": "header",
+			"layout": [
+				"split"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"navigation",
+				"conversion"
+			],
+			"visualTraits": [
+				"card",
+				"sticky",
+				"decorative"
+			],
+			"responsive": [
+				"mobile-menu",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/header",
+				"preview": "https://sv-efferd.pages.dev/preview/header/five",
+				"registry": "https://sv-efferd.pages.dev/r/header-five.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/header-five.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"navigation-menu",
+				"local:portal"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/header/header-five/header-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-five/header-five.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-five/desktop-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-five/desktop-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-five/mobile-nav.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-five/mobile-nav.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-five/link-item.svelte",
+					"type": "registry:component",
+					"target": "efferd/header/header-five/link-item.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-five/nav-links.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-five/nav-links.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/header/header-five/types.ts",
+					"type": "registry:file",
+					"target": "efferd/header/header-five/types.ts"
+				},
+				{
+					"path": "src/lib/hooks/use-scroll.svelte.ts",
+					"type": "registry:hook"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "dashboard-one",
+			"title": "Dashboard One",
+			"description": "A responsive analytics dashboard with KPI summaries, an interactive stacked sales chart, and a recent invoices table.",
+			"category": "dashboard",
+			"layout": [
+				"dashboard",
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"analytics"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"adaptive-sidebar",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/dashboard",
+				"preview": "https://sv-efferd.pages.dev/preview/dashboard/one",
+				"registry": "https://sv-efferd.pages.dev/r/dashboard-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/dashboard-one.json",
+			"dependencies": [
+				"@lucide/svelte",
+				"d3-scale",
+				"d3-shape",
+				"layerchart"
+			],
+			"registryDependencies": [
+				"badge",
+				"card",
+				"chart",
+				"select",
+				"table"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-one/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/dashboard-stats.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/dashboard-stats.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/sales-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/sales-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/dashboard-invoices.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/dashboard-invoices.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-one/formatter.ts"
+				}
+			]
+		},
+		{
+			"name": "dashboard-two",
+			"title": "Dashboard Two",
+			"description": "A responsive business dashboard with KPI summaries, revenue and channel charts, invoices, billing health, and recent activity.",
+			"category": "dashboard",
+			"layout": [
+				"dashboard",
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"analytics"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"adaptive-sidebar",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/dashboard",
+				"preview": "https://sv-efferd.pages.dev/preview/dashboard/two",
+				"registry": "https://sv-efferd.pages.dev/r/dashboard-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/dashboard-two.json",
+			"dependencies": [
+				"@lucide/svelte",
+				"d3-scale",
+				"d3-shape",
+				"layerchart"
+			],
+			"registryDependencies": [
+				"badge",
+				"button",
+				"card",
+				"chart",
+				"empty",
+				"table"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-two/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard-card.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard-stats.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard-stats.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/net-revenue-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/net-revenue-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/channel-sales-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/channel-sales-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard-invoices.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard-invoices.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/billing-health.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/billing-health.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard-activity.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard-activity.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-two/formatter.ts"
+				}
+			]
+		},
+		{
+			"name": "dashboard-three",
+			"title": "Dashboard Three",
+			"description": "A responsive support dashboard with queue metrics, conversation charts, team availability, inbox activity, and CSAT reporting.",
+			"category": "dashboard",
+			"layout": [
+				"dashboard",
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"analytics"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"adaptive-sidebar",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/dashboard",
+				"preview": "https://sv-efferd.pages.dev/preview/dashboard/three",
+				"registry": "https://sv-efferd.pages.dev/r/dashboard-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/dashboard-three.json",
+			"dependencies": [
+				"@lucide/svelte",
+				"d3-scale",
+				"d3-shape",
+				"layerchart"
+			],
+			"registryDependencies": [
+				"avatar",
+				"badge",
+				"button",
+				"card",
+				"chart",
+				"dropdown-menu",
+				"select",
+				"table"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-three/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/dashboard-stats.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/dashboard-stats.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/conversation-volume-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/conversation-volume-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/conversation-volume-data.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-three/conversation-volume-data.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/channel-breakdown-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/channel-breakdown-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/csat-responses-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/csat-responses-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/first-reply-time-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/first-reply-time-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/recent-conversations.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/recent-conversations.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/team-on-duty.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/team-on-duty.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/support-activity.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/support-activity.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/status-indicator.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/status-indicator.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-three/formatter.ts"
+				}
+			]
+		},
+		{
+			"name": "dashboard-four",
+			"title": "Dashboard Four",
+			"description": "A responsive commerce dashboard with revenue metrics, sales trends, return rates, category performance, and store-management shortcuts.",
+			"category": "dashboard",
+			"layout": [
+				"dashboard",
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"analytics"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"adaptive-sidebar",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/dashboard",
+				"preview": "https://sv-efferd.pages.dev/preview/dashboard/four",
+				"registry": "https://sv-efferd.pages.dev/r/dashboard-four.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/dashboard-four.json",
+			"dependencies": [
+				"@lucide/svelte",
+				"d3-scale",
+				"d3-shape",
+				"layerchart"
+			],
+			"registryDependencies": [
+				"button",
+				"card",
+				"chart",
+				"item",
+				"select"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-four/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/dashboard-stats.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/dashboard-stats.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/revenue-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/revenue-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/revenue-chart-data.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-four/revenue-chart-data.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/refund-return-rate-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/refund-return-rate-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/category-rank-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/category-rank-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/quick-actions.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/quick-actions.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-four/formatter.ts"
+				}
+			]
+		},
+		{
+			"name": "dashboard-five",
+			"title": "Dashboard Five",
+			"description": "A responsive web analytics dashboard with visitor trends, audience insights, acquisition data, top content, and Core Web Vitals.",
+			"category": "dashboard",
+			"layout": [
+				"dashboard",
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"analytics"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"adaptive-sidebar",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/dashboard",
+				"preview": "https://sv-efferd.pages.dev/preview/dashboard/five",
+				"registry": "https://sv-efferd.pages.dev/r/dashboard-five.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/dashboard-five.json",
+			"dependencies": [
+				"@lucide/svelte",
+				"d3-shape",
+				"layerchart"
+			],
+			"registryDependencies": [
+				"badge",
+				"button",
+				"card",
+				"chart",
+				"table",
+				"tooltip"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-five/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/visitors-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/visitors-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/online-now.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/online-now.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/top-pages.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/top-pages.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/top-countries.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/top-countries.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/traffic-sources-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/traffic-sources-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/audience-mix.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/audience-mix.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/browser-share.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/browser-share.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/top-referrers.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/top-referrers.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/web-vitals.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/web-vitals.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/share-bar-list.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/share-bar-list.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/status-indicator.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/status-indicator.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-five/formatter.ts"
+				}
+			]
+		},
+		{
+			"name": "settings-one",
+			"title": "Settings One",
+			"description": "A settings form for profile details and email preferences. It includes an avatar picker and save action.",
+			"category": "settings",
+			"layout": [
+				"form",
+				"stacked"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"settings"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/settings",
+				"preview": "https://sv-efferd.pages.dev/preview/settings/one",
+				"registry": "https://sv-efferd.pages.dev/r/settings-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/settings-one.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"avatar",
+				"button",
+				"field",
+				"input",
+				"switch"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/index.ts",
+					"type": "registry:file",
+					"target": "efferd/settings/settings-one/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/profile-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/profile-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/notification-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/notification-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/setting-field.svelte"
+				}
+			]
+		},
+		{
+			"name": "settings-two",
+			"title": "Settings Two",
+			"description": "A comprehensive account settings dashboard for profile, appearance, notifications, security, and destructive actions.",
+			"category": "settings",
+			"layout": [
+				"sidebar",
+				"form"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"settings"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"adaptive-sidebar",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/settings",
+				"preview": "https://sv-efferd.pages.dev/preview/settings/two",
+				"registry": "https://sv-efferd.pages.dev/r/settings-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/settings-two.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"avatar",
+				"button",
+				"card",
+				"field",
+				"input-group",
+				"select",
+				"switch",
+				"toggle-group"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/profile-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/profile-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/appearance-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/appearance-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/notification-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/notification-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/security-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/security-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/danger-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/danger-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/setting-field.svelte"
+				}
+			]
+		},
+		{
+			"name": "settings-three",
+			"title": "Settings Three",
+			"description": "An agent settings dashboard for profile, availability, notifications, and destructive account actions.",
+			"category": "settings",
+			"layout": [
+				"sidebar",
+				"form"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"settings"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"adaptive-sidebar",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/settings",
+				"preview": "https://sv-efferd.pages.dev/preview/settings/three",
+				"registry": "https://sv-efferd.pages.dev/r/settings-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/settings-three.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"alert-dialog",
+				"avatar",
+				"badge",
+				"button",
+				"card",
+				"checkbox",
+				"field",
+				"input",
+				"switch",
+				"toggle-group"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/agent-preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/agent-preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/profile-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/profile-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/availability-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/availability-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/notification-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/notification-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/danger-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/danger-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/setting-field.svelte"
+				}
+			]
+		},
+		{
+			"name": "settings-four",
+			"title": "Settings Four",
+			"description": "A stacked account settings form for name, email, avatar, user ID, and account deletion.",
+			"category": "settings",
+			"layout": [
+				"form",
+				"stacked"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"settings"
+			],
+			"visualTraits": [
+				"minimal",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/settings",
+				"preview": "https://sv-efferd.pages.dev/preview/settings/four",
+				"registry": "https://sv-efferd.pages.dev/r/settings-four.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/settings-four.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"avatar",
+				"button",
+				"card",
+				"field",
+				"input-group"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/name-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/name-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/email-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/email-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/avatar-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/avatar-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/user-id-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/user-id-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/delete-account-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/delete-account-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/setting-field.svelte"
+				},
+				{
+					"path": "src/lib/hooks/use-clipboard.svelte.ts",
+					"type": "registry:hook"
+				}
+			]
+		},
+		{
+			"name": "settings-five",
+			"title": "Settings Five",
+			"description": "An account overview for profile, security, localization, and destructive account actions.",
+			"category": "settings",
+			"layout": [
+				"grid",
+				"form"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"settings"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/settings",
+				"preview": "https://sv-efferd.pages.dev/preview/settings/five",
+				"registry": "https://sv-efferd.pages.dev/r/settings-five.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/settings-five.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"alert-dialog",
+				"avatar",
+				"badge",
+				"button",
+				"card",
+				"label",
+				"select"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/settings-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/settings-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/profile-information.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/profile-information.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/security-information.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/security-information.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/localization-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/localization-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/danger-zone-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/danger-zone-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/setting-field.svelte"
+				},
+				{
+					"path": "src/lib/svgs/google.svelte",
+					"type": "registry:lib",
+					"target": "svgs/google.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:lib",
+					"target": "svgs/github.svelte"
+				}
+			]
+		},
+		{
+			"name": "app-shell-one",
+			"title": "App Shell One",
+			"description": "A focused dashboard shell with an off-canvas sidebar, compact utility header, and responsive content area.",
+			"category": "app-shell",
+			"layout": [
+				"sidebar",
+				"dashboard"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"navigation"
+			],
+			"visualTraits": [
+				"minimal",
+				"bordered",
+				"compact"
+			],
+			"responsive": [
+				"mobile-menu",
+				"adaptive-sidebar",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/app-shell",
+				"preview": "https://sv-efferd.pages.dev/preview/app-shell/one",
+				"registry": "https://sv-efferd.pages.dev/r/app-shell-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/app-shell-one.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"avatar",
+				"breadcrumb",
+				"button",
+				"dropdown-menu",
+				"local:full-width-divider",
+				"separator",
+				"sidebar"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-shell.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/app-shell.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-breadcrumbs.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/app-breadcrumbs.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/app-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-sidebar.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/app-sidebar.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/dashboard-skeleton.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/dashboard-skeleton.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/nav-user.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/nav-user.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-shared.ts",
+					"type": "registry:file",
+					"target": "efferd/app-shell/app-shell-one/app-shared.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "app-shell-two",
+			"title": "App Shell Two",
+			"description": "A compact dashboard shell with a collapsible sidebar, sticky header, and structured content skeleton.",
+			"category": "app-shell",
+			"layout": [
+				"sidebar",
+				"dashboard"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"navigation"
+			],
+			"visualTraits": [
+				"bordered",
+				"sticky",
+				"compact"
+			],
+			"responsive": [
+				"mobile-menu",
+				"adaptive-sidebar",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/app-shell",
+				"preview": "https://sv-efferd.pages.dev/preview/app-shell/two",
+				"registry": "https://sv-efferd.pages.dev/r/app-shell-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/app-shell-two.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"avatar",
+				"breadcrumb",
+				"button",
+				"collapsible",
+				"dropdown-menu",
+				"kbd",
+				"local:decor-icon",
+				"separator",
+				"sidebar",
+				"tooltip"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-two/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-shell.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-two/app-shell.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-breadcrumb.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-two/app-breadcrumb.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-two/app-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-sidebar.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-two/app-sidebar.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/custom-sidebar-trigger.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-two/custom-sidebar-trigger.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/dashboard-skeleton.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-two/dashboard-skeleton.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/latest-change.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-two/latest-change.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/nav-group.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-two/nav-group.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/nav-user.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-two/nav-user.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-shared.ts",
+					"type": "registry:file",
+					"target": "efferd/app-shell/app-shell-two/app-shared.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "app-shell-three",
+			"title": "App Shell Three",
+			"description": "A customer-support workspace with nested navigation, quick actions, account controls, and an inset content area.",
+			"category": "app-shell",
+			"layout": [
+				"sidebar",
+				"dashboard"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"navigation"
+			],
+			"visualTraits": [
+				"bordered",
+				"compact"
+			],
+			"responsive": [
+				"mobile-menu",
+				"adaptive-sidebar",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/app-shell",
+				"preview": "https://sv-efferd.pages.dev/preview/app-shell/three",
+				"registry": "https://sv-efferd.pages.dev/r/app-shell-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/app-shell-three.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"avatar",
+				"breadcrumb",
+				"button",
+				"collapsible",
+				"dropdown-menu",
+				"kbd",
+				"separator",
+				"sidebar",
+				"tooltip"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-shell.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/app-shell.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-breadcrumbs.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/app-breadcrumbs.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/app-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-sidebar.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/app-sidebar.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/custom-sidebar-trigger.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/custom-sidebar-trigger.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/dashboard-skeleton.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/dashboard-skeleton.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/latest-change.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/latest-change.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/nav-group.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/nav-group.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/nav-user.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/nav-user.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-shared.ts",
+					"type": "registry:file",
+					"target": "efferd/app-shell/app-shell-three/app-shared.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "app-shell-four",
+			"title": "App Shell Four",
+			"description": "An ecommerce dashboard shell with grouped navigation, nested store links, account controls, and a floating collapsible sidebar.",
+			"category": "app-shell",
+			"layout": [
+				"sidebar",
+				"dashboard"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"navigation"
+			],
+			"visualTraits": [
+				"card",
+				"bordered",
+				"compact"
+			],
+			"responsive": [
+				"mobile-menu",
+				"adaptive-sidebar",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/app-shell",
+				"preview": "https://sv-efferd.pages.dev/preview/app-shell/four",
+				"registry": "https://sv-efferd.pages.dev/r/app-shell-four.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/app-shell-four.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"avatar",
+				"breadcrumb",
+				"button",
+				"collapsible",
+				"dropdown-menu",
+				"kbd",
+				"separator",
+				"sidebar",
+				"tooltip"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-shell.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/app-shell.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-breadcrumbs.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/app-breadcrumbs.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/app-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-sidebar.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/app-sidebar.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/custom-sidebar-trigger.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/custom-sidebar-trigger.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/dashboard-skeleton.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/dashboard-skeleton.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/latest-change.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/latest-change.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/nav-group.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/nav-group.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/nav-user.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/nav-user.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-shared.ts",
+					"type": "registry:file",
+					"target": "efferd/app-shell/app-shell-four/app-shared.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "app-shell-five",
+			"title": "App Shell Five",
+			"description": "An analytics workspace with searchable navigation, an off-canvas sidebar, responsive controls, and built-in theme switching.",
+			"category": "app-shell",
+			"layout": [
+				"sidebar",
+				"dashboard"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"application",
+				"navigation"
+			],
+			"visualTraits": [
+				"bordered",
+				"compact"
+			],
+			"responsive": [
+				"mobile-menu",
+				"adaptive-sidebar",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/app-shell",
+				"preview": "https://sv-efferd.pages.dev/preview/app-shell/five",
+				"registry": "https://sv-efferd.pages.dev/r/app-shell-five.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/app-shell-five.json",
+			"dependencies": [
+				"@lucide/svelte",
+				"mode-watcher",
+				"runed"
+			],
+			"registryDependencies": [
+				"avatar",
+				"breadcrumb",
+				"button",
+				"dropdown-menu",
+				"input-group",
+				"kbd",
+				"separator",
+				"sidebar"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-shell.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/app-shell.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/app-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-search.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/app-search.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-sidebar.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/app-sidebar.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/custom-trigger.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/custom-trigger.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/latest-change.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/latest-change.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/nav-user.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/nav-user.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/theme-switcher.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/theme-switcher.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-shared.ts",
+					"type": "registry:file",
+					"target": "efferd/app-shell/app-shell-five/app-shared.ts"
+				},
+				{
+					"path": "src/lib/svgs/logo.svelte",
+					"type": "registry:lib",
+					"target": "svgs/logo.svelte"
+				}
+			]
+		},
+		{
+			"name": "pricing-one",
+			"title": "Pricing One",
+			"description": "A two-plan comparison with corner accents, compact savings callouts, and a stronger featured tier.",
+			"category": "pricing",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"pricing",
+				"conversion"
+			],
+			"visualTraits": [
+				"card",
+				"bordered",
+				"decorative"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/pricing",
+				"preview": "https://sv-efferd.pages.dev/preview/pricing/one",
+				"registry": "https://sv-efferd.pages.dev/r/pricing-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/pricing-one.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:decor-icon"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/pricing/pricing-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/pricing/pricing-one.svelte"
+				}
+			]
+		},
+		{
+			"name": "pricing-two",
+			"title": "Pricing Two",
+			"description": "A bordered editorial pricing grid with divider rails, concise plan summaries, and feature checklists.",
+			"category": "pricing",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"pricing",
+				"conversion"
+			],
+			"visualTraits": [
+				"editorial",
+				"bordered",
+				"full-width"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/pricing",
+				"preview": "https://sv-efferd.pages.dev/preview/pricing/two",
+				"registry": "https://sv-efferd.pages.dev/r/pricing-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/pricing-two.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button",
+				"local:full-width-divider"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/pricing/pricing-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/pricing/pricing-two.svelte"
+				}
+			]
+		},
+		{
+			"name": "pricing-three",
+			"title": "Pricing Three",
+			"description": "A reusable three-tier pricing layout with icon-led cards and a highlighted middle plan.",
+			"category": "pricing",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"pricing",
+				"conversion"
+			],
+			"visualTraits": [
+				"card",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/pricing",
+				"preview": "https://sv-efferd.pages.dev/preview/pricing/three",
+				"registry": "https://sv-efferd.pages.dev/r/pricing-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/pricing-three.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"button"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/pricing/pricing-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/pricing/pricing-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/pricing/pricing-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/pricing/pricing-card.svelte"
+				}
+			]
+		},
+		{
+			"name": "pricing-four",
+			"title": "Pricing Four",
+			"description": "An animated pricing table with monthly-yearly toggles, live number transitions, and motion badges.",
+			"category": "pricing",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"pricing",
+				"conversion"
+			],
+			"visualTraits": [
+				"card",
+				"animated"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/pricing",
+				"preview": "https://sv-efferd.pages.dev/preview/pricing/four",
+				"registry": "https://sv-efferd.pages.dev/r/pricing-four.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/pricing-four.json",
+			"dependencies": [
+				"@lucide/svelte",
+				"@number-flow/svelte",
+				"motion-sv"
+			],
+			"registryDependencies": [
+				"button"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/pricing/pricing-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/pricing/pricing-four.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/pricing/frequency-toggle.svelte",
+					"type": "registry:component",
+					"target": "efferd/pricing/frequency-toggle.svelte"
+				}
+			]
+		},
+		{
+			"name": "team-one",
+			"title": "Team One",
+			"description": "A compact team grid with grayscale portraits and a hiring call to action.",
+			"category": "team",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"content",
+				"marketing"
+			],
+			"visualTraits": [
+				"image-led",
+				"compact"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/team",
+				"preview": "https://sv-efferd.pages.dev/preview/team/one",
+				"registry": "https://sv-efferd.pages.dev/r/team-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/team-one.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"avatar",
+				"button"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/team/team-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/team/team-one.svelte"
+				}
+			]
+		},
+		{
+			"name": "team-two",
+			"title": "Team Two",
+			"description": "A bordered team directory with compact profiles and social links.",
+			"category": "team",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"content",
+				"marketing"
+			],
+			"visualTraits": [
+				"bordered",
+				"compact"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/team",
+				"preview": "https://sv-efferd.pages.dev/preview/team/two",
+				"registry": "https://sv-efferd.pages.dev/r/team-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/team-two.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"avatar",
+				"button",
+				"local:full-width-divider"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/team/team-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/team/team-two.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:lib",
+					"target": "svgs/github.svelte"
+				},
+				{
+					"path": "src/lib/svgs/linkedin.svelte",
+					"type": "registry:lib",
+					"target": "svgs/linkedin.svelte"
+				},
+				{
+					"path": "src/lib/svgs/x.svelte",
+					"type": "registry:lib",
+					"target": "svgs/x.svelte"
+				}
+			]
+		},
+		{
+			"name": "team-three",
+			"title": "Team Three",
+			"description": "A portrait-led team grid with roles, social links, and a hiring call to action.",
+			"category": "team",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"content",
+				"marketing"
+			],
+			"visualTraits": [
+				"image-led",
+				"card"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/team",
+				"preview": "https://sv-efferd.pages.dev/preview/team/three",
+				"registry": "https://sv-efferd.pages.dev/r/team-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/team-three.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"avatar",
+				"button",
+				"local:full-width-divider"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/team/team-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/team/team-three.svelte"
+				},
+				{
+					"path": "src/lib/svgs/github.svelte",
+					"type": "registry:lib",
+					"target": "svgs/github.svelte"
+				},
+				{
+					"path": "src/lib/svgs/linkedin.svelte",
+					"type": "registry:lib",
+					"target": "svgs/linkedin.svelte"
+				},
+				{
+					"path": "src/lib/svgs/x.svelte",
+					"type": "registry:lib",
+					"target": "svgs/x.svelte"
+				}
+			]
+		},
+		{
+			"name": "testimonial-one",
+			"title": "Testimonial One",
+			"description": "A centered single testimonial with brand mark, compact author block, and soft editorial framing.",
+			"category": "testimonials",
+			"layout": [
+				"centered",
+				"stacked"
+			],
+			"alignment": [
+				"center"
+			],
+			"useCases": [
+				"social-proof",
+				"marketing"
+			],
+			"visualTraits": [
+				"minimal",
+				"editorial"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/testimonials",
+				"preview": "https://sv-efferd.pages.dev/preview/testimonials/one",
+				"registry": "https://sv-efferd.pages.dev/r/testimonial-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/testimonial-one.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"avatar"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-one.svelte"
+				}
+			]
+		},
+		{
+			"name": "testimonial-two",
+			"title": "Testimonial Two",
+			"description": "A framed testimonial layout with masked divider rails, asymmetrical composition, and avatar-led emphasis.",
+			"category": "testimonials",
+			"layout": [
+				"split"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"social-proof",
+				"marketing"
+			],
+			"visualTraits": [
+				"bordered",
+				"editorial",
+				"image-led"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/testimonials",
+				"preview": "https://sv-efferd.pages.dev/preview/testimonials/two",
+				"registry": "https://sv-efferd.pages.dev/r/testimonial-two.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/testimonial-two.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"avatar",
+				"local:mask-line"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-two.svelte"
+				}
+			]
+		},
+		{
+			"name": "testimonial-three",
+			"title": "Testimonial Three",
+			"description": "A three-card testimonial grid with decorative corners, lifted middle emphasis, and richer profile metadata.",
+			"category": "testimonials",
+			"layout": [
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"social-proof",
+				"marketing"
+			],
+			"visualTraits": [
+				"card",
+				"decorative"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/testimonials",
+				"preview": "https://sv-efferd.pages.dev/preview/testimonials/three",
+				"registry": "https://sv-efferd.pages.dev/r/testimonial-three.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/testimonial-three.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"avatar",
+				"local:decor-icon"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-card.svelte"
+				}
+			]
+		},
+		{
+			"name": "testimonial-four",
+			"title": "Testimonial Four",
+			"description": "A split testimonial layout with divider rails, dense quote cards, and a stronger editorial grid.",
+			"category": "testimonials",
+			"layout": [
+				"split",
+				"grid"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"social-proof",
+				"marketing"
+			],
+			"visualTraits": [
+				"card",
+				"editorial",
+				"bordered"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/testimonials",
+				"preview": "https://sv-efferd.pages.dev/preview/testimonials/four",
+				"registry": "https://sv-efferd.pages.dev/r/testimonial-four.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/testimonial-four.json",
+			"dependencies": [
+				"@lucide/svelte"
+			],
+			"registryDependencies": [
+				"local:full-width-divider"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-four/testimonial-four.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-four/testimonial-four.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-four/testimonial-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-four/testimonial-card.svelte"
+				}
+			]
+		},
+		{
+			"name": "testimonial-five",
+			"title": "Testimonial Five",
+			"description": "A dense social-proof wall with grid fillers, patterned cards, and a long-form testimonial mosaic.",
+			"category": "testimonials",
+			"layout": [
+				"grid",
+				"masonry"
+			],
+			"alignment": [
+				"left"
+			],
+			"useCases": [
+				"social-proof",
+				"marketing"
+			],
+			"visualTraits": [
+				"card",
+				"decorative",
+				"compact"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/testimonials",
+				"preview": "https://sv-efferd.pages.dev/preview/testimonials/five",
+				"registry": "https://sv-efferd.pages.dev/r/testimonial-five.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/testimonial-five.json",
+			"dependencies": [],
+			"registryDependencies": [
+				"avatar",
+				"local:full-width-divider",
+				"local:grid-filler",
+				"local:grid-pattern"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-five/testimonial-five.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-five/testimonial-five.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/testimonial/testimonial-five/testimonial-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/testimonial/testimonial-five/testimonial-card.svelte"
+				}
+			]
+		},
+		{
+			"name": "image-gallery-one",
+			"title": "Image Gallery One",
+			"description": "A responsive editorial gallery with staggered aspect ratios, lazy-loaded media, and a clean masonry-style rhythm.",
+			"category": "image-gallery",
+			"layout": [
+				"masonry",
+				"grid"
+			],
+			"alignment": [
+				"mixed"
+			],
+			"useCases": [
+				"portfolio",
+				"content"
+			],
+			"visualTraits": [
+				"image-led",
+				"editorial"
+			],
+			"responsive": [
+				"mobile-stack",
+				"responsive-grid",
+				"fluid"
+			],
+			"urls": {
+				"category": "https://sv-efferd.pages.dev/blocks/image-gallery",
+				"preview": "https://sv-efferd.pages.dev/preview/image-gallery/one",
+				"registry": "https://sv-efferd.pages.dev/r/image-gallery-one.json"
+			},
+			"installCommand": "pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/image-gallery-one.json",
+			"dependencies": [
+				"motion-sv"
+			],
+			"registryDependencies": [
+				"aspect-ratio"
+			],
+			"files": [
+				{
+					"path": "src/lib/components/efferd/image-gallery/image-gallery.svelte",
+					"type": "registry:component",
+					"target": "efferd/image-gallery/image-gallery.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/image-gallery/lazy-image.svelte",
+					"type": "registry:component",
+					"target": "efferd/image-gallery/lazy-image.svelte"
+				}
+			]
+		}
+	]
+}

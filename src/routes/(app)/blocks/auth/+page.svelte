@@ -10,6 +10,7 @@
 	title="Svelte Auth Blocks"
 	desc="Account access pages for sign-in, sign-up, password recovery, and verification."
 	link="/blocks/auth"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

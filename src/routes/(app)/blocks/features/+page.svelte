@@ -10,6 +10,7 @@
 	title="Svelte Feature Blocks"
 	desc="Feature sections that explain what a product does and why it matters."
 	link="/blocks/features"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

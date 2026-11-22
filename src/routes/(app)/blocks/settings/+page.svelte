@@ -10,6 +10,7 @@
 	title="Svelte Settings Blocks"
 	desc="Settings pages for profiles, accounts, notifications, appearance, and preferences."
 	link="/blocks/settings"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

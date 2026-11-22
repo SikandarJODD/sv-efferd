@@ -10,6 +10,7 @@
 	title="Svelte Header Blocks"
 	desc="Responsive headers with navigation, menus, account actions, and mobile layouts."
 	link="/blocks/header"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

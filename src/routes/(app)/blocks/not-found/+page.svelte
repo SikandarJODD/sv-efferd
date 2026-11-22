@@ -10,6 +10,7 @@
 	title="Svelte 404 Page Blocks"
 	desc="404 pages that explain what went wrong and help visitors find their way back."
 	link="/blocks/not-found"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

@@ -10,6 +10,7 @@
 	title="Svelte Footer Blocks"
 	desc="Responsive footers with navigation, legal links, social profiles, and newsletter forms."
 	link="/blocks/footer"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

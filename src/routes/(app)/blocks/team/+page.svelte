@@ -10,6 +10,7 @@
 	title="Svelte Team Section Blocks"
 	desc="Team sections with member profiles, roles, social links, and hiring prompts."
 	link="/blocks/team"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}

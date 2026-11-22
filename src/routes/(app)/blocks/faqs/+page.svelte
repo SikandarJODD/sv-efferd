@@ -10,6 +10,7 @@
 	title="Svelte FAQ Blocks"
 	desc="FAQ sections that organize common questions in accordions and split layouts."
 	link="/blocks/faqs"
+	items={data.blocks}
 />
 
 {#each data.blocks as block (block.id)}
