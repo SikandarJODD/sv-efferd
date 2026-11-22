@@ -52,7 +52,6 @@
 	let componentName = $derived.by(() => {
 		if (title) return title;
 		let urlID = page.url.pathname.split("/").filter(Boolean).slice(-1)[0];
-		console.log("URL ID:", urlID);
 		return urlID ? decodeURIComponent(urlID) : "Command";
 	});
 </script>

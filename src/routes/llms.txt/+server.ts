@@ -26,7 +26,7 @@ Svelte Efferd provides editable page sections and application layouts for Svelte
 
 - Responsive blocks
 - Free and open source
-- 89 blocks across 19 categories
+- 82 blocks across 19 categories
 
 ## Documentation
 

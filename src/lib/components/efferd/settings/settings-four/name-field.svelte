@@ -10,7 +10,7 @@
 	import SettingsSection from "./settings-section.svelte";
 </script>
 
-<SettingsSection hint="Max 32 characters.">
+<SettingsSection hint="Max 32 characters." hintId="display-name-hint">
 	{#snippet action()}<Button type="button">Save Changes</Button>{/snippet}
 	<SettingField
 		description="This is your display name on Efferd."

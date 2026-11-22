@@ -21,6 +21,7 @@
 
 <SettingsSection
 	hint="Square image recommended. Accepted file types: .png, .jpg, .webp, .avif. Max file size: 2MB."
+	hintId="avatar-hint"
 >
 	{#snippet action()}<Button type="button">Save Changes</Button>{/snippet}
 	<SettingField

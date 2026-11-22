@@ -6,11 +6,12 @@
 
 	type Props = ComponentProps<typeof Card> & {
 		hint?: string;
+		hintId?: string;
 		action?: Snippet;
 		children: Snippet;
 	};
 
-	let { hint, action, children, class: className, ...restProps }: Props = $props();
+	let { hint, hintId, action, children, class: className, ...restProps }: Props = $props();
 </script>
 
 <Card class={cn("pt-[calc(var(--card-spacing)*1.5)]", className)} {...restProps}>
@@ -25,7 +26,9 @@
 				action && !hint && "justify-end"
 			)}
 		>
-			{#if hint}<p class="text-xs text-pretty text-muted-foreground">{hint}</p>{/if}
+			{#if hint}<p id={hintId} class="text-xs text-pretty text-muted-foreground">
+					{hint}
+				</p>{/if}
 			{@render action?.()}
 		</CardFooter>
 	{/if}

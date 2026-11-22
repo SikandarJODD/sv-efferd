@@ -15,7 +15,7 @@
 	const clipboard = new UseClipboard();
 </script>
 
-<SettingsSection hint="This may be used to identify your account in the API.">
+<SettingsSection hint="This may be used to identify your account in the API." hintId="user-id-hint">
 	<SettingField
 		description="This is your unique account identifier on Efferd."
 		htmlFor="user-id"
@@ -31,7 +31,11 @@
 			/>
 			<InputGroupAddon align="inline-end">
 				<InputGroupButton
-					aria-label={clipboard.copied ? "Copied" : "Copy user ID"}
+					aria-label={clipboard.status === "success"
+						? "User ID copied"
+						: clipboard.status === "failure"
+							? "Failed to copy user ID"
+							: "Copy user ID"}
 					onclick={() => clipboard.copy(userId)}
 					size="icon-xs"
 				>
@@ -39,5 +43,12 @@
 				</InputGroupButton>
 			</InputGroupAddon>
 		</InputGroup>
+		<span class="sr-only" role="status" aria-live="polite" aria-atomic="true">
+			{clipboard.status === "success"
+				? "User ID copied"
+				: clipboard.status === "failure"
+					? "Failed to copy user ID"
+					: ""}
+		</span>
 	</SettingField>
 </SettingsSection>

@@ -20,6 +20,7 @@
 <Sidebar.Provider style="--sidebar-width: 13rem;" bind:open={sidebarOpen}>
 	<SiteSidebar />
 	<Sidebar.Inset
+		id="main"
 		class="border shadow-none! supports-[overflow:clip]:overflow-clip dark:border-muted dark:bg-background"
 	>
 		<AnimatePresence initial={false}>
@@ -49,9 +50,7 @@
 			{/if}
 		</AnimatePresence>
 		<SiteToolbar />
-		<div id="main">
-			{@render children()}
-		</div>
+		{@render children()}
 		<SiteFooter />
 	</Sidebar.Inset>
 </Sidebar.Provider>

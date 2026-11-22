@@ -145,7 +145,11 @@
 
 				{#if activeFile?.code}
 					<Button
-						aria-label={clipboard.status === "success" ? "Code copied" : "Copy code"}
+						aria-label={clipboard.status === "success"
+							? "Code copied"
+							: clipboard.status === "failure"
+								? "Failed to copy code"
+								: "Copy code"}
 						class="h-8 w-8 shrink-0"
 						variant="ghost"
 						size="icon"
@@ -162,6 +166,13 @@
 							</span>
 						{/if}
 					</Button>
+					<span class="sr-only" role="status" aria-live="polite" aria-atomic="true">
+						{clipboard.status === "success"
+							? "Code copied"
+							: clipboard.status === "failure"
+								? "Failed to copy code"
+								: ""}
+					</span>
 				{/if}
 			</div>
 		</div>

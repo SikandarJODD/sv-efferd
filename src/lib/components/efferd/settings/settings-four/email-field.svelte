@@ -10,7 +10,10 @@
 	import SettingsSection from "./settings-section.svelte";
 </script>
 
-<SettingsSection hint="We'll send a confirmation link before this address updates.">
+<SettingsSection
+	hint="We'll send a confirmation link before this address updates."
+	hintId="email-hint"
+>
 	{#snippet action()}<Button type="button">Save Changes</Button>{/snippet}
 	<SettingField
 		description="Used to log in and receive notifications. Confirmation required for changes."
