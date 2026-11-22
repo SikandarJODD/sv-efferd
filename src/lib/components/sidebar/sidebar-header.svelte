@@ -3,8 +3,8 @@
 	import { Logo } from "#lib/components/svgs/index.js";
 </script>
 
-<Sidebar.Header>
-	<Sidebar.Menu>
+<Sidebar.Header class="flex-row items-center">
+	<Sidebar.Menu class="flex-1">
 		<Sidebar.MenuItem>
 			<Sidebar.MenuButton size="lg">
 				{#snippet child({ props })}
@@ -16,4 +16,5 @@
 			</Sidebar.MenuButton>
 		</Sidebar.MenuItem>
 	</Sidebar.Menu>
+	<Sidebar.Trigger size="icon-sm" class="shrink-0" />
 </Sidebar.Header>

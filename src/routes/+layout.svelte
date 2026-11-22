@@ -21,6 +21,6 @@
 	<title>Svelte Efferd Blocks</title>
 </svelte:head>
 
-<Agentation outputMode="compact" />
+<Agentation outputMode="compact" deleteAllDelayMs={10} />
 <ModeWatcher defaultMode="dark" />
 {@render children()}

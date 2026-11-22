@@ -3,8 +3,10 @@
 	import SiteFooter from "#lib/components/site/footer.svelte";
 	import SiteToolbar from "#lib/components/site/toolbar.svelte";
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
+	import { fade } from "svelte/transition";
 
 	let { children } = $props();
+	let sidebarOpen = $state(true);
 </script>
 
 <svelte:head>
@@ -14,11 +16,16 @@
 	/>
 </svelte:head>
 
-<Sidebar.Provider style="--sidebar-width: 13rem;">
+<Sidebar.Provider style="--sidebar-width: 13rem;" bind:open={sidebarOpen}>
 	<SiteSidebar />
 	<Sidebar.Inset
 		class="border shadow-none! supports-[overflow:clip]:overflow-clip dark:border-muted dark:bg-background"
 	>
+		{#if !sidebarOpen}
+			<div class="absolute top-2 left-2 hidden md:block" transition:fade={{ duration: 150 }}>
+				<Sidebar.Trigger size="icon-sm" />
+			</div>
+		{/if}
 		<SiteToolbar />
 		<div id="main">
 			{@render children()}

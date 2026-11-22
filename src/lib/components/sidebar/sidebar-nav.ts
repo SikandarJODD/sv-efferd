@@ -9,5 +9,5 @@ export const getStartedItems = [
 	{ title: "Installation", href: "/docs/installation" },
 	{ title: "Usage", href: "/docs/usage" },
 	{ title: "Skills", href: "/docs/skills", badge: "new" },
-	{ title: "llms.txt", href: "/llms.txt" }
+	{ title: "llms.txt", href: "/llms.txt", badge: "new" }
 ] as const satisfies readonly SidebarNavItem[];
