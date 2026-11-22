@@ -9,12 +9,16 @@
 		href="https://x.com/Sikandar_Bhide"
 		target="_blank"
 		rel="noreferrer"
-		class="group flex min-h-10 items-center gap-2 rounded-md px-2 py-1.5 outline-none transition-colors hover:bg-sidebar-accent focus-visible:ring-2 focus-visible:ring-sidebar-ring"
+		class="group flex min-h-10 items-center gap-2 rounded-md px-2 py-1.5 transition-colors outline-none hover:bg-sidebar-accent focus-visible:ring-2 focus-visible:ring-sidebar-ring"
 	>
-		<XLogo class="size-3.5 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground" />
+		<XLogo
+			class="size-3.5 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground"
+		/>
 		<span class="min-w-0 leading-tight">
 			<span class="block text-[10px] text-muted-foreground">Want a block we don’t have?</span>
-			<span class="block text-xs font-medium text-foreground">DM me on X <span aria-hidden="true">→</span></span>
+			<span class="block text-xs font-medium text-foreground"
+				>DM me on X <span aria-hidden="true">→</span></span
+			>
 		</span>
 	</a>
 	<BhideSvelteCard />

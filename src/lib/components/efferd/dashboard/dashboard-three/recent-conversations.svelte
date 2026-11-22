@@ -102,7 +102,7 @@
 			</Table.Body>
 		</Table.Root>
 		<div class="flex justify-center border-t py-3">
-			<Button href="#/inbox" size="sm" variant="ghost"
+			<Button href="/" size="sm" variant="ghost"
 				>View all conversations <ArrowRightIcon data-icon="inline-end" /></Button
 			>
 		</div>

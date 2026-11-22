@@ -51,7 +51,7 @@
 	<div
 		class="absolute inset-x-0 bottom-0 flex h-1/5 items-center justify-center bg-background mask-t-from-30%"
 	>
-		<Button href="#" class="relative" variant="ghost">
+		<Button href="/" class="relative" variant="ghost">
 			View All
 			<ArrowRightIcon data-icon="inline-end" aria-hidden="true" />
 		</Button>

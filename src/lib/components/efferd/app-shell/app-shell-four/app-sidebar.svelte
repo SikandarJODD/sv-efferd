@@ -14,7 +14,7 @@
 <Sidebar.Root collapsible="icon" variant="floating">
 	<Sidebar.Header class="h-14 justify-center">
 		<Sidebar.MenuButton>
-			{#snippet child({ props })}<a href="#link" {...props}
+			{#snippet child({ props })}<a href="/" {...props}
 					><Logo /><span class="font-medium">Efferd</span></a
 				>{/snippet}
 		</Sidebar.MenuButton>

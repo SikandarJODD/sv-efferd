@@ -14,8 +14,5 @@
 			</Sidebar.MenuButton>
 		</Sidebar.MenuItem>
 	</Sidebar.Menu>
-	<Sidebar.Trigger
-		size="icon-sm"
-		class="shrink-0 text-muted-foreground hover:text-primary"
-	/>
+	<Sidebar.Trigger size="icon-sm" class="shrink-0 text-muted-foreground hover:text-primary" />
 </Sidebar.Header>

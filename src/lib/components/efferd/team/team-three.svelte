@@ -161,6 +161,6 @@
 			<span class="font-medium text-foreground">Join us!</span> Let's shape the future of the web
 			together
 		</p>
-		<Button href="#careers" variant="outline">View openings</Button>
+		<Button href="/" variant="outline">View openings</Button>
 	</div>
 </section>

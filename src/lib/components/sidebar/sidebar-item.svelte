@@ -27,7 +27,10 @@
 					<Badge variant="emerald" class="px-1 py-0.5 text-[10px]">New</Badge>
 				{/if}
 				{#if item.external}
-					<ArrowUpRightIcon class="ms-auto size-3.5 text-muted-foreground" aria-hidden="true" />
+					<ArrowUpRightIcon
+						class="ms-auto size-3.5 text-muted-foreground"
+						aria-hidden="true"
+					/>
 				{/if}
 			</a>
 		{/snippet}

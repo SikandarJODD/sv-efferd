@@ -22,8 +22,7 @@
 	variant="sidebar"
 >
 	<Sidebar.Header class="h-(--app-header-height,3rem) flex-row items-center justify-between">
-		<Button href="#link" variant="ghost"><Logo /><span class="font-medium">Efferd</span></Button
-		>
+		<Button href="/" variant="ghost"><Logo /><span class="font-medium">Efferd</span></Button>
 		<CustomTrigger place="sidebar" />
 	</Sidebar.Header>
 	<Sidebar.Content>
@@ -58,7 +57,7 @@
 			<Button
 				aria-label="Settings"
 				class="text-muted-foreground"
-				href="#"
+				href="/"
 				size="icon-sm"
 				variant="ghost"><SettingsIcon /></Button
 			>

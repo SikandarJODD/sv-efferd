@@ -127,6 +127,6 @@
 			<span class="font-medium text-foreground">Join us!</span> Let's shape the future of the web
 			together
 		</p>
-		<Button class="w-full md:w-auto" href="#careers">View openings</Button>
+		<Button class="w-full md:w-auto" href="/">View openings</Button>
 	</div>
 </section>

@@ -155,6 +155,6 @@
 				We're always looking for people who care about craft.
 			</p>
 		</div>
-		<Button href="#careers" variant="outline">View openings</Button>
+		<Button href="/" variant="outline">View openings</Button>
 	</div>
 </section>

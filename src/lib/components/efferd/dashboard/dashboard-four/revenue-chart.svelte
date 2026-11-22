@@ -110,7 +110,7 @@
 			<Delta value={growth} />
 			<span class="text-pretty text-muted-foreground">vs first day in this range</span>
 		</div>
-		<Button href="#/reports" size="xs" variant="ghost" class="text-muted-foreground">
+		<Button href="/" size="xs" variant="ghost" class="text-muted-foreground">
 			View report
 			<ArrowRightIcon data-icon="inline-end" aria-hidden="true" />
 		</Button>

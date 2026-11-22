@@ -15,7 +15,7 @@
 	<Sidebar.Header class="relative h-14 justify-center px-2 py-0">
 		<a
 			class="flex h-10 w-max items-center justify-center rounded-lg px-3 hover:bg-muted dark:hover:bg-muted/50"
-			href="#link"
+			href="/"
 		>
 			<Logo class="h-4" />
 			<span class="sr-only">Efferd</span>
