@@ -1,13 +1,18 @@
 <script lang="ts">
 	import "./layout.css";
 	import { ModeWatcher, toggleMode } from "mode-watcher";
-	import { PressedKeys } from "runed";
+	import { activeElement, PressedKeys } from "runed";
 	import { Agentation } from "sv-agentation";
 
 	let { children } = $props();
 
 	const keys = new PressedKeys();
 	keys.onKeys(["d"], () => {
+		if (
+			activeElement.current?.localName === "input" ||
+			activeElement.current?.localName === "textarea"
+		)
+			return;
 		toggleMode();
 	});
 </script>

@@ -22,8 +22,11 @@
 		class="border shadow-none! supports-[overflow:clip]:overflow-clip dark:border-muted dark:bg-background"
 	>
 		{#if !sidebarOpen}
-			<div class="absolute top-2 left-2 hidden md:block" transition:fade={{ duration: 150 }}>
-				<Sidebar.Trigger size="icon-sm" />
+			<div
+				class="absolute top-1 left-1 z-100 hidden md:block"
+				transition:fade={{ duration: 150 }}
+			>
+				<Sidebar.Trigger size="icon-sm" class="rounded-xl text-muted-foreground" />
 			</div>
 		{/if}
 		<SiteToolbar />
