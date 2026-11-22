@@ -22,6 +22,12 @@ Svelte Efferd provides editable page sections and application layouts for Svelte
 - Site: ${siteUrl}
 - Source: https://github.com/SikandarJODD/sv-efferd
 
+## Features
+
+- Responsive blocks
+- Free and open source
+- 89 blocks across 19 categories
+
 ## Documentation
 
 - [Introduction](${absoluteUrl("/docs/introduction")})
@@ -52,6 +58,11 @@ pnpm dlx shadcn-svelte@latest add ${absoluteUrl("/r/hero-one.json")}
 2. Open the component's preview URL before choosing it.
 3. Use its exact install command or registry URL. Do not invent component names.
 4. Treat installed files as project source that can be edited.
+
+## Issues and ideas
+
+- [Open a GitHub issue](https://github.com/SikandarJODD/sv-efferd/issues) for bugs.
+- [DM @Sikandar_Bhide on X](https://x.com/Sikandar_Bhide) with ideas for new blocks or features.
 `;
 
 export const GET: RequestHandler = () =>
