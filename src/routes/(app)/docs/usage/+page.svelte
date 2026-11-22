@@ -89,6 +89,9 @@
 	</section>
 
 	{#snippet footer()}
-		<DocsPagination previous={{ title: "Installation", href: "/docs/installation" }} />
+		<DocsPagination
+			previous={{ title: "Installation", href: "/docs/installation" }}
+			next={{ title: "Skills", href: "/docs/skills" }}
+		/>
 	{/snippet}
 </DocsPage>

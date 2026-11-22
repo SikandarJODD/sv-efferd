@@ -27,6 +27,7 @@ Svelte Efferd provides editable page sections and application layouts for Svelte
 - [Introduction](${absoluteUrl("/docs/introduction")})
 - [Installation](${absoluteUrl("/docs/installation")})
 - [Usage](${absoluteUrl("/docs/usage")})
+- [Svelte Efferd skill](${absoluteUrl("/docs/skills")}): Install the agent skill and copy task-specific prompts.
 
 ## Machine-readable data
 

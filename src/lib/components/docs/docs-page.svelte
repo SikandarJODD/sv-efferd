@@ -21,7 +21,7 @@
 </script>
 
 <main
-	class={cn("mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-14 lg:py-16", className)}
+	class={cn("mx-auto w-full max-w-4xl px-4 py-10 sm:px-6 sm:py-14 lg:py-16", className)}
 	{...restProps}
 >
 	{#if header}

@@ -59,6 +59,7 @@
 						lang={code.lang}
 						highlight={code.highlight}
 						hideLines={code.hideLines}
+						class="no-scrollbar"
 					/>
 				</Root>
 			</CodeBlockOverflow>
@@ -70,6 +71,7 @@
 					lang={code.lang}
 					highlight={code.highlight}
 					hideLines={code.hideLines}
+					class="no-scrollbar"
 				/>
 			</Root>
 			<!-- </ScrollFadeEffect> -->
@@ -81,7 +83,7 @@
 						lang={code.lang}
 						highlight={code.highlight}
 						hideLines={code.hideLines}
-						class="bg-background"
+						class="no-scrollbar bg-background"
 					/>
 				</Root>
 			</div>
