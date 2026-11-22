@@ -2,9 +2,9 @@
 	import { ChevronLeftIcon } from "@lucide/svelte";
 	import { Particles } from "#lib/components/magic/particles/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
-	import GithubLogo from "#lib/svgs/github.svelte";
-	import GoogleLogo from "#lib/svgs/google.svelte";
-	import Logo from "#lib/svgs/logo.svelte";
+	import GithubLogo from "#lib/components/svgs/github.svelte";
+	import GoogleLogo from "#lib/components/svgs/google.svelte";
+	import Logo from "#lib/components/svgs/logo.svelte";
 	import { cn } from "#lib/utils.js";
 	import type { HTMLAttributes } from "svelte/elements";
 

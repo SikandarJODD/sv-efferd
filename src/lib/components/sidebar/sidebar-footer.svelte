@@ -2,7 +2,7 @@
 	import BhideSvelteCard from "./bhide-svelte-card.svelte";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
-	import { Github, X as XLogo } from "#lib/svgs/index.js";
+	import { Github, X as XLogo } from "#lib/components/svgs/index.js";
 </script>
 
 <Sidebar.Footer class="p-1">

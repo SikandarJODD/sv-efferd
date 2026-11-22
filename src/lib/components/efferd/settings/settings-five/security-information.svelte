@@ -4,8 +4,8 @@
 	import ShieldIcon from "@lucide/svelte/icons/shield";
 	import { Badge } from "#lib/components/ui/badge/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
-	import Github from "#lib/svgs/github.svelte";
-	import Google from "#lib/svgs/google.svelte";
+	import Github from "#lib/components/svgs/github.svelte";
+	import Google from "#lib/components/svgs/google.svelte";
 	import SettingField from "./setting-field.svelte";
 	import SettingsSection from "./settings-section.svelte";
 </script>

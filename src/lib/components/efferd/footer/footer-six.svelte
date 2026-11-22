@@ -1,11 +1,11 @@
 <script lang="ts">
 	import AnimatedContainer from "#lib/components/efferd/footer/animated-container.svelte";
 	import { Button } from "#lib/components/ui/button/index.js";
-	import Logo from "#lib/svgs/logo.svelte";
-	import FacebookIcon from "#lib/svgs/facebook.svelte";
-	import InstagramIcon from "#lib/svgs/instagram.svelte";
-	import LinkedinIcon from "#lib/svgs/linkedin.svelte";
-	import YoutubeIcon from "#lib/svgs/youtube.svelte";
+	import Logo from "#lib/components/svgs/logo.svelte";
+	import FacebookIcon from "#lib/components/svgs/facebook.svelte";
+	import InstagramIcon from "#lib/components/svgs/instagram.svelte";
+	import LinkedinIcon from "#lib/components/svgs/linkedin.svelte";
+	import YoutubeIcon from "#lib/components/svgs/youtube.svelte";
 	import type { Component } from "svelte";
 	import type { SVGAttributes } from "svelte/elements";
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import * as Drawer from "#lib/components/ui/drawer/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
-	import { Github, X as XLogo } from "#lib/svgs/index.js";
+	import { Github, X as XLogo } from "#lib/components/svgs/index.js";
 	import { ArrowUpRightIcon, MenuIcon, XIcon } from "@lucide/svelte";
 	import { navLinks, socialLinks } from "./navigation.js";
 	import { getStars, GitHubButton } from "../ui/github-button";

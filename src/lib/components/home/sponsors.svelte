@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
-	import Github from "#lib/svgs/github.svelte";
-	import X from "#lib/svgs/x.svelte";
+	import Github from "#lib/components/svgs/github.svelte";
+	import X from "#lib/components/svgs/x.svelte";
 	import { cn } from "#lib/utils.js";
 	import { Annotation } from "#lib/components/ui/annotation/index.js";
 

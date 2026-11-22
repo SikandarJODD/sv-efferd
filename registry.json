@@ -432,8 +432,8 @@
 					"target": "efferd/contact/contact-two.svelte"
 				},
 				{
-					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/x.svelte",
+					"type": "registry:component",
 					"target": "svgs/x.svelte"
 				}
 			],
@@ -452,13 +452,13 @@
 					"target": "efferd/contact/contact-three.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				},
 				{
-					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/x.svelte",
+					"type": "registry:component",
 					"target": "svgs/x.svelte"
 				}
 			],
@@ -569,18 +569,18 @@
 					"target": "efferd/auth/auth-one.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				},
 				{
-					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/google.svelte",
+					"type": "registry:component",
 					"target": "svgs/google.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				}
 			],
@@ -599,13 +599,13 @@
 					"target": "efferd/auth/auth-two.svelte"
 				},
 				{
-					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/google.svelte",
+					"type": "registry:component",
 					"target": "svgs/google.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				}
 			],
@@ -629,18 +629,18 @@
 					"target": "efferd/auth/auth-three.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				},
 				{
-					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/google.svelte",
+					"type": "registry:component",
 					"target": "svgs/google.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				}
 			],
@@ -659,13 +659,13 @@
 					"target": "efferd/auth/auth-four.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				},
 				{
-					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/google.svelte",
+					"type": "registry:component",
 					"target": "svgs/google.svelte"
 				}
 			],
@@ -689,23 +689,23 @@
 					"target": "efferd/auth/auth-five.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				},
 				{
-					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/google.svelte",
+					"type": "registry:component",
 					"target": "svgs/google.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				},
 				{
-					"path": "src/lib/svgs/apple.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/apple.svelte",
+					"type": "registry:component",
 					"target": "svgs/apple.svelte"
 				}
 			],
@@ -892,18 +892,18 @@
 					"target": "efferd/footer/footer-one.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				},
 				{
-					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/x.svelte",
+					"type": "registry:component",
 					"target": "svgs/x.svelte"
 				}
 			],
@@ -921,13 +921,13 @@
 					"target": "efferd/footer/footer-two.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				},
 				{
-					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/x.svelte",
+					"type": "registry:component",
 					"target": "svgs/x.svelte"
 				}
 			],
@@ -951,8 +951,8 @@
 					"target": "efferd/footer/animated-container.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -991,18 +991,18 @@
 					"target": "efferd/footer/footer-five.svelte"
 				},
 				{
-					"path": "src/lib/svgs/apple.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/apple.svelte",
+					"type": "registry:component",
 					"target": "svgs/apple.svelte"
 				},
 				{
-					"path": "src/lib/svgs/play-store.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/play-store.svelte",
+					"type": "registry:component",
 					"target": "svgs/play-store.svelte"
 				},
 				{
-					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/x.svelte",
+					"type": "registry:component",
 					"target": "svgs/x.svelte"
 				}
 			],
@@ -1026,8 +1026,8 @@
 					"target": "efferd/footer/animated-container.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1162,8 +1162,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1211,8 +1211,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1281,8 +1281,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1320,8 +1320,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1354,8 +1354,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1403,8 +1403,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1437,8 +1437,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1486,8 +1486,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -2097,13 +2097,13 @@
 					"target": "efferd/settings/settings-five/setting-field.svelte"
 				},
 				{
-					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/google.svelte",
+					"type": "registry:component",
 					"target": "svgs/google.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				}
 			],
@@ -2165,8 +2165,8 @@
 					"target": "efferd/app-shell/app-shell-one/app-shared.ts"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -2243,8 +2243,8 @@
 					"target": "efferd/app-shell/app-shell-two/app-shared.ts"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -2324,8 +2324,8 @@
 					"target": "efferd/app-shell/app-shell-three/app-shared.ts"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -2404,8 +2404,8 @@
 					"target": "efferd/app-shell/app-shell-four/app-shared.ts"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -2479,8 +2479,8 @@
 					"target": "efferd/app-shell/app-shell-five/app-shared.ts"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -2592,18 +2592,18 @@
 					"target": "efferd/team/team-two.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				},
 				{
-					"path": "src/lib/svgs/linkedin.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/linkedin.svelte",
+					"type": "registry:component",
 					"target": "svgs/linkedin.svelte"
 				},
 				{
-					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/x.svelte",
+					"type": "registry:component",
 					"target": "svgs/x.svelte"
 				}
 			],
@@ -2621,18 +2621,18 @@
 					"target": "efferd/team/team-three.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				},
 				{
-					"path": "src/lib/svgs/linkedin.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/linkedin.svelte",
+					"type": "registry:component",
 					"target": "svgs/linkedin.svelte"
 				},
 				{
-					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/x.svelte",
+					"type": "registry:component",
 					"target": "svgs/x.svelte"
 				}
 			],

@@ -2,7 +2,7 @@
 	import { StripedPattern } from "#lib/components/magic/striped-pattern/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
-	import { Github } from "#lib/svgs/index.js";
+	import { Github } from "#lib/components/svgs/index.js";
 	import { connectLine } from "#lib/utils/connect-line.js";
 	import { mode } from "mode-watcher";
 </script>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { ArrowUpRightIcon } from "@lucide/svelte";
 	import * as NavigationMenu from "#lib/components/ui/navigation-menu/index.js";
-	import { Github } from "#lib/svgs/index.js";
+	import { Github } from "#lib/components/svgs/index.js";
 	import { navLinks } from "./navigation.js";
 	import { otherProjects, withProjectUtm } from "./projects.js";
 </script>

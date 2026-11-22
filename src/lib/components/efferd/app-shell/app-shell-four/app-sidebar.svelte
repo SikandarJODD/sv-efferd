@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
-	import Logo from "#lib/svgs/logo.svelte";
+	import Logo from "#lib/components/svgs/logo.svelte";
 	import { PlusIcon, SearchIcon } from "@lucide/svelte";
 	import { footerNavLinks, navGroups } from "./app-shared.js";
 	import LatestChange from "./latest-change.svelte";

@@ -2,7 +2,7 @@
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
 	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
-	import { Github, X as XLogo } from "#lib/svgs/index.js";
+	import { Github, X as XLogo } from "#lib/components/svgs/index.js";
 	import { MoonIcon, SunIcon } from "@lucide/svelte";
 	import { mode, toggleMode } from "mode-watcher";
 

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
-	import { Logo } from "#lib/svgs/index.js";
+	import { Logo } from "#lib/components/svgs/index.js";
 </script>
 
 <Sidebar.Header>

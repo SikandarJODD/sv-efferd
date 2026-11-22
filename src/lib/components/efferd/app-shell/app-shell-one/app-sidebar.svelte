@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
-	import Logo from "#lib/svgs/logo.svelte";
+	import Logo from "#lib/components/svgs/logo.svelte";
 	import { footerNavLinks, navGroups } from "./app-shared.js";
 	import NavUser from "./nav-user.svelte";
 

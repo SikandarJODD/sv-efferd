@@ -8,10 +8,10 @@
 		InputGroupAddon,
 		InputGroupInput
 	} from "#lib/components/ui/input-group/index.js";
-	import AppleLogo from "#lib/svgs/apple.svelte";
-	import GithubLogo from "#lib/svgs/github.svelte";
-	import GoogleLogo from "#lib/svgs/google.svelte";
-	import Logo from "#lib/svgs/logo.svelte";
+	import AppleLogo from "#lib/components/svgs/apple.svelte";
+	import GithubLogo from "#lib/components/svgs/github.svelte";
+	import GoogleLogo from "#lib/components/svgs/google.svelte";
+	import Logo from "#lib/components/svgs/logo.svelte";
 	import { cn } from "#lib/utils.js";
 	import type { HTMLAttributes } from "svelte/elements";
 
