@@ -37,7 +37,7 @@ importers:
         version: 1.1.0(svelte@5.57.3)
       motion-sv:
         specifier: ^0.2.2
-        version: 0.2.2(svelte@5.57.3)
+        version: 0.2.2(react@19.3.1)(svelte@5.57.3)
       package-manager-detector:
         specifier: ^1.9.0
         version: 1.9.0
@@ -50,6 +50,9 @@ importers:
       shiki:
         specifier: ^3.23.0
         version: 3.23.0
+      sv-agentation:
+        specifier: ^0.4.0
+        version: 0.4.0(react@19.3.1)(svelte@5.57.3)
       svelte-toolbelt:
         specifier: ^0.13.0
         version: 0.13.0(@sveltejs/kit@3.2.0(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.3)(vite@8.3.8(jiti@2.7.0)))(svelte@5.57.3)(typescript@6.0.3)(vite@8.3.8(jiti@2.7.0)))(svelte@5.57.3)
@@ -517,6 +520,11 @@ packages:
     resolution: {integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==}
     engines: {node: '>= 0.4'}
 
+  bippy@0.5.43:
+    resolution: {integrity: sha512-Tvu7b1M7+d8b9/YHaCeODEsi2CgbuoBql+dWSBrNnCuqJ1gMUeY3i0r+319hvjjl5GVBP6FFWxrKnq3fhZER0w==}
+    peerDependencies:
+      react: '>=17.0.1'
+
   bits-ui@2.21.0:
     resolution: {integrity: sha512-kfJonux4r+XOnqGCBQaqFfhRUvDbuZQgyjXADfk0/QJGc8LlQchkrGc6rCd+ldo1EixCJEXlM7znKVIUtuf7OQ==}
     engines: {node: '>=20'}
@@ -713,6 +721,9 @@ packages:
 
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
+
+  element-source@0.0.5:
+    resolution: {integrity: sha512-04NFHxgZ3SLgvMmcPIMsx8bvbIvZZ2F2xNtxiBByACNXFiTJWU8ujz5M1PIVbBuKyKLwmXbPJsu2V2qRNhdXGQ==}
 
   enhanced-resolve@5.26.1:
     resolution: {integrity: sha512-PPnnSJq3azKOIewXR/uppBV/6h98dprBJ/WaQ9Qgj10xX1lJLNfg+XShpbsrSqcDSy2yYYyhfXM1wWhftqgyzw==}
@@ -1037,6 +1048,10 @@ packages:
   property-information@7.2.0:
     resolution: {integrity: sha512-IAtzIB6sUiWaJYrX9smp3V46pBGbBeLFRGdh25kg1334VcBlD8HzhPeNIWQH9zhGmo2itIe25EHt9dQP7G5hmg==}
 
+  react@19.3.1:
+    resolution: {integrity: sha512-QNhWdt7nrgVWWQG58QuGsAR3jv3Hbe4mb4vz7w2csnHavciZJgda1CPNaldF6eVxv90ud3jUXpKlHL69gO38yw==}
+    engines: {node: '>=0.10.0'}
+
   readdirp@4.1.2:
     resolution: {integrity: sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==}
     engines: {node: '>= 14.18.0'}
@@ -1131,6 +1146,11 @@ packages:
 
   style-to-object@1.0.14:
     resolution: {integrity: sha512-LIN7rULI0jBscWQYaSswptyderlarFkjQ+t79nzty8tcIAceVomEVlLzH5VP4Cmsv6MtKhs7qaAiwlcp+Mgaxw==}
+
+  sv-agentation@0.4.0:
+    resolution: {integrity: sha512-Wy26LFdv37WBqrMcSb+kiOWH0uod0rXRx13oTkPewUYmHECWLcvFD40cjcWJlnqblIJRjk4rNqZmyVXvGPpOiQ==}
+    peerDependencies:
+      svelte: ^5.0.0
 
   svelte-check@4.7.8:
     resolution: {integrity: sha512-laZ49GFHZ3b0z2PWinJWL0syehc/PTR8aHaUaTiBkWJ+4Y38nhxjmXsSz7CbGa3VdKopViVbrBH3bGNqIAI0bQ==}
@@ -1640,6 +1660,10 @@ snapshots:
 
   axobject-query@4.1.0: {}
 
+  bippy@0.5.43(react@19.3.1):
+    dependencies:
+      react: 19.3.1
+
   bits-ui@2.21.0(@internationalized/date@3.12.4)(@sveltejs/kit@3.2.0(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.3)(vite@8.3.8(jiti@2.7.0)))(svelte@5.57.3)(typescript@6.0.3)(vite@8.3.8(jiti@2.7.0)))(svelte@5.57.3):
     dependencies:
       '@floating-ui/core': 1.8.0
@@ -1818,6 +1842,12 @@ snapshots:
     dependencies:
       dequal: 2.0.3
 
+  element-source@0.0.5(react@19.3.1):
+    dependencies:
+      bippy: 0.5.43(react@19.3.1)
+    transitivePeerDependencies:
+      - react
+
   enhanced-resolve@5.26.1:
     dependencies:
       graceful-fs: 4.2.11
@@ -1833,11 +1863,13 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.7
 
-  framer-motion@14.1.0:
+  framer-motion@14.1.0(react@19.3.1):
     dependencies:
       motion-dom: 14.1.0
       motion-utils: 14.1.0
       tslib: 2.9.1
+    optionalDependencies:
+      react: 19.3.1
 
   fsevents@2.3.3:
     optional: true
@@ -2021,10 +2053,10 @@ snapshots:
     dependencies:
       motion-utils: 14.1.0
 
-  motion-sv@0.2.2(svelte@5.57.3):
+  motion-sv@0.2.2(react@19.3.1)(svelte@5.57.3):
     dependencies:
       csstype: 3.2.3
-      framer-motion: 14.1.0
+      framer-motion: 14.1.0(react@19.3.1)
       hey-listen: 1.0.8
       motion-dom: 14.1.0
       motion-utils: 14.1.0
@@ -2083,6 +2115,8 @@ snapshots:
   prettier@3.10.1: {}
 
   property-information@7.2.0: {}
+
+  react@19.3.1: {}
 
   readdirp@4.1.2: {}
 
@@ -2199,6 +2233,14 @@ snapshots:
   style-to-object@1.0.14:
     dependencies:
       inline-style-parser: 0.2.7
+
+  sv-agentation@0.4.0(react@19.3.1)(svelte@5.57.3):
+    dependencies:
+      '@lucide/svelte': 1.73.0(svelte@5.57.3)
+      element-source: 0.0.5(react@19.3.1)
+      svelte: 5.57.3
+    transitivePeerDependencies:
+      - react
 
   svelte-check@4.7.8(picomatch@4.0.7)(svelte@5.57.3)(typescript@6.0.3):
     dependencies:

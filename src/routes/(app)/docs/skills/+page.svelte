@@ -32,28 +32,6 @@
 Match the existing color tokens and typography. Replace the demo content, then check the mobile layout, keyboard access, and reduced motion.`
 	};
 
-	function buildPrompt(goal: string, requirements: string): string {
-		return `Use /svelte-efferd for this task.
-
-Read https://sv-efferd.pages.dev/llms.txt and https://sv-efferd.pages.dev/component-manifest.json before choosing any blocks.
-
-Goal: ${goal}
-
-${requirements}
-
-Inspect the existing Svelte project first. Reuse its package manager, component aliases, color tokens, typography, spacing, radius scale, and icon set.
-
-Search the Svelte Efferd catalog and give me a shortlist of no more than three candidates. For each candidate, include its name, preview URL, and the concrete reason it fits. Do not choose a block only because its demo looks polished.
-
-Install the best match using its exact registry URL. Do not overwrite an existing component without checking its local changes first.
-
-Replace demo copy, links, images, and data with content already present in the project or content I provide. Do not invent customers, testimonials, company logos, awards, or usage numbers.
-
-After adapting the block, check narrow screens, long text, keyboard navigation, visible focus, heading order, control labels, and reduced motion. Avoid transition-all, layout-bound animation, unnecessary looping motion, and media without explicit dimensions.
-
-Run the project's formatter, type checker, and relevant tests. Report the selected block, installation command, changed files, and verification results.`;
-	}
-
 	const prompts: PromptExample[] = [
 		{
 			id: "saas-landing-page",
@@ -62,10 +40,42 @@ Run the project's formatter, type checker, and relevant tests. Report the select
 			code: {
 				filename: "SaaS landing page prompt",
 				lang: "markdown",
-				filecode: buildPrompt(
-					"Build a focused SaaS landing page that explains the product and leads visitors to one primary action.",
-					"Look for a compatible header, hero, feature section, pricing section, FAQ, CTA, and footer. Keep only the sections supported by the available product content. Preserve the current route structure and avoid repeating the same claim in several sections."
-				)
+				filecode: `Use /svelte-efferd.
+
+## Goal
+
+Build a focused SaaS landing page that explains the product and leads visitors to one primary action.
+
+## Project context
+
+- Inspect the existing Svelte project before changing anything.
+- Read https://sv-efferd.pages.dev/llms.txt.
+- Use https://sv-efferd.pages.dev/component-manifest.json to find blocks.
+- Follow the existing color tokens, typography, spacing, radius, and icon choices.
+
+## Find the blocks
+
+Search for a header, hero, feature section, pricing section, FAQ, CTA, and footer.
+
+Shortlist up to three candidates for each section. Include the component name, preview URL, and one reason it fits. Remove sections that are not supported by the available product content.
+
+## Build
+
+Install the selected blocks with their exact registry URLs.
+
+Replace demo text, links, images, and data with content from the project. Keep existing routes and actions working. Do not invent customers, testimonials, logos, awards, or product metrics.
+
+## Check
+
+Test narrow screens, long text, keyboard navigation, focus states, heading order, and reduced motion.
+
+Avoid \`transition-all\`, unnecessary looping animation, and media without explicit dimensions.
+
+Run the project formatter, type checker, and relevant tests.
+
+## Report
+
+List the selected blocks, installation commands, changed files, and check results.`
 			}
 		},
 		{
@@ -75,10 +85,42 @@ Run the project's formatter, type checker, and relevant tests. Report the select
 			code: {
 				filename: "Product hero and header prompt",
 				lang: "markdown",
-				filecode: buildPrompt(
-					"Add a product hero and responsive header to the current landing page.",
-					"The hero must show the actual product value, one primary action, and supporting media only if a real asset exists. The header must preserve the project's routes, active states, account actions, and mobile navigation. Do not add an announcement badge unless there is a real announcement."
-				)
+				filecode: `Use /svelte-efferd.
+
+## Goal
+
+Add a product hero and responsive header that explain the product clearly and guide visitors to one primary action.
+
+## Project context
+
+- Inspect the current landing page, routes, navigation, and available product assets.
+- Read https://sv-efferd.pages.dev/llms.txt.
+- Use https://sv-efferd.pages.dev/component-manifest.json to find blocks.
+- Keep the existing color tokens, typography, spacing, radius, and icon choices.
+
+## Find the blocks
+
+Search for header and hero blocks that fit the product's content, navigation depth, and available media.
+
+Shortlist up to three compatible pairs. Include each component name, preview URL, and one reason the pair works together. Prefer blocks that need little content or behavior removed.
+
+## Build
+
+Install the selected blocks with their exact registry URLs.
+
+Keep existing routes, active navigation states, account actions, and mobile navigation working. Replace demo content with real product copy and assets. Use one primary action. Add supporting media only when a real asset exists.
+
+Do not add an announcement badge unless there is a real announcement.
+
+## Check
+
+Test the header and hero at narrow, medium, and wide widths. Check keyboard navigation, visible focus, menu behavior, heading order, image dimensions, and reduced motion.
+
+Run the project formatter, type checker, and relevant tests.
+
+## Report
+
+List the selected blocks, installation commands, changed files, and check results.`
 			}
 		},
 		{
@@ -88,10 +130,42 @@ Run the project's formatter, type checker, and relevant tests. Report the select
 			code: {
 				filename: "Pricing and FAQ prompt",
 				lang: "markdown",
-				filecode: buildPrompt(
-					"Build a pricing and FAQ flow using the real plans, limits, and billing terms in this project.",
-					"Choose pricing and FAQ blocks whose information density matches the available data. Keep plan differences easy to scan, use one clear purchase action per plan, and preserve monthly or annual billing behavior if it already exists. Remove any unsupported guarantee, discount, or popularity label."
-				)
+				filecode: `Use /svelte-efferd.
+
+## Goal
+
+Build a pricing and FAQ flow that helps visitors compare real plans and resolve purchase questions.
+
+## Project context
+
+- Inspect the existing plans, limits, prices, billing terms, and purchase actions.
+- Read https://sv-efferd.pages.dev/llms.txt.
+- Use https://sv-efferd.pages.dev/component-manifest.json to find blocks.
+- Follow the project's existing tokens, typography, spacing, form controls, and button styles.
+
+## Find the blocks
+
+Search for pricing and FAQ blocks whose information density matches the available data.
+
+Shortlist up to three combinations. Include the component names, preview URLs, and the tradeoff between them. Reject blocks that need invented plan details or large amounts of empty content.
+
+## Build
+
+Install the selected blocks with their exact registry URLs.
+
+Use the real plan names, prices, limits, billing terms, and FAQ answers. Keep plan differences easy to scan and use one clear purchase action per plan. Preserve monthly or annual billing behavior when it already exists.
+
+Remove unsupported guarantees, discounts, testimonials, and popularity labels.
+
+## Check
+
+Test long plan names, uneven feature lists, missing values, narrow screens, keyboard access, focus states, and FAQ expansion. Confirm that pricing and billing labels are unambiguous.
+
+Run the project formatter, type checker, and relevant tests.
+
+## Report
+
+List the selected blocks, installation commands, changed files, and check results.`
 			}
 		},
 		{
@@ -101,10 +175,43 @@ Run the project's formatter, type checker, and relevant tests. Report the select
 			code: {
 				filename: "Analytics dashboard prompt",
 				lang: "markdown",
-				filecode: buildPrompt(
-					"Create an analytics dashboard for the metrics and workflows already present in this application.",
-					"Map real data fields to the dashboard before choosing a block. Preserve loading, empty, error, and zero-value states. Use tabular numbers for changing metrics, provide text alternatives for charts, and make tables usable without horizontal page overflow. Do not add metrics the application cannot calculate."
-				)
+				filecode: `Use /svelte-efferd.
+
+## Goal
+
+Create a responsive analytics dashboard for the metrics and workflows already present in the application.
+
+## Project context
+
+- Inspect the available data, routes, filters, charts, tables, and user actions.
+- Map the real data fields before choosing a dashboard block.
+- Read https://sv-efferd.pages.dev/llms.txt.
+- Use https://sv-efferd.pages.dev/component-manifest.json to find blocks.
+- Keep the existing application shell, tokens, typography, and data-fetching patterns.
+
+## Find the blocks
+
+Search for dashboard blocks that match the number of metrics, chart types, table density, and navigation structure.
+
+Shortlist up to three candidates. Include each component name, preview URL, and the data it can display without forcing unrelated widgets into the page.
+
+## Build
+
+Install the selected block with its exact registry URL.
+
+Connect it to real project data. Preserve loading, empty, error, and zero-value states. Use tabular numbers for changing metrics and provide text alternatives for charts. Do not add metrics the application cannot calculate.
+
+## Check
+
+Test narrow screens, long labels, large numbers, empty datasets, keyboard navigation, visible focus, and table overflow. Confirm that charts remain understandable without relying on color alone.
+
+Avoid per-frame state updates, layout-bound animation, and rendering large unbounded lists without virtualization.
+
+Run the project formatter, type checker, and relevant tests.
+
+## Report
+
+List the selected block, installation command, data connections, changed files, and check results.`
 			}
 		},
 		{
@@ -114,10 +221,42 @@ Run the project's formatter, type checker, and relevant tests. Report the select
 			code: {
 				filename: "Application shell prompt",
 				lang: "markdown",
-				filecode: buildPrompt(
-					"Create an application shell around the existing authenticated routes.",
-					"Choose an app-shell block that fits the current navigation depth and responsive needs. Keep route URLs, permission checks, account controls, breadcrumbs, and active navigation behavior intact. The sidebar or mobile menu must be keyboard accessible and must not cover the page at narrow widths."
-				)
+				filecode: `Use /svelte-efferd.
+
+## Goal
+
+Create an application shell around the existing authenticated routes without changing the routing or permissions model.
+
+## Project context
+
+- Inspect the current routes, navigation depth, account controls, breadcrumbs, and permission checks.
+- Read https://sv-efferd.pages.dev/llms.txt.
+- Use https://sv-efferd.pages.dev/component-manifest.json to find blocks.
+- Preserve the existing design tokens, icon set, layout conventions, and authentication behavior.
+
+## Find the blocks
+
+Search for app-shell blocks that support the current navigation depth and responsive behavior.
+
+Shortlist up to three candidates. Include each component name, preview URL, and how it handles desktop navigation, mobile navigation, page titles, and account actions.
+
+## Build
+
+Install the selected block with its exact registry URL.
+
+Connect the shell to the existing routes. Preserve URLs, permission checks, breadcrumbs, account controls, and active navigation states. Remove demo destinations instead of leaving dead links.
+
+Keep page content independent from the shell so existing routes remain easy to maintain.
+
+## Check
+
+Test keyboard navigation, visible focus, active states, long labels, nested routes, narrow screens, and menu dismissal. Confirm that the sidebar or mobile menu does not cover or trap access to page content.
+
+Run the project formatter, type checker, and relevant tests.
+
+## Report
+
+List the selected block, installation command, navigation changes, changed files, and check results.`
 			}
 		},
 		{
@@ -127,10 +266,42 @@ Run the project's formatter, type checker, and relevant tests. Report the select
 			code: {
 				filename: "Account settings prompt",
 				lang: "markdown",
-				filecode: buildPrompt(
-					"Build account and notification settings around the fields and actions already implemented in this project.",
-					"Choose a settings block that matches the number of sections and field density. Preserve form actions, validation messages, disabled states, destructive confirmations, and unsaved-change handling. Every control needs a programmatic label, and related options must be grouped semantically."
-				)
+				filecode: `Use /svelte-efferd.
+
+## Goal
+
+Build account and notification settings around the fields and actions already implemented in the project.
+
+## Project context
+
+- Inspect the existing settings routes, form actions, validation, account data, and notification options.
+- Read https://sv-efferd.pages.dev/llms.txt.
+- Use https://sv-efferd.pages.dev/component-manifest.json to find blocks.
+- Keep the current form controls, tokens, typography, spacing, and save behavior.
+
+## Find the blocks
+
+Search for settings blocks that match the number of sections, field density, and navigation pattern.
+
+Shortlist up to three candidates. Include each component name, preview URL, and how it organizes account details, preferences, notifications, and destructive actions.
+
+## Build
+
+Install the selected block with its exact registry URL.
+
+Connect the real fields and form actions. Preserve validation messages, disabled states, submitting states, destructive confirmations, and unsaved-change handling. Give every control a programmatic label and group related options semantically.
+
+Remove demo fields that the application does not support.
+
+## Check
+
+Test keyboard navigation, visible focus, validation errors, long labels, disabled controls, save failures, and narrow screens. Confirm that destructive actions are clearly separated and require confirmation.
+
+Run the project formatter, type checker, and relevant tests.
+
+## Report
+
+List the selected block, installation command, connected settings, changed files, and check results.`
 			}
 		},
 		{
@@ -140,10 +311,42 @@ Run the project's formatter, type checker, and relevant tests. Report the select
 			code: {
 				filename: "Authentication screen prompt",
 				lang: "markdown",
-				filecode: buildPrompt(
-					"Build an authentication screen for the current sign-in or sign-up flow.",
-					"Inspect the existing authentication provider, form actions, redirects, validation, password rules, and error handling before choosing a block. Keep password-manager support, autocomplete attributes, submitting states, and recovery links working. Do not add social providers that are not configured."
-				)
+				filecode: `Use /svelte-efferd.
+
+## Goal
+
+Build an authentication screen for the current sign-in or sign-up flow without changing its security behavior.
+
+## Project context
+
+- Inspect the authentication provider, form actions, redirects, validation, password rules, and error handling.
+- Read https://sv-efferd.pages.dev/llms.txt.
+- Use https://sv-efferd.pages.dev/component-manifest.json to find blocks.
+- Preserve the existing tokens, typography, form components, and authentication logic.
+
+## Find the blocks
+
+Search for auth blocks that match the required fields, recovery flow, and available sign-in methods.
+
+Shortlist up to three candidates. Include each component name, preview URL, and how much adaptation it needs. Reject blocks that depend on providers or fields the project does not support.
+
+## Build
+
+Install the selected block with its exact registry URL.
+
+Connect the existing form actions, redirects, validation messages, recovery links, and submitting states. Keep password-manager support and correct autocomplete attributes. Do not add social providers that are not configured.
+
+Use real product copy and legal links. Remove demo testimonials or decorative proof.
+
+## Check
+
+Test keyboard navigation, visible focus, invalid fields, server errors, submitting states, password-manager behavior, narrow screens, and zoomed text. Confirm that errors are announced and focus moves predictably.
+
+Run the project formatter, type checker, and relevant tests.
+
+## Report
+
+List the selected block, installation command, preserved auth behavior, changed files, and check results.`
 			}
 		},
 		{
@@ -153,10 +356,42 @@ Run the project's formatter, type checker, and relevant tests. Report the select
 			code: {
 				filename: "Developer-tool page prompt",
 				lang: "markdown",
-				filecode: buildPrompt(
-					"Build a landing page for this developer tool using its real commands, APIs, and technical constraints.",
-					"Prefer blocks that can hold code, integration details, and precise product behavior. Use real commands from the repository and keep code examples copyable. Do not claim that setup is instant or seamless. Link to the actual documentation and make the main action match the product's real onboarding path."
-				)
+				filecode: `Use /svelte-efferd.
+
+## Goal
+
+Build a landing page for this developer tool using its real commands, APIs, and technical constraints.
+
+## Project context
+
+- Inspect the README, documentation, installation commands, API examples, and onboarding flow.
+- Read https://sv-efferd.pages.dev/llms.txt.
+- Use https://sv-efferd.pages.dev/component-manifest.json to find blocks.
+- Follow the project's existing tokens, typography, code style, and documentation links.
+
+## Find the blocks
+
+Search for blocks that can hold technical copy, code examples, integrations, features, and a clear onboarding action.
+
+Shortlist up to three combinations. Include the component names, preview URLs, and how each combination supports the available technical content. Prefer the smallest set that explains the product completely.
+
+## Build
+
+Install the selected blocks with their exact registry URLs.
+
+Use real commands and API examples from the repository. Keep code examples accurate and copyable. Link to the actual documentation and make the primary action match the real onboarding path.
+
+Do not claim that setup is instant or hide required configuration.
+
+## Check
+
+Test code wrapping, copy actions, long commands, keyboard navigation, focus states, narrow screens, and heading order. Confirm that commands match the supported package managers and current API.
+
+Run the project formatter, type checker, and relevant tests.
+
+## Report
+
+List the selected blocks, installation commands, technical sources used, changed files, and check results.`
 			}
 		},
 		{
@@ -166,10 +401,42 @@ Run the project's formatter, type checker, and relevant tests. Report the select
 			code: {
 				filename: "Integrations and proof prompt",
 				lang: "markdown",
-				filecode: buildPrompt(
-					"Add integrations and customer proof using only verified project data and approved assets.",
-					"Choose integrations, logo-cloud, team, or testimonial blocks only when the repository contains matching names, logos, quotes, and links. Preserve logo aspect ratios and useful alt text. If verified proof is missing, omit that section and explain what content would be needed instead of generating placeholders."
-				)
+				filecode: `Use /svelte-efferd.
+
+## Goal
+
+Add integrations and customer proof using only verified project data and approved assets.
+
+## Project context
+
+- Inspect the repository for approved integration names, logos, customer quotes, links, and attribution.
+- Read https://sv-efferd.pages.dev/llms.txt.
+- Use https://sv-efferd.pages.dev/component-manifest.json to find blocks.
+- Preserve the existing tokens, typography, logo treatment, and link behavior.
+
+## Find the blocks
+
+Search for integrations, logo-cloud, team, or testimonial blocks that match the verified content.
+
+Shortlist up to three candidates. Include each component name, preview URL, and the exact content available to fill it. Reject blocks that require invented brands, quotes, people, or statistics.
+
+## Build
+
+Install the selected blocks with their exact registry URLs.
+
+Use only approved names, logos, quotes, roles, links, and attribution. Preserve logo aspect ratios and add useful alt text. Keep external links accurate and identify them clearly when needed.
+
+If verified content is missing, omit the section and list what content is required. Do not generate placeholders that look like real proof.
+
+## Check
+
+Test missing logos, long company names, narrow screens, keyboard navigation, visible focus, image dimensions, and reduced motion. Confirm that animated logo rows pause when off-screen.
+
+Run the project formatter, type checker, and relevant tests.
+
+## Report
+
+List the selected blocks, installation commands, verified content used, omitted content, changed files, and check results.`
 			}
 		},
 		{
@@ -179,10 +446,40 @@ Run the project's formatter, type checker, and relevant tests. Report the select
 			code: {
 				filename: "Page review prompt",
 				lang: "markdown",
-				filecode: buildPrompt(
-					"Review the current page and replace only the sections that have a clear content, interaction, responsiveness, or accessibility problem.",
-					"Start with a short audit. For every proposed replacement, name the current problem and the Svelte Efferd block that addresses it. Keep sections that already work. Do not turn the page into a catalog of unrelated blocks, and do not change the product's visual direction unless an existing token or component is causing the problem."
-				)
+				filecode: `Use /svelte-efferd.
+
+## Goal
+
+Review the current page and replace only the sections with a clear content, interaction, responsiveness, or accessibility problem.
+
+## Project context
+
+- Inspect the full page, nearby routes, shared components, content, and existing user actions.
+- Read https://sv-efferd.pages.dev/llms.txt.
+- Use https://sv-efferd.pages.dev/component-manifest.json to find possible replacements.
+- Treat the current design tokens and working sections as constraints, not as material to replace by default.
+
+## Find the blocks
+
+Start with a short audit. Name each problem, its effect on the user, and whether a component replacement is necessary.
+
+For every section that needs replacement, shortlist up to three blocks. Include each component name, preview URL, and the specific problem it solves. Keep sections that already work.
+
+## Build
+
+Install only the selected replacements using their exact registry URLs.
+
+Preserve real content, routes, analytics, actions, and working interactions. Adapt the blocks to the current visual system. Do not turn the page into a catalog of unrelated blocks or change its visual direction without a concrete reason.
+
+## Check
+
+Compare the page before and after each replacement. Test narrow screens, long content, keyboard navigation, visible focus, heading order, reduced motion, and layout stability. Confirm that every replacement fixes the named problem without removing useful behavior.
+
+Run the project formatter, type checker, and relevant tests.
+
+## Report
+
+List the audit findings, kept sections, replaced sections, installation commands, changed files, and check results.`
 			}
 		}
 	];
