@@ -10,7 +10,7 @@
 			annotationColor: "light-dark(var(--color-ink), var(--color-emerald-500))",
 			name: "Shaban",
 			description: "Designed the original version that inspired this Svelte adaptation.",
-			href: "https://x.com/shabanhr",
+			href: "https://x.com/shabanwtf",
 			handle: "@shabanhr",
 			avatar: "https://avatars.githubusercontent.com/u/179793504?v=4",
 			initials: "S"

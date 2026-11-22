@@ -95,8 +95,8 @@
 		<Markdown.H2 id="credits" class="mt-0 text-lg">Credits</Markdown.H2>
 		<Markdown.Paragraph class="mt-3 text-sm leading-6">
 			Original blocks by
-			<FaviconLink href="https://x.com/shabanhr" rel="noreferrer">Shaban</FaviconLink>. Ported
-			to Svelte by
+			<FaviconLink href="https://x.com/shabanwtf" rel="noreferrer">Shaban</FaviconLink>.
+			Ported to Svelte by
 			<FaviconLink href="https://bhide.dev" rel="noreferrer">Bhide Svelte</FaviconLink>.
 		</Markdown.Paragraph>
 	</section>
