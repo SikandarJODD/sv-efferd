@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
-	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
 	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
 	import { Github, X as XLogo } from "#lib/components/svgs/index.js";
 	import MoonIcon from "@lucide/svelte/icons/moon";
@@ -40,17 +39,6 @@
 	<FullWidthDivider position="top" class="bg-border/80" />
 	<div class="container">
 		<div class="relative border-x border-border/80">
-			<DecorIcon class="size-3.5 bg-background opacity-80" position="top-left" />
-			<DecorIcon class="size-3.5 bg-background opacity-80" position="top-right" />
-			<DecorIcon
-				class="size-3.5 -translate-x-[calc(50%+0.5px)] translate-y-[calc(50%-0.5px)] bg-background opacity-80"
-				position="bottom-left"
-			/>
-			<DecorIcon
-				class="size-3.5 translate-y-[calc(50%-0.5px)] bg-background opacity-80"
-				position="bottom-right"
-			/>
-
 			<div class="cpx grid gap-10 py-12 lg:grid-cols-5">
 				<div class="col-span-4 flex flex-col gap-6">
 					<div class="space-y-3">
@@ -61,8 +49,37 @@
 						>
 							Svelte Efferd
 						</a>
+						<div class="-mt-5.5 grow overflow-hidden">
+							<svg
+								aria-hidden="true"
+								class="ml-22 w-16 -rotate-2"
+								height="22"
+								viewBox="0 0 283 22"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M1.24715 19.3744C72.4051 10.3594 228.122 -4.71194 281.724 7.12332"
+									stroke="url(#paint0_linear_pl)"
+									stroke-width="4"
+								></path>
+								<defs>
+									<linearGradient
+										id="paint0_linear_pl"
+										x1="282"
+										y1="5.49999"
+										x2="40"
+										y2="13"
+										gradientUnits="userSpaceOnUse"
+									>
+										<stop stop-color="#fc6203"></stop>
+										<stop offset="1" stop-color="#fc037f"></stop>
+									</linearGradient>
+								</defs>
+							</svg>
+						</div>
 						<p class="max-w-sm text-sm text-muted-foreground">
-							Less effort. More effect.
+							Open-source blocks for Svelte.
 						</p>
 					</div>
 
@@ -71,6 +88,7 @@
 							aria-label={mode.current === "dark"
 								? "Switch to light mode"
 								: "Switch to dark mode"}
+							class="rounded-full shadow-none"
 							onclick={toggleMode}
 							variant="outline"
 							size="icon-sm"
@@ -85,6 +103,7 @@
 						{#each socialLinks as social (social.id)}
 							<Button
 								aria-label={social.label}
+								class="rounded-full shadow-none"
 								href={social.href}
 								rel="noreferrer"
 								size="icon-sm"
@@ -102,7 +121,7 @@
 				</div>
 
 				<div class="space-y-4">
-					<h2 class="text-xs font-semibold text-muted-foreground uppercase">Project</h2>
+					<h2 class="text-xs font-semibold text-muted-foreground uppercase">Explore</h2>
 
 					<nav class="flex flex-col gap-3">
 						{#each productLinks as link (link.label)}
