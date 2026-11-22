@@ -10,6 +10,7 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"validate:component-meta": "node scripts/validate-component-metadata.mjs",
 		"lint": "prettier --check .",
 		"format": "prettier --write .",
 		"build:blocks": "pnpm shadcn-svelte registry build"

@@ -45,7 +45,7 @@
 	{href}
 	{...restProps}
 	class={cn(
-		"text-foreground hover:text-foreground/70 mx-1 inline-flex items-center gap-1 align-bottom transition-[color] duration-150 ease-out",
+		"mx-1 inline-flex items-center gap-1 align-bottom text-foreground transition-[color] duration-150 ease-out hover:text-foreground/70",
 		className
 	)}
 	target="_blank"
@@ -55,7 +55,7 @@
 			src={faviconUrl}
 			alt=""
 			aria-hidden="true"
-			class={cn("bg-muted size-4 shrink-0 rounded-[6px] object-cover", imageClass)}
+			class={cn("size-4 shrink-0 rounded-[6px] bg-muted object-cover", imageClass)}
 			width="16"
 			height="16"
 			loading="lazy"

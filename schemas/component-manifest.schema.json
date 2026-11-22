@@ -1,0 +1,190 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://sv-efferd.pages.dev/schemas/component-manifest.schema.json",
+	"title": "Svelte Efferd component manifest",
+	"description": "Public metadata for Svelte Efferd categories and installable components.",
+	"type": "object",
+	"additionalProperties": false,
+	"required": ["schemaVersion", "site", "categories", "components"],
+	"properties": {
+		"schemaVersion": {
+			"const": 1
+		},
+		"site": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": ["name", "url", "framework", "registryUrl"],
+			"properties": {
+				"name": { "type": "string", "minLength": 1 },
+				"url": { "type": "string", "format": "uri" },
+				"framework": { "const": "Svelte" },
+				"registryUrl": { "type": "string", "format": "uri" }
+			}
+		},
+		"categories": {
+			"type": "array",
+			"items": { "$ref": "#/$defs/category" }
+		},
+		"components": {
+			"type": "array",
+			"items": { "$ref": "#/$defs/component" }
+		}
+	},
+	"$defs": {
+		"category": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": ["slug", "label", "description", "url"],
+			"properties": {
+				"slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+				"label": { "type": "string", "minLength": 1 },
+				"description": { "type": "string", "minLength": 1 },
+				"url": { "type": "string", "format": "uri" },
+				"badge": { "enum": ["new", "beta"] }
+			}
+		},
+		"component": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": [
+				"name",
+				"title",
+				"description",
+				"category",
+				"layout",
+				"alignment",
+				"useCases",
+				"visualTraits",
+				"responsive",
+				"urls",
+				"installCommand",
+				"dependencies",
+				"registryDependencies",
+				"files"
+			],
+			"properties": {
+				"name": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+				"title": { "type": "string", "minLength": 1 },
+				"description": { "type": "string", "minLength": 1 },
+				"category": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+				"layout": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"enum": [
+							"centered",
+							"split",
+							"stacked",
+							"grid",
+							"list",
+							"sidebar",
+							"dashboard",
+							"form",
+							"masonry",
+							"full-screen"
+						]
+					}
+				},
+				"alignment": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": { "enum": ["left", "center", "right", "mixed"] }
+				},
+				"useCases": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"enum": [
+							"marketing",
+							"navigation",
+							"conversion",
+							"social-proof",
+							"pricing",
+							"content",
+							"authentication",
+							"contact",
+							"support",
+							"application",
+							"settings",
+							"analytics",
+							"portfolio",
+							"error-page"
+						]
+					}
+				},
+				"visualTraits": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"enum": [
+							"minimal",
+							"bordered",
+							"card",
+							"editorial",
+							"decorative",
+							"image-led",
+							"animated",
+							"sticky",
+							"full-width",
+							"compact"
+						]
+					}
+				},
+				"responsive": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"enum": [
+							"mobile-stack",
+							"mobile-scroll",
+							"mobile-menu",
+							"responsive-grid",
+							"adaptive-sidebar",
+							"fluid",
+							"fixed"
+						]
+					}
+				},
+				"urls": {
+					"type": "object",
+					"additionalProperties": false,
+					"required": ["category", "preview", "registry"],
+					"properties": {
+						"category": { "type": "string", "format": "uri" },
+						"preview": { "type": "string", "format": "uri" },
+						"registry": { "type": "string", "format": "uri" }
+					}
+				},
+				"installCommand": { "type": "string", "minLength": 1 },
+				"dependencies": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": { "type": "string", "minLength": 1 }
+				},
+				"registryDependencies": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": { "type": "string", "minLength": 1 }
+				},
+				"files": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "object",
+						"additionalProperties": false,
+						"required": ["path", "type"],
+						"properties": {
+							"path": { "type": "string", "minLength": 1 },
+							"type": { "type": "string", "minLength": 1 },
+							"target": { "type": "string", "minLength": 1 }
+						}
+					}
+				}
+			}
+		}
+	}
+}
