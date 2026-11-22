@@ -3,12 +3,12 @@
 </script>
 
 <a
-	class="group flex items-center gap-2 rounded-lg border border-border/70 bg-muted/30 p-1.5 transition-colors hover:bg-muted/70"
+	class="group flex items-center gap-2 rounded-lg border border-border/70 bg-white p-1.5 transition-colors hover:bg-muted/70 dark:bg-muted/50"
 	href="https://bhide.dev/?utm_source=sv-chanhdai&utm_medium=referral&utm_campaign=docs-sidebar"
 	target="_blank"
 	rel="noreferrer"
 >
-	<Avatar.Root class="size-8 rounded-sm">
+	<Avatar.Root class="size-7">
 		<Avatar.Image src="https://github.com/SikandarJODD.png" alt="Bhide Svelte" />
 		<Avatar.Fallback>BS</Avatar.Fallback>
 	</Avatar.Root>

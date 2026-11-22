@@ -18,7 +18,7 @@
 	<!-- <CategoryNav /> -->
 	{#if currentCategory}
 		<header
-			class="mx-2 mt-1 rounded-l-xl rounded-r-3xl border border-border/80 px-5 py-8 sm:mx-1 sm:px-6 lg:px-7"
+			class="mx-2 mt-1 rounded-l-xl rounded-r-3xl border border-border/80 px-5 py-8 sm:mx-1 sm:px-6 md:py-12 lg:px-7"
 		>
 			<div class="max-w-7xl">
 				<h1 class="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
