@@ -4,7 +4,7 @@
 	import AppHeader from "./app-header.svelte";
 	import AppSidebar from "./app-sidebar.svelte";
 
-	let { children, pathname = "#/dashboard" }: { children: Snippet; pathname?: string } = $props();
+	let { children, pathname = "/" }: { children: Snippet; pathname?: string } = $props();
 </script>
 
 <Sidebar.Provider>

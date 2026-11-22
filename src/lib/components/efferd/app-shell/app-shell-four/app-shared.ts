@@ -26,8 +26,8 @@ export const navGroups: SidebarNavGroup[] = [
 	{
 		label: "Overview",
 		items: [
-			{ title: "Dashboard", path: "#/dashboard", icon: LayoutGridIcon },
-			{ title: "Sales", path: "#/sales", icon: BarChart3Icon }
+			{ title: "Dashboard", path: "/", icon: LayoutGridIcon },
+			{ title: "Sales", path: "/", icon: BarChart3Icon }
 		]
 	},
 	{
@@ -35,40 +35,40 @@ export const navGroups: SidebarNavGroup[] = [
 		items: [
 			{
 				title: "Orders",
-				path: "#/orders",
+				path: "/",
 				icon: ShoppingCartIcon,
 				subItems: [
-					{ title: "All orders", path: "#/orders/all" },
-					{ title: "Unfulfilled", path: "#/orders/unfulfilled" },
-					{ title: "Returns", path: "#/orders/returns" }
+					{ title: "All orders", path: "/" },
+					{ title: "Unfulfilled", path: "/" },
+					{ title: "Returns", path: "/" }
 				]
 			},
 			{
 				title: "Products",
-				path: "#/products",
+				path: "/",
 				icon: FileTextIcon,
 				subItems: [
-					{ title: "Catalog", path: "#/products/catalog" },
-					{ title: "Inventory", path: "#/products/inventory" },
-					{ title: "Collections", path: "#/products/collections" }
+					{ title: "Catalog", path: "/" },
+					{ title: "Inventory", path: "/" },
+					{ title: "Collections", path: "/" }
 				]
 			},
-			{ title: "Customers", path: "#/customers", icon: UsersIcon },
-			{ title: "Marketing", path: "#/marketing", icon: MegaphoneIcon }
+			{ title: "Customers", path: "/", icon: UsersIcon },
+			{ title: "Marketing", path: "/", icon: MegaphoneIcon }
 		]
 	},
 	{
 		label: "Administration",
 		items: [
-			{ title: "Settings", path: "#/settings", icon: SettingsIcon },
+			{ title: "Settings", path: "/", icon: SettingsIcon },
 			{
 				title: "Billing",
-				path: "#/billing",
+				path: "/",
 				icon: CreditCardIcon,
 				subItems: [
-					{ title: "Plan", path: "#/billing/plan" },
-					{ title: "Invoices", path: "#/billing/invoices" },
-					{ title: "Payment methods", path: "#/billing/payment-methods" }
+					{ title: "Plan", path: "/" },
+					{ title: "Invoices", path: "/" },
+					{ title: "Payment methods", path: "/" }
 				]
 			}
 		]
@@ -76,8 +76,8 @@ export const navGroups: SidebarNavGroup[] = [
 ];
 
 export const footerNavLinks: SidebarNavItem[] = [
-	{ title: "Seller help", path: "#/seller-help", icon: HelpCircleIcon },
-	{ title: "Platform status", path: "#/status", icon: ActivityIcon }
+	{ title: "Seller help", path: "/", icon: HelpCircleIcon },
+	{ title: "Platform status", path: "/", icon: ActivityIcon }
 ];
 
 export const navLinks = [

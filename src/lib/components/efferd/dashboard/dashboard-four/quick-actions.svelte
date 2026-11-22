@@ -11,25 +11,25 @@
 		{
 			title: "Add product",
 			description: "Create a new SKU.",
-			href: "#/products/new",
+			href: "/",
 			icon: PackagePlusIcon
 		},
 		{
 			title: "Review unfulfilled",
 			description: "Orders waiting to ship.",
-			href: "#/orders?status=unfulfilled",
+			href: "/",
 			icon: TruckIcon
 		},
 		{
 			title: "Store settings",
 			description: "Payments, checkout, and taxes.",
-			href: "#/settings",
+			href: "/",
 			icon: SettingsIcon
 		},
 		{
 			title: "Export sales",
 			description: "Download a CSV for accounting.",
-			href: "#/reports/export",
+			href: "/",
 			icon: DownloadIcon
 		}
 	] as const;
