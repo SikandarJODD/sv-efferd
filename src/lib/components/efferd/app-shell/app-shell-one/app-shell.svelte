@@ -5,7 +5,7 @@
 	import AppHeader from "./app-header.svelte";
 	import AppSidebar from "./app-sidebar.svelte";
 
-	let { children, pathname = "#/overview" }: { children: Snippet; pathname?: string } = $props();
+	let { children, pathname = "/" }: { children: Snippet; pathname?: string } = $props();
 </script>
 
 <div class="overflow-hidden">

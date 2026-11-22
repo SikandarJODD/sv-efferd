@@ -2,7 +2,7 @@
 	import "./layout.css";
 	import { ModeWatcher, toggleMode } from "mode-watcher";
 	import { activeElement, PressedKeys } from "runed";
-	import { Agentation } from "sv-agentation";
+	// import { Agentation } from "sv-agentation";
 
 	let { children } = $props();
 
@@ -26,6 +26,6 @@
 	<title>Svelte Efferd Blocks</title>
 </svelte:head>
 
-<Agentation outputMode="compact" deleteAllDelayMs={10} />
+<!-- <Agentation outputMode="compact" deleteAllDelayMs={10} /> -->
 <ModeWatcher defaultMode="dark" />
 {@render children()}
