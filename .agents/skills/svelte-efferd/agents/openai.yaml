@@ -1,0 +1,4 @@
+interface:
+  display_name: "Svelte Efferd"
+  short_description: "Find, install, and adapt Svelte Efferd blocks"
+  default_prompt: "Use $svelte-efferd to find and install the best Svelte Efferd block for this page."
