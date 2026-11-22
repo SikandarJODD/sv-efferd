@@ -26,28 +26,28 @@ export const navGroups: SidebarNavGroup[] = [
 	{
 		label: "Explore",
 		items: [
-			{ title: "Dashboard", path: "#/overview", icon: LayoutDashboardIcon },
-			{ title: "Events", path: "#/events", icon: MousePointerClickIcon },
-			{ title: "Funnels", path: "#/funnels", icon: FunnelIcon },
-			{ title: "Retention", path: "#/retention", icon: RepeatIcon },
-			{ title: "Flows", path: "#/flows", icon: GitBranchIcon }
+			{ title: "Dashboard", path: "/", icon: LayoutDashboardIcon },
+			{ title: "Events", path: "/", icon: MousePointerClickIcon },
+			{ title: "Funnels", path: "/", icon: FunnelIcon },
+			{ title: "Retention", path: "/", icon: RepeatIcon },
+			{ title: "Flows", path: "/", icon: GitBranchIcon }
 		]
 	},
 	{
 		label: "Audiences",
 		items: [
-			{ title: "Segments", path: "#/segments", icon: UsersIcon },
-			{ title: "Cohorts", path: "#/cohorts", icon: ChartPieIcon },
-			{ title: "Profiles", path: "#/profiles", icon: UserIcon }
+			{ title: "Segments", path: "/", icon: UsersIcon },
+			{ title: "Cohorts", path: "/", icon: ChartPieIcon },
+			{ title: "Profiles", path: "/", icon: UserIcon }
 		]
 	},
 	{
 		label: "Configure",
-		items: [{ title: "Integrations", path: "#/integrations", icon: PlugIcon }]
+		items: [{ title: "Integrations", path: "/", icon: PlugIcon }]
 	},
 	{
 		label: "Administration",
-		items: [{ title: "Settings", path: "#/settings", icon: SettingsIcon }]
+		items: [{ title: "Settings", path: "/", icon: SettingsIcon }]
 	}
 ];
 

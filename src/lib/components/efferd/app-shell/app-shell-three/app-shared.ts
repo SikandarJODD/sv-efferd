@@ -24,7 +24,7 @@ export type SidebarNavGroup = {
 
 export const navGroups: SidebarNavGroup[] = [
 	{
-		items: [{ title: "Overview", path: "#/overview", icon: LayoutGridIcon }]
+		items: [{ title: "Overview", path: "/", icon: LayoutGridIcon }]
 	},
 	{
 		label: "Today",

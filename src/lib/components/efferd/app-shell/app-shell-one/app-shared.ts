@@ -25,24 +25,24 @@ export const navGroups: SidebarNavGroup[] = [
 	{
 		label: "Product",
 		items: [
-			{ title: "Dashboard", url: "#/overview", icon: LayoutGridIcon },
-			{ title: "Analytics", url: "#/analytics", icon: BarChart3Icon },
-			{ title: "Projects", url: "#/projects", icon: BriefcaseIcon },
-			{ title: "Team", url: "#/team", icon: UsersIcon },
-			{ title: "Integrations", url: "#/integrations", icon: PlugIcon },
-			{ title: "API Keys", url: "#/api-keys", icon: KeyRoundIcon }
+			{ title: "Dashboard", url: "/", icon: LayoutGridIcon },
+			{ title: "Analytics", url: "/", icon: BarChart3Icon },
+			{ title: "Projects", url: "/", icon: BriefcaseIcon },
+			{ title: "Team", url: "/", icon: UsersIcon },
+			{ title: "Integrations", url: "/", icon: PlugIcon },
+			{ title: "API Keys", url: "/", icon: KeyRoundIcon }
 		]
 	},
 	{
 		label: "Administration",
-		items: [{ title: "Settings", url: "#/settings", icon: SettingsIcon }]
+		items: [{ title: "Settings", url: "/", icon: SettingsIcon }]
 	}
 ];
 
 export const footerNavLinks: SidebarNavItem[] = [
-	{ title: "Feedback", url: "#/feedback", icon: SendIcon },
-	{ title: "Help Center", url: "#/help", icon: HelpCircleIcon },
-	{ title: "Documentation", url: "#/documentation", icon: BookOpenIcon }
+	{ title: "Feedback", url: "/", icon: SendIcon },
+	{ title: "Help Center", url: "/", icon: HelpCircleIcon },
+	{ title: "Documentation", url: "/", icon: BookOpenIcon }
 ];
 
 export const navLinks = [...navGroups.flatMap((group) => group.items), ...footerNavLinks];
