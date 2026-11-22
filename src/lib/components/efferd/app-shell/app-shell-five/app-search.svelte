@@ -2,7 +2,7 @@
 	import * as InputGroup from "#lib/components/ui/input-group/index.js";
 	import * as Kbd from "#lib/components/ui/kbd/index.js";
 	import { useSidebar } from "#lib/components/ui/sidebar/index.js";
-	import { SearchIcon } from "@lucide/svelte";
+	import SearchIcon from "@lucide/svelte/icons/search";
 	import { PressedKeys } from "runed";
 
 	let groupRef: HTMLDivElement | null = null;

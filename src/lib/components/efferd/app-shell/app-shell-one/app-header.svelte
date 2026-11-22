@@ -2,7 +2,9 @@
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { Separator } from "#lib/components/ui/separator/index.js";
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
-	import { BellIcon, HeadsetIcon, SearchIcon } from "@lucide/svelte";
+	import BellIcon from "@lucide/svelte/icons/bell";
+	import HeadsetIcon from "@lucide/svelte/icons/headset";
+	import SearchIcon from "@lucide/svelte/icons/search";
 	import AppBreadcrumbs from "./app-breadcrumbs.svelte";
 	import { navLinks } from "./app-shared.js";
 

@@ -3,7 +3,8 @@
 	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
 	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
 	import { Github, X as XLogo } from "#lib/components/svgs/index.js";
-	import { MoonIcon, SunIcon } from "@lucide/svelte";
+	import MoonIcon from "@lucide/svelte/icons/moon";
+	import SunIcon from "@lucide/svelte/icons/sun";
 	import { mode, toggleMode } from "mode-watcher";
 
 	type FooterLink = {

@@ -2,7 +2,9 @@
 	import * as Drawer from "#lib/components/ui/drawer/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { Github, X as XLogo } from "#lib/components/svgs/index.js";
-	import { ArrowUpRightIcon, MenuIcon, XIcon } from "@lucide/svelte";
+	import ArrowUpRightIcon from "@lucide/svelte/icons/arrow-up-right";
+	import MenuIcon from "@lucide/svelte/icons/menu";
+	import XIcon from "@lucide/svelte/icons/x";
 	import { navLinks, socialLinks } from "./navigation.js";
 	import { getStars, GitHubButton } from "../ui/github-button";
 	import { onMount } from "svelte";

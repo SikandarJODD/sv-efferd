@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { QuoteIcon } from "@lucide/svelte";
+	import QuoteIcon from "@lucide/svelte/icons/quote";
 
 	type Testimonial = {
 		quote: string;

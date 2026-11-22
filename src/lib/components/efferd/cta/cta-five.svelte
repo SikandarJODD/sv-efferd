@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { ArrowRightIcon, AtSignIcon } from "@lucide/svelte";
+	import ArrowRightIcon from "@lucide/svelte/icons/arrow-right";
+	import AtSignIcon from "@lucide/svelte/icons/at-sign";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
 	import {

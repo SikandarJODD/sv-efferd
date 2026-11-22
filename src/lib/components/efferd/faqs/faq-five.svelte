@@ -20,7 +20,8 @@
 		InputGroupInput
 	} from "#lib/components/ui/input-group/index.js";
 	import { cn } from "#lib/utils.js";
-	import { SearchIcon, SearchSlashIcon } from "@lucide/svelte";
+	import SearchIcon from "@lucide/svelte/icons/search";
+	import SearchSlashIcon from "@lucide/svelte/icons/search-slash";
 
 	type CategoryId = "all" | "getting-started" | "features" | "billing" | "support";
 

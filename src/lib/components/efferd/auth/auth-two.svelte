@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { AtSignIcon } from "@lucide/svelte";
+	import AtSignIcon from "@lucide/svelte/icons/at-sign";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { AuthDivider } from "#lib/components/ui/auth-divider/index.js";
 	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";

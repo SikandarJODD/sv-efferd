@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
 	import * as Tooltip from "#lib/components/ui/tooltip/index.js";
-	import { BellIcon, SendIcon } from "@lucide/svelte";
+	import BellIcon from "@lucide/svelte/icons/bell";
+	import SendIcon from "@lucide/svelte/icons/send";
 	import CustomSidebarTrigger from "./custom-sidebar-trigger.svelte";
 	import NavUser from "./nav-user.svelte";
 	import { navLinks } from "./app-shared";

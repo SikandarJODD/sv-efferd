@@ -1,6 +1,7 @@
 <script lang="ts">
 	import NumberFlow from "@number-flow/svelte";
-	import { CircleCheck, Star } from "@lucide/svelte";
+	import CircleCheck from "@lucide/svelte/icons/circle-check";
+	import Star from "@lucide/svelte/icons/star";
 	import { AnimatePresence, createLayoutMotion, useReducedMotion } from "motion-sv";
 	import FrequencyToggle from "#lib/components/efferd/pricing/frequency-toggle.svelte";
 	import { Button } from "#lib/components/ui/button/index.js";

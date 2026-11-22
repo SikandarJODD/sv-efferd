@@ -1,15 +1,13 @@
-import {
-	ChartPieIcon,
-	FunnelIcon,
-	GitBranchIcon,
-	LayoutDashboardIcon,
-	MousePointerClickIcon,
-	PlugIcon,
-	RepeatIcon,
-	SettingsIcon,
-	UserIcon,
-	UsersIcon
-} from "@lucide/svelte";
+import ChartPieIcon from "@lucide/svelte/icons/chart-pie";
+import FunnelIcon from "@lucide/svelte/icons/funnel";
+import GitBranchIcon from "@lucide/svelte/icons/git-branch";
+import LayoutDashboardIcon from "@lucide/svelte/icons/layout-dashboard";
+import MousePointerClickIcon from "@lucide/svelte/icons/mouse-pointer-click";
+import PlugIcon from "@lucide/svelte/icons/plug";
+import RepeatIcon from "@lucide/svelte/icons/repeat";
+import SettingsIcon from "@lucide/svelte/icons/settings";
+import UserIcon from "@lucide/svelte/icons/user";
+import UsersIcon from "@lucide/svelte/icons/users";
 import type { Component } from "svelte";
 
 export type SidebarNavItem = {

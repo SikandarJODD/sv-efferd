@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Check } from "@lucide/svelte";
+	import Check from "@lucide/svelte/icons/check";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
 

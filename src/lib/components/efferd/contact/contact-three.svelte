@@ -3,7 +3,10 @@
 	import GithubLogo from "#lib/components/svgs/github.svelte";
 	import XLogo from "#lib/components/svgs/x.svelte";
 	import { cn } from "#lib/utils.js";
-	import { Mail, MapPin, Phone, type LucideIcon } from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
+	import Mail from "@lucide/svelte/icons/mail";
+	import MapPin from "@lucide/svelte/icons/map-pin";
+	import Phone from "@lucide/svelte/icons/phone";
 	import type { Component } from "svelte";
 
 	const APP_EMAIL = "mail@example.com";

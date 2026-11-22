@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { Separator } from "#lib/components/ui/separator/index.js";
-	import { BellIcon } from "@lucide/svelte";
+	import BellIcon from "@lucide/svelte/icons/bell";
 	import AppBreadcrumbs from "./app-breadcrumbs.svelte";
 	import { navLinks } from "./app-shared.js";
 	import CustomSidebarTrigger from "./custom-sidebar-trigger.svelte";

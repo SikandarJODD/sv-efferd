@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
 	import * as Sheet from "#lib/components/ui/sheet/index.js";
-	import { MenuIcon, XIcon } from "@lucide/svelte";
+	import MenuIcon from "@lucide/svelte/icons/menu";
+	import XIcon from "@lucide/svelte/icons/x";
 	import { navLinks } from "./nav-links";
 
 	let open = $state(false);

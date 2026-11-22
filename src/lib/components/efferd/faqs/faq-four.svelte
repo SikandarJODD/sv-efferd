@@ -6,14 +6,12 @@
 		AccordionTrigger
 	} from "#lib/components/ui/accordion/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
-	import {
-		CreditCardIcon,
-		FeatherIcon,
-		LayoutGridIcon,
-		LifeBuoyIcon,
-		PowerIcon,
-		type LucideIcon
-	} from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
+	import CreditCardIcon from "@lucide/svelte/icons/credit-card";
+	import FeatherIcon from "@lucide/svelte/icons/feather";
+	import LayoutGridIcon from "@lucide/svelte/icons/layout-grid";
+	import LifeBuoyIcon from "@lucide/svelte/icons/life-buoy";
+	import PowerIcon from "@lucide/svelte/icons/power";
 
 	type CategoryId = "all" | "getting-started" | "features" | "billing" | "support";
 

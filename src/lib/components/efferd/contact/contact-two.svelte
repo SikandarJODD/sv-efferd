@@ -2,7 +2,9 @@
 	import { cn } from "#lib/utils.js";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import XLogo from "#lib/components/svgs/x.svelte";
-	import { Mail, Users, type LucideIcon } from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
+	import Mail from "@lucide/svelte/icons/mail";
+	import Users from "@lucide/svelte/icons/users";
 	import type { Component } from "svelte";
 	import type { SVGAttributes } from "svelte/elements";
 

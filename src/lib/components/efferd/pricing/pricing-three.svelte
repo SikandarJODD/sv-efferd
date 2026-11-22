@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { Briefcase, Building, Users, type LucideIcon } from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
+	import Briefcase from "@lucide/svelte/icons/briefcase";
+	import Building from "@lucide/svelte/icons/building";
+	import Users from "@lucide/svelte/icons/users";
 	import PricingCard from "#lib/components/efferd/pricing/pricing-card.svelte";
 	import { cn } from "#lib/utils.js";
 

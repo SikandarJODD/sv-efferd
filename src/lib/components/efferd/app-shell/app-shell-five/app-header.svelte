@@ -2,7 +2,8 @@
 	import * as Breadcrumb from "#lib/components/ui/breadcrumb/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { Separator } from "#lib/components/ui/separator/index.js";
-	import { BellIcon, HelpCircleIcon } from "@lucide/svelte";
+	import BellIcon from "@lucide/svelte/icons/bell";
+	import HelpCircleIcon from "@lucide/svelte/icons/help-circle";
 	import { navLinks } from "./app-shared.js";
 	import CustomTrigger from "./custom-trigger.svelte";
 	import NavUser from "./nav-user.svelte";

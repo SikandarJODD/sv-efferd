@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
 	import { Annotation } from "#lib/components/ui/annotation/index.js";
-	import { ArrowUpRight } from "@lucide/svelte";
+	import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
 
 	const credits = [
 		{

@@ -2,7 +2,8 @@
 	import { Button } from "#lib/components/ui/button/index.js";
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
 	import Logo from "#lib/components/svgs/logo.svelte";
-	import { PlusIcon, SearchIcon } from "@lucide/svelte";
+	import PlusIcon from "@lucide/svelte/icons/plus";
+	import SearchIcon from "@lucide/svelte/icons/search";
 	import { footerNavLinks, navGroups } from "./app-shared.js";
 	import LatestChange from "./latest-change.svelte";
 	import NavGroup from "./nav-group.svelte";

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { cn } from "#lib/utils.js";
-	import { XIcon } from "@lucide/svelte";
+	import XIcon from "@lucide/svelte/icons/x";
 
 	const latestChange = {
 		badge: "NEW",

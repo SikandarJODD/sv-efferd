@@ -1,7 +1,10 @@
 <script lang="ts">
 	import * as Avatar from "#lib/components/ui/avatar/index.js";
 	import * as DropdownMenu from "#lib/components/ui/dropdown-menu/index.js";
-	import { CreditCardIcon, LogOutIcon, SettingsIcon, UserIcon } from "@lucide/svelte";
+	import CreditCardIcon from "@lucide/svelte/icons/credit-card";
+	import LogOutIcon from "@lucide/svelte/icons/log-out";
+	import SettingsIcon from "@lucide/svelte/icons/settings";
+	import UserIcon from "@lucide/svelte/icons/user";
 
 	const user = {
 		name: "Bhide Svelte",

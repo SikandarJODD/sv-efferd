@@ -2,7 +2,7 @@
 	import { type SidebarNavGroup } from "./app-shared.ts";
 	import * as Collapsible from "#lib/components/ui/collapsible/index.js";
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
-	import { ChevronRightIcon } from "@lucide/svelte";
+	import ChevronRightIcon from "@lucide/svelte/icons/chevron-right";
 
 	let { label, items }: SidebarNavGroup = $props();
 </script>

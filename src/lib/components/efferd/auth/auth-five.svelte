@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { AtSignIcon, ChevronLeftIcon } from "@lucide/svelte";
+	import AtSignIcon from "@lucide/svelte/icons/at-sign";
+	import ChevronLeftIcon from "@lucide/svelte/icons/chevron-left";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { AuthDivider } from "#lib/components/ui/auth-divider/index.js";
 	import { FloatingPaths } from "#lib/components/ui/floating-paths/index.js";

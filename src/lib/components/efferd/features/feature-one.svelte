@@ -1,12 +1,10 @@
 <script lang="ts">
 	import { cn } from "#lib/utils.js";
-	import {
-		ActivityIcon,
-		GlobeIcon,
-		ShieldCheckIcon,
-		ZapIcon,
-		type LucideIcon
-	} from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
+	import ActivityIcon from "@lucide/svelte/icons/activity";
+	import GlobeIcon from "@lucide/svelte/icons/globe";
+	import ShieldCheckIcon from "@lucide/svelte/icons/shield-check";
+	import ZapIcon from "@lucide/svelte/icons/zap";
 
 	type Feature = {
 		title: string;

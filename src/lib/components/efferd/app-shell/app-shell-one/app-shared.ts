@@ -1,15 +1,13 @@
-import {
-	BarChart3Icon,
-	BookOpenIcon,
-	BriefcaseIcon,
-	HelpCircleIcon,
-	KeyRoundIcon,
-	LayoutGridIcon,
-	PlugIcon,
-	SendIcon,
-	SettingsIcon,
-	UsersIcon
-} from "@lucide/svelte";
+import BarChart3Icon from "@lucide/svelte/icons/bar-chart-3";
+import BookOpenIcon from "@lucide/svelte/icons/book-open";
+import BriefcaseIcon from "@lucide/svelte/icons/briefcase";
+import HelpCircleIcon from "@lucide/svelte/icons/help-circle";
+import KeyRoundIcon from "@lucide/svelte/icons/key-round";
+import LayoutGridIcon from "@lucide/svelte/icons/layout-grid";
+import PlugIcon from "@lucide/svelte/icons/plug";
+import SendIcon from "@lucide/svelte/icons/send";
+import SettingsIcon from "@lucide/svelte/icons/settings";
+import UsersIcon from "@lucide/svelte/icons/users";
 import type { Component } from "svelte";
 
 export type SidebarNavItem = {

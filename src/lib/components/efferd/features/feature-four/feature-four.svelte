@@ -1,11 +1,9 @@
 <script lang="ts">
-	import {
-		FileTextIcon,
-		LayoutDashboardIcon,
-		ShieldCheckIcon,
-		TerminalIcon,
-		type LucideIcon
-	} from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
+	import FileTextIcon from "@lucide/svelte/icons/file-text";
+	import LayoutDashboardIcon from "@lucide/svelte/icons/layout-dashboard";
+	import ShieldCheckIcon from "@lucide/svelte/icons/shield-check";
+	import TerminalIcon from "@lucide/svelte/icons/terminal";
 	import FeatureCard from "./feature-card.svelte";
 
 	type Feature = {

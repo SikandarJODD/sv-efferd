@@ -3,7 +3,7 @@
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
 	import Logo from "#lib/components/svgs/logo.svelte";
 	import { cn } from "#lib/utils.js";
-	import { SettingsIcon } from "@lucide/svelte";
+	import SettingsIcon from "@lucide/svelte/icons/settings";
 	import AppSearch from "./app-search.svelte";
 	import { navGroups } from "./app-shared.js";
 	import CustomTrigger from "./custom-trigger.svelte";

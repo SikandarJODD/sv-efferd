@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ChevronLeftIcon } from "@lucide/svelte";
+	import ChevronLeftIcon from "@lucide/svelte/icons/chevron-left";
 	import { Particles } from "#lib/components/magic/particles/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import GithubLogo from "#lib/components/svgs/github.svelte";

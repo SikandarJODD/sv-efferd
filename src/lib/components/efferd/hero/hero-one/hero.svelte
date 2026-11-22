@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { ArrowRight, PhoneCall, Rocket } from "@lucide/svelte";
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
+	import PhoneCall from "@lucide/svelte/icons/phone-call";
+	import Rocket from "@lucide/svelte/icons/rocket";
 	import { Button } from "#lib/components/ui/button/index.js";
 </script>
 
