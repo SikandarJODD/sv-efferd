@@ -222,18 +222,17 @@ Run the project's formatter, type checker, and relevant tests. Report the select
 			installation, adaptation, and checks.
 		</Markdown.Paragraph>
 		<div class="mt-5">
-			<CodeFrame code={usageExample} />
+			<CodeFrame code={usageExample} wrap />
 		</div>
 	</section>
 
 	<section aria-labelledby="agent-references" class="mt-12">
 		<Markdown.H2 id="agent-references">Agent references</Markdown.H2>
 		<Markdown.Paragraph>
-			The prompts below point the agent to two maintained sources. The
-			<Markdown.Link href="/llms.txt">llms.txt guide</Markdown.Link> explains how to work with the
-			registry. The
+			Use the <Markdown.Link href="/llms.txt">llms.txt guide</Markdown.Link> for project instructions
+			and the
 			<Markdown.Link href="/component-manifest.json">component manifest</Markdown.Link>
-			lists component metadata, previews, dependencies, files, and install URLs.
+			to find blocks, previews, and install URLs.
 		</Markdown.Paragraph>
 	</section>
 
@@ -255,7 +254,7 @@ Run the project's formatter, type checker, and relevant tests. Report the select
 					{prompt.goal}
 				</Markdown.Paragraph>
 				<div class="mt-5">
-					<CodeFrame code={prompt.code} />
+					<CodeFrame code={prompt.code} wrap />
 				</div>
 			</article>
 		{/each}

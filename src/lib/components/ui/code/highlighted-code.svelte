@@ -11,12 +11,14 @@
 		lang = "svelte",
 		highlight = [],
 		hideLines = false,
+		wrap = false,
 		class: className
 	}: {
 		code: string;
 		lang?: SupportedLanguage;
 		highlight?: HighlightRange[];
 		hideLines?: boolean;
+		wrap?: boolean;
 		class?: string;
 	} = $props();
 
@@ -32,7 +34,7 @@
 	}
 </script>
 
-<Content lineNumbers={!hideLines} class={className}>
+<Content lineNumbers={!hideLines} {wrap} class={className}>
 	{#each lines.current as line, index (index)}
 		<Line code={line} variant={isHighlighted(index + 1) ? "highlighted" : "default"} />
 	{/each}

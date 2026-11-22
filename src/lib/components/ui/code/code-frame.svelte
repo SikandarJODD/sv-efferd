@@ -12,7 +12,11 @@
 	import { importAliasStyle } from "#lib/components/base/import-alias/preference.svelte.js";
 	import { transformImportAliases } from "#lib/components/base/import-alias/transform.js";
 
-	let { code, faded = false }: { code: CodeBlockData; faded?: boolean } = $props();
+	let {
+		code,
+		faded = false,
+		wrap = false
+	}: { code: CodeBlockData; faded?: boolean; wrap?: boolean } = $props();
 	let displayedCode = $derived(transformImportAliases(code.filecode, importAliasStyle.current));
 	let isCollapsed = $state(untrack(() => code.isExpand ?? false));
 </script>
@@ -59,6 +63,7 @@
 						lang={code.lang}
 						highlight={code.highlight}
 						hideLines={code.hideLines}
+						{wrap}
 						class="no-scrollbar"
 					/>
 				</Root>
@@ -71,6 +76,7 @@
 					lang={code.lang}
 					highlight={code.highlight}
 					hideLines={code.hideLines}
+					{wrap}
 					class="no-scrollbar"
 				/>
 			</Root>
@@ -83,6 +89,7 @@
 						lang={code.lang}
 						highlight={code.highlight}
 						hideLines={code.hideLines}
+						{wrap}
 						class="no-scrollbar bg-background"
 					/>
 				</Root>
