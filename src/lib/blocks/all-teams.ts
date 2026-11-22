@@ -9,9 +9,9 @@ import teamThreeSource from "#lib/components/efferd/team/team-three.svelte?raw";
 import teamTwoSource from "#lib/components/efferd/team/team-two.svelte?raw";
 import dividerIndexSource from "#lib/components/ui/full-width-divider/index.ts?raw";
 import dividerSource from "#lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
-import githubSvgSource from "#lib/svgs/github.svelte?raw";
-import linkedinSvgSource from "#lib/svgs/linkedin.svelte?raw";
-import xSvgSource from "#lib/svgs/x.svelte?raw";
+import githubSvgSource from "#lib/components/svgs/github.svelte?raw";
+import linkedinSvgSource from "#lib/components/svgs/linkedin.svelte?raw";
+import xSvgSource from "#lib/components/svgs/x.svelte?raw";
 
 const avatarFiles = [
 	{

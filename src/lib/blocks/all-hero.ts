@@ -48,7 +48,7 @@ import decorIconSource from "#lib/components/ui/decor-icon/decor-icon.svelte?raw
 import dividerIndexSource from "#lib/components/ui/full-width-divider/index.ts?raw";
 import dividerSource from "#lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
 import useScrollHookSource from "#lib/hooks/use-scroll.svelte.ts?raw";
-import logoSvgSource from "#lib/svgs/logo.svelte?raw";
+import logoSvgSource from "#lib/components/svgs/logo.svelte?raw";
 
 const buttonFiles = [
 	{

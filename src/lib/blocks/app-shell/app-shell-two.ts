@@ -15,7 +15,7 @@ import navUserSource from "#lib/components/efferd/app-shell/app-shell-two/nav-us
 import previewSource from "#lib/components/efferd/app-shell/app-shell-two/preview.svelte?raw";
 import decorIconSource from "#lib/components/ui/decor-icon/decor-icon.svelte?raw";
 import decorIconIndexSource from "#lib/components/ui/decor-icon/index.ts?raw";
-import logoSource from "#lib/svgs/logo.svelte?raw";
+import logoSource from "#lib/components/svgs/logo.svelte?raw";
 
 const uiFiles = [
 	{

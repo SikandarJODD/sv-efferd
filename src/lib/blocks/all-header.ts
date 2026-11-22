@@ -40,7 +40,7 @@ import portalBackdropSource from "#lib/components/ui/portal/portal-backdrop.svel
 import portalIndexSource from "#lib/components/ui/portal/index.ts?raw";
 import portalSource from "#lib/components/ui/portal/portal.svelte?raw";
 import useScrollHookSource from "#lib/hooks/use-scroll.svelte.ts?raw";
-import logoSvgSource from "#lib/svgs/logo.svelte?raw";
+import logoSvgSource from "#lib/components/svgs/logo.svelte?raw";
 
 const buttonFiles = [
 	{

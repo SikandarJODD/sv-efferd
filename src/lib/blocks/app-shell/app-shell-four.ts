@@ -13,7 +13,7 @@ import latestChangeSource from "#lib/components/efferd/app-shell/app-shell-four/
 import navGroupSource from "#lib/components/efferd/app-shell/app-shell-four/nav-group.svelte?raw";
 import navUserSource from "#lib/components/efferd/app-shell/app-shell-four/nav-user.svelte?raw";
 import previewSource from "#lib/components/efferd/app-shell/app-shell-four/preview.svelte?raw";
-import logoSource from "#lib/svgs/logo.svelte?raw";
+import logoSource from "#lib/components/svgs/logo.svelte?raw";
 
 const uiFiles = [
 	{

@@ -12,7 +12,7 @@ import latestChangeSource from "#lib/components/efferd/app-shell/app-shell-five/
 import navUserSource from "#lib/components/efferd/app-shell/app-shell-five/nav-user.svelte?raw";
 import previewSource from "#lib/components/efferd/app-shell/app-shell-five/preview.svelte?raw";
 import themeSwitcherSource from "#lib/components/efferd/app-shell/app-shell-five/theme-switcher.svelte?raw";
-import logoSource from "#lib/svgs/logo.svelte?raw";
+import logoSource from "#lib/components/svgs/logo.svelte?raw";
 
 const uiFiles = [
 	{

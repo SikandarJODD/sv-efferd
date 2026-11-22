@@ -31,8 +31,8 @@ import inputIndexSource from "#lib/components/ui/input/index.ts?raw";
 import inputSource from "#lib/components/ui/input/input.svelte?raw";
 import textareaIndexSource from "#lib/components/ui/textarea/index.ts?raw";
 import textareaSource from "#lib/components/ui/textarea/textarea.svelte?raw";
-import githubSvgSource from "#lib/svgs/github.svelte?raw";
-import xSvgSource from "#lib/svgs/x.svelte?raw";
+import githubSvgSource from "#lib/components/svgs/github.svelte?raw";
+import xSvgSource from "#lib/components/svgs/x.svelte?raw";
 
 const buttonFiles = [
 	{

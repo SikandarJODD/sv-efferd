@@ -12,7 +12,7 @@ import navUserSource from "#lib/components/efferd/app-shell/app-shell-one/nav-us
 import previewSource from "#lib/components/efferd/app-shell/app-shell-one/preview.svelte?raw";
 import dividerIndexSource from "#lib/components/ui/full-width-divider/index.ts?raw";
 import dividerSource from "#lib/components/ui/full-width-divider/full-width-divider.svelte?raw";
-import logoSource from "#lib/svgs/logo.svelte?raw";
+import logoSource from "#lib/components/svgs/logo.svelte?raw";
 
 const uiFiles = [
 	{

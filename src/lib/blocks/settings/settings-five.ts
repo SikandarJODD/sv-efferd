@@ -10,8 +10,8 @@ import settingFieldSource from "#lib/components/efferd/settings/settings-five/se
 import settingsHeaderSource from "#lib/components/efferd/settings/settings-five/settings-header.svelte?raw";
 import settingsSectionSource from "#lib/components/efferd/settings/settings-five/settings-section.svelte?raw";
 import settingsSource from "#lib/components/efferd/settings/settings-five/settings.svelte?raw";
-import githubSvgSource from "#lib/svgs/github.svelte?raw";
-import googleSvgSource from "#lib/svgs/google.svelte?raw";
+import githubSvgSource from "#lib/components/svgs/github.svelte?raw";
+import googleSvgSource from "#lib/components/svgs/google.svelte?raw";
 
 const uiFiles = [
 	{
