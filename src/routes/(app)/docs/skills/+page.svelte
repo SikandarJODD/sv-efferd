@@ -504,6 +504,7 @@ List the audit findings, kept sections, replaced sections, installation commands
 			<PMCommand
 				variant="secondary"
 				title="Install the Svelte Efferd skill"
+				eventName="copy_skill_install:svelte-efferd"
 				command="execute"
 				args={["skills", "add", "SikandarJODD/sv-efferd", "--skill", "svelte-efferd"]}
 			/>
@@ -519,7 +520,11 @@ List the audit findings, kept sections, replaced sections, installation commands
 			installation, adaptation, and checks.
 		</Markdown.Paragraph>
 		<div class="mt-5">
-			<CodeFrame code={usageExample} wrap />
+			<CodeFrame
+				code={usageExample}
+				copyEvent="copy_skill_prompt:usage-example"
+				wrap
+			/>
 		</div>
 	</section>
 
@@ -551,7 +556,7 @@ List the audit findings, kept sections, replaced sections, installation commands
 					{prompt.goal}
 				</Markdown.Paragraph>
 				<div class="mt-5">
-					<CodeFrame code={prompt.code} wrap />
+					<CodeFrame code={prompt.code} copyEvent={`copy_skill_prompt:${prompt.id}`} wrap />
 				</div>
 			</article>
 		{/each}

@@ -9,6 +9,10 @@
 	}
 
 	let { title, description = "", url }: PreviewHeadingProps = $props();
+
+	let eventName = $derived(
+		`copy_component_url:${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`
+	);
 </script>
 
 <div class="relative px-5 py-5 sm:px-6 sm:py-4 lg:px-5">
@@ -19,6 +23,7 @@
 			</h2>
 			<CopyButton
 				text={url}
+				data-s-event={eventName}
 				size="icon-md"
 				class="text-muted-foreground hover:text-foreground"
 				aria-label={`Copy link to ${title}`}

@@ -19,6 +19,7 @@
 		title?: string;
 		agents?: Agent[];
 		agent?: Agent;
+		eventName?: string;
 		command: Command;
 		args: string[];
 	};
@@ -42,6 +43,7 @@
 		command,
 		agents = ["npm", "pnpm", "yarn", "bun"],
 		args,
+		eventName,
 		agent = $bindable("pnpm")
 	}: PMCommandProps = $props();
 
@@ -54,6 +56,11 @@
 		let urlID = page.url.pathname.split("/").filter(Boolean).slice(-1)[0];
 		return urlID ? decodeURIComponent(urlID) : "Command";
 	});
+
+	let copyEventName = $derived(
+		eventName ??
+			`copy_docs_command:${componentName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`
+	);
 </script>
 
 <div class={cn(style({ variant }), className)}>
@@ -81,6 +88,7 @@
 					{#snippet child({ props })}
 						<CopyButton
 							title={componentName}
+							data-s-event={copyEventName}
 							{...props}
 							text={commandText}
 							class="size-6 [&_svg]:size-3"
