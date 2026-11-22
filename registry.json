@@ -929,6 +929,31 @@
 					"path": "src/lib/components/svgs/x.svelte",
 					"type": "registry:component",
 					"target": "svgs/x.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/facebook.svelte",
+					"type": "registry:component",
+					"target": "svgs/facebook.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
+					"target": "svgs/github.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/instagram.svelte",
+					"type": "registry:component",
+					"target": "svgs/instagram.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/linkedin.svelte",
+					"type": "registry:component",
+					"target": "svgs/linkedin.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/youtube.svelte",
+					"type": "registry:component",
+					"target": "svgs/youtube.svelte"
 				}
 			],
 			"registryDependencies": ["button"],
@@ -954,6 +979,26 @@
 					"path": "src/lib/components/svgs/logo.svelte",
 					"type": "registry:component",
 					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/facebook.svelte",
+					"type": "registry:component",
+					"target": "svgs/facebook.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/instagram.svelte",
+					"type": "registry:component",
+					"target": "svgs/instagram.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/linkedin.svelte",
+					"type": "registry:component",
+					"target": "svgs/linkedin.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/youtube.svelte",
+					"type": "registry:component",
+					"target": "svgs/youtube.svelte"
 				}
 			],
 			"registryDependencies": [],
@@ -1004,6 +1049,21 @@
 					"path": "src/lib/components/svgs/x.svelte",
 					"type": "registry:component",
 					"target": "svgs/x.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/facebook.svelte",
+					"type": "registry:component",
+					"target": "svgs/facebook.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/instagram.svelte",
+					"type": "registry:component",
+					"target": "svgs/instagram.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/linkedin.svelte",
+					"type": "registry:component",
+					"target": "svgs/linkedin.svelte"
 				}
 			],
 			"registryDependencies": ["button"],
@@ -1029,6 +1089,26 @@
 					"path": "src/lib/components/svgs/logo.svelte",
 					"type": "registry:component",
 					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/facebook.svelte",
+					"type": "registry:component",
+					"target": "svgs/facebook.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/instagram.svelte",
+					"type": "registry:component",
+					"target": "svgs/instagram.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/linkedin.svelte",
+					"type": "registry:component",
+					"target": "svgs/linkedin.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/youtube.svelte",
+					"type": "registry:component",
+					"target": "svgs/youtube.svelte"
 				}
 			],
 			"registryDependencies": ["button"],
