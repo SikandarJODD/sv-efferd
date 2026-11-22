@@ -20,6 +20,7 @@
 		<Add.Root item={installUrl} withoutRegistry>
 			<Add.Group class={cn("min-h-8 w-full max-w-full sm:h-8 sm:w-80", className)}>
 				<Add.Button
+					data-s-event={`copy_install_command:${id}`}
 					class="min-h-8 min-w-0 cursor-pointer py-1 pr-1 md:h-8 md:py-0 md:pr-2 md:pl-1 [&>div]:size-8"
 				/>
 				<Add.GroupSeparator />

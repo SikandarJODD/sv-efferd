@@ -15,8 +15,9 @@
 	let {
 		code,
 		faded = false,
-		wrap = false
-	}: { code: CodeBlockData; faded?: boolean; wrap?: boolean } = $props();
+		wrap = false,
+		copyEvent
+	}: { code: CodeBlockData; faded?: boolean; wrap?: boolean; copyEvent?: string } = $props();
 	let displayedCode = $derived(transformImportAliases(code.filecode, importAliasStyle.current));
 	let isCollapsed = $state(untrack(() => code.isExpand ?? false));
 </script>
@@ -47,7 +48,12 @@
 					{isCollapsed ? "Expand" : "Collapse"}
 				</Button>
 			{/if}
-			<CopyButton value={displayedCode} size="icon-sm" class="text-muted-foreground" />
+			<CopyButton
+				value={displayedCode}
+				data-s-event={copyEvent}
+				size="icon-sm"
+				class="text-muted-foreground"
+			/>
 		</div>
 	</Frame.Header>
 
