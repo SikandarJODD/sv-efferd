@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { cn } from "#lib/utils.js";
-	import { ArrowUpRightIcon } from "@lucide/svelte";
+	import ArrowUpRightIcon from "@lucide/svelte/icons/arrow-up-right";
 
 	type Integration = {
 		src?: string;

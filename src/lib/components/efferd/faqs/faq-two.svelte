@@ -58,9 +58,9 @@
 	];
 </script>
 
-<div class="mx-auto min-h-screen w-full max-w-5xl lg:border-x">
+<div class="mx-auto min-h-svh w-full max-w-5xl lg:border-x">
 	<div
-		class="mx-4 grid h-[calc(100vh-3.5rem)] grid-cols-1 border-x md:mx-0 md:grid-cols-2 md:border-x-0"
+		class="mx-4 grid h-[calc(100dvh-3.5rem)] grid-cols-1 border-x md:mx-0 md:grid-cols-2 md:border-x-0"
 	>
 		<div class="space-y-4 px-4 pt-12 pb-4 md:border-r">
 			<h2 class="text-3xl font-black md:text-4xl">FAQs</h2>

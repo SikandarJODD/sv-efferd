@@ -1,14 +1,11 @@
 <script lang="ts">
 	import { cn } from "#lib/utils.js";
+	import type { WordmarkLogo } from "../wordmark-logos";
 	import type { Snippet } from "svelte";
 	import type { HTMLAttributes } from "svelte/elements";
 
-	type Logo = {
-		src: string;
-		alt: string;
-	};
 	type LogoCardProps = HTMLAttributes<HTMLDivElement> & {
-		logo: Logo;
+		logo: WordmarkLogo;
 		class?: string;
 		children?: Snippet;
 	};
@@ -23,9 +20,9 @@
 	<img
 		alt={logo.alt}
 		class="pointer-events-none h-4 select-none md:h-5 dark:brightness-0 dark:invert"
-		height="auto"
+		height={logo.height}
 		src={logo.src}
-		width="auto"
+		width={logo.width}
 	/>
 	{@render children?.()}
 </div>

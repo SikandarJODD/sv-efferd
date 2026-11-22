@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { ChevronLeftIcon } from "@lucide/svelte";
+	import ChevronLeftIcon from "@lucide/svelte/icons/chevron-left";
 	import { Particles } from "#lib/components/magic/particles/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
-	import GithubLogo from "#lib/svgs/github.svelte";
-	import GoogleLogo from "#lib/svgs/google.svelte";
-	import Logo from "#lib/svgs/logo.svelte";
+	import GithubLogo from "#lib/components/svgs/github.svelte";
+	import GoogleLogo from "#lib/components/svgs/google.svelte";
+	import Logo from "#lib/components/svgs/logo.svelte";
 	import { cn } from "#lib/utils.js";
 	import type { HTMLAttributes } from "svelte/elements";
 
@@ -24,10 +24,10 @@
 	}: AuthOneProps = $props();
 </script>
 
-<div class={cn("relative w-full md:h-screen md:overflow-hidden", className)} {...restProps}>
+<div class={cn("relative w-full md:h-dvh md:overflow-hidden", className)} {...restProps}>
 	<Particles class="absolute inset-0" color="#666666" ease={20} quantity={120} />
 
-	<div class="relative mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-8">
+	<div class="relative mx-auto flex min-h-svh max-w-5xl flex-col justify-center px-8">
 		<Button class="absolute top-4 left-4" href={homeHref} variant="ghost">
 			<ChevronLeftIcon data-icon="inline-start" />
 			Home

@@ -1,13 +1,11 @@
 <script lang="ts">
-	import {
-		CpuIcon,
-		FingerprintIcon,
-		PencilIcon,
-		Settings2Icon,
-		SparklesIcon,
-		ZapIcon,
-		type LucideIcon
-	} from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
+	import CpuIcon from "@lucide/svelte/icons/cpu";
+	import FingerprintIcon from "@lucide/svelte/icons/fingerprint";
+	import PencilIcon from "@lucide/svelte/icons/pencil";
+	import Settings2Icon from "@lucide/svelte/icons/settings-2";
+	import SparklesIcon from "@lucide/svelte/icons/sparkles";
+	import ZapIcon from "@lucide/svelte/icons/zap";
 	import FeatureCard from "./feature-card.svelte";
 
 	type Feature = {

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { AtSignIcon } from "@lucide/svelte";
+	import AtSignIcon from "@lucide/svelte/icons/at-sign";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { AuthDivider } from "#lib/components/ui/auth-divider/index.js";
 	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
@@ -8,8 +8,8 @@
 		InputGroupAddon,
 		InputGroupInput
 	} from "#lib/components/ui/input-group/index.js";
-	import GoogleLogo from "#lib/svgs/google.svelte";
-	import Logo from "#lib/svgs/logo.svelte";
+	import GoogleLogo from "#lib/components/svgs/google.svelte";
+	import Logo from "#lib/components/svgs/logo.svelte";
 	import { cn } from "#lib/utils.js";
 	import type { HTMLAttributes } from "svelte/elements";
 
@@ -33,9 +33,9 @@
 	}: AuthFourProps = $props();
 </script>
 
-<div class={cn("relative w-full overflow-hidden px-4 md:h-screen", className)} {...restProps}>
+<div class={cn("relative w-full overflow-hidden px-4 md:h-dvh", className)} {...restProps}>
 	<div
-		class="relative mx-auto flex min-h-screen w-full max-w-sm flex-col justify-center border-x *:px-6"
+		class="relative mx-auto flex min-h-svh w-full max-w-sm flex-col justify-center border-x *:px-6"
 	>
 		<div class="flex flex-col space-y-6">
 			<a aria-label="Home" href={logoHref}>
@@ -64,6 +64,8 @@
 				<InputGroup>
 					<InputGroupInput
 						aria-label={emailAriaLabel}
+						autocomplete="email"
+						name="email"
 						placeholder={emailPlaceholder}
 						type="email"
 					/>

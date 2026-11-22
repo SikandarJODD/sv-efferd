@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
-	import { Mail, Phone, type LucideIcon } from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
+	import Mail from "@lucide/svelte/icons/mail";
+	import Phone from "@lucide/svelte/icons/phone";
 	import ContactForm from "./contact-form.svelte";
 	import { cn } from "#lib/utils.js";
 

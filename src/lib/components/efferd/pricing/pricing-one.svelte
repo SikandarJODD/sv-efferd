@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ShieldCheck } from "@lucide/svelte";
+	import ShieldCheck from "@lucide/svelte/icons/shield-check";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
 	import { cn } from "#lib/utils.js";

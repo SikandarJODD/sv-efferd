@@ -1,25 +1,17 @@
-import { tv, type VariantProps } from "tailwind-variants";
-import Root from "./code.svelte";
-import Overflow from "./code-overflow.svelte";
-import CopyButton from "./code-copy-button.svelte";
-import type { CodeCopyButtonProps, CodeRootProps } from "./types";
-
-export const codeVariants = tv({
-	base: "not-prose relative h-full overflow-auto rounded-lg border",
-	variants: {
-		variant: {
-			default: "border-border bg-background",
-			secondary: "border-transparent bg-secondary/50"
-		}
-	}
-});
-
-export type CodeVariant = VariantProps<typeof codeVariants>["variant"];
+import Snippet from "./code-snippet.svelte";
+import File from "./code-file.svelte";
+import FileBrowser from "./code-file-browser.svelte";
+import Frame from "./code-frame.svelte";
 
 export {
-	Root,
-	CopyButton,
-	Overflow,
-	type CodeRootProps as RootProps,
-	type CodeCopyButtonProps as CopyButtonProps
+	Snippet,
+	File,
+	FileBrowser,
+	Frame,
+	Snippet as CodeSnippet,
+	File as CodeFile,
+	FileBrowser as CodeFileBrowser,
+	Frame as CodeFrame
 };
+
+export type { CodeBlock } from "./types.js";

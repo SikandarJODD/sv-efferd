@@ -20,7 +20,8 @@
 		InputGroupInput
 	} from "#lib/components/ui/input-group/index.js";
 	import { cn } from "#lib/utils.js";
-	import { SearchIcon, SearchSlashIcon } from "@lucide/svelte";
+	import SearchIcon from "@lucide/svelte/icons/search";
+	import SearchSlashIcon from "@lucide/svelte/icons/search-slash";
 
 	type CategoryId = "all" | "getting-started" | "features" | "billing" | "support";
 
@@ -126,7 +127,7 @@
 	);
 </script>
 
-<div class="mx-auto min-h-screen w-full max-w-3xl md:border-x">
+<div class="mx-auto min-h-svh w-full max-w-3xl md:border-x">
 	<div class="px-4 py-16 lg:px-6">
 		<h1 class="mb-4 text-3xl font-semibold md:text-4xl">Frequently Asked Questions</h1>
 		<p class="mb-8 max-w-2xl text-muted-foreground">
@@ -135,7 +136,16 @@
 		</p>
 
 		<InputGroup class="max-w-sm">
-			<InputGroupInput bind:value={searchTerm} placeholder="Search FAQs..." />
+			<InputGroupInput
+				aria-label="Search frequently asked questions"
+				autocomplete="off"
+				bind:value={searchTerm}
+				enterkeyhint="search"
+				name="search"
+				placeholder="Search FAQs…"
+				spellcheck="false"
+				type="search"
+			/>
 			<InputGroupAddon>
 				<SearchIcon data-icon="inline-start" />
 			</InputGroupAddon>

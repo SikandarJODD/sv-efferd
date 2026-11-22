@@ -1,0 +1,1071 @@
+{
+	"schemaVersion": 1,
+	"components": [
+		{
+			"name": "cta-one",
+			"category": "cta",
+			"layout": ["split"],
+			"alignment": ["mixed"],
+			"useCases": ["marketing", "conversion"],
+			"visualTraits": ["minimal", "bordered", "full-width"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/cta",
+				"preview": "/preview/cta/one"
+			}
+		},
+		{
+			"name": "cta-two",
+			"category": "cta",
+			"layout": ["centered", "stacked"],
+			"alignment": ["center"],
+			"useCases": ["marketing", "conversion"],
+			"visualTraits": ["minimal", "full-width"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/cta",
+				"preview": "/preview/cta/two"
+			}
+		},
+		{
+			"name": "cta-three",
+			"category": "cta",
+			"layout": ["centered", "stacked"],
+			"alignment": ["center"],
+			"useCases": ["marketing", "conversion"],
+			"visualTraits": ["decorative", "editorial", "bordered"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/cta",
+				"preview": "/preview/cta/three"
+			}
+		},
+		{
+			"name": "cta-four",
+			"category": "cta",
+			"layout": ["centered", "stacked"],
+			"alignment": ["center"],
+			"useCases": ["marketing", "conversion"],
+			"visualTraits": ["card", "compact"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/cta",
+				"preview": "/preview/cta/four"
+			}
+		},
+		{
+			"name": "cta-five",
+			"category": "cta",
+			"layout": ["split"],
+			"alignment": ["mixed"],
+			"useCases": ["marketing", "conversion", "social-proof"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/cta",
+				"preview": "/preview/cta/five"
+			}
+		},
+		{
+			"name": "not-found-one",
+			"category": "not-found",
+			"layout": ["centered", "stacked"],
+			"alignment": ["center"],
+			"useCases": ["error-page", "navigation"],
+			"visualTraits": ["bordered", "full-width"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/not-found",
+				"preview": "/preview/not-found/one"
+			}
+		},
+		{
+			"name": "not-found-two",
+			"category": "not-found",
+			"layout": ["centered", "full-screen"],
+			"alignment": ["center"],
+			"useCases": ["error-page", "navigation"],
+			"visualTraits": ["minimal", "full-width"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/not-found",
+				"preview": "/preview/not-found/two"
+			}
+		},
+		{
+			"name": "logo-cloud-one",
+			"category": "logo-cloud",
+			"layout": ["grid"],
+			"alignment": ["center"],
+			"useCases": ["marketing", "social-proof"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/logo-cloud",
+				"preview": "/preview/logo-cloud/one"
+			}
+		},
+		{
+			"name": "logo-cloud-two",
+			"category": "logo-cloud",
+			"layout": ["grid"],
+			"alignment": ["center"],
+			"useCases": ["marketing", "social-proof"],
+			"visualTraits": ["bordered", "decorative"],
+			"responsive": ["responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/logo-cloud",
+				"preview": "/preview/logo-cloud/two"
+			}
+		},
+		{
+			"name": "logo-cloud-three",
+			"category": "logo-cloud",
+			"layout": ["list"],
+			"alignment": ["center"],
+			"useCases": ["marketing", "social-proof"],
+			"visualTraits": ["minimal", "animated", "full-width"],
+			"responsive": ["mobile-scroll", "fluid"],
+			"paths": {
+				"category": "/blocks/logo-cloud",
+				"preview": "/preview/logo-cloud/three"
+			}
+		},
+		{
+			"name": "logo-cloud-four",
+			"category": "logo-cloud",
+			"layout": ["list"],
+			"alignment": ["center"],
+			"useCases": ["marketing", "social-proof"],
+			"visualTraits": ["animated", "decorative", "full-width"],
+			"responsive": ["mobile-scroll", "fluid"],
+			"paths": {
+				"category": "/blocks/logo-cloud",
+				"preview": "/preview/logo-cloud/four"
+			}
+		},
+		{
+			"name": "logo-cloud-five",
+			"category": "logo-cloud",
+			"layout": ["grid"],
+			"alignment": ["center"],
+			"useCases": ["marketing", "social-proof"],
+			"visualTraits": ["minimal"],
+			"responsive": ["responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/logo-cloud",
+				"preview": "/preview/logo-cloud/five"
+			}
+		},
+		{
+			"name": "contact-one",
+			"category": "contact",
+			"layout": ["split"],
+			"alignment": ["mixed"],
+			"useCases": ["contact", "support"],
+			"visualTraits": ["compact", "bordered", "full-width"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/contact",
+				"preview": "/preview/contact/one"
+			}
+		},
+		{
+			"name": "contact-two",
+			"category": "contact",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["contact", "support"],
+			"visualTraits": ["bordered"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/contact",
+				"preview": "/preview/contact/two"
+			}
+		},
+		{
+			"name": "contact-three",
+			"category": "contact",
+			"layout": ["grid", "full-screen"],
+			"alignment": ["left"],
+			"useCases": ["contact", "support"],
+			"visualTraits": ["editorial", "full-width"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/contact",
+				"preview": "/preview/contact/three"
+			}
+		},
+		{
+			"name": "contact-four",
+			"category": "contact",
+			"layout": ["split", "form"],
+			"alignment": ["left"],
+			"useCases": ["contact", "support"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/contact",
+				"preview": "/preview/contact/four"
+			}
+		},
+		{
+			"name": "contact-five",
+			"category": "contact",
+			"layout": ["split", "form"],
+			"alignment": ["left"],
+			"useCases": ["contact", "support"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/contact",
+				"preview": "/preview/contact/five"
+			}
+		},
+		{
+			"name": "blog-one",
+			"category": "blog",
+			"layout": ["list"],
+			"alignment": ["left"],
+			"useCases": ["content", "marketing"],
+			"visualTraits": ["editorial", "bordered", "full-width"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/blog",
+				"preview": "/preview/blog/one"
+			}
+		},
+		{
+			"name": "blog-two",
+			"category": "blog",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["content", "marketing"],
+			"visualTraits": ["bordered", "editorial"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/blog",
+				"preview": "/preview/blog/two"
+			}
+		},
+		{
+			"name": "blog-three",
+			"category": "blog",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["content", "marketing"],
+			"visualTraits": ["card", "image-led"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/blog",
+				"preview": "/preview/blog/three"
+			}
+		},
+		{
+			"name": "auth-one",
+			"category": "auth",
+			"layout": ["centered", "form", "full-screen"],
+			"alignment": ["center"],
+			"useCases": ["authentication"],
+			"visualTraits": ["decorative", "animated"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/auth",
+				"preview": "/preview/auth/one"
+			}
+		},
+		{
+			"name": "auth-two",
+			"category": "auth",
+			"layout": ["split", "form"],
+			"alignment": ["mixed"],
+			"useCases": ["authentication"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/auth",
+				"preview": "/preview/auth/two"
+			}
+		},
+		{
+			"name": "auth-three",
+			"category": "auth",
+			"layout": ["centered", "stacked", "form"],
+			"alignment": ["center"],
+			"useCases": ["authentication"],
+			"visualTraits": ["minimal"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/auth",
+				"preview": "/preview/auth/three"
+			}
+		},
+		{
+			"name": "auth-four",
+			"category": "auth",
+			"layout": ["centered", "stacked", "form"],
+			"alignment": ["center"],
+			"useCases": ["authentication"],
+			"visualTraits": ["bordered", "decorative"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/auth",
+				"preview": "/preview/auth/four"
+			}
+		},
+		{
+			"name": "auth-five",
+			"category": "auth",
+			"layout": ["split", "form", "full-screen"],
+			"alignment": ["mixed"],
+			"useCases": ["authentication"],
+			"visualTraits": ["decorative", "animated"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/auth",
+				"preview": "/preview/auth/five"
+			}
+		},
+		{
+			"name": "faq-one",
+			"category": "faqs",
+			"layout": ["centered", "stacked"],
+			"alignment": ["center"],
+			"useCases": ["support", "content"],
+			"visualTraits": ["minimal"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/faqs",
+				"preview": "/preview/faqs/one"
+			}
+		},
+		{
+			"name": "faq-two",
+			"category": "faqs",
+			"layout": ["split"],
+			"alignment": ["left"],
+			"useCases": ["support", "content"],
+			"visualTraits": ["editorial", "full-width"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/faqs",
+				"preview": "/preview/faqs/two"
+			}
+		},
+		{
+			"name": "faq-three",
+			"category": "faqs",
+			"layout": ["split", "stacked"],
+			"alignment": ["left"],
+			"useCases": ["support", "content"],
+			"visualTraits": ["editorial", "decorative", "bordered"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/faqs",
+				"preview": "/preview/faqs/three"
+			}
+		},
+		{
+			"name": "faq-four",
+			"category": "faqs",
+			"layout": ["split", "stacked"],
+			"alignment": ["left"],
+			"useCases": ["support", "content"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/faqs",
+				"preview": "/preview/faqs/four"
+			}
+		},
+		{
+			"name": "faq-five",
+			"category": "faqs",
+			"layout": ["stacked", "list"],
+			"alignment": ["left"],
+			"useCases": ["support", "content"],
+			"visualTraits": ["bordered", "full-width"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/faqs",
+				"preview": "/preview/faqs/five"
+			}
+		},
+		{
+			"name": "feature-one",
+			"category": "features",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["marketing", "content"],
+			"visualTraits": ["minimal", "compact"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/features",
+				"preview": "/preview/features/one"
+			}
+		},
+		{
+			"name": "feature-two",
+			"category": "features",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["marketing", "content"],
+			"visualTraits": ["editorial", "decorative", "bordered"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/features",
+				"preview": "/preview/features/two"
+			}
+		},
+		{
+			"name": "feature-three",
+			"category": "features",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["marketing", "content"],
+			"visualTraits": ["bordered", "full-width"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/features",
+				"preview": "/preview/features/three"
+			}
+		},
+		{
+			"name": "feature-four",
+			"category": "features",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["marketing", "content"],
+			"visualTraits": ["card", "editorial"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/features",
+				"preview": "/preview/features/four"
+			}
+		},
+		{
+			"name": "feature-five",
+			"category": "features",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["marketing", "content"],
+			"visualTraits": ["card", "decorative", "compact"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/features",
+				"preview": "/preview/features/five"
+			}
+		},
+		{
+			"name": "footer-one",
+			"category": "footer",
+			"layout": ["split"],
+			"alignment": ["mixed"],
+			"useCases": ["navigation", "marketing"],
+			"visualTraits": ["minimal", "compact"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/footer",
+				"preview": "/preview/footer/one"
+			}
+		},
+		{
+			"name": "footer-two",
+			"category": "footer",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["navigation", "marketing"],
+			"visualTraits": ["bordered"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/footer",
+				"preview": "/preview/footer/two"
+			}
+		},
+		{
+			"name": "footer-three",
+			"category": "footer",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["navigation", "marketing"],
+			"visualTraits": ["card", "animated"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/footer",
+				"preview": "/preview/footer/three"
+			}
+		},
+		{
+			"name": "footer-four",
+			"category": "footer",
+			"layout": ["grid", "list"],
+			"alignment": ["left"],
+			"useCases": ["navigation", "marketing"],
+			"visualTraits": ["editorial"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/footer",
+				"preview": "/preview/footer/four"
+			}
+		},
+		{
+			"name": "footer-five",
+			"category": "footer",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["navigation", "marketing"],
+			"visualTraits": ["compact", "bordered"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/footer",
+				"preview": "/preview/footer/five"
+			}
+		},
+		{
+			"name": "footer-six",
+			"category": "footer",
+			"layout": ["grid", "full-screen"],
+			"alignment": ["left"],
+			"useCases": ["navigation", "marketing"],
+			"visualTraits": ["animated", "sticky", "full-width"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/footer",
+				"preview": "/preview/footer/six"
+			}
+		},
+		{
+			"name": "integration-one",
+			"category": "integrations",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["marketing", "social-proof"],
+			"visualTraits": ["card", "compact"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/integrations",
+				"preview": "/preview/integrations/one"
+			}
+		},
+		{
+			"name": "integration-two",
+			"category": "integrations",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["marketing", "social-proof"],
+			"visualTraits": ["card", "bordered", "decorative"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/integrations",
+				"preview": "/preview/integrations/two"
+			}
+		},
+		{
+			"name": "integration-three",
+			"category": "integrations",
+			"layout": ["split", "grid"],
+			"alignment": ["mixed"],
+			"useCases": ["marketing", "social-proof"],
+			"visualTraits": ["bordered", "full-width"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/integrations",
+				"preview": "/preview/integrations/three"
+			}
+		},
+		{
+			"name": "integration-four",
+			"category": "integrations",
+			"layout": ["split", "grid"],
+			"alignment": ["mixed"],
+			"useCases": ["marketing", "social-proof"],
+			"visualTraits": ["decorative", "full-width"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/integrations",
+				"preview": "/preview/integrations/four"
+			}
+		},
+		{
+			"name": "integration-five",
+			"category": "integrations",
+			"layout": ["centered", "grid"],
+			"alignment": ["center"],
+			"useCases": ["marketing", "social-proof"],
+			"visualTraits": ["card", "decorative"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/integrations",
+				"preview": "/preview/integrations/five"
+			}
+		},
+		{
+			"name": "hero-one",
+			"category": "hero",
+			"layout": ["centered", "stacked"],
+			"alignment": ["center"],
+			"useCases": ["marketing", "conversion", "social-proof"],
+			"visualTraits": ["minimal", "animated", "sticky"],
+			"responsive": ["mobile-stack", "mobile-menu", "fluid"],
+			"paths": {
+				"category": "/blocks/hero",
+				"preview": "/preview/hero/one"
+			}
+		},
+		{
+			"name": "hero-two",
+			"category": "hero",
+			"layout": ["centered", "stacked"],
+			"alignment": ["center"],
+			"useCases": ["marketing", "conversion", "social-proof"],
+			"visualTraits": ["bordered", "decorative", "image-led", "animated", "sticky"],
+			"responsive": ["mobile-stack", "mobile-menu", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/hero",
+				"preview": "/preview/hero/two"
+			}
+		},
+		{
+			"name": "hero-three",
+			"category": "hero",
+			"layout": ["stacked"],
+			"alignment": ["mixed"],
+			"useCases": ["marketing", "conversion", "social-proof"],
+			"visualTraits": ["bordered", "image-led", "animated", "sticky", "compact"],
+			"responsive": ["mobile-stack", "mobile-menu", "fluid"],
+			"paths": {
+				"category": "/blocks/hero",
+				"preview": "/preview/hero/three"
+			}
+		},
+		{
+			"name": "header-one",
+			"category": "header",
+			"layout": ["split"],
+			"alignment": ["mixed"],
+			"useCases": ["navigation", "conversion"],
+			"visualTraits": ["minimal", "sticky", "compact"],
+			"responsive": ["mobile-menu", "fluid"],
+			"paths": {
+				"category": "/blocks/header",
+				"preview": "/preview/header/one"
+			}
+		},
+		{
+			"name": "header-two",
+			"category": "header",
+			"layout": ["split"],
+			"alignment": ["mixed"],
+			"useCases": ["navigation", "conversion"],
+			"visualTraits": ["bordered", "sticky", "compact"],
+			"responsive": ["mobile-menu", "fluid"],
+			"paths": {
+				"category": "/blocks/header",
+				"preview": "/preview/header/two"
+			}
+		},
+		{
+			"name": "header-three",
+			"category": "header",
+			"layout": ["split"],
+			"alignment": ["mixed"],
+			"useCases": ["navigation", "conversion"],
+			"visualTraits": ["sticky", "full-width"],
+			"responsive": ["mobile-menu", "fluid"],
+			"paths": {
+				"category": "/blocks/header",
+				"preview": "/preview/header/three"
+			}
+		},
+		{
+			"name": "header-four",
+			"category": "header",
+			"layout": ["split"],
+			"alignment": ["mixed"],
+			"useCases": ["navigation", "conversion"],
+			"visualTraits": ["card", "sticky", "compact"],
+			"responsive": ["mobile-menu", "fluid"],
+			"paths": {
+				"category": "/blocks/header",
+				"preview": "/preview/header/four"
+			}
+		},
+		{
+			"name": "header-five",
+			"category": "header",
+			"layout": ["split"],
+			"alignment": ["mixed"],
+			"useCases": ["navigation", "conversion"],
+			"visualTraits": ["card", "sticky", "decorative"],
+			"responsive": ["mobile-menu", "fluid"],
+			"paths": {
+				"category": "/blocks/header",
+				"preview": "/preview/header/five"
+			}
+		},
+		{
+			"name": "dashboard-one",
+			"category": "dashboard",
+			"layout": ["dashboard", "grid"],
+			"alignment": ["left"],
+			"useCases": ["application", "analytics"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "responsive-grid", "adaptive-sidebar", "fluid"],
+			"paths": {
+				"category": "/blocks/dashboard",
+				"preview": "/preview/dashboard/one"
+			}
+		},
+		{
+			"name": "dashboard-two",
+			"category": "dashboard",
+			"layout": ["dashboard", "grid"],
+			"alignment": ["left"],
+			"useCases": ["application", "analytics"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "responsive-grid", "adaptive-sidebar", "fluid"],
+			"paths": {
+				"category": "/blocks/dashboard",
+				"preview": "/preview/dashboard/two"
+			}
+		},
+		{
+			"name": "dashboard-three",
+			"category": "dashboard",
+			"layout": ["dashboard", "grid"],
+			"alignment": ["left"],
+			"useCases": ["application", "analytics"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "responsive-grid", "adaptive-sidebar", "fluid"],
+			"paths": {
+				"category": "/blocks/dashboard",
+				"preview": "/preview/dashboard/three"
+			}
+		},
+		{
+			"name": "dashboard-four",
+			"category": "dashboard",
+			"layout": ["dashboard", "grid"],
+			"alignment": ["left"],
+			"useCases": ["application", "analytics"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "responsive-grid", "adaptive-sidebar", "fluid"],
+			"paths": {
+				"category": "/blocks/dashboard",
+				"preview": "/preview/dashboard/four"
+			}
+		},
+		{
+			"name": "dashboard-five",
+			"category": "dashboard",
+			"layout": ["dashboard", "grid"],
+			"alignment": ["left"],
+			"useCases": ["application", "analytics"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "responsive-grid", "adaptive-sidebar", "fluid"],
+			"paths": {
+				"category": "/blocks/dashboard",
+				"preview": "/preview/dashboard/five"
+			}
+		},
+		{
+			"name": "settings-one",
+			"category": "settings",
+			"layout": ["form", "stacked"],
+			"alignment": ["left"],
+			"useCases": ["application", "settings"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/settings",
+				"preview": "/preview/settings/one"
+			}
+		},
+		{
+			"name": "settings-two",
+			"category": "settings",
+			"layout": ["sidebar", "form"],
+			"alignment": ["left"],
+			"useCases": ["application", "settings"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "adaptive-sidebar", "fluid"],
+			"paths": {
+				"category": "/blocks/settings",
+				"preview": "/preview/settings/two"
+			}
+		},
+		{
+			"name": "settings-three",
+			"category": "settings",
+			"layout": ["sidebar", "form"],
+			"alignment": ["left"],
+			"useCases": ["application", "settings"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "adaptive-sidebar", "fluid"],
+			"paths": {
+				"category": "/blocks/settings",
+				"preview": "/preview/settings/three"
+			}
+		},
+		{
+			"name": "settings-four",
+			"category": "settings",
+			"layout": ["form", "stacked"],
+			"alignment": ["left"],
+			"useCases": ["application", "settings"],
+			"visualTraits": ["minimal", "bordered"],
+			"responsive": ["mobile-stack", "fluid"],
+			"paths": {
+				"category": "/blocks/settings",
+				"preview": "/preview/settings/four"
+			}
+		},
+		{
+			"name": "settings-five",
+			"category": "settings",
+			"layout": ["grid", "form"],
+			"alignment": ["left"],
+			"useCases": ["application", "settings"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/settings",
+				"preview": "/preview/settings/five"
+			}
+		},
+		{
+			"name": "app-shell-one",
+			"category": "app-shell",
+			"layout": ["sidebar", "dashboard"],
+			"alignment": ["left"],
+			"useCases": ["application", "navigation"],
+			"visualTraits": ["minimal", "bordered", "compact"],
+			"responsive": ["mobile-menu", "adaptive-sidebar", "fluid"],
+			"paths": {
+				"category": "/blocks/app-shell",
+				"preview": "/preview/app-shell/one"
+			}
+		},
+		{
+			"name": "app-shell-two",
+			"category": "app-shell",
+			"layout": ["sidebar", "dashboard"],
+			"alignment": ["left"],
+			"useCases": ["application", "navigation"],
+			"visualTraits": ["bordered", "sticky", "compact"],
+			"responsive": ["mobile-menu", "adaptive-sidebar", "fluid"],
+			"paths": {
+				"category": "/blocks/app-shell",
+				"preview": "/preview/app-shell/two"
+			}
+		},
+		{
+			"name": "app-shell-three",
+			"category": "app-shell",
+			"layout": ["sidebar", "dashboard"],
+			"alignment": ["left"],
+			"useCases": ["application", "navigation"],
+			"visualTraits": ["bordered", "compact"],
+			"responsive": ["mobile-menu", "adaptive-sidebar", "fluid"],
+			"paths": {
+				"category": "/blocks/app-shell",
+				"preview": "/preview/app-shell/three"
+			}
+		},
+		{
+			"name": "app-shell-four",
+			"category": "app-shell",
+			"layout": ["sidebar", "dashboard"],
+			"alignment": ["left"],
+			"useCases": ["application", "navigation"],
+			"visualTraits": ["card", "bordered", "compact"],
+			"responsive": ["mobile-menu", "adaptive-sidebar", "fluid"],
+			"paths": {
+				"category": "/blocks/app-shell",
+				"preview": "/preview/app-shell/four"
+			}
+		},
+		{
+			"name": "app-shell-five",
+			"category": "app-shell",
+			"layout": ["sidebar", "dashboard"],
+			"alignment": ["left"],
+			"useCases": ["application", "navigation"],
+			"visualTraits": ["bordered", "compact"],
+			"responsive": ["mobile-menu", "adaptive-sidebar", "fluid"],
+			"paths": {
+				"category": "/blocks/app-shell",
+				"preview": "/preview/app-shell/five"
+			}
+		},
+		{
+			"name": "pricing-one",
+			"category": "pricing",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["pricing", "conversion"],
+			"visualTraits": ["card", "bordered", "decorative"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/pricing",
+				"preview": "/preview/pricing/one"
+			}
+		},
+		{
+			"name": "pricing-two",
+			"category": "pricing",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["pricing", "conversion"],
+			"visualTraits": ["editorial", "bordered", "full-width"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/pricing",
+				"preview": "/preview/pricing/two"
+			}
+		},
+		{
+			"name": "pricing-three",
+			"category": "pricing",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["pricing", "conversion"],
+			"visualTraits": ["card", "bordered"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/pricing",
+				"preview": "/preview/pricing/three"
+			}
+		},
+		{
+			"name": "pricing-four",
+			"category": "pricing",
+			"layout": ["grid"],
+			"alignment": ["center"],
+			"useCases": ["pricing", "conversion"],
+			"visualTraits": ["card", "animated"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/pricing",
+				"preview": "/preview/pricing/four"
+			}
+		},
+		{
+			"name": "team-one",
+			"category": "team",
+			"layout": ["grid"],
+			"alignment": ["center"],
+			"useCases": ["content", "marketing"],
+			"visualTraits": ["image-led", "compact"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/team",
+				"preview": "/preview/team/one"
+			}
+		},
+		{
+			"name": "team-two",
+			"category": "team",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["content", "marketing"],
+			"visualTraits": ["bordered", "compact"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/team",
+				"preview": "/preview/team/two"
+			}
+		},
+		{
+			"name": "team-three",
+			"category": "team",
+			"layout": ["grid"],
+			"alignment": ["center"],
+			"useCases": ["content", "marketing"],
+			"visualTraits": ["image-led", "card"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/team",
+				"preview": "/preview/team/three"
+			}
+		},
+		{
+			"name": "testimonial-one",
+			"category": "testimonials",
+			"layout": ["centered", "stacked"],
+			"alignment": ["center"],
+			"useCases": ["social-proof", "marketing"],
+			"visualTraits": ["minimal", "editorial"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/testimonials",
+				"preview": "/preview/testimonials/one"
+			}
+		},
+		{
+			"name": "testimonial-two",
+			"category": "testimonials",
+			"layout": ["split"],
+			"alignment": ["mixed"],
+			"useCases": ["social-proof", "marketing"],
+			"visualTraits": ["bordered", "editorial", "image-led"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/testimonials",
+				"preview": "/preview/testimonials/two"
+			}
+		},
+		{
+			"name": "testimonial-three",
+			"category": "testimonials",
+			"layout": ["grid"],
+			"alignment": ["left"],
+			"useCases": ["social-proof", "marketing"],
+			"visualTraits": ["card", "decorative"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/testimonials",
+				"preview": "/preview/testimonials/three"
+			}
+		},
+		{
+			"name": "testimonial-four",
+			"category": "testimonials",
+			"layout": ["split", "grid"],
+			"alignment": ["left"],
+			"useCases": ["social-proof", "marketing"],
+			"visualTraits": ["card", "editorial", "bordered"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/testimonials",
+				"preview": "/preview/testimonials/four"
+			}
+		},
+		{
+			"name": "testimonial-five",
+			"category": "testimonials",
+			"layout": ["grid", "masonry"],
+			"alignment": ["left"],
+			"useCases": ["social-proof", "marketing"],
+			"visualTraits": ["card", "decorative", "compact"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/testimonials",
+				"preview": "/preview/testimonials/five"
+			}
+		},
+		{
+			"name": "image-gallery-one",
+			"category": "image-gallery",
+			"layout": ["masonry", "grid"],
+			"alignment": ["mixed"],
+			"useCases": ["portfolio", "content"],
+			"visualTraits": ["image-led", "editorial"],
+			"responsive": ["mobile-stack", "responsive-grid", "fluid"],
+			"paths": {
+				"category": "/blocks/image-gallery",
+				"preview": "/preview/image-gallery/one"
+			}
+		}
+	]
+}

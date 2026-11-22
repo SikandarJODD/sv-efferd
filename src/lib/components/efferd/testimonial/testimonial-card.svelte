@@ -2,7 +2,7 @@
 	import { Avatar, AvatarFallback, AvatarImage } from "#lib/components/ui/avatar/index.js";
 	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
 	import { cn } from "#lib/utils.js";
-	import { QuoteIcon } from "@lucide/svelte";
+	import QuoteIcon from "@lucide/svelte/icons/quote";
 	import type { HTMLAttributes } from "svelte/elements";
 
 	type Testimonial = {

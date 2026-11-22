@@ -6,14 +6,12 @@
 		AccordionTrigger
 	} from "#lib/components/ui/accordion/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
-	import {
-		CreditCardIcon,
-		FeatherIcon,
-		LayoutGridIcon,
-		LifeBuoyIcon,
-		PowerIcon,
-		type LucideIcon
-	} from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
+	import CreditCardIcon from "@lucide/svelte/icons/credit-card";
+	import FeatherIcon from "@lucide/svelte/icons/feather";
+	import LayoutGridIcon from "@lucide/svelte/icons/layout-grid";
+	import LifeBuoyIcon from "@lucide/svelte/icons/life-buoy";
+	import PowerIcon from "@lucide/svelte/icons/power";
 
 	type CategoryId = "all" | "getting-started" | "features" | "billing" | "support";
 
@@ -133,7 +131,7 @@
 	let currentCategory = $derived(categories.find((category) => category.id === activeCategory));
 </script>
 
-<section class="mx-auto min-h-screen w-full max-w-5xl">
+<section class="mx-auto min-h-svh w-full max-w-5xl">
 	<div class="flex flex-col items-center justify-center gap-4 px-4 py-16">
 		<h2 class="font-mono text-4xl font-black text-balance md:text-5xl lg:font-black">FaQs</h2>
 		<p class="text-muted-foreground">Your questions answered here.</p>

@@ -5,126 +5,126 @@
 		navMain: [
 			{
 				title: "Getting Started",
-				url: "/sidebar-01",
+				url: "#",
 				items: [
 					{
 						title: "Installation",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Project Structure",
-						url: "/sidebar-01"
+						url: "#"
 					}
 				]
 			},
 			{
 				title: "Build Your Application",
-				url: "/sidebar-01",
+				url: "#",
 				items: [
 					{
 						title: "Routing",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Data Fetching",
-						url: "/sidebar-01",
+						url: "#",
 						isActive: true
 					},
 					{
 						title: "Rendering",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Caching",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Styling",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Optimizing",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Configuring",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Testing",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Authentication",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Deploying",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Upgrading",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Examples",
-						url: "/sidebar-01"
+						url: "#"
 					}
 				]
 			},
 			{
 				title: "API Reference",
-				url: "/sidebar-01",
+				url: "#",
 				items: [
 					{
 						title: "Components",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "File Conventions",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Functions",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "next.config.js Options",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "CLI",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Edge Runtime",
-						url: "/sidebar-01"
+						url: "#"
 					}
 				]
 			},
 			{
 				title: "Architecture",
-				url: "/sidebar-01",
+				url: "#",
 				items: [
 					{
 						title: "Accessibility",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Fast Refresh",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Svelte Compiler",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Supported Browsers",
-						url: "/sidebar-01"
+						url: "#"
 					},
 					{
 						title: "Rollup",
-						url: "/sidebar-01"
+						url: "#"
 					}
 				]
 			}
@@ -133,9 +133,9 @@
 </script>
 
 <script lang="ts">
+	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
 	import SearchForm from "./search-form.svelte";
 	import VersionSwitcher from "./version-switcher.svelte";
-	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
 	import type { ComponentProps } from "svelte";
 
 	let { ref = $bindable(null), ...restProps }: ComponentProps<typeof Sidebar.Root> = $props();

@@ -2,10 +2,11 @@
 	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
 	import * as Empty from "#lib/components/ui/empty/index.js";
 	import { Button } from "#lib/components/ui/button/index.js";
-	import { CompassIcon, HomeIcon } from "@lucide/svelte";
+	import CompassIcon from "@lucide/svelte/icons/compass";
+	import HomeIcon from "@lucide/svelte/icons/home";
 </script>
 
-<div class="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
+<div class="relative flex min-h-svh w-full items-center justify-center overflow-hidden">
 	<Empty.Root>
 		<Empty.Header>
 			<Empty.Title class="mask-b-from-20% mask-b-to-80% text-9xl font-extrabold"

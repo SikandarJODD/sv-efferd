@@ -1,0 +1,46 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "settings-one",
+	"title": "Settings One",
+	"type": "registry:block",
+	"description": "A settings form for profile details and email preferences. It includes an avatar picker and save action.",
+	"registryDependencies": [
+		"avatar",
+		"button",
+		"field",
+		"input",
+		"switch"
+	],
+	"files": [
+		{
+			"content": "export { default as Settings } from \"./settings.svelte\";\n",
+			"type": "registry:file",
+			"target": "efferd/settings/settings-one/index.ts"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport { Button } from \"#lib/components/ui/button/index.js\";\n\timport NotificationSettings from \"./notification-settings.svelte\";\n\timport ProfileSettings from \"./profile-settings.svelte\";\n</script>\n\n<div class=\"flex flex-1 flex-col gap-6\">\n\t<ProfileSettings />\n\t<NotificationSettings />\n\t<div class=\"flex justify-end\">\n\t\t<Button type=\"button\">Save changes</Button>\n\t</div>\n</div>\n",
+			"type": "registry:component",
+			"target": "efferd/settings/settings-one/settings.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport { Avatar, AvatarFallback, AvatarImage } from \"#lib/components/ui/avatar/index.js\";\n\timport { FieldSeparator } from \"#lib/components/ui/field/index.js\";\n\timport { Input } from \"#lib/components/ui/input/index.js\";\n\timport SettingField from \"./setting-field.svelte\";\n\timport SettingsSection from \"./settings-section.svelte\";\n\n\tconst defaultSrc = \"https://github.com/SikandarJODD.png\";\n\tlet avatarSrc = $state(defaultSrc);\n\n\t$effect(() => {\n\t\tif (!avatarSrc.startsWith(\"blob:\")) return;\n\t\tconst objectUrl = avatarSrc;\n\n\t\treturn () => URL.revokeObjectURL(objectUrl);\n\t});\n\n\tfunction updateAvatar(event: Event) {\n\t\tconst input = event.currentTarget as HTMLInputElement;\n\t\tconst file = input.files?.[0];\n\n\t\tif (file) avatarSrc = URL.createObjectURL(file);\n\t}\n</script>\n\n<SettingsSection description=\"How you appear to teammates.\" title=\"Profile\">\n\t<SettingField\n\t\tdescription=\"Used in comments, invoices, and the sidebar.\"\n\t\thtmlFor=\"avatar\"\n\t\tlabel=\"Avatar\"\n\t>\n\t\t<div class=\"flex flex-1 items-center justify-center\">\n\t\t\t<label\n\t\t\t\tclass=\"group/avatar relative inline-flex cursor-pointer rounded-full outline-none focus-within:ring-3 focus-within:ring-ring/50\"\n\t\t\t>\n\t\t\t\t<input\n\t\t\t\t\taccept=\"image/*\"\n\t\t\t\t\taria-label=\"Change photo\"\n\t\t\t\t\tclass=\"sr-only\"\n\t\t\t\t\tid=\"avatar\"\n\t\t\t\t\tonchange={updateAvatar}\n\t\t\t\t\ttype=\"file\"\n\t\t\t\t/>\n\t\t\t\t<Avatar class=\"size-12 hover:opacity-50\">\n\t\t\t\t\t<AvatarImage alt=\"\" src={avatarSrc} />\n\t\t\t\t\t<AvatarFallback>SH</AvatarFallback>\n\t\t\t\t</Avatar>\n\t\t\t</label>\n\t\t</div>\n\t</SettingField>\n\t<FieldSeparator />\n\t<SettingField\n\t\tdescription=\"Used in comments, invoices, and the sidebar.\"\n\t\thtmlFor=\"display-name\"\n\t\tlabel=\"Display name\"\n\t>\n\t\t<Input autocomplete=\"name\" id=\"display-name\" value=\"Bhide Svelte\" />\n\t</SettingField>\n\t<FieldSeparator />\n\t<SettingField description=\"Sign-in and billing receipts go here.\" htmlFor=\"email\" label=\"Email\">\n\t\t<Input autocomplete=\"email\" id=\"email\" type=\"email\" value=\"email@example.com\" />\n\t</SettingField>\n</SettingsSection>\n",
+			"type": "registry:component",
+			"target": "efferd/settings/settings-one/profile-settings.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport { FieldSeparator } from \"#lib/components/ui/field/index.js\";\n\timport { Switch } from \"#lib/components/ui/switch/index.js\";\n\timport SettingField from \"./setting-field.svelte\";\n\timport SettingsSection from \"./settings-section.svelte\";\n</script>\n\n<SettingsSection\n\tclass=\"*:data-[slot=field-group]:gap-4\"\n\tdescription=\"Choose what we email you.\"\n\ttitle=\"Notifications\"\n>\n\t<SettingField\n\t\tdescription=\"New features and release notes.\"\n\t\thtmlFor=\"product-updates\"\n\t\tlabel=\"Product updates\"\n\t>\n\t\t<div class=\"flex shrink-0\">\n\t\t\t<Switch checked id=\"product-updates\" />\n\t\t</div>\n\t</SettingField>\n\t<FieldSeparator />\n\t<SettingField\n\t\tdescription=\"A Monday summary of workspace activity.\"\n\t\thtmlFor=\"weekly-digest\"\n\t\tlabel=\"Weekly digest\"\n\t>\n\t\t<div class=\"flex shrink-0\">\n\t\t\t<Switch checked id=\"weekly-digest\" />\n\t\t</div>\n\t</SettingField>\n</SettingsSection>\n",
+			"type": "registry:component",
+			"target": "efferd/settings/settings-one/notification-settings.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport {\n\t\tFieldDescription,\n\t\tFieldGroup,\n\t\tFieldLegend,\n\t\tFieldSet\n\t} from \"#lib/components/ui/field/index.js\";\n\timport type { ComponentProps, Snippet } from \"svelte\";\n\n\ttype Props = ComponentProps<typeof FieldSet> & {\n\t\ttitle: string;\n\t\tdescription: string;\n\t\tchildren: Snippet;\n\t};\n\n\tlet { title, description, children, ...restProps }: Props = $props();\n</script>\n\n<FieldSet {...restProps}>\n\t<FieldLegend class=\"mb-1\">{title}</FieldLegend>\n\t<FieldDescription>{description}</FieldDescription>\n\t<FieldGroup class=\"rounded-lg border py-6\">\n\t\t{@render children()}\n\t</FieldGroup>\n</FieldSet>\n",
+			"type": "registry:component",
+			"target": "efferd/settings/settings-one/settings-section.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\n\timport {\n\t\tField,\n\t\tFieldContent,\n\t\tFieldDescription,\n\t\tFieldLabel\n\t} from \"#lib/components/ui/field/index.js\";\n\timport { cn } from \"#lib/utils.js\";\n\timport type { ComponentProps, Snippet } from \"svelte\";\n\n\ttype Props = ComponentProps<typeof Field> & {\n\t\tlabel: string;\n\t\tdescription?: string;\n\t\thtmlFor: string;\n\t\tchildren: Snippet;\n\t};\n\n\tlet { label, description, htmlFor, children, class: className, ...restProps }: Props = $props();\n</script>\n\n<Field\n\tclass={cn(\"px-4 @md/field-group:has-[>[data-slot=field-content]]:items-center\", className)}\n\torientation=\"responsive\"\n\t{...restProps}\n>\n\t<FieldContent>\n\t\t<FieldLabel for={htmlFor}>{label}</FieldLabel>\n\t\t{#if description}\n\t\t\t<FieldDescription>{description}</FieldDescription>\n\t\t{/if}\n\t</FieldContent>\n\t{@render children()}\n</Field>\n",
+			"type": "registry:component",
+			"target": "efferd/settings/settings-one/setting-field.svelte"
+		}
+	]
+}

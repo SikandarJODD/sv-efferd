@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { ArrowRight, PhoneCall } from "@lucide/svelte";
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
+	import PhoneCall from "@lucide/svelte/icons/phone-call";
 	import { Button } from "#lib/components/ui/button/index.js";
 </script>
 
@@ -12,7 +13,7 @@
 
 	<div class="relative z-10 flex max-w-2xl flex-col gap-5 px-4">
 		<a
-			class="group flex w-fit animate-in items-center gap-3 rounded-sm border bg-card p-1 shadow-xs transition-all delay-500 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in"
+			class="group flex w-fit animate-in items-center gap-3 rounded-sm border bg-card p-1 shadow-xs transition-colors delay-300 duration-300 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in motion-reduce:animate-none"
 			href="/"
 		>
 			<div class="rounded-xs border bg-card px-1.5 py-0.5 shadow-sm">
@@ -30,13 +31,13 @@
 		</a>
 
 		<h1
-			class="animate-in text-4xl leading-tight font-medium text-balance text-foreground delay-100 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in md:text-5xl"
+			class="animate-in text-4xl leading-tight font-medium text-balance text-foreground delay-100 duration-300 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in motion-reduce:animate-none md:text-5xl"
 		>
 			Building Digital Experiences That Drive Growth
 		</h1>
 
 		<p
-			class="animate-in text-sm tracking-wider text-muted-foreground delay-200 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in sm:text-lg md:text-xl"
+			class="animate-in text-sm tracking-wider text-muted-foreground delay-200 duration-300 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in motion-reduce:animate-none sm:text-lg md:text-xl"
 		>
 			We help brands scale faster through design, development
 			<br />
@@ -44,7 +45,7 @@
 		</p>
 
 		<div
-			class="flex w-fit animate-in items-center justify-center gap-3 pt-2 delay-300 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in"
+			class="flex w-fit animate-in items-center justify-center gap-3 pt-2 delay-300 duration-300 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in motion-reduce:animate-none"
 		>
 			<Button href="/" variant="outline">
 				<PhoneCall class="size-4" />
@@ -62,7 +63,7 @@
 			class="absolute -inset-x-20 inset-y-0 -translate-y-1/3 scale-120 rounded-full bg-[radial-gradient(ellipse_at_center,color-mix(in_oklab,var(--foreground)_10%,transparent),transparent,transparent)] blur-[50px]"
 		></div>
 		<div
-			class="relative mt-8 -mr-56 animate-in overflow-hidden [mask-image:linear-gradient(to_bottom,black_0%,black_60%,transparent_100%)] px-2 delay-100 duration-1000 ease-out fill-mode-backwards slide-in-from-bottom-5 fade-in sm:mt-12 sm:mr-0 md:mt-20"
+			class="relative mt-8 -mr-56 animate-in overflow-hidden [mask-image:linear-gradient(to_bottom,black_0%,black_60%,transparent_100%)] px-2 delay-100 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-5 fade-in motion-reduce:animate-none sm:mt-12 sm:mr-0 md:mt-20"
 		>
 			<div
 				class="relative mx-auto max-w-5xl overflow-hidden rounded-lg border bg-background p-2 shadow-xl ring-1 inset-shadow-2xs ring-card inset-shadow-foreground/10 dark:inset-shadow-xs dark:inset-shadow-foreground/20"

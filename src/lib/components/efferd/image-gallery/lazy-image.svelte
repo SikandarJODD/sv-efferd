@@ -116,7 +116,7 @@
 			bind:this={imageRef}
 			{alt}
 			class={cn(
-				"size-full object-cover transition-opacity duration-500",
+				"size-full object-cover transition-opacity duration-200 motion-reduce:transition-none",
 				isLoading ? "opacity-0" : "opacity-100",
 				className
 			)}

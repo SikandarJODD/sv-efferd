@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ArrowRightIcon } from "@lucide/svelte";
+	import ArrowRightIcon from "@lucide/svelte/icons/arrow-right";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { DecorIcon } from "#lib/components/ui/decor-icon/index.js";
 </script>

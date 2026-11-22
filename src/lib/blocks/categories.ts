@@ -1,28 +1,19 @@
+import categoryData from "../../../content/categories.json";
+
 export type BlockCategory = {
 	slug: string;
 	label: string;
+	description: string;
 	badge?: BlockCategoryBadge;
 };
 
 export type BlockCategoryBadge = "new" | "beta";
 
-export const blockCategories = [
-	{ slug: "hero", label: "Hero" },
-	{ slug: "header", label: "Header" },
-	{ slug: "logo-cloud", label: "Logo Cloud" },
-	{ slug: "features", label: "Features" },
-	{ slug: "integrations", label: "Integrations" },
-	{ slug: "testimonials", label: "Testimonials" },
-	{ slug: "cta", label: "CTA" },
-	{ slug: "pricing", label: "Pricing" },
-	{ slug: "blog", label: "Blog" },
-	{ slug: "auth", label: "Auth" },
-	{ slug: "app-shell", label: "App Shell", badge: "new" },
-	{ slug: "faqs", label: "FAQ's" },
-	{ slug: "contact", label: "Contact" },
-	{ slug: "footer", label: "Footer" },
-	{ slug: "image-gallery", label: "Image Gallery" },
-	{ slug: "not-found", label: "Not Found" }
-] as const satisfies readonly BlockCategory[];
+export type BlockCategorySlug = keyof typeof categoryData;
 
-export type BlockCategorySlug = (typeof blockCategories)[number]["slug"];
+export const blockCategories = Object.entries(categoryData).map(([slug, category]) => ({
+	slug: slug as BlockCategorySlug,
+	label: category.label,
+	description: category.description,
+	...("badge" in category ? { badge: category.badge as BlockCategoryBadge } : {})
+})) satisfies BlockCategory[];

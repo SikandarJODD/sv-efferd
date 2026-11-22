@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { FullWidthDivider } from "#lib/components/ui/full-width-divider/index.js";
-	import GithubLogo from "#lib/svgs/github.svelte";
-	import XLogo from "#lib/svgs/x.svelte";
+	import GithubLogo from "#lib/components/svgs/github.svelte";
+	import XLogo from "#lib/components/svgs/x.svelte";
 	import { cn } from "#lib/utils.js";
-	import { Mail, MapPin, Phone, type LucideIcon } from "@lucide/svelte";
+	import type { LucideIcon } from "@lucide/svelte";
+	import Mail from "@lucide/svelte/icons/mail";
+	import MapPin from "@lucide/svelte/icons/map-pin";
+	import Phone from "@lucide/svelte/icons/phone";
 	import type { Component } from "svelte";
 
 	const APP_EMAIL = "mail@example.com";
@@ -84,7 +87,7 @@
 	];
 </script>
 
-<div class="relative mx-auto min-h-screen max-w-5xl overflow-x-clip border-x">
+<div class="relative mx-auto min-h-svh max-w-5xl overflow-x-clip border-x">
 	<div class="flex grow flex-col justify-center px-4 py-18 md:items-center">
 		<h1 class="text-4xl font-bold md:text-5xl">Contact Us</h1>
 		<p class="mb-5 text-base text-muted-foreground">Contact the support team at efferd.</p>

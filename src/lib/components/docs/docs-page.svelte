@@ -1,58 +1,42 @@
 <script lang="ts">
 	import { cn } from "#lib/utils.js";
 	import type { Snippet } from "svelte";
-	import H1 from "#lib/components/markdown/H1.svelte";
-	import Paragraph from "#lib/components/markdown/Paragraph.svelte";
-	import Seo from "#lib/components/base/Seo.svelte";
-	import { page } from "$app/state";
+	import type { HTMLAttributes } from "svelte/elements";
 
-	type DocsPageProps = {
-		title: string;
-		description: string;
-		seoTitle?: string;
-		seoDescription?: string;
-		class?: string;
-		actions?: Snippet;
-		children?: Snippet;
+	type Props = HTMLAttributes<HTMLElement> & {
+		header?: Snippet;
+		children: Snippet;
+		footer?: Snippet;
+		contentClass?: string;
 	};
 
 	let {
-		title,
-		description,
-		seoTitle,
-		seoDescription,
-		class: className = "",
-		actions,
-		children
-	}: DocsPageProps = $props();
-	let resolvedSeoTitle = $derived(
-		seoTitle ?? (title === "Introduction" ? "Svelte Blocks Documentation" : title)
-	);
+		header,
+		children,
+		footer,
+		class: className,
+		contentClass,
+		...restProps
+	}: Props = $props();
 </script>
 
-<Seo title={resolvedSeoTitle} desc={seoDescription ?? description} link={page.url.pathname} />
+<div
+	class={cn("mx-auto w-full max-w-4xl px-4 py-10 sm:px-6 sm:py-14 lg:py-16", className)}
+	{...restProps}
+>
+	{#if header}
+		<header class="mb-10">
+			{@render header()}
+		</header>
+	{/if}
 
-<section class={cn("mx-auto w-full max-w-4xl pb-16 sm:pb-0", className)}>
-	<div class="overflow-hidden border-x border-border/80">
-		<div class="border-b border-border/80 px-5 py-10 sm:px-8 sm:py-12 md:px-12">
-			<div class="mx-auto max-w-3xl">
-				<H1>{title}</H1>
-				<Paragraph class="max-w-2xl text-base leading-7 sm:text-base"
-					>{description}</Paragraph
-				>
-
-				{#if actions}
-					<div class="mt-5 flex flex-wrap gap-2">
-						{@render actions()}
-					</div>
-				{/if}
-			</div>
-		</div>
-
-		<div class="px-5 py-8 sm:px-8 sm:pt-10 md:px-12">
-			<div class="mx-auto max-w-3xl">
-				{@render children?.()}
-			</div>
-		</div>
+	<div class={cn("min-w-0", contentClass)}>
+		{@render children()}
 	</div>
-</section>
+
+	{#if footer}
+		<footer class="mt-12 sm:mt-14">
+			{@render footer()}
+		</footer>
+	{/if}
+</div>

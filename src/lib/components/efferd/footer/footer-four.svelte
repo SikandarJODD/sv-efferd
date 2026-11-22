@@ -1,7 +1,7 @@
 <script lang="ts">
-	import LinkGroup from "#lib/components/efferd/footer/LinkGroup.svelte";
+	import LinkGroup from "#lib/components/efferd/footer/link-group.svelte";
 	import { cn } from "#lib/utils.js";
-	import { ArrowRightIcon } from "@lucide/svelte";
+	import ArrowRightIcon from "@lucide/svelte/icons/arrow-right";
 
 	type LinkItem = {
 		title: string;

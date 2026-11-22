@@ -33,7 +33,7 @@
 	);
 </script>
 
-<section class="relative flex min-h-screen w-full flex-col items-center justify-center px-4 py-10">
+<section class="relative flex min-h-svh w-full flex-col items-center justify-center px-4 py-10">
 	<div
 		class="mx-auto grid w-full max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 md:gap-6"
 	>

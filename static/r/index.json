@@ -678,6 +678,7 @@
 		],
 		"registryDependencies": [
 			"button",
+			"sheet",
 			"local:logo-cloud-three",
 			"local:portal"
 		],
@@ -789,8 +790,239 @@
 		"relativeUrl": "header-five.json"
 	},
 	{
-		"name": "app-shell-2",
-		"title": "App Shell 2",
+		"name": "dashboard-one",
+		"title": "Dashboard One",
+		"type": "registry:block",
+		"description": "A responsive analytics dashboard with KPI summaries, an interactive stacked sales chart, and a recent invoices table.",
+		"dependencies": [
+			"@lucide/svelte",
+			"d3-scale",
+			"d3-shape",
+			"layerchart"
+		],
+		"devDependencies": [
+			"@types/d3-scale",
+			"@types/d3-shape"
+		],
+		"registryDependencies": [
+			"badge",
+			"card",
+			"chart",
+			"select",
+			"table"
+		],
+		"relativeUrl": "dashboard-one.json"
+	},
+	{
+		"name": "dashboard-two",
+		"title": "Dashboard Two",
+		"type": "registry:block",
+		"description": "A responsive business dashboard with KPI summaries, revenue and channel charts, invoices, billing health, and recent activity.",
+		"dependencies": [
+			"@lucide/svelte",
+			"d3-scale",
+			"d3-shape",
+			"layerchart"
+		],
+		"devDependencies": [
+			"@types/d3-scale",
+			"@types/d3-shape"
+		],
+		"registryDependencies": [
+			"badge",
+			"button",
+			"card",
+			"chart",
+			"empty",
+			"table"
+		],
+		"relativeUrl": "dashboard-two.json"
+	},
+	{
+		"name": "dashboard-three",
+		"title": "Dashboard Three",
+		"type": "registry:block",
+		"description": "A responsive support dashboard with queue metrics, conversation charts, team availability, inbox activity, and CSAT reporting.",
+		"dependencies": [
+			"@lucide/svelte",
+			"d3-scale",
+			"d3-shape",
+			"layerchart"
+		],
+		"devDependencies": [
+			"@types/d3-scale",
+			"@types/d3-shape"
+		],
+		"registryDependencies": [
+			"avatar",
+			"badge",
+			"button",
+			"card",
+			"chart",
+			"dropdown-menu",
+			"select",
+			"table"
+		],
+		"relativeUrl": "dashboard-three.json"
+	},
+	{
+		"name": "dashboard-four",
+		"title": "Dashboard Four",
+		"type": "registry:block",
+		"description": "A responsive commerce dashboard with revenue metrics, sales trends, return rates, category performance, and store-management shortcuts.",
+		"dependencies": [
+			"@lucide/svelte",
+			"d3-scale",
+			"d3-shape",
+			"layerchart"
+		],
+		"devDependencies": [
+			"@types/d3-scale",
+			"@types/d3-shape"
+		],
+		"registryDependencies": [
+			"button",
+			"card",
+			"chart",
+			"item",
+			"select"
+		],
+		"relativeUrl": "dashboard-four.json"
+	},
+	{
+		"name": "dashboard-five",
+		"title": "Dashboard Five",
+		"type": "registry:block",
+		"description": "A responsive web analytics dashboard with visitor trends, audience insights, acquisition data, top content, and Core Web Vitals.",
+		"dependencies": [
+			"@lucide/svelte",
+			"d3-shape",
+			"layerchart"
+		],
+		"devDependencies": [
+			"@types/d3-shape"
+		],
+		"registryDependencies": [
+			"badge",
+			"button",
+			"card",
+			"chart",
+			"table",
+			"tooltip"
+		],
+		"relativeUrl": "dashboard-five.json"
+	},
+	{
+		"name": "settings-one",
+		"title": "Settings One",
+		"type": "registry:block",
+		"description": "A settings form for profile details and email preferences. It includes an avatar picker and save action.",
+		"registryDependencies": [
+			"avatar",
+			"button",
+			"field",
+			"input",
+			"switch"
+		],
+		"relativeUrl": "settings-one.json"
+	},
+	{
+		"name": "settings-two",
+		"title": "Settings Two",
+		"type": "registry:block",
+		"description": "A comprehensive account settings dashboard for profile, appearance, notifications, security, and destructive actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar",
+			"button",
+			"card",
+			"field",
+			"input-group",
+			"select",
+			"switch",
+			"toggle-group"
+		],
+		"relativeUrl": "settings-two.json"
+	},
+	{
+		"name": "settings-three",
+		"title": "Settings Three",
+		"type": "registry:block",
+		"description": "An agent settings dashboard for profile, availability, notifications, and destructive account actions.",
+		"registryDependencies": [
+			"alert-dialog",
+			"avatar",
+			"badge",
+			"button",
+			"card",
+			"checkbox",
+			"field",
+			"input",
+			"switch",
+			"toggle-group"
+		],
+		"relativeUrl": "settings-three.json"
+	},
+	{
+		"name": "settings-four",
+		"title": "Settings Four",
+		"type": "registry:block",
+		"description": "A stacked account settings form for name, email, avatar, user ID, and account deletion.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar",
+			"button",
+			"card",
+			"field",
+			"input-group"
+		],
+		"relativeUrl": "settings-four.json"
+	},
+	{
+		"name": "settings-five",
+		"title": "Settings Five",
+		"type": "registry:block",
+		"description": "An account overview for profile, security, localization, and destructive account actions.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"alert-dialog",
+			"avatar",
+			"badge",
+			"button",
+			"card",
+			"label",
+			"select"
+		],
+		"relativeUrl": "settings-five.json"
+	},
+	{
+		"name": "app-shell-one",
+		"title": "App Shell One",
+		"type": "registry:block",
+		"description": "A focused dashboard shell with an off-canvas sidebar, compact utility header, and responsive content area.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar",
+			"breadcrumb",
+			"button",
+			"dropdown-menu",
+			"local:full-width-divider",
+			"separator",
+			"sidebar"
+		],
+		"relativeUrl": "app-shell-one.json"
+	},
+	{
+		"name": "app-shell-two",
+		"title": "App Shell Two",
 		"type": "registry:block",
 		"description": "A compact dashboard shell with a collapsible sidebar, sticky header, and structured content skeleton.",
 		"dependencies": [
@@ -808,7 +1040,71 @@
 			"sidebar",
 			"tooltip"
 		],
-		"relativeUrl": "app-shell-2.json"
+		"relativeUrl": "app-shell-two.json"
+	},
+	{
+		"name": "app-shell-three",
+		"title": "App Shell Three",
+		"type": "registry:block",
+		"description": "A customer-support workspace with nested navigation, quick actions, account controls, and an inset content area.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar",
+			"breadcrumb",
+			"button",
+			"collapsible",
+			"dropdown-menu",
+			"kbd",
+			"separator",
+			"sidebar",
+			"tooltip"
+		],
+		"relativeUrl": "app-shell-three.json"
+	},
+	{
+		"name": "app-shell-four",
+		"title": "App Shell Four",
+		"type": "registry:block",
+		"description": "An ecommerce dashboard shell with grouped navigation, nested store links, account controls, and a floating collapsible sidebar.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"avatar",
+			"breadcrumb",
+			"button",
+			"collapsible",
+			"dropdown-menu",
+			"kbd",
+			"separator",
+			"sidebar",
+			"tooltip"
+		],
+		"relativeUrl": "app-shell-four.json"
+	},
+	{
+		"name": "app-shell-five",
+		"title": "App Shell Five",
+		"type": "registry:block",
+		"description": "An analytics workspace with searchable navigation, an off-canvas sidebar, responsive controls, and built-in theme switching.",
+		"dependencies": [
+			"@lucide/svelte",
+			"mode-watcher",
+			"runed"
+		],
+		"registryDependencies": [
+			"avatar",
+			"breadcrumb",
+			"button",
+			"dropdown-menu",
+			"input-group",
+			"kbd",
+			"separator",
+			"sidebar"
+		],
+		"relativeUrl": "app-shell-five.json"
 	},
 	{
 		"name": "pricing-one",
@@ -865,6 +1161,41 @@
 			"button"
 		],
 		"relativeUrl": "pricing-four.json"
+	},
+	{
+		"name": "team-one",
+		"title": "Team One",
+		"type": "registry:block",
+		"description": "A compact team grid with grayscale portraits and a hiring call to action.",
+		"registryDependencies": [
+			"avatar",
+			"button"
+		],
+		"relativeUrl": "team-one.json"
+	},
+	{
+		"name": "team-two",
+		"title": "Team Two",
+		"type": "registry:block",
+		"description": "A bordered team directory with compact profiles and social links.",
+		"registryDependencies": [
+			"avatar",
+			"button",
+			"local:full-width-divider"
+		],
+		"relativeUrl": "team-two.json"
+	},
+	{
+		"name": "team-three",
+		"title": "Team Three",
+		"type": "registry:block",
+		"description": "A portrait-led team grid with roles, social links, and a hiring call to action.",
+		"registryDependencies": [
+			"avatar",
+			"button",
+			"local:full-width-divider"
+		],
+		"relativeUrl": "team-three.json"
 	},
 	{
 		"name": "testimonial-one",

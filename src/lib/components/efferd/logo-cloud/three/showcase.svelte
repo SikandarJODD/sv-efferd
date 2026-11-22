@@ -2,7 +2,7 @@
 	import LogoCloudThree from "./logo-cloud-three.svelte";
 </script>
 
-<div class="min-h-screen w-full place-content-center">
+<div class="min-h-svh w-full place-content-center">
 	<section class="relative mx-auto max-w-3xl">
 		<h2 class="mb-5 text-center text-xl font-medium tracking-tight text-foreground md:text-3xl">
 			<span class="text-muted-foreground">Trusted by experts.</span>

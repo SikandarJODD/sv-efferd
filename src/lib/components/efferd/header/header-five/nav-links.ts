@@ -1,19 +1,17 @@
-import {
-	FileTextIcon,
-	GlobeIcon,
-	LayersIcon,
-	PlugIcon,
-	ShieldIcon,
-	UserPlusIcon,
-	UsersIcon,
-	StarIcon,
-	HandshakeIcon,
-	CodeIcon,
-	RotateCcwIcon,
-	LeafIcon,
-	HandHelpingIcon,
-	ChartArea
-} from "@lucide/svelte";
+import FileTextIcon from "@lucide/svelte/icons/file-text";
+import GlobeIcon from "@lucide/svelte/icons/globe";
+import LayersIcon from "@lucide/svelte/icons/layers";
+import PlugIcon from "@lucide/svelte/icons/plug";
+import ShieldIcon from "@lucide/svelte/icons/shield";
+import UserPlusIcon from "@lucide/svelte/icons/user-plus";
+import UsersIcon from "@lucide/svelte/icons/users";
+import StarIcon from "@lucide/svelte/icons/star";
+import HandshakeIcon from "@lucide/svelte/icons/handshake";
+import CodeIcon from "@lucide/svelte/icons/code";
+import RotateCcwIcon from "@lucide/svelte/icons/rotate-ccw";
+import LeafIcon from "@lucide/svelte/icons/leaf";
+import HandHelpingIcon from "@lucide/svelte/icons/hand-helping";
+import ChartArea from "@lucide/svelte/icons/chart-area";
 
 import type { LinkItemType } from "./types";
 

@@ -340,6 +340,11 @@
 					"path": "src/lib/components/efferd/logo-cloud/logo-cloud-one.svelte",
 					"type": "registry:component",
 					"target": "efferd/logo-cloud/logo-cloud-one.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/logo-cloud/wordmark-logos.ts",
+					"type": "registry:file",
+					"target": "efferd/logo-cloud/wordmark-logos.ts"
 				}
 			],
 			"registryDependencies": []
@@ -359,6 +364,11 @@
 					"path": "src/lib/components/efferd/logo-cloud/two/logo-card.svelte",
 					"type": "registry:component",
 					"target": "efferd/logo-cloud/two/logo-card.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/logo-cloud/wordmark-logos.ts",
+					"type": "registry:file",
+					"target": "efferd/logo-cloud/wordmark-logos.ts"
 				}
 			],
 			"registryDependencies": ["local:decor-icon"]
@@ -373,6 +383,11 @@
 					"path": "src/lib/components/efferd/logo-cloud/three/logo-cloud-three.svelte",
 					"type": "registry:component",
 					"target": "efferd/logo-cloud/three/logo-cloud-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/logo-cloud/wordmark-logos.ts",
+					"type": "registry:file",
+					"target": "efferd/logo-cloud/wordmark-logos.ts"
 				}
 			],
 			"registryDependencies": ["local:marquee"]
@@ -387,6 +402,11 @@
 					"path": "src/lib/components/efferd/logo-cloud/four/logo-cloud-four.svelte",
 					"type": "registry:component",
 					"target": "efferd/logo-cloud/four/logo-cloud-four.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/logo-cloud/wordmark-logos.ts",
+					"type": "registry:file",
+					"target": "efferd/logo-cloud/wordmark-logos.ts"
 				}
 			],
 			"registryDependencies": ["local:marquee", "local:progressive-blur"]
@@ -401,6 +421,11 @@
 					"path": "src/lib/components/efferd/logo-cloud/five/logo-cloud-five.svelte",
 					"type": "registry:component",
 					"target": "efferd/logo-cloud/five/logo-cloud-five.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/logo-cloud/wordmark-logos.ts",
+					"type": "registry:file",
+					"target": "efferd/logo-cloud/wordmark-logos.ts"
 				}
 			],
 			"registryDependencies": []
@@ -432,8 +457,8 @@
 					"target": "efferd/contact/contact-two.svelte"
 				},
 				{
-					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/x.svelte",
+					"type": "registry:component",
 					"target": "svgs/x.svelte"
 				}
 			],
@@ -452,13 +477,13 @@
 					"target": "efferd/contact/contact-three.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				},
 				{
-					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/x.svelte",
+					"type": "registry:component",
 					"target": "svgs/x.svelte"
 				}
 			],
@@ -569,18 +594,18 @@
 					"target": "efferd/auth/auth-one.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				},
 				{
-					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/google.svelte",
+					"type": "registry:component",
 					"target": "svgs/google.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				}
 			],
@@ -599,13 +624,13 @@
 					"target": "efferd/auth/auth-two.svelte"
 				},
 				{
-					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/google.svelte",
+					"type": "registry:component",
 					"target": "svgs/google.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				}
 			],
@@ -629,18 +654,18 @@
 					"target": "efferd/auth/auth-three.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				},
 				{
-					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/google.svelte",
+					"type": "registry:component",
 					"target": "svgs/google.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				}
 			],
@@ -659,13 +684,13 @@
 					"target": "efferd/auth/auth-four.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				},
 				{
-					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/google.svelte",
+					"type": "registry:component",
 					"target": "svgs/google.svelte"
 				}
 			],
@@ -689,23 +714,23 @@
 					"target": "efferd/auth/auth-five.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				},
 				{
-					"path": "src/lib/svgs/google.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/google.svelte",
+					"type": "registry:component",
 					"target": "svgs/google.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				},
 				{
-					"path": "src/lib/svgs/apple.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/apple.svelte",
+					"type": "registry:component",
 					"target": "svgs/apple.svelte"
 				}
 			],
@@ -892,18 +917,18 @@
 					"target": "efferd/footer/footer-one.svelte"
 				},
 				{
-					"path": "src/lib/svgs/github.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
 					"target": "svgs/github.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				},
 				{
-					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/x.svelte",
+					"type": "registry:component",
 					"target": "svgs/x.svelte"
 				}
 			],
@@ -921,14 +946,39 @@
 					"target": "efferd/footer/footer-two.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				},
 				{
-					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/x.svelte",
+					"type": "registry:component",
 					"target": "svgs/x.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/facebook.svelte",
+					"type": "registry:component",
+					"target": "svgs/facebook.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
+					"target": "svgs/github.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/instagram.svelte",
+					"type": "registry:component",
+					"target": "svgs/instagram.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/linkedin.svelte",
+					"type": "registry:component",
+					"target": "svgs/linkedin.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/youtube.svelte",
+					"type": "registry:component",
+					"target": "svgs/youtube.svelte"
 				}
 			],
 			"registryDependencies": ["button"],
@@ -946,14 +996,34 @@
 					"target": "efferd/footer/footer-three.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/footer/AnimatedContainer.svelte",
+					"path": "src/lib/components/efferd/footer/animated-container.svelte",
 					"type": "registry:component",
-					"target": "efferd/footer/AnimatedContainer.svelte"
+					"target": "efferd/footer/animated-container.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/facebook.svelte",
+					"type": "registry:component",
+					"target": "svgs/facebook.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/instagram.svelte",
+					"type": "registry:component",
+					"target": "svgs/instagram.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/linkedin.svelte",
+					"type": "registry:component",
+					"target": "svgs/linkedin.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/youtube.svelte",
+					"type": "registry:component",
+					"target": "svgs/youtube.svelte"
 				}
 			],
 			"registryDependencies": [],
@@ -971,9 +1041,9 @@
 					"target": "efferd/footer/footer-four.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/footer/LinkGroup.svelte",
+					"path": "src/lib/components/efferd/footer/link-group.svelte",
 					"type": "registry:component",
-					"target": "efferd/footer/LinkGroup.svelte"
+					"target": "efferd/footer/link-group.svelte"
 				}
 			],
 			"registryDependencies": [],
@@ -991,19 +1061,34 @@
 					"target": "efferd/footer/footer-five.svelte"
 				},
 				{
-					"path": "src/lib/svgs/apple.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/apple.svelte",
+					"type": "registry:component",
 					"target": "svgs/apple.svelte"
 				},
 				{
-					"path": "src/lib/svgs/play-store.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/play-store.svelte",
+					"type": "registry:component",
 					"target": "svgs/play-store.svelte"
 				},
 				{
-					"path": "src/lib/svgs/x.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/x.svelte",
+					"type": "registry:component",
 					"target": "svgs/x.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/facebook.svelte",
+					"type": "registry:component",
+					"target": "svgs/facebook.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/instagram.svelte",
+					"type": "registry:component",
+					"target": "svgs/instagram.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/linkedin.svelte",
+					"type": "registry:component",
+					"target": "svgs/linkedin.svelte"
 				}
 			],
 			"registryDependencies": ["button"],
@@ -1021,14 +1106,34 @@
 					"target": "efferd/footer/footer-six.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/footer/AnimatedContainer.svelte",
+					"path": "src/lib/components/efferd/footer/animated-container.svelte",
 					"type": "registry:component",
-					"target": "efferd/footer/AnimatedContainer.svelte"
+					"target": "efferd/footer/animated-container.svelte"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/facebook.svelte",
+					"type": "registry:component",
+					"target": "svgs/facebook.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/instagram.svelte",
+					"type": "registry:component",
+					"target": "svgs/instagram.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/linkedin.svelte",
+					"type": "registry:component",
+					"target": "svgs/linkedin.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/youtube.svelte",
+					"type": "registry:component",
+					"target": "svgs/youtube.svelte"
 				}
 			],
 			"registryDependencies": ["button"],
@@ -1162,12 +1267,12 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
-			"registryDependencies": ["button", "local:logo-cloud-three", "local:portal"],
+			"registryDependencies": ["button", "sheet", "local:logo-cloud-three", "local:portal"],
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
@@ -1211,8 +1316,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1281,8 +1386,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1320,8 +1425,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1354,8 +1459,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1403,8 +1508,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1437,8 +1542,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1486,8 +1591,8 @@
 					"type": "registry:hook"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1495,69 +1600,761 @@
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
-			"name": "app-shell-2",
-			"title": "App Shell 2",
+			"name": "dashboard-one",
+			"title": "Dashboard One",
+			"type": "registry:block",
+			"description": "A responsive analytics dashboard with KPI summaries, an interactive stacked sales chart, and a recent invoices table.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-one/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/dashboard-stats.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/dashboard-stats.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/sales-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/sales-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/dashboard-invoices.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/dashboard-invoices.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-one/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-one/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-one/formatter.ts"
+				}
+			],
+			"registryDependencies": ["badge", "card", "chart", "select", "table"],
+			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"],
+			"devDependencies": ["@types/d3-scale", "@types/d3-shape"]
+		},
+		{
+			"name": "dashboard-two",
+			"title": "Dashboard Two",
+			"type": "registry:block",
+			"description": "A responsive business dashboard with KPI summaries, revenue and channel charts, invoices, billing health, and recent activity.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-two/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard-card.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard-card.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard-stats.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard-stats.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/net-revenue-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/net-revenue-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/channel-sales-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/channel-sales-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard-invoices.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard-invoices.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/billing-health.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/billing-health.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/dashboard-activity.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/dashboard-activity.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-two/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-two/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-two/formatter.ts"
+				}
+			],
+			"registryDependencies": ["badge", "button", "card", "chart", "empty", "table"],
+			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"],
+			"devDependencies": ["@types/d3-scale", "@types/d3-shape"]
+		},
+		{
+			"name": "dashboard-three",
+			"title": "Dashboard Three",
+			"type": "registry:block",
+			"description": "A responsive support dashboard with queue metrics, conversation charts, team availability, inbox activity, and CSAT reporting.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-three/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/dashboard-stats.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/dashboard-stats.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/conversation-volume-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/conversation-volume-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/conversation-volume-data.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-three/conversation-volume-data.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/channel-breakdown-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/channel-breakdown-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/csat-responses-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/csat-responses-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/first-reply-time-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/first-reply-time-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/recent-conversations.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/recent-conversations.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/team-on-duty.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/team-on-duty.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/support-activity.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/support-activity.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/status-indicator.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-three/status-indicator.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-three/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-three/formatter.ts"
+				}
+			],
+			"registryDependencies": [
+				"avatar",
+				"badge",
+				"button",
+				"card",
+				"chart",
+				"dropdown-menu",
+				"select",
+				"table"
+			],
+			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"],
+			"devDependencies": ["@types/d3-scale", "@types/d3-shape"]
+		},
+		{
+			"name": "dashboard-four",
+			"title": "Dashboard Four",
+			"type": "registry:block",
+			"description": "A responsive commerce dashboard with revenue metrics, sales trends, return rates, category performance, and store-management shortcuts.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-four/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/dashboard-stats.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/dashboard-stats.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/revenue-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/revenue-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/revenue-chart-data.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-four/revenue-chart-data.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/refund-return-rate-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/refund-return-rate-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/category-rank-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/category-rank-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/quick-actions.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/quick-actions.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-four/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-four/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-four/formatter.ts"
+				}
+			],
+			"registryDependencies": ["button", "card", "chart", "item", "select"],
+			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"],
+			"devDependencies": ["@types/d3-scale", "@types/d3-shape"]
+		},
+		{
+			"name": "dashboard-five",
+			"title": "Dashboard Five",
+			"type": "registry:block",
+			"description": "A responsive web analytics dashboard with visitor trends, audience insights, acquisition data, top content, and Core Web Vitals.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/index.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-five/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/dashboard.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/dashboard.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/visitors-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/visitors-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/online-now.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/online-now.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/top-pages.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/top-pages.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/top-countries.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/top-countries.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/traffic-sources-chart.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/traffic-sources-chart.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/audience-mix.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/audience-mix.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/browser-share.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/browser-share.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/top-referrers.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/top-referrers.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/web-vitals.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/web-vitals.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/share-bar-list.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/share-bar-list.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/delta.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/delta.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/status-indicator.svelte",
+					"type": "registry:component",
+					"target": "efferd/dashboard/dashboard-five/status-indicator.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/dashboard/dashboard-five/formatter.ts",
+					"type": "registry:file",
+					"target": "efferd/dashboard/dashboard-five/formatter.ts"
+				}
+			],
+			"registryDependencies": ["badge", "button", "card", "chart", "table", "tooltip"],
+			"dependencies": ["@lucide/svelte", "d3-shape", "layerchart"],
+			"devDependencies": ["@types/d3-shape"]
+		},
+		{
+			"name": "settings-one",
+			"title": "Settings One",
+			"type": "registry:block",
+			"description": "A settings form for profile details and email preferences. It includes an avatar picker and save action.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/index.ts",
+					"type": "registry:file",
+					"target": "efferd/settings/settings-one/index.ts"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/profile-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/profile-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/notification-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/notification-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-one/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-one/setting-field.svelte"
+				}
+			],
+			"registryDependencies": ["avatar", "button", "field", "input", "switch"]
+		},
+		{
+			"name": "settings-two",
+			"title": "Settings Two",
+			"type": "registry:block",
+			"description": "A comprehensive account settings dashboard for profile, appearance, notifications, security, and destructive actions.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/profile-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/profile-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/appearance-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/appearance-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/notification-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/notification-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/security-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/security-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/danger-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/danger-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-two/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-two/setting-field.svelte"
+				}
+			],
+			"registryDependencies": [
+				"avatar",
+				"button",
+				"card",
+				"field",
+				"input-group",
+				"select",
+				"switch",
+				"toggle-group"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "settings-three",
+			"title": "Settings Three",
+			"type": "registry:block",
+			"description": "An agent settings dashboard for profile, availability, notifications, and destructive account actions.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/agent-preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/agent-preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/profile-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/profile-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/availability-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/availability-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/notification-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/notification-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/danger-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/danger-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-three/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-three/setting-field.svelte"
+				}
+			],
+			"registryDependencies": [
+				"alert-dialog",
+				"avatar",
+				"badge",
+				"button",
+				"card",
+				"checkbox",
+				"field",
+				"input",
+				"switch",
+				"toggle-group"
+			]
+		},
+		{
+			"name": "settings-four",
+			"title": "Settings Four",
+			"type": "registry:block",
+			"description": "A stacked account settings form for name, email, avatar, user ID, and account deletion.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/name-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/name-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/email-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/email-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/avatar-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/avatar-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/user-id-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/user-id-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/delete-account-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/delete-account-field.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-four/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-four/setting-field.svelte"
+				},
+				{
+					"path": "src/lib/hooks/use-clipboard.svelte.ts",
+					"type": "registry:hook"
+				}
+			],
+			"registryDependencies": ["avatar", "button", "card", "field", "input-group"],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "settings-five",
+			"title": "Settings Five",
+			"type": "registry:block",
+			"description": "An account overview for profile, security, localization, and destructive account actions.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/settings-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/settings-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/profile-information.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/profile-information.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/security-information.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/security-information.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/localization-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/localization-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/danger-zone-settings.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/danger-zone-settings.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/settings-section.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/settings-section.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/settings/settings-five/setting-field.svelte",
+					"type": "registry:component",
+					"target": "efferd/settings/settings-five/setting-field.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/google.svelte",
+					"type": "registry:component",
+					"target": "svgs/google.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
+					"target": "svgs/github.svelte"
+				}
+			],
+			"registryDependencies": [
+				"alert-dialog",
+				"avatar",
+				"badge",
+				"button",
+				"card",
+				"label",
+				"select"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "app-shell-one",
+			"title": "App Shell One",
+			"type": "registry:block",
+			"description": "A focused dashboard shell with an off-canvas sidebar, compact utility header, and responsive content area.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-shell.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/app-shell.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-breadcrumbs.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/app-breadcrumbs.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/app-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-sidebar.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/app-sidebar.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/dashboard-skeleton.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/dashboard-skeleton.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/nav-user.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-one/nav-user.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-one/app-shared.ts",
+					"type": "registry:file",
+					"target": "efferd/app-shell/app-shell-one/app-shared.ts"
+				},
+				{
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": [
+				"avatar",
+				"breadcrumb",
+				"button",
+				"dropdown-menu",
+				"local:full-width-divider",
+				"separator",
+				"sidebar"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "app-shell-two",
+			"title": "App Shell Two",
 			"type": "registry:block",
 			"description": "A compact dashboard shell with a collapsible sidebar, sticky header, and structured content skeleton.",
 			"files": [
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/preview.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/preview.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/preview.svelte"
+					"target": "efferd/app-shell/app-shell-two/preview.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-shell.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-shell.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/app-shell.svelte"
+					"target": "efferd/app-shell/app-shell-two/app-shell.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-breadcrumb.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-breadcrumb.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/app-breadcrumb.svelte"
+					"target": "efferd/app-shell/app-shell-two/app-breadcrumb.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-header.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-header.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/app-header.svelte"
+					"target": "efferd/app-shell/app-shell-two/app-header.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-sidebar.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-sidebar.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/app-sidebar.svelte"
+					"target": "efferd/app-shell/app-shell-two/app-sidebar.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/custom-sidebar-trigger.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/custom-sidebar-trigger.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/custom-sidebar-trigger.svelte"
+					"target": "efferd/app-shell/app-shell-two/custom-sidebar-trigger.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/dashboard-skeleton.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/dashboard-skeleton.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/dashboard-skeleton.svelte"
+					"target": "efferd/app-shell/app-shell-two/dashboard-skeleton.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/latest-change.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/latest-change.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/latest-change.svelte"
+					"target": "efferd/app-shell/app-shell-two/latest-change.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/nav-group.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/nav-group.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/nav-group.svelte"
+					"target": "efferd/app-shell/app-shell-two/nav-group.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/nav-user.svelte",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/nav-user.svelte",
 					"type": "registry:component",
-					"target": "efferd/app-shell/app-shell-2/nav-user.svelte"
+					"target": "efferd/app-shell/app-shell-two/nav-user.svelte"
 				},
 				{
-					"path": "src/lib/components/efferd/app-shell/app-shell-2/app-shared.ts",
+					"path": "src/lib/components/efferd/app-shell/app-shell-two/app-shared.ts",
 					"type": "registry:file",
-					"target": "efferd/app-shell/app-shell-2/app-shared.ts"
+					"target": "efferd/app-shell/app-shell-two/app-shared.ts"
 				},
 				{
-					"path": "src/lib/svgs/logo.svelte",
-					"type": "registry:lib",
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
 					"target": "svgs/logo.svelte"
 				}
 			],
@@ -1574,6 +2371,240 @@
 				"tooltip"
 			],
 			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "app-shell-three",
+			"title": "App Shell Three",
+			"type": "registry:block",
+			"description": "A customer-support workspace with nested navigation, quick actions, account controls, and an inset content area.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-shell.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/app-shell.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-breadcrumbs.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/app-breadcrumbs.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/app-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-sidebar.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/app-sidebar.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/custom-sidebar-trigger.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/custom-sidebar-trigger.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/dashboard-skeleton.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/dashboard-skeleton.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/latest-change.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/latest-change.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/nav-group.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/nav-group.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/nav-user.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-three/nav-user.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-three/app-shared.ts",
+					"type": "registry:file",
+					"target": "efferd/app-shell/app-shell-three/app-shared.ts"
+				},
+				{
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": [
+				"avatar",
+				"breadcrumb",
+				"button",
+				"collapsible",
+				"dropdown-menu",
+				"kbd",
+				"separator",
+				"sidebar",
+				"tooltip"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "app-shell-four",
+			"title": "App Shell Four",
+			"type": "registry:block",
+			"description": "An ecommerce dashboard shell with grouped navigation, nested store links, account controls, and a floating collapsible sidebar.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-shell.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/app-shell.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-breadcrumbs.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/app-breadcrumbs.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/app-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-sidebar.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/app-sidebar.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/custom-sidebar-trigger.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/custom-sidebar-trigger.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/dashboard-skeleton.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/dashboard-skeleton.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/latest-change.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/latest-change.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/nav-group.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/nav-group.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/nav-user.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-four/nav-user.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-four/app-shared.ts",
+					"type": "registry:file",
+					"target": "efferd/app-shell/app-shell-four/app-shared.ts"
+				},
+				{
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": [
+				"avatar",
+				"breadcrumb",
+				"button",
+				"collapsible",
+				"dropdown-menu",
+				"kbd",
+				"separator",
+				"sidebar",
+				"tooltip"
+			],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "app-shell-five",
+			"title": "App Shell Five",
+			"type": "registry:block",
+			"description": "An analytics workspace with searchable navigation, an off-canvas sidebar, responsive controls, and built-in theme switching.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/preview.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/preview.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-shell.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/app-shell.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-header.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/app-header.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-search.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/app-search.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-sidebar.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/app-sidebar.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/custom-trigger.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/custom-trigger.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/latest-change.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/latest-change.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/nav-user.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/nav-user.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/theme-switcher.svelte",
+					"type": "registry:component",
+					"target": "efferd/app-shell/app-shell-five/theme-switcher.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/app-shell/app-shell-five/app-shared.ts",
+					"type": "registry:file",
+					"target": "efferd/app-shell/app-shell-five/app-shared.ts"
+				},
+				{
+					"path": "src/lib/components/svgs/logo.svelte",
+					"type": "registry:component",
+					"target": "svgs/logo.svelte"
+				}
+			],
+			"registryDependencies": [
+				"avatar",
+				"breadcrumb",
+				"button",
+				"dropdown-menu",
+				"input-group",
+				"kbd",
+				"separator",
+				"sidebar"
+			],
+			"dependencies": ["@lucide/svelte", "mode-watcher", "runed"]
 		},
 		{
 			"name": "pricing-one",
@@ -1644,6 +2675,78 @@
 			],
 			"registryDependencies": ["button"],
 			"dependencies": ["@lucide/svelte", "@number-flow/svelte", "motion-sv"]
+		},
+		{
+			"name": "team-one",
+			"title": "Team One",
+			"type": "registry:block",
+			"description": "A compact team grid with grayscale portraits and a hiring call to action.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/team/team-one.svelte",
+					"type": "registry:component",
+					"target": "efferd/team/team-one.svelte"
+				}
+			],
+			"registryDependencies": ["avatar", "button"]
+		},
+		{
+			"name": "team-two",
+			"title": "Team Two",
+			"type": "registry:block",
+			"description": "A bordered team directory with compact profiles and social links.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/team/team-two.svelte",
+					"type": "registry:component",
+					"target": "efferd/team/team-two.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
+					"target": "svgs/github.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/linkedin.svelte",
+					"type": "registry:component",
+					"target": "svgs/linkedin.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/x.svelte",
+					"type": "registry:component",
+					"target": "svgs/x.svelte"
+				}
+			],
+			"registryDependencies": ["avatar", "button", "local:full-width-divider"]
+		},
+		{
+			"name": "team-three",
+			"title": "Team Three",
+			"type": "registry:block",
+			"description": "A portrait-led team grid with roles, social links, and a hiring call to action.",
+			"files": [
+				{
+					"path": "src/lib/components/efferd/team/team-three.svelte",
+					"type": "registry:component",
+					"target": "efferd/team/team-three.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/github.svelte",
+					"type": "registry:component",
+					"target": "svgs/github.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/linkedin.svelte",
+					"type": "registry:component",
+					"target": "svgs/linkedin.svelte"
+				},
+				{
+					"path": "src/lib/components/svgs/x.svelte",
+					"type": "registry:component",
+					"target": "svgs/x.svelte"
+				}
+			],
+			"registryDependencies": ["avatar", "button", "local:full-width-divider"]
 		},
 		{
 			"name": "testimonial-one",

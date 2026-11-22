@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { AtSignIcon } from "@lucide/svelte";
+	import AtSignIcon from "@lucide/svelte/icons/at-sign";
 	import { Button } from "#lib/components/ui/button/index.js";
 	import { AuthDivider } from "#lib/components/ui/auth-divider/index.js";
 	import {
@@ -7,9 +7,9 @@
 		InputGroupAddon,
 		InputGroupInput
 	} from "#lib/components/ui/input-group/index.js";
-	import GithubLogo from "#lib/svgs/github.svelte";
-	import GoogleLogo from "#lib/svgs/google.svelte";
-	import Logo from "#lib/svgs/logo.svelte";
+	import GithubLogo from "#lib/components/svgs/github.svelte";
+	import GoogleLogo from "#lib/components/svgs/google.svelte";
+	import Logo from "#lib/components/svgs/logo.svelte";
 	import { cn } from "#lib/utils.js";
 	import type { HTMLAttributes } from "svelte/elements";
 
@@ -29,11 +29,13 @@
 		emailPlaceholder = "your.email@example.com",
 		...restProps
 	}: AuthThreeProps = $props();
+	const id = $props.id();
+	const emailId = `${id}-email`;
 </script>
 
-<div class={cn("relative w-full overflow-hidden md:h-screen", className)} {...restProps}>
+<div class={cn("relative w-full overflow-hidden md:h-dvh", className)} {...restProps}>
 	<div
-		class="relative mx-auto flex min-h-screen w-full max-w-sm flex-col justify-between p-6 md:p-8"
+		class="relative mx-auto flex min-h-svh w-full max-w-sm flex-col justify-between p-6 md:p-8"
 	>
 		<div class="flex justify-center">
 			<a href={logoHref}>
@@ -41,21 +43,30 @@
 			</a>
 		</div>
 
-		<div class="w-full animate-in space-y-4 duration-600 fade-in slide-in-from-bottom-4">
+		<div
+			class="w-full animate-in space-y-4 duration-300 fade-in slide-in-from-bottom-4 motion-reduce:animate-none"
+		>
 			<div class="flex flex-col space-y-1">
 				<h1 class="text-2xl font-bold tracking-wide">Join Now!</h1>
 				<p class="text-base text-muted-foreground">Login or create your efferd account.</p>
 			</div>
 
 			<form class="space-y-2">
+				<label class="sr-only" for={emailId}>Email address</label>
 				<InputGroup>
-					<InputGroupInput placeholder={emailPlaceholder} type="email" />
+					<InputGroupInput
+						autocomplete="email"
+						id={emailId}
+						name="email"
+						placeholder={emailPlaceholder}
+						type="email"
+					/>
 					<InputGroupAddon align="inline-start">
 						<AtSignIcon />
 					</InputGroupAddon>
 				</InputGroup>
 
-				<Button class="w-full" size="sm" type="button">Continue With Email</Button>
+				<Button class="w-full" size="sm" type="submit">Continue With Email</Button>
 			</form>
 
 			<AuthDivider>OR CONTINUE WITH</AuthDivider>
