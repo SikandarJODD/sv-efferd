@@ -12,6 +12,7 @@
 	],
 	"registryDependencies": [
 		"button",
+		"sheet",
 		"./logo-cloud-three.json",
 		"./portal.json"
 	],

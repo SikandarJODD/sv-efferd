@@ -11,8 +11,8 @@
 		"layerchart"
 	],
 	"devDependencies": [
-		"@lucide/svelte@^1.73.0",
-		"layerchart@^2.10.0"
+		"@types/d3-scale",
+		"@types/d3-shape"
 	],
 	"registryDependencies": [
 		"button",

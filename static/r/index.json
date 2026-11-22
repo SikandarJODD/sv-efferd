@@ -678,6 +678,7 @@
 		],
 		"registryDependencies": [
 			"button",
+			"sheet",
 			"local:logo-cloud-three",
 			"local:portal"
 		],
@@ -799,6 +800,10 @@
 			"d3-shape",
 			"layerchart"
 		],
+		"devDependencies": [
+			"@types/d3-scale",
+			"@types/d3-shape"
+		],
 		"registryDependencies": [
 			"badge",
 			"card",
@@ -818,6 +823,10 @@
 			"d3-scale",
 			"d3-shape",
 			"layerchart"
+		],
+		"devDependencies": [
+			"@types/d3-scale",
+			"@types/d3-shape"
 		],
 		"registryDependencies": [
 			"badge",
@@ -839,6 +848,10 @@
 			"d3-scale",
 			"d3-shape",
 			"layerchart"
+		],
+		"devDependencies": [
+			"@types/d3-scale",
+			"@types/d3-shape"
 		],
 		"registryDependencies": [
 			"avatar",
@@ -863,6 +876,10 @@
 			"d3-shape",
 			"layerchart"
 		],
+		"devDependencies": [
+			"@types/d3-scale",
+			"@types/d3-shape"
+		],
 		"registryDependencies": [
 			"button",
 			"card",
@@ -881,6 +898,9 @@
 			"@lucide/svelte",
 			"d3-shape",
 			"layerchart"
+		],
+		"devDependencies": [
+			"@types/d3-shape"
 		],
 		"registryDependencies": [
 			"badge",

@@ -10,8 +10,7 @@
 		"layerchart"
 	],
 	"devDependencies": [
-		"layerchart@^2.10.0",
-		"@lucide/svelte@^1.73.0"
+		"@types/d3-shape"
 	],
 	"registryDependencies": [
 		"badge",

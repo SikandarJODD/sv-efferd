@@ -340,6 +340,11 @@
 					"path": "src/lib/components/efferd/logo-cloud/logo-cloud-one.svelte",
 					"type": "registry:component",
 					"target": "efferd/logo-cloud/logo-cloud-one.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/logo-cloud/wordmark-logos.ts",
+					"type": "registry:file",
+					"target": "efferd/logo-cloud/wordmark-logos.ts"
 				}
 			],
 			"registryDependencies": []
@@ -359,6 +364,11 @@
 					"path": "src/lib/components/efferd/logo-cloud/two/logo-card.svelte",
 					"type": "registry:component",
 					"target": "efferd/logo-cloud/two/logo-card.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/logo-cloud/wordmark-logos.ts",
+					"type": "registry:file",
+					"target": "efferd/logo-cloud/wordmark-logos.ts"
 				}
 			],
 			"registryDependencies": ["local:decor-icon"]
@@ -373,6 +383,11 @@
 					"path": "src/lib/components/efferd/logo-cloud/three/logo-cloud-three.svelte",
 					"type": "registry:component",
 					"target": "efferd/logo-cloud/three/logo-cloud-three.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/logo-cloud/wordmark-logos.ts",
+					"type": "registry:file",
+					"target": "efferd/logo-cloud/wordmark-logos.ts"
 				}
 			],
 			"registryDependencies": ["local:marquee"]
@@ -387,6 +402,11 @@
 					"path": "src/lib/components/efferd/logo-cloud/four/logo-cloud-four.svelte",
 					"type": "registry:component",
 					"target": "efferd/logo-cloud/four/logo-cloud-four.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/logo-cloud/wordmark-logos.ts",
+					"type": "registry:file",
+					"target": "efferd/logo-cloud/wordmark-logos.ts"
 				}
 			],
 			"registryDependencies": ["local:marquee", "local:progressive-blur"]
@@ -401,6 +421,11 @@
 					"path": "src/lib/components/efferd/logo-cloud/five/logo-cloud-five.svelte",
 					"type": "registry:component",
 					"target": "efferd/logo-cloud/five/logo-cloud-five.svelte"
+				},
+				{
+					"path": "src/lib/components/efferd/logo-cloud/wordmark-logos.ts",
+					"type": "registry:file",
+					"target": "efferd/logo-cloud/wordmark-logos.ts"
 				}
 			],
 			"registryDependencies": []
@@ -1247,7 +1272,7 @@
 					"target": "svgs/logo.svelte"
 				}
 			],
-			"registryDependencies": ["button", "local:logo-cloud-three", "local:portal"],
+			"registryDependencies": ["button", "sheet", "local:logo-cloud-three", "local:portal"],
 			"dependencies": ["@lucide/svelte"]
 		},
 		{
@@ -1617,7 +1642,8 @@
 				}
 			],
 			"registryDependencies": ["badge", "card", "chart", "select", "table"],
-			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"]
+			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"],
+			"devDependencies": ["@types/d3-scale", "@types/d3-shape"]
 		},
 		{
 			"name": "dashboard-two",
@@ -1682,7 +1708,8 @@
 				}
 			],
 			"registryDependencies": ["badge", "button", "card", "chart", "empty", "table"],
-			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"]
+			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"],
+			"devDependencies": ["@types/d3-scale", "@types/d3-shape"]
 		},
 		{
 			"name": "dashboard-three",
@@ -1771,7 +1798,8 @@
 				"select",
 				"table"
 			],
-			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"]
+			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"],
+			"devDependencies": ["@types/d3-scale", "@types/d3-shape"]
 		},
 		{
 			"name": "dashboard-four",
@@ -1831,7 +1859,8 @@
 				}
 			],
 			"registryDependencies": ["button", "card", "chart", "item", "select"],
-			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"]
+			"dependencies": ["@lucide/svelte", "d3-scale", "d3-shape", "layerchart"],
+			"devDependencies": ["@types/d3-scale", "@types/d3-shape"]
 		},
 		{
 			"name": "dashboard-five",
@@ -1916,7 +1945,8 @@
 				}
 			],
 			"registryDependencies": ["badge", "button", "card", "chart", "table", "tooltip"],
-			"dependencies": ["@lucide/svelte", "d3-shape", "layerchart"]
+			"dependencies": ["@lucide/svelte", "d3-shape", "layerchart"],
+			"devDependencies": ["@types/d3-shape"]
 		},
 		{
 			"name": "settings-one",
