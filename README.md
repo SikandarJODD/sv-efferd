@@ -95,7 +95,7 @@ More Svelte projects by [Bhide Svelte](https://bhide.dev):
 
 ## Credits
 
-- Original created by [Shaban](https://x.com/shabanhr)
+- Original created by [Shaban](https://x.com/shabanwtf)
 - Ported to Svelte by [Bhide Svelte](https://x.com/Sikandar_Bhide)
 
 ## Support
@@ -104,7 +104,7 @@ If you find Svelte Efferd Blocks useful:
 
 - Star the repo
 - Share your work on social media and tag [@Sikandar_Bhide](https://x.com/Sikandar_Bhide)
-- Sponsor the project usng GitHub Sponsors
+- Sponsor the project usng GitHub Sponsors (if needed, else just enjoy 😁✌🏻)
 
 [![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Support-pink?logo=githubsponsors)](https://github.com/sponsors/SikandarJODD)
 
