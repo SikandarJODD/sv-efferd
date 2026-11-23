@@ -1,27 +1,43 @@
 <script lang="ts">
-	type Feature = {
-		title: string;
-		description: string;
-	};
+	import {
+		FeatureBlocks,
+		FeatureCode,
+		FeaturePreview,
+		FeatureResponsive,
+		FeatureSkill,
+		FeatureTerminal
+	} from "#lib/components/icons/index.js";
 
-	const features: Feature[] = [
+	const features = [
 		{
-			title: "80+ Marketing Blocks",
-			description:
-				"Find heroes, pricing sections, FAQs, footers, and the other parts of a marketing site."
+			icon: FeatureBlocks,
+			title: "82 open-source blocks",
+			description: "Marketing and app sections across 19 categories."
 		},
 		{
-			title: "Svelte source you can edit",
-			description: "Each block uses Svelte, Tailwind CSS, and shadcn-svelte components."
+			icon: FeaturePreview,
+			title: "Live previews",
+			description: "Check every block before adding it to your project."
 		},
 		{
-			title: "Install from the CLI",
-			description: "Add a block with the shadcn-svelte CLI instead of copying files by hand."
+			icon: FeatureTerminal,
+			title: "One-command install",
+			description: "Add any block with the shadcn-svelte CLI."
 		},
 		{
-			title: "Responsive by default",
-			description:
-				"Layouts adapt to phones, tablets, and desktops. Light and dark themes are included."
+			icon: FeatureCode,
+			title: "Source stays yours",
+			description: "Edit the Svelte 5 and Tailwind code in your app."
+		},
+		{
+			icon: FeatureResponsive,
+			title: "Responsive and themed",
+			description: "Mobile layouts with light and dark modes included."
+		},
+		{
+			icon: FeatureSkill,
+			title: "Ready for coding agents",
+			description: "A Skill, llms.txt, and metadata help agents choose and install blocks."
 		}
 	];
 </script>
@@ -30,34 +46,36 @@
 	class="mx-auto w-full max-w-6xl px-6 py-20 sm:py-24 md:px-4"
 	aria-labelledby="features-title"
 >
-	<div class="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
+	<div class="grid gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] lg:gap-20">
 		<div>
 			<h2
 				id="features-title"
 				class="font-gp-circle pl-1 text-3xl font-medium text-foreground sm:text-4xl"
 			>
-				Features
+				Svelte blocks, ready to use
 			</h2>
 			<p class="mt-4 max-w-sm text-sm leading-6 text-muted-foreground">
-				Install complete marketing sections, then edit the Svelte source in your own
-				codebase.
+				Browse a block, preview it, and add the source to your project. Coding agents can
+				follow the same path.
 			</p>
 		</div>
 
-		<ol class="border-t border-border/70">
-			{#each features as feature, index}
-				<li class="grid grid-cols-[2rem_1fr] gap-4 border-b border-border/70 py-5 sm:py-6">
-					<span class="font-mono text-xs text-muted-foreground">
-						{String(index + 1).padStart(2, "0")}
-					</span>
-					<div>
-						<h3 class="text-base font-medium text-foreground">{feature.title}</h3>
-						<p class="mt-1.5 max-w-lg text-sm leading-6 text-muted-foreground">
+		<ul class="grid gap-x-10 gap-y-9 sm:grid-cols-2">
+			{#each features as feature}
+				<li class="flex items-start gap-4">
+					<div
+						class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600 dark:bg-muted dark:text-primary"
+					>
+						<feature.icon class="size-5" aria-hidden="true" />
+					</div>
+					<div class="min-w-0 pt-0.5">
+						<h3 class="text-sm font-medium text-foreground">{feature.title}</h3>
+						<p class="mt-1.5 text-sm leading-6 text-muted-foreground">
 							{feature.description}
 						</p>
 					</div>
 				</li>
 			{/each}
-		</ol>
+		</ul>
 	</div>
 </section>

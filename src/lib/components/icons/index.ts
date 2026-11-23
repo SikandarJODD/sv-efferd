@@ -17,6 +17,12 @@ import DollarIcon from "./dollar-icon.svelte";
 import Codex from "./codex.svelte";
 import ChatGPT from "./chatgpt.svelte";
 import Claude from "./claude.svelte";
+import FeatureBlocks from "./feature-blocks.svelte";
+import FeatureCode from "./feature-code.svelte";
+import FeaturePreview from "./feature-preview.svelte";
+import FeatureResponsive from "./feature-responsive.svelte";
+import FeatureSkill from "./feature-skill.svelte";
+import FeatureTerminal from "./feature-terminal.svelte";
 
 export interface Props extends HTMLAttributes<SVGElement> {
 	class?: string;
@@ -42,5 +48,11 @@ export {
 	DollarIcon,
 	Codex,
 	ChatGPT,
-	Claude
+	Claude,
+	FeatureBlocks,
+	FeatureCode,
+	FeaturePreview,
+	FeatureResponsive,
+	FeatureSkill,
+	FeatureTerminal
 };
