@@ -7,9 +7,9 @@
 	let { children, pathname = "/" }: { children: Snippet; pathname?: string } = $props();
 </script>
 
-	<Sidebar.Provider class="[--app-header-height:3rem]">
+	<Sidebar.Provider>
 	<AppSidebar {pathname} />
-	<Sidebar.Inset class="bg-muted dark:bg-background">
+	<Sidebar.Inset class="bg-muted px-4 pt-2 pb-4 md:px-6 md:pt-3 md:pb-6 dark:bg-background">
 		<AppHeader {pathname} />
 		<div
 			class="flex w-full flex-1 flex-col p-4 md:p-6"
