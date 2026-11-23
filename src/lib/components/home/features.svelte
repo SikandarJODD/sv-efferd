@@ -6,7 +6,7 @@
 
 	const features: Feature[] = [
 		{
-			title: "60+ marketing blocks",
+			title: "80+ Marketing Blocks",
 			description:
 				"Find heroes, pricing sections, FAQs, footers, and the other parts of a marketing site."
 		},

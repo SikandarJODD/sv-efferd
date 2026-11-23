@@ -26,7 +26,7 @@
 			</h1>
 
 			<p class="mt-3 max-w-2xl text-base leading-6 text-muted-foreground sm:text-lg">
-				<span class="font-mono">60+</span> UI & Marketing Blocks, built with Svelte, Tailwind
+				<span class="font-mono">80+</span> UI & Marketing Blocks, built with Svelte, Tailwind
 				CSS and Shadcn.
 			</p>
 

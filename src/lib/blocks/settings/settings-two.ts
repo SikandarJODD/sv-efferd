@@ -1,10 +1,11 @@
 import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
 import { createBlockCodeTree } from "#lib/blocks/showcase.js";
-import Settings from "#lib/components/efferd/settings/settings-two/settings.svelte";
+import SettingsTwoPreview from "#lib/components/efferd/settings/settings-two/preview.svelte";
 
 import appearanceSettingsSource from "#lib/components/efferd/settings/settings-two/appearance-settings.svelte?raw";
 import dangerSettingsSource from "#lib/components/efferd/settings/settings-two/danger-settings.svelte?raw";
 import notificationSettingsSource from "#lib/components/efferd/settings/settings-two/notification-settings.svelte?raw";
+import previewSource from "#lib/components/efferd/settings/settings-two/preview.svelte?raw";
 import profileSettingsSource from "#lib/components/efferd/settings/settings-two/profile-settings.svelte?raw";
 import securitySettingsSource from "#lib/components/efferd/settings/settings-two/security-settings.svelte?raw";
 import settingFieldSource from "#lib/components/efferd/settings/settings-two/setting-field.svelte?raw";
@@ -67,12 +68,18 @@ export const settingsTwoBlock: BlockShowcaseItem = {
 	title: "Settings Two",
 	description:
 		"A comprehensive account settings dashboard for profile, appearance, notifications, security, and destructive actions.",
-	previewComponent: Settings,
+	previewComponent: SettingsTwoPreview,
 	previewHref: "/preview/settings/two",
 	previewMode: "iframe",
 	previewHeight: 1040,
 	installId: "settings-two",
 	codeTree: createBlockCodeTree("settings-two:component", [
+		{
+			id: "settings-two:preview",
+			path: "settings/preview.svelte",
+			lang: "svelte",
+			code: previewSource
+		},
 		{
 			id: "settings-two:component",
 			path: "efferd/settings/settings.svelte",
@@ -120,6 +127,12 @@ export const settingsTwoBlock: BlockShowcaseItem = {
 			path: "efferd/settings/setting-field.svelte",
 			lang: "svelte",
 			code: settingFieldSource
+		},
+		{
+			id: "related:app-shell-three",
+			path: "related/app-shell-three",
+			externalUrl: "/blocks/app-shell#app-shell-three",
+			externalLabel: "View App Shell Three"
 		},
 		...uiFiles
 	])
