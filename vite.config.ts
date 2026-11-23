@@ -7,7 +7,10 @@ export default defineConfig({
 	plugins: [
 		tailwindcss(),
 		sveltekit({
-			adapter: adapter()
+			adapter: adapter(),
+			prerender: {
+				handleMissingId: "ignore"
+			}
 		})
 	]
 });
