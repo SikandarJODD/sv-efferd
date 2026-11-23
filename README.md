@@ -74,6 +74,25 @@ pnpm dlx shadcn-svelte@latest add https://sv-efferd.pages.dev/r/hero-one.json
 <HeroOne />
 ```
 
+## Other projects
+
+More Svelte projects by [Bhide Svelte](https://bhide.dev):
+
+- [Svelte Animations](https://sv-animations.vercel.app/) - Svelte port of Magic UI, Spell UI, Fancy Components, and more. [GitHub](https://github.com/SikandarJODD/animations)
+- [Svelte Marketing Blocks](https://sv-blocks.vercel.app/) - 150+ reusable marketing sections and landing-page blocks. [GitHub](https://github.com/SikandarJODD/cnblocks)
+- [Svelte Premium Marketing Blocks](https://sv-efferd.pages.dev/) - 60+ polished marketing blocks for high-quality Svelte sites. [GitHub](https://github.com/SikandarJODD/sv-efferd)
+- [Svelte AI Elements](https://svelte-ai-elements.vercel.app/) - Composable Svelte elements for AI product interfaces. [GitHub](https://github.com/SikandarJODD/ai-elements)
+- [Svelte Particles](https://sv-particles.vercel.app/) - Interactive particle effects and examples for Svelte. [GitHub](https://github.com/SikandarJODD/sv-particles)
+- [Svelte Data Table Components](https://sv-table.vercel.app/) - 20+ data table components, patterns, and practical examples. [GitHub](https://github.com/SikandarJODD/sv-table)
+- [Svelte Globe Examples](https://sv-globe.vercel.app/) - Interactive globe examples and visual experiments. [GitHub](https://github.com/SikandarJODD/sv-globe)
+- [Svelte Dot Matrix Loaders](https://sv-matrix.vercel.app/) - 50+ free, open-source dot-matrix loaders. [GitHub](https://github.com/SikandarJODD/sv-matrix)
+
+## Libraries
+
+- [Svelte Agentation](https://sv-agentation.com/) (`sv-agentation`) - Add notes to a page and send them to AI coding agents. [GitHub](https://github.com/SikandarJODD/sv-agentation)
+- Svelte Drawesome (`sv-drawesome`) - Add a drawing toolbar to a Svelte 5 app. [GitHub](https://github.com/SikandarJODD/sv-drawesome)
+- [Svelte Pierre Words](https://sv-pierre.pages.dev/) (`@sv-pierre/words`) - Render static or streaming Markdown in Svelte. [GitHub](https://github.com/SikandarJODD/sv-pierre)
+
 ## Credits
 
 - Original created by [Shaban](https://x.com/shabanhr)

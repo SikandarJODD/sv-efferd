@@ -14,6 +14,7 @@ export const getStartedItems = [
 	{ title: "Introduction", href: "/docs/introduction" },
 	{ title: "Installation", href: "/docs/installation" },
 	{ title: "Usage", href: "/docs/usage" },
+	{ title: "Other Projects", href: "/other-projects" },
 	{ title: "Skills", href: "/docs/skills", badge: "new" },
 	{ title: "llms.txt", href: "/llms.txt", badge: "new" },
 	{
