@@ -49,7 +49,7 @@
 			"target": "efferd/app-shell/app-shell-two/app-sidebar.svelte"
 		},
 		{
-			"content": "<script lang=\"ts\">\n\timport * as Sidebar from \"#lib/components/ui/sidebar/index.js\";\n\timport * as Tooltip from \"#lib/components/ui/tooltip/index.js\";\n\timport * as Kbd from \"#lib/components/ui/kbd/index.js\";\n</script>\n\n<Tooltip.Root delayDuration={800}>\n\t<Tooltip.Trigger>\n\t\t{#snippet child({ props })}\n\t\t\t<Sidebar.Trigger class=\"size-11\" size=\"icon-xs\" {...props} />\n\t\t{/snippet}\n\t</Tooltip.Trigger>\n\t<Tooltip.Content side=\"right\">\n\t\tToggle Sidebar\n\t\t<Kbd.Group>\n\t\t\t<Kbd.Root>⌘</Kbd.Root>\n\t\t\t<Kbd.Root>b</Kbd.Root>\n\t\t</Kbd.Group>\n\t</Tooltip.Content>\n</Tooltip.Root>\n",
+			"content": "<script lang=\"ts\">\n\timport * as Sidebar from \"#lib/components/ui/sidebar/index.js\";\n\timport * as Tooltip from \"#lib/components/ui/tooltip/index.js\";\n\timport * as Kbd from \"#lib/components/ui/kbd/index.js\";\n</script>\n\n<Tooltip.Root delayDuration={800}>\n\t<Tooltip.Trigger>\n\t\t{#snippet child({ props })}\n\t\t\t<Sidebar.Trigger size=\"icon-sm\" {...props} />\n\t\t{/snippet}\n\t</Tooltip.Trigger>\n\t<Tooltip.Content side=\"right\">\n\t\tToggle Sidebar\n\t\t<Kbd.Group>\n\t\t\t<Kbd.Root>⌘</Kbd.Root>\n\t\t\t<Kbd.Root>b</Kbd.Root>\n\t\t</Kbd.Group>\n\t</Tooltip.Content>\n</Tooltip.Root>\n",
 			"type": "registry:component",
 			"target": "efferd/app-shell/app-shell-two/custom-sidebar-trigger.svelte"
 		},
