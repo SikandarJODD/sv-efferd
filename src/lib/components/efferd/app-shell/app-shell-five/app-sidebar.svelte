@@ -21,8 +21,13 @@
 	collapsible="offcanvas"
 	variant="sidebar"
 >
-	<Sidebar.Header class="h-(--app-header-height,3rem) flex-row items-center justify-between">
-		<Button href="/" variant="ghost"><Logo /><span class="font-medium">Efferd</span></Button>
+	<Sidebar.Header class="flex-row items-center justify-between">
+		<Sidebar.MenuButton>
+			{#snippet child({ props })}<a href="/" {...props}
+					><Logo /><span class="font-medium">Efferd</span></a
+				>{/snippet}
+		</Sidebar.MenuButton>
+		<!-- <Button href="/" variant="ghost"><Logo /><span class="font-medium">Efferd</span></Button> -->
 		<CustomTrigger place="sidebar" />
 	</Sidebar.Header>
 	<Sidebar.Content>
