@@ -69,7 +69,7 @@
 						<feature.icon class="size-5" aria-hidden="true" />
 					</div>
 					<div class="min-w-0 pt-0.5">
-						<h3 class="text-sm font-medium text-foreground">{feature.title}</h3>
+						<h3 class="text-base font-medium text-foreground">{feature.title}</h3>
 						<p class="mt-1.5 text-sm leading-6 text-muted-foreground">
 							{feature.description}
 						</p>
