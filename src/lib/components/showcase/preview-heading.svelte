@@ -11,7 +11,10 @@
 	let { title, description = "", url }: PreviewHeadingProps = $props();
 
 	let eventName = $derived(
-		`copy_component_url:${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`
+		`copy_component_url:${title
+			.toLowerCase()
+			.replace(/[^a-z0-9]+/g, "-")
+			.replace(/(^-|-$)/g, "")}`
 	);
 </script>
 

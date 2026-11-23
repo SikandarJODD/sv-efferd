@@ -26,8 +26,8 @@ export const navGroups: SidebarNavGroup[] = [
 	{
 		label: "Overview",
 		items: [
-			{ title: "Dashboard", path: "/", icon: LayoutGridIcon },
-			{ title: "Sales", path: "/", icon: BarChart3Icon }
+			{ title: "Dashboard", path: "#/dashboard", icon: LayoutGridIcon },
+			{ title: "Sales", path: "#/sales", icon: BarChart3Icon }
 		]
 	},
 	{
@@ -35,40 +35,40 @@ export const navGroups: SidebarNavGroup[] = [
 		items: [
 			{
 				title: "Orders",
-				path: "/",
+				path: "#/orders",
 				icon: ShoppingCartIcon,
 				subItems: [
-					{ title: "All orders", path: "/" },
-					{ title: "Unfulfilled", path: "/" },
-					{ title: "Returns", path: "/" }
+					{ title: "All orders", path: "#/orders/all" },
+					{ title: "Unfulfilled", path: "#/orders/unfulfilled" },
+					{ title: "Returns", path: "#/orders/returns" }
 				]
 			},
 			{
 				title: "Products",
-				path: "/",
+				path: "#/products",
 				icon: FileTextIcon,
 				subItems: [
-					{ title: "Catalog", path: "/" },
-					{ title: "Inventory", path: "/" },
-					{ title: "Collections", path: "/" }
+					{ title: "Catalog", path: "#/products/catalog" },
+					{ title: "Inventory", path: "#/products/inventory" },
+					{ title: "Collections", path: "#/products/collections" }
 				]
 			},
-			{ title: "Customers", path: "/", icon: UsersIcon },
-			{ title: "Marketing", path: "/", icon: MegaphoneIcon }
+			{ title: "Customers", path: "#/customers", icon: UsersIcon },
+			{ title: "Marketing", path: "#/marketing", icon: MegaphoneIcon }
 		]
 	},
 	{
 		label: "Administration",
 		items: [
-			{ title: "Settings", path: "/", icon: SettingsIcon },
+			{ title: "Settings", path: "#/settings", icon: SettingsIcon },
 			{
 				title: "Billing",
-				path: "/",
+				path: "#/billing",
 				icon: CreditCardIcon,
 				subItems: [
-					{ title: "Plan", path: "/" },
-					{ title: "Invoices", path: "/" },
-					{ title: "Payment methods", path: "/" }
+					{ title: "Plan", path: "#/billing/plan" },
+					{ title: "Invoices", path: "#/billing/invoices" },
+					{ title: "Payment methods", path: "#/billing/payment-methods" }
 				]
 			}
 		]
@@ -76,8 +76,8 @@ export const navGroups: SidebarNavGroup[] = [
 ];
 
 export const footerNavLinks: SidebarNavItem[] = [
-	{ title: "Seller help", path: "/", icon: HelpCircleIcon },
-	{ title: "Platform status", path: "/", icon: ActivityIcon }
+	{ title: "Seller help", path: "#/seller-help", icon: HelpCircleIcon },
+	{ title: "Platform status", path: "#/status", icon: ActivityIcon }
 ];
 
 export const navLinks = [

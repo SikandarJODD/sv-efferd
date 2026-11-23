@@ -29,8 +29,8 @@ export const navGroups: SidebarNavGroup[] = [
 	{
 		label: "Today",
 		items: [
-			{ title: "Queue", path: "/", icon: ListChecksIcon },
-			{ title: "Team insights", path: "/", icon: BarChart3Icon }
+			{ title: "Queue", path: "#/queue", icon: ListChecksIcon },
+			{ title: "Team insights", path: "#/team-insights", icon: BarChart3Icon }
 		]
 	},
 	{
@@ -40,13 +40,13 @@ export const navGroups: SidebarNavGroup[] = [
 				title: "Conversations",
 				icon: MessageSquareTextIcon,
 				subItems: [
-					{ title: "Unassigned", path: "/" },
-					{ title: "Assigned to me", path: "/" },
-					{ title: "Recently closed", path: "/" }
+					{ title: "Unassigned", path: "#/inbox/unassigned" },
+					{ title: "Assigned to me", path: "#/inbox/assigned" },
+					{ title: "Recently closed", path: "#/inbox/closed" }
 				]
 			},
-			{ title: "Customers", path: "/", icon: UsersIcon },
-			{ title: "Channels", path: "/", icon: PlugIcon }
+			{ title: "Customers", path: "#/customers", icon: UsersIcon },
+			{ title: "Channels", path: "#/channels", icon: PlugIcon }
 		]
 	},
 	{
@@ -56,21 +56,21 @@ export const navGroups: SidebarNavGroup[] = [
 				title: "Workspace",
 				icon: SettingsIcon,
 				subItems: [
-					{ title: "Branding", path: "/" },
-					{ title: "Team & roles", path: "/" },
-					{ title: "API keys", path: "/" },
-					{ title: "Webhooks", path: "/" },
-					{ title: "Billing", path: "/" }
+					{ title: "Branding", path: "#/workspace/branding" },
+					{ title: "Team & roles", path: "#/workspace/team" },
+					{ title: "API keys", path: "#/workspace/api-keys" },
+					{ title: "Webhooks", path: "#/workspace/webhooks" },
+					{ title: "Billing", path: "#/workspace/billing" }
 				]
 			},
-			{ title: "Settings", path: "/", icon: Settings2Icon }
+			{ title: "Settings", path: "#/settings", icon: Settings2Icon }
 		]
 	}
 ];
 
 export const footerNavLinks: SidebarNavItem[] = [
-	{ title: "Help Center", path: "/", icon: HelpCircleIcon },
-	{ title: "System status", path: "/", icon: ActivityIcon }
+	{ title: "Help Center", path: "#/help", icon: HelpCircleIcon },
+	{ title: "System status", path: "#/status", icon: ActivityIcon }
 ];
 
 export const navLinks = [

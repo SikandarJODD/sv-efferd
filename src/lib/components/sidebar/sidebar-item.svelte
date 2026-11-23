@@ -4,6 +4,7 @@
 	import * as Sidebar from "#lib/components/ui/sidebar/index.js";
 	import ArrowUpRightIcon from "@lucide/svelte/icons/arrow-up-right";
 	import type { SidebarNavItem } from "./sidebar-nav.js";
+	import Library from "../icons/library.svelte";
 
 	let { item }: { item: SidebarNavItem } = $props();
 
@@ -23,6 +24,11 @@
 					<item.icon class="size-3.5 text-muted-foreground" />
 				{/if}
 				{item.title}
+				{#if item.title === "Other Projects"}
+					<div class="ms-auto">
+						<Library class="size-3.5! text-muted-foreground" />
+					</div>
+				{/if}
 				{#if item.badge === "new"}
 					<Badge variant="emerald" class="px-1 py-0.5 text-[10px]">New</Badge>
 				{/if}

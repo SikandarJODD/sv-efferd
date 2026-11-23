@@ -1,9 +1,10 @@
 import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
 import { createBlockCodeTree } from "#lib/blocks/showcase.js";
-import Settings from "#lib/components/efferd/settings/settings-five/settings.svelte";
+import SettingsFivePreview from "#lib/components/efferd/settings/settings-five/preview.svelte";
 
 import dangerZoneSettingsSource from "#lib/components/efferd/settings/settings-five/danger-zone-settings.svelte?raw";
 import localizationSettingsSource from "#lib/components/efferd/settings/settings-five/localization-settings.svelte?raw";
+import previewSource from "#lib/components/efferd/settings/settings-five/preview.svelte?raw";
 import profileInformationSource from "#lib/components/efferd/settings/settings-five/profile-information.svelte?raw";
 import securityInformationSource from "#lib/components/efferd/settings/settings-five/security-information.svelte?raw";
 import settingFieldSource from "#lib/components/efferd/settings/settings-five/setting-field.svelte?raw";
@@ -63,12 +64,18 @@ export const settingsFiveBlock: BlockShowcaseItem = {
 	title: "Settings Five",
 	description:
 		"An account overview for profile, security, localization, and destructive account actions.",
-	previewComponent: Settings,
+	previewComponent: SettingsFivePreview,
 	previewHref: "/preview/settings/five",
 	previewMode: "iframe",
 	previewHeight: 1240,
 	installId: "settings-five",
 	codeTree: createBlockCodeTree("settings-five:component", [
+		{
+			id: "settings-five:preview",
+			path: "settings/preview.svelte",
+			lang: "svelte",
+			code: previewSource
+		},
 		{
 			id: "settings-five:component",
 			path: "efferd/settings/settings.svelte",
@@ -128,6 +135,12 @@ export const settingsFiveBlock: BlockShowcaseItem = {
 			path: "svgs/github.svelte",
 			lang: "svelte",
 			code: githubSvgSource
+		},
+		{
+			id: "related:app-shell-two",
+			path: "related/app-shell-two",
+			externalUrl: "/blocks/app-shell#app-shell-two",
+			externalLabel: "View App Shell Two"
 		},
 		...uiFiles
 	])

@@ -1,11 +1,12 @@
 import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
 import { createBlockCodeTree } from "#lib/blocks/showcase.js";
-import Settings from "#lib/components/efferd/settings/settings-four/settings.svelte";
+import SettingsFourPreview from "#lib/components/efferd/settings/settings-four/preview.svelte";
 
 import avatarFieldSource from "#lib/components/efferd/settings/settings-four/avatar-field.svelte?raw";
 import deleteAccountFieldSource from "#lib/components/efferd/settings/settings-four/delete-account-field.svelte?raw";
 import emailFieldSource from "#lib/components/efferd/settings/settings-four/email-field.svelte?raw";
 import nameFieldSource from "#lib/components/efferd/settings/settings-four/name-field.svelte?raw";
+import previewSource from "#lib/components/efferd/settings/settings-four/preview.svelte?raw";
 import settingFieldSource from "#lib/components/efferd/settings/settings-four/setting-field.svelte?raw";
 import settingsSectionSource from "#lib/components/efferd/settings/settings-four/settings-section.svelte?raw";
 import settingsSource from "#lib/components/efferd/settings/settings-four/settings.svelte?raw";
@@ -50,12 +51,18 @@ export const settingsFourBlock: BlockShowcaseItem = {
 	title: "Settings Four",
 	description:
 		"A stacked account settings form for name, email, avatar, user ID, and account deletion.",
-	previewComponent: Settings,
+	previewComponent: SettingsFourPreview,
 	previewHref: "/preview/settings/four",
 	previewMode: "iframe",
 	previewHeight: 1480,
 	installId: "settings-four",
 	codeTree: createBlockCodeTree("settings-four:component", [
+		{
+			id: "settings-four:preview",
+			path: "settings/preview.svelte",
+			lang: "svelte",
+			code: previewSource
+		},
 		{
 			id: "settings-four:component",
 			path: "efferd/settings/settings.svelte",
@@ -109,6 +116,12 @@ export const settingsFourBlock: BlockShowcaseItem = {
 			path: "hooks/use-clipboard.svelte.ts",
 			lang: "typescript",
 			code: clipboardHookSource
+		},
+		{
+			id: "related:app-shell-two",
+			path: "related/app-shell-two",
+			externalUrl: "/blocks/app-shell#app-shell-two",
+			externalLabel: "View App Shell Two"
 		},
 		...uiFiles
 	])

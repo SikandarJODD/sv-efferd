@@ -520,11 +520,7 @@ List the audit findings, kept sections, replaced sections, installation commands
 			installation, adaptation, and checks.
 		</Markdown.Paragraph>
 		<div class="mt-5">
-			<CodeFrame
-				code={usageExample}
-				copyEvent="copy_skill_prompt:usage-example"
-				wrap
-			/>
+			<CodeFrame code={usageExample} copyEvent="copy_skill_prompt:usage-example" wrap />
 		</div>
 	</section>
 
@@ -556,7 +552,11 @@ List the audit findings, kept sections, replaced sections, installation commands
 					{prompt.goal}
 				</Markdown.Paragraph>
 				<div class="mt-5">
-					<CodeFrame code={prompt.code} copyEvent={`copy_skill_prompt:${prompt.id}`} wrap />
+					<CodeFrame
+						code={prompt.code}
+						copyEvent={`copy_skill_prompt:${prompt.id}`}
+						wrap
+					/>
 				</div>
 			</article>
 		{/each}

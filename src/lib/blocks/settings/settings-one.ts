@@ -1,9 +1,10 @@
 import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
 import { createBlockCodeTree } from "#lib/blocks/showcase.js";
-import Settings from "#lib/components/efferd/settings/settings-one/settings.svelte";
+import SettingsOnePreview from "#lib/components/efferd/settings/settings-one/preview.svelte";
 
 import indexSource from "#lib/components/efferd/settings/settings-one/index.ts?raw";
 import notificationSettingsSource from "#lib/components/efferd/settings/settings-one/notification-settings.svelte?raw";
+import previewSource from "#lib/components/efferd/settings/settings-one/preview.svelte?raw";
 import profileSettingsSource from "#lib/components/efferd/settings/settings-one/profile-settings.svelte?raw";
 import settingFieldSource from "#lib/components/efferd/settings/settings-one/setting-field.svelte?raw";
 import settingsSectionSource from "#lib/components/efferd/settings/settings-one/settings-section.svelte?raw";
@@ -47,12 +48,18 @@ export const settingsOneBlock: BlockShowcaseItem = {
 	title: "Settings One",
 	description:
 		"A settings form for profile details and email preferences. It includes an avatar picker and save action.",
-	previewComponent: Settings,
+	previewComponent: SettingsOnePreview,
 	previewHref: "/preview/settings/one",
 	previewMode: "iframe",
 	previewHeight: 760,
 	installId: "settings-one",
 	codeTree: createBlockCodeTree("settings-one:component", [
+		{
+			id: "settings-one:preview",
+			path: "settings/preview.svelte",
+			lang: "svelte",
+			code: previewSource
+		},
 		{
 			id: "settings-one:index",
 			path: "efferd/settings/index.ts",
@@ -88,6 +95,12 @@ export const settingsOneBlock: BlockShowcaseItem = {
 			path: "efferd/settings/setting-field.svelte",
 			lang: "svelte",
 			code: settingFieldSource
+		},
+		{
+			id: "related:app-shell-two",
+			path: "related/app-shell-two",
+			externalUrl: "/blocks/app-shell#app-shell-two",
+			externalLabel: "View App Shell Two"
 		},
 		...uiFiles
 	])

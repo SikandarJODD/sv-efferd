@@ -59,7 +59,10 @@
 
 	let copyEventName = $derived(
 		eventName ??
-			`copy_docs_command:${componentName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`
+			`copy_docs_command:${componentName
+				.toLowerCase()
+				.replace(/[^a-z0-9]+/g, "-")
+				.replace(/(^-|-$)/g, "")}`
 	);
 </script>
 

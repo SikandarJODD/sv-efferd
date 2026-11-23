@@ -20,7 +20,17 @@
 		"shadcn-svelte blocks",
 		"Svelte UI components",
 		"Svelte landing page sections",
-		"Svelte dashboards"
+		"Svelte dashboards",
+		"Svelte Marketing Blocks",
+		"Svelte Tailwind CSS components",
+		"Svelte open-source components",
+		"Svelte UI Blocks",
+		"Svelte shadcn-svelte components",
+		"Svelte Application UI components",
+		"Application UI components for Svelte",
+		"Landing page sections for Svelte",
+		"Marketing blocks for Svelte",
+		"Dashboard components for Svelte"
 	] as const;
 	const ogImageUrl = new URL(asset("og.png"), siteUrl).toString();
 	const logoUrl = new URL("/favicon.svg", siteUrl).toString();

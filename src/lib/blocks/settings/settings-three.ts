@@ -1,11 +1,12 @@
 import type { BlockShowcaseItem } from "#lib/blocks/showcase.js";
 import { createBlockCodeTree } from "#lib/blocks/showcase.js";
-import Settings from "#lib/components/efferd/settings/settings-three/settings.svelte";
+import SettingsThreePreview from "#lib/components/efferd/settings/settings-three/preview.svelte";
 
 import agentPreviewSource from "#lib/components/efferd/settings/settings-three/agent-preview.svelte?raw";
 import availabilitySettingsSource from "#lib/components/efferd/settings/settings-three/availability-settings.svelte?raw";
 import dangerSettingsSource from "#lib/components/efferd/settings/settings-three/danger-settings.svelte?raw";
 import notificationSettingsSource from "#lib/components/efferd/settings/settings-three/notification-settings.svelte?raw";
+import previewSource from "#lib/components/efferd/settings/settings-three/preview.svelte?raw";
 import profileSettingsSource from "#lib/components/efferd/settings/settings-three/profile-settings.svelte?raw";
 import settingFieldSource from "#lib/components/efferd/settings/settings-three/setting-field.svelte?raw";
 import settingsSectionSource from "#lib/components/efferd/settings/settings-three/settings-section.svelte?raw";
@@ -79,12 +80,18 @@ export const settingsThreeBlock: BlockShowcaseItem = {
 	title: "Settings Three",
 	description:
 		"An agent settings dashboard for profile, availability, notifications, and destructive account actions.",
-	previewComponent: Settings,
+	previewComponent: SettingsThreePreview,
 	previewHref: "/preview/settings/three",
 	previewMode: "iframe",
 	previewHeight: 1260,
 	installId: "settings-three",
 	codeTree: createBlockCodeTree("settings-three:component", [
+		{
+			id: "settings-three:preview",
+			path: "settings/preview.svelte",
+			lang: "svelte",
+			code: previewSource
+		},
 		{
 			id: "settings-three:component",
 			path: "efferd/settings/settings.svelte",
@@ -132,6 +139,12 @@ export const settingsThreeBlock: BlockShowcaseItem = {
 			path: "efferd/settings/setting-field.svelte",
 			lang: "svelte",
 			code: settingFieldSource
+		},
+		{
+			id: "related:app-shell-three",
+			path: "related/app-shell-three",
+			externalUrl: "/blocks/app-shell#app-shell-three",
+			externalLabel: "View App Shell Three"
 		},
 		...uiFiles
 	])
